@@ -1,0 +1,13 @@
+id,front,back,tag,deck
+d1-fc-001,Marcador 'esta semana',Usa pretérito perfecto: he/has/ha + participio,d1>perfecto-vs-indefinido,grammar
+d1-fc-002,Marcador 'ayer',Usa pretérito indefinido (terminé, llegamos),d1>perfecto-vs-indefinido,grammar
+d1-fc-003,Mientras + verbo,Imperfecto para acción en curso (mientras estudiaba),d1>imperfecto-vs-indefinido,grammar
+d1-fc-004,De repente + verbo,Indefinido para evento puntual (de repente sonó),d1>imperfecto-vs-indefinido,grammar
+d1-fc-005,No creo que...,Activa subjuntivo (no creo que sea),d1>indicativo-vs-subjuntivo,grammar
+d1-fc-006,Es evidente que...,Mantén indicativo (es evidente que tiene),d1>indicativo-vs-subjuntivo,grammar
+d1-fc-007,Imperativo afirmativo + pronombres,Pega clíticos al final y añade tilde (dámelo),d1>cliticos-se,grammar
+d1-fc-008,Imperativo negativo + pronombres,Pronombres antes del verbo (no te lo lleves),d1>cliticos-se,grammar
+d1-fc-009,Por = causa / intercambio,Gracias por..., pagar por, esperar por (Am. Lat.),d1>por-para,grammar
+d1-fc-010,Para = meta / destinatario,Salgo para Madrid, regalo para Ana,d1>por-para,grammar
+d1-fc-011,Actually ≠ actualmente,Traduce 'actually' como 'en realidad' o 'de hecho',d1>francophone-errors,grammar
+d1-fc-012,Asistir a,El verbo necesita preposición: asistir a la reunión,d1>francophone-errors,grammar
