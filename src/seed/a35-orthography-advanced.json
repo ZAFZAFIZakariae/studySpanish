@@ -1,0 +1,336 @@
+{
+  "lessons": [
+    {
+      "id": "a35-orthography-advanced",
+      "level": "C1",
+      "title": "A35 — Orthography & Academic Style",
+      "slug": "a35-orthography-advanced",
+      "tags": [
+        "orthography",
+        "writing",
+        "advanced",
+        "c1"
+      ],
+      "markdown": "# ✍️ A35 — Orthography & Academic Style\n\n**Goal:** Pulir acentuación, puntuación y convenciones tipográficas de textos formales.\n\n---\n\n## 1. Acentuación avanzada\n- Monosílabos sin tilde salvo diacríticos: *de/dé, el/él, mas/más, se/sé, te/té, tu/tú, mi/mí, si/sí, aun/aún*.\n- *Sólo* y demostrativos (este, ese, aquel) solo con tilde en casos de ambigüedad extrema.\n- Hiatos con vocal cerrada tónica: *frío, país, María*.\n- Prefijos se unen sin guion salvo mayúsculas o números: *exministro, anti-EE. UU.*\n\n## 2. Enclíticos y signos\n- Verbos con pronombres: acentúa para conservar sílaba tónica: *dámelo, háganse, propónselo*.\n- ¿? ¡! dobles obligatorios; signos de exclamación/pregunta admiten entonación combinada (¿¡...!?)\n- Mayúsculas mantienen tilde: *África, Óscar*.\n\n## 3. Puntuación fina\n- Coma separa incisos explicativos: *Los resultados, sin embargo, muestran...*.\n- Punto y coma une oraciones relacionadas con conectores: *Aumentó la demanda; por consiguiente, subieron los precios*.\n- Dos puntos introducen enumeraciones, citas o conclusiones.\n\n## 4. Números y abreviaturas\n- Números del cero al diez en letras en textos formales (salvo datos técnicos).\n- Uso del espacio en símbolos: *20 %*, *15 °C*.\n- Abreviaturas cultas: *p. ej., núm., art.*; siglas sin puntos (ONU, UE).\n\n## 5. Extranjerismos y cursivas\n- Voz no adaptada → cursiva: *software, leitmotiv*.\n- Adaptadas → sin cursiva: *fútbol, suflé*.\n- Citas textuales → comillas latinas « » o inglesas “ ”, según estilo.\n\n---\n\n> 📝 **Resumen:** Revisa acentos diacríticos, coloca tildes en enclíticos, puntúa con precisión y respeta convenciones de números, abreviaturas y extranjerismos.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a35-orthography-advanced-ex1",
+      "lessonId": "a35-orthography-advanced",
+      "type": "mcq",
+      "promptMd": "Selecciona la forma con tilde diacrítica correcta.",
+      "options": [
+        "El dijo que vendría.",
+        "Él dijo que vendría."
+      ],
+      "answer": "Él dijo que vendría.",
+      "feedback": {
+        "correct": "Correcto: pronombre personal lleva tilde.",
+        "wrong": "El artículo 'el' no lleva tilde; usa **Él**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "tilde diacrítica"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex2",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Si no vienes, ___ esperaré (sí afirmativo).",
+      "answer": "sí",
+      "accepted": [
+        "re:^sí$"
+      ],
+      "feedback": {
+        "correct": "Correcto: afirmación → sí con tilde.",
+        "wrong": "Usa **sí** con tilde para afirmación."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "tilde"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex3",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Escríbelo con enclítico: **(dar + me + lo)** → ___",
+      "answer": "dámelo",
+      "accepted": [
+        "re:^dámelo$"
+      ],
+      "feedback": {
+        "correct": "Correcto: acento para mantener sílaba tónica.",
+        "wrong": "Usa **dámelo** con tilde en la 'a'."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "enclítico"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex4",
+      "lessonId": "a35-orthography-advanced",
+      "type": "mcq",
+      "promptMd": "¿Cuál respeta la recomendación actual de la RAE?",
+      "options": [
+        "Sólo tengo un minuto.",
+        "Solo tengo un minuto."
+      ],
+      "answer": "Solo tengo un minuto.",
+      "feedback": {
+        "correct": "Correcto: 'solo' sin tilde salvo ambigüedad.",
+        "wrong": "Se recomienda omitir la tilde salvo confusión real."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "solo"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex5",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Escribe correctamente con mayúscula acentuada: ___ (africa).",
+      "answer": "África",
+      "accepted": [
+        "re:^África$"
+      ],
+      "feedback": {
+        "correct": "Correcto: mayúsculas conservan tilde.",
+        "wrong": "Pon **Á** con tilde."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "mayúsculas"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex6",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Inserta la coma: *Los datos sin embargo muestran otro patrón* → ___",
+      "answer": "Los datos, sin embargo, muestran otro patrón",
+      "accepted": [
+        "re:^Los datos, sin embargo, muestran otro patrón$"
+      ],
+      "feedback": {
+        "correct": "Correcto: inciso entre comas.",
+        "wrong": "Añade comas alrededor de 'sin embargo'."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "coma"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex7",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Completa con el signo correcto: *Se aprobó la norma ___ por consiguiente, entrará en vigor mañana.*",
+      "answer": ";",
+      "accepted": [
+        "re:^;$"
+      ],
+      "feedback": {
+        "correct": "Correcto: punto y coma antes de conector consecuente.",
+        "wrong": "Usa punto y coma (;) antes de 'por consiguiente'."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "punto y coma"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex8",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Expresa la temperatura con espacios: **15°C** → ___",
+      "answer": "15 °C",
+      "accepted": [
+        "re:^15 °C$"
+      ],
+      "feedback": {
+        "correct": "Correcto: espacio entre número y símbolo.",
+        "wrong": "Escribe **15 °C** con espacio fino."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "símbolos"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex9",
+      "lessonId": "a35-orthography-advanced",
+      "type": "mcq",
+      "promptMd": "¿Cuál se escribe en cursiva en un texto académico?",
+      "options": [
+        "fútbol",
+        "software",
+        "sándwich"
+      ],
+      "answer": "software",
+      "feedback": {
+        "correct": "Correcto: extranjerismo crudo → cursiva.",
+        "wrong": "'software' no está adaptado, va en cursiva."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "extranjerismos"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex10",
+      "lessonId": "a35-orthography-advanced",
+      "type": "translate",
+      "promptMd": "Translate keeping abbreviation style: **p. ej.**",
+      "answer": "e.g.",
+      "accepted": [
+        "re:^e\\.g\\.$"
+      ],
+      "feedback": {
+        "correct": "Correcto: p. ej. equivale a e.g.",
+        "wrong": "Usa 'e.g.'"
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "abreviaturas"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex11",
+      "lessonId": "a35-orthography-advanced",
+      "type": "cloze",
+      "promptMd": "Convierte a palabras: **7** (contexto académico) → ___",
+      "answer": "siete",
+      "accepted": [
+        "re:^siete$"
+      ],
+      "feedback": {
+        "correct": "Correcto: números simples en letras.",
+        "wrong": "Escribe **siete**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "números"
+      }
+    },
+    {
+      "id": "a35-orthography-advanced-ex12",
+      "lessonId": "a35-orthography-advanced",
+      "type": "short",
+      "promptMd": "¿Cuándo se recomienda guion en prefijos?",
+      "answer": "Cuando el segundo elemento es mayúscula, número o empieza por mayúscula (anti-UE, pro-vida en uso especial).",
+      "accepted": [
+        "re:mayúscula",
+        "re:número"
+      ],
+      "feedback": {
+        "correct": "Correcto: guion solo ante mayúsculas, números o siglas difíciles.",
+        "wrong": "Menciona mayúsculas o números tras el prefijo."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "prefijos"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "a35-orthography-advanced-fc1",
+      "front": "Tildes diacríticas",
+      "back": "dé/dé, sé/sé, tú/tu...",
+      "tag": "tilde",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc2",
+      "front": "Solo/sólo",
+      "back": "Solo sin tilde salvo ambigüedad",
+      "tag": "solo",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc3",
+      "front": "Enclíticos",
+      "back": "dámelo, explícaselo → tilde por hiato",
+      "tag": "enclítico",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc4",
+      "front": "Mayúsculas",
+      "back": "Conservan tilde: Álvarez, Ópera",
+      "tag": "mayúsculas",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc5",
+      "front": "Punto y coma",
+      "back": "Une oraciones relacionadas con conectores",
+      "tag": "puntuación",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc6",
+      "front": "Espacio en símbolos",
+      "back": "20 %, 15 °C",
+      "tag": "símbolos",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc7",
+      "front": "Prefijos",
+      "back": "Sin guion salvo mayúsculas/números",
+      "tag": "prefijos",
+      "deck": "grammar"
+    },
+    {
+      "id": "a35-orthography-advanced-fc8",
+      "front": "Extranjerismos",
+      "back": "No adaptados → cursiva (software)",
+      "tag": "extranjerismo",
+      "deck": "grammar"
+    }
+  ]
+}
