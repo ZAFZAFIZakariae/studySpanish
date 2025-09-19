@@ -1,0 +1,487 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-a-arquitectura-sostenible",
+      "level": "C1",
+      "title": "V-A — Arquitectura Sostenible y Diseño Urbano",
+      "slug": "vocab-a-arquitectura-sostenible",
+      "tags": [
+        "vocab",
+        "arquitectura",
+        "urbanismo",
+        "topic-pack"
+      ],
+      "markdown": "# 🏙️ V-A — Arquitectura Sostenible y Diseño Urbano\n\n**Objetivo:** Dominar vocabulario especializado para describir proyectos urbanos sostenibles, materiales de baja huella y procesos participativos.\n\n---\n\n## 📘 Léxico núcleo (30 términos)\n| Término | Género / Plural | Traducción | Nota de uso |\n| --- | --- | --- | --- |\n| arquitectura bioclimática | la; pl. arquitecturas bioclimáticas | bioclimatic architecture | diseño que responde al clima local |\n| fachada ventilada | la; pl. fachadas ventiladas | ventilated façade | capa exterior separada que regula temperatura |\n| aislamiento térmico | el; pl. aislamientos térmicos | thermal insulation | material que reduce pérdida de calor |\n| cubierta verde | la; pl. cubiertas verdes | green roof | techo vegetal con sustrato y drenaje |\n| panel solar fotovoltaico | el; pl. paneles solares fotovoltaicos | photovoltaic solar panel | convierte radiación en electricidad |\n| aerotermia | la; pl. aerotermias | air-source heat pump tech | sistema que extrae energía del aire |\n| geotermia | la; pl. geotermias | geothermal system | aprovecha temperatura del subsuelo |\n| recuperación de aguas grises | la; pl. recuperaciones de aguas grises | greywater recovery | reutilización de agua de duchas y lavabos |\n| huella de carbono | la; pl. huellas de carbono | carbon footprint | emisiones asociadas a un proyecto |\n| certificación energética | la; pl. certificaciones energéticas | energy certification | etiqueta oficial de eficiencia |\n| mobiliario urbano | el; pl. mobiliarios urbanos | street furniture | elementos fijos en espacio público |\n| urbanismo táctico | el; pl. urbanismos tácticos | tactical urbanism | intervenciones rápidas de bajo costo |\n| corredor verde | el; pl. corredores verdes | green corridor | eje ajardinado que conecta espacios |\n| densidad residencial | la; pl. densidades residenciales | residential density | número de viviendas por hectárea |\n| uso mixto | el; pl. usos mixtos | mixed-use zoning | combina vivienda, comercio y servicios |\n| gentrificación | la; pl. gentrificaciones | gentrification | desplazamiento por aumento de renta |\n| rehabilitación integral | la; pl. rehabilitaciones integrales | full refurbishment | renovación estructural y energética |\n| eficiencia energética | la; pl. eficiencias energéticas | energy efficiency | relación consumo-rendimiento |\n| hormigón reciclado | el; pl. hormigones reciclados | recycled concrete | material con áridos reutilizados |\n| madera laminada cruzada | la; pl. maderas laminadas cruzadas | cross-laminated timber | paneles estructurales de madera en capas |\n| análisis de ciclo de vida | el; pl. análisis de ciclo de vida | life cycle assessment | evalúa impactos desde fabricación hasta uso |\n| sombreado pasivo | el; pl. sombreados pasivos | passive shading | protección solar sin consumo energético |\n| orientación solar | la; pl. orientaciones solares | solar orientation | posición del edificio respecto al sol |\n| ventilación cruzada | la; pl. ventilaciones cruzadas | cross ventilation | flujo de aire por aberturas opuestas |\n| transporte multimodal | el; pl. transportes multimodales | multimodal transport | combina bici, bus y tren |\n| resiliencia urbana | la; pl. resiliencias urbanas | urban resilience | capacidad de absorber impactos |\n| participación vecinal | la; pl. participaciones vecinales | community participation | implicación de residentes en decisiones |\n| plan maestro | el; pl. planes maestros | master plan | documento guía a largo plazo |\n| normativa urbanística | la; pl. normativas urbanísticas | zoning regulation | marco legal del desarrollo urbano |\n| vivienda asequible | la; pl. viviendas asequibles | affordable housing | precio ajustado a ingresos locales |\n\n## 🔗 Combinaciones clave (12 chunks)\n- **implementar estrategias de sombreado pasivo** → integrar lamas, toldos y vegetación para reducir carga térmica.\n- **minimizar la huella de carbono del proyecto** → priorizar materiales locales y bajas emisiones.\n- **optimizar la ventilación cruzada en patios interiores** → alinear ventanas opuestas y controlar aberturas.\n- **evaluar el análisis de ciclo de vida del material** → comparar impacto desde extracción hasta reciclaje.\n- **integrar corredores verdes en el plan maestro** → conectar parques y plazas para biodiversidad.\n- **potenciar el uso mixto del barrio** → mezclar vivienda, comercio y equipamientos.\n- **gestionar la participación vecinal en las fases de diseño** → organizar talleres y mesas de trabajo.\n- **reconvertir una nave industrial en vivienda asequible** → aprovechar estructuras existentes con criterios sociales.\n- **aprovechar la orientación solar de la parcela** → ubicar zonas de día al sur y proteger la fachada oeste.\n- **habilitar cubiertas verdes accesibles** → sumar espacios comunitarios y mejorar aislamiento.\n- **regular la densidad residencial mediante normativa urbanística** → ajustar alturas y ocupación de suelo.\n- **monitorizar el consumo energético del edificio** → instalar sensores y paneles de control.\n\n## 🗣️ Mini-diálogos\n**Alicia:** ¿Ya evaluaste el análisis de ciclo de vida de la madera laminada cruzada?  \n**Bruno:** Sí, reduce la huella de carbono frente al hormigón reciclado en este contexto.\n\n**Lucía:** El barrio teme que la rehabilitación integral dispare la gentrificación.  \n**Diego:** Por eso vinculamos vivienda asequible y participación vecinal desde el inicio.\n\n**Sara:** ¿Dónde conviene situar los espacios comunes?  \n**Manu:** En la fachada con mejor orientación solar para aprovechar la luz invernal.\n\n## 🧾 Frases hechas y giros útiles\n- **a escala humana** → dimensiones pensadas para el bienestar peatonal.\n- **tejido urbano consolidado** → área con trama estable y servicios existentes.\n- **obra llave en mano** → proyecto entregado listo para usar sin trabajos adicionales.\n- **poner en valor el patrimonio industrial** → resaltar y reutilizar estructuras históricas."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex1",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "match",
+      "promptMd": "Relaciona cada término con su definición.",
+      "options": [
+        "A. cubierta verde",
+        "B. densidad residencial",
+        "C. ventilación cruzada",
+        "D. rehabilitación integral",
+        "1. número de viviendas por unidad de superficie",
+        "2. techo vegetal que mejora el aislamiento",
+        "3. flujo de aire generado por aberturas opuestas",
+        "4. renovación profunda de estructura y energía"
+      ],
+      "answer": [
+        "A-2",
+        "B-1",
+        "C-3",
+        "D-4"
+      ],
+      "feedback": {
+        "correct": "¡Perfecto! Has emparejado correctamente los conceptos.",
+        "wrong": "Revisa las definiciones: piensa en función, escala y objetivo de cada término."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "lexico-arquitectura"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex2",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "cloze",
+      "promptMd": "**El diseño incorpora una ___ para reducir el consumo de climatización.**",
+      "answer": "cubierta verde",
+      "accepted": [
+        "re:^cubierta verde$",
+        "re:^una cubierta verde$"
+      ],
+      "feedback": {
+        "correct": "Sí: una cubierta verde aporta inercia térmica y evapotranspiración.",
+        "wrong": "Piensa en soluciones vegetales que aislan y refrescan el edificio."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "soluciones-pasivas"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex3",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "translate",
+      "promptMd": "Traduce al español: *community participation workshops*",
+      "answer": "talleres de participación vecinal",
+      "accepted": [
+        "re:^taller(es)? de participación vecinal(es)?$"
+      ],
+      "feedback": {
+        "correct": "Exacto: talleres de participación vecinal consolidan el diálogo ciudadano.",
+        "wrong": "Recuerda que *participación vecinal* es la expresión específica para community participation."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write",
+          "speak"
+        ],
+        "topic": "participacion"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex4",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "order",
+      "promptMd": "Ordena los pasos para optimizar la orientación solar de un edificio.",
+      "options": [
+        "Analizar la trayectoria solar de la parcela",
+        "Modelar sombras con herramientas digitales",
+        "Decidir la orientación de las fachadas principales",
+        "Planificar elementos de sombreado pasivo"
+      ],
+      "answer": [
+        "Analizar la trayectoria solar de la parcela",
+        "Modelar sombras con herramientas digitales",
+        "Decidir la orientación de las fachadas principales",
+        "Planificar elementos de sombreado pasivo"
+      ],
+      "feedback": {
+        "correct": "Buen flujo: análisis, modelado, decisión y respuesta pasiva.",
+        "wrong": "Piensa en primero comprender el sol, luego simular, decidir y finalmente diseñar protecciones."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read"
+        ],
+        "topic": "orientacion-solar"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex5",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "match",
+      "promptMd": "Empareja cada concepto con su contexto.",
+      "options": [
+        "A. transporte multimodal",
+        "B. normativa urbanística",
+        "C. urbanismo táctico",
+        "D. mobiliario urbano",
+        "1. reglas que definen alturas y usos permitidos",
+        "2. intervención temporal con pintura y mobiliario ligero",
+        "3. combinar bus, metro y bici en un trayecto",
+        "4. bancos, farolas y papeleras en el espacio público"
+      ],
+      "answer": [
+        "A-3",
+        "B-1",
+        "C-2",
+        "D-4"
+      ],
+      "feedback": {
+        "correct": "¡Bien! Identificaste funciones y escenarios de cada término.",
+        "wrong": "Atiende a si el concepto pertenece a regulación, movilidad, tácticas temporales o equipamiento."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "contextos-urbanos"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex6",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "cloze",
+      "promptMd": "**La estrategia busca ___ sin desplazar a los residentes actuales.**",
+      "answer": "vivienda asequible",
+      "accepted": [
+        "re:^vivienda asequible$",
+        "re:^generar vivienda asequible$"
+      ],
+      "feedback": {
+        "correct": "Exacto: el objetivo es garantizar vivienda asequible para el vecindario.",
+        "wrong": "Piensa en políticas que mantienen precios al alcance de la comunidad."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "inclusion-social"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex7",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "translate",
+      "promptMd": "Traduce al inglés: **\"sombreado pasivo\"**",
+      "answer": "passive shading",
+      "accepted": [
+        "re:^passive shading$"
+      ],
+      "feedback": {
+        "correct": "Correcto: passive shading es la traducción técnica habitual.",
+        "wrong": "Recuerda que *sombreado* en este contexto es *shading*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "terminologia"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex8",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "order",
+      "promptMd": "Ordena una secuencia básica de participación vecinal efectiva.",
+      "options": [
+        "Convocar a los colectivos vecinales clave",
+        "Presentar el diagnóstico urbano con datos claros",
+        "Co-crear escenarios en talleres participativos",
+        "Incorporar los acuerdos al plan maestro final"
+      ],
+      "answer": [
+        "Convocar a los colectivos vecinales clave",
+        "Presentar el diagnóstico urbano con datos claros",
+        "Co-crear escenarios en talleres participativos",
+        "Incorporar los acuerdos al plan maestro final"
+      ],
+      "feedback": {
+        "correct": "Exacto: convocatoria, información, co-diseño y cierre en el plan maestro.",
+        "wrong": "Piensa en primero reunir a la comunidad, luego informar, cocrear y formalizar."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read",
+          "speak"
+        ],
+        "topic": "participacion"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex9",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "cloze",
+      "promptMd": "**El plan maestro prioriza la creación de un ___ que conecte parques y plazas.**",
+      "answer": "corredor verde",
+      "accepted": [
+        "re:^corredor verde$",
+        "re:^un corredor verde$"
+      ],
+      "feedback": {
+        "correct": "Muy bien: un corredor verde articula el espacio público y la ecología urbana.",
+        "wrong": "Busca el término para una franja ajardinada conectiva."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "infraestructura-verde"
+      }
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-ex10",
+      "lessonId": "vocab-a-arquitectura-sostenible",
+      "type": "translate",
+      "promptMd": "Traduce al español: *life cycle assessment*",
+      "answer": "análisis de ciclo de vida",
+      "accepted": [
+        "re:^análisis de ciclo de vida$",
+        "re:^analisis de ciclo de vida$"
+      ],
+      "feedback": {
+        "correct": "Correcto: análisis de ciclo de vida es la denominación oficial en normativa europea.",
+        "wrong": "Recuerda que *assessment* en este contexto se traduce como *análisis*."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "evaluacion-ambiental"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-a-arquitectura-sostenible-01",
+      "front": "arquitectura bioclimática",
+      "back": "bioclimatic architecture",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-02",
+      "front": "fachada ventilada",
+      "back": "ventilated façade",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-03",
+      "front": "aislamiento térmico",
+      "back": "thermal insulation",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-04",
+      "front": "cubierta verde",
+      "back": "green roof",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-05",
+      "front": "panel solar fotovoltaico",
+      "back": "photovoltaic solar panel",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-06",
+      "front": "aerotermia",
+      "back": "air-source heat pump technology",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-07",
+      "front": "geotermia",
+      "back": "geothermal system",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-08",
+      "front": "recuperación de aguas grises",
+      "back": "greywater recovery",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-09",
+      "front": "huella de carbono",
+      "back": "carbon footprint",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-10",
+      "front": "certificación energética",
+      "back": "energy certification",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-11",
+      "front": "mobiliario urbano",
+      "back": "street furniture",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-12",
+      "front": "urbanismo táctico",
+      "back": "tactical urbanism",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-13",
+      "front": "corredor verde",
+      "back": "green corridor",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-14",
+      "front": "densidad residencial",
+      "back": "residential density",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-15",
+      "front": "uso mixto",
+      "back": "mixed-use zoning",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-16",
+      "front": "gentrificación",
+      "back": "gentrification",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-17",
+      "front": "rehabilitación integral",
+      "back": "full refurbishment",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-18",
+      "front": "eficiencia energética",
+      "back": "energy efficiency",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-19",
+      "front": "hormigón reciclado",
+      "back": "recycled concrete",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-20",
+      "front": "madera laminada cruzada",
+      "back": "cross-laminated timber",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-21",
+      "front": "análisis de ciclo de vida",
+      "back": "life cycle assessment",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-22",
+      "front": "sombreado pasivo",
+      "back": "passive shading",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-23",
+      "front": "orientación solar",
+      "back": "solar orientation",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-24",
+      "front": "ventilación cruzada",
+      "back": "cross ventilation",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-25",
+      "front": "transporte multimodal",
+      "back": "multimodal transport",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-26",
+      "front": "resiliencia urbana",
+      "back": "urban resilience",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-27",
+      "front": "participación vecinal",
+      "back": "community participation",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-28",
+      "front": "plan maestro",
+      "back": "master plan",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-29",
+      "front": "normativa urbanística",
+      "back": "zoning regulation",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-arquitectura-sostenible-30",
+      "front": "vivienda asequible",
+      "back": "affordable housing",
+      "tag": "vocab>arquitectura-sostenible",
+      "deck": "vocab"
+    }
+  ]
+}

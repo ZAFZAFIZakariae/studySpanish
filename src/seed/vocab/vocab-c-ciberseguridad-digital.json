@@ -1,0 +1,486 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-c-ciberseguridad-digital",
+      "level": "C1",
+      "title": "V-C — Ciberseguridad y Transformación Digital",
+      "slug": "vocab-c-ciberseguridad-digital",
+      "tags": [
+        "vocab",
+        "ciberseguridad",
+        "transformacion-digital",
+        "topic-pack"
+      ],
+      "markdown": "# 🛡️ V-C — Ciberseguridad y Transformación Digital\n\n**Objetivo:** Describir infraestructuras digitales, riesgos y planes de contingencia usando terminología especializada.\n\n---\n\n## 📘 Léxico núcleo (30 términos)\n| Término | Género / Plural | Traducción | Nota de uso |\n| --- | --- | --- | --- |\n| infraestructura crítica | la; pl. infraestructuras críticas | critical infrastructure | servicios esenciales que requieren protección |\n| cortafuegos | el; pl. cortafuegos | firewall | barrera que filtra tráfico entrante y saliente |\n| autenticación multifactor | la; pl. autenticaciones multifactor | multi-factor authentication | verificación con al menos dos factores |\n| cifrado de extremo a extremo | el; pl. cifrados de extremo a extremo | end-to-end encryption | protege mensajes entre emisor y receptor |\n| vector de ataque | el; pl. vectores de ataque | attack vector | ruta utilizada por un atacante |\n| gestión de identidades | la; pl. gestiones de identidades | identity management | procesos que controlan accesos |\n| cumplimiento normativo | el; pl. cumplimientos normativos | regulatory compliance | adhesión a leyes y estándares |\n| auditoría forense | la; pl. auditorías forenses | forensic audit | investigación digital tras un incidente |\n| vulnerabilidad de día cero | la; pl. vulnerabilidades de día cero | zero-day vulnerability | fallo sin parche conocido |\n| parche de seguridad | el; pl. parches de seguridad | security patch | actualización correctiva |\n| superficie de exposición | la; pl. superficies de exposición | attack surface | conjunto de puntos expuestos |\n| fuga de datos | la; pl. fugas de datos | data breach | salida no autorizada de información |\n| privacidad diferencial | la; pl. privacidades diferenciales | differential privacy | técnica para anonimizar conjuntos de datos |\n| aprendizaje automático | el; pl. aprendizajes automáticos | machine learning | modelos que aprenden patrones |\n| algoritmo de recomendación | el; pl. algoritmos de recomendación | recommendation algorithm | sugiere contenido según datos |\n| nube híbrida | la; pl. nubes híbridas | hybrid cloud | combina infraestructura pública y privada |\n| orquestación de contenedores | la; pl. orquestaciones de contenedores | container orchestration | gestiona despliegue de contenedores |\n| arquitectura sin servidor | la; pl. arquitecturas sin servidor | serverless architecture | ejecución en la nube basada en eventos |\n| escalabilidad elástica | la; pl. escalabilidades elásticas | elastic scalability | capacidad de ajustar recursos dinámicamente |\n| continuidad de negocio | la; pl. continuidades de negocio | business continuity | plan para mantener operaciones |\n| plan de recuperación | el; pl. planes de recuperación | recovery plan | acciones para restablecer servicios |\n| análisis de amenazas | el; pl. análisis de amenazas | threat analysis | evaluación de riesgos potenciales |\n| simulacro de phishing | el; pl. simulacros de phishing | phishing drill | campaña de prueba para concienciar |\n| formación de concienciación | la; pl. formaciones de concienciación | awareness training | programa educativo para el personal |\n| registro de auditoría | el; pl. registros de auditoría | audit log | historial de eventos y accesos |\n| respuesta a incidentes | la; pl. respuestas a incidentes | incident response | procedimientos ante brechas |\n| acuerdo de nivel de servicio | el; pl. acuerdos de nivel de servicio | service-level agreement | compromiso formal sobre rendimiento |\n| automatización robótica de procesos | la; pl. automatizaciones robóticas de procesos | robotic process automation | bots que ejecutan tareas repetitivas |\n| hoja de ruta digital | la; pl. hojas de ruta digitales | digital roadmap | plan secuenciado de iniciativas tecnológicas |\n| gobernanza de datos | la; pl. gobernanzas de datos | data governance | marco para gestionar calidad y acceso |\n\n## 🔗 Combinaciones clave (12 chunks)\n- **implementar autenticación multifactor en todos los accesos críticos** → reducir el riesgo de intrusiones por contraseñas comprometidas.\n- **parchear vulnerabilidades de día cero en menos de 24 horas** → minimizar la ventana de explotación.\n- **realizar un simulacro de phishing trimestral** → medir la respuesta del personal ante correos fraudulentos.\n- **monitorizar registros de auditoría en tiempo real** → detectar anomalías de acceso inmediatamente.\n- **orquestar contenedores con alta disponibilidad** → distribuir cargas entre nodos redundantes.\n- **definir acuerdos de nivel de servicio claros** → alinear expectativas de proveedores y negocio.\n- **automatizar flujos con bots RPA** → liberar al personal de tareas repetitivas.\n- **activar el plan de recuperación tras una fuga de datos** → restablecer servicios críticos con rapidez.\n- **establecer una hoja de ruta digital consensuada** → priorizar inversiones tecnológicas según impacto.\n- **aplicar privacidad diferencial a los informes analíticos** → proteger identidades en datasets masivos.\n- **reducir la superficie de exposición mediante segmentación de red** → limitar los puntos de entrada.\n- **formar al personal en respuesta a incidentes** → asegurar que todos conocen protocolos y escalado.\n\n## 🗣️ Mini-diálogos\n**Celia:** ¿Ya cerramos la vulnerabilidad de día cero?  \n**Marco:** Sí, desplegamos el parche de seguridad y verificamos con un escaneo completo.\n\n**Lara:** El simulacro de phishing tuvo muchas caídas.  \n**Óscar:** Urge reforzar la formación de concienciación y revisar la comunicación interna.\n\n**Naira:** ¿Cuándo definimos la hoja de ruta digital?  \n**Tomás:** Después del taller de análisis de amenazas para priorizar iniciativas críticas.\n\n## 🧾 Frases hechas y giros útiles\n- **seguridad por diseño** → principio de integrar protección desde el inicio del desarrollo.\n- **ventana de mantenimiento** → periodo programado para aplicar cambios en sistemas.\n- **hardening del sistema** → endurecimiento mediante configuraciones seguras.\n- **lecciones aprendidas** → resumen de mejoras tras un incidente."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex1",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "match",
+      "promptMd": "Relaciona cada concepto con su descripción correcta.",
+      "options": [
+        "A. vulnerabilidad de día cero",
+        "B. plan de recuperación",
+        "C. autenticación multifactor",
+        "D. registro de auditoría",
+        "1. registro cronológico de accesos y acciones",
+        "2. fallo sin parche disponible aún",
+        "3. procedimiento para restablecer servicios tras un incidente",
+        "4. verificación con más de un factor de seguridad"
+      ],
+      "answer": [
+        "A-2",
+        "B-3",
+        "C-4",
+        "D-1"
+      ],
+      "feedback": {
+        "correct": "Excelente: identificaste riesgo, plan, control de acceso y trazabilidad.",
+        "wrong": "Piensa si el término habla de vulnerabilidades, planes, autenticación o registros."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "lexico-ciberseguridad"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex2",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "cloze",
+      "promptMd": "**Tras el ataque activamos el ___ para restaurar los servidores.**",
+      "answer": "plan de recuperación",
+      "accepted": [
+        "re:^plan de recuperación$",
+        "re:^plan de recuperacion$"
+      ],
+      "feedback": {
+        "correct": "Correcto: el plan de recuperación guía la restauración tras incidentes.",
+        "wrong": "Busca el documento que define cómo restablecer servicios críticos."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "continuidad"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex3",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "translate",
+      "promptMd": "Traduce al español: *business continuity strategy*",
+      "answer": "estrategia de continuidad de negocio",
+      "accepted": [
+        "re:^estrategia de continuidad de negocio$"
+      ],
+      "feedback": {
+        "correct": "Así es: estrategia de continuidad de negocio es la expresión formal.",
+        "wrong": "Recuerda que *continuity* en este campo se traduce como *continuidad de negocio*."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "continuidad"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex4",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "order",
+      "promptMd": "Ordena un flujo típico de respuesta a incidentes.",
+      "options": [
+        "Detectar el incidente y contenerlo",
+        "Analizar la causa raíz con auditoría forense",
+        "Remediar sistemas y aplicar parches",
+        "Documentar lecciones aprendidas y actualizar protocolos"
+      ],
+      "answer": [
+        "Detectar el incidente y contenerlo",
+        "Analizar la causa raíz con auditoría forense",
+        "Remediar sistemas y aplicar parches",
+        "Documentar lecciones aprendidas y actualizar protocolos"
+      ],
+      "feedback": {
+        "correct": "Bien: contención, análisis, remediación y aprendizaje final.",
+        "wrong": "Piensa en seguir el ciclo estándar: detectar, investigar, reparar y documentar."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read"
+        ],
+        "topic": "respuesta-incidentes"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex5",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "match",
+      "promptMd": "Empareja cada chunk con su impacto.",
+      "options": [
+        "A. aplicar privacidad diferencial",
+        "B. reducir la superficie de exposición",
+        "C. automatizar flujos con bots RPA",
+        "D. activar el plan de recuperación",
+        "1. aislar servicios tras una fuga de datos",
+        "2. limitar los puntos de entrada disponibles",
+        "3. proteger identidades en informes analíticos",
+        "4. liberar al personal de tareas repetitivas"
+      ],
+      "answer": [
+        "A-3",
+        "B-2",
+        "C-4",
+        "D-1"
+      ],
+      "feedback": {
+        "correct": "Perfecto: asociaste protección de datos, superficie, automatización y contingencia.",
+        "wrong": "Revisa si la acción trata de privacidad, perímetro, automatización o respuesta."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read"
+        ],
+        "topic": "chunks-ciberseguridad"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex6",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "cloze",
+      "promptMd": "**El equipo busca reducir la ___ cerrando puertos innecesarios.**",
+      "answer": "superficie de exposición",
+      "accepted": [
+        "re:^superficie de exposición$",
+        "re:^superficie de exposicion$"
+      ],
+      "feedback": {
+        "correct": "Exacto: reducir la superficie de exposición limita rutas de ataque.",
+        "wrong": "Piensa en el conjunto de puntos accesibles para un atacante."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "proteccion"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex7",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "translate",
+      "promptMd": "Traduce al inglés: **\"gobernanza de datos\"**",
+      "answer": "data governance",
+      "accepted": [
+        "re:^data governance$"
+      ],
+      "feedback": {
+        "correct": "Correcto: data governance es el término estándar.",
+        "wrong": "Recuerda que *gobernanza* se traduce como *governance*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "terminologia"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex8",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "order",
+      "promptMd": "Ordena las fases para implantar autenticación multifactor (MFA).",
+      "options": [
+        "Inventariar aplicaciones críticas y niveles de riesgo",
+        "Seleccionar proveedor de autenticación multifactor",
+        "Pilotar la solución con un grupo reducido",
+        "Desplegar MFA y monitorizar métricas de adopción"
+      ],
+      "answer": [
+        "Inventariar aplicaciones críticas y niveles de riesgo",
+        "Seleccionar proveedor de autenticación multifactor",
+        "Pilotar la solución con un grupo reducido",
+        "Desplegar MFA y monitorizar métricas de adopción"
+      ],
+      "feedback": {
+        "correct": "Secuencia impecable: inventario, selección, piloto y despliegue con seguimiento.",
+        "wrong": "Piensa en evaluar primero, elegir después, probar antes y desplegar al final."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read"
+        ],
+        "topic": "mfa"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex9",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "cloze",
+      "promptMd": "**Programamos un ___ mensual para evaluar la reacción del personal ante correos falsos.**",
+      "answer": "simulacro de phishing",
+      "accepted": [
+        "re:^simulacro de phishing$",
+        "re:^un simulacro de phishing$"
+      ],
+      "feedback": {
+        "correct": "Así es: el simulacro de phishing mide la preparación del equipo.",
+        "wrong": "Piensa en ejercicios que imitan intentos de suplantación."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "concienciacion"
+      }
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-ex10",
+      "lessonId": "vocab-c-ciberseguridad-digital",
+      "type": "translate",
+      "promptMd": "Traduce al español: *threat analysis workshop*",
+      "answer": "taller de análisis de amenazas",
+      "accepted": [
+        "re:^taller de análisis de amenazas$",
+        "re:^taller de analisis de amenazas$"
+      ],
+      "feedback": {
+        "correct": "Correcto: taller de análisis de amenazas describe la sesión colaborativa.",
+        "wrong": "Recuerda que *workshop* se suele traducir por *taller*."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write",
+          "speak"
+        ],
+        "topic": "analisis"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-c-ciberseguridad-digital-01",
+      "front": "infraestructura crítica",
+      "back": "critical infrastructure",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-02",
+      "front": "cortafuegos",
+      "back": "firewall",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-03",
+      "front": "autenticación multifactor",
+      "back": "multi-factor authentication",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-04",
+      "front": "cifrado de extremo a extremo",
+      "back": "end-to-end encryption",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-05",
+      "front": "vector de ataque",
+      "back": "attack vector",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-06",
+      "front": "gestión de identidades",
+      "back": "identity management",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-07",
+      "front": "cumplimiento normativo",
+      "back": "regulatory compliance",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-08",
+      "front": "auditoría forense",
+      "back": "forensic audit",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-09",
+      "front": "vulnerabilidad de día cero",
+      "back": "zero-day vulnerability",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-10",
+      "front": "parche de seguridad",
+      "back": "security patch",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-11",
+      "front": "superficie de exposición",
+      "back": "attack surface",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-12",
+      "front": "fuga de datos",
+      "back": "data breach",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-13",
+      "front": "privacidad diferencial",
+      "back": "differential privacy",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-14",
+      "front": "aprendizaje automático",
+      "back": "machine learning",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-15",
+      "front": "algoritmo de recomendación",
+      "back": "recommendation algorithm",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-16",
+      "front": "nube híbrida",
+      "back": "hybrid cloud",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-17",
+      "front": "orquestación de contenedores",
+      "back": "container orchestration",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-18",
+      "front": "arquitectura sin servidor",
+      "back": "serverless architecture",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-19",
+      "front": "escalabilidad elástica",
+      "back": "elastic scalability",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-20",
+      "front": "continuidad de negocio",
+      "back": "business continuity",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-21",
+      "front": "plan de recuperación",
+      "back": "recovery plan",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-22",
+      "front": "análisis de amenazas",
+      "back": "threat analysis",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-23",
+      "front": "simulacro de phishing",
+      "back": "phishing drill",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-24",
+      "front": "formación de concienciación",
+      "back": "awareness training",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-25",
+      "front": "registro de auditoría",
+      "back": "audit log",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-26",
+      "front": "respuesta a incidentes",
+      "back": "incident response",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-27",
+      "front": "acuerdo de nivel de servicio",
+      "back": "service-level agreement",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-28",
+      "front": "automatización robótica de procesos",
+      "back": "robotic process automation",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-29",
+      "front": "hoja de ruta digital",
+      "back": "digital roadmap",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-c-ciberseguridad-digital-30",
+      "front": "gobernanza de datos",
+      "back": "data governance",
+      "tag": "vocab>ciberseguridad-digital",
+      "deck": "vocab"
+    }
+  ]
+}
