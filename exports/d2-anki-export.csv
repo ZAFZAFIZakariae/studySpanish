@@ -1,0 +1,639 @@
+front,back,tag
+Imperativo afirmativo + pronombres,Pega clíticos al final y añade tilde (dámelo),d1>cliticos-se
+Imperativo negativo + pronombres,Pronombres antes del verbo (no te lo lleves),d1>cliticos-se
+Actually ≠ actualmente,Traduce 'actually' como 'en realidad' o 'de hecho',d1>francophone-errors
+Asistir a,El verbo necesita preposición: asistir a la reunión,d1>francophone-errors
+De repente + verbo,Indefinido para evento puntual (de repente sonó),d1>imperfecto-vs-indefinido
+Mientras + verbo,Imperfecto para acción en curso (mientras estudiaba),d1>imperfecto-vs-indefinido
+Es evidente que...,Mantén indicativo (es evidente que tiene),d1>indicativo-vs-subjuntivo
+No creo que...,Activa subjuntivo (no creo que sea),d1>indicativo-vs-subjuntivo
+Marcador 'esta semana',Usa pretérito perfecto: he/has/ha + participio,d1>perfecto-vs-indefinido
+abrir — formas clave,yo abro; pret. yo abrí; subj. yo abra; participio abierto. Nota: Participio irregular abierto; resto regular.,iv-atlas>a–c
+andar — formas clave,yo ando; pret. yo anduve; subj. yo ande; participio andado. Nota: Pretérito con raíz anduv- y subjuntivo pretérito anduviera.,iv-atlas>a–c
+bendecir — formas clave,"yo bendigo; pret. yo bendije; subj. yo bendiga; participio bendecido (verbal) / bendito (adjetivo). Nota: Como *decir*: yo bendigo, pretérito bendije, participio verbal *bendecido* (adjetivo *bendito*).",iv-atlas>a–c
+caber — formas clave,yo quepo; pret. yo cupe; subj. yo quepa; participio cabido. Nota: Yo quepo; pretérito cupe; futuro cabré; subjuntivo presente quepa.,iv-atlas>a–c
+caer — formas clave,"yo caigo; pret. yo caí; subj. yo caiga; participio caído. Nota: Yo caigo; pretérito con y (cayó, cayeron); participio caído.",iv-atlas>a–c
+cerrar — formas clave,yo cierro; pret. yo cerré; subj. yo cierre; participio cerrado. Nota: Cambio vocálico e→ie excepto en nosotros/vosotros.,iv-atlas>a–c
+conducir — formas clave,yo conduzco; pret. yo conduje; subj. yo conduzca; participio conducido. Nota: Yo conduzco; pretérito conduje con 3ª plural -eron.,iv-atlas>a–c
+construir — formas clave,"yo construyo; pret. yo construí; subj. yo construya; participio construido. Nota: Cambio i→y en presente, pretérito y subjuntivo; nosotros conservan i.",iv-atlas>a–c
+decir — formas clave,yo digo; pret. yo dije; subj. yo diga; participio dicho. Nota: Yo digo; pretérito dije; participio dicho.,iv-atlas>d–l
+dormir — formas clave,yo duermo; pret. yo dormí; subj. yo duerma; participio dormido. Nota: Cambio o→ue/e→u; pretérito 3ª persona durmió/durmieron.,iv-atlas>d–l
+estar — formas clave,yo estoy; pret. yo estuve; subj. yo esté; participio estado. Nota: Yo estoy; pretérito estuve; subjuntivo esté.,iv-atlas>d–l
+freír — formas clave,yo frío; pret. yo freí; subj. yo fría; participio freído / frito. Nota: Acentos en presente (frío); participio doble *freído/frito*.,iv-atlas>d–l
+haber — formas clave,"yo he; pret. yo hube; subj. yo haya; participio habido (raro). Nota: Auxiliar: he, has, ha; pretérito hube; subjuntivo haya.",iv-atlas>d–l
+hacer — formas clave,yo hago; pret. yo hice; subj. yo haga; participio hecho. Nota: Yo hago; pretérito hice (3ª hizo); futuro haré.,iv-atlas>d–l
+ir — formas clave,"yo voy; pret. yo fui; subj. yo vaya; participio ido. Nota: Suplétivo: presente voy, pretérito fui, subjuntivo vaya.",iv-atlas>d–l
+jugar — formas clave,yo juego; pret. yo jugué; subj. yo juegue; participio jugado. Nota: Cambio u→ue; pretérito yo jugué con g; subjuntivo juegue.,iv-atlas>d–l
+leer — formas clave,"yo leo; pret. yo leí; subj. yo lea; participio leído. Nota: Pretérito con y (leyó, leyeron); gerundio leyendo.",iv-atlas>d–l
+morir — formas clave,yo muero; pret. yo morí; subj. yo muera; participio muerto. Nota: Cambio o→ue/e→u; participio irregular muerto.,iv-atlas>m–s
+oír — formas clave,"yo oigo; pret. yo oí; subj. yo oiga; participio oído. Nota: Formas con y (oigo, oyes); pretérito oyó, oyeron.",iv-atlas>m–s
+pedir — formas clave,yo pido; pret. yo pedí; subj. yo pida; participio pedido. Nota: Cambio e→i; pretérito 3ª persona pidió/pidieron.,iv-atlas>m–s
+poder — formas clave,"yo puedo; pret. yo pude; subj. yo pueda; participio podido. Nota: Raíz irregular: presente pued-, pretérito pud-, futuro podr-.",iv-atlas>m–s
+poner — formas clave,yo pongo; pret. yo puse; subj. yo ponga; participio puesto. Nota: Yo pongo; pretérito puse; futuro pondré; participio puesto.,iv-atlas>m–s
+querer — formas clave,yo quiero; pret. yo quise; subj. yo quiera; participio querido. Nota: Cambio e→ie; pretérito quis-; futuro querr-.,iv-atlas>m–s
+reír — formas clave,"yo río; pret. yo reí; subj. yo ría; participio reído. Nota: Acentos en presente (río); pretérito rió, rieron; gerundio riendo.",iv-atlas>m–s
+saber — formas clave,yo sé; pret. yo supe; subj. yo sepa; participio sabido. Nota: Yo sé; pretérito supe; subjuntivo presente sepa.,iv-atlas>m–s
+salir — formas clave,yo salgo; pret. yo salí; subj. yo salga; participio salido. Nota: Yo salgo; futuro saldré; subjuntivo presente salga.,iv-atlas>m–s
+ser — formas clave,"yo soy; pret. yo fui; subj. yo sea; participio sido. Nota: Presente soy, eres; pretérito fui; imperfecto era; subjuntivo sea/fuera.",iv-atlas>m–s
+tener — formas clave,yo tengo; pret. yo tuve; subj. yo tenga; participio tenido. Nota: Yo tengo; pretérito tuve; futuro tendré; subjuntivo tenga.,iv-atlas>t–z
+traducir — formas clave,yo traduzco; pret. yo traduje; subj. yo traduzca; participio traducido. Nota: Yo traduzco; pretérito traduje (3ª tradujeron); subjuntivo traduzca.,iv-atlas>t–z
+traer — formas clave,yo traigo; pret. yo traje; subj. yo traiga; participio traído. Nota: Yo traigo; pretérito traje (3ª trajeron); gerundio trayendo.,iv-atlas>t–z
+valer — formas clave,yo valgo; pret. yo valí; subj. yo valga; participio valido. Nota: Yo valgo; futuro valdré; subjuntivo valga.,iv-atlas>t–z
+venir — formas clave,yo vengo; pret. yo vine; subj. yo venga; participio venido. Nota: Yo vengo; presente vien-; pretérito vine; futuro vendré.,iv-atlas>t–z
+ver — formas clave,"yo veo; pret. yo vi; subj. yo vea; participio visto. Nota: Yo veo; pretérito vi, viste, vio sin acentos; participio visto.",iv-atlas>t–z
+volver — formas clave,yo vuelvo; pret. yo volví; subj. yo vuelva; participio vuelto. Nota: Cambio o→ue; participio irregular vuelto; futuro volveré.,iv-atlas>t–z
+yacer — formas clave,yo yazco; pret. yo yací; subj. yo yazca; participio yacido. Nota: Yo yazco (también *yago*); pretérito yací/yació; subjuntivo yazca.,iv-atlas>t–z
+zurcir — formas clave,yo zurzo; pret. yo zurcí; subj. yo zurza; participio zurcido. Nota: Yo zurzo; subjuntivo zurza; 2ª pl. imperativo zurcid.,iv-atlas>t–z
+Marcador 'ayer',Usa pretérito indefinido (terminé,llegamos)
+Por = causa / intercambio,Gracias por...,pagar por
+Para = meta / destinatario,Salgo para Madrid,regalo para Ana
+abandonar,abandon,verbs>regular500
+abarcar,cross,verbs>regular500
+abastecer,provide,verbs>regular500
+abatir,down,verbs>regular500
+abdicar,abnegate,verbs>regular500
+ablandar,soft-pedal,verbs>regular500
+abogar,advocate,verbs>regular500
+abolir,abolish,verbs>regular500
+abonar,pay,verbs>regular500
+abordar,address,verbs>regular500
+abrazar,adopt,verbs>regular500
+abreviar,abbreviate,verbs>regular500
+abrir,open,verbs>regular500
+absolver,free,verbs>regular500
+absorber,take up,verbs>regular500
+abundar,abound,verbs>regular500
+aburrir,tire,verbs>regular500
+abusar,abuse,verbs>regular500
+acabar,finish,verbs>regular500
+acallar,hush up,verbs>regular500
+acampar,camp,verbs>regular500
+acariciar,stroke,verbs>regular500
+acarrear,haul,verbs>regular500
+acceder,agree,verbs>regular500
+acechar,spot,verbs>regular500
+acelerar,get going,verbs>regular500
+acentuar,point up,verbs>regular500
+aceptar,accept,verbs>regular500
+acertar,hit,verbs>regular500
+achicar,dwarf,verbs>regular500
+aclarar,light up,verbs>regular500
+acoger,take in,verbs>regular500
+acometer,undertake,verbs>regular500
+acomodar,accommodate,verbs>regular500
+aconsejar,recommend,verbs>regular500
+acontecer,go on,verbs>regular500
+acoplar,couple,verbs>regular500
+acordar,square up,verbs>regular500
+acorralar,set up,verbs>regular500
+acosar,harass,verbs>regular500
+acostar,bed,verbs>regular500
+acostumbrar,accustom,verbs>regular500
+acrecentar,run up,verbs>regular500
+acreditar,credit,verbs>regular500
+activar,root on,verbs>regular500
+actuar,act,verbs>regular500
+acudir,proceed,verbs>regular500
+acumular,take in,verbs>regular500
+acusar,charge,verbs>regular500
+adaptar,adapt,verbs>regular500
+adecuar,fit,verbs>regular500
+adelantar,advance,verbs>regular500
+adelgazar,lose weight,verbs>regular500
+adherir,adhere,verbs>regular500
+adicionar,add,verbs>regular500
+adivinar,guess,verbs>regular500
+adjudicar,lot,verbs>regular500
+adjuntar,attach,verbs>regular500
+administrar,administer,verbs>regular500
+admirar,look up to,verbs>regular500
+admitir,admit,verbs>regular500
+adoptar,take up,verbs>regular500
+adorar,love,verbs>regular500
+adornar,grace,verbs>regular500
+adquirir,take on,verbs>regular500
+adulterar,fake,verbs>regular500
+advertir,name,verbs>regular500
+afectar,affect,verbs>regular500
+afianzar,buttress,verbs>regular500
+afilar,point,verbs>regular500
+afinar,down,verbs>regular500
+afirmar,say,verbs>regular500
+aflojar,loose,verbs>regular500
+aflorar,crop out,verbs>regular500
+afrontar,face,verbs>regular500
+agarrar,grab,verbs>regular500
+agitar,call down,verbs>regular500
+agotar,play out,verbs>regular500
+agradar,like,verbs>regular500
+agradecer,thank,verbs>regular500
+agravar,decline,verbs>regular500
+agrupar,group,verbs>regular500
+aguantar,last out,verbs>regular500
+aguardar,look,verbs>regular500
+agudizar,point,verbs>regular500
+ahondar,deepen,verbs>regular500
+ahorcar,halter,verbs>regular500
+ahorrar,save,verbs>regular500
+ahuyentar,shoo,verbs>regular500
+aislar,isolate,verbs>regular500
+ajustar,line up,verbs>regular500
+alardear,gas,verbs>regular500
+alargar,draw out,verbs>regular500
+alarmar,alarm,verbs>regular500
+albergar,house,verbs>regular500
+alegar,say,verbs>regular500
+alegrar,joy,verbs>regular500
+alejar,move away,verbs>regular500
+alentar,encourage,verbs>regular500
+alertar,alert,verbs>regular500
+alimentar,feed,verbs>regular500
+aliviar,still,verbs>regular500
+almacenar,store,verbs>regular500
+alojar,house,verbs>regular500
+alquilar,let,verbs>regular500
+alterar,alter,verbs>regular500
+alternar,alternate,verbs>regular500
+aludir,name,verbs>regular500
+alumbrar,light,verbs>regular500
+alzar,put up,verbs>regular500
+amamantar,suck,verbs>regular500
+amarrar,catch,verbs>regular500
+amasar,knead,verbs>regular500
+amortiguar,buffer,verbs>regular500
+amortizar,amortize,verbs>regular500
+amparar,shelter,verbs>regular500
+ampliar,amplify,verbs>regular500
+anexar,annex,verbs>regular500
+anhelar,long,verbs>regular500
+animar,fan,verbs>regular500
+aniquilar,nuke,verbs>regular500
+anochecer,benight,verbs>regular500
+anotar,set down,verbs>regular500
+anticipar,anticipate,verbs>regular500
+anular,set off,verbs>regular500
+anunciar,announce,verbs>regular500
+apaciguar,still,verbs>regular500
+aparecer,appear,verbs>regular500
+aparentar,look,verbs>regular500
+apartar,come off,verbs>regular500
+apelar,appeal,verbs>regular500
+aplastar,press out,verbs>regular500
+aplaudir,applaud,verbs>regular500
+aplazar,put over,verbs>regular500
+aportar,put up,verbs>regular500
+apostar,place,verbs>regular500
+apoyar,support,verbs>regular500
+apreciar,care for,verbs>regular500
+aprender,learn,verbs>regular500
+apresurar,speed,verbs>regular500
+apretar,force,verbs>regular500
+aprobar,make it,verbs>regular500
+aprovechar,capitalize on,verbs>regular500
+apuntalar,land,verbs>regular500
+apuntar,show,verbs>regular500
+apurar,worry,verbs>regular500
+arbitrar,arbitrate,verbs>regular500
+arder,fire,verbs>regular500
+argumentar,argue,verbs>regular500
+armar,arm,verbs>regular500
+armonizar,proportion,verbs>regular500
+arrancar,start,verbs>regular500
+arrasar,level,verbs>regular500
+arrastrar,drag,verbs>regular500
+arrebatar,transport,verbs>regular500
+arreglar,fix,verbs>regular500
+arrestar,arrest,verbs>regular500
+arribar,get in,verbs>regular500
+arriesgar,game,verbs>regular500
+arrojar,throw,verbs>regular500
+arruinar,fuck up,verbs>regular500
+articular,articulate,verbs>regular500
+asaltar,set on,verbs>regular500
+ascender,move up,verbs>regular500
+asegurar,ensure,verbs>regular500
+asentar,set down,verbs>regular500
+asentir,allow,verbs>regular500
+asesinar,off,verbs>regular500
+asfixiar,put out,verbs>regular500
+asignar,assign,verbs>regular500
+asimilar,take in,verbs>regular500
+asistir,attend,verbs>regular500
+asociar,link,verbs>regular500
+asomar,appear,verbs>regular500
+asombrar,surprise,verbs>regular500
+aspirar,aspire,verbs>regular500
+asumir,assume,verbs>regular500
+asustar,scare,verbs>regular500
+atacar,attack,verbs>regular500
+atajar,block,verbs>regular500
+atender,attend,verbs>regular500
+atenuar,break,verbs>regular500
+aterrorizar,awe,verbs>regular500
+atesorar,value,verbs>regular500
+atormentar,torture,verbs>regular500
+atracar,dock,verbs>regular500
+atrapar,set up,verbs>regular500
+atravesar,get over,verbs>regular500
+atribuir,credit,verbs>regular500
+atropellar,run over,verbs>regular500
+aullar,bay,verbs>regular500
+aumentar,increase,verbs>regular500
+avalar,underwrite,verbs>regular500
+aventar,winnow,verbs>regular500
+aventurar,game,verbs>regular500
+avergonzar,shame,verbs>regular500
+avisar,send word,verbs>regular500
+avivar,get going,verbs>regular500
+ayudar,help,verbs>regular500
+azotar,worst,verbs>regular500
+bailar,dance,verbs>regular500
+bajar,lower,verbs>regular500
+balancear,balance,verbs>regular500
+barrer,brush,verbs>regular500
+basar,base,verbs>regular500
+bastar,answer,verbs>regular500
+batear,bat,verbs>regular500
+batir,beat,verbs>regular500
+beber,drink,verbs>regular500
+bendecir,sign,verbs>regular500
+beneficiar,benefit,verbs>regular500
+besar,kiss,verbs>regular500
+bloquear,block,verbs>regular500
+boicotear,boycott,verbs>regular500
+bombardear,beat,verbs>regular500
+bombear,pump,verbs>regular500
+bordar,embroider,verbs>regular500
+borrar,off,verbs>regular500
+botar,launch,verbs>regular500
+brillar,shine,verbs>regular500
+brincar,bound off,verbs>regular500
+brindar,put up,verbs>regular500
+bromear,kid,verbs>regular500
+brotar,well,verbs>regular500
+bucear,skin-dive,verbs>regular500
+burlar,beat,verbs>regular500
+calar,stall,verbs>regular500
+calcular,calculate,verbs>regular500
+calentar,sex,verbs>regular500
+calificar,mark,verbs>regular500
+callar,close up,verbs>regular500
+calmar,still,verbs>regular500
+cambiar,change,verbs>regular500
+caminar,walk,verbs>regular500
+canalizar,channel,verbs>regular500
+cancelar,cancel,verbs>regular500
+cansar,try,verbs>regular500
+cantar,sing,verbs>regular500
+capacitar,enable,verbs>regular500
+capitalizar,capitalize,verbs>regular500
+captar,capture,verbs>regular500
+capturar,capture,verbs>regular500
+caracterizar,qualify,verbs>regular500
+carecer,want,verbs>regular500
+cargar,charge,verbs>regular500
+casar,couple,verbs>regular500
+castigar,correct,verbs>regular500
+castrar,fix,verbs>regular500
+catalogar,catalogue,verbs>regular500
+catar,try,verbs>regular500
+categorizar,categorize,verbs>regular500
+causar,cause,verbs>regular500
+cautivar,transport,verbs>regular500
+cavar,dig,verbs>regular500
+cebar,fat,verbs>regular500
+ceder,give way,verbs>regular500
+cegar,blind,verbs>regular500
+celebrar,celebrate,verbs>regular500
+cenar,dine,verbs>regular500
+censurar,call down,verbs>regular500
+centrar,center,verbs>regular500
+cepillar,brush,verbs>regular500
+cercar,wall,verbs>regular500
+certificar,certify,verbs>regular500
+cesar,end,verbs>regular500
+charlar,chat,verbs>regular500
+chillar,bitch,verbs>regular500
+chocar,hit,verbs>regular500
+chupar,take up,verbs>regular500
+cifrar,code,verbs>regular500
+circular,circle,verbs>regular500
+citar,cite,verbs>regular500
+clasificar,class,verbs>regular500
+claudicar,give in,verbs>regular500
+clausurar,close up,verbs>regular500
+clavar,center,verbs>regular500
+cobrar,take home,verbs>regular500
+cocinar,ready,verbs>regular500
+codificar,work out,verbs>regular500
+coexistir,coexist,verbs>regular500
+coincidir,check,verbs>regular500
+colaborar,get together,verbs>regular500
+colapsar,collapse,verbs>regular500
+colar,separate out,verbs>regular500
+coleccionar,collect,verbs>regular500
+colgar,post,verbs>regular500
+colisionar,hit,verbs>regular500
+colmar,fill,verbs>regular500
+colocar,place,verbs>regular500
+colonizar,colonize,verbs>regular500
+combatir,combat,verbs>regular500
+combinar,combine,verbs>regular500
+comentar,comment,verbs>regular500
+comer,eat,verbs>regular500
+comercializar,trade,verbs>regular500
+comerciar,trade,verbs>regular500
+cometer,commit,verbs>regular500
+comparar,compare,verbs>regular500
+comparecer,appear,verbs>regular500
+compartir,share,verbs>regular500
+compensar,compensate,verbs>regular500
+competir,compete,verbs>regular500
+complacer,please,verbs>regular500
+complementar,supplement,verbs>regular500
+completar,complete,verbs>regular500
+complicar,complicate,verbs>regular500
+comportar,mean,verbs>regular500
+comprar,buy,verbs>regular500
+comprender,understand,verbs>regular500
+comprimir,contract,verbs>regular500
+comprobar,control,verbs>regular500
+comprometer,compromise,verbs>regular500
+computar,work out,verbs>regular500
+comunicar,communicate,verbs>regular500
+concebir,imagine,verbs>regular500
+conceder,concede,verbs>regular500
+concentrar,concentrate,verbs>regular500
+concertar,concert,verbs>regular500
+concienciar,sensitize,verbs>regular500
+concluir,conclude,verbs>regular500
+concordar,concord,verbs>regular500
+concretar,finalize,verbs>regular500
+concurrir,go with,verbs>regular500
+condenar,condemn,verbs>regular500
+condensar,sum up,verbs>regular500
+condicionar,condition,verbs>regular500
+condimentar,season,verbs>regular500
+conectar,connect,verbs>regular500
+confeccionar,confection,verbs>regular500
+conferir,confer,verbs>regular500
+confesar,confess,verbs>regular500
+confiar,trust,verbs>regular500
+configurar,configure,verbs>regular500
+confirmar,confirm,verbs>regular500
+confiscar,confiscate,verbs>regular500
+confluir,converge,verbs>regular500
+conformar,conform to,verbs>regular500
+confrontar,confront,verbs>regular500
+confundir,take in,verbs>regular500
+congelar,cool,verbs>regular500
+conjurar,call down,verbs>regular500
+conmemorar,remember,verbs>regular500
+conmover,impact,verbs>regular500
+conquistar,conquer,verbs>regular500
+consagrar,order,verbs>regular500
+consentir,give in,verbs>regular500
+conservar,keep up,verbs>regular500
+considerar,consider,verbs>regular500
+consignar,record,verbs>regular500
+consistir,consist,verbs>regular500
+consolar,console,verbs>regular500
+consolidar,consolidate,verbs>regular500
+conspirar,conspire,verbs>regular500
+constar,consist,verbs>regular500
+constatar,check,verbs>regular500
+constituir,constitute,verbs>regular500
+consultar,consult,verbs>regular500
+consumar,consummate,verbs>regular500
+consumir,consume,verbs>regular500
+contabilizar,factor,verbs>regular500
+contactar,touch,verbs>regular500
+contagiar,communicate,verbs>regular500
+contaminar,contaminate,verbs>regular500
+contemplar,contemplate,verbs>regular500
+contender,contend,verbs>regular500
+contener,contain,verbs>regular500
+contestar,answer,verbs>regular500
+contraatacar,counterattack,verbs>regular500
+contradecir,misrepresent,verbs>regular500
+contraer,contract,verbs>regular500
+contrarrestar,set off,verbs>regular500
+contrastar,contrast,verbs>regular500
+contratar,contract,verbs>regular500
+contribuir,contribute,verbs>regular500
+controlar,control,verbs>regular500
+converger,converge,verbs>regular500
+conversar,converse,verbs>regular500
+convertir,convert,verbs>regular500
+convivir,live together,verbs>regular500
+convocar,call,verbs>regular500
+copiar,copy,verbs>regular500
+coronar,top,verbs>regular500
+corregir,correct,verbs>regular500
+correr,run,verbs>regular500
+corresponder,correspond,verbs>regular500
+corroborar,corroborate,verbs>regular500
+corromper,corrupt,verbs>regular500
+cortar,cut,verbs>regular500
+cortejar,court,verbs>regular500
+cosechar,harvest,verbs>regular500
+coser,run up,verbs>regular500
+costear,pick,verbs>regular500
+cotejar,collate,verbs>regular500
+crear,create,verbs>regular500
+criar,cover,verbs>regular500
+cristalizar,crystallize,verbs>regular500
+criticar,call down,verbs>regular500
+crucificar,crucify,verbs>regular500
+crujir,crunch,verbs>regular500
+cruzar,get over,verbs>regular500
+cuadrar,even up,verbs>regular500
+cuajar,clot,verbs>regular500
+cubrir,cover,verbs>regular500
+cuestionar,question,verbs>regular500
+cuidar,care,verbs>regular500
+culminar,culminate,verbs>regular500
+culpar,charge,verbs>regular500
+cultivar,cultivate,verbs>regular500
+cumplimentar,call,verbs>regular500
+cumplir,fulfill,verbs>regular500
+curar,cure,verbs>regular500
+curiosear,rubberneck,verbs>regular500
+cursar,study,verbs>regular500
+danzar,dance,verbs>regular500
+deambular,range,verbs>regular500
+debatir,debate,verbs>regular500
+deber,owe,verbs>regular500
+debilitar,drain,verbs>regular500
+debutar,debut,verbs>regular500
+decaer,decay,verbs>regular500
+decapitar,decapitate,verbs>regular500
+decepcionar,fall short of,verbs>regular500
+decidir,decide,verbs>regular500
+declarar,say,verbs>regular500
+declinar,decline,verbs>regular500
+decorar,deck,verbs>regular500
+decretar,decree,verbs>regular500
+dedicar,pay,verbs>regular500
+deducir,work out,verbs>regular500
+defender,defend,verbs>regular500
+definir,define,verbs>regular500
+deformar,deform,verbs>regular500
+defraudar,defraud,verbs>regular500
+degradar,degrade,verbs>regular500
+degustar,try,verbs>regular500
+dejar,let,verbs>regular500
+delatar,shit,verbs>regular500
+delegar,delegate,verbs>regular500
+deleitar,enjoy,verbs>regular500
+deletrear,write,verbs>regular500
+delimitar,define,verbs>regular500
+delinear,streamline,verbs>regular500
+demandar,demand,verbs>regular500
+demoler,destroy,verbs>regular500
+demorar,hold up,verbs>regular500
+demostrar,show,verbs>regular500
+denegar,deny,verbs>regular500
+denominar,name,verbs>regular500
+denotar,mean,verbs>regular500
+denunciar,report,verbs>regular500
+depender,depend,verbs>regular500
+depositar,deposit,verbs>regular500
+deprimir,cast down,verbs>regular500
+depurar,rack,verbs>regular500
+derivar,draw,verbs>regular500
+derogar,strike down,verbs>regular500
+derramar,run out,verbs>regular500
+derribar,down,verbs>regular500
+derrocar,overthrow,verbs>regular500
+derrochar,run off,verbs>regular500
+derrotar,get the better of,verbs>regular500
+derrumbar,demolish,verbs>regular500
+desacreditar,disgrace,verbs>regular500
+desafiar,front,verbs>regular500
+desalentar,put off,verbs>regular500
+desaparecer,disappear,verbs>regular500
+desaprobar,forbid,verbs>regular500
+desarmar,disarm,verbs>regular500
+desarrollar,develop,verbs>regular500
+desatar,come off,verbs>regular500
+desayunar,breakfast,verbs>regular500
+desbloquear,free,verbs>regular500
+desbordar,crowd,verbs>regular500
+descalificar,disqualify,verbs>regular500
+descansar,rest on,verbs>regular500
+descargar,go off,verbs>regular500
+descarrilar,reel off,verbs>regular500
+descartar,rule out,verbs>regular500
+descender,come,verbs>regular500
+descifrar,decipher,verbs>regular500
+descomponer,break up,verbs>regular500
+desconectar,disconnect,verbs>regular500
+desconfiar,suspect,verbs>regular500
+descongelar,free,verbs>regular500
+desconocer,ignore,verbs>regular500
+descontar,allow,verbs>regular500
+describir,describe,verbs>regular500
+descubrir,discover,verbs>regular500
+descuidar,neglect,verbs>regular500
+desear,want,verbs>regular500
+desechar,throw out,verbs>regular500
+desembarcar,land,verbs>regular500
+desembocar,flow off,verbs>regular500
+desencadenar,set off,verbs>regular500
+desenmascarar,unmask,verbs>regular500
+desenredar,comb,verbs>regular500
+desenterrar,exhume,verbs>regular500
+desesperar,despair,verbs>regular500
+desestabilizar,destabilize,verbs>regular500
+desfilar,parade,verbs>regular500
+aerotermia,air-source heat pump technology,vocab>arquitectura-sostenible
+aislamiento térmico,thermal insulation,vocab>arquitectura-sostenible
+análisis de ciclo de vida,life cycle assessment,vocab>arquitectura-sostenible
+arquitectura bioclimática,bioclimatic architecture,vocab>arquitectura-sostenible
+certificación energética,energy certification,vocab>arquitectura-sostenible
+corredor verde,green corridor,vocab>arquitectura-sostenible
+cubierta verde,green roof,vocab>arquitectura-sostenible
+densidad residencial,residential density,vocab>arquitectura-sostenible
+eficiencia energética,energy efficiency,vocab>arquitectura-sostenible
+fachada ventilada,ventilated façade,vocab>arquitectura-sostenible
+gentrificación,gentrification,vocab>arquitectura-sostenible
+geotermia,geothermal system,vocab>arquitectura-sostenible
+hormigón reciclado,recycled concrete,vocab>arquitectura-sostenible
+huella de carbono,carbon footprint,vocab>arquitectura-sostenible
+madera laminada cruzada,cross-laminated timber,vocab>arquitectura-sostenible
+mobiliario urbano,street furniture,vocab>arquitectura-sostenible
+normativa urbanística,zoning regulation,vocab>arquitectura-sostenible
+orientación solar,solar orientation,vocab>arquitectura-sostenible
+panel solar fotovoltaico,photovoltaic solar panel,vocab>arquitectura-sostenible
+participación vecinal,community participation,vocab>arquitectura-sostenible
+plan maestro,master plan,vocab>arquitectura-sostenible
+recuperación de aguas grises,greywater recovery,vocab>arquitectura-sostenible
+rehabilitación integral,full refurbishment,vocab>arquitectura-sostenible
+resiliencia urbana,urban resilience,vocab>arquitectura-sostenible
+sombreado pasivo,passive shading,vocab>arquitectura-sostenible
+transporte multimodal,multimodal transport,vocab>arquitectura-sostenible
+urbanismo táctico,tactical urbanism,vocab>arquitectura-sostenible
+uso mixto,mixed-use zoning,vocab>arquitectura-sostenible
+ventilación cruzada,cross ventilation,vocab>arquitectura-sostenible
+vivienda asequible,affordable housing,vocab>arquitectura-sostenible
+algoritmo de estratificación,stratification algorithm,vocab>biotecnologia-salud
+anticuerpo monoclonal,monoclonal antibody,vocab>biotecnologia-salud
+biobanco,biobank,vocab>biotecnologia-salud
+biosensor,biosensor,vocab>biotecnologia-salud
+brote zoonótico,zoonotic outbreak,vocab>biotecnologia-salud
+consentimiento informado,informed consent,vocab>biotecnologia-salud
+cribado neonatal,newborn screening,vocab>biotecnologia-salud
+cultivo celular,cell culture,vocab>biotecnologia-salud
+célula madre pluripotente,pluripotent stem cell,vocab>biotecnologia-salud
+datos de cohortes,cohort data,vocab>biotecnologia-salud
+doble ciego,double-blind design,vocab>biotecnologia-salud
+dosis de refuerzo,booster dose,vocab>biotecnologia-salud
+edición genética,gene editing,vocab>biotecnologia-salud
+ensayo clínico controlado,controlled clinical trial,vocab>biotecnologia-salud
+epidemiología genómica,genomic epidemiology,vocab>biotecnologia-salud
+farmacovigilancia,pharmacovigilance,vocab>biotecnologia-salud
+inmunoterapia,immunotherapy,vocab>biotecnologia-salud
+modelo predictivo,predictive model,vocab>biotecnologia-salud
+neutralización viral,viral neutralization,vocab>biotecnologia-salud
+nivel de anticuerpos,antibody level,vocab>biotecnologia-salud
+plataforma diagnóstica,diagnostic platform,vocab>biotecnologia-salud
+resistencia antimicrobiana,antimicrobial resistance,vocab>biotecnologia-salud
+secuenciación masiva,next-generation sequencing,vocab>biotecnologia-salud
+terapia génica,gene therapy,vocab>biotecnologia-salud
+transferencia tecnológica,technology transfer,vocab>biotecnologia-salud
+trazabilidad,traceability,vocab>biotecnologia-salud
+vacuna de ARNm,mRNA vaccine,vocab>biotecnologia-salud
+vector viral,viral vector,vocab>biotecnologia-salud
+ventana inmunológica,immunologic window,vocab>biotecnologia-salud
+vigilancia sindrómica,syndromic surveillance,vocab>biotecnologia-salud
+acuerdo de nivel de servicio,service-level agreement,vocab>ciberseguridad-digital
+algoritmo de recomendación,recommendation algorithm,vocab>ciberseguridad-digital
+análisis de amenazas,threat analysis,vocab>ciberseguridad-digital
+aprendizaje automático,machine learning,vocab>ciberseguridad-digital
+arquitectura sin servidor,serverless architecture,vocab>ciberseguridad-digital
+auditoría forense,forensic audit,vocab>ciberseguridad-digital
+autenticación multifactor,multi-factor authentication,vocab>ciberseguridad-digital
+automatización robótica de procesos,robotic process automation,vocab>ciberseguridad-digital
+cifrado de extremo a extremo,end-to-end encryption,vocab>ciberseguridad-digital
+continuidad de negocio,business continuity,vocab>ciberseguridad-digital
+cortafuegos,firewall,vocab>ciberseguridad-digital
+cumplimiento normativo,regulatory compliance,vocab>ciberseguridad-digital
+escalabilidad elástica,elastic scalability,vocab>ciberseguridad-digital
+formación de concienciación,awareness training,vocab>ciberseguridad-digital
+fuga de datos,data breach,vocab>ciberseguridad-digital
+gestión de identidades,identity management,vocab>ciberseguridad-digital
+gobernanza de datos,data governance,vocab>ciberseguridad-digital
+hoja de ruta digital,digital roadmap,vocab>ciberseguridad-digital
+infraestructura crítica,critical infrastructure,vocab>ciberseguridad-digital
+nube híbrida,hybrid cloud,vocab>ciberseguridad-digital
+orquestación de contenedores,container orchestration,vocab>ciberseguridad-digital
+parche de seguridad,security patch,vocab>ciberseguridad-digital
+plan de recuperación,recovery plan,vocab>ciberseguridad-digital
+privacidad diferencial,differential privacy,vocab>ciberseguridad-digital
+registro de auditoría,audit log,vocab>ciberseguridad-digital
+respuesta a incidentes,incident response,vocab>ciberseguridad-digital
+simulacro de phishing,phishing drill,vocab>ciberseguridad-digital
+superficie de exposición,attack surface,vocab>ciberseguridad-digital
+vector de ataque,attack vector,vocab>ciberseguridad-digital
+vulnerabilidad de día cero,zero-day vulnerability,vocab>ciberseguridad-digital
