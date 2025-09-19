@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Study Spanish Icon</title>
+  <desc id="desc">Rounded square with the letters ES for Español</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#bg)" />
+  <path
+    d="M40 44h32c2.2 0 4-1.8 4-4s-1.8-4-4-4H40c-6.6 0-12 5.4-12 12v32c0 6.6 5.4 12 12 12h32c2.2 0 4-1.8 4-4s-1.8-4-4-4H40c-2.2 0-4-1.8-4-4v-8h22c2.2 0 4-1.8 4-4s-1.8-4-4-4H36V52c0-2.2 1.8-4 4-4z"
+    fill="#f9fafb"
+  />
+  <path
+    d="M84 36c-6.6 0-12 5.4-12 12v32c0 6.6 5.4 12 12 12h12c6.6 0 12-5.4 12-12 0-2.2-1.8-4-4-4h-20V60h16c2.2 0 4-1.8 4-4s-1.8-4-4-4H84v-4c0-2.2 1.8-4 4-4h20c2.2 0 4-1.8 4-4s-1.8-4-4-4z"
+    fill="#fbbf24"
+  />
+  <circle cx="32" cy="32" r="6" fill="#fbbf24" />
+</svg>

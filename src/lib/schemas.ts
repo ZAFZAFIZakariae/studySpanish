@@ -42,7 +42,8 @@ export const GradeSchema = z.object({
   attempts: z.number(),
   timeMs: z.number(),
   gradedAt: z.string(),
-  feedbackText: z.string().optional()
+  feedbackText: z.string().optional(),
+  syncedAt: z.string().optional()
 });
 export type Grade = z.infer<typeof GradeSchema>;
 

@@ -1,25 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const ConjugationTable: React.FC<{ expected: string[] }> = ({ expected }) => {
-  const [answers, setAnswers] = useState<string[]>(Array(expected.length).fill(''));
+interface ConjugationTableProps {
+  expected: string[];
+  values: string[];
+  onChange: (values: string[]) => void;
+}
 
-  const handleChange = (i: number, val: string) => {
-    const copy = [...answers];
-    copy[i] = val;
-    setAnswers(copy);
+export const ConjugationTable: React.FC<ConjugationTableProps> = ({ expected, values, onChange }) => {
+  const handleChange = (index: number, value: string) => {
+    const copy = [...values];
+    copy[index] = value;
+    onChange(copy);
   };
 
   return (
-    <table className="table-auto border">
+    <table className="table-auto border" aria-label="Conjugation practice table">
+      <thead>
+        <tr>
+          <th className="border px-2 py-1 text-left">Form</th>
+          <th className="border px-2 py-1 text-left">Your answer</th>
+        </tr>
+      </thead>
       <tbody>
-        {expected.map((exp, i) => (
-          <tr key={i}>
-            <td className="border px-2">{i+1}</td>
-            <td className="border px-2">
+        {expected.map((_, index) => (
+          <tr key={index}>
+            <td className="border px-2 py-1">{index + 1}</td>
+            <td className="border px-2 py-1">
               <input
-                className="border p-1"
-                value={answers[i]}
-                onChange={e => handleChange(i, e.target.value)}
+                className="border p-1 w-full"
+                value={values[index] ?? ''}
+                aria-label={`Answer for conjugation cell ${index + 1}`}
+                onChange={(event) => handleChange(index, event.target.value)}
               />
             </td>
           </tr>
