@@ -1,0 +1,222 @@
+{
+  "lessons": [
+    {
+      "id": "c3-irregular-preterite-stems",
+      "level": "C1",
+      "title": "C3 — Irregular Preterite Stems (full paradigms)",
+      "slug": "c3-irregular-preterite-stems",
+      "tags": ["preterite","indefinido","irregulars","conjugation","c1"],
+      "markdown": "# 🚀 C3 — Irregular Preterite Stems (full paradigms)\n\n**Goal:** Master all major **pretérito indefinido** irregular stems and their full paradigms.\n\n---\n\n## 🔩 Shared endings (u-/i-/uv-/sup-/pus-/pud-/quis-/vin- groups)\n**Endings:** -e, -iste, -o, -imos, -isteis, -ieron  \n*(no written accents)*\n\n- **andar → anduv-** → anduve, anduviste, anduvo, anduvimos, anduvisteis, anduvieron  \n- **estar → estuv-** → estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron  \n- **tener → tuv-** → tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron  \n- **poder → pud-** → pude, pudiste, pudo, pudimos, pudisteis, pudieron  \n- **poner → pus-** → puse, pusiste, puso, pusimos, pusisteis, pusieron  \n- **saber → sup-** → supe, supiste, supo, supimos, supisteis, supieron  \n- **querer → quis-** → quise, quisiste, quiso, quisimos, quisisteis, quisieron  \n- **venir → vin-** → vine, viniste, vino, vinimos, vinisteis, vinieron\n\n## 🧲 J-stems (use **-eron** in 3rd plural)\n**Endings:** -e, -iste, -o, -imos, -isteis, **-eron**  \n- **decir → dij-** → dije, dijiste, dijo, dijimos, dijisteis, **dijeron**  \n- **traer → traj-** → traje, trajiste, trajo, trajimos, trajisteis, **trajeron**  \n- **conducir → conduj-** → conduje, condujiste, condujo, condujimos, condujisteis, **condujeron**\n\n## 🎯 Other high-frequency irregulars\n- **dar** → di, diste, dio, dimos, disteis, dieron *(no accents)*  \n- **ver** → vi, viste, vio, vimos, visteis, vieron *(no accents)*  \n- **ir / ser** → **fui, fuiste, fue, fuimos, fuisteis, fueron** *(identical forms; context tells)*\n\n---\n\n### Why box\n- Most irregulars share one of two endings sets; **memorize the stem** + apply the template.  \n- **J-stems** drop the *i* in 3rd plural (**-eron**).  \n- **dar/ver** behave like regular endings without accents.  \n- **ir/ser** are suppletive (unique) in preterite.\n\n> 📝 Summary: learn stems (anduv-, estuv-, tuv-, pud-, pus-, sup-, quis-, vin-, dij-, traj-, conduj-) + plug endings; watch **-eron** for j-stems.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "c3-irreg-preterite-ex1",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **tener** (pretérito indefinido).",
+      "answer": ["tuve","tuviste","tuvo","tuvimos","tuvisteis","tuvieron"],
+      "feedback": { "correct": "Perfect — tuv- + -e, -iste, -o…", "wrong": "Use stem **tuv-** + -e, -iste, -o, -imos, -isteis, -ieron." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "tuv-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex2",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **estar** (pretérito indefinido).",
+      "answer": ["estuve","estuviste","estuvo","estuvimos","estuvisteis","estuvieron"],
+      "feedback": { "correct": "Good — estuv- + shared endings.", "wrong": "Stem **estuv-** + -e, -iste, -o, -imos, -isteis, -ieron." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "estuv-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex3",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **andar** (pretérito indefinido).",
+      "answer": ["anduve","anduviste","anduvo","anduvimos","anduvisteis","anduvieron"],
+      "feedback": { "correct": "Nice — anduv- pattern.", "wrong": "Use **anduv-** + shared endings." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "anduv-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex4",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **poder** (pretérito indefinido).",
+      "answer": ["pude","pudiste","pudo","pudimos","pudisteis","pudieron"],
+      "feedback": { "correct": "Yes — **pud-**.", "wrong": "Stem **pud-** + shared endings." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "pud-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex5",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **poner** (pretérito indefinido).",
+      "answer": ["puse","pusiste","puso","pusimos","pusisteis","pusieron"],
+      "feedback": { "correct": "Great — **pus-**.", "wrong": "Use **pus-** + shared endings." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "pus-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex6",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **saber** (pretérito indefinido).",
+      "answer": ["supe","supiste","supo","supimos","supisteis","supieron"],
+      "feedback": { "correct": "Correct — **sup-**.", "wrong": "Use **sup-** + shared endings." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "sup-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex7",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **querer** (pretérito indefinido).",
+      "answer": ["quise","quisiste","quiso","quisimos","quisisteis","quisieron"],
+      "feedback": { "correct": "Nice — **quis-**.", "wrong": "Use **quis-** + endings." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "quis-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex8",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **venir** (pretérito indefinido).",
+      "answer": ["vine","viniste","vino","vinimos","vinisteis","vinieron"],
+      "feedback": { "correct": "Great — **vin-**.", "wrong": "Use **vin-** + endings." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "vin-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex9",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **decir** (pretérito indefinido).",
+      "answer": ["dije","dijiste","dijo","dijimos","dijisteis","dijeron"],
+      "feedback": { "correct": "Correct — **dij-**; 3rd plural **-eron**.", "wrong": "Use **dij-** + -e, -iste, -o, -imos, -isteis, **-eron**." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "dij- (j-stem)" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex10",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **traer** (pretérito indefinido).",
+      "answer": ["traje","trajiste","trajo","trajimos","trajisteis","trajeron"],
+      "feedback": { "correct": "Nice — **traj-**; **-eron**.", "wrong": "Use **traj-** + -e, -iste, -o, -imos, -isteis, **-eron**." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "traj- (j-stem)" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex11",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "conjugate",
+      "promptMd": "Conjugate **conducir** (pretérito indefinido).",
+      "answer": ["conduje","condujiste","condujo","condujimos","condujisteis","condujeron"],
+      "feedback": { "correct": "Good — **conduj-**; **-eron**.", "wrong": "Use **conduj-** + -e, -iste, -o, -imos, -isteis, **-eron**." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "conduj- (j-stem)" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex12",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "cloze",
+      "promptMd": "Ayer **(nosotros, estar)** muy ocupados →",
+      "answer": "estuvimos",
+      "accepted": ["re:^estuvimos$"],
+      "feedback": { "correct": "✓ estuvimos.", "wrong": "Use **estuv-** + -imos → estuvimos." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "estuv-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex13",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "cloze",
+      "promptMd": "No **(yo, poder)** abrir la puerta →",
+      "answer": "pude",
+      "accepted": ["re:^pude$"],
+      "feedback": { "correct": "✓ pude.", "wrong": "Stem **pud-** + -e (yo) → pude." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "pud-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex14",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "cloze",
+      "promptMd": "¿Qué te **(él, decir)**? →",
+      "answer": "dijo",
+      "accepted": ["re:^dijo$"],
+      "feedback": { "correct": "✓ dijo.", "wrong": "Use **dij-** + -o → dijo." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "dij-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex15",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "cloze",
+      "promptMd": "Ellos **(traer)** los documentos →",
+      "answer": "trajeron",
+      "accepted": ["re:^trajeron$"],
+      "feedback": { "correct": "✓ trajeron.", "wrong": "J-stem takes **-eron**: trajeron." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "traj- (j-stem)" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex16",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "mcq",
+      "promptMd": "Pick the only 3rd plural that is **correct** for a j-stem:",
+      "options": ["dijieron","dijeron","dijerion"],
+      "answer": "dijeron",
+      "feedback": { "correct": "Correct — j-stems drop the *i*: **-eron**.", "wrong": "J-stems use **-eron** (no *i*)." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "j-stem -eron" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex17",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "translate",
+      "promptMd": "Translate: *We found out the truth yesterday.* (→ **saber**)",
+      "answer": "Supimos la verdad ayer",
+      "accepted": ["re:^supimos la verdad ayer$"],
+      "feedback": { "correct": "Nice — saber (preterite) = 'found out' → **supimos**.", "wrong": "Use **supimos** la verdad ayer." },
+      "meta": { "difficulty": "B2", "skills": ["read","write"], "topic": "sup-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex18",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "translate",
+      "promptMd": "Translate: *I tried to call you.* (→ **querer**)",
+      "answer": "Quise llamarte",
+      "accepted": ["re:^quise llamarte$","re:^quise llamarte\\.$"],
+      "feedback": { "correct": "Correct — querer (pret.) ≈ 'tried' → **quise**.", "wrong": "Use **quise** llamarte." },
+      "meta": { "difficulty": "B2", "skills": ["read","write"], "topic": "quis-" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex19",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "short",
+      "promptMd": "Give the 6 forms of **ir/ser** in pretérito.",
+      "answer": "fui, fuiste, fue, fuimos, fuisteis, fueron",
+      "accepted": ["re:^fui, fuiste, fue, fuimos, fuisteis, fueron$"],
+      "feedback": { "correct": "Exactly — same for ir/ser.", "wrong": "They are: fui, fuiste, fue, fuimos, fuisteis, fueron." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "fui forms" }
+    },
+    {
+      "id": "c3-irreg-preterite-ex20",
+      "lessonId": "c3-irregular-preterite-stems",
+      "type": "mcq",
+      "promptMd": "Which pair lacks written accents in preterite?",
+      "options": ["dar / ver","andar / tener","poder / saber"],
+      "answer": "dar / ver",
+      "feedback": { "correct": "Correct — di, diste, dio… / vi, viste, vio…", "wrong": "dar/ver take no accent marks in preterite." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "dar/ver accents" }
+    }
+  ],
+  "flashcards": [
+    { "id": "c3-irreg-preterite-fc1", "front": "andar (pret. stem)", "back": "anduv- → anduve, anduviste, anduvo…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc2", "front": "estar (pret. stem)", "back": "estuv- → estuve, estuviste, estuvo…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc3", "front": "tener (pret. stem)", "back": "tuv- → tuve, tuviste, tuvo…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc4", "front": "poder (pret. stem)", "back": "pud- → pude, pudiste, pudo…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc5", "front": "poner (pret. stem)", "back": "pus- → puse, pusiste, puso…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc6", "front": "saber (pret. stem)", "back": "sup- → supe, supiste, supo…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc7", "front": "querer (pret. stem)", "back": "quis- → quise, quisiste, quiso…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc8", "front": "venir (pret. stem)", "back": "vin- → vine, viniste, vino…", "tag": "stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc9", "front": "decir (pret. j-stem)", "back": "dij- → dije, dijiste, dijo… **dijeron**", "tag": "j-stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc10", "front": "traer (pret. j-stem)", "back": "traj- → traje, trajiste, trajo… **trajeron**", "tag": "j-stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc11", "front": "conducir (pret. j-stem)", "back": "conduj- → conduje… **condujeron**", "tag": "j-stems", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc12", "front": "j-stems rule (3rd pl.)", "back": "take **-eron** (drop the i)", "tag": "rules", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc13", "front": "dar (preterite)", "back": "di, diste, dio, dimos, disteis, dieron (no accents)", "tag": "high-frequency", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc14", "front": "ver (preterite)", "back": "vi, viste, vio, vimos, visteis, vieron (no accents)", "tag": "high-frequency", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc15", "front": "ir/ser (preterite)", "back": "fui, fuiste, fue, fuimos, fuisteis, fueron (identical forms)", "tag": "high-frequency", "deck": "grammar" },
+    { "id": "c3-irreg-preterite-fc16", "front": "Shared endings (u/i stems)", "back": "-e, -iste, -o, -imos, -isteis, -ieron (no accents)", "tag": "rules", "deck": "grammar" }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "lessons": [
+    {
+      "id": "b1-gustar-type",
+      "level": "B1",
+      "title": "B6 — Gustar-type Verbs",
+      "slug": "b1-gustar-type",
+      "tags": ["gustar","verbs","grammar","b1"],
+      "markdown": "# 💛 B6 — Gustar-type Verbs (B1)\n\n**Goal:** Learn how to use verbs like **gustar** that describe what **pleases you** (not what you do). They use **indirect object pronouns** and **3rd person verb forms.**\n\n---\n\n## ⚙️ Structure\n- **me / te / le / nos / os / les** + **gusta / gustan**\n- Verb agrees with the **thing liked**, not the person\n\n**Ejemplos:**\n- *Me gusta el café.* → I like coffee  \n- *Nos gustan los libros.* → We like books\n\n> 💡 Word order can change: *El café me gusta mucho.*\n\n---\n\n## 📌 IO Pronouns Table\n| Person         | Pronoun |\n|----------------|----------|\n| yo             | me       |\n| tú             | te       |\n| él/ella/usted  | le       |\n| nosotros/as    | nos      |\n| vosotros/as    | os       |\n| ellos/ellas/ustedes | les  |\n\n---\n\n## 💡 Common Gustar-type Verbs\n- **encantar** (to love) — *Me encanta la música.*\n- **interesar** (to interest) — *Les interesa el arte.*\n- **molestar** (to bother) — *¿Te molesta el ruido?*\n- **doler** (to hurt) — *Me duele la cabeza.*\n\n---\n\n> 📝 Always use 3rd person verb forms and match number (gusta/gustan).\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b1-gustar-type-ex1",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**___ gusta el chocolate.** (yo)",
+      "answer": "me",
+      "accepted": ["re:^me$"],
+      "feedback": { "correct": "Correct — me gusta.", "wrong": "Use me for yo." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "IO pronouns" }
+    },
+    {
+      "id": "b1-gustar-type-ex2",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**___ gustan los perros.** (nosotros)",
+      "answer": "nos",
+      "accepted": ["re:^nos$"],
+      "feedback": { "correct": "Correct — nos gustan.", "wrong": "Use nos for nosotros." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "IO pronouns" }
+    },
+    {
+      "id": "b1-gustar-type-ex3",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**___ gusta la pizza.** (ella)",
+      "answer": "le",
+      "accepted": ["re:^le$"],
+      "feedback": { "correct": "Yes — le gusta.", "wrong": "Use le for él/ella/usted." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "IO pronouns" }
+    },
+    {
+      "id": "b1-gustar-type-ex4",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**___ gustan los deportes.** (ellos)",
+      "answer": "les",
+      "accepted": ["re:^les$"],
+      "feedback": { "correct": "Correct — les gustan.", "wrong": "Use les for ellos/ellas/ustedes." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "IO pronouns" }
+    },
+    {
+      "id": "b1-gustar-type-ex5",
+      "lessonId": "b1-gustar-type",
+      "type": "mcq",
+      "promptMd": "Choose the correct sentence.",
+      "options": [
+        "Me gustan el café.",
+        "Me gusta los libros.",
+        "Nos gusta las películas.",
+        "Nos gustan las películas."
+      ],
+      "answer": "Nos gustan las películas.",
+      "feedback": { "correct": "Correct — gustan with plural.", "wrong": "Match verb to plural subject." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Verb agreement" }
+    },
+    {
+      "id": "b1-gustar-type-ex6",
+      "lessonId": "b1-gustar-type",
+      "type": "mcq",
+      "promptMd": "Which is correct?",
+      "options": [
+        "Le gustan el arte.",
+        "Le gusta el arte.",
+        "Le gusta los libros.",
+        "Le gustan la música."
+      ],
+      "answer": "Le gusta el arte.",
+      "feedback": { "correct": "Correct — gusta for singular.", "wrong": "Use gusta with singular things." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Verb agreement" }
+    },
+    {
+      "id": "b1-gustar-type-ex7",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**A mí ___ gusta el café.**",
+      "answer": "me",
+      "accepted": ["re:^me$"],
+      "feedback": { "correct": "Yes — a mí me gusta.", "wrong": "Reinforce with a mí." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Word order" }
+    },
+    {
+      "id": "b1-gustar-type-ex8",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**A ellos ___ gustan los deportes.**",
+      "answer": "les",
+      "accepted": ["re:^les$"],
+      "feedback": { "correct": "Correct — a ellos les gustan.", "wrong": "Use les for ellos." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Word order" }
+    },
+    {
+      "id": "b1-gustar-type-ex9",
+      "lessonId": "b1-gustar-type",
+      "type": "translate",
+      "promptMd": "Translate: **Me gustan los gatos.**",
+      "answer": "I like cats",
+      "accepted": ["re:i like cats"],
+      "feedback": { "correct": "Correct — gustan for plural.", "wrong": "Plural → gustan." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Verb agreement" }
+    },
+    {
+      "id": "b1-gustar-type-ex10",
+      "lessonId": "b1-gustar-type",
+      "type": "translate",
+      "promptMd": "Translate: **Nos gusta la playa.**",
+      "answer": "We like the beach",
+      "accepted": ["re:we like the beach"],
+      "feedback": { "correct": "Correct — gusta for singular.", "wrong": "Singular → gusta." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Verb agreement" }
+    },
+    {
+      "id": "b1-gustar-type-ex11",
+      "lessonId": "b1-gustar-type",
+      "type": "translate",
+      "promptMd": "Translate: **¿Te interesa el arte?**",
+      "answer": "Are you interested in art?",
+      "accepted": ["re:interested in art"],
+      "feedback": { "correct": "Correct — interesar works like gustar.", "wrong": "Use interested in." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Other gustar-type" }
+    },
+    {
+      "id": "b1-gustar-type-ex12",
+      "lessonId": "b1-gustar-type",
+      "type": "translate",
+      "promptMd": "Translate: **Me encantan los libros.**",
+      "answer": "I love books",
+      "accepted": ["re:i love books"],
+      "feedback": { "correct": "Yes — encantan for plural.", "wrong": "Use love." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Other gustar-type" }
+    },
+    {
+      "id": "b1-gustar-type-ex13",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**A ti ___ molestan los ruidos fuertes.**",
+      "answer": "te",
+      "accepted": ["re:^te$"],
+      "feedback": { "correct": "Correct — te molestan.", "wrong": "Use te for tú." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Other gustar-type" }
+    },
+    {
+      "id": "b1-gustar-type-ex14",
+      "lessonId": "b1-gustar-type",
+      "type": "cloze",
+      "promptMd": "**A nosotros ___ duele la cabeza.**",
+      "answer": "nos",
+      "accepted": ["re:^nos$"],
+      "feedback": { "correct": "Correct — nos duele.", "wrong": "Use nos for nosotros." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Other gustar-type" }
+    },
+    {
+      "id": "b1-gustar-type-ex15",
+      "lessonId": "b1-gustar-type",
+      "type": "short",
+      "promptMd": "Why is 'gustan' used in *Me gustan los perros*?",
+      "answer": "because perros is plural",
+      "accepted": ["re:plural"],
+      "feedback": { "correct": "Correct — verb agrees with thing liked.", "wrong": "gustan = plural thing." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Verb agreement" }
+    }
+  ],
+  "flashcards": [
+    { "id": "b1-gustar-type-fc1","front":"me gusta","back":"I like (singular)","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc2","front":"me gustan","back":"I like (plural)","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc3","front":"IO pronouns","back":"me, te, le, nos, os, les","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc4","front":"verb agreement","back":"gusta (singular), gustan (plural)","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc5","front":"word order","back":"A mí me gusta el café","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc6","front":"encantar","back":"to love → me encanta","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc7","front":"interesar","back":"to interest → me interesa","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc8","front":"molestar","back":"to bother → me molesta","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc9","front":"doler","back":"to hurt → me duele","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc10","front":"me duele la cabeza","back":"my head hurts","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc11","front":"nos gustan los libros","back":"we like books","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc12","front":"les gusta el arte","back":"they like art","tag":"gustar","deck":"vocab" },
+    { "id": "b1-gustar-type-fc13","front":"gustar rule","back":"IO pronoun + gusta/gustan + thing","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc14","front":"agreement tip","back":"verb agrees with thing liked","tag":"gustar","deck":"grammar" },
+    { "id": "b1-gustar-type-fc15","front":"no change of subject","back":"yo ≠ subject, thing is subject","tag":"gustar","deck":"grammar" }
+  ]
+}

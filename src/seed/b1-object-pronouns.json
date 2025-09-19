@@ -1,0 +1,224 @@
+{
+  "lessons": [
+    {
+      "id": "b1-object-pronouns",
+      "level": "B1",
+      "title": "B7 — lo/la/los/las, le/les → se",
+      "slug": "b1-object-pronouns",
+      "tags": ["pronouns","grammar","b1"],
+      "markdown": "# 🎯 B7 — Object Pronouns: lo/la/los/las, le/les → se (B1)\n\n**Goal:** Use direct and indirect object pronouns together, and apply the **le/les → se** rule.\n\n---\n\n## 🧩 Direct vs Indirect Objects\n\n| Type         | Meaning | Pronouns                  | Example                     |\n|--------------|-----------|-------------------|------------------------------|\n| Direct (DO)  | receives action | lo, la, los, las       | *Veo el libro → Lo veo* |\n| Indirect (IO)| benefits from action | le, les                 | *Doy el libro a Juan → Le doy el libro* |\n\n---\n\n## ⚡ Double Object Rule\n- **Order:** IO + DO → *Le doy el libro → Le lo doy ❌*\n- **BUT:** **le/les become se** before lo/la/los/las\n- ✅ *Se lo doy.* (I give it to him)\n\n> 💡 Always put pronouns **before the verb** (or attached to infinitives/gerunds)\n\n---\n\n## 🖼 Flowchart (mental map)\n\n```\nStart\n └─ Is there an indirect object? → yes → use me/te/le/nos/os/les\n └─ Is there a direct object? → yes → use lo/la/los/las\n     └─ If both used:\n         └─ le/les + lo/la/los/las → se + lo/la/los/las\n         └─ Order: IO + DO → Se lo doy\n```\n\n**Example:**\n- *Doy el libro a Juan* → *Se lo doy.*\n- *Envía las cartas a María* → *Se las envía.*\n\n---\n\n> 📝 Summary: IO (le/les) + DO (lo/la/los/las) → se + lo/la/los/las\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b1-object-pronouns-ex1",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Veo el libro → ___ veo.**",
+      "answer": "lo",
+      "accepted": ["re:^lo$"],
+      "feedback": { "correct": "Correct — libro is masculine singular.", "wrong": "Use lo for masculine singular." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Direct objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex2",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Veo las películas → ___ veo.**",
+      "answer": "las",
+      "accepted": ["re:^las$"],
+      "feedback": { "correct": "Correct — películas is feminine plural.", "wrong": "Use las." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Direct objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex3",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Doy el libro a Juan → ___ doy el libro.**",
+      "answer": "le",
+      "accepted": ["re:^le$"],
+      "feedback": { "correct": "Correct — a Juan → le.", "wrong": "IO → le." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Indirect objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex4",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Doy el libro a Juan → ___ ___ doy.** (both)",
+      "answer": ["se","lo"],
+      "feedback": { "correct": "Correct — le + lo → se lo.", "wrong": "le becomes se before lo." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex5",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Envía las cartas a María → ___ ___ envía.**",
+      "answer": ["se","las"],
+      "feedback": { "correct": "Correct — se las.", "wrong": "le becomes se before las." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex6",
+      "lessonId": "b1-object-pronouns",
+      "type": "mcq",
+      "promptMd": "Which is correct?",
+      "options": [
+        "Le lo doy.",
+        "Se lo doy.",
+        "Lo le doy."
+      ],
+      "answer": "Se lo doy.",
+      "feedback": { "correct": "Correct — le + lo → se lo.", "wrong": "Use se." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex7",
+      "lessonId": "b1-object-pronouns",
+      "type": "mcq",
+      "promptMd": "Choose the correct replacement: *Damos los libros a ellos*",
+      "options": ["Se los damos","Les los damos","Los les damos"],
+      "answer": "Se los damos",
+      "feedback": { "correct": "Correct — les + los → se los.", "wrong": "les → se before los." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex8",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Compramos el regalo a ella → ___ ___ compramos.**",
+      "answer": ["se","lo"],
+      "feedback": { "correct": "Correct — se lo.", "wrong": "le + lo → se lo." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex9",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Doy las flores a mi madre → ___ ___ doy.**",
+      "answer": ["se","las"],
+      "feedback": { "correct": "Correct — se las.", "wrong": "les → se before las." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex10",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Explico el problema a ustedes → ___ ___ explico.**",
+      "answer": ["se","lo"],
+      "feedback": { "correct": "Correct — se lo.", "wrong": "les + lo → se lo." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex11",
+      "lessonId": "b1-object-pronouns",
+      "type": "translate",
+      "promptMd": "Translate: **Se lo doy.**",
+      "answer": "I give it to him",
+      "accepted": ["re:i give it to him"],
+      "feedback": { "correct": "Correct — se = to him.", "wrong": "se is le." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex12",
+      "lessonId": "b1-object-pronouns",
+      "type": "translate",
+      "promptMd": "Translate: **Se las envío.**",
+      "answer": "I send them to her",
+      "accepted": ["re:i send them to her"],
+      "feedback": { "correct": "Correct — se = to her.", "wrong": "se is le/les." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex13",
+      "lessonId": "b1-object-pronouns",
+      "type": "short",
+      "promptMd": "Why do we say **se lo** and not **le lo**?",
+      "answer": "le changes to se before lo/la/los/las",
+      "accepted": ["re:se before"],
+      "feedback": { "correct": "Correct — le/les → se before lo forms.", "wrong": "This is the le/les→se rule." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex14",
+      "lessonId": "b1-object-pronouns",
+      "type": "short",
+      "promptMd": "Where do object pronouns go in simple tenses?",
+      "answer": "before the verb",
+      "accepted": ["re:before"],
+      "feedback": { "correct": "Correct — before the verb.", "wrong": "They go before." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Placement" }
+    },
+    {
+      "id": "b1-object-pronouns-ex15",
+      "lessonId": "b1-object-pronouns",
+      "type": "short",
+      "promptMd": "Can you say *le lo*?",
+      "answer": "no",
+      "accepted": ["re:^no$"],
+      "feedback": { "correct": "Correct — use se lo.", "wrong": "Use se." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Double objects" }
+    },
+    {
+      "id": "b1-object-pronouns-ex16",
+      "lessonId": "b1-object-pronouns",
+      "type": "mcq",
+      "promptMd": "Choose the correct: *Voy a dar el libro a Ana*",
+      "options": ["Voy a darle lo","Voy a darle el","Voy a dárselo"],
+      "answer": "Voy a dárselo",
+      "feedback": { "correct": "Correct — attach both to infinitive.", "wrong": "Use attached form." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Placement" }
+    },
+    {
+      "id": "b1-object-pronouns-ex17",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Vamos a explicar el problema a ellos → Vamos a ___ ___ explicar.**",
+      "answer": ["se","lo"],
+      "feedback": { "correct": "Correct — se lo.", "wrong": "les→se + lo." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Placement" }
+    },
+    {
+      "id": "b1-object-pronouns-ex18",
+      "lessonId": "b1-object-pronouns",
+      "type": "cloze",
+      "promptMd": "**Voy a dar la carta a él → Voy a ___ ___ dar.**",
+      "answer": ["se","la"],
+      "feedback": { "correct": "Correct — se la.", "wrong": "le→se + la." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Placement" }
+    },
+    {
+      "id": "b1-object-pronouns-ex19",
+      "lessonId": "b1-object-pronouns",
+      "type": "translate",
+      "promptMd": "Translate: **Se lo vamos a explicar.**",
+      "answer": "We are going to explain it to them",
+      "accepted": ["re:explain it to them"],
+      "feedback": { "correct": "Correct — se = to them.", "wrong": "se is les." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Placement" }
+    },
+    {
+      "id": "b1-object-pronouns-ex20",
+      "lessonId": "b1-object-pronouns",
+      "type": "translate",
+      "promptMd": "Translate: **Se las queremos enviar.**",
+      "answer": "We want to send them to her",
+      "accepted": ["re:send them to her"],
+      "feedback": { "correct": "Correct — se = to her.", "wrong": "se = le.", "hints": ["se = le/les here."] },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Placement" }
+    }
+  ],
+  "flashcards": [
+    { "id": "b1-object-pronouns-fc1","front":"lo/la/los/las","back":"direct objects","tag":"pronouns","deck":"grammar" },
+    { "id": "b1-object-pronouns-fc2","front":"le/les","back":"indirect objects","tag":"pronouns","deck":"grammar" },
+    { "id": "b1-object-pronouns-fc3","front":"le+lo → se lo","back":"le/les become se before lo forms","tag":"pronouns","deck":"grammar" },
+    { "id": "b1-object-pronouns-fc4","front":"IO before DO","back":"order = me/te/le + lo/la","tag":"pronouns","deck":"grammar" },
+    { "id": "b1-object-pronouns-fc5","front":"placement","back":"before conjugated verb","tag":"pronouns","deck":"grammar" },
+    { "id": "b1-object-pronouns-fc6","front":"attach to infinitive","back":"voy a dárselo","tag":"pronouns","deck":"grammar" },
+    { "id": "b1-object-pronouns-fc7","front":"se lo doy","back":"I give it to him","tag":"pronouns","deck":"vocab" },
+    { "id": "b1-object-pronouns-fc8","front":"se las envío","back":"I send them to her","tag":"pronouns","deck":"vocab" },
+    { "id": "b1-object-pronouns-fc9","front":"se lo vamos a explicar","back":"we are going to explain it to them","tag":"pronouns","deck":"vocab" },
+    { "id": "b1-object-pronouns-fc10","front":"rule","back":"le/les → se before lo/la/los/las","tag":"pronouns","deck":"grammar" }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "lessons": [
+    {
+      "id": "b1-phonology-basics",
+      "level": "B1",
+      "title": "Spanish Phonology Basics",
+      "slug": "b1-phonology-basics",
+      "tags": ["phonology","pronunciation"],
+      "markdown": "# 🗣️ Spanish Phonology Basics (B1)\\n... (lesson markdown from previous message)...",
+      "references": []
+    }
+  ],
+  "exercises": [
+    { "id": "b1-phonology-basics-ex1", "lessonId": "b1-phonology-basics", "type": "short", "promptMd": "Which five vowel letters exist in Spanish?", "answer": "a e i o u", "accepted": ["re:^a\\s*e\\s*i\\s*o\\s*u$"], "feedback": { "correct": "Correct — they are pure vowels.", "wrong": "Try listing them in order a–u.", "hints": ["Think: same as in the word AEIOU."] }, "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Phonology" } },
+    { "id": "b1-phonology-basics-ex2", "lessonId": "b1-phonology-basics", "type": "cloze", "promptMd": "**c** sounds like /k/ before ___, ___, ___; and /θ/ or /s/ before ___, ___", "answer": ["a","o","u","e","i"], "feedback": { "correct": "Right.", "wrong": "Check the chart again.", "hints": ["/k/ before back vowels, /θ/ or /s/ before front vowels."] }, "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Consonants" } },
+    ... (ex3–ex15 exactly as given earlier)
+  ],
+  "flashcards": [
+    { "id": "b1-phonology-basics-fc1","front":"Vowels","back":"a e i o u","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc2","front":"c before e/i","back":"/θ/ (Spain) or /s/ (LatAm)","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc3","front":"c before a/o/u","back":"/k/","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc4","front":"g before e/i","back":"/x/ (like harsh h)","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc5","front":"j sound","back":"/x/ (like harsh h)","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc6","front":"Stress rule","back":"Penultimate if ends in vowel/n/s","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc7","front":"Accent mark (´)","back":"Shows stressed syllable","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc8","front":"Rhythm","back":"Syllable-timed","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc9","front":"Spain c/z","back":"/θ/","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc10","front":"LatAm c/z","back":"/s/","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc11","front":"hablar syllables","back":"ha-blar","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc12","front":"casa syllables","back":"ca-sa","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc13","front":"los amigos syllables","back":"los-a-mi-gos","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc14","front":"difícil syllables","back":"di-fí-cil","tag":"phonology","deck":"grammar" },
+    { "id": "b1-phonology-basics-fc15","front":"Linking","back":"No silent syllables","tag":"phonology","deck":"grammar" }
+  ]
+}

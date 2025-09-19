@@ -1,0 +1,195 @@
+{
+  "lessons": [
+    {
+      "id": "b1-preterito-perfecto",
+      "level": "B1",
+      "title": "B8 — Pretérito perfecto",
+      "slug": "b1-preterito-perfecto",
+      "tags": ["preterito-perfecto","past","grammar","b1"],
+      "markdown": "# ⏳ B8 — Pretérito Perfecto (B1)\n\n**Goal:** Talk about what you **have done recently** or in your **life (until now)**.\n\n---\n\n## ⚙️ Formation\n- **haber (present)** + **past participle**\n\n| Person       | haber  |\n|--------------|---------|\n| yo            | he       |\n| tú            | has      |\n| él/ella/usted | ha       |\n| nosotros/as   | hemos    |\n| vosotros/as   | habéis   |\n| ellos/ellas/ustedes | han |\n\n**Regular participles:**\n- -ar → -ado (*hablar → hablado*)\n- -er/-ir → -ido (*comer → comido, vivir → vivido*)\n\n**Example:**\n- *He estudiado mucho.* — I have studied a lot.\n\n---\n\n## ⚡ Irregular Participles\n- hacer → hecho\n- decir → dicho\n- escribir → escrito\n- ver → visto\n- volver → vuelto\n- poner → puesto\n- abrir → abierto\n- romper → roto\n- morir → muerto\n- cubrir → cubierto\n\n---\n\n## 📝 Use\n- Recent past: *Hoy he comido paella.*\n- Life experience: *He estado en México.*\n- Still connected to now → use **pretérito perfecto**\n\n**⚠️ Use with time words like:** hoy, esta semana, este año, últimamente, ya, nunca, todavía no.\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b1-preterito-perfecto-ex1",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Yo ___ (estudiar) mucho.**",
+      "answer": "he estudiado",
+      "accepted": ["re:^he estudiado$"],
+      "feedback": { "correct": "Correct — he + estudiado.", "wrong": "Use he + participle." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Formation" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex2",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Nosotros ___ (comer) paella.**",
+      "answer": "hemos comido",
+      "accepted": ["re:^hemos comido$"],
+      "feedback": { "correct": "Correct — hemos comido.", "wrong": "Use hemos + participle." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Formation" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex3",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Vosotros ___ (vivir) en Valencia.**",
+      "answer": "habéis vivido",
+      "accepted": ["re:^habéis vivido$"],
+      "feedback": { "correct": "Correct — habéis vivido.", "wrong": "Use habéis + participle." },
+      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Formation" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex4",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Ellos ___ (hacer) la tarea.**",
+      "answer": "han hecho",
+      "accepted": ["re:^han hecho$"],
+      "feedback": { "correct": "Correct — hacer → hecho.", "wrong": "Irregular participle." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex5",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Tú ___ (decir) la verdad.**",
+      "answer": "has dicho",
+      "accepted": ["re:^has dicho$"],
+      "feedback": { "correct": "Correct — decir → dicho.", "wrong": "Irregular participle." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex6",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Ella ___ (ver) esa película.**",
+      "answer": "ha visto",
+      "accepted": ["re:^ha visto$"],
+      "feedback": { "correct": "Correct — ver → visto.", "wrong": "Irregular participle." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex7",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Yo ___ (escribir) una carta.**",
+      "answer": "he escrito",
+      "accepted": ["re:^he escrito$"],
+      "feedback": { "correct": "Correct — escribir → escrito.", "wrong": "Irregular participle." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex8",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Hemos ___ (volver) temprano.**",
+      "answer": "vuelto",
+      "accepted": ["re:^vuelto$"],
+      "feedback": { "correct": "Correct — volver → vuelto.", "wrong": "Irregular participle." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex9",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "cloze",
+      "promptMd": "**Han ___ (romper) el vaso.**",
+      "answer": "roto",
+      "accepted": ["re:^roto$"],
+      "feedback": { "correct": "Correct — romper → roto.", "wrong": "Irregular participle." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex10",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "mcq",
+      "promptMd": "Which is correct?",
+      "options": [
+        "He comido hoy.",
+        "Comí hoy.",
+        "He comí hoy."
+      ],
+      "answer": "He comido hoy.",
+      "feedback": { "correct": "Correct — he + participle.", "wrong": "Use he + comido." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Formation" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex11",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "mcq",
+      "promptMd": "Which is correct?",
+      "options": [
+        "Has visto esta película.",
+        "Has veido esta película.",
+        "Has ver esta película."
+      ],
+      "answer": "Has visto esta película.",
+      "feedback": { "correct": "Correct — ver → visto.", "wrong": "Use visto." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex12",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "translate",
+      "promptMd": "Translate: **He estado en México.**",
+      "answer": "I have been to Mexico",
+      "accepted": ["re:i have been to mexico"],
+      "feedback": { "correct": "Correct — he estado.", "wrong": "Use have been." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Use" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex13",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "translate",
+      "promptMd": "Translate: **Todavía no he terminado.**",
+      "answer": "I have not finished yet",
+      "accepted": ["re:i have not finished yet"],
+      "feedback": { "correct": "Correct — todavía no.", "wrong": "Use yet." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Use" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex14",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "translate",
+      "promptMd": "Translate: **¿Has hecho la tarea?**",
+      "answer": "Have you done the homework?",
+      "accepted": ["re:have you done"],
+      "feedback": { "correct": "Correct — hacer → hecho.", "wrong": "Use done." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Irregulars" }
+    },
+    {
+      "id": "b1-preterito-perfecto-ex15",
+      "lessonId": "b1-preterito-perfecto",
+      "type": "short",
+      "promptMd": "What auxiliary verb is used in pretérito perfecto?",
+      "answer": "haber",
+      "accepted": ["re:^haber$"],
+      "feedback": { "correct": "Correct — haber.", "wrong": "Use haber." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Formation" }
+    }
+  ],
+  "flashcards": [
+    { "id": "b1-preterito-perfecto-fc1","front":"haber (yo)","back":"he","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc2","front":"haber (tú)","back":"has","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc3","front":"haber (él/ella)","back":"ha","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc4","front":"haber (nosotros)","back":"hemos","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc5","front":"haber (vosotros)","back":"habéis","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc6","front":"haber (ellos)","back":"han","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc7","front":"-ar participle","back":"-ado","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc8","front":"-er/-ir participle","back":"-ido","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc9","front":"hacer","back":"hecho","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc10","front":"decir","back":"dicho","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc11","front":"escribir","back":"escrito","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc12","front":"ver","back":"visto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc13","front":"volver","back":"vuelto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc14","front":"romper","back":"roto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc15","front":"abrir","back":"abierto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc16","front":"poner","back":"puesto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc17","front":"morir","back":"muerto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc18","front":"cubrir","back":"cubierto","tag":"preterito-perfecto","deck":"vocab" },
+    { "id": "b1-preterito-perfecto-fc19","front":"use","back":"recent past or life experience","tag":"preterito-perfecto","deck":"grammar" },
+    { "id": "b1-preterito-perfecto-fc20","front":"time markers","back":"hoy, este año, ya, todavía no","tag":"preterito-perfecto","deck":"grammar" }
+  ]
+}

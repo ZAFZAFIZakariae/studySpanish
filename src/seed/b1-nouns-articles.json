@@ -1,0 +1,187 @@
+[
+  {
+    "id": "b1-nouns-articles-ex1",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose the correct article: ___ libro",
+    "options": ["la","el","una","un"],
+    "answer": "el",
+    "feedback": { "correct": "Correct — el libro.", "wrong": "libro is masculine." },
+    "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Definite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex2",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose: ___ mesas",
+    "options": ["el","los","la","las"],
+    "answer": "las",
+    "feedback": { "correct": "Correct — mesas is feminine plural.", "wrong": "Plural and ends in -a." },
+    "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Definite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex3",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose: ___ problemas",
+    "options": ["los","las","el","la"],
+    "answer": "los",
+    "feedback": { "correct": "Correct — problema is masculine.", "wrong": "Watch out: ends in -a but masculine." },
+    "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Gender exceptions" }
+  },
+  {
+    "id": "b1-nouns-articles-ex4",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose: ___ manos",
+    "options": ["los","las","el","la"],
+    "answer": "las",
+    "feedback": { "correct": "Correct — la mano is feminine.", "wrong": "Irregular: mano is feminine." },
+    "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Gender exceptions" }
+  },
+  {
+    "id": "b1-nouns-articles-ex5",
+    "lessonId": "b1-nouns-articles",
+    "type": "cloze",
+    "promptMd": "**____ casa** (the house)",
+    "answer": "la",
+    "accepted": ["re:^la$"],
+    "feedback": { "correct": "Yes — la casa.", "wrong": "Feminine singular needs la." },
+    "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Definite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex6",
+    "lessonId": "b1-nouns-articles",
+    "type": "cloze",
+    "promptMd": "**____ coches** (the cars)",
+    "answer": "los",
+    "accepted": ["re:^los$"],
+    "feedback": { "correct": "Correct — los coches.", "wrong": "Plural masculine." },
+    "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Definite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex7",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose the correct indefinite: ___ mesas",
+    "options": ["unas","unos","un","una"],
+    "answer": "unas",
+    "feedback": { "correct": "Correct — unas mesas.", "wrong": "Plural feminine." },
+    "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Indefinite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex8",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose: ___ libros",
+    "options": ["unas","unos","unos","un"],
+    "answer": "unos",
+    "feedback": { "correct": "Yes — unos libros.", "wrong": "Plural masculine." },
+    "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Indefinite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex9",
+    "lessonId": "b1-nouns-articles",
+    "type": "translate",
+    "promptMd": "Translate: **unos amigos**",
+    "answer": "some friends",
+    "accepted": ["re:some friends"],
+    "feedback": { "correct": "Correct.", "wrong": "unos = some." },
+    "meta": { "difficulty": "A2", "skills": ["read","write"], "topic": "Indefinite articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex10",
+    "lessonId": "b1-nouns-articles",
+    "type": "translate",
+    "promptMd": "Translate: **el agua fría**",
+    "answer": "the cold water",
+    "accepted": ["re:the cold water"],
+    "feedback": { "correct": "Correct — el agua (fem).", "wrong": "el agua is feminine, used el for sound." },
+    "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "El agua" }
+  },
+  {
+    "id": "b1-nouns-articles-ex11",
+    "lessonId": "b1-nouns-articles",
+    "type": "cloze",
+    "promptMd": "**Voy ___ parque** (a + el)",
+    "answer": "al",
+    "accepted": ["re:^al$"],
+    "feedback": { "correct": "Correct — contraction al.", "wrong": "a + el → al." },
+    "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contracted articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex12",
+    "lessonId": "b1-nouns-articles",
+    "type": "cloze",
+    "promptMd": "**Vengo ___ médico** (de + el)",
+    "answer": "del",
+    "accepted": ["re:^del$"],
+    "feedback": { "correct": "Correct — de + el = del.", "wrong": "Remember contraction." },
+    "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contracted articles" }
+  },
+  {
+    "id": "b1-nouns-articles-ex13",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Which uses **lo** correctly?",
+    "options": [
+      "lo libros",
+      "lo importante",
+      "lo mesas",
+      "lo gatos"
+    ],
+    "answer": "lo importante",
+    "feedback": { "correct": "Correct — lo + adjective.", "wrong": "lo only with adjectives, not nouns." },
+    "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Lo neutro" }
+  },
+  {
+    "id": "b1-nouns-articles-ex14",
+    "lessonId": "b1-nouns-articles",
+    "type": "translate",
+    "promptMd": "Translate: **Lo mejor es descansar.**",
+    "answer": "The best thing is to rest",
+    "accepted": ["re:the best thing is to rest"],
+    "feedback": { "correct": "Correct — lo + adj = abstract concept.", "wrong": "Don't translate lo literally." },
+    "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Lo neutro" }
+  },
+  {
+    "id": "b1-nouns-articles-ex15",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose the correct form: ___ mapas",
+    "options": ["los","las","el","la"],
+    "answer": "los",
+    "feedback": { "correct": "Correct — el mapa is masculine.", "wrong": "Irregular: mapa is masculine." },
+    "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Gender exceptions" }
+  },
+  {
+    "id": "b1-nouns-articles-ex16",
+    "lessonId": "b1-nouns-articles",
+    "type": "mcq",
+    "promptMd": "Choose the correct form: ___ días",
+    "options": ["los","las","el","la"],
+    "answer": "los",
+    "feedback": { "correct": "Correct — el día is masculine.", "wrong": "día is masculine." },
+    "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Gender exceptions" }
+  },
+  {
+    "id": "b1-nouns-articles-ex17",
+    "lessonId": "b1-nouns-articles",
+    "type": "cloze",
+    "promptMd": "**___ problema difícil**",
+    "answer": "un",
+    "accepted": ["re:^un$"],
+    "feedback": { "correct": "Correct — problema is masculine.", "wrong": "Watch gender exceptions." },
+    "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Gender exceptions" }
+  },
+  {
+    "id": "b1-nouns-articles-ex18",
+    "lessonId": "b1-nouns-articles",
+    "type": "translate",
+    "promptMd": "Translate: **las manos frías**",
+    "answer": "the cold hands",
+    "accepted": ["re:the cold hands"],
+    "feedback": { "correct": "Correct — manos is feminine.", "wrong": "la mano is feminine." },
+    "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Gender exceptions" }
+  }
+]

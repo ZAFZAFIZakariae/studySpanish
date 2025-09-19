@@ -1,0 +1,232 @@
+{
+  "lessons": [
+    {
+      "id": "c2-morphology-stem-rules",
+      "level": "C1",
+      "title": "C2 — Morphology & Stem Rules",
+      "slug": "c2-morphology-stem-rules",
+      "tags": ["morphology","stems","orthography","subjunctive","preterite","c1"],
+      "markdown": "# 🧬 C2 — Morphology & Stem Rules (Spanish)\n\n**Goal:** Apply high-level **stem and spelling rules** across tenses/moods so your forms are correct **before** memorizing full paradigms.\n\n---\n\n## 1) Vowel Stem Changes (stress on stem)\n- **e → ie** (presente/imperativo/subj. pres.): *pensar → pienso, piensa(n)*  \n- **o/ue → ue**: *contar → cuento; poder → puedo*  \n- **e → i**: *pedir → pido; servir → sirva*\n\n> **Preterite note:** only **-ir** verbs change in **3rd sg/pl**: *pedir → pidió/pidieron; dormir → durmió/durmieron*.\n\n---\n\n## 2) Yo-form → Subjunctive / Commands\nBuild subjunctive/imperatives from **yo presente**:  \n*conocer → conozco → conozca* · *salir → salgo → salga* · *vencer → venzo → venza*\n\n---\n\n## 3) Orthographic Safety (keep sounds)\n- **c → qu** before **e**: *buscar → bus**qu**é* (indef. yo), *bus**qu**e* (subj.)  \n- **g → gu** before **e**: *llegar → lle**gu**é; lle**gu**e*  \n- **z → c** before **e**: *empezar → empe**c**é; empe**c**e*  \n- **gu → g** before **a/o**: *seguir → si**g**a*  \n- **g → j** before **a/o**: *escoger → esco**j**a*  \n- **c → zc** in yo before vowel endings: *conocer → cono**zc**o*\n\n---\n\n## 4) Y-insertion / diphthongs\n- **-uir (not -guir)** → **y**: *construir → construyo / construyó / construyeron*  \n- **-iar/-uar accent patterns**: *enviar → envío; continuar → continúo* (stress marked)\n\n---\n\n## 5) Participles & Gerunds\n- **-ar → -ado**, **-er/-ir → -ido**; **leer** → **leído**, **oír** → **oído** (written accent)  \n- **-iendo/-ando**; *ir → yendo*; **-uir** → *construyendo*\n\n---\n\n## 6) Before/After Mindset (for auto-feedback)\nApply **rule → transform**:  \n- *buscar* **c→qu** (yo indef.) → **busqué**  \n- *llegar* **g→gu** (subj.) → **llegue**  \n- *pedir* **e→i** (3rd indef.) → **pidió/pidieron**  \n- *conocer* **c→zc** (yo) → **conozco → conozca**  \n- *construir* **y-insertion** (3rd indef.) → **construyó/construyeron**\n\n> 🧠 **C2 takeaway:** Generate forms by **deriving from rules** (sound → spelling; stress → vowel change) instead of rote lists.\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "c2-morph-stems-ex1",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "**pensar** (yo, presente) — e→ie",
+      "answer": "pienso",
+      "accepted": ["re:^pienso$"],
+      "feedback": { "correct": "✓ e→ie under stress: pensar → pienso.", "wrong": "Apply e→ie: pensar → pienso (yo)." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "e→ie" }
+    },
+    {
+      "id": "c2-morph-stems-ex2",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "**contar** (ellos, presente) — o→ue",
+      "answer": "cuentan",
+      "accepted": ["re:^cuentan$"],
+      "feedback": { "correct": "✓ o→ue: contar → cuentan.", "wrong": "Stress change: contar → cuentan." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "o→ue" }
+    },
+    {
+      "id": "c2-morph-stems-ex3",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "**pedir** (él, pretérito indef.) — 3rd e→i",
+      "answer": "pidió",
+      "accepted": ["re:^pidió$"],
+      "feedback": { "correct": "✓ -ir stem change in preterite 3rd: pidió.", "wrong": "Only -ir change in 3rd sg/pl: pidió." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Pret-3rd-change" }
+    },
+    {
+      "id": "c2-morph-stems-ex4",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "**dormir** (ellos, pretérito indef.) — 3rd o→u",
+      "answer": "durmieron",
+      "accepted": ["re:^durmieron$"],
+      "feedback": { "correct": "✓ dormir → durmieron (3rd plural).", "wrong": "3rd plural o→u: durmieron." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Pret-3rd-change" }
+    },
+    {
+      "id": "c2-morph-stems-ex5",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Before→After (rule **c→qu** before *e*): **buscar** → (yo, indef.)",
+      "answer": "busqué",
+      "accepted": ["re:^busqué$"],
+      "feedback": { "correct": "✓ c→qu to keep /k/: busqué.", "wrong": "Orthography: c→qu before e → busqué." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "Orthography c→qu" }
+    },
+    {
+      "id": "c2-morph-stems-ex6",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Before→After (rule **g→gu** before *e*): **llegar** → (yo, indef.)",
+      "answer": "llegué",
+      "accepted": ["re:^llegué$"],
+      "feedback": { "correct": "✓ g→gu: llegué.", "wrong": "Keep hard /g/ with -gu-: llegué." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "Orthography g→gu" }
+    },
+    {
+      "id": "c2-morph-stems-ex7",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Before→After (rule **z→c** before *e*): **empezar** → (yo, indef.)",
+      "answer": "empecé",
+      "accepted": ["re:^empecé$"],
+      "feedback": { "correct": "✓ z→c: empecé.", "wrong": "Change z→c before e: empecé." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "Orthography z→c" }
+    },
+    {
+      "id": "c2-morph-stems-ex8",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "mcq",
+      "promptMd": "Pick the **yo presente** that seeds the subjunctive:",
+      "options": ["conozco","conoce","conoces"],
+      "answer": "conozco",
+      "feedback": { "correct": "✓ Yo form with -zc- → conozca (subj.).", "wrong": "Use yo form: conozco → conozca." },
+      "meta": { "difficulty": "B2", "skills": ["read"], "topic": "Yo→Subj" }
+    },
+    {
+      "id": "c2-morph-stems-ex9",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Derive subjunctive (from **escojo**): que yo ___",
+      "answer": "escoja",
+      "accepted": ["re:^escoja$"],
+      "feedback": { "correct": "✓ g→j before a/o: escoja.", "wrong": "From escojo → escoja (g→j before a/o)." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "g→j" }
+    },
+    {
+      "id": "c2-morph-stems-ex10",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "**seguir** (yo, subj. pres.) — gu→g ante a/o",
+      "answer": "siga",
+      "accepted": ["re:^siga$"],
+      "feedback": { "correct": "✓ seguir → siga (gu→g before a).", "wrong": "Drop u: siga." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "gu→g" }
+    },
+    {
+      "id": "c2-morph-stems-ex11",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "mcq",
+      "promptMd": "Which verb takes **y** in 3rd person preterite?",
+      "options": ["construir","seguir","vivir"],
+      "answer": "construir",
+      "feedback": { "correct": "✓ -uir (not -guir): construyó/construyeron.", "wrong": "Only -uir → y.", "hints": ["-uir verbs: construir, concluir, huir…"] },
+      "meta": { "difficulty": "B2", "skills": ["read"], "topic": "-uir→y" }
+    },
+    {
+      "id": "c2-morph-stems-ex12",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "3rd pret. of **construir**: él/ellos",
+      "answer": ["construyó","construyeron"],
+      "accepted": ["re:^construyó$","re:^construyeron$"],
+      "feedback": { "correct": "✓ construyó / construyeron.", "wrong": "Y-insertion: construyó, construyeron." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "-uir→y" }
+    },
+    {
+      "id": "c2-morph-stems-ex13",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "**enviar** (yo, presente) — written accent",
+      "answer": "envío",
+      "accepted": ["re:^envío$"],
+      "feedback": { "correct": "✓ envío (accent to keep stress).", "wrong": "Mark stress: envío." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "Accent -iar" }
+    },
+    {
+      "id": "c2-morph-stems-ex14",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Participio: **oír** →",
+      "answer": "oído",
+      "accepted": ["re:^oído$"],
+      "feedback": { "correct": "✓ oído (accent on í).", "wrong": "Add accent to keep hiatus: oído." },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "Participles" }
+    },
+    {
+      "id": "c2-morph-stems-ex15",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Gerundio: **leer** →",
+      "answer": "leyendo",
+      "accepted": ["re:^leyendo$"],
+      "feedback": { "correct": "✓ leyendo.", "wrong": "i→y: leyendo.", "hints": ["-er/-ir + vowel → yendo"] },
+      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "Gerunds" }
+    },
+    {
+      "id": "c2-morph-stems-ex16",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "short",
+      "promptMd": "Rule for spelling in **yo indef.**: buscar/llegar/empezar → __?",
+      "answer": "c→qu, g→gu, z→c",
+      "accepted": ["re:c→qu","re:g→gu","re:z→c"],
+      "feedback": { "correct": "✓ c→qu; g→gu; z→c.", "wrong": "Use c→qu; g→gu; z→c before *e*." },
+      "meta": { "difficulty": "B2", "skills": ["read"], "topic": "Orthography summary" }
+    },
+    {
+      "id": "c2-morph-stems-ex17",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "translate",
+      "promptMd": "Translate with rule: **I arrived** (use g→gu in yo indef.)",
+      "answer": "llegué",
+      "accepted": ["re:^llegué$"],
+      "feedback": { "correct": "✓ llegué.", "wrong": "Yo indef.: g→gu → llegué." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Orthography g→gu" }
+    },
+    {
+      "id": "c2-morph-stems-ex18",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "mcq",
+      "promptMd": "From **venzo**, subjunctive yo is…",
+      "options": ["venza","venzo","vence"],
+      "answer": "venza",
+      "feedback": { "correct": "✓ yo venzo → venza (z→c/zo→za pattern).", "wrong": "Build from yo: venzo → venza." },
+      "meta": { "difficulty": "C1", "skills": ["read"], "topic": "Yo→Subj" }
+    },
+    {
+      "id": "c2-morph-stems-ex19",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Before→After (subj. 3pl from **conducir**): conduzc- + an →",
+      "answer": "conduzcan",
+      "accepted": ["re:^conduzcan$"],
+      "feedback": { "correct": "✓ -zco in yo → conduzcan.", "wrong": "Use -zc- base: conduzcan." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "-zco family" }
+    },
+    {
+      "id": "c2-morph-stems-ex20",
+      "lessonId": "c2-morphology-stem-rules",
+      "type": "cloze",
+      "promptMd": "Before→After (3rd pret. **reír**):",
+      "answer": "rió",
+      "accepted": ["re:^rió$"],
+      "feedback": { "correct": "✓ rió (accent to keep diphthong).", "wrong": "Use **rió** (not *rio*)." },
+      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Accents preterite" }
+    }
+  ],
+  "flashcards": [
+    { "id": "c2-morph-stems-fc1", "front": "e→ie (stress change)", "back": "pensar → pienso; cerrar → cierro", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc2", "front": "o→ue (stress change)", "back": "poder → puedo; contar → cuento", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc3", "front": "e→i (stress change)", "back": "pedir → pido; servir → sirvo", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc4", "front": "Preterite -ir 3rd change", "back": "pedir → pidió/pidieron; dormir → durmió/durmieron", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc5", "front": "Yo→Subj rule", "back": "yo presente base → subjuntivo (conozco→conozca)", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc6", "front": "c→qu before e", "back": "buscar → busqué / busque", "tag": "orthography", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc7", "front": "g→gu before e", "back": "llegar → llegué / llegue", "tag": "orthography", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc8", "front": "z→c before e", "back": "empezar → empecé / empiece", "tag": "orthography", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc9", "front": "gu→g before a/o", "back": "seguir → siga", "tag": "orthography", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc10", "front": "g→j before a/o", "back": "escoger → escoja", "tag": "orthography", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc11", "front": "-zco yo family", "back": "conocer → conozco → conozca", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc12", "front": "-uir → y", "back": "construir → construyó/construyeron", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc13", "front": "-iar/-uar accents", "back": "envío; continúo (presente)", "tag": "morphology", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc14", "front": "Participles", "back": "–ado / –ido; leído; oído", "tag": "perfect", "deck": "grammar" },
+    { "id": "c2-morph-stems-fc15", "front": "Gerunds", "back": "–ando/–iendo; leyendo; yendo", "tag": "progressive", "deck": "grammar" }
+  ]
+}

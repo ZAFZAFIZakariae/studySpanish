@@ -1,0 +1,233 @@
+{
+  "lessons": [
+    {
+      "id": "b1-futuro-condicional",
+      "level": "B1",
+      "title": "B11 — Futuro & Condicional (+ ir a + inf)",
+      "slug": "b1-futuro-condicional",
+      "tags": ["futuro","condicional","grammar","b1"],
+      "markdown": "# 🔮 B11 — Futuro & Condicional + ir a + infinitivo (B1)\n\n**Goal:** Express future plans and hypothetical situations.**\n\n---\n\n## 📌 Futuro simple\n- Add endings to the infinitive: **-é, -ás, -á, -emos, -éis, -án**\n- Same endings for -ar/-er/-ir\n\n**Examples:**\n- *Mañana estudiaré.* — I will study tomorrow\n- *Viajaremos a Madrid.* — We will travel to Madrid\n\n**Irregular stems:**\n- tener → tendr-, salir → saldr-, venir → vendr-, poder → podr-, poner → pondr-, decir → dir-, hacer → har-, querer → querr-, saber → sabr-\n\n---\n\n## 📌 Condicional simple\n- Add endings to infinitive: **-ía, -ías, -ía, -íamos, -íais, -ían**\n\n**Examples:**\n- *Viajaría a Japón si tuviera dinero.* — I would travel to Japan if I had money\n- *¿Qué harías tú?* — What would you do?\n\n**Uses:** polite requests, hypothetical actions, reported speech\n\n---\n\n## ⚡ Ir a + infinitivo\n- Used for **near future plans**\n- conjugate **ir** in present + **a + infinitive**\n\n**Examples:**\n- *Voy a estudiar ahora.* — I’m going to study now\n- *Vamos a salir.* — We are going to go out\n\n---\n\n> 📝 Summary:  
+> **futuro = will**, **condicional = would**, **ir a + inf = going to (near future)**\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b1-futuro-condicional-ex1",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Mañana yo ___ (estudiar).**",
+      "answer": "estudiaré",
+      "accepted": ["re:^estudiaré$"],
+      "feedback": { "correct": "Correct — futuro.", "wrong": "Use -é for yo futuro." },
+      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex2",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Nosotros ___ (viajar) a Madrid.**",
+      "answer": "viajaremos",
+      "accepted": ["re:^viajaremos$"],
+      "feedback": { "correct": "Correct — futuro.", "wrong": "Use -emos for nosotros." },
+      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex3",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Ellos ___ (tener) tiempo.**",
+      "answer": "tendrán",
+      "accepted": ["re:^tendrán$"],
+      "feedback": { "correct": "Correct — tener → tendr-.", "wrong": "Irregular futuro." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex4",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Yo ___ (hacer) la tarea.** (futuro)",
+      "answer": "haré",
+      "accepted": ["re:^haré$"],
+      "feedback": { "correct": "Correct — hacer → har-.", "wrong": "Irregular futuro." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex5",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**¿Qué ___ (hacer) tú?** (condicional)",
+      "answer": "harías",
+      "accepted": ["re:^harías$"],
+      "feedback": { "correct": "Correct — condicional.", "wrong": "Use -ías." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Condicional" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex6",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Yo ___ (ir) a la fiesta si pudiera.**",
+      "answer": "iría",
+      "accepted": ["re:^iría$"],
+      "feedback": { "correct": "Correct — condicional.", "wrong": "Use iría (would go)." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Condicional" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex7",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Nosotros ___ (venir) si tuviéramos tiempo.**",
+      "answer": "vendríamos",
+      "accepted": ["re:^vendríamos$"],
+      "feedback": { "correct": "Correct — venir → vendr-.", "wrong": "Irregular condicional." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Condicional" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex8",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Mañana ___ (haber) una reunión.**",
+      "answer": "habrá",
+      "accepted": ["re:^habrá$"],
+      "feedback": { "correct": "Correct — habrá = there will be.", "wrong": "Use habrá." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex9",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Yo ___ (poder) ayudarte mañana.**",
+      "answer": "podré",
+      "accepted": ["re:^podré$"],
+      "feedback": { "correct": "Correct — poder → podr-.", "wrong": "Irregular futuro." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex10",
+      "lessonId": "b1-futuro-condicional",
+      "type": "mcq",
+      "promptMd": "Choose the correct: *Si tuviera tiempo, ___ más.*",
+      "options": ["estudiaré","estudiaría","he estudiado"],
+      "answer": "estudiaría",
+      "feedback": { "correct": "Correct — condicional.", "wrong": "Use condicional with si + imperfecto subj." },
+      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Condicional" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex11",
+      "lessonId": "b1-futuro-condicional",
+      "type": "mcq",
+      "promptMd": "Choose the correct: *Mañana ___ al médico.*",
+      "options": ["iré","iba","iría"],
+      "answer": "iré",
+      "feedback": { "correct": "Correct — futuro.", "wrong": "Use futuro for tomorrow." },
+      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex12",
+      "lessonId": "b1-futuro-condicional",
+      "type": "mcq",
+      "promptMd": "*Voy a estudiar ahora* means…",
+      "options": ["I will study now","I would study now","I'm going to study now"],
+      "answer": "I'm going to study now",
+      "feedback": { "correct": "Correct — ir a + inf = going to.", "wrong": "Use going to." },
+      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Ir a + inf" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex13",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Nosotros ___ a comer en un restaurante.** (near future)",
+      "answer": "vamos",
+      "accepted": ["re:^vamos$"],
+      "feedback": { "correct": "Correct — vamos a comer.", "wrong": "Use ir a + inf." },
+      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Ir a + inf" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex14",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**¿Tú ___ a hacer los deberes?**",
+      "answer": "vas",
+      "accepted": ["re:^vas$"],
+      "feedback": { "correct": "Correct — vas a hacer.", "wrong": "Use vas a." },
+      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Ir a + inf" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex15",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Yo no ___ decir eso. (would)**",
+      "answer": "diría",
+      "accepted": ["re:^diría$"],
+      "feedback": { "correct": "Correct — decir → dir- condicional.", "wrong": "Use diría." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Condicional" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex16",
+      "lessonId": "b1-futuro-condicional",
+      "type": "cloze",
+      "promptMd": "**Ellos no ___ (salir) hoy. (futuro)**",
+      "answer": "saldrán",
+      "accepted": ["re:^saldrán$"],
+      "feedback": { "correct": "Correct — salir → saldr- futuro.", "wrong": "Irregular futuro." },
+      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex17",
+      "lessonId": "b1-futuro-condicional",
+      "type": "translate",
+      "promptMd": "Translate: *Viajaremos a Madrid.*",
+      "answer": "We will travel to Madrid",
+      "accepted": ["re:will travel"],
+      "feedback": { "correct": "Correct — futuro.", "wrong": "Use will." },
+      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Futuro" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex18",
+      "lessonId": "b1-futuro-condicional",
+      "type": "translate",
+      "promptMd": "Translate: *Viajaríamos a Japón.*",
+      "answer": "We would travel to Japan",
+      "accepted": ["re:would travel"],
+      "feedback": { "correct": "Correct — condicional.", "wrong": "Use would." },
+      "meta": { "difficulty": "B1","skills": ["read","write"],"topic": "Condicional" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex19",
+      "lessonId": "b1-futuro-condicional",
+      "type": "translate",
+      "promptMd": "Translate: *Voy a estudiar ahora.*",
+      "answer": "I'm going to study now",
+      "accepted": ["re:going to study"],
+      "feedback": { "correct": "Correct — ir a + inf.", "wrong": "Use going to." },
+      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Ir a + inf" }
+    },
+    {
+      "id": "b1-futuro-condicional-ex20",
+      "lessonId": "b1-futuro-condicional",
+      "type": "short",
+      "promptMd": "When do you use condicional?",
+      "answer": "for hypothetical or polite actions",
+      "accepted": ["re:hypothetical","re:polite"],
+      "feedback": { "correct": "Correct — would.", "wrong": "Condicional = would." },
+      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Condicional" }
+    }
+  ],
+  "flashcards": [
+    { "id": "b1-futuro-condicional-fc1","front":"futuro endings","back":"é, ás, á, emos, éis, án","tag":"futuro","deck":"grammar" },
+    { "id": "b1-futuro-condicional-fc2","front":"condicional endings","back":"ía, ías, ía, íamos, íais, ían","tag":"condicional","deck":"grammar" },
+    { "id": "b1-futuro-condicional-fc3","front":"tener (futuro)","back":"tendré, tendrás…","tag":"futuro","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc4","front":"tener (condicional)","back":"tendría, tendrías…","tag":"condicional","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc5","front":"hacer","back":"haré / haría","tag":"mixed","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc6","front":"decir","back":"diré / diría","tag":"mixed","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc7","front":"venir","back":"vendré / vendría","tag":"mixed","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc8","front":"poder","back":"podré / podría","tag":"mixed","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc9","front":"salir","back":"saldré / saldría","tag":"mixed","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc10","front":"poner","back":"pondré / pondría","tag":"mixed","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc11","front":"ir a + inf","back":"voy/vas/va/vamos/vais/van a + verb","tag":"ir a","deck":"grammar" },
+    { "id": "b1-futuro-condicional-fc12","front":"futuro use","back":"will (predictions, plans)","tag":"futuro","deck":"grammar" },
+    { "id": "b1-futuro-condicional-fc13","front":"condicional use","back":"would (hypothetical, polite)","tag":"condicional","deck":"grammar" },
+    { "id": "b1-futuro-condicional-fc14","front":"habrá","back":"there will be","tag":"futuro","deck":"vocab" },
+    { "id": "b1-futuro-condicional-fc15","front":"iría","back":"I would go","tag":"condicional","deck":"vocab" }
+  ]
+}

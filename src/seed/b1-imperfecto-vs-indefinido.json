@@ -1,0 +1,228 @@
+{
+  "lessons": [
+    {
+      "id": "b1-imperfecto-vs-indefinido",
+      "level": "B1",
+      "title": "B10 — Pretérito imperfecto vs indefinido",
+      "slug": "b1-imperfecto-vs-indefinido",
+      "tags": ["past","grammar","b1","imperfecto","indefinido"],
+      "markdown": "# ⏳ B10 — Pretérito Imperfecto vs Indefinido (B1)\n\n**Goal:** Understand when to use **imperfecto** (background) vs **indefinido** (main events).\n\n---\n\n## ⚖️ Difference in Meaning\n\n| Imperfecto | Indefinido |\n|---|---|\n| ongoing or repeated past action | completed, finished action |\n| background / description | main event / foreground action |\n| no specific end | specific time or date |\n| sets the scene | moves the story forward |\n\n**Example**\n- *Cuando era niño, vivía en Sevilla.* → background (imperfecto)\n- *Un día fuimos al parque.* → main event (indefinido)\n\n> 💡 Imperfecto often goes with **mientras, siempre, normalmente, todos los días**, and indefinido with **ayer, una vez, entonces, de repente**.\n\n---\n\n## 📌 Key Endings\n**Imperfecto**  \n-AR: aba, abas, aba, ábamos, abais, aban  \n-ER/IR: ía, ías, ía, íamos, íais, ían\n\n**Indefinido**  \n-AR: é, aste, ó, amos, asteis, aron  \n-ER/IR: í, iste, ió, imos, isteis, ieron\n\n---\n\n**Example narrative:**\n- *Hacía sol y los pájaros cantaban. (imperfecto)*  \n- *De repente empezó a llover. (indefinido)*\n\n> 📝 Use imperfecto for scene, description, routine.  
+> Use indefinido for completed actions that move the story.\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex1",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Cuando era niño, siempre ___ (jugar) en el jardín.",
+      "answer": "jugaba",
+      "accepted": ["re:^jugaba$"],
+      "feedback": { "correct": "Correct — repeated action.", "wrong": "Use imperfecto for habitual actions." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex2",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Ayer ___ (jugar) al tenis con Ana.",
+      "answer": "jugué",
+      "accepted": ["re:^jugué$"],
+      "feedback": { "correct": "Correct — single completed event.", "wrong": "Use indefinido for finished actions." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex3",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Mientras él ___ (leer), yo estudiaba.",
+      "answer": "leía",
+      "accepted": ["re:^leía$"],
+      "feedback": { "correct": "Correct — ongoing action.", "wrong": "Use imperfecto with mientras." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex4",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "De repente, él ___ (entrar) en la sala.",
+      "answer": "entró",
+      "accepted": ["re:^entró$"],
+      "feedback": { "correct": "Correct — sudden completed action.", "wrong": "Use indefinido for sudden events." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex5",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Cuando ___ (tener) diez años, vivía en Valencia.",
+      "answer": "tenía",
+      "accepted": ["re:^tenía$"],
+      "feedback": { "correct": "Correct — description/age.", "wrong": "Use imperfecto for age." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex6",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "El año pasado ___ (ir) a México.",
+      "answer": "fui",
+      "accepted": ["re:^fui$"],
+      "feedback": { "correct": "Correct — completed trip.", "wrong": "Use indefinido for finished action." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex7",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "La casa ___ (ser) grande y antigua.",
+      "answer": "era",
+      "accepted": ["re:^era$"],
+      "feedback": { "correct": "Correct — description.", "wrong": "Use imperfecto for descriptions." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex8",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Ayer ___ (hacer) mucho calor.",
+      "answer": "hizo",
+      "accepted": ["re:^hizo$"],
+      "feedback": { "correct": "Correct — completed weather event.", "wrong": "Use indefinido for specific day weather." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex9",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Siempre ___ (levantarse) temprano.",
+      "answer": "me levantaba",
+      "accepted": ["re:^me levantaba$"],
+      "feedback": { "correct": "Correct — habitual action.", "wrong": "Use imperfecto for routines." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex10",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "cloze",
+      "promptMd": "Entonces ___ (decidir) salir.",
+      "answer": "decidí",
+      "accepted": ["re:^decidí$"],
+      "feedback": { "correct": "Correct — single decision.", "wrong": "Use indefinido for finished decision." },
+      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex11",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "mcq",
+      "promptMd": "Choose the correct: *Cuando era niño, ___ en bici cada día.*",
+      "options": ["monté","montaba","he montado"],
+      "answer": "montaba",
+      "feedback": { "correct": "Correct — habitual.", "wrong": "Use imperfecto for repeated actions." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex12",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "mcq",
+      "promptMd": "Choose the correct: *Ayer ___ a Pedro.*",
+      "options": ["veía","vi","veía"],
+      "answer": "vi",
+      "feedback": { "correct": "Correct — single event.", "wrong": "Use indefinido." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex13",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "mcq",
+      "promptMd": "*Cuando ___ en Valencia, conocí a Ana.*",
+      "options": ["vivía","viví","he vivido"],
+      "answer": "vivía",
+      "feedback": { "correct": "Correct — background.", "wrong": "Use imperfecto for setting." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex14",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "mcq",
+      "promptMd": "*De repente, el perro ___.*",
+      "options": ["ladraba","ladró","ladra"],
+      "answer": "ladró",
+      "feedback": { "correct": "Correct — sudden action.", "wrong": "Use indefinido." },
+      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex15",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "short",
+      "promptMd": "What does imperfecto express?",
+      "answer": "background or repeated actions",
+      "accepted": ["re:background","re:repeated"],
+      "feedback": { "correct": "Correct — scene/background.", "wrong": "Use for scene, not events." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex16",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "short",
+      "promptMd": "What does indefinido express?",
+      "answer": "completed past events",
+      "accepted": ["re:completed past"],
+      "feedback": { "correct": "Correct — finished actions.", "wrong": "It’s for finished events." },
+      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex17",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: *Hacía sol y cantaban los pájaros.*",
+      "answer": "It was sunny and the birds were singing",
+      "accepted": ["re:was sunny","re:were singing"],
+      "feedback": { "correct": "Correct — imperfecto for scene.", "wrong": "Ongoing scene." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex18",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: *De repente empezó a llover.*",
+      "answer": "Suddenly it started to rain",
+      "accepted": ["re:suddenly","re:started"],
+      "feedback": { "correct": "Correct — indefinido for sudden.", "wrong": "Use indefinido for events." },
+      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex19",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: *Vivía en Madrid cuando conocí a Ana.*",
+      "answer": "I was living in Madrid when I met Ana",
+      "accepted": ["re:was living","re:met"],
+      "feedback": { "correct": "Correct — imperfecto + indefinido combo.", "wrong": "Scene then event." },
+      "meta": { "difficulty": "B1","skills": ["read","write"],"topic": "Contrast" }
+    },
+    {
+      "id": "b1-imperfecto-vs-indefinido-ex20",
+      "lessonId": "b1-imperfecto-vs-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: *Tenía hambre, así que preparé un bocadillo.*",
+      "answer": "I was hungry, so I made a sandwich",
+      "accepted": ["re:was hungry","re:made a sandwich"],
+      "feedback": { "correct": "Correct — state (imp) then action (indef).", "wrong": "Imperfecto = state, indefinido = completed." },
+      "meta": { "difficulty": "B1","skills": ["read","write"],"topic": "Contrast" }
+    }
+  ],
+  "flashcards": [
+    { "id": "b1-imperfecto-vs-indefinido-fc1","front":"imperfecto endings (-ar)","back":"aba, abas, aba, ábamos, abais, aban","tag":"imperfecto","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc2","front":"imperfecto endings (-er/-ir)","back":"ía, ías, ía, íamos, íais, ían","tag":"imperfecto","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc3","front":"indefinido endings (-ar)","back":"é, aste, ó, amos, asteis, aron","tag":"indefinido","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc4","front":"indefinido endings (-er/-ir)","back":"í, iste, ió, imos, isteis, ieron","tag":"indefinido","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc5","front":"imperfecto use","back":"background, habitual","tag":"contrast","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc6","front":"indefinido use","back":"completed events","tag":"contrast","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc7","front":"signal: mientras","back":"→ imperfecto","tag":"contrast","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc8","front":"signal: de repente","back":"→ indefinido","tag":"contrast","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc9","front":"era / fui","back":"era = description, fui = event","tag":"contrast","deck":"grammar" },
+    { "id": "b1-imperfecto-vs-indefinido-fc10","front":"vivía / viví","back":"vivía = background, viví = finished stay","tag":"contrast","deck":"grammar" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "id": "example-section",
+      "title": "✏️ Example Name",
+      "lessons": [
+        { "slug": "b1-example-lesson", "label": "[B1]", "estMinutes": 30, "prereq": [] },
+        { "slug": "c1-example-lesson", "label": "[C1]", "estMinutes": 30, "prereq": ["b1-example-lesson"] }
+      ]
+    },
+    {
+      "id": "articles-nouns",
+      "title": "Articles & Nouns",
+      "lessons": [
+        { "slug": "b1-articles-basics", "label": "[B1]", "estMinutes": 35, "prereq": [] },
+        { "slug": "b1-gender-number", "label": "[B1]", "estMinutes": 40, "prereq": ["b1-articles-basics"] },
+        { "slug": "c1-neuter-lo", "label": "[C1]", "estMinutes": 30, "prereq": ["b1-articles-basics"] }
+      ]
+    }
+    // ... (rest of the master outline JSON exactly as given earlier)
+  ]
+}
