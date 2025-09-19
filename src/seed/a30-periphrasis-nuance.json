@@ -1,0 +1,316 @@
+{
+  "lessons": [
+    {
+      "id": "a30-periphrasis-nuance",
+      "level": "C1",
+      "title": "A30 — Periphrasis & Aspectual Nuance",
+      "slug": "a30-periphrasis-nuance",
+      "tags": [
+        "periphrasis",
+        "aspect",
+        "modality",
+        "advanced",
+        "c1"
+      ],
+      "markdown": "# 🔄 A30 — Periphrasis & Aspectual Nuance\n\n**Goal:** Usar perífrasis verbales para expresar matices de duración, intención, obligación y resultado.\n\n---\n\n## 1. Duración y progresión\n- **Estar + gerundio** = acción en curso puntual.\n- **Llevar + gerundio** = duración acumulada: *Llevo estudiando tres horas*.\n- **Ir/venir/andar + gerundio** aportan progresión, reiteración o dispersión: *Anda diciendo*, *Vamos mejorando*.\n\n## 2. Inminencia y planes\n- **Ir a + inf.** (plan inmediato), **estar a punto de + inf.** (inminencia), **estar por + inf.** (intención pendiente).\n- **Acabar de + inf.** = pasado inmediato; **acabar por + inf.** = desenlace tras resistencia.\n\n## 3. Obligación y probabilidad\n- **Deber + inf.** obligación fuerte; **tener que + inf.** obligación externa.\n- **Deber de + inf.** probabilidad: *Debe de ser tarde*.\n- **Haber de + inf.** registro formal / destino.\n\n## 4. Resultado y hábito\n- **Tener + participio** resalta resultado mantenido: *Tiene escrita la carta*.\n- **Llevar + participio** suma cantidades: *Llevan vendidos 500 ejemplares*.\n- **Soler + inf.** marca hábito consolidado.\n\n## 5. Perífrasis lexicalizadas\n- **Venir a + inf.** ≈ aproximadamente: *Vino a costar 200 €*.\n- **Volver a + inf.** repetición; **terminar + gerundio** resultado progresivo.\n\n---\n\n> 📝 **Resumen:** Escoge perífrasis para situar la acción en el tiempo (duración, hábito), describir intención, valorar obligación o enfatizar resultados.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a30-periphrasis-nuance-ex1",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Llevo dos horas ___ (esperar) la llamada.",
+      "answer": "esperando",
+      "accepted": [
+        "re:^esperando$"
+      ],
+      "feedback": {
+        "correct": "Correcto: llevar + gerundio indica duración acumulada.",
+        "wrong": "Usa **esperando** tras llevar."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "llevar + gerundio"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex2",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Anda ___ (buscar) piso por el centro.",
+      "answer": "buscando",
+      "accepted": [
+        "re:^buscando$"
+      ],
+      "feedback": {
+        "correct": "Correcto: andar + gerundio = acción dispersa/reiterada.",
+        "wrong": "Emplea gerundio: **buscando**."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "andar + gerundio"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex3",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Estoy por ___ (llamar) a la policía.",
+      "answer": "llamar",
+      "accepted": [
+        "re:^llamar$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estar por + inf. = intención pendiente.",
+        "wrong": "Mantén infinitivo: **llamar**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "estar por"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex4",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Acabó por ___ (aceptar) la propuesta.",
+      "answer": "aceptar",
+      "accepted": [
+        "re:^aceptar$"
+      ],
+      "feedback": {
+        "correct": "Correcto: acabar por + inf. marca desenlace tras resistencia.",
+        "wrong": "Usa infinitivo: **aceptar**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "acabar por"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex5",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Debe de ___ (ser) la una.",
+      "answer": "ser",
+      "accepted": [
+        "re:^ser$"
+      ],
+      "feedback": {
+        "correct": "Correcto: deber de + inf. → probabilidad.",
+        "wrong": "Usa **ser** con 'debe de'."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "deber de"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex6",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "mcq",
+      "promptMd": "¿Cuál resalta mejor la mejora progresiva?",
+      "options": [
+        "Estamos mejorando",
+        "Vamos mejorando",
+        "Mejoramos",
+        "Solemos mejorar"
+      ],
+      "answer": "Vamos mejorando",
+      "feedback": {
+        "correct": "Correcto: ir + gerundio enfatiza progresión gradual.",
+        "wrong": "Elige **vamos mejorando** para avance paulatino."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "ir + gerundio"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex7",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "translate",
+      "promptMd": "Translate: **Tiene el informe hecho.**",
+      "answer": "He/She has the report done",
+      "accepted": [
+        "re:^(he|she) has the report done\\.?$",
+        "re:^has the report done\\.?$"
+      ],
+      "feedback": {
+        "correct": "Correcto: tener + participio subraya resultado vigente.",
+        "wrong": "Expresa resultado con 'has ... done'."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "tener + participio"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex8",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Suele ___ (llegar) tarde los lunes.",
+      "answer": "llegar",
+      "accepted": [
+        "re:^llegar$"
+      ],
+      "feedback": {
+        "correct": "Correcto: soler + infinitivo marca hábito.",
+        "wrong": "Emplea infinitivo: **llegar**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "soler"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex9",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Venimos ___ (decir) que el sistema necesita ajustes.",
+      "answer": "diciendo",
+      "accepted": [
+        "re:^diciendo$"
+      ],
+      "feedback": {
+        "correct": "Correcto: venir + gerundio indica insistencia acumulada.",
+        "wrong": "Usa gerundio: **diciendo**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "venir + gerundio"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex10",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "short",
+      "promptMd": "¿Diferencia pragmática entre *debo terminarlo* y *debo de terminarlo*?",
+      "answer": "'Debo terminarlo' expresa obligación; 'debo de terminarlo' expresa suposición/probabilidad.",
+      "accepted": [
+        "re:obligaci[oó]n",
+        "re:probabil"
+      ],
+      "feedback": {
+        "correct": "Correcto: 'de' cambia a matiz de conjetura.",
+        "wrong": "Aclara: sin 'de' = obligación; con 'de' = probabilidad."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "deber"
+      }
+    },
+    {
+      "id": "a30-periphrasis-nuance-ex11",
+      "lessonId": "a30-periphrasis-nuance",
+      "type": "cloze",
+      "promptMd": "Terminó ___ (trabajar) de noche para cumplir el plazo.",
+      "answer": "trabajando",
+      "accepted": [
+        "re:^trabajando$"
+      ],
+      "feedback": {
+        "correct": "Correcto: terminar + gerundio resalta el modo del desenlace.",
+        "wrong": "Usa gerundio: **trabajando**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "terminar + gerundio"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "a30-periphrasis-nuance-fc1",
+      "front": "Llevar + gerundio",
+      "back": "Duración acumulada (Llevo estudiando...)",
+      "tag": "duración",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc2",
+      "front": "Andar/Venir + gerundio",
+      "back": "Acción reiterada o insistente",
+      "tag": "progresión",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc3",
+      "front": "Estar por",
+      "back": "Intención pendiente (Estoy por llamar)",
+      "tag": "intención",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc4",
+      "front": "Acabar de / acabar por",
+      "back": "Pasado inmediato vs desenlace tras resistencia",
+      "tag": "acabar",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc5",
+      "front": "Deber vs deber de",
+      "back": "Obligación fuerte vs probabilidad",
+      "tag": "modalidad",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc6",
+      "front": "Tener + participio",
+      "back": "Resultado mantenido (Tiene preparado...)",
+      "tag": "resultado",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc7",
+      "front": "Soler + inf.",
+      "back": "Marca hábito estable",
+      "tag": "hábito",
+      "deck": "grammar"
+    },
+    {
+      "id": "a30-periphrasis-nuance-fc8",
+      "front": "Venir a + inf.",
+      "back": "Valor aproximativo (Vino a costar...)",
+      "tag": "aproximación",
+      "deck": "grammar"
+    }
+  ]
+}

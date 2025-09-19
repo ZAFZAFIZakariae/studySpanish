@@ -1,0 +1,301 @@
+{
+  "lessons": [
+    {
+      "id": "a24-articles-deep",
+      "level": "C1",
+      "title": "A24 — Articles Beyond the Basics",
+      "slug": "a24-articles-deep",
+      "tags": [
+        "articles",
+        "determiners",
+        "advanced",
+        "c1"
+      ],
+      "markdown": "# 📰 A24 — Articles Beyond the Basics\n\n**Goal:** Command article use for abstraction, emphasis, and discourse-level cohesion.\n\n---\n\n## 1. Article as an abstractor\n- **lo + adjetivo/participio** → sustantiva cualidades: *lo esencial, lo vivido*.\n- **el + infinitivo** → convierte acciones en conceptos: *el viajar forma el carácter*.\n- Usa artículo para resumir capítulos previos: *En el anterior, vimos...*.\n\n## 2. Cuándo omitimos el artículo\n- Professions, religions, nationalities after **ser** if unmodified: *Es médica*. Añadir adjetivo → vuelve el artículo: *Es la médica responsable*.\n- Tras **tener, llevar, buscar** en sentido indeterminado: *tiene experiencia*, *busco piso*.\n- Títulos, cargos, cargos de cortesía pierden artículo en vocativos: *Señora presidenta, tiene la palabra*.\n- Estilo telegráfico (titulares/listas) suprime artículos: *Gobierno aprueba reforma*.\n\n## 3. Dónde es obligatorio\n- Días de la semana y partes del día en hábitos: *los lunes, por la mañana*.\n- Cuerpo y ropa con verbos de sensación/afectación: *Me duele la cabeza; le mancharon el abrigo*.\n- Artículo con apellidos para referirse a familias o figuras públicas: *La Allende, los García Márquez*.\n- Doble determinación en énfasis: *Ese mismo problema*, *la siempre compleja logística*.\n\n## 4. Artículo y registro\n- **lo** permite comentarios metalingüísticos: *Lo interesante del informe...*.\n- Artículo neutro con comparativos/superlativos absolutos: *lo más urgente, lo mejor posible*.\n- Recurso académico: *En el presente capítulo se analiza...* (artículo da solemnidad).\n- Omitir artículo produce estilo conciso o coloquial, según contexto.\n\n---\n\n> 📝 **Resumen:** Domina cuándo el artículo introduce abstracción o solemnidad y cuándo borrarlo mantiene naturalidad. Alternar artículo/ø modifica la perspectiva discursiva.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a24-articles-deep-ex1",
+      "lessonId": "a24-articles-deep",
+      "type": "cloze",
+      "promptMd": "**___ bueno es que termina pronto.** (abstract idea)",
+      "answer": "Lo",
+      "accepted": [
+        "re:^lo$",
+        "re:^Lo$"
+      ],
+      "feedback": {
+        "correct": "Correcto: lo bueno → cualidad sustantivada.",
+        "wrong": "Usa **lo** para convertir adjetivo en idea."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "lo + adjetivo"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex2",
+      "lessonId": "a24-articles-deep",
+      "type": "cloze",
+      "promptMd": "**___ viajar en tren** reduce la huella de carbono.",
+      "answer": "El",
+      "accepted": [
+        "re:^el$",
+        "re:^El$"
+      ],
+      "feedback": {
+        "correct": "Bien: el + infinitivo → acción como concepto.",
+        "wrong": "Necesitas artículo para nominalizar el infinitivo."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "el + infinitivo"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex3",
+      "lessonId": "a24-articles-deep",
+      "type": "mcq",
+      "promptMd": "Completa: *Tiene ___ experiencia en mediación.*",
+      "options": [
+        "la",
+        "una",
+        "experiencia",
+        "la una"
+      ],
+      "answer": "experiencia",
+      "feedback": {
+        "correct": "Correcto: tras *tener* en sentido general se omite el artículo.",
+        "wrong": "Tras *tener* indefinido → Ø: *tiene experiencia*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "ø tras tener"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex4",
+      "lessonId": "a24-articles-deep",
+      "type": "translate",
+      "promptMd": "Translate: **Lo inesperado nos asusta.**",
+      "answer": "The unexpected scares us",
+      "accepted": [
+        "re:^the unexpected scares us\\.?$"
+      ],
+      "feedback": {
+        "correct": "Exacto: lo + adjetivo → the + adjective (as noun).",
+        "wrong": "Recuerda: lo inesperado → the unexpected."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "lo abstracto"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex5",
+      "lessonId": "a24-articles-deep",
+      "type": "cloze",
+      "promptMd": "Me duele ___ cabeza.",
+      "answer": "la",
+      "accepted": [
+        "re:^la$"
+      ],
+      "feedback": {
+        "correct": "Correcto: partes del cuerpo llevan artículo, no posesivo.",
+        "wrong": "Usa **la cabeza**, no *mi cabeza* tras verbos de sensación."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "cuerpo"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex6",
+      "lessonId": "a24-articles-deep",
+      "type": "mcq",
+      "promptMd": "En una crónica periodística, tras presentar a Laura Fernández, ¿cómo se la menciona después?",
+      "options": [
+        "Fernández",
+        "la Fernández",
+        "la Laura",
+        "una Fernández"
+      ],
+      "answer": "la Fernández",
+      "feedback": {
+        "correct": "Correcto: apellidos notorios llevan artículo definido.",
+        "wrong": "Se usa **la Fernández** para referirse a la persona ya identificada."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "apellidos"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex7",
+      "lessonId": "a24-articles-deep",
+      "type": "cloze",
+      "promptMd": "___ domingos visitamos a mis abuelos. (hábito)",
+      "answer": "Los",
+      "accepted": [
+        "re:^los$",
+        "re:^Los$"
+      ],
+      "feedback": {
+        "correct": "Bien: los + día → rutina semanal.",
+        "wrong": "Las rutinas semanales usan artículo plural: **los domingos**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "días"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex8",
+      "lessonId": "a24-articles-deep",
+      "type": "translate",
+      "promptMd": "Translate: **Estudiaba por la noche para el examen.**",
+      "answer": "He/She studied at night for the exam",
+      "accepted": [
+        "re:^(he|she) studied at night for the exam\\.?$",
+        "re:^studied at night for the exam\\.?$"
+      ],
+      "feedback": {
+        "correct": "Correcto: por la noche mantiene artículo definido.",
+        "wrong": "Incluye el artículo: *at night* corresponde a **por la noche**."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "partes del día"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex9",
+      "lessonId": "a24-articles-deep",
+      "type": "short",
+      "promptMd": "¿Cuándo se omite el artículo con profesiones tras *ser*?",
+      "answer": "Cuando la profesión va sin adjetivos ni especificadores (Es médica).",
+      "accepted": [
+        "re:sin adjetivos",
+        "re:profesi[oó]n va sin modificar"
+      ],
+      "feedback": {
+        "correct": "Exacto: *Es médica*; añades artículo si hay calificativos.",
+        "wrong": "Se omite si la profesión va desnuda, sin calificativos."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "profesiones"
+      }
+    },
+    {
+      "id": "a24-articles-deep-ex10",
+      "lessonId": "a24-articles-deep",
+      "type": "cloze",
+      "promptMd": "Su obsesión por ___ digital le impide desconectar.",
+      "answer": "lo",
+      "accepted": [
+        "re:^lo$"
+      ],
+      "feedback": {
+        "correct": "Correcto: lo digital → campo conceptual.",
+        "wrong": "Usa **lo** para sustantivar el adjetivo digital."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "lo + adjetivo"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "a24-articles-deep-fc1",
+      "front": "lo + adjetivo",
+      "back": "Crea sustantivos abstractos: lo esencial, lo urgente",
+      "tag": "abstractor",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc2",
+      "front": "el + infinitivo",
+      "back": "Nominaliza acciones: el viajar, el comer sano",
+      "tag": "infinitivo",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc3",
+      "front": "Ø tras tener/buscar",
+      "back": "Sentido inespecífico: tiene experiencia, busca trabajo",
+      "tag": "omisión",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc4",
+      "front": "Cuerpo/ropa",
+      "back": "Usa artículo con verbos de sensación: me duele la espalda",
+      "tag": "cuerpo",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc5",
+      "front": "Días y hábitos",
+      "back": "los lunes, las noches de verano",
+      "tag": "tiempo",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc6",
+      "front": "Apellidos notorios",
+      "back": "La Mistral, los García → artículo marca notoriedad",
+      "tag": "apellidos",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc7",
+      "front": "Registro académico",
+      "back": "El artículo aporta solemnidad: En el presente estudio...",
+      "tag": "registro",
+      "deck": "grammar"
+    },
+    {
+      "id": "a24-articles-deep-fc8",
+      "front": "Lo + superlativo",
+      "back": "lo más urgente, lo mejor posible",
+      "tag": "superlativo",
+      "deck": "grammar"
+    }
+  ]
+}

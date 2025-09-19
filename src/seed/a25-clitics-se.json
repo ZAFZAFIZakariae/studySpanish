@@ -1,0 +1,343 @@
+{
+  "lessons": [
+    {
+      "id": "a25-clitics-se",
+      "level": "C1",
+      "title": "A25 — Clitics, Doubling & the Many Faces of *se*",
+      "slug": "a25-clitics-se",
+      "tags": [
+        "clitics",
+        "pronouns",
+        "se",
+        "advanced",
+        "c1"
+      ],
+      "markdown": "# 🔁 A25 — Clitics, Doubling & the Many Faces of *se*\n\n**Goal:** Manejar la colocación, duplicación y matices discursivos de los clíticos españoles.\n\n---\n\n## 1. Orden fijo (me/te/se/le + lo/la/los/las)\n- Clítico indirecto va antes del directo: *se lo conté*, *me la entregaron*.\n- *le/les* → **se** cuando comparte verbo con lo/la/los/las.\n- En perífrasis y tiempos compuestos se colocan antes del auxiliar o pospuestos al infinitivo/gerundio.\n\n## 2. Duplicación y foco\n- Duplicar IO obligatorio con pronombres tónicos antepuestos: *A María le di...*.\n- Duplicación enfática: *Le di un abrazo a ella, no a ti*.\n- Con OD animados marcados con **a** se admite duplicación para contraste: *La novela la leí yo*.\n\n## 3. Valores de *se*\n- **Reflexivo/recíproco:** *se miran*, *nos vemos*.\n- **Pronominal léxico:** verbos inherentes (*quejarse, arrepentirse*).\n- **Aspectual/intensificador:** *comerse la tarta*, *irse marchando*.\n- **Accidental/dativo ético:** *Se me cayó el café*, *Se me estudia mejor aquí*.\n\n## 4. *Se* impersonal y pasiva\n- **Impersonal:** *Se vive bien aquí* (3ª sg., verbo intransitivo o sin OD expreso).\n- **Pasiva refleja:** *Se publicaron los resultados* (verbo transitivo + sujeto paciente).\n- Ambiguos → apoya con contexto o pronombre: *Aquí se come rico* (impersonal) vs *Se comieron los postres* (pasiva).\n\n## 5. Matices dialectales\n- **Leísmo** animado masculino admitido en estándar peninsular culto: *le vi ayer*.\n- **Laísmo/loísmo** siguen siendo no normativos fuera de registros muy marcados.\n- Dativo enfático: *Se me enfadó* añade implicación afectiva.\n\n---\n\n> 📝 **Resumen:** La posición clítica es rígida; el valor pragmático depende de duplicar, escoger *se* adecuado y entender si el verbo admite voz media, impersonal o intensificadora.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a25-clitics-se-ex1",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "___ lo dije a Ana en confianza.",
+      "answer": "Se",
+      "accepted": [
+        "re:^se$",
+        "re:^Se$"
+      ],
+      "feedback": {
+        "correct": "Correcto: le + lo → se lo.",
+        "wrong": "Cuando le/les precede a lo/la, cambia a **se**."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "se lo"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex2",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "A mis padres ___ compré un recuerdo.",
+      "answer": "les",
+      "accepted": [
+        "re:^les$"
+      ],
+      "feedback": {
+        "correct": "Bien: duplicas IO expreso (a mis padres) con **les**.",
+        "wrong": "Con IO léxico antepuesto debes duplicar con **les**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "duplicación IO"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex3",
+      "lessonId": "a25-clitics-se",
+      "type": "mcq",
+      "promptMd": "Orden correcto de clíticos: *¿Puedes ___ ___ explicar?*",
+      "options": [
+        "la me",
+        "me la",
+        "la te",
+        "te la"
+      ],
+      "answer": "me la",
+      "feedback": {
+        "correct": "Correcto: IO (me) antes del OD (la).",
+        "wrong": "Recuerda: me/te/se/nos/os + lo/la/los/las."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "orden clíticos"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex4",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "Los niños ___ lavan los dientes solos.",
+      "answer": "se",
+      "accepted": [
+        "re:^se$"
+      ],
+      "feedback": {
+        "correct": "Correcto: valor reflexivo (ellos mismos).",
+        "wrong": "Es acción sobre sí mismos → **se** reflexivo."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "reflexivo"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex5",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "Aquí ___ vive muy bien. (impersonal)",
+      "answer": "se",
+      "accepted": [
+        "re:^se$"
+      ],
+      "feedback": {
+        "correct": "Correcto: impersonal → se + verbo 3ª sg.",
+        "wrong": "Sin sujeto explícito → usa **se** impersonal."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "se impersonal"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex6",
+      "lessonId": "a25-clitics-se",
+      "type": "mcq",
+      "promptMd": "Identifica el tipo de *se*: *Se vendieron todas las entradas.*",
+      "options": [
+        "Reflexivo",
+        "Pasiva refleja",
+        "Impersonal",
+        "Dativo ético"
+      ],
+      "answer": "Pasiva refleja",
+      "feedback": {
+        "correct": "Correcto: sujeto paciente (las entradas) + verbo transitivo → pasiva refleja.",
+        "wrong": "Hay sujeto paciente, no es impersonal."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "pasiva refleja"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex7",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "Se les cayó el café → ¿Cómo expresas el accidente? *___ ___ cayó el café.*",
+      "answer": [
+        "Se",
+        "les"
+      ],
+      "feedback": {
+        "correct": "Correcto: se (voz media) + les (dativo afectado).",
+        "wrong": "Necesitas **se** accidental + dativo afectado."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "se accidental"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex8",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "No ___ voy a decir dos veces, ¿vale? (dativo ético)",
+      "answer": "te lo",
+      "accepted": [
+        "re:^te lo$"
+      ],
+      "feedback": {
+        "correct": "Bien: te (dativo ético) + lo (contenido).",
+        "wrong": "Mantén orden IO antes de OD: **te lo**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "dativo ético"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex9",
+      "lessonId": "a25-clitics-se",
+      "type": "translate",
+      "promptMd": "Translate: **Se nos fue el tren.**",
+      "answer": "We missed the train",
+      "accepted": [
+        "re:^we missed the train\\.?$"
+      ],
+      "feedback": {
+        "correct": "Correcto: se + dativo expresa pérdida involuntaria.",
+        "wrong": "Equivale a 'the train left us / we missed the train'."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "se dativo"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex10",
+      "lessonId": "a25-clitics-se",
+      "type": "mcq",
+      "promptMd": "¿Cuál es la opción aceptable según la norma culta?",
+      "options": [
+        "La dije la verdad a Marta",
+        "Le vi ayer en Madrid",
+        "Lo dije a María",
+        "Les vi las caras"
+      ],
+      "answer": "Le vi ayer en Madrid",
+      "feedback": {
+        "correct": "Correcto: leísmo animado masculino admitido; *la/lo dije* son laísmos/loísmos.",
+        "wrong": "Solo *le vi* es aceptado; las otras combinaciones violan norma estándar."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read"
+        ],
+        "topic": "leísmo"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex11",
+      "lessonId": "a25-clitics-se",
+      "type": "cloze",
+      "promptMd": "Vamos a decír___ mañana. (adjunta al infinitivo)",
+      "answer": "selo",
+      "accepted": [
+        "re:^selo$"
+      ],
+      "feedback": {
+        "correct": "Correcto: al posponer se mantiene *se* + lo → selo.",
+        "wrong": "Recuerda fusionar: decir + se + lo → decírselo."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "posposición"
+      }
+    },
+    {
+      "id": "a25-clitics-se-ex12",
+      "lessonId": "a25-clitics-se",
+      "type": "short",
+      "promptMd": "Explica la diferencia entre *Se vive bien aquí* y *Se vendieron casas*.",
+      "answer": "La primera es impersonal (sin sujeto) y la segunda es pasiva refleja con sujeto paciente (casas).",
+      "accepted": [
+        "re:impersonal",
+        "re:pasiva refleja"
+      ],
+      "feedback": {
+        "correct": "Exacto: un caso no tiene sujeto gramatical; el otro sí (casas).",
+        "wrong": "Aclara: *vive* → impersonal; *vendieron* → pasiva con sujeto paciente."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "impersonal vs pasiva"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "a25-clitics-se-fc1",
+      "front": "Orden clítico",
+      "back": "me/te/se/nos/os/le + lo/la/los/las (le→se ante lo)",
+      "tag": "orden",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc2",
+      "front": "Duplicación IO",
+      "back": "A María le di… (obligatoria con IO antepuesto)",
+      "tag": "duplicación",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc3",
+      "front": "Se reflexivo",
+      "back": "Acción sobre el mismo sujeto: se lava",
+      "tag": "reflexivo",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc4",
+      "front": "Se impersonal",
+      "back": "Verbo 3ª sg. sin sujeto: se trabaja bien",
+      "tag": "impersonal",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc5",
+      "front": "Pasiva refleja",
+      "back": "Se publicaron los datos (sujeto paciente)",
+      "tag": "pasiva",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc6",
+      "front": "Se accidental",
+      "back": "Se me olvidó, se nos fue el tren",
+      "tag": "accidental",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc7",
+      "front": "Aspecto intensivo",
+      "back": "comerse, tomarse, irse + gerundio intensifican",
+      "tag": "aspecto",
+      "deck": "grammar"
+    },
+    {
+      "id": "a25-clitics-se-fc8",
+      "front": "Leísmo culto",
+      "back": "Le vi (masc. animado) aceptado; evita laísmo/loísmo",
+      "tag": "variante",
+      "deck": "grammar"
+    }
+  ]
+}

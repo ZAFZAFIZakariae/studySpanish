@@ -1,0 +1,335 @@
+{
+  "lessons": [
+    {
+      "id": "a28-subjunctive-sequence",
+      "level": "C1",
+      "title": "A28 — Subjunctive Sequencing & Concord",
+      "slug": "a28-subjunctive-sequence",
+      "tags": [
+        "subjunctive",
+        "sequence",
+        "advanced",
+        "c1"
+      ],
+      "markdown": "# 🌙 A28 — Subjunctive Sequencing & Concord\n\n**Goal:** Coordinar tiempos del subjuntivo con el eje temporal de la oración principal.\n\n---\n\n## 1. Secuencia básica\n- **Presente / futuro** en principal → subordinada en **presente** o **perfecto de subjuntivo** según anterioridad: *Espero que vengas / hayas venido*.\n- **Pasado** en principal → subordinada en **imperfecto** o **pluscuamperfecto de subjuntivo**: *Quería que vinieras / hubieras venido*.\n- Condicional simple suele combinar con imperfecto; condicional compuesto con pluscuam: *Me encantaría que vinieras / hubieras venido*.\n\n## 2. Simultaneidad vs anterioridad\n- Acción simultánea/posterior → presente/imperfecto: *Me alegra que estés aquí / Me alegraba que estuvieras aquí*.\n- Acción anterior → perfecto/pluscuamperfecto: *Lamento que hayas sufrido*; *Lamentaba que hubieras sufrido*.\n\n## 3. Conjunciones temporales\n- *Cuando, en cuanto, hasta que* + subjuntivo si refieren a futuro: *Cuando llegues, avisa*.\n- Si refieren al pasado real → indicativo: *Cuando llegó, avisó*.\n- *Antes de que* siempre subjuntivo; *después de que* depende de referencia temporal.\n\n## 4. Subordinadas adjetivas\n- Antecedente indefinido/negado → subjuntivo: *Busco a alguien que hable mandarín*.\n- Referente concreto → indicativo: *Conozco a la persona que habla mandarín*.\n\n## 5. Estilo indirecto\n- Si el hecho sigue vigente, puedes conservar presente de subj.: *Dijo que espera que llegues a tiempo*.\n- Para concordancia clásica, desplaza: *Dijo que esperaba que llegaras a tiempo*.\n\n---\n\n> 📝 **Resumen:** Identifica la relación temporal (simultánea/anterior) y la vigencia. Selecciona presente/perfecto o imperfecto/pluscuam según la distancia de la acción subordinada respecto al eje principal.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a28-subjunctive-sequence-ex1",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Quiero que tú ___ (venir) temprano.",
+      "answer": "vengas",
+      "accepted": [
+        "re:^vengas$"
+      ],
+      "feedback": {
+        "correct": "Correcto: presente principal → presente de subjuntivo.",
+        "wrong": "Usa **vengas** para simultaneidad."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "presente subj"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex2",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Quería que tú ___ (venir) temprano.",
+      "answer": "vinieras",
+      "accepted": [
+        "re:^vinieras$"
+      ],
+      "feedback": {
+        "correct": "Correcto: principal en pasado → imperfecto de subjuntivo.",
+        "wrong": "Usa **vinieras** en concordancia clásica."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "imperfecto subj"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex3",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Dudo que ellos ___ (haber terminar) el informe.",
+      "answer": "hayan terminado",
+      "accepted": [
+        "re:^hayan terminado$"
+      ],
+      "feedback": {
+        "correct": "Correcto: duda en presente + acción acabada → perfecto de subjuntivo.",
+        "wrong": "Utiliza **hayan terminado** para anterioridad."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "perfecto subj"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex4",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "No creía que ellos ___ (haber terminar) tan rápido.",
+      "answer": "hubieran terminado",
+      "accepted": [
+        "re:^hubieran terminado$"
+      ],
+      "feedback": {
+        "correct": "Correcto: pasado principal + anterioridad → pluscuamperfecto de subjuntivo.",
+        "wrong": "Usa **hubieran terminado**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "pluscuam subj"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex5",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Cuando ___ (llegar) avísame por mensaje.",
+      "answer": "llegues",
+      "accepted": [
+        "re:^llegues$"
+      ],
+      "feedback": {
+        "correct": "Correcto: referencia futura con cuando → subjuntivo.",
+        "wrong": "Usa **llegues** para futuro no realizado."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "cuando futuro"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex6",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "mcq",
+      "promptMd": "Escoge la opción correcta: *Antes de que ___, deja la llave en recepción.*",
+      "options": [
+        "sales",
+        "salgas",
+        "saliste",
+        "saldrás"
+      ],
+      "answer": "salgas",
+      "feedback": {
+        "correct": "Correcto: 'antes de que' siempre exige subjuntivo.",
+        "wrong": "Debe ir en subjuntivo: **salgas**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "antes de que"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex7",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Busco a alguien que ___ (saber) japonés.",
+      "answer": "sepa",
+      "accepted": [
+        "re:^sepa$"
+      ],
+      "feedback": {
+        "correct": "Correcto: antecedente indefinido → subjuntivo.",
+        "wrong": "Usa **sepa** porque la existencia no está asegurada."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "relativa indefinida"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex8",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Encontré a alguien que ___ (hablar) japonés perfectamente.",
+      "answer": "hablaba",
+      "accepted": [
+        "re:^hablaba$"
+      ],
+      "feedback": {
+        "correct": "Correcto: referente real identificado → indicativo imperfecto.",
+        "wrong": "Con antecedente real, usa indicativo: **hablaba**."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "relativa definida"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex9",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "translate",
+      "promptMd": "Translate: **Me molesta que se hayan ido tan pronto.**",
+      "answer": "It bothers me that they have left so soon",
+      "accepted": [
+        "re:^it bothers me that they have left so soon\\.?$"
+      ],
+      "feedback": {
+        "correct": "Correcto: have left = se hayan ido (perfecto).",
+        "wrong": "Recuerda usar 'have left' para perfecto."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "perfecto"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex10",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Ojalá ___ (llover) mañana.",
+      "answer": "llueva",
+      "accepted": [
+        "re:^llueva$"
+      ],
+      "feedback": {
+        "correct": "Correcto: deseo sobre futuro → presente de subjuntivo.",
+        "wrong": "Usa **llueva** tras ojalá + futuro próximo."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ojalá"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex11",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "cloze",
+      "promptMd": "Me habría gustado que tú ___ (venir) también.",
+      "answer": "hubieras venido",
+      "accepted": [
+        "re:^hubieras venido$"
+      ],
+      "feedback": {
+        "correct": "Correcto: condicional compuesto + anterioridad → pluscuamperfecto subj.",
+        "wrong": "Usa **hubieras venido**."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "condicional"
+      }
+    },
+    {
+      "id": "a28-subjunctive-sequence-ex12",
+      "lessonId": "a28-subjunctive-sequence",
+      "type": "short",
+      "promptMd": "¿Por qué *Cuando vino, avísame* es incorrecto?",
+      "answer": "Porque 'cuando vino' refiere a pasado real, pero la orden es futura; debe ser 'cuando vengas, avísame'.",
+      "accepted": [
+        "re:pasado real",
+        "re:vengas"
+      ],
+      "feedback": {
+        "correct": "Exacto: futuro → subjuntivo, no indefinido.",
+        "wrong": "Se necesita *cuando vengas* para evento futuro."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "cuando"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "a28-subjunctive-sequence-fc1",
+      "front": "Presente principal",
+      "back": "→ presente/ perfecto de subjuntivo",
+      "tag": "presente",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc2",
+      "front": "Pasado principal",
+      "back": "→ imperfecto/ pluscuamperfecto de subj.",
+      "tag": "pasado",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc3",
+      "front": "Simultaneidad",
+      "back": "Presente vs imperfecto según eje",
+      "tag": "simultáneo",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc4",
+      "front": "Anterioridad",
+      "back": "Perfecto / pluscuamperfecto de subj.",
+      "tag": "anterioridad",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc5",
+      "front": "Cuando + futuro",
+      "back": "Lleva subjuntivo (cuando llegues)",
+      "tag": "conjunciones",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc6",
+      "front": "Antes de que",
+      "back": "Siempre subjuntivo",
+      "tag": "antes",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc7",
+      "front": "Relativa indefinida",
+      "back": "Busco a alguien que + subj.",
+      "tag": "relativa",
+      "deck": "grammar"
+    },
+    {
+      "id": "a28-subjunctive-sequence-fc8",
+      "front": "Ojalá",
+      "back": "Usa subjuntivo (llueva, lloviera)",
+      "tag": "ojalá",
+      "deck": "grammar"
+    }
+  ]
+}

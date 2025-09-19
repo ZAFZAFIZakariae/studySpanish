@@ -1,0 +1,339 @@
+{
+  "lessons": [
+    {
+      "id": "a31-ser-estar-advanced",
+      "level": "C1",
+      "title": "A31 — Ser vs Estar: Advanced Nuance",
+      "slug": "a31-ser-estar-advanced",
+      "tags": [
+        "ser",
+        "estar",
+        "copulas",
+        "advanced",
+        "c1"
+      ],
+      "markdown": "# 🧭 A31 — Ser vs Estar: Advanced Nuance\n\n**Goal:** Elegir la cópula según significado léxico, registro y efecto pragmático.\n\n---\n\n## 1. Adjetivos con doble lectura\n- *ser aburrido* = produce aburrimiento; *estar aburrido* = se aburre.\n- *ser listo* = inteligente; *estar listo* = preparado.\n- *ser atento* = cortés; *estar atento* = prestar atención.\n- *ser bueno* = buena persona/calidad; *estar bueno* = sabroso / atractivo / recuperado.\n\n## 2. Participios\n- **Ser + participio** = voz pasiva (agente opcional): *La carta fue enviada por Ana*.\n- **Estar + participio** = resultado/estado: *La carta está enviada*.\n- Con adjetivos de cambio de estado: *está roto, está abierto*.\n\n## 3. Localización vs eventos\n- *Estar* indica ubicación física: *La cafetera está en la cocina*.\n- *Ser* sitúa eventos: *La boda es en la catedral*.\n- En registros coloquiales se admite *ser* con localización enfática (*Eso es en México*), pero norma prefiere *estar*.\n\n## 4. Expresiones idiomáticas\n- *Estar por + inf.* intención pendiente; *estar para + inf.* disponibilidad/ánimo (*No estoy para bromas*).\n- *Estar de + sustantivo* = función temporal: *Está de camarera*.\n- *Ser de* = pertenencia, origen, material: *Es de Madrid, es de madera*.\n\n## 5. Evaluación subjetiva\n- *Estar + adjetivo* enfatiza percepción personal momentánea: *El café está riquísimo hoy*.\n- *Ser + adjetivo* aporta rasgo definitorio: *El café es amargo* (por naturaleza).\n\n---\n\n> 📝 **Resumen:** Determina si describes esencia, resultado, ubicación o percepción momentánea. Cambiar de *ser* a *estar* altera radicalmente la interpretación.",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a31-ser-estar-advanced-ex1",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "La conferencia ___ en el auditorio principal.",
+      "answer": "es",
+      "accepted": [
+        "re:^es$"
+      ],
+      "feedback": {
+        "correct": "Correcto: eventos usan *ser* para ubicar.",
+        "wrong": "Usa **es** para eventos (no *está*)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "eventos"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex2",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "El informe ya ___ enviado; revisa la bandeja.",
+      "answer": "está",
+      "accepted": [
+        "re:^está$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estado resultante → estar + participio.",
+        "wrong": "Se usa **está enviado** para resultado, no *es enviado*."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "estar participio"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex3",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "mcq",
+      "promptMd": "Completa: *María ___ muy lista; siempre resuelve problemas.*",
+      "options": [
+        "está",
+        "es",
+        "estuvo",
+        "era"
+      ],
+      "answer": "es",
+      "feedback": {
+        "correct": "Correcto: rasgo permanente → ser lista = inteligente.",
+        "wrong": "Se usa **es** para cualidad inherente."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "adjetivos"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex4",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "Hoy Juan ___ aburrido en clase.",
+      "answer": "está",
+      "accepted": [
+        "re:^está$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estado momentáneo → estar aburrido.",
+        "wrong": "Temporalidad requiere **está**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "estado"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex5",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "La novela ___ aburrida; no la recomiendo.",
+      "answer": "es",
+      "accepted": [
+        "re:^es$"
+      ],
+      "feedback": {
+        "correct": "Correcto: valoración inherente del texto → ser aburrida.",
+        "wrong": "Usa **es** para característica permanente."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "característica"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex6",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "mcq",
+      "promptMd": "Escoge la combinación correcta:",
+      "options": [
+        "Es atento a la conferencia (presta atención)",
+        "Está atento con los clientes (cortés)",
+        "Es atento con los clientes (cortés)",
+        "Está atento a los clientes (cortés permanente)"
+      ],
+      "answer": "Es atento con los clientes (cortés)",
+      "feedback": {
+        "correct": "Correcto: ser atento = ser cortés; estar atento = prestar atención.",
+        "wrong": "Recuerda: ser atento = amable; estar atento = poner atención."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "adjetivos"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex7",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "translate",
+      "promptMd": "Translate: **La puerta está cerrada.**",
+      "answer": "The door is closed",
+      "accepted": [
+        "re:^the door is closed\\.?$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estado resultante.",
+        "wrong": "Usa 'is closed'."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "estar participio"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex8",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "Está de ___ (camarero) este verano en la costa.",
+      "answer": "camarero",
+      "accepted": [
+        "re:^camarero$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estar de + profesión temporal.",
+        "wrong": "Emplea **estar de camarero** para trabajo temporal."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "estar de"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex9",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "Somos de Valencia y nuestros padres ___ de allí también.",
+      "answer": "son",
+      "accepted": [
+        "re:^son$"
+      ],
+      "feedback": {
+        "correct": "Correcto: origen → ser de.",
+        "wrong": "Usa **son** para origen permanente."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ser de"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex10",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "El museo ___ abierto los domingos por la tarde.",
+      "answer": "está",
+      "accepted": [
+        "re:^está$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estado de apertura (resultado).",
+        "wrong": "Usa **está** para estado operativo."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "estado"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex11",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "short",
+      "promptMd": "¿Cuándo preferimos *ser + participio* frente a *estar + participio*?",
+      "answer": "Cuando queremos voz pasiva con agente (la carta fue enviada por Ana); *estar* describe el resultado sin agente.",
+      "accepted": [
+        "re:voz pasiva",
+        "re:agente"
+      ],
+      "feedback": {
+        "correct": "Exacto: ser + participio forma pasiva con agente expreso/implícito.",
+        "wrong": "Aclara que *ser* construye pasiva con agente."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "pasiva"
+      }
+    },
+    {
+      "id": "a31-ser-estar-advanced-ex12",
+      "lessonId": "a31-ser-estar-advanced",
+      "type": "cloze",
+      "promptMd": "No ___ para bromas después de lo que pasó.",
+      "answer": "estoy",
+      "accepted": [
+        "re:^estoy$"
+      ],
+      "feedback": {
+        "correct": "Correcto: estar para + sustantivo → disposición/ánimo.",
+        "wrong": "Usa **estoy** (estar para)."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "estar para"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "a31-ser-estar-advanced-fc1",
+      "front": "Ser aburrido / estar aburrido",
+      "back": "causa aburrimiento vs sentirse aburrido",
+      "tag": "adjetivos",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc2",
+      "front": "Ser listo / estar listo",
+      "back": "inteligente vs preparado",
+      "tag": "adjetivos",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc3",
+      "front": "Ser atento / estar atento",
+      "back": "cortés vs prestar atención",
+      "tag": "adjetivos",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc4",
+      "front": "Ser + participio",
+      "back": "voz pasiva (fue firmado)",
+      "tag": "pasiva",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc5",
+      "front": "Estar + participio",
+      "back": "estado resultante (está firmado)",
+      "tag": "resultado",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc6",
+      "front": "Ser de / estar en",
+      "back": "origen vs ubicación física",
+      "tag": "localización",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc7",
+      "front": "Estar para / estar por",
+      "back": "ánimo vs intención pendiente",
+      "tag": "perífrasis",
+      "deck": "grammar"
+    },
+    {
+      "id": "a31-ser-estar-advanced-fc8",
+      "front": "Estar de + oficio",
+      "back": "función temporal (está de recepcionista)",
+      "tag": "temporal",
+      "deck": "grammar"
+    }
+  ]
+}
