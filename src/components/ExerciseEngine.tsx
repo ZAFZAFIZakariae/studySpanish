@@ -72,7 +72,10 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
     if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.ready;
-        registration.sync?.register('sync-grades').catch(() => undefined);
+        const syncManager = (registration as ServiceWorkerRegistration & {
+          sync?: { register: (tag: string) => Promise<void> };
+        }).sync;
+        syncManager?.register('sync-grades').catch(() => undefined);
         registration.active?.postMessage({ type: 'SYNC_GRADES' });
       } catch (error) {
         console.warn('Background sync unavailable', error);

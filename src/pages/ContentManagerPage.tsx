@@ -139,125 +139,175 @@ const ContentManagerPage: React.FC = () => {
   };
 
   return (
-    <section className="space-y-5" aria-labelledby="content-manager-heading">
-      <header className="space-y-2">
-        <h1 id="content-manager-heading" className="text-2xl font-bold">
-          Content Manager
+    <section className="space-y-6" aria-labelledby="content-manager-heading">
+      <header className="space-y-3 rounded-xl border bg-white p-5 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-widest text-blue-600">Content pipeline</p>
+        <h1 id="content-manager-heading" className="text-3xl font-bold text-slate-900">
+          Content manager
         </h1>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-slate-600">
           Import vetted JSON content drops, preview the diff, and keep the learner database indexed for offline use.
         </p>
       </header>
 
-      <div className="space-y-3">
-        <label htmlFor="content-upload" className="font-medium">
-          Upload JSON bundle
-        </label>
-        <input
-          id="content-upload"
-          type="file"
-          accept="application/json"
-          onChange={handleFileChange}
-          aria-describedby="content-upload-help"
-        />
-        <p id="content-upload-help" className="text-sm text-gray-600">
-          The file should follow the SeedBundle schema with lessons, exercises, and flashcards arrays.
-        </p>
-        {fileName && (
-          <p className="text-sm" aria-live="polite">
-            Selected file: <strong>{fileName}</strong>
-          </p>
-        )}
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+        <div className="space-y-6">
+          <section className="space-y-3 rounded-xl border bg-white p-4 shadow-sm">
+            <label htmlFor="content-upload" className="font-semibold text-slate-800">
+              Upload JSON bundle
+            </label>
+            <input
+              id="content-upload"
+              type="file"
+              accept="application/json"
+              onChange={handleFileChange}
+              aria-describedby="content-upload-help"
+            />
+            <p id="content-upload-help" className="text-sm text-slate-600">
+              The file should follow the SeedBundle schema with <code>lessons</code>, <code>exercises</code>, and
+              <code>flashcards</code> arrays.
+            </p>
+            {fileName && (
+              <p className="text-sm text-slate-600" aria-live="polite">
+                Selected file: <strong>{fileName}</strong>
+              </p>
+            )}
+          </section>
+
+          {status && (
+            <div
+              role="status"
+              className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900"
+              aria-live="polite"
+            >
+              {status}
+            </div>
+          )}
+
+          {errors.length > 0 && (
+            <div
+              role="alert"
+              className="space-y-2 rounded-lg border border-red-200 bg-red-50 p-4"
+              aria-live="assertive"
+            >
+              <h2 className="text-sm font-semibold text-red-700">Validation errors</h2>
+              <ul className="ml-5 list-disc text-sm text-red-700">
+                {errors.map((message, index) => (
+                  <li key={index}>{message}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {bundle && errors.length === 0 && (
+            <section className="space-y-4 rounded-xl border bg-white p-4 shadow-sm" aria-live="polite">
+              <header className="space-y-1">
+                <h2 className="text-xl font-semibold text-slate-900">Preview diff</h2>
+                <p className="text-sm text-slate-600">
+                  Confirm how many lessons and exercises will be inserted or updated before importing.
+                </p>
+              </header>
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-lg border border-slate-200 p-3" aria-label="Lesson diff summary">
+                  <h3 className="text-sm font-semibold text-slate-800">Lessons</h3>
+                  <p className="text-sm text-slate-600">New: {diffSummary.lessons.new}</p>
+                  <p className="text-sm text-slate-600">Updated: {diffSummary.lessons.updated}</p>
+                  {diff.newLessons.length > 0 && (
+                    <details className="mt-2">
+                      <summary className="cursor-pointer text-sm text-blue-700 underline">View new lessons</summary>
+                      <ul className="ml-5 list-disc text-sm text-slate-600">
+                        {diff.newLessons.map((lesson) => (
+                          <li key={lesson.id}>{lesson.title}</li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                  {diff.updatedLessons.length > 0 && (
+                    <details className="mt-2">
+                      <summary className="cursor-pointer text-sm text-blue-700 underline">View lesson updates</summary>
+                      <ul className="ml-5 list-disc text-sm text-slate-600">
+                        {diff.updatedLessons.map((lesson) => (
+                          <li key={lesson.id}>{lesson.title}</li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                </div>
+                <div className="rounded-lg border border-slate-200 p-3" aria-label="Exercise diff summary">
+                  <h3 className="text-sm font-semibold text-slate-800">Exercises</h3>
+                  <p className="text-sm text-slate-600">New: {diffSummary.exercises.new}</p>
+                  <p className="text-sm text-slate-600">Updated: {diffSummary.exercises.updated}</p>
+                  {diff.newExercises.length > 0 && (
+                    <details className="mt-2">
+                      <summary className="cursor-pointer text-sm text-blue-700 underline">View new exercises</summary>
+                      <ul className="ml-5 list-disc text-sm text-slate-600">
+                        {diff.newExercises.map((exercise) => (
+                          <li key={exercise.id}>{exercise.promptMd.slice(0, 60)}…</li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                  {diff.updatedExercises.length > 0 && (
+                    <details className="mt-2">
+                      <summary className="cursor-pointer text-sm text-blue-700 underline">View exercise updates</summary>
+                      <ul className="ml-5 list-disc text-sm text-slate-600">
+                        {diff.updatedExercises.map((exercise) => (
+                          <li key={exercise.id}>{exercise.promptMd.slice(0, 60)}…</li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleImport}
+                className="inline-flex items-center rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:ring"
+                disabled={importing}
+                aria-label="Import validated content"
+              >
+                {importing ? 'Importing…' : 'Import content'}
+              </button>
+            </section>
+          )}
+        </div>
+
+        <aside className="space-y-4 rounded-xl border bg-white p-4 shadow-sm" aria-label="Import guidance">
+          <section className="space-y-2">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Import checklist</h2>
+            <ol className="space-y-2 text-sm text-slate-600">
+              <li>Download the latest <code>.json</code> bundle from your content pipeline.</li>
+              <li>Upload it here to validate the structure and preview the diff.</li>
+              <li>
+                When the diff looks right, press <span className="font-semibold text-slate-800">Import content</span>{' '}
+                to update the on-device cache.
+              </li>
+            </ol>
+          </section>
+          <section className="space-y-2">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Bundle structure</h2>
+            <ul className="space-y-1 text-sm text-slate-600">
+              <li>
+                <code>lessons[]</code> — Markdown content with <code>level</code>, <code>tags</code>, and optional
+                references.
+              </li>
+              <li>
+                <code>exercises[]</code> — Practice prompts linked by <code>lessonId</code>.
+              </li>
+              <li>
+                <code>flashcards[]</code> — Deck metadata powering the spaced repetition trainer.
+              </li>
+            </ul>
+          </section>
+          <section className="text-sm text-slate-600">
+            <p>
+              After importing, the service worker updates its offline cache so lessons, exercises, and flashcards are
+              available without a connection.
+            </p>
+          </section>
+        </aside>
       </div>
-
-      {status && (
-        <div role="status" className="rounded border border-blue-200 bg-blue-50 p-3" aria-live="polite">
-          {status}
-        </div>
-      )}
-
-      {errors.length > 0 && (
-        <div
-          role="alert"
-          className="rounded border border-red-300 bg-red-50 p-3 space-y-1"
-          aria-live="assertive"
-        >
-          <h2 className="font-semibold">Validation errors</h2>
-          <ul className="list-disc ml-5 text-sm">
-            {errors.map((message, index) => (
-              <li key={index}>{message}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {bundle && errors.length === 0 && (
-        <div className="space-y-4" aria-live="polite">
-          <h2 className="text-xl font-semibold">Preview diff</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="rounded border p-3" aria-label="Lesson diff summary">
-              <h3 className="font-semibold">Lessons</h3>
-              <p className="text-sm">New: {diffSummary.lessons.new}</p>
-              <p className="text-sm">Updated: {diffSummary.lessons.updated}</p>
-              {diff.newLessons.length > 0 && (
-                <details className="mt-2">
-                  <summary className="cursor-pointer text-sm underline">View new lessons</summary>
-                  <ul className="list-disc ml-5 text-sm">
-                    {diff.newLessons.map((lesson) => (
-                      <li key={lesson.id}>{lesson.title}</li>
-                    ))}
-                  </ul>
-                </details>
-              )}
-              {diff.updatedLessons.length > 0 && (
-                <details className="mt-2">
-                  <summary className="cursor-pointer text-sm underline">View lesson updates</summary>
-                  <ul className="list-disc ml-5 text-sm">
-                    {diff.updatedLessons.map((lesson) => (
-                      <li key={lesson.id}>{lesson.title}</li>
-                    ))}
-                  </ul>
-                </details>
-              )}
-            </div>
-            <div className="rounded border p-3" aria-label="Exercise diff summary">
-              <h3 className="font-semibold">Exercises</h3>
-              <p className="text-sm">New: {diffSummary.exercises.new}</p>
-              <p className="text-sm">Updated: {diffSummary.exercises.updated}</p>
-              {diff.newExercises.length > 0 && (
-                <details className="mt-2">
-                  <summary className="cursor-pointer text-sm underline">View new exercises</summary>
-                  <ul className="list-disc ml-5 text-sm">
-                    {diff.newExercises.map((exercise) => (
-                      <li key={exercise.id}>{exercise.promptMd.slice(0, 60)}…</li>
-                    ))}
-                  </ul>
-                </details>
-              )}
-              {diff.updatedExercises.length > 0 && (
-                <details className="mt-2">
-                  <summary className="cursor-pointer text-sm underline">View exercise updates</summary>
-                  <ul className="list-disc ml-5 text-sm">
-                    {diff.updatedExercises.map((exercise) => (
-                      <li key={exercise.id}>{exercise.promptMd.slice(0, 60)}…</li>
-                    ))}
-                  </ul>
-                </details>
-              )}
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={handleImport}
-            className="bg-green-600 text-white px-4 py-2 rounded focus-visible:ring"
-            disabled={importing}
-            aria-label="Import validated content"
-          >
-            {importing ? 'Importing…' : 'Import content'}
-          </button>
-        </div>
-      )}
     </section>
   );
 };

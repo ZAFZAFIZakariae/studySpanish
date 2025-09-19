@@ -37,93 +37,105 @@ export const Dashboard: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <p role="status">Loading analytics…</p>;
+    return (
+      <p role="status" className="rounded-xl border bg-white p-4 text-sm text-slate-600">
+        Loading analytics…
+      </p>
+    );
   }
 
   if (!snapshot) {
-    return <p role="status">No data yet. Complete a few exercises to populate the dashboard.</p>;
+    return (
+      <p role="status" className="rounded-xl border bg-white p-4 text-sm text-slate-600">
+        No data yet. Complete a few exercises to populate the dashboard.
+      </p>
+    );
   }
 
   return (
     <div className="space-y-6" aria-live="polite">
-      <section className="space-y-2" aria-label="Mastery progress">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">Mastery progress</h2>
-          <span className="text-sm text-gray-600">{progress.toFixed(1)}% mastered</span>
+      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Mastery progress">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="text-xl font-semibold text-slate-900">Mastery progress</h2>
+          <span className="text-sm font-semibold text-emerald-700">{progress.toFixed(1)}% mastered</span>
         </div>
         <div
-          className="bg-gray-200 h-4 rounded"
+          className="h-4 rounded-full bg-slate-200"
           role="progressbar"
           aria-valuenow={progress}
           aria-valuemin={0}
           aria-valuemax={100}
         >
-          <div className="bg-green-500 h-4 rounded" style={{ width: `${progress}%` }} />
+          <div className="h-4 rounded-full bg-emerald-500" style={{ width: `${progress}%` }} />
         </div>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-slate-600">
           Average attempts to mastery: {snapshot.averageAttemptsToMastery.toFixed(2)}
         </p>
       </section>
 
-      <section className="space-y-2" aria-label="Time on task by lesson">
-        <h3 className="text-lg font-semibold">Time on task (per lesson)</h3>
+      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Time on task by lesson">
+        <h3 className="text-lg font-semibold text-slate-900">Time on task (per lesson)</h3>
         {snapshot.lessonTimes.length === 0 ? (
-          <p className="text-sm">No lesson time logged yet.</p>
+          <p className="text-sm text-slate-600">No lesson time logged yet.</p>
         ) : (
-          <table className="min-w-full border" aria-label="Lesson time summary">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border px-3 py-2 text-left">Lesson</th>
-                <th className="border px-3 py-2 text-left">Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              {snapshot.lessonTimes.map((lesson) => (
-                <tr key={lesson.lessonId}>
-                  <td className="border px-3 py-1">{lesson.lessonTitle}</td>
-                  <td className="border px-3 py-1">{formatDuration(lesson.totalMs)}</td>
+          <div className="overflow-hidden rounded-lg border border-slate-200">
+            <table className="min-w-full text-sm" aria-label="Lesson time summary">
+              <thead className="bg-slate-50 text-left text-slate-600">
+                <tr>
+                  <th className="px-3 py-2 font-semibold">Lesson</th>
+                  <th className="px-3 py-2 font-semibold">Time</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {snapshot.lessonTimes.map((lesson) => (
+                  <tr key={lesson.lessonId} className="odd:bg-white even:bg-slate-50">
+                    <td className="px-3 py-2 text-slate-700">{lesson.lessonTitle}</td>
+                    <td className="px-3 py-2 text-slate-700">{formatDuration(lesson.totalMs)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </section>
 
-      <section className="space-y-2" aria-label="Weakest tags">
-        <h3 className="text-lg font-semibold">Weakest tags</h3>
+      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Weakest tags">
+        <h3 className="text-lg font-semibold text-slate-900">Weakest tags</h3>
         {snapshot.weakestTags.length === 0 ? (
-          <p className="text-sm">No accuracy data by tag yet.</p>
+          <p className="text-sm text-slate-600">No accuracy data by tag yet.</p>
         ) : (
-          <table className="min-w-full border" aria-label="Tags with lowest accuracy">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border px-3 py-2 text-left">Tag</th>
-                <th className="border px-3 py-2 text-left">Accuracy</th>
-                <th className="border px-3 py-2 text-left">Attempts</th>
-              </tr>
-            </thead>
-            <tbody>
-              {snapshot.weakestTags.map((tag) => (
-                <tr key={tag.tag}>
-                  <td className="border px-3 py-1">{tag.tag}</td>
-                  <td className="border px-3 py-1">{tag.accuracy.toFixed(1)}%</td>
-                  <td className="border px-3 py-1">{tag.total}</td>
+          <div className="overflow-hidden rounded-lg border border-slate-200">
+            <table className="min-w-full text-sm" aria-label="Tags with lowest accuracy">
+              <thead className="bg-slate-50 text-left text-slate-600">
+                <tr>
+                  <th className="px-3 py-2 font-semibold">Tag</th>
+                  <th className="px-3 py-2 font-semibold">Accuracy</th>
+                  <th className="px-3 py-2 font-semibold">Attempts</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {snapshot.weakestTags.map((tag) => (
+                  <tr key={tag.tag} className="odd:bg-white even:bg-slate-50">
+                    <td className="px-3 py-2 text-slate-700">{tag.tag}</td>
+                    <td className="px-3 py-2 text-slate-700">{tag.accuracy.toFixed(1)}%</td>
+                    <td className="px-3 py-2 text-slate-700">{tag.total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </section>
 
-      <section className="space-y-2" aria-label="Recommended exercises">
-        <h3 className="text-lg font-semibold">Study plan (next five exercises)</h3>
+      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Recommended exercises">
+        <h3 className="text-lg font-semibold text-slate-900">Study plan (next five exercises)</h3>
         {snapshot.studyPlan.length === 0 ? (
-          <p className="text-sm">All caught up! Import new lessons or revisit completed content.</p>
+          <p className="text-sm text-slate-600">All caught up! Import new lessons or revisit completed content.</p>
         ) : (
-          <ol className="list-decimal ml-5 space-y-1 text-sm">
+          <ol className="ml-5 list-decimal space-y-1 text-sm text-slate-700">
             {snapshot.studyPlan.map((item) => (
               <li key={item.exerciseId}>
-                <span className="font-medium">{item.lessonTitle}</span> – {item.reason}
+                <span className="font-semibold text-slate-900">{item.lessonTitle}</span> – {item.reason}
               </li>
             ))}
           </ol>
