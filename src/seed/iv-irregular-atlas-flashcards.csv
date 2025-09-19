@@ -1,0 +1,37 @@
+id,front,back,tag,deck
+iv-a-abrir,abrir — formas clave,yo abro; pret. yo abrí; subj. yo abra; participio abierto. Nota: Participio irregular abierto; resto regular.,iv-atlas>a–c,verbs
+iv-a-andar,andar — formas clave,yo ando; pret. yo anduve; subj. yo ande; participio andado. Nota: Pretérito con raíz anduv- y subjuntivo pretérito anduviera.,iv-atlas>a–c,verbs
+iv-b-bendecir,bendecir — formas clave,"yo bendigo; pret. yo bendije; subj. yo bendiga; participio bendecido (verbal) / bendito (adjetivo). Nota: Como *decir*: yo bendigo, pretérito bendije, participio verbal *bendecido* (adjetivo *bendito*).",iv-atlas>a–c,verbs
+iv-c-caber,caber — formas clave,yo quepo; pret. yo cupe; subj. yo quepa; participio cabido. Nota: Yo quepo; pretérito cupe; futuro cabré; subjuntivo presente quepa.,iv-atlas>a–c,verbs
+iv-c-caer,caer — formas clave,"yo caigo; pret. yo caí; subj. yo caiga; participio caído. Nota: Yo caigo; pretérito con y (cayó, cayeron); participio caído.",iv-atlas>a–c,verbs
+iv-c-conducir,conducir — formas clave,yo conduzco; pret. yo conduje; subj. yo conduzca; participio conducido. Nota: Yo conduzco; pretérito conduje con 3ª plural -eron.,iv-atlas>a–c,verbs
+iv-c-cerrar,cerrar — formas clave,yo cierro; pret. yo cerré; subj. yo cierre; participio cerrado. Nota: Cambio vocálico e→ie excepto en nosotros/vosotros.,iv-atlas>a–c,verbs
+iv-c-construir,construir — formas clave,"yo construyo; pret. yo construí; subj. yo construya; participio construido. Nota: Cambio i→y en presente, pretérito y subjuntivo; nosotros conservan i.",iv-atlas>a–c,verbs
+iv-d-decir,decir — formas clave,yo digo; pret. yo dije; subj. yo diga; participio dicho. Nota: Yo digo; pretérito dije; participio dicho.,iv-atlas>d–l,verbs
+iv-d-dormir,dormir — formas clave,yo duermo; pret. yo dormí; subj. yo duerma; participio dormido. Nota: Cambio o→ue/e→u; pretérito 3ª persona durmió/durmieron.,iv-atlas>d–l,verbs
+iv-e-estar,estar — formas clave,yo estoy; pret. yo estuve; subj. yo esté; participio estado. Nota: Yo estoy; pretérito estuve; subjuntivo esté.,iv-atlas>d–l,verbs
+iv-f-freir,freír — formas clave,yo frío; pret. yo freí; subj. yo fría; participio freído / frito. Nota: Acentos en presente (frío); participio doble *freído/frito*.,iv-atlas>d–l,verbs
+iv-h-haber,haber — formas clave,"yo he; pret. yo hube; subj. yo haya; participio habido (raro). Nota: Auxiliar: he, has, ha; pretérito hube; subjuntivo haya.",iv-atlas>d–l,verbs
+iv-h-hacer,hacer — formas clave,yo hago; pret. yo hice; subj. yo haga; participio hecho. Nota: Yo hago; pretérito hice (3ª hizo); futuro haré.,iv-atlas>d–l,verbs
+iv-i-ir,ir — formas clave,"yo voy; pret. yo fui; subj. yo vaya; participio ido. Nota: Suplétivo: presente voy, pretérito fui, subjuntivo vaya.",iv-atlas>d–l,verbs
+iv-j-jugar,jugar — formas clave,yo juego; pret. yo jugué; subj. yo juegue; participio jugado. Nota: Cambio u→ue; pretérito yo jugué con g; subjuntivo juegue.,iv-atlas>d–l,verbs
+iv-l-leer,leer — formas clave,"yo leo; pret. yo leí; subj. yo lea; participio leído. Nota: Pretérito con y (leyó, leyeron); gerundio leyendo.",iv-atlas>d–l,verbs
+iv-m-morir,morir — formas clave,yo muero; pret. yo morí; subj. yo muera; participio muerto. Nota: Cambio o→ue/e→u; participio irregular muerto.,iv-atlas>m–s,verbs
+iv-o-oir,oír — formas clave,"yo oigo; pret. yo oí; subj. yo oiga; participio oído. Nota: Formas con y (oigo, oyes); pretérito oyó, oyeron.",iv-atlas>m–s,verbs
+iv-p-pedir,pedir — formas clave,yo pido; pret. yo pedí; subj. yo pida; participio pedido. Nota: Cambio e→i; pretérito 3ª persona pidió/pidieron.,iv-atlas>m–s,verbs
+iv-p-poder,poder — formas clave,"yo puedo; pret. yo pude; subj. yo pueda; participio podido. Nota: Raíz irregular: presente pued-, pretérito pud-, futuro podr-.",iv-atlas>m–s,verbs
+iv-p-poner,poner — formas clave,yo pongo; pret. yo puse; subj. yo ponga; participio puesto. Nota: Yo pongo; pretérito puse; futuro pondré; participio puesto.,iv-atlas>m–s,verbs
+iv-q-querer,querer — formas clave,yo quiero; pret. yo quise; subj. yo quiera; participio querido. Nota: Cambio e→ie; pretérito quis-; futuro querr-.,iv-atlas>m–s,verbs
+iv-r-reir,reír — formas clave,"yo río; pret. yo reí; subj. yo ría; participio reído. Nota: Acentos en presente (río); pretérito rió, rieron; gerundio riendo.",iv-atlas>m–s,verbs
+iv-s-saber,saber — formas clave,yo sé; pret. yo supe; subj. yo sepa; participio sabido. Nota: Yo sé; pretérito supe; subjuntivo presente sepa.,iv-atlas>m–s,verbs
+iv-s-salir,salir — formas clave,yo salgo; pret. yo salí; subj. yo salga; participio salido. Nota: Yo salgo; futuro saldré; subjuntivo presente salga.,iv-atlas>m–s,verbs
+iv-s-ser,ser — formas clave,"yo soy; pret. yo fui; subj. yo sea; participio sido. Nota: Presente soy, eres; pretérito fui; imperfecto era; subjuntivo sea/fuera.",iv-atlas>m–s,verbs
+iv-t-tener,tener — formas clave,yo tengo; pret. yo tuve; subj. yo tenga; participio tenido. Nota: Yo tengo; pretérito tuve; futuro tendré; subjuntivo tenga.,iv-atlas>t–z,verbs
+iv-t-traer,traer — formas clave,yo traigo; pret. yo traje; subj. yo traiga; participio traído. Nota: Yo traigo; pretérito traje (3ª trajeron); gerundio trayendo.,iv-atlas>t–z,verbs
+iv-t-traducir,traducir — formas clave,yo traduzco; pret. yo traduje; subj. yo traduzca; participio traducido. Nota: Yo traduzco; pretérito traduje (3ª tradujeron); subjuntivo traduzca.,iv-atlas>t–z,verbs
+iv-v-valer,valer — formas clave,yo valgo; pret. yo valí; subj. yo valga; participio valido. Nota: Yo valgo; futuro valdré; subjuntivo valga.,iv-atlas>t–z,verbs
+iv-v-venir,venir — formas clave,yo vengo; pret. yo vine; subj. yo venga; participio venido. Nota: Yo vengo; presente vien-; pretérito vine; futuro vendré.,iv-atlas>t–z,verbs
+iv-v-ver,ver — formas clave,"yo veo; pret. yo vi; subj. yo vea; participio visto. Nota: Yo veo; pretérito vi, viste, vio sin acentos; participio visto.",iv-atlas>t–z,verbs
+iv-v-volver,volver — formas clave,yo vuelvo; pret. yo volví; subj. yo vuelva; participio vuelto. Nota: Cambio o→ue; participio irregular vuelto; futuro volveré.,iv-atlas>t–z,verbs
+iv-y-yacer,yacer — formas clave,yo yazco; pret. yo yací; subj. yo yazca; participio yacido. Nota: Yo yazco (también *yago*); pretérito yací/yació; subjuntivo yazca.,iv-atlas>t–z,verbs
+iv-z-zurcir,zurcir — formas clave,yo zurzo; pret. yo zurcí; subj. yo zurza; participio zurcido. Nota: Yo zurzo; subjuntivo zurza; 2ª pl. imperativo zurcid.,iv-atlas>t–z,verbs
