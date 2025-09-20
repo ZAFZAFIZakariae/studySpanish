@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import remarkGfmPlugin from '../lib/remarkGfmPlugin';
 import { Exercise, Grade } from '../lib/schemas';
 import { gradeAnswer } from '../lib/grader';
 import { db } from '../db';
@@ -177,7 +177,7 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrad
       </div>
       <div className={styles.prompt}>
         <div className="prose">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{exercise.promptMd}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfmPlugin]}>{exercise.promptMd}</ReactMarkdown>
         </div>
       </div>
       {renderInput()}
@@ -219,7 +219,7 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrad
       )}
       {showRubric && exercise.rubric && (
         <div className={styles.rubric} aria-label="Rubric">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{exercise.rubric}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfmPlugin]}>{exercise.rubric}</ReactMarkdown>
         </div>
       )}
     </div>
