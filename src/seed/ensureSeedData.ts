@@ -1,10 +1,6 @@
 import { db } from '../db';
-import {
-  Exercise,
-  Flashcard,
-  Lesson,
-  SeedBundleSchema,
-} from './seedTypes';
+import { Exercise, Flashcard, Lesson } from './seedTypes';
+import { normalizeSeedInput } from './normalizeSeedBundle';
 
 export const SEED_VERSION_KEY = 'seed-version';
 export const DEFAULT_SEED_VERSION = '2024-05-07';
@@ -111,18 +107,16 @@ export async function ensureSeedData(): Promise<SeedResult> {
         console.warn('Skipping seed file due to parse errors', path, error);
         continue;
       }
-      const parsed = SeedBundleSchema.safeParse(data);
-      if (!parsed.success) {
-        console.warn('Skipping seed file due to validation errors', path, parsed.error);
-        continue;
-      }
-      for (const lesson of parsed.data.lessons) {
+      const bundle = normalizeSeedInput(data, {
+        onItemSkipped: (item) => console.warn('Skipping unrecognized item in seed file', path, item),
+      });
+      for (const lesson of bundle.lessons) {
         lessonMap.set(lesson.id, lesson);
       }
-      for (const exercise of parsed.data.exercises) {
+      for (const exercise of bundle.exercises) {
         exerciseMap.set(exercise.id, exercise);
       }
-      for (const flashcard of parsed.data.flashcards) {
+      for (const flashcard of bundle.flashcards) {
         flashcardMap.set(flashcard.id, flashcard);
       }
     } catch (error) {
