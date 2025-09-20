@@ -5,7 +5,14 @@
       "level": "C1",
       "title": "C5 — Future/Conditional Irregular Stems",
       "slug": "c5-future-conditional-irregulars",
-      "tags": ["future","conditional","irregulars","conjugation","c1","grammar"],
+      "tags": [
+        "future",
+        "conditional",
+        "irregulars",
+        "conjugation",
+        "c1",
+        "grammar"
+      ],
       "markdown": "# ⏭️ C5 — Future / Conditional Irregular Stems\n\n**Goal:** Form futuro & condicional with the correct **irregular stems** and shared endings.\n\n---\n\n## 🔧 Endings (regular for all verbs)\n- **Futuro:** *infinitive +* **é, ás, á, emos, éis, án**  \n- **Condicional:** *infinitive +* **ía, ías, ía, íamos, íais, ían**\n\nIrregulars replace the infinitive with a **special stem**, then add the same endings.\n\n---\n\n## 📋 Irregular Stems Table\n| Verb | Irregular Stem | Example Futuro (yo) | Example Condicional (yo) |\n|---|---|---|---|\n| **decir** | **dir-** | **diré** | **diría** |\n| **hacer** | **har-** | **haré** | **haría** |\n| **poder** | **podr-** | **podré** | **podría** |\n| **poner** | **pondr-** | **pondré** | **pondría** |\n| **salir** | **saldr-** | **saldré** | **saldría** |\n| **tener** | **tendr-** | **tendré** | **tendría** |\n| **venir** | **vendr-** | **vendré** | **vendría** |\n| **querer** | **querr-** | **querré** | **querría** |\n| **saber** | **sabr-** | **sabré** | **sabría** |\n| **haber** | **habr-** | **habré** *(**habrá** 3sg impersonal)* | **habría** |\n| **caber** | **cabr-** | **cabré** | **cabría** |\n| **valer** | **valdr-** | **valdré** | **valdría** |\n\n> 📝 **Why:** Future/conditional share endings. Only the **stem** changes → memorize the dozen stems once.\n",
       "references": []
     }
@@ -16,18 +23,50 @@
       "lessonId": "c5-future-conditional-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **tener** in **futuro**.",
-      "answer": ["tendré","tendrás","tendrá","tendremos","tendréis","tendrán"],
-      "feedback": { "correct": "Perfect — tendr- + é, ás, á, emos, éis, án.", "wrong": "Use stem **tendr-** + future endings." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "tener-futuro" }
+      "answer": [
+        "tendré",
+        "tendrás",
+        "tendrá",
+        "tendremos",
+        "tendréis",
+        "tendrán"
+      ],
+      "feedback": {
+        "correct": "Perfect — tendr- + é, ás, á, emos, éis, án.",
+        "wrong": "Use stem **tendr-** + future endings."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "tener-futuro"
+      }
     },
     {
       "id": "c5-futcond-ex2",
       "lessonId": "c5-future-conditional-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **poner** in **condicional**.",
-      "answer": ["pondría","pondrías","pondría","pondríamos","pondríais","pondrían"],
-      "feedback": { "correct": "Good — pondr- + ía, ías…", "wrong": "Use **pondr-** + conditional endings." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "poner-condicional" }
+      "answer": [
+        "pondría",
+        "pondrías",
+        "pondría",
+        "pondríamos",
+        "pondríais",
+        "pondrían"
+      ],
+      "feedback": {
+        "correct": "Good — pondr- + ía, ías…",
+        "wrong": "Use **pondr-** + conditional endings."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "poner-condicional"
+      }
     },
     {
       "id": "c5-futcond-ex3",
@@ -35,9 +74,20 @@
       "type": "cloze",
       "promptMd": "Mañana **(yo, salir)** temprano →",
       "answer": "saldré",
-      "accepted": ["re:^saldré$"],
-      "feedback": { "correct": "✓ saldré — saldr- + é.", "wrong": "Use **saldré** (saldr- + é)." },
-      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "salir-futuro" }
+      "accepted": [
+        "re:^saldré$"
+      ],
+      "feedback": {
+        "correct": "✓ saldré — saldr- + é.",
+        "wrong": "Use **saldré** (saldr- + é)."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "salir-futuro"
+      }
     },
     {
       "id": "c5-futcond-ex4",
@@ -45,29 +95,66 @@
       "type": "cloze",
       "promptMd": "Con más tiempo, **(nosotros, poder)** ayudarte →",
       "answer": "podríamos",
-      "accepted": ["re:^podríamos$"],
-      "feedback": { "correct": "✓ podríamos — condicional de poder.", "wrong": "Use **podríamos** (podr- + íamos)." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "poder-condicional" }
+      "accepted": [
+        "re:^podríamos$"
+      ],
+      "feedback": {
+        "correct": "✓ podríamos — condicional de poder.",
+        "wrong": "Use **podríamos** (podr- + íamos)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "poder-condicional"
+      }
     },
     {
       "id": "c5-futcond-ex5",
       "lessonId": "c5-future-conditional-irregulars",
       "type": "mcq",
       "promptMd": "Choose the correct **futuro (él)** of **venir**:",
-      "options": ["venirá","vendrá","venirá"],
+      "options": [
+        "venirá",
+        "vendrá",
+        "venirá"
+      ],
       "answer": "vendrá",
-      "feedback": { "correct": "Correct — vendr- + á → **vendrá**.", "wrong": "Use **vendrá** (stem vendr-)." },
-      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "venir-futuro" }
+      "feedback": {
+        "correct": "Correct — vendr- + á → **vendrá**.",
+        "wrong": "Use **vendrá** (stem vendr-)."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "venir-futuro"
+      }
     },
     {
       "id": "c5-futcond-ex6",
       "lessonId": "c5-future-conditional-irregulars",
       "type": "mcq",
       "promptMd": "Which is the **stem** of **querer** (future/cond.)?",
-      "options": ["quer-","querr-","queri-"],
+      "options": [
+        "quer-",
+        "querr-",
+        "queri-"
+      ],
       "answer": "querr-",
-      "feedback": { "correct": "Yes — **querr-** → querré, querría.", "wrong": "Use **querr-**." },
-      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "stems-overview" }
+      "feedback": {
+        "correct": "Yes — **querr-** → querré, querría.",
+        "wrong": "Use **querr-**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "stems-overview"
+      }
     },
     {
       "id": "c5-futcond-ex7",
@@ -75,9 +162,20 @@
       "type": "cloze",
       "promptMd": "Creo que **(haber, 3ª sing.)** más tráfico por la tarde →",
       "answer": "habrá",
-      "accepted": ["re:^habrá$"],
-      "feedback": { "correct": "✓ **habrá** — impersonal future of haber.", "wrong": "Use **habrá** (not *haberá*)." },
-      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "haber-impersonal" }
+      "accepted": [
+        "re:^habrá$"
+      ],
+      "feedback": {
+        "correct": "✓ **habrá** — impersonal future of haber.",
+        "wrong": "Use **habrá** (not *haberá*)."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "haber-impersonal"
+      }
     },
     {
       "id": "c5-futcond-ex8",
@@ -85,9 +183,20 @@
       "type": "cloze",
       "promptMd": "¿Qué **(tú, decir)** en la reunión? →",
       "answer": "dirás",
-      "accepted": ["re:^dirás$"],
-      "feedback": { "correct": "✓ dirás — dir- + ás.", "wrong": "Use **dirás** (decir stem dir-)." },
-      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "decir-futuro" }
+      "accepted": [
+        "re:^dirás$"
+      ],
+      "feedback": {
+        "correct": "✓ dirás — dir- + ás.",
+        "wrong": "Use **dirás** (decir stem dir-)."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "decir-futuro"
+      }
     },
     {
       "id": "c5-futcond-ex9",
@@ -95,37 +204,93 @@
       "type": "cloze",
       "promptMd": "En tu lugar, **(yo, saber)** la respuesta →",
       "answer": "sabría",
-      "accepted": ["re:^sabría$"],
-      "feedback": { "correct": "✓ sabría — hypothetical condicional.", "wrong": "Use **sabría** (sabr- + ía)." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "saber-condicional" }
+      "accepted": [
+        "re:^sabría$"
+      ],
+      "feedback": {
+        "correct": "✓ sabría — hypothetical condicional.",
+        "wrong": "Use **sabría** (sabr- + ía)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "saber-condicional"
+      }
     },
     {
       "id": "c5-futcond-ex10",
       "lessonId": "c5-future-conditional-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **hacer** in **futuro**.",
-      "answer": ["haré","harás","hará","haremos","haréis","harán"],
-      "feedback": { "correct": "Great — har- + future endings.", "wrong": "Use **har-** + é, ás, á…" },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "hacer-futuro" }
+      "answer": [
+        "haré",
+        "harás",
+        "hará",
+        "haremos",
+        "haréis",
+        "harán"
+      ],
+      "feedback": {
+        "correct": "Great — har- + future endings.",
+        "wrong": "Use **har-** + é, ás, á…"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "hacer-futuro"
+      }
     },
     {
       "id": "c5-futcond-ex11",
       "lessonId": "c5-future-conditional-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **querer** in **condicional**.",
-      "answer": ["querría","querrías","querría","querríamos","querríais","querrían"],
-      "feedback": { "correct": "Nice — querr- + conditional endings.", "wrong": "Use **querr-** + ía, ías…" },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "querer-condicional" }
+      "answer": [
+        "querría",
+        "querrías",
+        "querría",
+        "querríamos",
+        "querríais",
+        "querrían"
+      ],
+      "feedback": {
+        "correct": "Nice — querr- + conditional endings.",
+        "wrong": "Use **querr-** + ía, ías…"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "querer-condicional"
+      }
     },
     {
       "id": "c5-futcond-ex12",
       "lessonId": "c5-future-conditional-irregulars",
       "type": "mcq",
       "promptMd": "Choose the correct **yo condicional** of **caber**:",
-      "options": ["cabería","cabría","cabraría"],
+      "options": [
+        "cabería",
+        "cabría",
+        "cabraría"
+      ],
       "answer": "cabría",
-      "feedback": { "correct": "Correct — **cabr-** + ía.", "wrong": "Use **cabría**." },
-      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "caber-condicional" }
+      "feedback": {
+        "correct": "Correct — **cabr-** + ía.",
+        "wrong": "Use **cabría**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "caber-condicional"
+      }
     },
     {
       "id": "c5-futcond-ex13",
@@ -133,9 +298,20 @@
       "type": "cloze",
       "promptMd": "El billete **(valer, futuro 3sg)** más mañana →",
       "answer": "valdrá",
-      "accepted": ["re:^valdrá$"],
-      "feedback": { "correct": "✓ valdrá — valdr- + á.", "wrong": "Use **valdrá**." },
-      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "valer-futuro" }
+      "accepted": [
+        "re:^valdrá$"
+      ],
+      "feedback": {
+        "correct": "✓ valdrá — valdr- + á.",
+        "wrong": "Use **valdrá**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "valer-futuro"
+      }
     },
     {
       "id": "c5-futcond-ex14",
@@ -143,9 +319,21 @@
       "type": "translate",
       "promptMd": "Translate: *They would come earlier.* (→ **venir**)",
       "answer": "Vendrían antes",
-      "accepted": ["re:^vendrían antes\\.?$"],
-      "feedback": { "correct": "Yes — **vendrían** (condicional).", "wrong": "Use **vendrían** antes." },
-      "meta": { "difficulty": "A2", "skills": ["read","write"], "topic": "venir-condicional" }
+      "accepted": [
+        "re:^vendrían antes\\.?$"
+      ],
+      "feedback": {
+        "correct": "Yes — **vendrían** (condicional).",
+        "wrong": "Use **vendrían** antes."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "venir-condicional"
+      }
     },
     {
       "id": "c5-futcond-ex15",
@@ -153,26 +341,128 @@
       "type": "translate",
       "promptMd": "Translate: *I will say the truth.* (→ **decir**)",
       "answer": "Diré la verdad",
-      "accepted": ["re:^diré la verdad\\.?$"],
-      "feedback": { "correct": "Correct — **diré**.", "wrong": "Use **diré la verdad**." },
-      "meta": { "difficulty": "A2", "skills": ["read","write"], "topic": "decir-futuro" }
+      "accepted": [
+        "re:^diré la verdad\\.?$"
+      ],
+      "feedback": {
+        "correct": "Correct — **diré**.",
+        "wrong": "Use **diré la verdad**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "decir-futuro"
+      }
     }
   ],
   "flashcards": [
-    { "id": "c5-futcond-fc1", "front": "decir — stem", "back": "dir- → diré / diría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc2", "front": "hacer — stem", "back": "har- → haré / haría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc3", "front": "poder — stem", "back": "podr- → podré / podría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc4", "front": "poner — stem", "back": "pondr- → pondré / pondría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc5", "front": "salir — stem", "back": "saldr- → saldré / saldría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc6", "front": "tener — stem", "back": "tendr- → tendré / tendría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc7", "front": "venir — stem", "back": "vendr- → vendré / vendría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc8", "front": "querer — stem", "back": "querr- → querré / querría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc9", "front": "saber — stem", "back": "sabr- → sabré / sabría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc10", "front": "haber — stem", "back": "habr- → habré / habría (impersonal habrá)", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc11", "front": "caber — stem", "back": "cabr- → cabré / cabría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc12", "front": "valer — stem", "back": "valdr- → valdré / valdría", "tag": "stems", "deck": "grammar" },
-    { "id": "c5-futcond-fc13", "front": "Future endings", "back": "é, ás, á, emos, éis, án", "tag": "endings", "deck": "grammar" },
-    { "id": "c5-futcond-fc14", "front": "Conditional endings", "back": "ía, ías, ía, íamos, íais, ían", "tag": "endings", "deck": "grammar" },
-    { "id": "c5-futcond-fc15", "front": "Rule", "back": "Irregular **stem** + regular endings (no stem changes in endings)", "tag": "rule", "deck": "grammar" }
+    {
+      "id": "c5-futcond-fc1",
+      "front": "decir — stem",
+      "back": "dir- → diré / diría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc2",
+      "front": "hacer — stem",
+      "back": "har- → haré / haría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc3",
+      "front": "poder — stem",
+      "back": "podr- → podré / podría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc4",
+      "front": "poner — stem",
+      "back": "pondr- → pondré / pondría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc5",
+      "front": "salir — stem",
+      "back": "saldr- → saldré / saldría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc6",
+      "front": "tener — stem",
+      "back": "tendr- → tendré / tendría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc7",
+      "front": "venir — stem",
+      "back": "vendr- → vendré / vendría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc8",
+      "front": "querer — stem",
+      "back": "querr- → querré / querría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc9",
+      "front": "saber — stem",
+      "back": "sabr- → sabré / sabría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc10",
+      "front": "haber — stem",
+      "back": "habr- → habré / habría (impersonal habrá)",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc11",
+      "front": "caber — stem",
+      "back": "cabr- → cabré / cabría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc12",
+      "front": "valer — stem",
+      "back": "valdr- → valdré / valdría",
+      "tag": "stems",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc13",
+      "front": "Future endings",
+      "back": "é, ás, á, emos, éis, án",
+      "tag": "endings",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc14",
+      "front": "Conditional endings",
+      "back": "ía, ías, ía, íamos, íais, ían",
+      "tag": "endings",
+      "deck": "grammar"
+    },
+    {
+      "id": "c5-futcond-fc15",
+      "front": "Rule",
+      "back": "Irregular **stem** + regular endings (no stem changes in endings)",
+      "tag": "rule",
+      "deck": "grammar"
+    }
   ]
 }

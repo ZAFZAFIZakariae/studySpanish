@@ -5,7 +5,10 @@
       "level": "B1",
       "title": "Placement Diagnostic",
       "slug": "placement-diagnostic",
-      "tags": ["placement","diagnostic"],
+      "tags": [
+        "placement",
+        "diagnostic"
+      ],
       "markdown": "# Placement Diagnostic\\nIntro + instructions...",
       "references": []
     }
@@ -17,13 +20,23 @@
       "type": "cloze",
       "promptMd": "Complete with the correct present tense:\\n\\n**Yo ____ (estudiar) español en la universidad.**",
       "answer": "estudio",
-      "accepted": ["re:^estudio$"],
+      "accepted": [
+        "re:^estudio$"
+      ],
       "feedback": {
         "correct": "Yes — regular -ar verb in present yo.",
         "wrong": "It's the yo form: estudio.",
-        "hints": ["Present tense -ar: o, as, a, amos, áis, an"]
+        "hints": [
+          "Present tense -ar: o, as, a, amos, áis, an"
+        ]
       },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Present tense" }
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Present tense"
+      }
     },
     {
       "id": "placement-ex2",
@@ -31,27 +44,51 @@
       "type": "translate",
       "promptMd": "Translate:\\n\\n**Aunque llueva, iremos.**",
       "answer": "Even if it rains, we will go",
-      "accepted": ["re:even if it rains.*we will go"],
+      "accepted": [
+        "re:even if it rains.*we will go"
+      ],
       "feedback": {
         "correct": "Good — notice subjunctive llueva.",
         "wrong": "Focus on 'aunque' + subjunctive = 'even if ...'.",
-        "hints": ["llueva = it rains (subjunctive)"]
+        "hints": [
+          "llueva = it rains (subjunctive)"
+        ]
       },
-      "meta": { "difficulty": "C1", "skills": ["read","write"], "topic": "Subjunctive nuance" }
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Subjunctive nuance"
+      }
     },
     {
       "id": "placement-ex3",
       "lessonId": "placement-diagnostic",
       "type": "mcq",
       "promptMd": "Which word best completes:\\n\\n**Se lo di ___ mi amiga.**",
-      "options": ["por", "para", "a", "de"],
+      "options": [
+        "por",
+        "para",
+        "a",
+        "de"
+      ],
       "answer": "a",
       "feedback": {
         "correct": "Correct — personal a marks the indirect object.",
         "wrong": "It's the personal 'a'.",
-        "hints": ["Think: I gave it **to** my friend."]
+        "hints": [
+          "Think: I gave it **to** my friend."
+        ]
       },
-      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Personal a" }
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Personal a"
+      }
     },
     {
       "id": "placement-ex4",
@@ -59,20 +96,60 @@
       "type": "short",
       "promptMd": "Write a connector suitable for formal writing that means **'however'**.",
       "answer": "sin embargo",
-      "accepted": ["re:^sin\\s+embargo$"],
+      "accepted": [
+        "re:^sin\\s+embargo$"
+      ],
       "feedback": {
         "correct": "Yes — sin embargo is the standard connector.",
         "wrong": "Hint: two words, often at sentence start.",
-        "hints": ["Starts with 'sin'."]
+        "hints": [
+          "Starts with 'sin'."
+        ]
       },
-      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Connectors" }
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Connectors"
+      }
     }
   ],
   "flashcards": [
-    { "id": "placement-fc1","front": "B1 scope","back": "Basic tenses; daily topics; short paragraphs","tag": "placement","deck": "grammar" },
-    { "id": "placement-fc2","front": "C1 scope","back": "Full tense range; abstract topics; fluent complex speech","tag": "placement","deck": "grammar" },
-    { "id": "placement-fc3","front": "Present yo -ar","back": "Add -o → estudio","tag": "placement","deck": "verbs" },
-    { "id": "placement-fc4","front": "Subjunctive use","back": "Used for doubt, wishes, conditions (e.g. aunque llueva)","tag": "placement","deck": "grammar" },
-    { "id": "placement-fc5","front": "Connector: however","back": "sin embargo","tag": "placement","deck": "vocab" }
+    {
+      "id": "placement-fc1",
+      "front": "B1 scope",
+      "back": "Basic tenses; daily topics; short paragraphs",
+      "tag": "placement",
+      "deck": "grammar"
+    },
+    {
+      "id": "placement-fc2",
+      "front": "C1 scope",
+      "back": "Full tense range; abstract topics; fluent complex speech",
+      "tag": "placement",
+      "deck": "grammar"
+    },
+    {
+      "id": "placement-fc3",
+      "front": "Present yo -ar",
+      "back": "Add -o → estudio",
+      "tag": "placement",
+      "deck": "verbs"
+    },
+    {
+      "id": "placement-fc4",
+      "front": "Subjunctive use",
+      "back": "Used for doubt, wishes, conditions (e.g. aunque llueva)",
+      "tag": "placement",
+      "deck": "grammar"
+    },
+    {
+      "id": "placement-fc5",
+      "front": "Connector: however",
+      "back": "sin embargo",
+      "tag": "placement",
+      "deck": "vocab"
+    }
   ]
 }

@@ -5,11 +5,13 @@
       "level": "B1",
       "title": "B12 — Imperatives + pronoun placement",
       "slug": "b1-imperatives",
-      "tags": ["imperatives","commands","grammar","b1"],
-      "markdown": "# 📢 B12 — Imperatives + Pronoun Placement (B1)\n\n**Goal:** Give commands and instructions with correct pronoun use.**\n\n---\n\n## 📌 Affirmative Imperatives\n\n| Person | -AR | -ER/-IR |\n|---|---|---|\n| tú | **-a** | **-e** |\n| vosotros | **-ad** | **-ed/-id** |\n| usted | **-e** | **-a** |\n| ustedes | **-en** | **-an** |\n\n**Examples**\n- *Habla (tú)* — Speak  \n- *Comed (vosotros)* — Eat  \n- *Escriba (usted)* — Write\n\n**Irregular tú affirmatives**  
-ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (poner), sé (ser)\n\n---\n\n## 📌 Negative Imperatives\n\nUse **present subjunctive forms**\n- *No hables (tú), no habléis (vosotros), no hable (usted)*\n- *No comas, no comáis, no coma…*\n\n---\n\n## ⚡ Pronoun Placement\n- **Affirmative** → after & attached: *dímelo*, *levántate*\n- **Negative** → before: *no me lo digas*, *no te levantes*\n\n**Accent**: add written accent if adding 2 pronouns (e.g. *dímelo*, *cómetelo*)\n\n---\n\n> 📝 Summary:  
-> Affirmative: verb + pronoun(s) (attach)  
-> Negative: no + pronoun(s) + verb (before)\n",
+      "tags": [
+        "imperatives",
+        "commands",
+        "grammar",
+        "b1"
+      ],
+      "markdown": "# 📢 B12 — Imperatives + Pronoun Placement (B1)\n\n**Goal:** Give commands and instructions with correct pronoun use.**\n\n---\n\n## 📌 Affirmative Imperatives\n\n| Person | -AR | -ER/-IR |\n|---|---|---|\n| tú | **-a** | **-e** |\n| vosotros | **-ad** | **-ed/-id** |\n| usted | **-e** | **-a** |\n| ustedes | **-en** | **-an** |\n\n**Examples**\n- *Habla (tú)* — Speak  \n- *Comed (vosotros)* — Eat  \n- *Escriba (usted)* — Write\n\n**Irregular tú affirmatives**  \nven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (poner), sé (ser)\n\n---\n\n## 📌 Negative Imperatives\n\nUse **present subjunctive forms**\n- *No hables (tú), no habléis (vosotros), no hable (usted)*\n- *No comas, no comáis, no coma…*\n\n---\n\n## ⚡ Pronoun Placement\n- **Affirmative** → after & attached: *dímelo*, *levántate*\n- **Negative** → before: *no me lo digas*, *no te levantes*\n\n**Accent**: add written accent if adding 2 pronouns (e.g. *dímelo*, *cómetelo*)\n\n---\n\n> 📝 Summary:  \n> Affirmative: verb + pronoun(s) (attach)  \n> Negative: no + pronoun(s) + verb (before)\n",
       "references": []
     }
   ],
@@ -20,9 +22,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(tú) ___ (hablar)** con ella.",
       "answer": "habla",
-      "accepted": ["re:^habla$"],
-      "feedback": { "correct": "Correct — tú affirmative.", "wrong": "Use -a." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Affirmative" }
+      "accepted": [
+        "re:^habla$"
+      ],
+      "feedback": {
+        "correct": "Correct — tú affirmative.",
+        "wrong": "Use -a."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Affirmative"
+      }
     },
     {
       "id": "b1-imperatives-ex2",
@@ -30,9 +43,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(vosotros) ___ (comer)** ahora.",
       "answer": "comed",
-      "accepted": ["re:^comed$"],
-      "feedback": { "correct": "Correct — vosotros affirmative.", "wrong": "Use -ed." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Affirmative" }
+      "accepted": [
+        "re:^comed$"
+      ],
+      "feedback": {
+        "correct": "Correct — vosotros affirmative.",
+        "wrong": "Use -ed."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Affirmative"
+      }
     },
     {
       "id": "b1-imperatives-ex3",
@@ -40,9 +64,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(usted) ___ (escribir)** su nombre.",
       "answer": "escriba",
-      "accepted": ["re:^escriba$"],
-      "feedback": { "correct": "Correct — usted affirmative.", "wrong": "Use -a." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Affirmative" }
+      "accepted": [
+        "re:^escriba$"
+      ],
+      "feedback": {
+        "correct": "Correct — usted affirmative.",
+        "wrong": "Use -a."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Affirmative"
+      }
     },
     {
       "id": "b1-imperatives-ex4",
@@ -50,19 +85,43 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(ustedes) ___ (leer)** este texto.",
       "answer": "lean",
-      "accepted": ["re:^lean$"],
-      "feedback": { "correct": "Correct — ustedes affirmative.", "wrong": "Use -an." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Affirmative" }
+      "accepted": [
+        "re:^lean$"
+      ],
+      "feedback": {
+        "correct": "Correct — ustedes affirmative.",
+        "wrong": "Use -an."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Affirmative"
+      }
     },
     {
       "id": "b1-imperatives-ex5",
       "lessonId": "b1-imperatives",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["Hablas con ella.","Habla con ella.","Hablad con ella."],
+      "options": [
+        "Hablas con ella.",
+        "Habla con ella.",
+        "Hablad con ella."
+      ],
       "answer": "Habla con ella.",
-      "feedback": { "correct": "Correct — tú imperative.", "wrong": "Use habla." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Affirmative" }
+      "feedback": {
+        "correct": "Correct — tú imperative.",
+        "wrong": "Use habla."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Affirmative"
+      }
     },
     {
       "id": "b1-imperatives-ex6",
@@ -70,9 +129,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(tú) no ___ (hablar)** en clase.",
       "answer": "hables",
-      "accepted": ["re:^hables$"],
-      "feedback": { "correct": "Correct — negative uses subjunctive.", "wrong": "Use no + subjunctive." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Negative" }
+      "accepted": [
+        "re:^hables$"
+      ],
+      "feedback": {
+        "correct": "Correct — negative uses subjunctive.",
+        "wrong": "Use no + subjunctive."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Negative"
+      }
     },
     {
       "id": "b1-imperatives-ex7",
@@ -80,9 +150,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(vosotros) no ___ (comer)** aquí.",
       "answer": "comáis",
-      "accepted": ["re:^comáis$"],
-      "feedback": { "correct": "Correct — negative subjunctive.", "wrong": "Use no + subjunctive." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Negative" }
+      "accepted": [
+        "re:^comáis$"
+      ],
+      "feedback": {
+        "correct": "Correct — negative subjunctive.",
+        "wrong": "Use no + subjunctive."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Negative"
+      }
     },
     {
       "id": "b1-imperatives-ex8",
@@ -90,9 +171,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(usted) no ___ (entrar)** sin permiso.",
       "answer": "entre",
-      "accepted": ["re:^entre$"],
-      "feedback": { "correct": "Correct — negative subjunctive.", "wrong": "Use entre." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Negative" }
+      "accepted": [
+        "re:^entre$"
+      ],
+      "feedback": {
+        "correct": "Correct — negative subjunctive.",
+        "wrong": "Use entre."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Negative"
+      }
     },
     {
       "id": "b1-imperatives-ex9",
@@ -100,9 +192,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(tú) ___ (levantarse)** temprano.",
       "answer": "levántate",
-      "accepted": ["re:^levántate$"],
-      "feedback": { "correct": "Correct — attach pronoun.", "wrong": "Pronoun goes after in affirmative." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:^levántate$"
+      ],
+      "feedback": {
+        "correct": "Correct — attach pronoun.",
+        "wrong": "Pronoun goes after in affirmative."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex10",
@@ -110,9 +213,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(vosotros) ___ (sentarse)** aquí.",
       "answer": "sentaos",
-      "accepted": ["re:^sentaos$"],
-      "feedback": { "correct": "Correct — reflexive vosotros form.", "wrong": "Drop final -d + os." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:^sentaos$"
+      ],
+      "feedback": {
+        "correct": "Correct — reflexive vosotros form.",
+        "wrong": "Drop final -d + os."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex11",
@@ -120,9 +234,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(tú) ___ (decirme)** la verdad.",
       "answer": "dímela",
-      "accepted": ["re:^dímela$"],
-      "feedback": { "correct": "Correct — attach pronouns + accent.", "wrong": "Pronouns after in affirmative." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:^dímela$"
+      ],
+      "feedback": {
+        "correct": "Correct — attach pronouns + accent.",
+        "wrong": "Pronouns after in affirmative."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex12",
@@ -130,9 +255,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(usted) ___ (traérmelo)** ahora.",
       "answer": "tráigamelo",
-      "accepted": ["re:^tráigamelo$"],
-      "feedback": { "correct": "Correct — attach pronouns.", "wrong": "Pronouns after affirmative." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:^tráigamelo$"
+      ],
+      "feedback": {
+        "correct": "Correct — attach pronouns.",
+        "wrong": "Pronouns after affirmative."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex13",
@@ -140,9 +276,20 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(tú) no ___ (levantarse)** tarde.",
       "answer": "te levantes",
-      "accepted": ["re:^te levantes$"],
-      "feedback": { "correct": "Correct — pronoun before negative.", "wrong": "No + pronoun + verb." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:^te levantes$"
+      ],
+      "feedback": {
+        "correct": "Correct — pronoun before negative.",
+        "wrong": "No + pronoun + verb."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex14",
@@ -150,29 +297,66 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "cloze",
       "promptMd": "**(vosotros) no ___ (irse)** todavía.",
       "answer": "os vayáis",
-      "accepted": ["re:^os vayáis$"],
-      "feedback": { "correct": "Correct — pronoun before verb.", "wrong": "Negative + pronoun + subj." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:^os vayáis$"
+      ],
+      "feedback": {
+        "correct": "Correct — pronoun before verb.",
+        "wrong": "Negative + pronoun + subj."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex15",
       "lessonId": "b1-imperatives",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["Levántate ahora.","Te levanta ahora.","Levanta te ahora."],
+      "options": [
+        "Levántate ahora.",
+        "Te levanta ahora.",
+        "Levanta te ahora."
+      ],
       "answer": "Levántate ahora.",
-      "feedback": { "correct": "Correct — pronoun attached.", "wrong": "Attach pronoun at end." },
-      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Pronouns" }
+      "feedback": {
+        "correct": "Correct — pronoun attached.",
+        "wrong": "Attach pronoun at end."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex16",
       "lessonId": "b1-imperatives",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["No lo digas.","Digas lo.","Digaslo."],
+      "options": [
+        "No lo digas.",
+        "Digas lo.",
+        "Digaslo."
+      ],
       "answer": "No lo digas.",
-      "feedback": { "correct": "Correct — pronoun before in negative.", "wrong": "Negative → pronoun before." },
-      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Pronouns" }
+      "feedback": {
+        "correct": "Correct — pronoun before in negative.",
+        "wrong": "Negative → pronoun before."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex17",
@@ -180,9 +364,21 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "translate",
       "promptMd": "Translate: *Haz la tarea.*",
       "answer": "Do the homework",
-      "accepted": ["re:do the homework"],
-      "feedback": { "correct": "Correct — hacer → haz.", "wrong": "Use do." },
-      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Irregulars" }
+      "accepted": [
+        "re:do the homework"
+      ],
+      "feedback": {
+        "correct": "Correct — hacer → haz.",
+        "wrong": "Use do."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
     },
     {
       "id": "b1-imperatives-ex18",
@@ -190,9 +386,21 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "translate",
       "promptMd": "Translate: *Pon la mesa.*",
       "answer": "Set the table",
-      "accepted": ["re:set the table"],
-      "feedback": { "correct": "Correct — poner → pon.", "wrong": "Use set." },
-      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Irregulars" }
+      "accepted": [
+        "re:set the table"
+      ],
+      "feedback": {
+        "correct": "Correct — poner → pon.",
+        "wrong": "Use set."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
     },
     {
       "id": "b1-imperatives-ex19",
@@ -200,9 +408,21 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "translate",
       "promptMd": "Translate: *No me lo digas.*",
       "answer": "Don't tell me it",
-      "accepted": ["re:don't tell me"],
-      "feedback": { "correct": "Correct — pronoun before.", "wrong": "Use don't." },
-      "meta": { "difficulty": "B1","skills": ["read","write"],"topic": "Pronouns" }
+      "accepted": [
+        "re:don't tell me"
+      ],
+      "feedback": {
+        "correct": "Correct — pronoun before.",
+        "wrong": "Use don't."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Pronouns"
+      }
     },
     {
       "id": "b1-imperatives-ex20",
@@ -210,26 +430,127 @@ ven (venir), di (decir), sal (salir), haz (hacer), ten (tener), ve (ir), pon (po
       "type": "short",
       "promptMd": "Where do pronouns go in affirmative imperatives?",
       "answer": "after the verb",
-      "accepted": ["re:after"],
-      "feedback": { "correct": "Correct — attach them.", "wrong": "Affirmative → attach." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Pronouns" }
+      "accepted": [
+        "re:after"
+      ],
+      "feedback": {
+        "correct": "Correct — attach them.",
+        "wrong": "Affirmative → attach."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Pronouns"
+      }
     }
   ],
   "flashcards": [
-    { "id": "b1-imperatives-fc1","front":"tú -ar","back":"-a","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc2","front":"tú -er/-ir","back":"-e","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc3","front":"vosotros -ar","back":"-ad","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc4","front":"vosotros -er/-ir","back":"-ed/-id","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc5","front":"usted -ar","back":"-e","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc6","front":"usted -er/-ir","back":"-a","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc7","front":"negative tú","back":"no + subjunctive","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc8","front":"pronoun position (affirmative)","back":"after + attached","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc9","front":"pronoun position (negative)","back":"before the verb","tag":"imperatives","deck":"grammar" },
-    { "id": "b1-imperatives-fc10","front":"ven, di, sal, haz, ten, ve, pon, sé","back":"irregular tú affirmatives","tag":"imperatives","deck":"vocab" },
-    { "id": "b1-imperatives-fc11","front":"levántate","back":"get up (tú)","tag":"imperatives","deck":"vocab" },
-    { "id": "b1-imperatives-fc12","front":"sentaos","back":"sit down (vosotros)","tag":"imperatives","deck":"vocab" },
-    { "id": "b1-imperatives-fc13","front":"dímelo","back":"tell me it","tag":"imperatives","deck":"vocab" },
-    { "id": "b1-imperatives-fc14","front":"no me lo digas","back":"don't tell me it","tag":"imperatives","deck":"vocab" },
-    { "id": "b1-imperatives-fc15","front":"accent rule","back":"add accent if 2 pronouns attached","tag":"imperatives","deck":"grammar" }
+    {
+      "id": "b1-imperatives-fc1",
+      "front": "tú -ar",
+      "back": "-a",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc2",
+      "front": "tú -er/-ir",
+      "back": "-e",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc3",
+      "front": "vosotros -ar",
+      "back": "-ad",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc4",
+      "front": "vosotros -er/-ir",
+      "back": "-ed/-id",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc5",
+      "front": "usted -ar",
+      "back": "-e",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc6",
+      "front": "usted -er/-ir",
+      "back": "-a",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc7",
+      "front": "negative tú",
+      "back": "no + subjunctive",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc8",
+      "front": "pronoun position (affirmative)",
+      "back": "after + attached",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc9",
+      "front": "pronoun position (negative)",
+      "back": "before the verb",
+      "tag": "imperatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-imperatives-fc10",
+      "front": "ven, di, sal, haz, ten, ve, pon, sé",
+      "back": "irregular tú affirmatives",
+      "tag": "imperatives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-imperatives-fc11",
+      "front": "levántate",
+      "back": "get up (tú)",
+      "tag": "imperatives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-imperatives-fc12",
+      "front": "sentaos",
+      "back": "sit down (vosotros)",
+      "tag": "imperatives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-imperatives-fc13",
+      "front": "dímelo",
+      "back": "tell me it",
+      "tag": "imperatives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-imperatives-fc14",
+      "front": "no me lo digas",
+      "back": "don't tell me it",
+      "tag": "imperatives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-imperatives-fc15",
+      "front": "accent rule",
+      "back": "add accent if 2 pronouns attached",
+      "tag": "imperatives",
+      "deck": "grammar"
+    }
   ]
 }

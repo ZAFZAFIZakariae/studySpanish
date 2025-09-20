@@ -5,7 +5,12 @@
       "level": "B1",
       "title": "B10 — Phonology basics: vowels, consonants and stress",
       "slug": "b1-phonology-basics",
-      "tags": ["phonology", "pronunciation", "listening", "b1"],
+      "tags": [
+        "phonology",
+        "pronunciation",
+        "listening",
+        "b1"
+      ],
       "markdown": "# 🎧 B10 — Spanish Phonology Basics\n\n**Goal:** Tune your ear to the core pronunciation rules that make Spanish sound fluid and consistent.**\n\n---\n\n## 1. Five steady vowels\nSpanish vowels are short and pure — no diphthongs inside the vowel itself.\n- **a e i o u** always sound the same.\n- No schwa /ə/; write one vowel, pronounce one vowel.\n\n## 2. Consonant pairs to watch\n- **c** → /k/ before *a, o, u*; /s/ (or /θ/ in Spain) before *e, i*.\n- **g** → hard /g/ before *a, o, u*; /x/ (like harsh *h*) before *e, i*.\n- **j** is always /x/.\n- **b** and **v** share the same sound, a soft bilabial stop.\n- **ll** and **y** merge in most dialects → /ʝ/ or /ʒ/ (Argentina).\n\n## 3. Stress rhythm\n- Words ending in **vowel, n, s** stress the **penultimate** syllable.\n- Words ending in other consonants stress the **final** syllable.\n- Break the rule? Mark it with an **accent**: *café, inglés, médico*.\n\n## 4. Syllable timing\nSpanish is syllable-timed: every syllable has similar length. Link vowels smoothly when words touch: *lo-he-vi-do* → *lohevido*.\n\n---\n\n> 📝 **Summary:** Keep vowels pure, follow consonant context rules, respect stress defaults and accent marks, and let syllables flow evenly for natural Spanish.",
       "references": []
     }
@@ -17,79 +22,188 @@
       "type": "cloze",
       "promptMd": "Write the five Spanish vowel letters in order.",
       "answer": "a e i o u",
-      "accepted": ["re:^a\\s*e\\s*i\\s*o\\s*u$"],
-      "feedback": { "correct": "Correct — five pure vowels.", "wrong": "Remember: a, e, i, o, u." },
-      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Vowels" }
+      "accepted": [
+        "re:^a\\s*e\\s*i\\s*o\\s*u$"
+      ],
+      "feedback": {
+        "correct": "Correct — five pure vowels.",
+        "wrong": "Remember: a, e, i, o, u."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Vowels"
+      }
     },
     {
       "id": "b1-phonology-basics-ex2",
       "lessonId": "b1-phonology-basics",
       "type": "cloze",
       "promptMd": "**c** sounds like /k/ before ___, ___, ___.",
-      "answer": ["a", "o", "u"],
-      "accepted": ["re:^a$", "re:^o$", "re:^u$"],
-      "feedback": { "correct": "Correct — /k/ with back vowels.", "wrong": "Use a, o, u for /k/." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Consonants" }
+      "answer": [
+        "a",
+        "o",
+        "u"
+      ],
+      "accepted": [
+        "re:^a$",
+        "re:^o$",
+        "re:^u$"
+      ],
+      "feedback": {
+        "correct": "Correct — /k/ with back vowels.",
+        "wrong": "Use a, o, u for /k/."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Consonants"
+      }
     },
     {
       "id": "b1-phonology-basics-ex3",
       "lessonId": "b1-phonology-basics",
       "type": "cloze",
       "promptMd": "**c** sounds like /s/ (or /θ/) before ___ and ___",
-      "answer": ["e", "i"],
-      "accepted": ["re:^e$", "re:^i$"],
-      "feedback": { "correct": "Correct — front vowels trigger /s/ or /θ/.", "wrong": "Use e, i." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Consonants" }
+      "answer": [
+        "e",
+        "i"
+      ],
+      "accepted": [
+        "re:^e$",
+        "re:^i$"
+      ],
+      "feedback": {
+        "correct": "Correct — front vowels trigger /s/ or /θ/.",
+        "wrong": "Use e, i."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Consonants"
+      }
     },
     {
       "id": "b1-phonology-basics-ex4",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "How do you pronounce **g** in *gente*?",
-      "options": ["/g/ like go", "/x/ like harsh h", "/s/ like sun"],
+      "options": [
+        "/g/ like go",
+        "/x/ like harsh h",
+        "/s/ like sun"
+      ],
       "answer": "/x/ like harsh h",
-      "feedback": { "correct": "Correct — g + e/i gives /x/.", "wrong": "Remember g + e/i sounds like Spanish j." },
-      "meta": { "difficulty": "B1", "skills": ["listen"], "topic": "Consonants" }
+      "feedback": {
+        "correct": "Correct — g + e/i gives /x/.",
+        "wrong": "Remember g + e/i sounds like Spanish j."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "listen"
+        ],
+        "topic": "Consonants"
+      }
     },
     {
       "id": "b1-phonology-basics-ex5",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "Where is the stress in **computadora**?",
-      "options": ["com", "pu", "ta", "do"],
+      "options": [
+        "com",
+        "pu",
+        "ta",
+        "do"
+      ],
       "answer": "do",
-      "feedback": { "correct": "Correct — ends in vowel so stress penultimate: compuTAdo-ra.", "wrong": "Ends in vowel: stress penultimate syllable." },
-      "meta": { "difficulty": "A2", "skills": ["listen"], "topic": "Stress" }
+      "feedback": {
+        "correct": "Correct — ends in vowel so stress penultimate: compuTAdo-ra.",
+        "wrong": "Ends in vowel: stress penultimate syllable."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "listen"
+        ],
+        "topic": "Stress"
+      }
     },
     {
       "id": "b1-phonology-basics-ex6",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "Which word needs an accent mark to show stress?",
-      "options": ["cafe", "casas", "doctor"],
+      "options": [
+        "cafe",
+        "casas",
+        "doctor"
+      ],
       "answer": "cafe",
-      "feedback": { "correct": "Correct — should be café to mark final stress.", "wrong": "Words ending in vowel stressed on final syllable need an accent: café." },
-      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "Stress" }
+      "feedback": {
+        "correct": "Correct — should be café to mark final stress.",
+        "wrong": "Words ending in vowel stressed on final syllable need an accent: café."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Stress"
+      }
     },
     {
       "id": "b1-phonology-basics-ex7",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "How are **b** and **v** pronounced in most Spanish dialects?",
-      "options": ["Different sounds", "Same bilabial sound", "Like English v"],
+      "options": [
+        "Different sounds",
+        "Same bilabial sound",
+        "Like English v"
+      ],
       "answer": "Same bilabial sound",
-      "feedback": { "correct": "Correct — both merge in pronunciation.", "wrong": "Both letters share a single bilabial sound." },
-      "meta": { "difficulty": "A2", "skills": ["listen"], "topic": "Consonants" }
+      "feedback": {
+        "correct": "Correct — both merge in pronunciation.",
+        "wrong": "Both letters share a single bilabial sound."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "listen"
+        ],
+        "topic": "Consonants"
+      }
     },
     {
       "id": "b1-phonology-basics-ex8",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "The letters **ll** and **y** usually sound like...",
-      "options": ["/ʝ/ (soft y sound)", "/l/", "/r/"],
+      "options": [
+        "/ʝ/ (soft y sound)",
+        "/l/",
+        "/r/"
+      ],
       "answer": "/ʝ/ (soft y sound)",
-      "feedback": { "correct": "Correct — yeísmo merges ll and y.", "wrong": "Most dialects pronounce ll and y alike." },
-      "meta": { "difficulty": "B1", "skills": ["listen"], "topic": "Consonants" }
+      "feedback": {
+        "correct": "Correct — yeísmo merges ll and y.",
+        "wrong": "Most dialects pronounce ll and y alike."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "listen"
+        ],
+        "topic": "Consonants"
+      }
     },
     {
       "id": "b1-phonology-basics-ex9",
@@ -97,9 +211,21 @@
       "type": "cloze",
       "promptMd": "Break **hablar** into syllables.",
       "answer": "ha-blar",
-      "accepted": ["re:^ha-?blar$", "re:^ha\\s*blar$"],
-      "feedback": { "correct": "Correct — two syllables: ha-blar.", "wrong": "Divide after the consonant cluster: ha-blar." },
-      "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Syllables" }
+      "accepted": [
+        "re:^ha-?blar$",
+        "re:^ha\\s*blar$"
+      ],
+      "feedback": {
+        "correct": "Correct — two syllables: ha-blar.",
+        "wrong": "Divide after the consonant cluster: ha-blar."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Syllables"
+      }
     },
     {
       "id": "b1-phonology-basics-ex10",
@@ -107,43 +233,153 @@
       "type": "translate",
       "promptMd": "Explain in English why *inglés* has an accent.",
       "answer": "It ends in s but the stress is on the final syllable",
-      "accepted": ["re:ends in s.*final", "re:stress.*final"],
-      "feedback": { "correct": "Right — accent marks the final stress against the default.", "wrong": "Because stress falls on the last syllable despite ending in -s." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Stress" }
+      "accepted": [
+        "re:ends in s.*final",
+        "re:stress.*final"
+      ],
+      "feedback": {
+        "correct": "Right — accent marks the final stress against the default.",
+        "wrong": "Because stress falls on the last syllable despite ending in -s."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Stress"
+      }
     },
     {
       "id": "b1-phonology-basics-ex11",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "What happens when two vowels meet across words, as in *lo invito*?",
-      "options": ["A pause is required", "They link smoothly", "Drop one vowel"],
+      "options": [
+        "A pause is required",
+        "They link smoothly",
+        "Drop one vowel"
+      ],
       "answer": "They link smoothly",
-      "feedback": { "correct": "Correct — Spanish links vowels between words.", "wrong": "Spanish favours linking: loinvito." },
-      "meta": { "difficulty": "B1", "skills": ["listen"], "topic": "Connected speech" }
+      "feedback": {
+        "correct": "Correct — Spanish links vowels between words.",
+        "wrong": "Spanish favours linking: loinvito."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "listen"
+        ],
+        "topic": "Connected speech"
+      }
     },
     {
       "id": "b1-phonology-basics-ex12",
       "lessonId": "b1-phonology-basics",
       "type": "mcq",
       "promptMd": "Which option shows the correct stress for *médico*?",
-      "options": ["ME-di-co", "me-DI-co", "me-di-CO"],
+      "options": [
+        "ME-di-co",
+        "me-DI-co",
+        "me-di-CO"
+      ],
       "answer": "ME-di-co",
-      "feedback": { "correct": "Correct — the accent mark shows stress on the first syllable.", "wrong": "Accent on é means stress the first syllable." },
-      "meta": { "difficulty": "B1", "skills": ["listen"], "topic": "Stress" }
+      "feedback": {
+        "correct": "Correct — the accent mark shows stress on the first syllable.",
+        "wrong": "Accent on é means stress the first syllable."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "listen"
+        ],
+        "topic": "Stress"
+      }
     }
   ],
   "flashcards": [
-    { "id": "b1-phonology-basics-fc1", "front": "Spanish vowels", "back": "a e i o u — pure, stable sounds", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc2", "front": "c + a/o/u", "back": "Pronounce /k/", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc3", "front": "c + e/i", "back": "/s/ (or /θ/ in Spain)", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc4", "front": "g + e/i", "back": "Sounds like j: /x/", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc5", "front": "b & v", "back": "Same soft bilabial sound", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc6", "front": "Stress rule", "back": "Vowel/n/s → penultimate stress", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc7", "front": "Accent marks", "back": "Show when stress breaks the default", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc8", "front": "ll & y", "back": "Merge to /ʝ/ (yeísmo)", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc9", "front": "Syllable timing", "back": "Keep rhythm even across syllables", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc10", "front": "Linking vowels", "back": "Connect words: loinvito", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc11", "front": "j sound", "back": "Always /x/ like harsh h", "tag": "phonology", "deck": "grammar" },
-    { "id": "b1-phonology-basics-fc12", "front": "Final consonants", "back": "Stress final syllable unless accented", "tag": "phonology", "deck": "grammar" }
+    {
+      "id": "b1-phonology-basics-fc1",
+      "front": "Spanish vowels",
+      "back": "a e i o u — pure, stable sounds",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc2",
+      "front": "c + a/o/u",
+      "back": "Pronounce /k/",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc3",
+      "front": "c + e/i",
+      "back": "/s/ (or /θ/ in Spain)",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc4",
+      "front": "g + e/i",
+      "back": "Sounds like j: /x/",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc5",
+      "front": "b & v",
+      "back": "Same soft bilabial sound",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc6",
+      "front": "Stress rule",
+      "back": "Vowel/n/s → penultimate stress",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc7",
+      "front": "Accent marks",
+      "back": "Show when stress breaks the default",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc8",
+      "front": "ll & y",
+      "back": "Merge to /ʝ/ (yeísmo)",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc9",
+      "front": "Syllable timing",
+      "back": "Keep rhythm even across syllables",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc10",
+      "front": "Linking vowels",
+      "back": "Connect words: loinvito",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc11",
+      "front": "j sound",
+      "back": "Always /x/ like harsh h",
+      "tag": "phonology",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-phonology-basics-fc12",
+      "front": "Final consonants",
+      "back": "Stress final syllable unless accented",
+      "tag": "phonology",
+      "deck": "grammar"
+    }
   ]
 }

@@ -5,53 +5,628 @@
       "level": "B1",
       "title": "B9 — Pretérito indefinido",
       "slug": "b1-preterito-indefinido",
-      "tags": ["preterito-indefinido","past","grammar","b1"],
+      "tags": [
+        "preterito-indefinido",
+        "past",
+        "grammar",
+        "b1"
+      ],
       "markdown": "# 📍 B9 — Pretérito Indefinido (B1)\n\n**Goal:** Talk about **completed past events** (finished, dated, over).\n\n---\n\n## 📌 Regular Endings\n\n| Person | -AR | -ER/-IR |\n|---|---|---|\n| yo | **-é** | **-í** |\n| tú | **-aste** | **-iste** |\n| él/ella/usted | **-ó** | **-ió** |\n| nosotros/as | **-amos** | **-imos** |\n| **vosotros/as** | **-asteis** | **-isteis** |\n| ellos/ellas/ustedes | **-aron** | **-ieron** |\n\n**Examples**  \n*hablar →* **hablé, hablaste, habló, hablamos, hablasteis, hablaron**  \n*comer →* **comí, comiste, comió, comimos, comisteis, comieron**\n\n---\n\n## ⚡ Core Irregulars (no accents)\n- tener → tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron\n- estar → estuve…\n- ir / ser → fui, fuiste, fue, fuimos, fuisteis, fueron\n- hacer → hice, hiciste, hizo, hicimos, hicisteis, hicieron\n- decir → dije, dijiste, dijo, dijimos, dijisteis, dijeron\n- poder → pude…\n- poner → puse…\n- venir → vine…\n\n---\n\n## 📝 Use\n- Completed actions in the past\n- Past events with a clear date/time: *ayer, en 2020, la semana pasada…*\n- A chain of finished actions\n\n**Examples**  \n*Ayer comí paella.* • *Fuimos a Madrid el año pasado.*\n\n> ⚠️ Don’t use indefinido for “recent past connected to now” → use **pretérito perfecto**.\n",
       "references": []
     }
   ],
   "exercises": [
-    { "id": "b1-preterito-indefinido-ex1","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**hablar** (indefinido)","answer":["hablé","hablaste","habló","hablamos","hablasteis","hablaron"],"feedback":{"correct":"Correct — regular -ar.","wrong":"-é, -aste, -ó, -amos, -asteis, -aron."},"meta":{"difficulty":"A2","skills":["write"],"topic":"Regulars"} },
-    { "id": "b1-preterito-indefinido-ex2","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**comer** (indefinido)","answer":["comí","comiste","comió","comimos","comisteis","comieron"],"feedback":{"correct":"Correct — regular -er.","wrong":"-í, -iste, -ió, -imos, -isteis, -ieron."},"meta":{"difficulty":"A2","skills":["write"],"topic":"Regulars"} },
-    { "id": "b1-preterito-indefinido-ex3","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**vivir** (indefinido)","answer":["viví","viviste","vivió","vivimos","vivisteis","vivieron"],"feedback":{"correct":"Correct — regular -ir.","wrong":"-í, -iste, -ió, -imos, -isteis, -ieron."},"meta":{"difficulty":"A2","skills":["write"],"topic":"Regulars"} },
-    { "id": "b1-preterito-indefinido-ex4","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**tener** (indefinido)","answer":["tuve","tuviste","tuvo","tuvimos","tuvisteis","tuvieron"],"feedback":{"correct":"Correct — tener → tuv-.","wrong":"Irregular stem tuv-."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex5","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**estar** (indefinido)","answer":["estuve","estuviste","estuvo","estuvimos","estuvisteis","estuvieron"],"feedback":{"correct":"Correct — estuv-.","wrong":"Irregular stem."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex6","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**ir / ser** (indefinido)","answer":["fui","fuiste","fue","fuimos","fuisteis","fueron"],"feedback":{"correct":"Correct — fui, fuiste…","wrong":"Same forms for ir/ser."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex7","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**hacer** (indefinido)","answer":["hice","hiciste","hizo","hicimos","hicisteis","hicieron"],"feedback":{"correct":"Correct — hic-/hizo.","wrong":"Irregular stem."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex8","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**decir** (indefinido)","answer":["dije","dijiste","dijo","dijimos","dijisteis","dijeron"],"feedback":{"correct":"Correct — dij- and no i in 3rd plural.","wrong":"Remember no i in dijeron."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex9","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**poder** (indefinido)","answer":["pude","pudiste","pudo","pudimos","pudisteis","pudieron"],"feedback":{"correct":"Correct — pud-.","wrong":"Irregular stem."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex10","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**poner** (indefinido)","answer":["puse","pusiste","puso","pusimos","pusisteis","pusieron"],"feedback":{"correct":"Correct — pus-.","wrong":"Irregular stem."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex11","lessonId":"b1-preterito-indefinido","type":"conjugate","promptMd":"**venir** (indefinido)","answer":["vine","viniste","vino","vinimos","vinisteis","vinieron"],"feedback":{"correct":"Correct — vin-.","wrong":"Irregular stem."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex12","lessonId":"b1-preterito-indefinido","type":"cloze","promptMd":"**Ayer ___ (comer) paella.**","answer":"comí","accepted":["re:^comí$"],"feedback":{"correct":"Correct — yo comí.","wrong":"Use indefinido for completed past."},"meta":{"difficulty":"A2","skills":["write"],"topic":"Use"} },
-    { "id": "b1-preterito-indefinido-ex13","lessonId":"b1-preterito-indefinido","type":"cloze","promptMd":"**El año pasado ___ (ir) a Madrid.**","answer":"fui","accepted":["re:^fui$"],"feedback":{"correct":"Correct — fui.","wrong":"Ir/ser → fui."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Use"} },
-    { "id": "b1-preterito-indefinido-ex14","lessonId":"b1-preterito-indefinido","type":"cloze","promptMd":"**Ellos ___ (hacer) mucho ruido.**","answer":"hicieron","accepted":["re:^hicieron$"],"feedback":{"correct":"Correct — hicieron.","wrong":"Irregular form."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex15","lessonId":"b1-preterito-indefinido","type":"cloze","promptMd":"**Nosotros ___ (tener) clase.**","answer":"tuvimos","accepted":["re:^tuvimos$"],"feedback":{"correct":"Correct — tuvimos.","wrong":"Irregular."},"meta":{"difficulty":"B1","skills":["write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex16","lessonId":"b1-preterito-indefinido","type":"mcq","promptMd":"Which time marker fits with pretérito indefinido?","options":["esta semana","hoy","ayer","últimamente"],"answer":"ayer","feedback":{"correct":"Correct — ayer = finished past.","wrong":"Indefinido = finished past with date/time."},"meta":{"difficulty":"A2","skills":["read"],"topic":"Use"} },
-    { "id": "b1-preterito-indefinido-ex17","lessonId":"b1-preterito-indefinido","type":"translate","promptMd":"Translate: **Hablé con ella.**","answer":"I spoke with her","accepted":["re:i spoke"],"feedback":{"correct":"Correct — hablé.","wrong":"Use spoke (completed past)."},"meta":{"difficulty":"A2","skills":["read","write"],"topic":"Regulars"} },
-    { "id": "b1-preterito-indefinido-ex18","lessonId":"b1-preterito-indefinido","type":"translate","promptMd":"Translate: **Fuimos a Madrid.**","answer":"We went to Madrid","accepted":["re:we went"],"feedback":{"correct":"Correct — fuimos.","wrong":"Use went (finished trip)."},"meta":{"difficulty":"B1","skills":["read","write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex19","lessonId":"b1-preterito-indefinido","type":"translate","promptMd":"Translate: **Dijeron la verdad.**","answer":"They told the truth","accepted":["re:told the truth"],"feedback":{"correct":"Correct — dijeron.","wrong":"Use told (completed statement)."},"meta":{"difficulty":"B1","skills":["read","write"],"topic":"Irregulars"} },
-    { "id": "b1-preterito-indefinido-ex20","lessonId":"b1-preterito-indefinido","type":"short","promptMd":"When is pretérito indefinido used?","answer":"for completed past events","accepted":["re:completed past"],"feedback":{"correct":"Correct — finished/dated events.","wrong":"It’s for finished, dated actions."},"meta":{"difficulty":"A2","skills":["read"],"topic":"Use"} }
+    {
+      "id": "b1-preterito-indefinido-ex1",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**hablar** (indefinido)",
+      "answer": [
+        "hablé",
+        "hablaste",
+        "habló",
+        "hablamos",
+        "hablasteis",
+        "hablaron"
+      ],
+      "feedback": {
+        "correct": "Correct — regular -ar.",
+        "wrong": "-é, -aste, -ó, -amos, -asteis, -aron."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Regulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex2",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**comer** (indefinido)",
+      "answer": [
+        "comí",
+        "comiste",
+        "comió",
+        "comimos",
+        "comisteis",
+        "comieron"
+      ],
+      "feedback": {
+        "correct": "Correct — regular -er.",
+        "wrong": "-í, -iste, -ió, -imos, -isteis, -ieron."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Regulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex3",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**vivir** (indefinido)",
+      "answer": [
+        "viví",
+        "viviste",
+        "vivió",
+        "vivimos",
+        "vivisteis",
+        "vivieron"
+      ],
+      "feedback": {
+        "correct": "Correct — regular -ir.",
+        "wrong": "-í, -iste, -ió, -imos, -isteis, -ieron."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Regulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex4",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**tener** (indefinido)",
+      "answer": [
+        "tuve",
+        "tuviste",
+        "tuvo",
+        "tuvimos",
+        "tuvisteis",
+        "tuvieron"
+      ],
+      "feedback": {
+        "correct": "Correct — tener → tuv-.",
+        "wrong": "Irregular stem tuv-."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex5",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**estar** (indefinido)",
+      "answer": [
+        "estuve",
+        "estuviste",
+        "estuvo",
+        "estuvimos",
+        "estuvisteis",
+        "estuvieron"
+      ],
+      "feedback": {
+        "correct": "Correct — estuv-.",
+        "wrong": "Irregular stem."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex6",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**ir / ser** (indefinido)",
+      "answer": [
+        "fui",
+        "fuiste",
+        "fue",
+        "fuimos",
+        "fuisteis",
+        "fueron"
+      ],
+      "feedback": {
+        "correct": "Correct — fui, fuiste…",
+        "wrong": "Same forms for ir/ser."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex7",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**hacer** (indefinido)",
+      "answer": [
+        "hice",
+        "hiciste",
+        "hizo",
+        "hicimos",
+        "hicisteis",
+        "hicieron"
+      ],
+      "feedback": {
+        "correct": "Correct — hic-/hizo.",
+        "wrong": "Irregular stem."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex8",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**decir** (indefinido)",
+      "answer": [
+        "dije",
+        "dijiste",
+        "dijo",
+        "dijimos",
+        "dijisteis",
+        "dijeron"
+      ],
+      "feedback": {
+        "correct": "Correct — dij- and no i in 3rd plural.",
+        "wrong": "Remember no i in dijeron."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex9",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**poder** (indefinido)",
+      "answer": [
+        "pude",
+        "pudiste",
+        "pudo",
+        "pudimos",
+        "pudisteis",
+        "pudieron"
+      ],
+      "feedback": {
+        "correct": "Correct — pud-.",
+        "wrong": "Irregular stem."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex10",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**poner** (indefinido)",
+      "answer": [
+        "puse",
+        "pusiste",
+        "puso",
+        "pusimos",
+        "pusisteis",
+        "pusieron"
+      ],
+      "feedback": {
+        "correct": "Correct — pus-.",
+        "wrong": "Irregular stem."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex11",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "conjugate",
+      "promptMd": "**venir** (indefinido)",
+      "answer": [
+        "vine",
+        "viniste",
+        "vino",
+        "vinimos",
+        "vinisteis",
+        "vinieron"
+      ],
+      "feedback": {
+        "correct": "Correct — vin-.",
+        "wrong": "Irregular stem."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex12",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "cloze",
+      "promptMd": "**Ayer ___ (comer) paella.**",
+      "answer": "comí",
+      "accepted": [
+        "re:^comí$"
+      ],
+      "feedback": {
+        "correct": "Correct — yo comí.",
+        "wrong": "Use indefinido for completed past."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Use"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex13",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "cloze",
+      "promptMd": "**El año pasado ___ (ir) a Madrid.**",
+      "answer": "fui",
+      "accepted": [
+        "re:^fui$"
+      ],
+      "feedback": {
+        "correct": "Correct — fui.",
+        "wrong": "Ir/ser → fui."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Use"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex14",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "cloze",
+      "promptMd": "**Ellos ___ (hacer) mucho ruido.**",
+      "answer": "hicieron",
+      "accepted": [
+        "re:^hicieron$"
+      ],
+      "feedback": {
+        "correct": "Correct — hicieron.",
+        "wrong": "Irregular form."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex15",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "cloze",
+      "promptMd": "**Nosotros ___ (tener) clase.**",
+      "answer": "tuvimos",
+      "accepted": [
+        "re:^tuvimos$"
+      ],
+      "feedback": {
+        "correct": "Correct — tuvimos.",
+        "wrong": "Irregular."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex16",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "mcq",
+      "promptMd": "Which time marker fits with pretérito indefinido?",
+      "options": [
+        "esta semana",
+        "hoy",
+        "ayer",
+        "últimamente"
+      ],
+      "answer": "ayer",
+      "feedback": {
+        "correct": "Correct — ayer = finished past.",
+        "wrong": "Indefinido = finished past with date/time."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Use"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex17",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: **Hablé con ella.**",
+      "answer": "I spoke with her",
+      "accepted": [
+        "re:i spoke"
+      ],
+      "feedback": {
+        "correct": "Correct — hablé.",
+        "wrong": "Use spoke (completed past)."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Regulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex18",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: **Fuimos a Madrid.**",
+      "answer": "We went to Madrid",
+      "accepted": [
+        "re:we went"
+      ],
+      "feedback": {
+        "correct": "Correct — fuimos.",
+        "wrong": "Use went (finished trip)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex19",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "translate",
+      "promptMd": "Translate: **Dijeron la verdad.**",
+      "answer": "They told the truth",
+      "accepted": [
+        "re:told the truth"
+      ],
+      "feedback": {
+        "correct": "Correct — dijeron.",
+        "wrong": "Use told (completed statement)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Irregulars"
+      }
+    },
+    {
+      "id": "b1-preterito-indefinido-ex20",
+      "lessonId": "b1-preterito-indefinido",
+      "type": "short",
+      "promptMd": "When is pretérito indefinido used?",
+      "answer": "for completed past events",
+      "accepted": [
+        "re:completed past"
+      ],
+      "feedback": {
+        "correct": "Correct — finished/dated events.",
+        "wrong": "It’s for finished, dated actions."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Use"
+      }
+    }
   ],
   "flashcards": [
-    { "id": "b1-preterito-indefinido-fc1","front":"-ar endings","back":"é, aste, ó, amos, asteis, aron","tag":"preterito-indefinido","deck":"grammar" },
-    { "id": "b1-preterito-indefinido-fc2","front":"-er/-ir endings","back":"í, iste, ió, imos, isteis, ieron","tag":"preterito-indefinido","deck":"grammar" },
-    { "id": "b1-preterito-indefinido-fc3","front":"tener","back":"tuve, tuviste, tuvo…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc4","front":"estar","back":"estuve, estuviste, estuvo…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc5","front":"ir / ser","back":"fui, fuiste, fue…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc6","front":"hacer","back":"hice, hiciste, hizo…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc7","front":"decir","back":"dije, dijiste, dijo…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc8","front":"poder","back":"pude, pudiste, pudo…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc9","front":"poner","back":"puse, pusiste, puso…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc10","front":"venir","back":"vine, viniste, vino…","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc11","front":"No accents","back":"on core irregulars","tag":"preterito-indefinido","deck":"grammar" },
-    { "id": "b1-preterito-indefinido-fc12","front":"time words","back":"ayer, la semana pasada, en 2020","tag":"preterito-indefinido","deck":"grammar" },
-    { "id": "b1-preterito-indefinido-fc13","front":"hablé","back":"I spoke","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc14","front":"comí","back":"I ate","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc15","front":"viví","back":"I lived","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc16","front":"fuimos a Madrid","back":"We went to Madrid","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc17","front":"dijeron","back":"They told/said","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc18","front":"pude","back":"I could/managed to","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc19","front":"puse","back":"I put","tag":"preterito-indefinido","deck":"vocab" },
-    { "id": "b1-preterito-indefinido-fc20","front":"vine","back":"I came","tag":"preterito-indefinido","deck":"vocab" }
+    {
+      "id": "b1-preterito-indefinido-fc1",
+      "front": "-ar endings",
+      "back": "é, aste, ó, amos, asteis, aron",
+      "tag": "preterito-indefinido",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc2",
+      "front": "-er/-ir endings",
+      "back": "í, iste, ió, imos, isteis, ieron",
+      "tag": "preterito-indefinido",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc3",
+      "front": "tener",
+      "back": "tuve, tuviste, tuvo…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc4",
+      "front": "estar",
+      "back": "estuve, estuviste, estuvo…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc5",
+      "front": "ir / ser",
+      "back": "fui, fuiste, fue…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc6",
+      "front": "hacer",
+      "back": "hice, hiciste, hizo…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc7",
+      "front": "decir",
+      "back": "dije, dijiste, dijo…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc8",
+      "front": "poder",
+      "back": "pude, pudiste, pudo…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc9",
+      "front": "poner",
+      "back": "puse, pusiste, puso…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc10",
+      "front": "venir",
+      "back": "vine, viniste, vino…",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc11",
+      "front": "No accents",
+      "back": "on core irregulars",
+      "tag": "preterito-indefinido",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc12",
+      "front": "time words",
+      "back": "ayer, la semana pasada, en 2020",
+      "tag": "preterito-indefinido",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc13",
+      "front": "hablé",
+      "back": "I spoke",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc14",
+      "front": "comí",
+      "back": "I ate",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc15",
+      "front": "viví",
+      "back": "I lived",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc16",
+      "front": "fuimos a Madrid",
+      "back": "We went to Madrid",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc17",
+      "front": "dijeron",
+      "back": "They told/said",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc18",
+      "front": "pude",
+      "back": "I could/managed to",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc19",
+      "front": "puse",
+      "back": "I put",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-preterito-indefinido-fc20",
+      "front": "vine",
+      "back": "I came",
+      "tag": "preterito-indefinido",
+      "deck": "vocab"
+    }
   ]
 }

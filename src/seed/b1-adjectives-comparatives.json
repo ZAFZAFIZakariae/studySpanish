@@ -5,9 +5,15 @@
       "level": "B1",
       "title": "B14 — Adjectives & agreement; comparatives/superlatives",
       "slug": "b1-adjectives-comparatives",
-      "tags": ["adjectives","agreement","comparatives","superlatives","grammar","b1"],
-      "markdown": "# 🎨 B14 — Adjectives & Agreement; Comparatives & Superlatives (B1)\n\n**Goal:** Describe and compare accurately.\n\n---\n\n## 📌 Agreement\n- Adjectives agree in **gender and number** with the noun\n- -o → -a (fem); add -s / -es for plural\n\n**Examples**\n- *el chico alto* → *la chica alta* → *los chicos altos* → *las chicas altas*\n- *el coche rápido* → *los coches rápidos*\n- *la casa grande* → *las casas grandes*\n\n⚠️ Adjectives ending in -e or consonant usually stay the same in gender (*inteligente, joven*), only add -s/-es in plural.\n\n---\n\n## 📍 Position\n- Usually **after** the noun\n- Some change meaning before the noun (*un gran hombre ≠ un hombre grande*)\n\n---\n\n## ⚖️ Comparatives\n- más … que — more … than\n- menos … que — less … than\n- tan … como — as … as\n\n**Irregulars**\n- mejor (better), peor (worse), mayor (older), menor (younger)\n\n---\n\n## 👑 Superlatives\n- el/la/los/las más … — the most …\n- el/la/los/las menos … — the least …\n- el mejor / la peor / el mayor / el menor\n\n**Examples**\n- *Es el más alto de la clase.*\n- *Es la mejor película.*\n\n---\n\n> 📝 Summary  
-> Adjectives match gender/number → comparatives → superlatives\n",
+      "tags": [
+        "adjectives",
+        "agreement",
+        "comparatives",
+        "superlatives",
+        "grammar",
+        "b1"
+      ],
+      "markdown": "# 🎨 B14 — Adjectives & Agreement; Comparatives & Superlatives (B1)\n\n**Goal:** Describe and compare accurately.\n\n---\n\n## 📌 Agreement\n- Adjectives agree in **gender and number** with the noun\n- -o → -a (fem); add -s / -es for plural\n\n**Examples**\n- *el chico alto* → *la chica alta* → *los chicos altos* → *las chicas altas*\n- *el coche rápido* → *los coches rápidos*\n- *la casa grande* → *las casas grandes*\n\n⚠️ Adjectives ending in -e or consonant usually stay the same in gender (*inteligente, joven*), only add -s/-es in plural.\n\n---\n\n## 📍 Position\n- Usually **after** the noun\n- Some change meaning before the noun (*un gran hombre ≠ un hombre grande*)\n\n---\n\n## ⚖️ Comparatives\n- más … que — more … than\n- menos … que — less … than\n- tan … como — as … as\n\n**Irregulars**\n- mejor (better), peor (worse), mayor (older), menor (younger)\n\n---\n\n## 👑 Superlatives\n- el/la/los/las más … — the most …\n- el/la/los/las menos … — the least …\n- el mejor / la peor / el mayor / el menor\n\n**Examples**\n- *Es el más alto de la clase.*\n- *Es la mejor película.*\n\n---\n\n> 📝 Summary  \n> Adjectives match gender/number → comparatives → superlatives\n",
       "references": []
     }
   ],
@@ -18,9 +24,20 @@
       "type": "cloze",
       "promptMd": "el chico ___ (alto)",
       "answer": "alto",
-      "accepted": ["re:^alto$"],
-      "feedback": { "correct": "Correct — masculine singular.", "wrong": "Use -o." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^alto$"
+      ],
+      "feedback": {
+        "correct": "Correct — masculine singular.",
+        "wrong": "Use -o."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex2",
@@ -28,9 +45,20 @@
       "type": "cloze",
       "promptMd": "la chica ___ (alto)",
       "answer": "alta",
-      "accepted": ["re:^alta$"],
-      "feedback": { "correct": "Correct — feminine.", "wrong": "Use -a." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^alta$"
+      ],
+      "feedback": {
+        "correct": "Correct — feminine.",
+        "wrong": "Use -a."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex3",
@@ -38,9 +66,20 @@
       "type": "cloze",
       "promptMd": "los chicos ___ (alto)",
       "answer": "altos",
-      "accepted": ["re:^altos$"],
-      "feedback": { "correct": "Correct — masculine plural.", "wrong": "Use -os." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^altos$"
+      ],
+      "feedback": {
+        "correct": "Correct — masculine plural.",
+        "wrong": "Use -os."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex4",
@@ -48,9 +87,20 @@
       "type": "cloze",
       "promptMd": "las chicas ___ (alto)",
       "answer": "altas",
-      "accepted": ["re:^altas$"],
-      "feedback": { "correct": "Correct — feminine plural.", "wrong": "Use -as." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^altas$"
+      ],
+      "feedback": {
+        "correct": "Correct — feminine plural.",
+        "wrong": "Use -as."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex5",
@@ -58,9 +108,20 @@
       "type": "cloze",
       "promptMd": "el coche ___ (rápido)",
       "answer": "rápido",
-      "accepted": ["re:^rápido$"],
-      "feedback": { "correct": "Correct — masc. singular.", "wrong": "Use -o." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^rápido$"
+      ],
+      "feedback": {
+        "correct": "Correct — masc. singular.",
+        "wrong": "Use -o."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex6",
@@ -68,19 +129,43 @@
       "type": "cloze",
       "promptMd": "las casas ___ (grande)",
       "answer": "grandes",
-      "accepted": ["re:^grandes$"],
-      "feedback": { "correct": "Correct — plural -es.", "wrong": "Use -es." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^grandes$"
+      ],
+      "feedback": {
+        "correct": "Correct — plural -es.",
+        "wrong": "Use -es."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex7",
       "lessonId": "b1-adjectives-comparatives",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["la chico alto","la chica alta","la chica alto"],
+      "options": [
+        "la chico alto",
+        "la chica alta",
+        "la chica alto"
+      ],
       "answer": "la chica alta",
-      "feedback": { "correct": "Correct — feminine agreement.", "wrong": "Use alta." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Agreement" }
+      "feedback": {
+        "correct": "Correct — feminine agreement.",
+        "wrong": "Use alta."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex8",
@@ -88,9 +173,20 @@
       "type": "cloze",
       "promptMd": "Mi hermano es ___ (inteligente).",
       "answer": "inteligente",
-      "accepted": ["re:^inteligente$"],
-      "feedback": { "correct": "Correct — stays same gender.", "wrong": "Inteligente is invariable." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^inteligente$"
+      ],
+      "feedback": {
+        "correct": "Correct — stays same gender.",
+        "wrong": "Inteligente is invariable."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex9",
@@ -98,19 +194,43 @@
       "type": "cloze",
       "promptMd": "Mis amigos son muy ___ (joven).",
       "answer": "jóvenes",
-      "accepted": ["re:^jóvenes$"],
-      "feedback": { "correct": "Correct — plural -es.", "wrong": "Use -es." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Agreement" }
+      "accepted": [
+        "re:^jóvenes$"
+      ],
+      "feedback": {
+        "correct": "Correct — plural -es.",
+        "wrong": "Use -es."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Agreement"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex10",
       "lessonId": "b1-adjectives-comparatives",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["más alto que","más alta de","más altos como"],
+      "options": [
+        "más alto que",
+        "más alta de",
+        "más altos como"
+      ],
       "answer": "más alto que",
-      "feedback": { "correct": "Correct — comparative.", "wrong": "Use más ... que." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Comparatives" }
+      "feedback": {
+        "correct": "Correct — comparative.",
+        "wrong": "Use más ... que."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Comparatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex11",
@@ -118,9 +238,20 @@
       "type": "cloze",
       "promptMd": "Ella es ___ (más / alto) que su hermano.",
       "answer": "más alta",
-      "accepted": ["re:^más alta$"],
-      "feedback": { "correct": "Correct — feminine agreement.", "wrong": "Use alta." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Comparatives" }
+      "accepted": [
+        "re:^más alta$"
+      ],
+      "feedback": {
+        "correct": "Correct — feminine agreement.",
+        "wrong": "Use alta."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Comparatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex12",
@@ -128,9 +259,20 @@
       "type": "cloze",
       "promptMd": "Ellos son ___ (menos / simpático) que tú.",
       "answer": "menos simpáticos",
-      "accepted": ["re:^menos simpáticos$"],
-      "feedback": { "correct": "Correct — plural.", "wrong": "Use -os." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Comparatives" }
+      "accepted": [
+        "re:^menos simpáticos$"
+      ],
+      "feedback": {
+        "correct": "Correct — plural.",
+        "wrong": "Use -os."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Comparatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex13",
@@ -138,19 +280,43 @@
       "type": "cloze",
       "promptMd": "Soy ___ (tan / inteligente) como tú.",
       "answer": "tan inteligente",
-      "accepted": ["re:^tan inteligente$"],
-      "feedback": { "correct": "Correct — tan ... como.", "wrong": "Use tan." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Comparatives" }
+      "accepted": [
+        "re:^tan inteligente$"
+      ],
+      "feedback": {
+        "correct": "Correct — tan ... como.",
+        "wrong": "Use tan."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Comparatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex14",
       "lessonId": "b1-adjectives-comparatives",
       "type": "mcq",
       "promptMd": "Which is an irregular comparative?",
-      "options": ["más grande","más alto","mejor"],
+      "options": [
+        "más grande",
+        "más alto",
+        "mejor"
+      ],
       "answer": "mejor",
-      "feedback": { "correct": "Correct — mejor/peor/ mayor/menor.", "wrong": "Use mejor." },
-      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Comparatives" }
+      "feedback": {
+        "correct": "Correct — mejor/peor/ mayor/menor.",
+        "wrong": "Use mejor."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Comparatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex15",
@@ -158,9 +324,20 @@
       "type": "cloze",
       "promptMd": "Es el ___ (más / alto) de la clase.",
       "answer": "más alto",
-      "accepted": ["re:^más alto$"],
-      "feedback": { "correct": "Correct — superlative.", "wrong": "Use el más ..." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Superlatives" }
+      "accepted": [
+        "re:^más alto$"
+      ],
+      "feedback": {
+        "correct": "Correct — superlative.",
+        "wrong": "Use el más ..."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Superlatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex16",
@@ -168,9 +345,20 @@
       "type": "cloze",
       "promptMd": "Es la ___ (mejor) película.",
       "answer": "mejor",
-      "accepted": ["re:^mejor$"],
-      "feedback": { "correct": "Correct — irregular superlative.", "wrong": "Use mejor." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Superlatives" }
+      "accepted": [
+        "re:^mejor$"
+      ],
+      "feedback": {
+        "correct": "Correct — irregular superlative.",
+        "wrong": "Use mejor."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Superlatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex17",
@@ -178,9 +366,21 @@
       "type": "translate",
       "promptMd": "Translate: *Ella es más alta que su hermano.*",
       "answer": "She is taller than her brother",
-      "accepted": ["re:taller than"],
-      "feedback": { "correct": "Correct — comparative.", "wrong": "Use taller." },
-      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Comparatives" }
+      "accepted": [
+        "re:taller than"
+      ],
+      "feedback": {
+        "correct": "Correct — comparative.",
+        "wrong": "Use taller."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Comparatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex18",
@@ -188,9 +388,21 @@
       "type": "translate",
       "promptMd": "Translate: *Es el más alto de la clase.*",
       "answer": "He is the tallest in the class",
-      "accepted": ["re:the tallest"],
-      "feedback": { "correct": "Correct — superlative.", "wrong": "Use the tallest." },
-      "meta": { "difficulty": "B1","skills": ["read","write"],"topic": "Superlatives" }
+      "accepted": [
+        "re:the tallest"
+      ],
+      "feedback": {
+        "correct": "Correct — superlative.",
+        "wrong": "Use the tallest."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Superlatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex19",
@@ -198,9 +410,21 @@
       "type": "translate",
       "promptMd": "Translate: *Es la mejor película.*",
       "answer": "It is the best movie",
-      "accepted": ["re:the best"],
-      "feedback": { "correct": "Correct — mejor = best.", "wrong": "Use best." },
-      "meta": { "difficulty": "B1","skills": ["read","write"],"topic": "Superlatives" }
+      "accepted": [
+        "re:the best"
+      ],
+      "feedback": {
+        "correct": "Correct — mejor = best.",
+        "wrong": "Use best."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Superlatives"
+      }
     },
     {
       "id": "b1-adjectives-comparatives-ex20",
@@ -208,26 +432,127 @@
       "type": "short",
       "promptMd": "Where do adjectives usually go?",
       "answer": "after the noun",
-      "accepted": ["re:after"],
-      "feedback": { "correct": "Correct — after noun.", "wrong": "Adjectives follow nouns." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Position" }
+      "accepted": [
+        "re:after"
+      ],
+      "feedback": {
+        "correct": "Correct — after noun.",
+        "wrong": "Adjectives follow nouns."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Position"
+      }
     }
   ],
   "flashcards": [
-    { "id": "b1-adjectives-comparatives-fc1","front":"adjective agreement","back":"gender and number with noun","tag":"adjectives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc2","front":"-o → -a","back":"alto → alta","tag":"adjectives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc3","front":"-e adjectives","back":"don’t change gender","tag":"adjectives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc4","front":"position","back":"usually after noun","tag":"adjectives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc5","front":"más … que","back":"more … than","tag":"comparatives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc6","front":"menos … que","back":"less … than","tag":"comparatives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc7","front":"tan … como","back":"as … as","tag":"comparatives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc8","front":"mejor","back":"better / best","tag":"irregular","deck":"vocab" },
-    { "id": "b1-adjectives-comparatives-fc9","front":"peor","back":"worse / worst","tag":"irregular","deck":"vocab" },
-    { "id": "b1-adjectives-comparatives-fc10","front":"mayor","back":"older / biggest","tag":"irregular","deck":"vocab" },
-    { "id": "b1-adjectives-comparatives-fc11","front":"menor","back":"younger / smallest","tag":"irregular","deck":"vocab" },
-    { "id": "b1-adjectives-comparatives-fc12","front":"el más …","back":"the most …","tag":"superlatives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc13","front":"el menos …","back":"the least …","tag":"superlatives","deck":"grammar" },
-    { "id": "b1-adjectives-comparatives-fc14","front":"el mejor","back":"the best","tag":"superlatives","deck":"vocab" },
-    { "id": "b1-adjectives-comparatives-fc15","front":"el peor","back":"the worst","tag":"superlatives","deck":"vocab" }
+    {
+      "id": "b1-adjectives-comparatives-fc1",
+      "front": "adjective agreement",
+      "back": "gender and number with noun",
+      "tag": "adjectives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc2",
+      "front": "-o → -a",
+      "back": "alto → alta",
+      "tag": "adjectives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc3",
+      "front": "-e adjectives",
+      "back": "don’t change gender",
+      "tag": "adjectives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc4",
+      "front": "position",
+      "back": "usually after noun",
+      "tag": "adjectives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc5",
+      "front": "más … que",
+      "back": "more … than",
+      "tag": "comparatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc6",
+      "front": "menos … que",
+      "back": "less … than",
+      "tag": "comparatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc7",
+      "front": "tan … como",
+      "back": "as … as",
+      "tag": "comparatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc8",
+      "front": "mejor",
+      "back": "better / best",
+      "tag": "irregular",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc9",
+      "front": "peor",
+      "back": "worse / worst",
+      "tag": "irregular",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc10",
+      "front": "mayor",
+      "back": "older / biggest",
+      "tag": "irregular",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc11",
+      "front": "menor",
+      "back": "younger / smallest",
+      "tag": "irregular",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc12",
+      "front": "el más …",
+      "back": "the most …",
+      "tag": "superlatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc13",
+      "front": "el menos …",
+      "back": "the least …",
+      "tag": "superlatives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc14",
+      "front": "el mejor",
+      "back": "the best",
+      "tag": "superlatives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-adjectives-comparatives-fc15",
+      "front": "el peor",
+      "back": "the worst",
+      "tag": "superlatives",
+      "deck": "vocab"
+    }
   ]
 }
