@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "prepreview": "npm run build",
     "preview": "vite preview",
     "test": "jest"
   },
