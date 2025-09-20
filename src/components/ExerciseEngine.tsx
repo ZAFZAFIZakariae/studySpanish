@@ -4,6 +4,7 @@ import { Exercise } from '../lib/schemas';
 import { gradeAnswer } from '../lib/grader';
 import { db } from '../db';
 import { ConjugationTable } from './ConjugationTable';
+import styles from './ExerciseEngine.module.css';
 
 interface ExerciseEngineProps {
   exercise: Exercise;
@@ -93,21 +94,15 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
     if (exercise.type === 'mcq' || exercise.type === 'multi') {
       const isMulti = exercise.type === 'multi';
       return (
-        <fieldset className="space-y-4" aria-label="Answer choices">
-          <legend className="text-sm font-semibold text-slate-700">
-            Choose {isMulti ? 'all that apply' : 'one option'}
-          </legend>
-          <div className="grid gap-2">
+        <fieldset className={styles.answerSurface} aria-label="Answer choices">
+          <legend className="ui-section__tag">{isMulti ? 'Choose all that apply' : 'Choose one option'}</legend>
+          <div className={styles.options}>
             {(exercise.options ?? []).map((option) => {
               const checked = selectedOptions.includes(option);
               return (
                 <label
                   key={option}
-                  className={`group relative flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-sm font-medium transition ${
-                    checked
-                      ? 'border-blue-500 bg-blue-50 text-blue-900 shadow-sm'
-                      : 'border-slate-200/80 bg-white/90 text-slate-700 hover:border-blue-300 hover:bg-blue-50/40'
-                  }`}
+                  className={`${styles.option} ${checked ? styles.optionSelected : ''}`}
                 >
                   <input
                     type={isMulti ? 'checkbox' : 'radio'}
@@ -118,14 +113,7 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
                     className="sr-only"
                   />
                   <span>{option}</span>
-                  <span
-                    aria-hidden="true"
-                    className={`flex h-6 w-6 items-center justify-center rounded-full border text-xs transition ${
-                      checked
-                        ? 'border-blue-500 bg-blue-500 text-white'
-                        : 'border-slate-300 text-slate-400'
-                    }`}
-                  >
+                  <span className={styles.optionIndicator} aria-hidden="true">
                     {checked ? '✓' : ''}
                   </span>
                 </label>
@@ -138,56 +126,49 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
 
     if (exercise.type === 'conjugate') {
       return (
-        <ConjugationTable expected={expectedArray} values={tableValues} onChange={setTableValues} />
+        <div className={styles.answerSurface}>
+          <ConjugationTable expected={expectedArray} values={tableValues} onChange={setTableValues} />
+        </div>
       );
     }
 
     return (
-      <input
-        className="w-full rounded-xl border border-slate-300 bg-white/90 px-3 py-2 text-sm text-slate-800 shadow-inner transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-        value={inputValue}
-        aria-label="Your answer"
-        onChange={(event) => setInputValue(event.target.value)}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            submit();
-          }
-        }}
-      />
+      <div className={styles.answerSurface}>
+        <input
+          className={styles.textInput}
+          value={inputValue}
+          aria-label="Your answer"
+          onChange={(event) => setInputValue(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' && !event.shiftKey) {
+              event.preventDefault();
+              submit();
+            }
+          }}
+        />
+      </div>
     );
   };
 
   return (
-    <div className="space-y-5" aria-live="polite">
-      <div className="rounded-2xl border border-slate-200/80 bg-white/90 p-5 shadow-sm">
-        <div className="prose prose-slate max-w-none">
+    <div className={styles.exercise} aria-live="polite">
+      <div className={styles.prompt}>
+        <div className="prose">
           <ReactMarkdown>{exercise.promptMd}</ReactMarkdown>
         </div>
       </div>
-      <div className="rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-inner">
-        {renderInput()}
-      </div>
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <button
-          type="button"
-          onClick={submit}
-          className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-700 focus-visible:ring"
-        >
-          Submit answer
-          <span aria-hidden="true">→</span>
+      {renderInput()}
+      <div className={styles.buttonRow}>
+        <button type="button" onClick={submit} className={styles.submitButton}>
+          Submit answer →
         </button>
-        <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Press Enter to submit</p>
+        <p className="ui-section__tag">Press Enter to submit</p>
       </div>
       {feedback && (
         <div
           role="status"
           aria-live="assertive"
-          className={`rounded-2xl border px-4 py-3 text-sm font-medium ${
-            feedback.includes('Correct')
-              ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
-              : 'border-rose-200 bg-rose-50 text-rose-700'
-          }`}
+          className={`${styles.feedback} ${feedback.includes('Correct') ? styles.feedbackSuccess : styles.feedbackError}`}
         >
           {feedback}
         </div>

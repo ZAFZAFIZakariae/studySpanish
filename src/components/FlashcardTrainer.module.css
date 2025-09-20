@@ -1,0 +1,230 @@
+.trainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--ui-radius-xl);
+  padding: 32px;
+  background: var(--ui-surface-strong);
+  border: 1px solid var(--ui-border);
+  box-shadow: var(--ui-shadow-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.headerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headerTag {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ui-text-muted);
+}
+
+.headerStatus {
+  border-radius: var(--ui-radius-pill);
+  padding: 6px 14px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cardSurface {
+  border-radius: var(--ui-radius-xl);
+  padding: 28px;
+  border: 1px solid var(--ui-border);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(224, 242, 254, 0.9));
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.promptLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.promptText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--ui-text-primary);
+  margin: 0;
+}
+
+.answerSurface {
+  border-radius: var(--ui-radius-lg);
+  padding: 20px;
+  background: rgba(240, 253, 244, 0.95);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  color: #047857;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.revealButton {
+  background: var(--ui-highlight);
+  color: var(--ui-text-inverse);
+  border: none;
+  border-radius: var(--ui-radius-pill);
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 18px 45px -28px rgba(79, 70, 229, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.revealButton:hover,
+.revealButton:focus-visible {
+  transform: translateY(-2px);
+}
+
+.gradeButton {
+  flex: 1;
+  border-radius: var(--ui-radius-pill);
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gradeSuccess {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: var(--ui-text-inverse);
+  box-shadow: 0 16px 40px -26px rgba(34, 197, 94, 0.6);
+}
+
+.gradeRetry {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  color: #fff5f5;
+  box-shadow: 0 16px 40px -26px rgba(239, 68, 68, 0.45);
+}
+
+.gradeButton:hover,
+.gradeButton:focus-visible {
+  transform: translateY(-2px);
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressBar {
+  position: relative;
+  height: 10px;
+  border-radius: var(--ui-radius-pill);
+  background: rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-highlight-secondary);
+  transition: width 0.25s ease;
+}
+
+.keyboardHint {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ui-text-muted);
+}
+
+.emptyState {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--ui-radius-xl);
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.95), rgba(45, 212, 191, 0.9));
+  color: #ecfdf5;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  box-shadow: 0 30px 70px -40px rgba(16, 185, 129, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.emptyHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.8rem;
+}
+
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.emptyActions a {
+  border-radius: var(--ui-radius-pill);
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ecfdf5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.emptyActions a:hover,
+.emptyActions a:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 720px) {
+  .trainer,
+  .emptyState {
+    padding: 24px;
+  }
+
+  .cardSurface {
+    padding: 20px;
+  }
+}

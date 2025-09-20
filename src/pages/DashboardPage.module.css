@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

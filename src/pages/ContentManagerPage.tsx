@@ -3,6 +3,7 @@ import { importSeed } from '../seed';
 import { SeedBundle, SeedBundleSchema } from '../seed/seedTypes';
 import { Exercise, Lesson } from '../lib/schemas';
 import { db } from '../db';
+import styles from './ContentManagerPage.module.css';
 
 interface DiffSummary {
   newLessons: Lesson[];
@@ -98,16 +99,19 @@ const ContentManagerPage: React.FC = () => {
     }
   };
 
-  const diffSummary = useMemo(() => ({
-    lessons: {
-      new: diff.newLessons.length,
-      updated: diff.updatedLessons.length,
-    },
-    exercises: {
-      new: diff.newExercises.length,
-      updated: diff.updatedExercises.length,
-    },
-  }), [diff]);
+  const diffSummary = useMemo(
+    () => ({
+      lessons: {
+        new: diff.newLessons.length,
+        updated: diff.updatedLessons.length,
+      },
+      exercises: {
+        new: diff.newExercises.length,
+        updated: diff.updatedExercises.length,
+      },
+    }),
+    [diff]
+  );
 
   const updateOfflineCache = useCallback(async () => {
     if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return;
@@ -139,22 +143,23 @@ const ContentManagerPage: React.FC = () => {
   };
 
   return (
-    <section className="space-y-6" aria-labelledby="content-manager-heading">
-      <header className="space-y-3 rounded-xl border bg-white p-5 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-widest text-blue-600">Content pipeline</p>
-        <h1 id="content-manager-heading" className="text-3xl font-bold text-slate-900">
+    <section className={styles.page} aria-labelledby="content-manager-heading">
+      <header className="ui-card ui-card--strong">
+        <span className="ui-section__tag">Content pipeline</span>
+        <h1 id="content-manager-heading" className="ui-section__title">
           Content manager
         </h1>
-        <p className="text-sm text-slate-600">
+        <p className="ui-section__subtitle">
           Import vetted JSON content drops, preview the diff, and keep the learner database indexed for offline use.
         </p>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-        <div className="space-y-6">
-          <section className="space-y-3 rounded-xl border bg-white p-4 shadow-sm">
-            <label htmlFor="content-upload" className="font-semibold text-slate-800">
-              Upload JSON bundle
+      <div className={styles.layout}>
+        <div className={styles.sectionGroup}>
+          <section className="ui-card">
+            <span className="ui-section__tag">Upload JSON bundle</span>
+            <label htmlFor="content-upload" className="ui-section__title">
+              Select bundle
             </label>
             <input
               id="content-upload"
@@ -163,35 +168,26 @@ const ContentManagerPage: React.FC = () => {
               onChange={handleFileChange}
               aria-describedby="content-upload-help"
             />
-            <p id="content-upload-help" className="text-sm text-slate-600">
-              The file should follow the SeedBundle schema with <code>lessons</code>, <code>exercises</code>, and
-              <code>flashcards</code> arrays.
+            <p id="content-upload-help" className="ui-section__subtitle">
+              The file should follow the SeedBundle schema with <code>lessons</code>, <code>exercises</code>, and <code>flashcards</code> arrays.
             </p>
             {fileName && (
-              <p className="text-sm text-slate-600" aria-live="polite">
+              <p className="ui-section__subtitle" aria-live="polite">
                 Selected file: <strong>{fileName}</strong>
               </p>
             )}
           </section>
 
           {status && (
-            <div
-              role="status"
-              className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900"
-              aria-live="polite"
-            >
+            <div role="status" className="ui-alert ui-alert--info" aria-live="polite">
               {status}
             </div>
           )}
 
           {errors.length > 0 && (
-            <div
-              role="alert"
-              className="space-y-2 rounded-lg border border-red-200 bg-red-50 p-4"
-              aria-live="assertive"
-            >
-              <h2 className="text-sm font-semibold text-red-700">Validation errors</h2>
-              <ul className="ml-5 list-disc text-sm text-red-700">
+            <div role="alert" className="ui-alert ui-alert--danger" aria-live="assertive">
+              <h2 className="ui-section__title">Validation errors</h2>
+              <ul className={styles.diffList}>
                 {errors.map((message, index) => (
                   <li key={index}>{message}</li>
                 ))}
@@ -199,111 +195,100 @@ const ContentManagerPage: React.FC = () => {
             </div>
           )}
 
-          {bundle && errors.length === 0 && (
-            <section className="space-y-4 rounded-xl border bg-white p-4 shadow-sm" aria-live="polite">
-              <header className="space-y-1">
-                <h2 className="text-xl font-semibold text-slate-900">Preview diff</h2>
-                <p className="text-sm text-slate-600">
-                  Confirm how many lessons and exercises will be inserted or updated before importing.
-                </p>
-              </header>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg border border-slate-200 p-3" aria-label="Lesson diff summary">
-                  <h3 className="text-sm font-semibold text-slate-800">Lessons</h3>
-                  <p className="text-sm text-slate-600">New: {diffSummary.lessons.new}</p>
-                  <p className="text-sm text-slate-600">Updated: {diffSummary.lessons.updated}</p>
-                  {diff.newLessons.length > 0 && (
-                    <details className="mt-2">
-                      <summary className="cursor-pointer text-sm text-blue-700 underline">View new lessons</summary>
-                      <ul className="ml-5 list-disc text-sm text-slate-600">
-                        {diff.newLessons.map((lesson) => (
-                          <li key={lesson.id}>{lesson.title}</li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
-                  {diff.updatedLessons.length > 0 && (
-                    <details className="mt-2">
-                      <summary className="cursor-pointer text-sm text-blue-700 underline">View lesson updates</summary>
-                      <ul className="ml-5 list-disc text-sm text-slate-600">
-                        {diff.updatedLessons.map((lesson) => (
-                          <li key={lesson.id}>{lesson.title}</li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
+          {bundle && (
+            <section className="ui-card ui-card--muted">
+              <span className="ui-section__tag">Preview diff</span>
+              <p className="ui-section__subtitle">
+                Double-check what’s changing before syncing the bundle to the offline cache.
+              </p>
+              <div className={styles.summaryGrid}>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.lessons.new}</strong>
+                  New lessons
                 </div>
-                <div className="rounded-lg border border-slate-200 p-3" aria-label="Exercise diff summary">
-                  <h3 className="text-sm font-semibold text-slate-800">Exercises</h3>
-                  <p className="text-sm text-slate-600">New: {diffSummary.exercises.new}</p>
-                  <p className="text-sm text-slate-600">Updated: {diffSummary.exercises.updated}</p>
-                  {diff.newExercises.length > 0 && (
-                    <details className="mt-2">
-                      <summary className="cursor-pointer text-sm text-blue-700 underline">View new exercises</summary>
-                      <ul className="ml-5 list-disc text-sm text-slate-600">
-                        {diff.newExercises.map((exercise) => (
-                          <li key={exercise.id}>{exercise.promptMd.slice(0, 60)}…</li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
-                  {diff.updatedExercises.length > 0 && (
-                    <details className="mt-2">
-                      <summary className="cursor-pointer text-sm text-blue-700 underline">View exercise updates</summary>
-                      <ul className="ml-5 list-disc text-sm text-slate-600">
-                        {diff.updatedExercises.map((exercise) => (
-                          <li key={exercise.id}>{exercise.promptMd.slice(0, 60)}…</li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.lessons.updated}</strong>
+                  Updated lessons
+                </div>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.exercises.new}</strong>
+                  New exercises
+                </div>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.exercises.updated}</strong>
+                  Updated exercises
                 </div>
               </div>
-
+              <div className="ui-section">
+                {diff.newLessons.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">New lessons</h3>
+                    <ul className={styles.diffList}>
+                      {diff.newLessons.map((lesson) => (
+                        <li key={lesson.id}>{lesson.title}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.updatedLessons.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">Updated lessons</h3>
+                    <ul className={styles.diffList}>
+                      {diff.updatedLessons.map((lesson) => (
+                        <li key={lesson.id}>{lesson.title}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.newExercises.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">New exercises</h3>
+                    <ul className={styles.diffList}>
+                      {diff.newExercises.map((exercise) => (
+                        <li key={exercise.id}>{exercise.promptMd.slice(0, 80)}…</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.updatedExercises.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">Updated exercises</h3>
+                    <ul className={styles.diffList}>
+                      {diff.updatedExercises.map((exercise) => (
+                        <li key={exercise.id}>{exercise.promptMd.slice(0, 80)}…</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
               <button
                 type="button"
+                className="ui-button ui-button--primary"
                 onClick={handleImport}
-                className="inline-flex items-center rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:ring"
                 disabled={importing}
-                aria-label="Import validated content"
               >
-                {importing ? 'Importing…' : 'Import content'}
+                {importing ? 'Importing…' : 'Import bundle →'}
               </button>
             </section>
           )}
         </div>
 
-        <aside className="space-y-4 rounded-xl border bg-white p-4 shadow-sm" aria-label="Import guidance">
-          <section className="space-y-2">
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Import checklist</h2>
-            <ol className="space-y-2 text-sm text-slate-600">
-              <li>Download the latest <code>.json</code> bundle from your content pipeline.</li>
-              <li>Upload it here to validate the structure and preview the diff.</li>
-              <li>
-                When the diff looks right, press <span className="font-semibold text-slate-800">Import content</span>{' '}
-                to update the on-device cache.
-              </li>
-            </ol>
-          </section>
-          <section className="space-y-2">
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Bundle structure</h2>
-            <ul className="space-y-1 text-sm text-slate-600">
-              <li>
-                <code>lessons[]</code> — Markdown content with <code>level</code>, <code>tags</code>, and optional
-                references.
-              </li>
-              <li>
-                <code>exercises[]</code> — Practice prompts linked by <code>lessonId</code>.
-              </li>
-              <li>
-                <code>flashcards[]</code> — Deck metadata powering the spaced repetition trainer.
-              </li>
+        <aside className={styles.sectionGroup} aria-label="Content manager tips">
+          <section className="ui-card ui-card--muted">
+            <span className="ui-section__tag">Why it matters</span>
+            <p className="ui-section__subtitle">
+              Use the same bundle across teammates to keep lessons, practice sets, and flashcards aligned. Importing updates the offline cache so learners can work without a connection.
+            </p>
+            <ul className="ui-section">
+              <li>Bundles include lessons, exercises, and flashcards in one JSON file.</li>
+              <li>Offline caching refreshes automatically after each import.</li>
+              <li>Any validation errors are listed before data is committed.</li>
             </ul>
           </section>
-          <section className="text-sm text-slate-600">
-            <p>
-              After importing, the service worker updates its offline cache so lessons, exercises, and flashcards are
-              available without a connection.
+          <section className="ui-card ui-card--muted">
+            <span className="ui-section__tag">Next steps</span>
+            <p className="ui-section__subtitle">
+              After importing, head to the overview to queue a lesson or jump into the flashcard trainer to drill new phrases.
             </p>
           </section>
         </aside>

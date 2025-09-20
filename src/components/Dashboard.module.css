@@ -1,0 +1,64 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.progressLabel {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.progressBadge {
+  border-radius: var(--ui-radius-pill);
+  padding: 6px 16px;
+  background: var(--ui-accent-soft);
+  color: var(--ui-accent-strong);
+  font-weight: 700;
+}
+
+.progressTrack {
+  position: relative;
+  height: 12px;
+  border-radius: var(--ui-radius-pill);
+  background: rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+}
+
+.progressValue {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-highlight-secondary);
+  transition: width 0.3s ease;
+}
+
+.tableWrapper {
+  border-radius: var(--ui-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+}
+
+.studyList {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.studyList li {
+  font-size: 0.95rem;
+  color: var(--ui-text-secondary);
+}
+
+.studyList strong {
+  color: var(--ui-text-primary);
+}

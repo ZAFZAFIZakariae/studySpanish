@@ -26,7 +26,7 @@ const App: React.FC = () => {
           <Route
             path="*"
             element={
-              <p role="alert" className="text-red-600">
+              <p role="alert" className="ui-alert ui-alert--danger">
                 Page not found. Use the navigation links above to continue learning.
               </p>
             }
