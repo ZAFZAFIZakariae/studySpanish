@@ -1,4 +1,5 @@
 import { db } from '../db';
+import { CUSTOM_SEED_MARKER, SEED_VERSION_KEY } from './ensureSeedData';
 import {
   LessonSchema,
   ExerciseSchema,
@@ -69,17 +70,18 @@ export async function importSeed(raw: unknown) {
     });
   }
 
-  // Upsert into Dexie
-  const [lCount, eCount, fCount] = await Promise.all([
-    db.lessons.bulkPut(bundle.lessons).then(() => bundle.lessons.length),
-    db.exercises.bulkPut(bundle.exercises).then(() => bundle.exercises.length),
-    db.flashcards.bulkPut(bundle.flashcards).then(() => bundle.flashcards.length),
-  ]);
+  // Upsert into Dexie and mark that a manual import has occurred
+  await db.transaction('rw', [db.lessons, db.exercises, db.flashcards, db.settings], async () => {
+    if (bundle.lessons.length) await db.lessons.bulkPut(bundle.lessons);
+    if (bundle.exercises.length) await db.exercises.bulkPut(bundle.exercises);
+    if (bundle.flashcards.length) await db.flashcards.bulkPut(bundle.flashcards);
+    await db.settings.put({ key: SEED_VERSION_KEY, value: CUSTOM_SEED_MARKER });
+  });
 
   return {
-    lessonsImported: lCount,
-    exercisesImported: eCount,
-    flashcardsImported: fCount,
+    lessonsImported: bundle.lessons.length,
+    exercisesImported: bundle.exercises.length,
+    flashcardsImported: bundle.flashcards.length,
   };
 }
 
