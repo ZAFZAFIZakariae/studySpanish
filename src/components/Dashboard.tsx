@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../db';
 import { computeAnalytics, AnalyticsSnapshot } from '../lib/analytics';
+import styles from './Dashboard.module.css';
 
 const formatDuration = (ms: number) => {
   if (!ms) return '0m';
@@ -38,7 +39,7 @@ export const Dashboard: React.FC = () => {
 
   if (loading) {
     return (
-      <p role="status" className="rounded-xl border bg-white p-4 text-sm text-slate-600">
+      <p role="status" className="ui-alert ui-alert--info">
         Loading analytics…
       </p>
     );
@@ -46,51 +47,45 @@ export const Dashboard: React.FC = () => {
 
   if (!snapshot) {
     return (
-      <p role="status" className="rounded-xl border bg-white p-4 text-sm text-slate-600">
+      <p role="status" className="ui-alert ui-alert--info">
         No data yet. Complete a few exercises to populate the dashboard.
       </p>
     );
   }
 
   return (
-    <div className="space-y-6" aria-live="polite">
-      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Mastery progress">
-        <div className="flex items-center justify-between gap-4">
-          <h2 className="text-xl font-semibold text-slate-900">Mastery progress</h2>
-          <span className="text-sm font-semibold text-emerald-700">{progress.toFixed(1)}% mastered</span>
+    <div className={styles.dashboard} aria-live="polite">
+      <section className="ui-card ui-card--muted" aria-label="Mastery progress">
+        <div className={styles.progressHeader}>
+          <h2 className={styles.progressLabel}>Mastery progress</h2>
+          <span className={styles.progressBadge}>{progress.toFixed(1)}% mastered</span>
         </div>
-        <div
-          className="h-4 rounded-full bg-slate-200"
-          role="progressbar"
-          aria-valuenow={progress}
-          aria-valuemin={0}
-          aria-valuemax={100}
-        >
-          <div className="h-4 rounded-full bg-emerald-500" style={{ width: `${progress}%` }} />
+        <div className={styles.progressTrack} role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
+          <div className={styles.progressValue} style={{ width: `${Math.min(progress, 100)}%` }} />
         </div>
-        <p className="text-sm text-slate-600">
+        <p className="ui-section__subtitle">
           Average attempts to mastery: {snapshot.averageAttemptsToMastery.toFixed(2)}
         </p>
       </section>
 
-      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Time on task by lesson">
-        <h3 className="text-lg font-semibold text-slate-900">Time on task (per lesson)</h3>
+      <section className="ui-card" aria-label="Time on task by lesson">
+        <h3 className="ui-section__title">Time on task (per lesson)</h3>
         {snapshot.lessonTimes.length === 0 ? (
-          <p className="text-sm text-slate-600">No lesson time logged yet.</p>
+          <p className="ui-alert ui-alert--info">No lesson time logged yet.</p>
         ) : (
-          <div className="overflow-hidden rounded-lg border border-slate-200">
-            <table className="min-w-full text-sm" aria-label="Lesson time summary">
-              <thead className="bg-slate-50 text-left text-slate-600">
+          <div className={styles.tableWrapper}>
+            <table className="ui-table" aria-label="Lesson time summary">
+              <thead>
                 <tr>
-                  <th className="px-3 py-2 font-semibold">Lesson</th>
-                  <th className="px-3 py-2 font-semibold">Time</th>
+                  <th>Lesson</th>
+                  <th>Time</th>
                 </tr>
               </thead>
               <tbody>
                 {snapshot.lessonTimes.map((lesson) => (
-                  <tr key={lesson.lessonId} className="odd:bg-white even:bg-slate-50">
-                    <td className="px-3 py-2 text-slate-700">{lesson.lessonTitle}</td>
-                    <td className="px-3 py-2 text-slate-700">{formatDuration(lesson.totalMs)}</td>
+                  <tr key={lesson.lessonId}>
+                    <td>{lesson.lessonTitle}</td>
+                    <td>{formatDuration(lesson.totalMs)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -99,26 +94,26 @@ export const Dashboard: React.FC = () => {
         )}
       </section>
 
-      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Weakest tags">
-        <h3 className="text-lg font-semibold text-slate-900">Weakest tags</h3>
+      <section className="ui-card" aria-label="Weakest tags">
+        <h3 className="ui-section__title">Weakest tags</h3>
         {snapshot.weakestTags.length === 0 ? (
-          <p className="text-sm text-slate-600">No accuracy data by tag yet.</p>
+          <p className="ui-alert ui-alert--info">No accuracy data by tag yet.</p>
         ) : (
-          <div className="overflow-hidden rounded-lg border border-slate-200">
-            <table className="min-w-full text-sm" aria-label="Tags with lowest accuracy">
-              <thead className="bg-slate-50 text-left text-slate-600">
+          <div className={styles.tableWrapper}>
+            <table className="ui-table" aria-label="Tags with lowest accuracy">
+              <thead>
                 <tr>
-                  <th className="px-3 py-2 font-semibold">Tag</th>
-                  <th className="px-3 py-2 font-semibold">Accuracy</th>
-                  <th className="px-3 py-2 font-semibold">Attempts</th>
+                  <th>Tag</th>
+                  <th>Accuracy</th>
+                  <th>Attempts</th>
                 </tr>
               </thead>
               <tbody>
                 {snapshot.weakestTags.map((tag) => (
-                  <tr key={tag.tag} className="odd:bg-white even:bg-slate-50">
-                    <td className="px-3 py-2 text-slate-700">{tag.tag}</td>
-                    <td className="px-3 py-2 text-slate-700">{tag.accuracy.toFixed(1)}%</td>
-                    <td className="px-3 py-2 text-slate-700">{tag.total}</td>
+                  <tr key={tag.tag}>
+                    <td>{tag.tag}</td>
+                    <td>{tag.accuracy.toFixed(1)}%</td>
+                    <td>{tag.total}</td>
                   </tr>
                 ))}
               </tbody>
@@ -127,15 +122,17 @@ export const Dashboard: React.FC = () => {
         )}
       </section>
 
-      <section className="space-y-3 rounded-xl border bg-white p-5 shadow-sm" aria-label="Recommended exercises">
-        <h3 className="text-lg font-semibold text-slate-900">Study plan (next five exercises)</h3>
+      <section className="ui-card" aria-label="Recommended exercises">
+        <h3 className="ui-section__title">Study plan (next five exercises)</h3>
         {snapshot.studyPlan.length === 0 ? (
-          <p className="text-sm text-slate-600">All caught up! Import new lessons or revisit completed content.</p>
+          <p className="ui-alert ui-alert--info">
+            All caught up! Import new lessons or revisit completed content.
+          </p>
         ) : (
-          <ol className="ml-5 list-decimal space-y-1 text-sm text-slate-700">
+          <ol className={styles.studyList}>
             {snapshot.studyPlan.map((item) => (
               <li key={item.exerciseId}>
-                <span className="font-semibold text-slate-900">{item.lessonTitle}</span> – {item.reason}
+                <strong>{item.lessonTitle}</strong> – {item.reason}
               </li>
             ))}
           </ol>
