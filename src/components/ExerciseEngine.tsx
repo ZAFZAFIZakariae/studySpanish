@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import remarkGfm from '@/lib/remarkGfm';
 import { Exercise, Grade } from '../lib/schemas';
 import { gradeAnswer } from '../lib/grader';
 import { db } from '../db';
