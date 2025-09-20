@@ -9,51 +9,20 @@ import type {
   TableRow,
   Text,
 } from 'mdast';
-import type { Options as MicromarkGfmOptions } from 'micromark-extension-gfm';
-import type { Options as MdastGfmOptions } from 'mdast-util-gfm';
-import { gfm as micromarkGfm } from 'micromark-extension-gfm';
-import { gfmFromMarkdown, gfmToMarkdown } from 'mdast-util-gfm';
 import { unified, type Plugin } from 'unified';
 import type { Parent } from 'unist';
-
-interface RemarkData {
-  micromarkExtensions?: unknown[];
-  fromMarkdownExtensions?: unknown[];
-  toMarkdownExtensions?: unknown[];
-}
-
-type CombinedOptions = MicromarkGfmOptions & MdastGfmOptions;
-
-export type RemarkGfmOptions = CombinedOptions | null | undefined;
+export type RemarkGfmOptions = Record<string, unknown> | null | undefined;
 
 /**
- * Lightweight reimplementation of the core logic from `remark-gfm`.
+ * Lightweight subset of the original `remark-gfm` plugin.
  *
- * We vendor the functionality to avoid depending on the full package at
- * runtime, which previously caused build failures when the module was missing
- * from some environments. The behavior mirrors the upstream plugin by
- * injecting the required micromark and mdast extensions.
+ * The project vendors a tiny table parser instead of bundling the full
+ * GitHub-flavored Markdown implementation. This keeps the build resilient in
+ * environments where the optional remark ecosystem packages are unavailable.
  */
-const remarkGfm: Plugin<[RemarkGfmOptions?], Root> = function remarkGfm(options) {
-  const settings = (options ?? {}) as CombinedOptions;
-  const data = (this.data() as RemarkData);
-
-  const micromarkExtensions = data.micromarkExtensions ?? (data.micromarkExtensions = []);
-  const fromMarkdownExtensions = data.fromMarkdownExtensions ?? (data.fromMarkdownExtensions = []);
-  const toMarkdownExtensions = data.toMarkdownExtensions ?? (data.toMarkdownExtensions = []);
-
-  const extension = invokeMicromark(settings);
-
-  if (extension) {
-    micromarkExtensions.push(extension);
-    fromMarkdownExtensions.push(gfmFromMarkdown());
-    toMarkdownExtensions.push(gfmToMarkdown(settings));
-    return;
-  }
-
-  logFallbackWarning();
-
+const remarkGfm: Plugin<[RemarkGfmOptions?], Root> = function remarkGfm() {
   return (tree) => {
+    logFallbackWarning();
     applyFallbackTables(tree);
   };
 };
@@ -63,15 +32,6 @@ export default remarkGfm;
 let inlineParser: ReturnType<typeof unified> | undefined;
 let loggedFallbackWarning = false;
 
-function invokeMicromark(options: CombinedOptions) {
-  try {
-    return micromarkGfm(options as MicromarkGfmOptions);
-  } catch (error) {
-    logFallbackWarning(error instanceof Error ? error : undefined);
-    return null;
-  }
-}
-
 function logFallbackWarning(error?: Error) {
   if (loggedFallbackWarning || typeof console === 'undefined') {
     return;
@@ -79,7 +39,7 @@ function logFallbackWarning(error?: Error) {
 
   loggedFallbackWarning = true;
   const message =
-    'micromark-extension-gfm is unavailable. Falling back to a limited table parser. Install the package to restore full GitHub-flavored Markdown support.';
+    'Using the bundled fallback for GitHub-flavored Markdown. Only basic table syntax is supported in this build.';
 
   if (error) {
     console.warn(message, error);
