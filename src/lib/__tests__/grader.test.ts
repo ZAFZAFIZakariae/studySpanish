@@ -34,6 +34,12 @@ describe('gradeAnswer normalization and diacritics', () => {
 
     expect(gradeAnswer(exercise, 'vivis').isCorrect).toBe(true);
   });
+
+  it('ignores inverted punctuation when comparing answers', () => {
+    const exercise = createExercise({ type: 'short', answer: '¿Qué?' });
+
+    expect(gradeAnswer(exercise, 'Que').isCorrect).toBe(true);
+  });
 });
 
 describe('Levenshtein threshold logic', () => {

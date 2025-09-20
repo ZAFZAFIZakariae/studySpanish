@@ -13,6 +13,8 @@ const restoreEnye = (value: string) =>
     .replace(new RegExp(ENYE_PLACEHOLDER, 'g'), 'ñ')
     .replace(new RegExp(ENYE_PLACEHOLDER_UPPER, 'g'), 'Ñ');
 
+const stripInvertedPunctuation = (value: string) => value.replace(/[¡¿]/g, '');
+
 const stripDiacritics = (value: string) =>
   restoreEnye(
     preserveEnye(value)
@@ -21,7 +23,7 @@ const stripDiacritics = (value: string) =>
   );
 
 const baseNormalize = (value: string, collapseSpaces = true) => {
-  let processed = stripDiacritics(value).toLowerCase();
+  let processed = stripInvertedPunctuation(stripDiacritics(value)).toLowerCase();
   processed = processed.trim();
   return collapseSpaces ? processed.replace(/\s+/g, ' ') : processed;
 };
