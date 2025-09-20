@@ -62,14 +62,9 @@
 
 .layout {
   display: grid;
-  gap: 24px;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-}
-
-.mainSections {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  gap: clamp(20px, 2.5vw, 32px);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
 }
 
 .lessonCard {
@@ -77,10 +72,18 @@
   border: 1px solid var(--ui-border);
   background: var(--ui-surface-strong);
   box-shadow: var(--ui-shadow);
-  padding: 24px;
+  padding: clamp(22px, 2.2vw, 30px);
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.lessonContent {
+  grid-column: 1 / span 8;
+}
+
+.practiceCard {
+  grid-column: 1 / span 9;
 }
 
 .lessonMetrics {
@@ -113,9 +116,23 @@
 }
 
 .sidebar {
+  grid-column: 9 / -1;
+  grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+@media (max-width: 1280px) {
+  .lessonContent,
+  .practiceCard,
+  .sidebar {
+    grid-column: 1 / -1;
+  }
+
+  .sidebar {
+    grid-row: auto;
+  }
 }
 
 .sidebarSection {
