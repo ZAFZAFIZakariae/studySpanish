@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import remarkGfm from '@/lib/remarkGfm';
 
 export const LessonViewer: React.FC<{ markdown: string }> = ({ markdown }) => {
   return (

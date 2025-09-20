@@ -14,7 +14,5 @@ declare module 'mdast-util-gfm' {
   export function gfmToMarkdown(options?: Options | null): unknown;
 }
 
-declare module 'remark-gfm' {
-  export { default } from 'remark-gfm/lib/index.js';
-  export * from 'remark-gfm/lib/index.js';
-}
+// The project now provides its own `remarkGfm` implementation, so the
+// upstream `remark-gfm` package is no longer pulled in directly.
