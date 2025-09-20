@@ -13,3 +13,8 @@ declare module 'mdast-util-gfm' {
   export function gfmFromMarkdown(): unknown;
   export function gfmToMarkdown(options?: Options | null): unknown;
 }
+
+declare module 'remark-gfm' {
+  export { default } from 'remark-gfm/lib/index.js';
+  export * from 'remark-gfm/lib/index.js';
+}
