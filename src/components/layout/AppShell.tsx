@@ -98,6 +98,7 @@ export const AppShell: React.FC<AppShellProps> = ({
   const navigate = useNavigate();
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState(() => new URLSearchParams(location.search).get('q') ?? '');
+  const isLessonView = location.pathname.startsWith('/lessons');
   const workspace = useWorkspaceSnapshot();
 
   useEffect(() => {
@@ -119,6 +120,7 @@ export const AppShell: React.FC<AppShellProps> = ({
         className={[
           styles.mainCanvas,
           focusMode ? styles.mainCanvasFocused : '',
+          isLessonView ? styles.mainCanvasWide : '',
         ]
           .filter(Boolean)
           .join(' ')}
@@ -126,7 +128,7 @@ export const AppShell: React.FC<AppShellProps> = ({
         {children}
       </div>
     ),
-    [children, focusMode]
+    [children, focusMode, isLessonView]
   );
 
   const quickActions: QuickAction[] = useMemo(() => {
@@ -372,12 +374,20 @@ export const AppShell: React.FC<AppShellProps> = ({
             </div>
           </header>
 
-          <div className={styles.contentArea} data-focus={focusMode ? 'on' : 'off'}>
+          <div
+            className={styles.contentArea}
+            data-focus={focusMode ? 'on' : 'off'}
+            data-sidebar={isLessonView ? 'hidden' : 'visible'}
+          >
             <main id="main-content" tabIndex={-1} className={styles.main}>
               {mainContent}
             </main>
 
-            <aside className={styles.sidePanel} aria-label="Study tips">
+            <aside
+              className={styles.sidePanel}
+              aria-label="Study tips"
+              aria-hidden={isLessonView}
+            >
               <section className={`ui-card ui-card--muted ${styles.sideCard}`}>
                 <span className="ui-section__tag">Session checklist</span>
                 <ol className="ui-section" aria-label="Study session checklist">

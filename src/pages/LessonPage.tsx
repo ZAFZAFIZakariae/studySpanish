@@ -232,77 +232,81 @@ const LessonPage: React.FC = () => {
       </header>
 
       <div className={styles.layout}>
-        <div className={styles.mainSections}>
-          <section className={styles.lessonCard} aria-labelledby="lesson-content-heading">
-            <h2 id="lesson-content-heading" className="ui-section__title">
-              Lesson content
-            </h2>
-            <LessonViewer markdown={lesson.markdown} />
-          </section>
+        <section
+          className={`${styles.lessonCard} ${styles.lessonContent}`}
+          aria-labelledby="lesson-content-heading"
+        >
+          <h2 id="lesson-content-heading" className="ui-section__title">
+            Lesson content
+          </h2>
+          <LessonViewer markdown={lesson.markdown} />
+        </section>
 
-          <section className={styles.lessonCard} aria-labelledby="lesson-exercises-heading">
-            <div>
-              <h2 id="lesson-exercises-heading" className="ui-section__title">
-                Practise the lesson
-              </h2>
-              <p className="ui-section__subtitle">
-                Work through each prompt to log attempts and unlock mastery progress.
-              </p>
-            </div>
-            {lessonSummary.totalExercises > 0 && (
-              <div className={styles.lessonMetrics} aria-label="Lesson progress summary">
-                <div className={styles.lessonMetric}>
-                  <span className={styles.lessonMetricLabel}>Mastered</span>
-                  <span className={styles.lessonMetricValue}>
-                    {lessonSummary.mastered}/{lessonSummary.totalExercises}
-                  </span>
-                </div>
-                <div className={styles.lessonMetric}>
-                  <span className={styles.lessonMetricLabel}>Attempted</span>
-                  <span className={styles.lessonMetricValue}>
-                    {lessonSummary.attempted}/{lessonSummary.totalExercises}
-                  </span>
-                </div>
-                <div className={styles.lessonMetric}>
-                  <span className={styles.lessonMetricLabel}>Accuracy</span>
-                  <span className={styles.lessonMetricValue}>{lessonSummary.accuracy}%</span>
-                </div>
-                <div className={styles.lessonMetric}>
-                  <span className={styles.lessonMetricLabel}>Last reviewed</span>
-                  <span className={styles.lessonMetricValue}>
-                    {formatRelativeTime(lessonSummary.lastAttemptAt)}
-                  </span>
-                </div>
+        <section
+          className={`${styles.lessonCard} ${styles.practiceCard}`}
+          aria-labelledby="lesson-exercises-heading"
+        >
+          <div>
+            <h2 id="lesson-exercises-heading" className="ui-section__title">
+              Practise the lesson
+            </h2>
+            <p className="ui-section__subtitle">
+              Work through each prompt to log attempts and unlock mastery progress.
+            </p>
+          </div>
+          {lessonSummary.totalExercises > 0 && (
+            <div className={styles.lessonMetrics} aria-label="Lesson progress summary">
+              <div className={styles.lessonMetric}>
+                <span className={styles.lessonMetricLabel}>Mastered</span>
+                <span className={styles.lessonMetricValue}>
+                  {lessonSummary.mastered}/{lessonSummary.totalExercises}
+                </span>
               </div>
-            )}
-            {exercises.map((exercise) => {
-              const summary = exerciseSummaries.get(exercise.id);
-              const attempts = summary?.attempts ?? 0;
-              const accuracy = summary ? `${summary.accuracy}% accuracy` : '0% accuracy';
-              const lastReviewed = formatRelativeTime(summary?.lastAttemptAt);
-              return (
-                <div key={exercise.id} aria-label={`Exercise ${exercise.id}`}>
-                  <div className={styles.exerciseSummary}>
-                    <span>
-                      {attempts} attempt{attempts === 1 ? '' : 's'} logged
-                    </span>
-                    <span>{accuracy}</span>
-                    <span>{lastReviewed}</span>
-                    {summary?.mastered ? (
-                      <span className={styles.exerciseMastery}>Mastered</span>
-                    ) : null}
-                  </div>
-                  <ExerciseEngine exercise={exercise} onGrade={handleGrade} />
+              <div className={styles.lessonMetric}>
+                <span className={styles.lessonMetricLabel}>Attempted</span>
+                <span className={styles.lessonMetricValue}>
+                  {lessonSummary.attempted}/{lessonSummary.totalExercises}
+                </span>
+              </div>
+              <div className={styles.lessonMetric}>
+                <span className={styles.lessonMetricLabel}>Accuracy</span>
+                <span className={styles.lessonMetricValue}>{lessonSummary.accuracy}%</span>
+              </div>
+              <div className={styles.lessonMetric}>
+                <span className={styles.lessonMetricLabel}>Last reviewed</span>
+                <span className={styles.lessonMetricValue}>
+                  {formatRelativeTime(lessonSummary.lastAttemptAt)}
+                </span>
+              </div>
+            </div>
+          )}
+          {exercises.map((exercise) => {
+            const summary = exerciseSummaries.get(exercise.id);
+            const attempts = summary?.attempts ?? 0;
+            const accuracy = summary ? `${summary.accuracy}% accuracy` : '0% accuracy';
+            const lastReviewed = formatRelativeTime(summary?.lastAttemptAt);
+            return (
+              <div key={exercise.id} aria-label={`Exercise ${exercise.id}`}>
+                <div className={styles.exerciseSummary}>
+                  <span>
+                    {attempts} attempt{attempts === 1 ? '' : 's'} logged
+                  </span>
+                  <span>{accuracy}</span>
+                  <span>{lastReviewed}</span>
+                  {summary?.mastered ? (
+                    <span className={styles.exerciseMastery}>Mastered</span>
+                  ) : null}
                 </div>
-              );
-            })}
-            {exercises.length === 0 && (
-              <p role="status" className="ui-alert ui-alert--info">
-                No exercises found for this lesson yet.
-              </p>
-            )}
-          </section>
-        </div>
+                <ExerciseEngine exercise={exercise} onGrade={handleGrade} />
+              </div>
+            );
+          })}
+          {exercises.length === 0 && (
+            <p role="status" className="ui-alert ui-alert--info">
+              No exercises found for this lesson yet.
+            </p>
+          )}
+        </section>
 
         <aside className={styles.sidebar} aria-label="Study guidance">
           <section className={styles.sidebarSection}>
