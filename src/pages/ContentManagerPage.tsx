@@ -1,7 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { importSeed } from '../seed';
-import { SeedBundle, SeedBundleSchema } from '../seed/seedTypes';
-import { Exercise, Lesson } from '../lib/schemas';
+import { Exercise, Lesson, SeedBundle, SeedBundleSchema } from '../lib/schemas';
 import { db } from '../db';
 import styles from './ContentManagerPage.module.css';
 

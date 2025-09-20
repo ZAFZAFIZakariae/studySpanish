@@ -60,3 +60,10 @@ export const FlashcardSchema = z.object({
   }).optional()
 });
 export type Flashcard = z.infer<typeof FlashcardSchema>;
+
+export const SeedBundleSchema = z.object({
+  lessons: z.array(LessonSchema).default([]),
+  exercises: z.array(ExerciseSchema).default([]),
+  flashcards: z.array(FlashcardSchema).default([]),
+});
+export type SeedBundle = z.infer<typeof SeedBundleSchema>;
