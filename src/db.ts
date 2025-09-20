@@ -17,6 +17,14 @@ class AppDB extends Dexie {
       flashcards: 'id,tag,deck',
       settings: 'key'
     });
+
+    this.version(2).stores({
+      lessons: 'id,slug,level,tags',
+      exercises: 'id,lessonId,type',
+      grades: 'id,exerciseId,isCorrect,score',
+      flashcards: 'id,tag,deck',
+      settings: 'key'
+    });
   }
 }
 
