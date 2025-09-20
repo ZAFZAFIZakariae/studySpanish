@@ -1,11 +1,21 @@
-const STATIC_CACHE = 'static-v1';
-const DATA_CACHE = 'data-v1';
+const STATIC_CACHE = 'static-v2';
+const DATA_CACHE = 'data-v2';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE).then((cache) =>
-      cache.addAll(['/', '/index.html', '/manifest.webmanifest', '/icon.svg'])
-    )
+    (async () => {
+      const cache = await caches.open(STATIC_CACHE);
+      await cache.addAll(['/manifest.webmanifest', '/icon.svg']);
+      try {
+        const indexRequest = new Request('/index.html', { cache: 'reload' });
+        const response = await fetch(indexRequest);
+        if (response.ok) {
+          await cache.put('/index.html', response.clone());
+        }
+      } catch (error) {
+        console.warn('Skipping index.html prefetch', error);
+      }
+    })()
   );
   self.skipWaiting();
 });
@@ -23,20 +33,6 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-const networkFirst = async (request) => {
-  const cache = await caches.open(STATIC_CACHE);
-  try {
-    const response = await fetch(request);
-    if (response && response.status === 200) {
-      cache.put(request, response.clone());
-    }
-    return response;
-  } catch (error) {
-    const cached = await cache.match(request);
-    return cached ?? new Response('Offline', { status: 503 });
-  }
-};
-
 const cacheFirst = async (request) => {
   const cached = await caches.match(request);
   if (cached) {
@@ -50,7 +46,27 @@ const cacheFirst = async (request) => {
     }
     return response;
   } catch (error) {
-    return new Response('Offline', { status: 503 });
+    return cached ?? new Response('Offline', { status: 503 });
+  }
+};
+
+const serveNavigation = async (request) => {
+  const cache = await caches.open(STATIC_CACHE);
+  try {
+    const response = await fetch(request, { cache: 'no-store' });
+    if (response.ok) {
+      await cache.put('/index.html', response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match('/index.html');
+    return (
+      cached ??
+      new Response('Offline', {
+        status: 503,
+        headers: { 'Content-Type': 'text/html' },
+      })
+    );
   }
 };
 
@@ -70,7 +86,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (request.mode === 'navigate' || (request.destination === 'document' && request.url.startsWith(self.location.origin))) {
-    event.respondWith(networkFirst(request));
+    event.respondWith(serveNavigation(request));
     return;
   }
 
