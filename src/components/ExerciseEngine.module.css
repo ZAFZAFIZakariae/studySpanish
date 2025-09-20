@@ -5,6 +5,23 @@
   margin-bottom: 24px;
 }
 
+.exerciseMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topicBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--ui-radius-pill);
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 .prompt {
   border-radius: var(--ui-radius-lg);
   border: 1px solid var(--ui-border);
@@ -132,4 +149,44 @@
   background: rgba(248, 113, 113, 0.12);
   border: 1px solid rgba(248, 113, 113, 0.45);
   color: #b91c1c;
+}
+
+.supportRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.supportButton {
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-surface);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.supportButton:hover,
+.supportButton:focus-visible {
+  border-color: var(--ui-accent);
+  color: var(--ui-accent-strong);
+}
+
+.hintList {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--ui-text-secondary);
+}
+
+.rubric {
+  border-radius: var(--ui-radius-lg);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+  padding: 16px;
+  color: var(--ui-text-secondary);
 }

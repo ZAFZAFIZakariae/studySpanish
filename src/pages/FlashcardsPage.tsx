@@ -11,7 +11,7 @@ const FlashcardsPage: React.FC = () => (
         Flashcard trainer
       </h1>
       <p className="ui-section__subtitle">
-        Keep verbs, connectors, and presentation phrases ready. Flip cards with the spacebar and grade your recall with J/K or the arrow keys to move quickly.
+        Keep verbs, connectors, and presentation phrases ready. Flip cards with the spacebar and grade each recall with the number keys or arrows to log Again, Hard, Good, or Easy in one motion.
       </p>
       <div className="ui-pill-group">
         <Link to="/" className="ui-button ui-button--ghost">
@@ -33,10 +33,16 @@ const FlashcardsPage: React.FC = () => (
               <strong>Space</strong> — Reveal the back.
             </li>
             <li>
-              <strong>J / ←</strong> — Mark as “I forgot”.
+              <strong>1 / ↓</strong> — Mark as “Again” and relearn soon.
             </li>
             <li>
-              <strong>K / →</strong> — Mark as “I knew it”.
+              <strong>2 / ←</strong> — Mark as “Hard” to shorten the next interval.
+            </li>
+            <li>
+              <strong>3 / →</strong> — Mark as “Good” when the recall felt solid.
+            </li>
+            <li>
+              <strong>4 / ↑</strong> — Mark as “Easy” to push the card further out.
             </li>
           </ul>
         </section>

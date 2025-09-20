@@ -74,7 +74,11 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET') return;
 
-  if (request.url.endsWith('/offline-lessons') || request.url.endsWith('/offline-exercises')) {
+  if (
+    request.url.endsWith('/offline-lessons') ||
+    request.url.endsWith('/offline-exercises') ||
+    request.url.endsWith('/offline-flashcards')
+  ) {
     event.respondWith(
       caches.open(DATA_CACHE).then((cache) =>
         cache.match(request).then((response) =>
@@ -101,7 +105,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(fetch(request));
 });
 
-const cacheDataBundle = async ({ lessons = [], exercises = [] }) => {
+const cacheDataBundle = async ({ lessons = [], exercises = [], flashcards = [] }) => {
   const cache = await caches.open(DATA_CACHE);
   await cache.put(
     new Request('/offline-lessons'),
@@ -112,6 +116,12 @@ const cacheDataBundle = async ({ lessons = [], exercises = [] }) => {
   await cache.put(
     new Request('/offline-exercises'),
     new Response(JSON.stringify(exercises), {
+      headers: { 'Content-Type': 'application/json' },
+    })
+  );
+  await cache.put(
+    new Request('/offline-flashcards'),
+    new Response(JSON.stringify(flashcards), {
       headers: { 'Content-Type': 'application/json' },
     })
   );
@@ -153,9 +163,9 @@ const markGradesSynced = async () => {
 };
 
 self.addEventListener('message', (event) => {
-  const { type, lessons, exercises } = event.data || {};
+  const { type, lessons, exercises, flashcards } = event.data || {};
   if (type === 'CACHE_DATA') {
-    event.waitUntil(cacheDataBundle({ lessons, exercises }));
+    event.waitUntil(cacheDataBundle({ lessons, exercises, flashcards }));
   }
   if (type === 'SYNC_GRADES') {
     event.waitUntil(markGradesSynced());

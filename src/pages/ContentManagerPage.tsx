@@ -1,23 +1,86 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { importSeed } from '../seed';
 import { SeedBundle, SeedBundleSchema } from '../seed/seedTypes';
-import { Exercise, Lesson } from '../lib/schemas';
+import { Exercise, Flashcard, Lesson } from '../lib/schemas';
 import { db } from '../db';
 import styles from './ContentManagerPage.module.css';
 
+interface FieldChange {
+  field: string;
+  before: string;
+  after: string;
+}
+
+interface UpdatedEntity<T> {
+  item: T;
+  changes: FieldChange[];
+}
+
 interface DiffSummary {
   newLessons: Lesson[];
-  updatedLessons: Lesson[];
+  updatedLessons: UpdatedEntity<Lesson>[];
+  removedLessons: Lesson[];
   newExercises: Exercise[];
-  updatedExercises: Exercise[];
+  updatedExercises: UpdatedEntity<Exercise>[];
+  removedExercises: Exercise[];
+  newFlashcards: Flashcard[];
+  updatedFlashcards: UpdatedEntity<Flashcard>[];
+  removedFlashcards: Flashcard[];
 }
 
 const emptyDiff: DiffSummary = {
   newLessons: [],
   updatedLessons: [],
+  removedLessons: [],
   newExercises: [],
   updatedExercises: [],
+  removedExercises: [],
+  newFlashcards: [],
+  updatedFlashcards: [],
+  removedFlashcards: [],
 };
+
+const formatValue = (value: unknown) => {
+  if (value === undefined || value === null) return '—';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value);
+  return JSON.stringify(value);
+};
+
+const collectChanges = (
+  previous: Record<string, unknown> | undefined,
+  next: Record<string, unknown>,
+  prefix = ''
+): FieldChange[] => {
+  const fields = new Set([
+    ...Object.keys(previous ?? {}),
+    ...Object.keys(next ?? {}),
+  ]);
+  const changes: FieldChange[] = [];
+  fields.forEach((key) => {
+    const before = previous ? (previous as any)[key] : undefined;
+    const after = (next as any)[key];
+    const path = prefix ? `${prefix}.${key}` : key;
+    if (
+      before &&
+      after &&
+      typeof before === 'object' &&
+      !Array.isArray(before) &&
+      typeof after === 'object' &&
+      !Array.isArray(after)
+    ) {
+      changes.push(...collectChanges(before as Record<string, unknown>, after as Record<string, unknown>, path));
+      return;
+    }
+    if (JSON.stringify(before) !== JSON.stringify(after)) {
+      changes.push({ field: path, before: formatValue(before), after: formatValue(after) });
+    }
+  });
+  return changes;
+};
+
+const diffEntity = <T extends Record<string, unknown>>(previous: T | undefined, next: T): FieldChange[] =>
+  collectChanges(previous, next);
 
 const ContentManagerPage: React.FC = () => {
   const [fileName, setFileName] = useState<string>('');
@@ -26,6 +89,7 @@ const ContentManagerPage: React.FC = () => {
   const [errors, setErrors] = useState<string[]>([]);
   const [status, setStatus] = useState<string>('');
   const [importing, setImporting] = useState(false);
+  const [remoteUrl, setRemoteUrl] = useState('');
 
   const resetState = () => {
     setBundle(null);
@@ -35,36 +99,77 @@ const ContentManagerPage: React.FC = () => {
   };
 
   const computeDiff = useCallback(async (data: SeedBundle) => {
-    const [existingLessons, existingExercises] = await Promise.all([
+    const [existingLessons, existingExercises, existingFlashcards] = await Promise.all([
       db.lessons.toArray(),
       db.exercises.toArray(),
+      db.flashcards.toArray(),
     ]);
     const lessonsById = new Map(existingLessons.map((lesson) => [lesson.id, lesson]));
     const exercisesById = new Map(existingExercises.map((exercise) => [exercise.id, exercise]));
+    const flashcardsById = new Map(existingFlashcards.map((card) => [card.id, card]));
 
     const newLessons: Lesson[] = [];
-    const updatedLessons: Lesson[] = [];
+    const updatedLessons: UpdatedEntity<Lesson>[] = [];
+    const incomingLessonIds = new Set<string>();
     data.lessons.forEach((lesson) => {
+      incomingLessonIds.add(lesson.id);
       const current = lessonsById.get(lesson.id);
       if (!current) {
         newLessons.push(lesson);
-      } else if (JSON.stringify(current) !== JSON.stringify(lesson)) {
-        updatedLessons.push(lesson);
+        return;
+      }
+      const changes = diffEntity(current, lesson);
+      if (changes.length) {
+        updatedLessons.push({ item: lesson, changes });
       }
     });
+    const removedLessons = existingLessons.filter((lesson) => !incomingLessonIds.has(lesson.id));
 
     const newExercises: Exercise[] = [];
-    const updatedExercises: Exercise[] = [];
+    const updatedExercises: UpdatedEntity<Exercise>[] = [];
+    const incomingExerciseIds = new Set<string>();
     data.exercises.forEach((exercise) => {
+      incomingExerciseIds.add(exercise.id);
       const current = exercisesById.get(exercise.id);
       if (!current) {
         newExercises.push(exercise);
-      } else if (JSON.stringify(current) !== JSON.stringify(exercise)) {
-        updatedExercises.push(exercise);
+        return;
+      }
+      const changes = diffEntity(current, exercise);
+      if (changes.length) {
+        updatedExercises.push({ item: exercise, changes });
       }
     });
+    const removedExercises = existingExercises.filter((exercise) => !incomingExerciseIds.has(exercise.id));
 
-    setDiff({ newLessons, updatedLessons, newExercises, updatedExercises });
+    const newFlashcards: Flashcard[] = [];
+    const updatedFlashcards: UpdatedEntity<Flashcard>[] = [];
+    const incomingFlashcardIds = new Set<string>();
+    data.flashcards.forEach((card) => {
+      incomingFlashcardIds.add(card.id);
+      const current = flashcardsById.get(card.id);
+      if (!current) {
+        newFlashcards.push(card);
+        return;
+      }
+      const changes = diffEntity(current, card);
+      if (changes.length) {
+        updatedFlashcards.push({ item: card, changes });
+      }
+    });
+    const removedFlashcards = existingFlashcards.filter((card) => !incomingFlashcardIds.has(card.id));
+
+    setDiff({
+      newLessons,
+      updatedLessons,
+      removedLessons,
+      newExercises,
+      updatedExercises,
+      removedExercises,
+      newFlashcards,
+      updatedFlashcards,
+      removedFlashcards,
+    });
   }, []);
 
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -99,15 +204,51 @@ const ContentManagerPage: React.FC = () => {
     }
   };
 
+  const handleFetchRemote = async () => {
+    if (!remoteUrl) return;
+    setImporting(true);
+    try {
+      const response = await fetch(remoteUrl);
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+      const json = await response.json();
+      const parsed = SeedBundleSchema.safeParse(json);
+      if (!parsed.success) {
+        setBundle(null);
+        setDiff(emptyDiff);
+        setErrors(parsed.error.errors.map((issue) => `${issue.path.join('.')} – ${issue.message}`));
+        setStatus('Validation failed. Fix the errors below.');
+        return;
+      }
+      setErrors([]);
+      setBundle(parsed.data);
+      setStatus(`Fetched bundle from ${remoteUrl}. Review the diff before importing.`);
+      await computeDiff(parsed.data);
+    } catch (error) {
+      setErrors([`Remote fetch failed: ${(error as Error).message}`]);
+      setStatus('Unable to fetch remote bundle.');
+    } finally {
+      setImporting(false);
+    }
+  };
+
   const diffSummary = useMemo(
     () => ({
       lessons: {
         new: diff.newLessons.length,
         updated: diff.updatedLessons.length,
+        removed: diff.removedLessons.length,
       },
       exercises: {
         new: diff.newExercises.length,
         updated: diff.updatedExercises.length,
+        removed: diff.removedExercises.length,
+      },
+      flashcards: {
+        new: diff.newFlashcards.length,
+        updated: diff.updatedFlashcards.length,
+        removed: diff.removedFlashcards.length,
       },
     }),
     [diff]
@@ -115,15 +256,17 @@ const ContentManagerPage: React.FC = () => {
 
   const updateOfflineCache = useCallback(async () => {
     if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return;
-    const [lessons, exercises] = await Promise.all([
+    const [lessons, exercises, flashcards] = await Promise.all([
       db.lessons.toArray(),
       db.exercises.toArray(),
+      db.flashcards.toArray(),
     ]);
     const registration = await navigator.serviceWorker.ready;
     registration.active?.postMessage({
       type: 'CACHE_DATA',
       lessons,
       exercises,
+      flashcards,
     });
   }, []);
 
@@ -132,9 +275,15 @@ const ContentManagerPage: React.FC = () => {
     setImporting(true);
     try {
       await importSeed(bundle);
+      await db.settings.put({ key: 'last-imported-at', value: new Date().toISOString() });
+      if (remoteUrl) {
+        await db.settings.put({ key: 'last-import-url', value: remoteUrl });
+      }
       await computeDiff(bundle);
       await updateOfflineCache();
-      setStatus(`Imported ${bundle.lessons.length} lessons and ${bundle.exercises.length} exercises.`);
+      setStatus(
+        `Imported ${bundle.lessons.length} lessons, ${bundle.exercises.length} exercises, and ${bundle.flashcards.length} flashcards. Offline cache refreshed.`
+      );
     } catch (error) {
       setErrors([`Import failed: ${(error as Error).message}`]);
     } finally {
@@ -176,6 +325,32 @@ const ContentManagerPage: React.FC = () => {
                 Selected file: <strong>{fileName}</strong>
               </p>
             )}
+            <div className={styles.remoteRow}>
+              <label htmlFor="remote-url" className={styles.remoteLabel}>
+                Or fetch from URL
+              </label>
+              <div className={styles.remoteControls}>
+                <input
+                  id="remote-url"
+                  type="url"
+                  placeholder="https://example.com/spanish-bundle.json"
+                  value={remoteUrl}
+                  onChange={(event) => setRemoteUrl(event.target.value)}
+                  aria-describedby="remote-url-hint"
+                />
+                <button
+                  type="button"
+                  className="ui-button ui-button--secondary"
+                  onClick={handleFetchRemote}
+                  disabled={!remoteUrl || importing}
+                >
+                  {importing ? 'Fetching…' : 'Fetch bundle'}
+                </button>
+              </div>
+              <p id="remote-url-hint" className="ui-section__subtitle">
+                Paste a JSON endpoint or GitHub raw URL. We’ll validate before importing.
+              </p>
+            </div>
           </section>
 
           {status && (
@@ -211,6 +386,10 @@ const ContentManagerPage: React.FC = () => {
                   Updated lessons
                 </div>
                 <div className={styles.summaryCard}>
+                  <strong>{diffSummary.lessons.removed}</strong>
+                  Removed lessons
+                </div>
+                <div className={styles.summaryCard}>
                   <strong>{diffSummary.exercises.new}</strong>
                   New exercises
                 </div>
@@ -218,8 +397,24 @@ const ContentManagerPage: React.FC = () => {
                   <strong>{diffSummary.exercises.updated}</strong>
                   Updated exercises
                 </div>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.exercises.removed}</strong>
+                  Removed exercises
+                </div>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.flashcards.new}</strong>
+                  New flashcards
+                </div>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.flashcards.updated}</strong>
+                  Updated flashcards
+                </div>
+                <div className={styles.summaryCard}>
+                  <strong>{diffSummary.flashcards.removed}</strong>
+                  Removed flashcards
+                </div>
               </div>
-              <div className="ui-section">
+              <div className={styles.diffColumns}>
                 {diff.newLessons.length > 0 && (
                   <div>
                     <h3 className="ui-section__title">New lessons</h3>
@@ -234,7 +429,26 @@ const ContentManagerPage: React.FC = () => {
                   <div>
                     <h3 className="ui-section__title">Updated lessons</h3>
                     <ul className={styles.diffList}>
-                      {diff.updatedLessons.map((lesson) => (
+                      {diff.updatedLessons.map(({ item, changes }) => (
+                        <li key={item.id}>
+                          <strong>{item.title}</strong>
+                          <ul className={styles.changeList}>
+                            {changes.map((change) => (
+                              <li key={change.field}>
+                                <code>{change.field}</code>: {change.before} → {change.after}
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.removedLessons.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">Removed lessons</h3>
+                    <ul className={styles.diffList}>
+                      {diff.removedLessons.map((lesson) => (
                         <li key={lesson.id}>{lesson.title}</li>
                       ))}
                     </ul>
@@ -254,8 +468,70 @@ const ContentManagerPage: React.FC = () => {
                   <div>
                     <h3 className="ui-section__title">Updated exercises</h3>
                     <ul className={styles.diffList}>
-                      {diff.updatedExercises.map((exercise) => (
+                      {diff.updatedExercises.map(({ item, changes }) => (
+                        <li key={item.id}>
+                          <strong>{item.promptMd.slice(0, 40)}…</strong>
+                          <ul className={styles.changeList}>
+                            {changes.map((change) => (
+                              <li key={change.field}>
+                                <code>{change.field}</code>: {change.before} → {change.after}
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.removedExercises.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">Removed exercises</h3>
+                    <ul className={styles.diffList}>
+                      {diff.removedExercises.map((exercise) => (
                         <li key={exercise.id}>{exercise.promptMd.slice(0, 80)}…</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.newFlashcards.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">New flashcards</h3>
+                    <ul className={styles.diffList}>
+                      {diff.newFlashcards.map((card) => (
+                        <li key={card.id}>
+                          <strong>{card.front}</strong> → {card.back}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.updatedFlashcards.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">Updated flashcards</h3>
+                    <ul className={styles.diffList}>
+                      {diff.updatedFlashcards.map(({ item, changes }) => (
+                        <li key={item.id}>
+                          <strong>{item.front}</strong>
+                          <ul className={styles.changeList}>
+                            {changes.map((change) => (
+                              <li key={change.field}>
+                                <code>{change.field}</code>: {change.before} → {change.after}
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {diff.removedFlashcards.length > 0 && (
+                  <div>
+                    <h3 className="ui-section__title">Removed flashcards</h3>
+                    <ul className={styles.diffList}>
+                      {diff.removedFlashcards.map((card) => (
+                        <li key={card.id}>
+                          <strong>{card.front}</strong> → {card.back}
+                        </li>
                       ))}
                     </ul>
                   </div>

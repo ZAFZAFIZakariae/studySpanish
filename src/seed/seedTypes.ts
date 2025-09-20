@@ -7,7 +7,7 @@ import { z } from 'zod';
 
 export const LessonSchema = z.object({
   id: z.string(),
-  level: z.enum(['B1', 'C1']),
+  level: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
   title: z.string(),
   slug: z.string(),
   tags: z.array(z.string()),
@@ -43,7 +43,7 @@ export const ExerciseSchema = z.object({
     .optional(),
   meta: z
     .object({
-      difficulty: z.enum(['A2', 'B1', 'B2', 'C1']),
+      difficulty: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
       skills: z.array(z.enum(['read', 'write', 'listen', 'speak'])),
       topic: z.string().optional(),
     })
@@ -75,6 +75,8 @@ export const FlashcardSchema = z.object({
       bucket: z.number(),
       lastReview: z.string().optional(), // ISO
       nextDue: z.string().optional(), // ISO
+      streak: z.number().optional(),
+      lastGrade: z.enum(['again', 'hard', 'good', 'easy']).optional(),
     })
     .optional(),
 });
