@@ -23,205 +23,389 @@
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **decir** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["di", "diga", "decid", "digan"],
+      "answer": [
+        "di",
+        "diga",
+        "decid",
+        "digan"
+      ],
       "feedback": {
         "correct": "Perfect — irregular tú **di**; others use present subjunctive stems.",
         "wrong": "Use: tú **di**, usted diga, vosotros decid, ustedes digan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "decir-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "decir-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex2",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **decir** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no digas", "no diga", "no digáis", "no digan"],
+      "answer": [
+        "no digas",
+        "no diga",
+        "no digáis",
+        "no digan"
+      ],
       "feedback": {
         "correct": "Yes — negative uses **no + present subjunctive** forms.",
         "wrong": "Use **no** + subjunctive: no digas, no diga, no digáis, no digan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "decir-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "decir-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex3",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **hacer** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["haz", "haga", "haced", "hagan"],
+      "answer": [
+        "haz",
+        "haga",
+        "haced",
+        "hagan"
+      ],
       "feedback": {
         "correct": "Great — tú **haz**, others from present subjunctive haga…",
         "wrong": "Use tú haz, usted haga, vosotros haced, ustedes hagan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "hacer-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "hacer-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex4",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **hacer** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no hagas", "no haga", "no hagáis", "no hagan"],
+      "answer": [
+        "no hagas",
+        "no haga",
+        "no hagáis",
+        "no hagan"
+      ],
       "feedback": {
         "correct": "Exactly — subjunctive stem **hag-** for all negatives.",
         "wrong": "Use **no hagas**, no haga, no hagáis, no hagan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "hacer-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "hacer-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex5",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **ir** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["ve", "vaya", "id", "vayan"],
+      "answer": [
+        "ve",
+        "vaya",
+        "id",
+        "vayan"
+      ],
       "feedback": {
         "correct": "Nice — tú uses **ve**, vosotros keeps **id**.",
         "wrong": "Use tú ve, usted vaya, vosotros id, ustedes vayan."
       },
-      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "ir-affirmative" }
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "ir-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex6",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **ir** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no vayas", "no vaya", "no vayáis", "no vayan"],
+      "answer": [
+        "no vayas",
+        "no vaya",
+        "no vayáis",
+        "no vayan"
+      ],
       "feedback": {
         "correct": "Correct — all from the subjunctive of **ir**.",
         "wrong": "Use: no vayas, no vaya, no vayáis, no vayan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "ir-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ir-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex7",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **poner** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["pon", "ponga", "poned", "pongan"],
+      "answer": [
+        "pon",
+        "ponga",
+        "poned",
+        "pongan"
+      ],
       "feedback": {
         "correct": "Good — tú **pon**; the rest follow subjunctive ponga…",
         "wrong": "Use tú pon, usted ponga, vosotros poned, ustedes pongan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "poner-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "poner-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex8",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **poner** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no pongas", "no ponga", "no pongáis", "no pongan"],
+      "answer": [
+        "no pongas",
+        "no ponga",
+        "no pongáis",
+        "no pongan"
+      ],
       "feedback": {
         "correct": "Exactly — **pong-** with negative + subjunctive endings.",
         "wrong": "Use: no pongas, no ponga, no pongáis, no pongan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "poner-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "poner-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex9",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **salir** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["sal", "salga", "salid", "salgan"],
+      "answer": [
+        "sal",
+        "salga",
+        "salid",
+        "salgan"
+      ],
       "feedback": {
         "correct": "Great — tú **sal**; others salgan…",
         "wrong": "Use tú sal, usted salga, vosotros salid, ustedes salgan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "salir-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "salir-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex10",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **salir** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no salgas", "no salga", "no salgáis", "no salgan"],
+      "answer": [
+        "no salgas",
+        "no salga",
+        "no salgáis",
+        "no salgan"
+      ],
       "feedback": {
         "correct": "Yes — **no salgas** etc. from subjunctive stem salg-.",
         "wrong": "Use: no salgas, no salga, no salgáis, no salgan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "salir-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "salir-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex11",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **ser** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["sé", "sea", "sed", "sean"],
+      "answer": [
+        "sé",
+        "sea",
+        "sed",
+        "sean"
+      ],
       "feedback": {
         "correct": "Correct — note the accent on **sé**.",
         "wrong": "Use tú sé (accent), usted sea, vosotros sed, ustedes sean."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "ser-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ser-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex12",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **ser** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no seas", "no sea", "no seáis", "no sean"],
+      "answer": [
+        "no seas",
+        "no sea",
+        "no seáis",
+        "no sean"
+      ],
       "feedback": {
         "correct": "Exactly — **no seas** etc. from subjunctive sea…",
         "wrong": "Use: no seas, no sea, no seáis, no sean."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "ser-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ser-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex13",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **tener** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["ten", "tenga", "tened", "tengan"],
+      "answer": [
+        "ten",
+        "tenga",
+        "tened",
+        "tengan"
+      ],
       "feedback": {
         "correct": "Great — tú **ten**, others subjunctive tenga…",
         "wrong": "Use tú ten, usted tenga, vosotros tened, ustedes tengan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "tener-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "tener-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex14",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **tener** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no tengas", "no tenga", "no tengáis", "no tengan"],
+      "answer": [
+        "no tengas",
+        "no tenga",
+        "no tengáis",
+        "no tengan"
+      ],
       "feedback": {
         "correct": "Correct — **no tengas** etc. from subjunctive tenga…",
         "wrong": "Use: no tengas, no tenga, no tengáis, no tengan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "tener-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "tener-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex15",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **venir** in the **imperativo afirmativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["ven", "venga", "venid", "vengan"],
+      "answer": [
+        "ven",
+        "venga",
+        "venid",
+        "vengan"
+      ],
       "feedback": {
         "correct": "Nice — tú **ven**; rest from subjunctive venga…",
         "wrong": "Use tú ven, usted venga, vosotros venid, ustedes vengan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "venir-affirmative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "venir-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex16",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "conjugate",
       "promptMd": "Conjugate **venir** in the **imperativo negativo** (tú, usted, vosotros, ustedes).",
-      "answer": ["no vengas", "no venga", "no vengáis", "no vengan"],
+      "answer": [
+        "no vengas",
+        "no venga",
+        "no vengáis",
+        "no vengan"
+      ],
       "feedback": {
         "correct": "Yes — **no vengas** etc. follow the subjunctive.",
         "wrong": "Use: no vengas, no venga, no vengáis, no vengan."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "venir-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "venir-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex17",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "cloze",
-      "promptMd": "Complete with the correct **affirmative command + pronoun**: *\u2014Se\u00f1or, ___ (decir, usted) la verdad.*",
-      "answer": "d\u00edgamela",
-      "accepted": ["re:^d\u00edgamela$"],
+      "promptMd": "Complete with the correct **affirmative command + pronoun**: *—Señor, ___ (decir, usted) la verdad.*",
+      "answer": "dígamela",
+      "accepted": [
+        "re:^dígamela$"
+      ],
       "feedback": {
-        "correct": "Perfect — attach IO + DO to affirmative: **d\u00edgamela**.",
-        "wrong": "Use affirmative command diga + me + la attached: **d\u00edgamela** (accent preserves stress)."
+        "correct": "Perfect — attach IO + DO to affirmative: **dígamela**.",
+        "wrong": "Use affirmative command diga + me + la attached: **dígamela** (accent preserves stress)."
       },
-      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "pronoun-affirmative" }
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "pronoun-affirmative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex18",
@@ -229,64 +413,109 @@
       "type": "cloze",
       "promptMd": "Fill in: *Chicos, ___ (poner, vosotros) el abrigo.* (use pronoun **os**).",
       "answer": "poneos",
-      "accepted": ["re:^poneos$"],
+      "accepted": [
+        "re:^poneos$"
+      ],
       "feedback": {
         "correct": "Bien — vosotros affirmative drops -d + os → **poneos**.",
         "wrong": "Use **poneos** (poned + os → drop the d)."
       },
-      "meta": { "difficulty": "C1", "skills": ["write"], "topic": "vosotros-reflexive" }
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "vosotros-reflexive"
+      }
     },
     {
       "id": "c6-imp-irreg-ex19",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "cloze",
-      "promptMd": "Negative command with pronouns: *Por favor, ___ (no + dar + me + lo, t\u00fa).*",
+      "promptMd": "Negative command with pronouns: *Por favor, ___ (no + dar + me + lo, tú).*",
       "answer": "no me lo des",
-      "accepted": ["re:^no me lo des$"],
+      "accepted": [
+        "re:^no me lo des$"
+      ],
       "feedback": {
         "correct": "Exacto — negative keeps pronouns before: **no me lo des**.",
         "wrong": "Use **no me lo des** (no + pronouns + subjunctive)."
       },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "pronoun-negative" }
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "pronoun-negative"
+      }
     },
     {
       "id": "c6-imp-irreg-ex20",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "translate",
       "promptMd": "Translate: *Let's leave now (referring to ourselves).*",
-      "answer": "V\u00e1monos ahora",
-      "accepted": ["re:^v\u00e1monos ahora\\.?$"],
+      "answer": "Vámonos ahora",
+      "accepted": [
+        "re:^vámonos ahora\\.?$"
+      ],
       "feedback": {
         "correct": "Correct — affirmative nosotros of irse attaches **-nos** → vámonos.",
         "wrong": "Use **Vámonos ahora** (vamos + nos with accent)."
       },
-      "meta": { "difficulty": "C1", "skills": ["read", "write"], "topic": "nosotros-pronoun" }
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "nosotros-pronoun"
+      }
     },
     {
       "id": "c6-imp-irreg-ex21",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "mcq",
       "promptMd": "Choose the correct placement: *___ la tarea ahora mismo.*",
-      "options": ["Hazme", "Me haz", "Haz me"],
+      "options": [
+        "Hazme",
+        "Me haz",
+        "Haz me"
+      ],
       "answer": "Hazme",
       "feedback": {
         "correct": "Yes — affirmative attaches pronoun → **Hazme**.",
         "wrong": "Affirmative commands attach the pronoun: **Hazme**."
       },
-      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "pronoun-placement" }
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "pronoun-placement"
+      }
     },
     {
       "id": "c6-imp-irreg-ex22",
       "lessonId": "c6-imperative-irregulars-pronouns",
       "type": "mcq",
       "promptMd": "Which option correctly negates the command with pronouns? *No ___ el secreto.*",
-      "options": ["lo digasme", "me lo digas", "digasme lo"],
+      "options": [
+        "lo digasme",
+        "me lo digas",
+        "digasme lo"
+      ],
       "answer": "me lo digas",
       "feedback": {
         "correct": "Correct — negative places pronouns before the verb: **no me lo digas**.",
         "wrong": "Use **no me lo digas** (no + pronouns + subjunctive)."
       },
-      "meta": { "difficulty": "B1", "skills": ["read"], "topic": "pronoun-negative" }
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "pronoun-negative"
+      }
     }
   ],
   "flashcards": [

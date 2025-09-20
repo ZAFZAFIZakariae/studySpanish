@@ -5,9 +5,14 @@
       "level": "B1",
       "title": "B15 — Determiners: definite / indefinite / negative",
       "slug": "b1-determiners",
-      "tags": ["determiners","articles","quantifiers","grammar","b1"],
-      "markdown": "# 📦 B15 — Determiners (B1)\n\n**Goal:** Use determiners correctly to specify nouns.**\n\n---\n\n## 📌 Definite & Indefinite Articles\n- Definite: **el, la, los, las** → specific\n- Indefinite: **un, una, unos, unas** → non-specific\n\n**Examples:**  \n*el libro*, *una mesa*, *los coches*, *unas casas*\n\n---\n\n## 📍 Demonstratives\n**este / esta / estos / estas** → near  \n**ese / esa / esos / esas** → medium  \n**aquel / aquella / aquellos / aquellas** → far\n\n**Example**: *Ese chico es mi hermano.*\n\n---\n\n## 👤 Possessives\n**mi, tu, su, nuestro/a, vuestro/a, sus, mis, tus, sus…**\n- Must agree in number and (sometimes) gender\n\n**Example:** *mi casa, mis libros, nuestra amiga, nuestros amigos*\n\n---\n\n## ⚖️ Quantifiers\n**mucho, poco, tanto, todo, algún, ningún**\n- Agree in gender and number: *muchos libros, ninguna casa*\n- **algún / ningún** drop final -o before masc. sing. noun → *algún libro, ningún problema*\n\n---\n\n> 📝 Summary  
-> Articles → Demonstratives → Possessives → Quantifiers → Negatives\n",
+      "tags": [
+        "determiners",
+        "articles",
+        "quantifiers",
+        "grammar",
+        "b1"
+      ],
+      "markdown": "# 📦 B15 — Determiners (B1)\n\n**Goal:** Use determiners correctly to specify nouns.**\n\n---\n\n## 📌 Definite & Indefinite Articles\n- Definite: **el, la, los, las** → specific\n- Indefinite: **un, una, unos, unas** → non-specific\n\n**Examples:**  \n*el libro*, *una mesa*, *los coches*, *unas casas*\n\n---\n\n## 📍 Demonstratives\n**este / esta / estos / estas** → near  \n**ese / esa / esos / esas** → medium  \n**aquel / aquella / aquellos / aquellas** → far\n\n**Example**: *Ese chico es mi hermano.*\n\n---\n\n## 👤 Possessives\n**mi, tu, su, nuestro/a, vuestro/a, sus, mis, tus, sus…**\n- Must agree in number and (sometimes) gender\n\n**Example:** *mi casa, mis libros, nuestra amiga, nuestros amigos*\n\n---\n\n## ⚖️ Quantifiers\n**mucho, poco, tanto, todo, algún, ningún**\n- Agree in gender and number: *muchos libros, ninguna casa*\n- **algún / ningún** drop final -o before masc. sing. noun → *algún libro, ningún problema*\n\n---\n\n> 📝 Summary  \n> Articles → Demonstratives → Possessives → Quantifiers → Negatives\n",
       "references": []
     }
   ],
@@ -18,9 +23,20 @@
       "type": "cloze",
       "promptMd": "___ libro está en la mesa. (definite)",
       "answer": "El",
-      "accepted": ["re:^El$"],
-      "feedback": { "correct": "Correct — definite article.", "wrong": "Use El." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Definite" }
+      "accepted": [
+        "re:^El$"
+      ],
+      "feedback": {
+        "correct": "Correct — definite article.",
+        "wrong": "Use El."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Definite"
+      }
     },
     {
       "id": "b1-determiners-ex2",
@@ -28,9 +44,20 @@
       "type": "cloze",
       "promptMd": "Necesito ___ mesa. (indefinite)",
       "answer": "una",
-      "accepted": ["re:^una$"],
-      "feedback": { "correct": "Correct — indefinite.", "wrong": "Use una." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Indefinite" }
+      "accepted": [
+        "re:^una$"
+      ],
+      "feedback": {
+        "correct": "Correct — indefinite.",
+        "wrong": "Use una."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Indefinite"
+      }
     },
     {
       "id": "b1-determiners-ex3",
@@ -38,9 +65,20 @@
       "type": "cloze",
       "promptMd": "___ coches están en la calle. (definite)",
       "answer": "Los",
-      "accepted": ["re:^Los$"],
-      "feedback": { "correct": "Correct — definite plural.", "wrong": "Use los." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Definite" }
+      "accepted": [
+        "re:^Los$"
+      ],
+      "feedback": {
+        "correct": "Correct — definite plural.",
+        "wrong": "Use los."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Definite"
+      }
     },
     {
       "id": "b1-determiners-ex4",
@@ -48,19 +86,43 @@
       "type": "cloze",
       "promptMd": "___ casas son grandes. (indefinite)",
       "answer": "Unas",
-      "accepted": ["re:^Unas$"],
-      "feedback": { "correct": "Correct — indefinite plural.", "wrong": "Use unas." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Indefinite" }
+      "accepted": [
+        "re:^Unas$"
+      ],
+      "feedback": {
+        "correct": "Correct — indefinite plural.",
+        "wrong": "Use unas."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Indefinite"
+      }
     },
     {
       "id": "b1-determiners-ex5",
       "lessonId": "b1-determiners",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["la libros","los libro","los libros"],
+      "options": [
+        "la libros",
+        "los libro",
+        "los libros"
+      ],
       "answer": "los libros",
-      "feedback": { "correct": "Correct — match gender/number.", "wrong": "Use los libros." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Articles" }
+      "feedback": {
+        "correct": "Correct — match gender/number.",
+        "wrong": "Use los libros."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Articles"
+      }
     },
     {
       "id": "b1-determiners-ex6",
@@ -68,9 +130,20 @@
       "type": "cloze",
       "promptMd": "___ chico es mi hermano. (demonstrative)",
       "answer": "Ese",
-      "accepted": ["re:^Ese$"],
-      "feedback": { "correct": "Correct — medium distance.", "wrong": "Use ese." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Demonstratives" }
+      "accepted": [
+        "re:^Ese$"
+      ],
+      "feedback": {
+        "correct": "Correct — medium distance.",
+        "wrong": "Use ese."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Demonstratives"
+      }
     },
     {
       "id": "b1-determiners-ex7",
@@ -78,9 +151,20 @@
       "type": "cloze",
       "promptMd": "___ chicas son mis amigas. (demonstrative)",
       "answer": "Estas",
-      "accepted": ["re:^Estas$"],
-      "feedback": { "correct": "Correct — near, feminine plural.", "wrong": "Use estas." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Demonstratives" }
+      "accepted": [
+        "re:^Estas$"
+      ],
+      "feedback": {
+        "correct": "Correct — near, feminine plural.",
+        "wrong": "Use estas."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Demonstratives"
+      }
     },
     {
       "id": "b1-determiners-ex8",
@@ -88,9 +172,20 @@
       "type": "cloze",
       "promptMd": "___ coche es de Juan. (demonstrative, far)",
       "answer": "Aquel",
-      "accepted": ["re:^Aquel$"],
-      "feedback": { "correct": "Correct — far.", "wrong": "Use aquel." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Demonstratives" }
+      "accepted": [
+        "re:^Aquel$"
+      ],
+      "feedback": {
+        "correct": "Correct — far.",
+        "wrong": "Use aquel."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Demonstratives"
+      }
     },
     {
       "id": "b1-determiners-ex9",
@@ -98,9 +193,20 @@
       "type": "cloze",
       "promptMd": "___ casa es grande. (possessive, my)",
       "answer": "Mi",
-      "accepted": ["re:^Mi$"],
-      "feedback": { "correct": "Correct — mi casa.", "wrong": "Use mi." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Possessives" }
+      "accepted": [
+        "re:^Mi$"
+      ],
+      "feedback": {
+        "correct": "Correct — mi casa.",
+        "wrong": "Use mi."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Possessives"
+      }
     },
     {
       "id": "b1-determiners-ex10",
@@ -108,19 +214,43 @@
       "type": "cloze",
       "promptMd": "___ libros están aquí. (possessive, our)",
       "answer": "Nuestros",
-      "accepted": ["re:^Nuestros$"],
-      "feedback": { "correct": "Correct — nuestros libros.", "wrong": "Use nuestros." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Possessives" }
+      "accepted": [
+        "re:^Nuestros$"
+      ],
+      "feedback": {
+        "correct": "Correct — nuestros libros.",
+        "wrong": "Use nuestros."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Possessives"
+      }
     },
     {
       "id": "b1-determiners-ex11",
       "lessonId": "b1-determiners",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["mi libros","mis libros","mis libro"],
+      "options": [
+        "mi libros",
+        "mis libros",
+        "mis libro"
+      ],
       "answer": "mis libros",
-      "feedback": { "correct": "Correct — plural agreement.", "wrong": "Use mis libros." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Possessives" }
+      "feedback": {
+        "correct": "Correct — plural agreement.",
+        "wrong": "Use mis libros."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Possessives"
+      }
     },
     {
       "id": "b1-determiners-ex12",
@@ -128,9 +258,20 @@
       "type": "cloze",
       "promptMd": "Hay ___ libros en la mesa. (quantifier, many)",
       "answer": "muchos",
-      "accepted": ["re:^muchos$"],
-      "feedback": { "correct": "Correct — muchos libros.", "wrong": "Use muchos." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Quantifiers" }
+      "accepted": [
+        "re:^muchos$"
+      ],
+      "feedback": {
+        "correct": "Correct — muchos libros.",
+        "wrong": "Use muchos."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Quantifiers"
+      }
     },
     {
       "id": "b1-determiners-ex13",
@@ -138,9 +279,20 @@
       "type": "cloze",
       "promptMd": "No tengo ___ dinero. (quantifier, any)",
       "answer": "ningún",
-      "accepted": ["re:^ningún$"],
-      "feedback": { "correct": "Correct — ningún dinero.", "wrong": "Use ningún." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Quantifiers" }
+      "accepted": [
+        "re:^ningún$"
+      ],
+      "feedback": {
+        "correct": "Correct — ningún dinero.",
+        "wrong": "Use ningún."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Quantifiers"
+      }
     },
     {
       "id": "b1-determiners-ex14",
@@ -148,19 +300,43 @@
       "type": "cloze",
       "promptMd": "Tengo ___ amigos. (quantifier, some)",
       "answer": "algunos",
-      "accepted": ["re:^algunos$"],
-      "feedback": { "correct": "Correct — algunos amigos.", "wrong": "Use algunos." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Quantifiers" }
+      "accepted": [
+        "re:^algunos$"
+      ],
+      "feedback": {
+        "correct": "Correct — algunos amigos.",
+        "wrong": "Use algunos."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Quantifiers"
+      }
     },
     {
       "id": "b1-determiners-ex15",
       "lessonId": "b1-determiners",
       "type": "mcq",
       "promptMd": "Which is correct?",
-      "options": ["ninguno libros","ningún libro","ningún libros"],
+      "options": [
+        "ninguno libros",
+        "ningún libro",
+        "ningún libros"
+      ],
       "answer": "ningún libro",
-      "feedback": { "correct": "Correct — drop -o before masc. sing.", "wrong": "Use ningún libro." },
-      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Quantifiers" }
+      "feedback": {
+        "correct": "Correct — drop -o before masc. sing.",
+        "wrong": "Use ningún libro."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Quantifiers"
+      }
     },
     {
       "id": "b1-determiners-ex16",
@@ -168,9 +344,21 @@
       "type": "translate",
       "promptMd": "Translate: *Este libro es mío.*",
       "answer": "This book is mine",
-      "accepted": ["re:this book is mine"],
-      "feedback": { "correct": "Correct — este libro.", "wrong": "Use this." },
-      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Demonstratives" }
+      "accepted": [
+        "re:this book is mine"
+      ],
+      "feedback": {
+        "correct": "Correct — este libro.",
+        "wrong": "Use this."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Demonstratives"
+      }
     },
     {
       "id": "b1-determiners-ex17",
@@ -178,9 +366,21 @@
       "type": "translate",
       "promptMd": "Translate: *Nuestros amigos son simpáticos.*",
       "answer": "Our friends are nice",
-      "accepted": ["re:our friends"],
-      "feedback": { "correct": "Correct — nuestros.", "wrong": "Use our." },
-      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Possessives" }
+      "accepted": [
+        "re:our friends"
+      ],
+      "feedback": {
+        "correct": "Correct — nuestros.",
+        "wrong": "Use our."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Possessives"
+      }
     },
     {
       "id": "b1-determiners-ex18",
@@ -188,26 +388,127 @@
       "type": "short",
       "promptMd": "Where do determiners go?",
       "answer": "before the noun",
-      "accepted": ["re:before"],
-      "feedback": { "correct": "Correct — before nouns.", "wrong": "They go before nouns." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Position" }
+      "accepted": [
+        "re:before"
+      ],
+      "feedback": {
+        "correct": "Correct — before nouns.",
+        "wrong": "They go before nouns."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Position"
+      }
     }
   ],
   "flashcards": [
-    { "id": "b1-determiners-fc1","front":"definite articles","back":"el, la, los, las","tag":"articles","deck":"grammar" },
-    { "id": "b1-determiners-fc2","front":"indefinite articles","back":"un, una, unos, unas","tag":"articles","deck":"grammar" },
-    { "id": "b1-determiners-fc3","front":"demonstratives near","back":"este, esta, estos, estas","tag":"demonstratives","deck":"grammar" },
-    { "id": "b1-determiners-fc4","front":"demonstratives medium","back":"ese, esa, esos, esas","tag":"demonstratives","deck":"grammar" },
-    { "id": "b1-determiners-fc5","front":"demonstratives far","back":"aquel, aquella, aquellos, aquellas","tag":"demonstratives","deck":"grammar" },
-    { "id": "b1-determiners-fc6","front":"possessives","back":"mi, tu, su, nuestro, vuestro…","tag":"possessives","deck":"grammar" },
-    { "id": "b1-determiners-fc7","front":"quantifiers","back":"mucho, poco, tanto, todo, algún, ningún","tag":"quantifiers","deck":"grammar" },
-    { "id": "b1-determiners-fc8","front":"algún / ningún","back":"drop -o before masc. sing.","tag":"quantifiers","deck":"grammar" },
-    { "id": "b1-determiners-fc9","front":"agreement","back":"determiners match gender & number","tag":"determiners","deck":"grammar" },
-    { "id": "b1-determiners-fc10","front":"position","back":"before the noun","tag":"determiners","deck":"grammar" },
-    { "id": "b1-determiners-fc11","front":"este libro","back":"this book","tag":"demonstratives","deck":"vocab" },
-    { "id": "b1-determiners-fc12","front":"esos coches","back":"those cars","tag":"demonstratives","deck":"vocab" },
-    { "id": "b1-determiners-fc13","front":"mi casa","back":"my house","tag":"possessives","deck":"vocab" },
-    { "id": "b1-determiners-fc14","front":"nuestros amigos","back":"our friends","tag":"possessives","deck":"vocab" },
-    { "id": "b1-determiners-fc15","front":"ningún problema","back":"no problem","tag":"quantifiers","deck":"vocab" }
+    {
+      "id": "b1-determiners-fc1",
+      "front": "definite articles",
+      "back": "el, la, los, las",
+      "tag": "articles",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc2",
+      "front": "indefinite articles",
+      "back": "un, una, unos, unas",
+      "tag": "articles",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc3",
+      "front": "demonstratives near",
+      "back": "este, esta, estos, estas",
+      "tag": "demonstratives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc4",
+      "front": "demonstratives medium",
+      "back": "ese, esa, esos, esas",
+      "tag": "demonstratives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc5",
+      "front": "demonstratives far",
+      "back": "aquel, aquella, aquellos, aquellas",
+      "tag": "demonstratives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc6",
+      "front": "possessives",
+      "back": "mi, tu, su, nuestro, vuestro…",
+      "tag": "possessives",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc7",
+      "front": "quantifiers",
+      "back": "mucho, poco, tanto, todo, algún, ningún",
+      "tag": "quantifiers",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc8",
+      "front": "algún / ningún",
+      "back": "drop -o before masc. sing.",
+      "tag": "quantifiers",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc9",
+      "front": "agreement",
+      "back": "determiners match gender & number",
+      "tag": "determiners",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc10",
+      "front": "position",
+      "back": "before the noun",
+      "tag": "determiners",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-determiners-fc11",
+      "front": "este libro",
+      "back": "this book",
+      "tag": "demonstratives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-determiners-fc12",
+      "front": "esos coches",
+      "back": "those cars",
+      "tag": "demonstratives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-determiners-fc13",
+      "front": "mi casa",
+      "back": "my house",
+      "tag": "possessives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-determiners-fc14",
+      "front": "nuestros amigos",
+      "back": "our friends",
+      "tag": "possessives",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-determiners-fc15",
+      "front": "ningún problema",
+      "back": "no problem",
+      "tag": "quantifiers",
+      "deck": "vocab"
+    }
   ]
 }

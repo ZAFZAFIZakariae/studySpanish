@@ -5,9 +5,14 @@
       "level": "B1",
       "title": "B16 — Connectors & frequency/adverbials",
       "slug": "b1-connectors-adverbials",
-      "tags": ["connectors","adverbials","frequency","grammar","b1"],
-      "markdown": "# 🔗 B16 — Connectors & Frequency / Adverbials (B1)\n\n**Goal:** Link ideas logically and use adverbs naturally.\n\n---\n\n## 📌 Connectors by Function\n\n**Cause** → porque, ya que, como, dado que  \n**Consequence** → así que, por eso, entonces, por lo tanto  \n**Contrast** → pero, sin embargo, aunque, no obstante  \n**Sequencing** → primero, después, luego, entonces, finalmente\n\n---\n\n## 🕒 Frequency Adverbs\n- siempre, normalmente, a menudo, a veces, raramente, nunca\n- go **before the verb**, except **after** *ser* → *Siempre estudio / Soy siempre puntual*\n\n---\n\n## 💬 Discourse Adverbials\n- al principio, al final, en cambio, además, por supuesto, de hecho\n- used to structure speech and writing\n\n---\n\n> 📝 Summary  
-> connectors link clauses; adverbs add nuance or order\n",
+      "tags": [
+        "connectors",
+        "adverbials",
+        "frequency",
+        "grammar",
+        "b1"
+      ],
+      "markdown": "# 🔗 B16 — Connectors & Frequency / Adverbials (B1)\n\n**Goal:** Link ideas logically and use adverbs naturally.\n\n---\n\n## 📌 Connectors by Function\n\n**Cause** → porque, ya que, como, dado que  \n**Consequence** → así que, por eso, entonces, por lo tanto  \n**Contrast** → pero, sin embargo, aunque, no obstante  \n**Sequencing** → primero, después, luego, entonces, finalmente\n\n---\n\n## 🕒 Frequency Adverbs\n- siempre, normalmente, a menudo, a veces, raramente, nunca\n- go **before the verb**, except **after** *ser* → *Siempre estudio / Soy siempre puntual*\n\n---\n\n## 💬 Discourse Adverbials\n- al principio, al final, en cambio, además, por supuesto, de hecho\n- used to structure speech and writing\n\n---\n\n> 📝 Summary  \n> connectors link clauses; adverbs add nuance or order\n",
       "references": []
     }
   ],
@@ -17,30 +22,69 @@
       "lessonId": "b1-connectors-adverbials",
       "type": "mcq",
       "promptMd": "Choose a **cause** connector:\nEstudio mucho ___ quiero aprobar.",
-      "options": ["pero","porque","aunque"],
+      "options": [
+        "pero",
+        "porque",
+        "aunque"
+      ],
       "answer": "porque",
-      "feedback": { "correct": "Correct — porque = cause.", "wrong": "Use porque." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Cause" }
+      "feedback": {
+        "correct": "Correct — porque = cause.",
+        "wrong": "Use porque."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Cause"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex2",
       "lessonId": "b1-connectors-adverbials",
       "type": "mcq",
       "promptMd": "Choose a **consequence** connector:\nEstudia mucho, ___ aprueba.",
-      "options": ["pero","así que","aunque"],
+      "options": [
+        "pero",
+        "así que",
+        "aunque"
+      ],
       "answer": "así que",
-      "feedback": { "correct": "Correct — así que = consequence.", "wrong": "Use así que." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Consequence" }
+      "feedback": {
+        "correct": "Correct — así que = consequence.",
+        "wrong": "Use así que."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Consequence"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex3",
       "lessonId": "b1-connectors-adverbials",
       "type": "mcq",
       "promptMd": "Choose a **contrast** connector:\nEstudia mucho, ___ no aprueba.",
-      "options": ["sin embargo","porque","entonces"],
+      "options": [
+        "sin embargo",
+        "porque",
+        "entonces"
+      ],
       "answer": "sin embargo",
-      "feedback": { "correct": "Correct — contrast.", "wrong": "Use sin embargo." },
-      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Contrast" }
+      "feedback": {
+        "correct": "Correct — contrast.",
+        "wrong": "Use sin embargo."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Contrast"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex4",
@@ -48,9 +92,20 @@
       "type": "cloze",
       "promptMd": "___ estudio mucho, saco malas notas. (contrast)",
       "answer": "Aunque",
-      "accepted": ["re:^Aunque$"],
-      "feedback": { "correct": "Correct — aunque = although.", "wrong": "Use aunque." },
-      "meta": { "difficulty": "B1","skills": ["write"],"topic": "Contrast" }
+      "accepted": [
+        "re:^Aunque$"
+      ],
+      "feedback": {
+        "correct": "Correct — aunque = although.",
+        "wrong": "Use aunque."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Contrast"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex5",
@@ -58,9 +113,20 @@
       "type": "cloze",
       "promptMd": "No vino a clase ___ estaba enfermo. (cause)",
       "answer": "porque",
-      "accepted": ["re:^porque$"],
-      "feedback": { "correct": "Correct — cause.", "wrong": "Use porque." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Cause" }
+      "accepted": [
+        "re:^porque$"
+      ],
+      "feedback": {
+        "correct": "Correct — cause.",
+        "wrong": "Use porque."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Cause"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex6",
@@ -68,9 +134,20 @@
       "type": "cloze",
       "promptMd": "Tenía hambre, ___ comí algo. (consequence)",
       "answer": "así que",
-      "accepted": ["re:^así que$"],
-      "feedback": { "correct": "Correct — consequence.", "wrong": "Use así que." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Consequence" }
+      "accepted": [
+        "re:^así que$"
+      ],
+      "feedback": {
+        "correct": "Correct — consequence.",
+        "wrong": "Use así que."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Consequence"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex7",
@@ -78,9 +155,20 @@
       "type": "cloze",
       "promptMd": "___, salí de casa. (sequencing)",
       "answer": "Primero",
-      "accepted": ["re:^Primero$"],
-      "feedback": { "correct": "Correct — first.", "wrong": "Use primero." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Sequencing" }
+      "accepted": [
+        "re:^Primero$"
+      ],
+      "feedback": {
+        "correct": "Correct — first.",
+        "wrong": "Use primero."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Sequencing"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex8",
@@ -88,9 +176,20 @@
       "type": "cloze",
       "promptMd": "___, llegué al trabajo. (sequencing)",
       "answer": "Luego",
-      "accepted": ["re:^Luego$"],
-      "feedback": { "correct": "Correct — then.", "wrong": "Use luego." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Sequencing" }
+      "accepted": [
+        "re:^Luego$"
+      ],
+      "feedback": {
+        "correct": "Correct — then.",
+        "wrong": "Use luego."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Sequencing"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex9",
@@ -98,19 +197,43 @@
       "type": "cloze",
       "promptMd": "___, volví a casa. (sequencing)",
       "answer": "Finalmente",
-      "accepted": ["re:^Finalmente$"],
-      "feedback": { "correct": "Correct — finally.", "wrong": "Use finalmente." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Sequencing" }
+      "accepted": [
+        "re:^Finalmente$"
+      ],
+      "feedback": {
+        "correct": "Correct — finally.",
+        "wrong": "Use finalmente."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Sequencing"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex10",
       "lessonId": "b1-connectors-adverbials",
       "type": "mcq",
       "promptMd": "Where do frequency adverbs usually go?",
-      "options": ["after the verb","before the verb","at the end"],
+      "options": [
+        "after the verb",
+        "before the verb",
+        "at the end"
+      ],
       "answer": "before the verb",
-      "feedback": { "correct": "Correct — except after ser.", "wrong": "Normally before." },
-      "meta": { "difficulty": "A2","skills": ["read"],"topic": "Frequency" }
+      "feedback": {
+        "correct": "Correct — except after ser.",
+        "wrong": "Normally before."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Frequency"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex11",
@@ -118,9 +241,20 @@
       "type": "cloze",
       "promptMd": "___ estudio mucho. (always)",
       "answer": "Siempre",
-      "accepted": ["re:^Siempre$"],
-      "feedback": { "correct": "Correct — frequency.", "wrong": "Use siempre." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Frequency" }
+      "accepted": [
+        "re:^Siempre$"
+      ],
+      "feedback": {
+        "correct": "Correct — frequency.",
+        "wrong": "Use siempre."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Frequency"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex12",
@@ -128,9 +262,20 @@
       "type": "cloze",
       "promptMd": "___ llego tarde. (sometimes)",
       "answer": "A veces",
-      "accepted": ["re:^A veces$"],
-      "feedback": { "correct": "Correct — frequency.", "wrong": "Use a veces." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Frequency" }
+      "accepted": [
+        "re:^A veces$"
+      ],
+      "feedback": {
+        "correct": "Correct — frequency.",
+        "wrong": "Use a veces."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Frequency"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex13",
@@ -138,9 +283,20 @@
       "type": "cloze",
       "promptMd": "___ soy puntual. (always, after ser)",
       "answer": "Siempre",
-      "accepted": ["re:^Siempre$"],
-      "feedback": { "correct": "Correct — after ser.", "wrong": "Use siempre after ser." },
-      "meta": { "difficulty": "A2","skills": ["write"],"topic": "Frequency" }
+      "accepted": [
+        "re:^Siempre$"
+      ],
+      "feedback": {
+        "correct": "Correct — after ser.",
+        "wrong": "Use siempre after ser."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Frequency"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex14",
@@ -148,9 +304,21 @@
       "type": "translate",
       "promptMd": "Translate: *Siempre estudio mucho.*",
       "answer": "I always study a lot",
-      "accepted": ["re:always study"],
-      "feedback": { "correct": "Correct — frequency.", "wrong": "Use always." },
-      "meta": { "difficulty": "A2","skills": ["read","write"],"topic": "Frequency" }
+      "accepted": [
+        "re:always study"
+      ],
+      "feedback": {
+        "correct": "Correct — frequency.",
+        "wrong": "Use always."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Frequency"
+      }
     },
     {
       "id": "b1-connectors-adverbials-ex15",
@@ -158,26 +326,128 @@
       "type": "short",
       "promptMd": "Name two contrast connectors.",
       "answer": "pero, sin embargo",
-      "accepted": ["re:pero","re:sin embargo"],
-      "feedback": { "correct": "Correct — contrast.", "wrong": "Use pero/sin embargo." },
-      "meta": { "difficulty": "B1","skills": ["read"],"topic": "Contrast" }
+      "accepted": [
+        "re:pero",
+        "re:sin embargo"
+      ],
+      "feedback": {
+        "correct": "Correct — contrast.",
+        "wrong": "Use pero/sin embargo."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read"
+        ],
+        "topic": "Contrast"
+      }
     }
   ],
   "flashcards": [
-    { "id": "b1-connectors-adverbials-fc1","front":"cause connectors","back":"porque, ya que, como, dado que","tag":"connectors","deck":"grammar" },
-    { "id": "b1-connectors-adverbials-fc2","front":"consequence connectors","back":"así que, por eso, entonces, por lo tanto","tag":"connectors","deck":"grammar" },
-    { "id": "b1-connectors-adverbials-fc3","front":"contrast connectors","back":"pero, sin embargo, aunque, no obstante","tag":"connectors","deck":"grammar" },
-    { "id": "b1-connectors-adverbials-fc4","front":"sequencing","back":"primero, después, luego, finalmente","tag":"connectors","deck":"grammar" },
-    { "id": "b1-connectors-adverbials-fc5","front":"frequency adverbs","back":"siempre, normalmente, a veces, nunca","tag":"adverbs","deck":"grammar" },
-    { "id": "b1-connectors-adverbials-fc6","front":"position","back":"before verb (after ser)","tag":"adverbs","deck":"grammar" },
-    { "id": "b1-connectors-adverbials-fc7","front":"al principio","back":"at the beginning","tag":"adverbials","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc8","front":"al final","back":"at the end","tag":"adverbials","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc9","front":"en cambio","back":"instead/on the other hand","tag":"adverbials","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc10","front":"además","back":"in addition","tag":"adverbials","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc11","front":"por supuesto","back":"of course","tag":"adverbials","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc12","front":"de hecho","back":"in fact","tag":"adverbials","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc13","front":"siempre","back":"always","tag":"adverbs","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc14","front":"a veces","back":"sometimes","tag":"adverbs","deck":"vocab" },
-    { "id": "b1-connectors-adverbials-fc15","front":"nunca","back":"never","tag":"adverbs","deck":"vocab" }
+    {
+      "id": "b1-connectors-adverbials-fc1",
+      "front": "cause connectors",
+      "back": "porque, ya que, como, dado que",
+      "tag": "connectors",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc2",
+      "front": "consequence connectors",
+      "back": "así que, por eso, entonces, por lo tanto",
+      "tag": "connectors",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc3",
+      "front": "contrast connectors",
+      "back": "pero, sin embargo, aunque, no obstante",
+      "tag": "connectors",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc4",
+      "front": "sequencing",
+      "back": "primero, después, luego, finalmente",
+      "tag": "connectors",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc5",
+      "front": "frequency adverbs",
+      "back": "siempre, normalmente, a veces, nunca",
+      "tag": "adverbs",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc6",
+      "front": "position",
+      "back": "before verb (after ser)",
+      "tag": "adverbs",
+      "deck": "grammar"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc7",
+      "front": "al principio",
+      "back": "at the beginning",
+      "tag": "adverbials",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc8",
+      "front": "al final",
+      "back": "at the end",
+      "tag": "adverbials",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc9",
+      "front": "en cambio",
+      "back": "instead/on the other hand",
+      "tag": "adverbials",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc10",
+      "front": "además",
+      "back": "in addition",
+      "tag": "adverbials",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc11",
+      "front": "por supuesto",
+      "back": "of course",
+      "tag": "adverbials",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc12",
+      "front": "de hecho",
+      "back": "in fact",
+      "tag": "adverbials",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc13",
+      "front": "siempre",
+      "back": "always",
+      "tag": "adverbs",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc14",
+      "front": "a veces",
+      "back": "sometimes",
+      "tag": "adverbs",
+      "deck": "vocab"
+    },
+    {
+      "id": "b1-connectors-adverbials-fc15",
+      "front": "nunca",
+      "back": "never",
+      "tag": "adverbs",
+      "deck": "vocab"
+    }
   ]
 }

@@ -5,7 +5,13 @@
       "level": "C1",
       "title": "C4 — Subjunctive Irregulars",
       "slug": "c4-subjunctive-irregulars",
-      "tags": ["subjunctive","irregulars","conjugation","c1","grammar"],
+      "tags": [
+        "subjunctive",
+        "irregulars",
+        "conjugation",
+        "c1",
+        "grammar"
+      ],
       "markdown": "# 🌙 C4 — Subjunctive Irregulars (dar, estar, haber, ir, saber, ser)\n\n**Goal:** Master the six key irregular verbs in the **present** and **imperfect** subjunctive, plus usage triggers.\n\n---\n\n## 📌 Present Subjunctive Paradigms\n| Verb | yo | tú | él/ella/usted | nosotros | vosotros | ellos/ustedes |\n|---|---|---|---|---|---|---|\n| **dar** | **dé** | des | dé | demos | deis | den |\n| **estar** | **esté** | estés | esté | **estemos** | **estéis** | estén |\n| **haber** | **haya** | hayas | haya | hayamos | hayáis | hayan |\n| **ir** | **vaya** | vayas | vaya | vayamos | vayáis | vayan |\n| **saber** | **sepa** | sepas | sepa | sepamos | sepáis | sepan |\n| **ser** | **sea** | seas | sea | seamos | seáis | sean |\n\n> ⚠️ Irregular accents: **dé** (yo/él). *Estar* keeps written accents in all but **nos/vos**.\n\n---\n\n## ⏳ Imperfect Subjunctive (–ra series)\nFormed from **preterite 3rd plural** → drop **-ron** → add **-ra, -ras, -ra, -ramos, -rais, -ran**\n\n| Verb (3rd pret. plural) | yo | tú | él/ella | nosotros | vosotros | ellos |\n|---|---|---|---|---|---|---|\n| **dar** (*dieron*) | diera | dieras | diera | **diéramos** | dierais | dieran |\n| **estar** (*estuvieron*) | estuviera | estuvieras | estuviera | **estuviéramos** | estuvierais | estuvieran |\n| **haber** (*hubieron*) | **hubiera** | hubieras | hubiera | **hubiéramos** | hubierais | **hubieran** |\n| **ir/ser** (*fueron*) | **fuera** | fueras | fuera | **fuéramos** | fuerais | **fueran** |\n| **saber** (*supieron*) | supiera | supieras | supiera | **supiéramos** | supierais | supieran |\n| **ser** → (see **ir/ser** row) |  |  |  |  |  |  |\n\n> You can also use the **–se** series (diese, estuviese…), but **–ra** is more common.\n\n---\n\n## 🎯 Common Triggers\n- **Wishes/Influence:** *quiero que, espero que, ojalá (que)*\n- **Doubt/Negation:** *no creo que, dudo que*\n- **Emotion:** *me alegra que, siento que*\n- **Non-existent/Unknown antecedent:** *busco a alguien que…*\n- **After time/condition when future-oriented:** *cuando, antes de que, para que* (sometimes need subj.)\n\n> 📝 **Why:** The six irregulars appear everywhere as auxiliaries or high-frequency verbs. Nail these to make the rest of the subjunctive easy.\n",
       "references": []
     }
@@ -16,54 +22,150 @@
       "lessonId": "c4-subjunctive-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **dar** in **subjuntivo presente**.",
-      "answer": ["dé","des","dé","demos","deis","den"],
-      "feedback": { "correct": "Correct — note the accent on **dé** (yo/él).", "wrong": "Use: dé, des, dé, demos, deis, den. Mind the accent on **dé**." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "dar-pres-subj" }
+      "answer": [
+        "dé",
+        "des",
+        "dé",
+        "demos",
+        "deis",
+        "den"
+      ],
+      "feedback": {
+        "correct": "Correct — note the accent on **dé** (yo/él).",
+        "wrong": "Use: dé, des, dé, demos, deis, den. Mind the accent on **dé**."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "dar-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex2",
       "lessonId": "c4-subjunctive-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **estar** in **subjuntivo presente**.",
-      "answer": ["esté","estés","esté","estemos","estéis","estén"],
-      "feedback": { "correct": "Perfect — written accents except in **estemos/estéis**.", "wrong": "Use: esté, estés, esté, **estemos**, **estéis**, estén." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "estar-pres-subj" }
+      "answer": [
+        "esté",
+        "estés",
+        "esté",
+        "estemos",
+        "estéis",
+        "estén"
+      ],
+      "feedback": {
+        "correct": "Perfect — written accents except in **estemos/estéis**.",
+        "wrong": "Use: esté, estés, esté, **estemos**, **estéis**, estén."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "estar-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex3",
       "lessonId": "c4-subjunctive-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **haber** in **subjuntivo presente**.",
-      "answer": ["haya","hayas","haya","hayamos","hayáis","hayan"],
-      "feedback": { "correct": "Yes — used for compound tenses: *haya hablado*.", "wrong": "Use: haya, hayas, haya, hayamos, hayáis, hayan." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "haber-pres-subj" }
+      "answer": [
+        "haya",
+        "hayas",
+        "haya",
+        "hayamos",
+        "hayáis",
+        "hayan"
+      ],
+      "feedback": {
+        "correct": "Yes — used for compound tenses: *haya hablado*.",
+        "wrong": "Use: haya, hayas, haya, hayamos, hayáis, hayan."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "haber-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex4",
       "lessonId": "c4-subjunctive-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **ir** in **subjuntivo presente**.",
-      "answer": ["vaya","vayas","vaya","vayamos","vayáis","vayan"],
-      "feedback": { "correct": "Great — vaya series.", "wrong": "Use: vaya, vayas, vaya, vayamos, vayáis, vayan." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "ir-pres-subj" }
+      "answer": [
+        "vaya",
+        "vayas",
+        "vaya",
+        "vayamos",
+        "vayáis",
+        "vayan"
+      ],
+      "feedback": {
+        "correct": "Great — vaya series.",
+        "wrong": "Use: vaya, vayas, vaya, vayamos, vayáis, vayan."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ir-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex5",
       "lessonId": "c4-subjunctive-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **saber** in **subjuntivo presente**.",
-      "answer": ["sepa","sepas","sepa","sepamos","sepáis","sepan"],
-      "feedback": { "correct": "Correct — sepa series.", "wrong": "Use: sepa, sepas, sepa, sepamos, sepáis, sepan." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "saber-pres-subj" }
+      "answer": [
+        "sepa",
+        "sepas",
+        "sepa",
+        "sepamos",
+        "sepáis",
+        "sepan"
+      ],
+      "feedback": {
+        "correct": "Correct — sepa series.",
+        "wrong": "Use: sepa, sepas, sepa, sepamos, sepáis, sepan."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "saber-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex6",
       "lessonId": "c4-subjunctive-irregulars",
       "type": "conjugate",
       "promptMd": "Conjugate **ser** in **subjuntivo presente**.",
-      "answer": ["sea","seas","sea","seamos","seáis","sean"],
-      "feedback": { "correct": "Nice — sea series.", "wrong": "Use: sea, seas, sea, seamos, seáis, sean." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "ser-pres-subj" }
+      "answer": [
+        "sea",
+        "seas",
+        "sea",
+        "seamos",
+        "seáis",
+        "sean"
+      ],
+      "feedback": {
+        "correct": "Nice — sea series.",
+        "wrong": "Use: sea, seas, sea, seamos, seáis, sean."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "ser-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex7",
@@ -71,9 +173,20 @@
       "type": "cloze",
       "promptMd": "Es probable que ellos ___ (estar) aquí pronto.",
       "answer": "estén",
-      "accepted": ["re:^estén$"],
-      "feedback": { "correct": "✓ Trigger of doubt/probability → subjunctive **estén**.", "wrong": "Use **estén** (estar, subj. pres.)." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "trigger-doubt" }
+      "accepted": [
+        "re:^estén$"
+      ],
+      "feedback": {
+        "correct": "✓ Trigger of doubt/probability → subjunctive **estén**.",
+        "wrong": "Use **estén** (estar, subj. pres.)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "trigger-doubt"
+      }
     },
     {
       "id": "c4-subj-irreg-ex8",
@@ -81,9 +194,20 @@
       "type": "cloze",
       "promptMd": "No creo que tú ___ (saber) la respuesta.",
       "answer": "sepas",
-      "accepted": ["re:^sepas$"],
-      "feedback": { "correct": "✓ Negation of belief → **sepas**.", "wrong": "Use **sepas** (saber, subj.)." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "negation-belief" }
+      "accepted": [
+        "re:^sepas$"
+      ],
+      "feedback": {
+        "correct": "✓ Negation of belief → **sepas**.",
+        "wrong": "Use **sepas** (saber, subj.)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "negation-belief"
+      }
     },
     {
       "id": "c4-subj-irreg-ex9",
@@ -91,9 +215,20 @@
       "type": "cloze",
       "promptMd": "Ojalá que nosotros ___ (ir) a la playa mañana.",
       "answer": "vayamos",
-      "accepted": ["re:^vayamos$"],
-      "feedback": { "correct": "✓ Ojalá → subjunctive **vayamos**.", "wrong": "Use **vayamos** (ir, subj.)." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "ojala" }
+      "accepted": [
+        "re:^vayamos$"
+      ],
+      "feedback": {
+        "correct": "✓ Ojalá → subjunctive **vayamos**.",
+        "wrong": "Use **vayamos** (ir, subj.)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "ojala"
+      }
     },
     {
       "id": "c4-subj-irreg-ex10",
@@ -101,19 +236,43 @@
       "type": "cloze",
       "promptMd": "Busco a alguien que ___ (ser) amable.",
       "answer": "sea",
-      "accepted": ["re:^sea$"],
-      "feedback": { "correct": "✓ Unknown antecedent → **sea**.", "wrong": "Use **sea** (ser, subj.)." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "unknown-antecedent" }
+      "accepted": [
+        "re:^sea$"
+      ],
+      "feedback": {
+        "correct": "✓ Unknown antecedent → **sea**.",
+        "wrong": "Use **sea** (ser, subj.)."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "unknown-antecedent"
+      }
     },
     {
       "id": "c4-subj-irreg-ex11",
       "lessonId": "c4-subjunctive-irregulars",
       "type": "mcq",
       "promptMd": "Choose the correct form: *Es bueno que ella ___ llegado.*",
-      "options": ["ha","haya","habría"],
+      "options": [
+        "ha",
+        "haya",
+        "habría"
+      ],
       "answer": "haya",
-      "feedback": { "correct": "Correct — **haya** + participle for present perfect subjunctive.", "wrong": "Use **haya** llegado." },
-      "meta": { "difficulty": "B2", "skills": ["read"], "topic": "haber-subj" }
+      "feedback": {
+        "correct": "Correct — **haya** + participle for present perfect subjunctive.",
+        "wrong": "Use **haya** llegado."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "haber-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex12",
@@ -121,9 +280,20 @@
       "type": "cloze",
       "promptMd": "Me alegra que tú me ___ (dar) esta oportunidad.",
       "answer": "des",
-      "accepted": ["re:^des$"],
-      "feedback": { "correct": "✓ Emotion trigger → **des**.", "wrong": "Use **des** (dar, subj.)." },
-      "meta": { "difficulty": "B1", "skills": ["write"], "topic": "emotion" }
+      "accepted": [
+        "re:^des$"
+      ],
+      "feedback": {
+        "correct": "✓ Emotion trigger → **des**.",
+        "wrong": "Use **des** (dar, subj.)."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "emotion"
+      }
     },
     {
       "id": "c4-subj-irreg-ex13",
@@ -131,9 +301,21 @@
       "type": "translate",
       "promptMd": "Translate: *I hope that they are here.*",
       "answer": "Espero que estén aquí",
-      "accepted": ["re:^espero que estén aquí\\.?$"],
-      "feedback": { "correct": "Yes — *espero que* + **estén**.", "wrong": "Use: **Espero que estén aquí**." },
-      "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "trigger-hope" }
+      "accepted": [
+        "re:^espero que estén aquí\\.?$"
+      ],
+      "feedback": {
+        "correct": "Yes — *espero que* + **estén**.",
+        "wrong": "Use: **Espero que estén aquí**."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "trigger-hope"
+      }
     },
     {
       "id": "c4-subj-irreg-ex14",
@@ -141,9 +323,20 @@
       "type": "short",
       "promptMd": "1st person singular of **saber** in present subjunctive:",
       "answer": "sepa",
-      "accepted": ["re:^sepa$"],
-      "feedback": { "correct": "Correct — **sepa**.", "wrong": "Use **sepa**." },
-      "meta": { "difficulty": "A2", "skills": ["read"], "topic": "saber-pres-subj" }
+      "accepted": [
+        "re:^sepa$"
+      ],
+      "feedback": {
+        "correct": "Correct — **sepa**.",
+        "wrong": "Use **sepa**."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "saber-pres-subj"
+      }
     },
     {
       "id": "c4-subj-irreg-ex15",
@@ -151,23 +344,106 @@
       "type": "cloze",
       "promptMd": "Quería que ellos ___ (ser) puntuales. *(imperfect subj.)*",
       "answer": "fueran",
-      "accepted": ["re:^fueran$"],
-      "feedback": { "correct": "✓ Past main clause → **fueran** (imp. subj.).", "wrong": "Use **fueran** (from *fueron* → fuera/fueran)." },
-      "meta": { "difficulty": "B2", "skills": ["write"], "topic": "imp-subj" }
+      "accepted": [
+        "re:^fueran$"
+      ],
+      "feedback": {
+        "correct": "✓ Past main clause → **fueran** (imp. subj.).",
+        "wrong": "Use **fueran** (from *fueron* → fuera/fueran)."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "imp-subj"
+      }
     }
   ],
   "flashcards": [
-    { "id": "c4-subj-irreg-fc1", "front": "dar — pres. subj.", "back": "dé, des, dé, demos, deis, den (accent on dé)", "tag": "dar", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc2", "front": "estar — pres. subj.", "back": "esté, estés, esté, **estemos**, **estéis**, estén", "tag": "estar", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc3", "front": "haber — pres. subj.", "back": "haya, hayas, haya, hayamos, hayáis, hayan", "tag": "haber", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc4", "front": "ir — pres. subj.", "back": "vaya, vayas, vaya, vayamos, vayáis, vayan", "tag": "ir", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc5", "front": "saber — pres. subj.", "back": "sepa, sepas, sepa, sepamos, sepáis, sepan", "tag": "saber", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc6", "front": "ser — pres. subj.", "back": "sea, seas, sea, seamos, seáis, sean", "tag": "ser", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc7", "front": "imp. subj. trigger", "back": "preterite 3rd pl. −ron + ra/ras/… (dieron→diera…)", "tag": "rules", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc8", "front": "ir/ser — imp. subj.", "back": "fueran / fuera / fuéramos… (from fueron)", "tag": "ser", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc9", "front": "perfect subj.", "back": "haya + participio (haya llegado)", "tag": "haber", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc10", "front": "common triggers", "back": "quiero que, dudo que, me alegra que, ojalá (que)", "tag": "triggers", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc11", "front": "unknown antecedent", "back": "busco a alguien que + subj.", "tag": "usage", "deck": "grammar" },
-    { "id": "c4-subj-irreg-fc12", "front": "accents to watch", "back": "dé (dar); esté/estés/esté/estén; diéramos/estuviéramos", "tag": "accents", "deck": "grammar" }
+    {
+      "id": "c4-subj-irreg-fc1",
+      "front": "dar — pres. subj.",
+      "back": "dé, des, dé, demos, deis, den (accent on dé)",
+      "tag": "dar",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc2",
+      "front": "estar — pres. subj.",
+      "back": "esté, estés, esté, **estemos**, **estéis**, estén",
+      "tag": "estar",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc3",
+      "front": "haber — pres. subj.",
+      "back": "haya, hayas, haya, hayamos, hayáis, hayan",
+      "tag": "haber",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc4",
+      "front": "ir — pres. subj.",
+      "back": "vaya, vayas, vaya, vayamos, vayáis, vayan",
+      "tag": "ir",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc5",
+      "front": "saber — pres. subj.",
+      "back": "sepa, sepas, sepa, sepamos, sepáis, sepan",
+      "tag": "saber",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc6",
+      "front": "ser — pres. subj.",
+      "back": "sea, seas, sea, seamos, seáis, sean",
+      "tag": "ser",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc7",
+      "front": "imp. subj. trigger",
+      "back": "preterite 3rd pl. −ron + ra/ras/… (dieron→diera…)",
+      "tag": "rules",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc8",
+      "front": "ir/ser — imp. subj.",
+      "back": "fueran / fuera / fuéramos… (from fueron)",
+      "tag": "ser",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc9",
+      "front": "perfect subj.",
+      "back": "haya + participio (haya llegado)",
+      "tag": "haber",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc10",
+      "front": "common triggers",
+      "back": "quiero que, dudo que, me alegra que, ojalá (que)",
+      "tag": "triggers",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc11",
+      "front": "unknown antecedent",
+      "back": "busco a alguien que + subj.",
+      "tag": "usage",
+      "deck": "grammar"
+    },
+    {
+      "id": "c4-subj-irreg-fc12",
+      "front": "accents to watch",
+      "back": "dé (dar); esté/estés/esté/estén; diéramos/estuviéramos",
+      "tag": "accents",
+      "deck": "grammar"
+    }
   ]
 }

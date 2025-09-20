@@ -1,226 +1,632 @@
 {
-    "lessons": [
-      {
-        "id": "c1-conjugation-templates",
-        "level": "C1",
-        "title": "C1 — All Tense Templates (regular -ar/-er/-ir)",
-        "slug": "c1-conjugation-templates",
-        "tags": ["conjugation","grammar","c1"],
-        "markdown": "# 🧠 C1 — All Tense Templates: regular -ar / -er / -ir\n\n**Goal:** Master all simple and compound tenses for regular verbs.**\n\n---\n\n## 📌 Indicative Tenses (simple)\n\n| Tense | -AR | -ER | -IR |\n|---|---|---|---|\n| Presente | -o, -as, -a, -amos, -áis, -an | -o, -es, -e, -emos, -éis, -en | -o, -es, -e, -imos, -ís, -en |\n| Pret. perfecto | he -ado | he -ido | he -ido |\n| Pret. indefinido | -é, -aste, -ó, -amos, -asteis, -aron | -í, -iste, -ió, -imos, -isteis, -ieron | same as -er |\n| Pret. imperfecto | -aba, -abas, -aba, -ábamos, -abais, -aban | -ía, -ías, -ía, -íamos, -íais, -ían | same as -er |\n| Futuro | -aré, -arás, -ará, -aremos, -aréis, -arán | -eré, -erás, -erá, -eremos, -eréis, -erán | -iré… |\n| Condicional | -aría, -arías, -aría, -aríamos, -aríais, -arían | -ería… | -iría… |\n\n---\n\n## 📌 Subjunctive Tenses\n\n| Tense | -AR | -ER/-IR |\n|---|---|---|\n| Presente | -e, -es, -e, -emos, -éis, -en | -a, -as, -a, -amos, -áis, -an |\n| Pret. imperfecto | -ara, -aras, -ara, -áramos, -arais, -aran | -iera, -ieras, -iera, -iéramos, -ierais, -ieran |\n| Futuro (rare) | -are, -ares, -are, -áremos, -areis, -aren | -iere… |\n\n---\n\n## ⚡ Imperatives\n\n| Person | -AR | -ER | -IR |\n|---|---|---|---|\n| tú | -a | -e | -e |\n| vosotros | -ad | -ed | -id |\n| usted | -e | -a | -a |\n| ustedes | -en | -an | -an |\n\nNegative → subjunctive forms\n\n---\n\n## ⚙️ Compound tenses (haber + participle)\n- he / había / habré / habría / haya / hubiera … + **-ado / -ido**\n\n---\n\n> 📝 Summary  \n> Know endings, add to verb stem.  \n> Master irregular stems separately.\n",
-        "references": []
+  "lessons": [
+    {
+      "id": "c1-conjugation-templates",
+      "level": "C1",
+      "title": "C1 — All Tense Templates (regular -ar/-er/-ir)",
+      "slug": "c1-conjugation-templates",
+      "tags": [
+        "conjugation",
+        "grammar",
+        "c1"
+      ],
+      "markdown": "# 🧠 C1 — All Tense Templates: regular -ar / -er / -ir\n\n**Goal:** Master all simple and compound tenses for regular verbs.**\n\n---\n\n## 📌 Indicative Tenses (simple)\n\n| Tense | -AR | -ER | -IR |\n|---|---|---|---|\n| Presente | -o, -as, -a, -amos, -áis, -an | -o, -es, -e, -emos, -éis, -en | -o, -es, -e, -imos, -ís, -en |\n| Pret. perfecto | he -ado | he -ido | he -ido |\n| Pret. indefinido | -é, -aste, -ó, -amos, -asteis, -aron | -í, -iste, -ió, -imos, -isteis, -ieron | same as -er |\n| Pret. imperfecto | -aba, -abas, -aba, -ábamos, -abais, -aban | -ía, -ías, -ía, -íamos, -íais, -ían | same as -er |\n| Futuro | -aré, -arás, -ará, -aremos, -aréis, -arán | -eré, -erás, -erá, -eremos, -eréis, -erán | -iré… |\n| Condicional | -aría, -arías, -aría, -aríamos, -aríais, -arían | -ería… | -iría… |\n\n---\n\n## 📌 Subjunctive Tenses\n\n| Tense | -AR | -ER/-IR |\n|---|---|---|\n| Presente | -e, -es, -e, -emos, -éis, -en | -a, -as, -a, -amos, -áis, -an |\n| Pret. imperfecto | -ara, -aras, -ara, -áramos, -arais, -aran | -iera, -ieras, -iera, -iéramos, -ierais, -ieran |\n| Futuro (rare) | -are, -ares, -are, -áremos, -areis, -aren | -iere… |\n\n---\n\n## ⚡ Imperatives\n\n| Person | -AR | -ER | -IR |\n|---|---|---|---|\n| tú | -a | -e | -e |\n| vosotros | -ad | -ed | -id |\n| usted | -e | -a | -a |\n| ustedes | -en | -an | -an |\n\nNegative → subjunctive forms\n\n---\n\n## ⚙️ Compound tenses (haber + participle)\n- he / había / habré / habría / haya / hubiera … + **-ado / -ido**\n\n---\n\n> 📝 Summary  \n> Know endings, add to verb stem.  \n> Master irregular stems separately.\n",
+      "references": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "c1-conjugation-templates-ex1",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **hablar** in the **presente**",
+      "answer": [
+        "hablo",
+        "hablas",
+        "habla",
+        "hablamos",
+        "habláis",
+        "hablan"
+      ],
+      "feedback": {
+        "correct": "Correct — regular -ar.",
+        "wrong": "Use -o, -as, -a, -amos, -áis, -an"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Presente"
       }
-    ],
-    "exercises": [
-      {
-        "id": "c1-conjugation-templates-ex1",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **hablar** in the **presente**",
-        "answer": ["hablo","hablas","habla","hablamos","habláis","hablan"],
-        "feedback": { "correct": "Correct — regular -ar.", "wrong": "Use -o, -as, -a, -amos, -áis, -an" },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Presente" }
+    },
+    {
+      "id": "c1-conjugation-templates-ex2",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **comer** in the **presente**",
+      "answer": [
+        "como",
+        "comes",
+        "come",
+        "comemos",
+        "coméis",
+        "comen"
+      ],
+      "feedback": {
+        "correct": "Correct — regular -er.",
+        "wrong": "Use -o, -es, -e, -emos, -éis, -en"
       },
-      {
-        "id": "c1-conjugation-templates-ex2",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **comer** in the **presente**",
-        "answer": ["como","comes","come","comemos","coméis","comen"],
-        "feedback": { "correct": "Correct — regular -er.", "wrong": "Use -o, -es, -e, -emos, -éis, -en" },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Presente" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex3",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **vivir** in the **presente**",
-        "answer": ["vivo","vives","vive","vivimos","vivís","viven"],
-        "feedback": { "correct": "Correct — regular -ir.", "wrong": "Use -o, -es, -e, -imos, -ís, -en" },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Presente" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex4",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **hablar** in the **pretérito indefinido**",
-        "answer": ["hablé","hablaste","habló","hablamos","hablasteis","hablaron"],
-        "feedback": { "correct": "Correct — -é, -aste, -ó…", "wrong": "Use -é, -aste, -ó…" },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Indefinido" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex5",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **comer** in the **pretérito indefinido**",
-        "answer": ["comí","comiste","comió","comimos","comisteis","comieron"],
-        "feedback": { "correct": "Correct — -í, -iste, -ió…", "wrong": "Use -í, -iste, -ió…" },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Indefinido" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex6",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **vivir** in the **pretérito imperfecto**",
-        "answer": ["vivía","vivías","vivía","vivíamos","vivíais","vivían"],
-        "feedback": { "correct": "Correct — -ía endings.", "wrong": "Use -ía." },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Imperfecto" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex7",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **hablar** in the **futuro**",
-        "answer": ["hablaré","hablarás","hablará","hablaremos","hablaréis","hablarán"],
-        "feedback": { "correct": "Correct — -é, -ás…", "wrong": "Add endings to infinitive." },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Futuro" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex8",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **comer** in the **condicional**",
-        "answer": ["comería","comerías","comería","comeríamos","comeríais","comerían"],
-        "feedback": { "correct": "Correct — -ía endings.", "wrong": "Add -ía to infinitive." },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Condicional" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex9",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **vivir** in the **presente de subjuntivo**",
-        "answer": ["viva","vivas","viva","vivamos","viváis","vivan"],
-        "feedback": { "correct": "Correct — swap endings.", "wrong": "Use -a, -as… for -ir subjunctive." },
-        "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Subjuntivo" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex10",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **hablar** in the **imperfecto de subjuntivo**",
-        "answer": ["hablara","hablaras","hablara","habláramos","hablarais","hablaran"],
-        "feedback": { "correct": "Correct — -ara endings.", "wrong": "Use -ara." },
-        "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Subjuntivo" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex11",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **comer** in the **imperfecto de subjuntivo**",
-        "answer": ["comiera","comieras","comiera","comiéramos","comierais","comieran"],
-        "feedback": { "correct": "Correct — -iera endings.", "wrong": "Use -iera." },
-        "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Subjuntivo" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex12",
-        "lessonId": "c1-conjugation-templates",
-        "type": "conjugate",
-        "promptMd": "Conjugate **vivir** in the **imperative**",
-        "answer": ["vive","vivid","viva","vivan"],
-        "feedback": { "correct": "Correct — vive, vivid, viva, vivan.", "wrong": "Use vive…" },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Imperativo" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex13",
-        "lessonId": "c1-conjugation-templates",
-        "type": "cloze",
-        "promptMd": "Yo ___ (hablar, futuro)",
-        "answer": "hablaré",
-        "accepted": ["re:^hablaré$"],
-        "feedback": { "correct": "Correct — futuro.", "wrong": "Add -é." },
-        "meta": { "difficulty": "A2", "skills": ["write"], "topic": "Futuro" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex14",
-        "lessonId": "c1-conjugation-templates",
-        "type": "cloze",
-        "promptMd": "Nosotros ___ (comer, condicional)",
-        "answer": "comeríamos",
-        "accepted": ["re:^comeríamos$"],
-        "feedback": { "correct": "Correct — condicional.", "wrong": "Use -íamos." },
-        "meta": { "difficulty": "B1", "skills": ["write"], "topic": "Condicional" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex15",
-        "lessonId": "c1-conjugation-templates",
-        "type": "cloze",
-        "promptMd": "Ellos ___ (vivir, subjuntivo presente)",
-        "answer": "vivan",
-        "accepted": ["re:^vivan$"],
-        "feedback": { "correct": "Correct — subjunctive.", "wrong": "Use -an." },
-        "meta": { "difficulty": "C1", "skills": ["write"], "topic": "Subjuntivo" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex16",
-        "lessonId": "c1-conjugation-templates",
-        "type": "translate",
-        "promptMd": "Translate: *hablaba*",
-        "answer": "I was speaking / used to speak",
-        "accepted": ["re:was speaking","re:used to speak"],
-        "feedback": { "correct": "Correct — imperfecto.", "wrong": "Use was speaking." },
-        "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Imperfecto" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex17",
-        "lessonId": "c1-conjugation-templates",
-        "type": "translate",
-        "promptMd": "Translate: *he comido*",
-        "answer": "I have eaten",
-        "accepted": ["re:have eaten"],
-        "feedback": { "correct": "Correct — pretérito perfecto.", "wrong": "Use have eaten." },
-        "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Perfecto" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex18",
-        "lessonId": "c1-conjugation-templates",
-        "type": "translate",
-        "promptMd": "Translate: *hablaré*",
-        "answer": "I will speak",
-        "accepted": ["re:will speak"],
-        "feedback": { "correct": "Correct — futuro.", "wrong": "Use will." },
-        "meta": { "difficulty": "A2", "skills": ["read","write"], "topic": "Futuro" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex19",
-        "lessonId": "c1-conjugation-templates",
-        "type": "translate",
-        "promptMd": "Translate: *comería*",
-        "answer": "I would eat",
-        "accepted": ["re:would eat"],
-        "feedback": { "correct": "Correct — condicional.", "wrong": "Use would." },
-        "meta": { "difficulty": "B1", "skills": ["read","write"], "topic": "Condicional" }
-      },
-      {
-        "id": "c1-conjugation-templates-ex20",
-        "lessonId": "c1-conjugation-templates",
-        "type": "short",
-        "promptMd": "What is the past participle of -ar verbs?",
-        "answer": "-ado",
-        "accepted": ["re:-ado"],
-        "feedback": { "correct": "Correct — -ado.", "wrong": "Use -ado." },
-        "meta": { "difficulty": "A2", "skills": ["read"], "topic": "Perfecto" }
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Presente"
       }
-    ],
-    "flashcards": [
-      { "id": "c1-conjugation-templates-fc1", "front": "presente -ar", "back": "-o, -as, -a, -amos, -áis, -an", "tag": "presente", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc2", "front": "presente -er", "back": "-o, -es, -e, -emos, -éis, -en", "tag": "presente", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc3", "front": "presente -ir", "back": "-o, -es, -e, -imos, -ís, -en", "tag": "presente", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc4", "front": "indefinido -ar", "back": "-é, -aste, -ó, -amos, -asteis, -aron", "tag": "indefinido", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc5", "front": "indefinido -er/-ir", "back": "-í, -iste, -ió, -imos, -isteis, -ieron", "tag": "indefinido", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc6", "front": "imperfecto -ar", "back": "-aba, -abas, -aba, -ábamos, -abais, -aban", "tag": "imperfecto", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc7", "front": "imperfecto -er/-ir", "back": "-ía, -ías, -ía, -íamos, -íais, -ían", "tag": "imperfecto", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc8", "front": "futuro (todas)", "back": "infinitivo + é, ás, á, emos, éis, án", "tag": "futuro", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc9", "front": "condicional (todas)", "back": "infinitivo + ía, ías, ía, íamos, íais, ían", "tag": "condicional", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc10", "front": "subj. presente -ar", "back": "-e, -es, -e, -emos, -éis, -en", "tag": "subjuntivo", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc11", "front": "subj. presente -er/-ir", "back": "-a, -as, -a, -amos, -áis, -an", "tag": "subjuntivo", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc12", "front": "subj. imperfecto -ar", "back": "-ara, -aras, -ara, **áramos**, -arais, -aran", "tag": "subjuntivo", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc13", "front": "subj. imperfecto -er/-ir", "back": "-iera, -ieras, -iera, **iéramos**, -ierais, -ieran", "tag": "subjuntivo", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc14", "front": "imperativo tú/vosotros", "back": "-a / -e · -ad / -ed / -id", "tag": "imperativo", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc15", "front": "imperativo ud./uds.", "back": "-e/-en (ar) · -a/-an (er/ir)", "tag": "imperativo", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc16", "front": "participios", "back": "-ado (ar); -ido (er/ir)", "tag": "perfecto", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc17", "front": "tiempos compuestos", "back": "haber (he/has/ha… había… habré… habría… haya… hubiera) + participio", "tag": "perfecto", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc18", "front": "regla: futuro/condicional", "back": "añaden terminaciones **al infinitivo**", "tag": "tips", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc19", "front": "consejo de cuadrícula", "back": "yo, tú, él/ella, nosotros, vosotros, ellos — revisa todos", "tag": "tips", "deck": "grammar" },
-      { "id": "c1-conjugation-templates-fc20", "front": "pluscuamperfecto", "back": "había, habías, había, habíamos, habíais, habían + participio", "tag": "perfecto", "deck": "grammar" }
-    ]
-  }
-  
+    },
+    {
+      "id": "c1-conjugation-templates-ex3",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **vivir** in the **presente**",
+      "answer": [
+        "vivo",
+        "vives",
+        "vive",
+        "vivimos",
+        "vivís",
+        "viven"
+      ],
+      "feedback": {
+        "correct": "Correct — regular -ir.",
+        "wrong": "Use -o, -es, -e, -imos, -ís, -en"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Presente"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex4",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **hablar** in the **pretérito indefinido**",
+      "answer": [
+        "hablé",
+        "hablaste",
+        "habló",
+        "hablamos",
+        "hablasteis",
+        "hablaron"
+      ],
+      "feedback": {
+        "correct": "Correct — -é, -aste, -ó…",
+        "wrong": "Use -é, -aste, -ó…"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Indefinido"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex5",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **comer** in the **pretérito indefinido**",
+      "answer": [
+        "comí",
+        "comiste",
+        "comió",
+        "comimos",
+        "comisteis",
+        "comieron"
+      ],
+      "feedback": {
+        "correct": "Correct — -í, -iste, -ió…",
+        "wrong": "Use -í, -iste, -ió…"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Indefinido"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex6",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **vivir** in the **pretérito imperfecto**",
+      "answer": [
+        "vivía",
+        "vivías",
+        "vivía",
+        "vivíamos",
+        "vivíais",
+        "vivían"
+      ],
+      "feedback": {
+        "correct": "Correct — -ía endings.",
+        "wrong": "Use -ía."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Imperfecto"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex7",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **hablar** in the **futuro**",
+      "answer": [
+        "hablaré",
+        "hablarás",
+        "hablará",
+        "hablaremos",
+        "hablaréis",
+        "hablarán"
+      ],
+      "feedback": {
+        "correct": "Correct — -é, -ás…",
+        "wrong": "Add endings to infinitive."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Futuro"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex8",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **comer** in the **condicional**",
+      "answer": [
+        "comería",
+        "comerías",
+        "comería",
+        "comeríamos",
+        "comeríais",
+        "comerían"
+      ],
+      "feedback": {
+        "correct": "Correct — -ía endings.",
+        "wrong": "Add -ía to infinitive."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Condicional"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex9",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **vivir** in the **presente de subjuntivo**",
+      "answer": [
+        "viva",
+        "vivas",
+        "viva",
+        "vivamos",
+        "viváis",
+        "vivan"
+      ],
+      "feedback": {
+        "correct": "Correct — swap endings.",
+        "wrong": "Use -a, -as… for -ir subjunctive."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Subjuntivo"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex10",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **hablar** in the **imperfecto de subjuntivo**",
+      "answer": [
+        "hablara",
+        "hablaras",
+        "hablara",
+        "habláramos",
+        "hablarais",
+        "hablaran"
+      ],
+      "feedback": {
+        "correct": "Correct — -ara endings.",
+        "wrong": "Use -ara."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Subjuntivo"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex11",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **comer** in the **imperfecto de subjuntivo**",
+      "answer": [
+        "comiera",
+        "comieras",
+        "comiera",
+        "comiéramos",
+        "comierais",
+        "comieran"
+      ],
+      "feedback": {
+        "correct": "Correct — -iera endings.",
+        "wrong": "Use -iera."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Subjuntivo"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex12",
+      "lessonId": "c1-conjugation-templates",
+      "type": "conjugate",
+      "promptMd": "Conjugate **vivir** in the **imperative**",
+      "answer": [
+        "vive",
+        "vivid",
+        "viva",
+        "vivan"
+      ],
+      "feedback": {
+        "correct": "Correct — vive, vivid, viva, vivan.",
+        "wrong": "Use vive…"
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Imperativo"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex13",
+      "lessonId": "c1-conjugation-templates",
+      "type": "cloze",
+      "promptMd": "Yo ___ (hablar, futuro)",
+      "answer": "hablaré",
+      "accepted": [
+        "re:^hablaré$"
+      ],
+      "feedback": {
+        "correct": "Correct — futuro.",
+        "wrong": "Add -é."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "Futuro"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex14",
+      "lessonId": "c1-conjugation-templates",
+      "type": "cloze",
+      "promptMd": "Nosotros ___ (comer, condicional)",
+      "answer": "comeríamos",
+      "accepted": [
+        "re:^comeríamos$"
+      ],
+      "feedback": {
+        "correct": "Correct — condicional.",
+        "wrong": "Use -íamos."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Condicional"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex15",
+      "lessonId": "c1-conjugation-templates",
+      "type": "cloze",
+      "promptMd": "Ellos ___ (vivir, subjuntivo presente)",
+      "answer": "vivan",
+      "accepted": [
+        "re:^vivan$"
+      ],
+      "feedback": {
+        "correct": "Correct — subjunctive.",
+        "wrong": "Use -an."
+      },
+      "meta": {
+        "difficulty": "C1",
+        "skills": [
+          "write"
+        ],
+        "topic": "Subjuntivo"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex16",
+      "lessonId": "c1-conjugation-templates",
+      "type": "translate",
+      "promptMd": "Translate: *hablaba*",
+      "answer": "I was speaking / used to speak",
+      "accepted": [
+        "re:was speaking",
+        "re:used to speak"
+      ],
+      "feedback": {
+        "correct": "Correct — imperfecto.",
+        "wrong": "Use was speaking."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Imperfecto"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex17",
+      "lessonId": "c1-conjugation-templates",
+      "type": "translate",
+      "promptMd": "Translate: *he comido*",
+      "answer": "I have eaten",
+      "accepted": [
+        "re:have eaten"
+      ],
+      "feedback": {
+        "correct": "Correct — pretérito perfecto.",
+        "wrong": "Use have eaten."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Perfecto"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex18",
+      "lessonId": "c1-conjugation-templates",
+      "type": "translate",
+      "promptMd": "Translate: *hablaré*",
+      "answer": "I will speak",
+      "accepted": [
+        "re:will speak"
+      ],
+      "feedback": {
+        "correct": "Correct — futuro.",
+        "wrong": "Use will."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Futuro"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex19",
+      "lessonId": "c1-conjugation-templates",
+      "type": "translate",
+      "promptMd": "Translate: *comería*",
+      "answer": "I would eat",
+      "accepted": [
+        "re:would eat"
+      ],
+      "feedback": {
+        "correct": "Correct — condicional.",
+        "wrong": "Use would."
+      },
+      "meta": {
+        "difficulty": "B1",
+        "skills": [
+          "read",
+          "write"
+        ],
+        "topic": "Condicional"
+      }
+    },
+    {
+      "id": "c1-conjugation-templates-ex20",
+      "lessonId": "c1-conjugation-templates",
+      "type": "short",
+      "promptMd": "What is the past participle of -ar verbs?",
+      "answer": "-ado",
+      "accepted": [
+        "re:-ado"
+      ],
+      "feedback": {
+        "correct": "Correct — -ado.",
+        "wrong": "Use -ado."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "Perfecto"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "c1-conjugation-templates-fc1",
+      "front": "presente -ar",
+      "back": "-o, -as, -a, -amos, -áis, -an",
+      "tag": "presente",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc2",
+      "front": "presente -er",
+      "back": "-o, -es, -e, -emos, -éis, -en",
+      "tag": "presente",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc3",
+      "front": "presente -ir",
+      "back": "-o, -es, -e, -imos, -ís, -en",
+      "tag": "presente",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc4",
+      "front": "indefinido -ar",
+      "back": "-é, -aste, -ó, -amos, -asteis, -aron",
+      "tag": "indefinido",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc5",
+      "front": "indefinido -er/-ir",
+      "back": "-í, -iste, -ió, -imos, -isteis, -ieron",
+      "tag": "indefinido",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc6",
+      "front": "imperfecto -ar",
+      "back": "-aba, -abas, -aba, -ábamos, -abais, -aban",
+      "tag": "imperfecto",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc7",
+      "front": "imperfecto -er/-ir",
+      "back": "-ía, -ías, -ía, -íamos, -íais, -ían",
+      "tag": "imperfecto",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc8",
+      "front": "futuro (todas)",
+      "back": "infinitivo + é, ás, á, emos, éis, án",
+      "tag": "futuro",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc9",
+      "front": "condicional (todas)",
+      "back": "infinitivo + ía, ías, ía, íamos, íais, ían",
+      "tag": "condicional",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc10",
+      "front": "subj. presente -ar",
+      "back": "-e, -es, -e, -emos, -éis, -en",
+      "tag": "subjuntivo",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc11",
+      "front": "subj. presente -er/-ir",
+      "back": "-a, -as, -a, -amos, -áis, -an",
+      "tag": "subjuntivo",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc12",
+      "front": "subj. imperfecto -ar",
+      "back": "-ara, -aras, -ara, **áramos**, -arais, -aran",
+      "tag": "subjuntivo",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc13",
+      "front": "subj. imperfecto -er/-ir",
+      "back": "-iera, -ieras, -iera, **iéramos**, -ierais, -ieran",
+      "tag": "subjuntivo",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc14",
+      "front": "imperativo tú/vosotros",
+      "back": "-a / -e · -ad / -ed / -id",
+      "tag": "imperativo",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc15",
+      "front": "imperativo ud./uds.",
+      "back": "-e/-en (ar) · -a/-an (er/ir)",
+      "tag": "imperativo",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc16",
+      "front": "participios",
+      "back": "-ado (ar); -ido (er/ir)",
+      "tag": "perfecto",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc17",
+      "front": "tiempos compuestos",
+      "back": "haber (he/has/ha… había… habré… habría… haya… hubiera) + participio",
+      "tag": "perfecto",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc18",
+      "front": "regla: futuro/condicional",
+      "back": "añaden terminaciones **al infinitivo**",
+      "tag": "tips",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc19",
+      "front": "consejo de cuadrícula",
+      "back": "yo, tú, él/ella, nosotros, vosotros, ellos — revisa todos",
+      "tag": "tips",
+      "deck": "grammar"
+    },
+    {
+      "id": "c1-conjugation-templates-fc20",
+      "front": "pluscuamperfecto",
+      "back": "había, habías, había, habíamos, habíais, habían + participio",
+      "tag": "perfecto",
+      "deck": "grammar"
+    }
+  ]
+}
