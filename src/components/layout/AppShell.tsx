@@ -1,5 +1,6 @@
-import React, { useMemo, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { FormEvent, useEffect, useMemo, useState } from 'react';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useWorkspaceSnapshot } from '../../hooks/useWorkspaceSnapshot';
 import styles from './AppShell.module.css';
 
 interface AppShellProps {
@@ -14,6 +15,14 @@ type NavigationItem = {
   description: string;
   icon: string;
   exact?: boolean;
+};
+
+type QuickAction = {
+  to: string;
+  label: string;
+  description: string;
+  icon: string;
+  badge?: string;
 };
 
 const navigation: NavigationItem[] = [
@@ -44,26 +53,40 @@ const navigation: NavigationItem[] = [
   },
 ];
 
-const quickActions: NavigationItem[] = [
-  {
-    to: '/dashboard',
-    label: 'Review analytics',
-    description: 'Start with the weakest skills and tags.',
-    icon: '📈',
-  },
-  {
-    to: '/flashcards',
-    label: 'Warm-up with flashcards',
-    description: 'Clear due connectors in five focused minutes.',
-    icon: '⚡️',
-  },
-  {
-    to: '/content-manager',
-    label: 'Refresh content bundle',
-    description: 'Import the latest JSON drop before you begin.',
-    icon: '🔄',
-  },
-];
+const deckLabel = (deck: string) => {
+  switch (deck) {
+    case 'verbs':
+      return 'Verb drills';
+    case 'vocab':
+      return 'Vocabulary';
+    case 'presentations':
+      return 'Presentation phrases';
+    case 'grammar':
+    default:
+      return 'Grammar focus';
+  }
+};
+
+const formatRelativeTime = (value?: string) => {
+  if (!value) return 'Never';
+  const date = new Date(value);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  if (diffMs <= 0) return 'Just now';
+  const diffMinutes = Math.floor(diffMs / (1000 * 60));
+  if (diffMinutes < 60) {
+    return diffMinutes === 1 ? '1 minute ago' : `${diffMinutes} minutes ago`;
+  }
+  const diffHours = Math.floor(diffMinutes / 60);
+  if (diffHours < 24) {
+    return diffHours === 1 ? '1 hour ago' : `${diffHours} hours ago`;
+  }
+  const diffDays = Math.floor(diffHours / 24);
+  if (diffDays < 7) {
+    return diffDays === 1 ? 'Yesterday' : `${diffDays} days ago`;
+  }
+  return date.toLocaleDateString();
+};
 
 export const AppShell: React.FC<AppShellProps> = ({
   highContrastEnabled,
@@ -71,6 +94,24 @@ export const AppShell: React.FC<AppShellProps> = ({
   children,
 }) => {
   const [focusMode, setFocusMode] = useState(false);
+  const [navCollapsed, setNavCollapsed] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [searchTerm, setSearchTerm] = useState(() => new URLSearchParams(location.search).get('q') ?? '');
+  const workspace = useWorkspaceSnapshot();
+
+  useEffect(() => {
+    setSearchTerm(new URLSearchParams(location.search).get('q') ?? '');
+  }, [location.search]);
+
+  const handleSearch = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const params = new URLSearchParams(location.search);
+    if (searchTerm.trim()) params.set('q', searchTerm.trim());
+    else params.delete('q');
+    const searchString = params.toString();
+    navigate(`/${searchString ? `?${searchString}` : ''}#lesson-library`);
+  };
 
   const mainContent = useMemo(
     () => (
@@ -88,11 +129,78 @@ export const AppShell: React.FC<AppShellProps> = ({
     [children, focusMode]
   );
 
+  const quickActions: QuickAction[] = useMemo(() => {
+    if (workspace.loading) {
+      return [
+        {
+          to: '/',
+          label: 'Loading workspace insights…',
+          description: 'We’re gathering lessons, flashcards and analytics.',
+          icon: '⏳',
+        },
+      ];
+    }
+
+    const actions: QuickAction[] = [];
+
+    if (workspace.resumeLesson) {
+      actions.push({
+        to: workspace.resumeLesson.lessonSlug
+          ? `/lessons/${workspace.resumeLesson.lessonSlug}`
+          : '/',
+        label: `Resume ${workspace.resumeLesson.lessonTitle}`,
+        description: `Last review ${formatRelativeTime(workspace.resumeLesson.lastAttemptAt)} · ${workspace.resumeLesson.masteredCount}/${workspace.resumeLesson.totalExercises} mastered`,
+        icon: '🎯',
+      });
+    }
+
+    if (workspace.studyPlan[0]) {
+      const item = workspace.studyPlan[0];
+      actions.push({
+        to: item.lessonSlug ? `/lessons/${item.lessonSlug}` : '/',
+        label: 'Suggested next exercise',
+        description: `${item.lessonTitle} — ${item.reason}`,
+        icon: '📌',
+      });
+    }
+
+    const dueDeck = workspace.deckDue.find((entry) => entry.due > 0);
+    actions.push({
+      to: '/flashcards',
+      label: 'Continue flashcard reviews',
+      description: dueDeck
+        ? `${deckLabel(dueDeck.deck)} deck · ${dueDeck.due} due`
+        : 'No cards due — review a favourite deck for a bonus sprint.',
+      icon: '🧠',
+      badge: workspace.dueFlashcards ? `${workspace.dueFlashcards} due` : undefined,
+    });
+
+    if (workspace.weakestTag) {
+      actions.push({
+        to: `/dashboard?focus=${encodeURIComponent(workspace.weakestTag.tag)}`,
+        label: 'Inspect weakest tag',
+        description: `${workspace.weakestTag.tag} · ${workspace.weakestTag.accuracy.toFixed(0)}% accuracy`,
+        icon: '🛠️',
+      });
+    }
+
+    return actions.slice(0, 3);
+  }, [workspace]);
+
+  const handleNavToggle = () => {
+    setNavCollapsed((prev) => !prev);
+  };
+
   return (
-    <div className={styles.appShell}>
+    <div className={styles.appShell} data-focus-mode={focusMode ? 'on' : 'off'}>
       <div className={styles.background} aria-hidden="true" />
       <div className={styles.shellLayout}>
-        <aside className={styles.primaryColumn} aria-label="Workspace navigation">
+        <aside
+          className={styles.primaryColumn}
+          aria-label="Workspace navigation"
+          data-collapsed={navCollapsed}
+          aria-hidden={navCollapsed}
+        >
           <div className={styles.brandBlock}>
             <Link to="/" className={styles.logo}>
               <span className={styles.logoMark} aria-hidden="true">
@@ -138,18 +246,21 @@ export const AppShell: React.FC<AppShellProps> = ({
                 Quick launch
               </p>
               <p className={styles.sectionHint}>
-                Jump straight into the task that keeps momentum.
+                Updated automatically from your latest analytics snapshot.
               </p>
             </div>
             <div className={styles.quickActions} role="list">
-              {quickActions.map(({ to, label, description, icon }) => (
-                <Link key={to} to={to} className={styles.quickLink} role="listitem">
+              {quickActions.map(({ to, label, description, icon, badge }) => (
+                <Link key={label} to={to} className={styles.quickLink} role="listitem">
                   <span className={styles.quickLinkText}>
                     <span className={styles.quickLinkLabel}>{label}</span>
                     <span className={styles.quickLinkDescription}>{description}</span>
                   </span>
-                  <span className={styles.quickLinkIcon} aria-hidden="true">
-                    {icon}
+                  <span className={styles.quickLinkMeta}>
+                    {badge && <span className={styles.quickLinkBadge}>{badge}</span>}
+                    <span className={styles.quickLinkIcon} aria-hidden="true">
+                      {icon}
+                    </span>
                   </span>
                 </Link>
               ))}
@@ -158,24 +269,28 @@ export const AppShell: React.FC<AppShellProps> = ({
 
           <section className={styles.guideSection} aria-labelledby="navigation-highlights-heading">
             <p id="navigation-highlights-heading" className={styles.sectionLabel}>
-              Navigation highlights
-            </p>
-            <p className={styles.sectionHint}>
-              Each page supports a different phase of your bilingual workflow.
+              Study digest
             </p>
             <ul className={styles.guideList} role="list">
+              {workspace.studyPlan?.length ? (
+                <li>
+                  <strong>Next up:</strong> {workspace.studyPlan[0].lessonTitle}
+                </li>
+              ) : (
+                <li>Import new lessons to populate personalised recommendations.</li>
+              )}
               <li>
-                <strong>Overview:</strong> plan what to learn next.
+                <strong>Flashcards due:</strong> {workspace.dueFlashcards}
               </li>
-              <li>
-                <strong>Dashboard:</strong> inspect accuracy trends.
-              </li>
-              <li>
-                <strong>Flashcards:</strong> reinforce quick wins.
-              </li>
-              <li>
-                <strong>Content:</strong> keep lessons synced offline.
-              </li>
+              {workspace.weakestTag ? (
+                <li>
+                  <strong>Weakest tag:</strong> {workspace.weakestTag.tag}
+                </li>
+              ) : (
+                <li>
+                  Master a lesson to surface detailed tag analytics.
+                </li>
+              )}
             </ul>
           </section>
         </aside>
@@ -183,6 +298,15 @@ export const AppShell: React.FC<AppShellProps> = ({
         <div className={styles.mainColumn}>
           <header className={styles.toolbar} aria-label="Workspace controls">
             <div className={styles.toolbarIntro}>
+              <button
+                type="button"
+                className={styles.navToggle}
+                onClick={handleNavToggle}
+                aria-pressed={!navCollapsed}
+                aria-label={navCollapsed ? 'Show navigation' : 'Hide navigation'}
+              >
+                {navCollapsed ? '☰ Menu' : '✕ Hide menu'}
+              </button>
               <div className={styles.flowPill} aria-hidden="true">
                 <span>Plan</span>
                 <span>Practice</span>
@@ -191,11 +315,27 @@ export const AppShell: React.FC<AppShellProps> = ({
               <div className={styles.toolbarText}>
                 <p className={styles.toolbarTitle}>Craft today’s study block</p>
                 <p className={styles.toolbarSubtitle}>
-                  Use the left rail to jump around and flip on focus mode to hide supporting panels.
+                  Use the left rail to jump around, search the lesson library, or flip on focus mode to hide supporting panels.
                 </p>
               </div>
             </div>
             <div className={styles.toolbarActions}>
+              <form className={styles.toolbarSearch} role="search" onSubmit={handleSearch}>
+                <label htmlFor="global-search" className="sr-only">
+                  Search lessons and tags
+                </label>
+                <input
+                  id="global-search"
+                  value={searchTerm}
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                  className={styles.searchInput}
+                  placeholder="Search lessons, tags, objectives…"
+                  type="search"
+                />
+                <button type="submit" className={styles.searchButton}>
+                  Search
+                </button>
+              </form>
               <button
                 type="button"
                 role="switch"
@@ -204,6 +344,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                 className={styles.contrastToggle}
                 data-active={highContrastEnabled}
                 aria-label="Toggle high-contrast theme"
+                title="Toggle high-contrast theme"
               >
                 <span className={styles.toggleThumb} aria-hidden="true">
                   {highContrastEnabled ? 'HC' : 'Aa'}
@@ -221,6 +362,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                 className={styles.focusToggle}
                 data-active={focusMode}
                 aria-label="Toggle focus mode"
+                title="Toggle focus mode"
               >
                 <span>Focus mode</span>
                 <span className={styles.focusStatus} aria-live="polite">
@@ -230,7 +372,7 @@ export const AppShell: React.FC<AppShellProps> = ({
             </div>
           </header>
 
-          <div className={styles.contentArea}>
+          <div className={styles.contentArea} data-focus={focusMode ? 'on' : 'off'}>
             <main id="main-content" tabIndex={-1} className={styles.main}>
               {mainContent}
             </main>
@@ -254,19 +396,30 @@ export const AppShell: React.FC<AppShellProps> = ({
               </section>
 
               <section className={`ui-card ui-card--muted ${styles.sideCard}`}>
-                <span className="ui-section__tag">Keep content fresh</span>
-                <p className="ui-section__subtitle">
-                  Import JSON bundles in the content manager to refresh lessons and practise sets. Once loaded, everything is cached for offline work.
-                </p>
-                <Link to="/content-manager" className="ui-button ui-button--secondary">
-                  Go to content manager
-                </Link>
+                <span className="ui-section__tag">Documentation</span>
+                <ul className="ui-section">
+                  <li>
+                    <a href="/docs/anki-export.md" target="_blank" rel="noreferrer">
+                      How to export Anki decks
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/docs/exam-day-checklist.md" target="_blank" rel="noreferrer">
+                      Exam-day speaking checklist
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/docs/study-playbook.md" target="_blank" rel="noreferrer">
+                      Study session playbook
+                    </a>
+                  </li>
+                </ul>
               </section>
             </aside>
           </div>
 
           <footer className={styles.footer} aria-label="Site footer">
-            Launch locally with <code>npm install</code> then <code>npm run dev</code>.
+            Curious what changed? Review the <a href="/docs/changelog.md">changelog</a> or sync the latest bundle in the content manager.
           </footer>
         </div>
       </div>

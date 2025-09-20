@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Exercise } from '../lib/schemas';
+import { Exercise, Grade } from '../lib/schemas';
 import { gradeAnswer } from '../lib/grader';
 import { db } from '../db';
 import { ConjugationTable } from './ConjugationTable';
@@ -8,9 +8,10 @@ import styles from './ExerciseEngine.module.css';
 
 interface ExerciseEngineProps {
   exercise: Exercise;
+  onGrade?: (grade: Grade) => void;
 }
 
-export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
+export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrade }) => {
   const expectedArray = useMemo(
     () => (Array.isArray(exercise.answer) ? exercise.answer : [exercise.answer]),
     [exercise.answer]
@@ -21,6 +22,8 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
   const [feedback, setFeedback] = useState('');
   const [attempts, setAttempts] = useState(0);
   const [startTime, setStartTime] = useState(() => Date.now());
+  const [showHints, setShowHints] = useState(false);
+  const [showRubric, setShowRubric] = useState(false);
 
   useEffect(() => {
     setInputValue('');
@@ -54,11 +57,15 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
     const userAnswer = getUserAnswer();
     const result = gradeAnswer(exercise, userAnswer);
 
-    setFeedback(result.isCorrect ? '✅ Correct!' : '❌ Try again.');
+    setFeedback(
+      result.isCorrect
+        ? `✅ Correct! Score ${(result.score ?? 0).toFixed(0)}%`
+        : `❌ Try again. Score ${(result.score ?? 0).toFixed(0)}%`
+    );
     setStartTime(Date.now());
     setAttempts(result.isCorrect ? 0 : attemptCount);
 
-    await db.grades.add({
+    const gradeRecord: Grade = {
       id: `${exercise.id}-${now}`,
       exerciseId: exercise.id,
       userAnswer,
@@ -68,7 +75,11 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
       timeMs: elapsed,
       gradedAt: new Date(now).toISOString(),
       syncedAt: undefined,
-    });
+    };
+
+    await db.grades.add(gradeRecord);
+
+    onGrade?.(gradeRecord);
 
     if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
       try {
@@ -152,6 +163,17 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
 
   return (
     <div className={styles.exercise} aria-live="polite">
+      <div className={styles.exerciseMeta}>
+        {exercise.meta?.difficulty && (
+          <span className="ui-chip ui-chip--muted">{exercise.meta.difficulty}</span>
+        )}
+        {exercise.meta?.skills?.map((skill) => (
+          <span key={skill} className="ui-chip ui-chip--outline">
+            {skill}
+          </span>
+        ))}
+        {exercise.meta?.topic && <span className={styles.topicBadge}>{exercise.meta.topic}</span>}
+      </div>
       <div className={styles.prompt}>
         <div className="prose">
           <ReactMarkdown>{exercise.promptMd}</ReactMarkdown>
@@ -171,6 +193,32 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise }) => {
           className={`${styles.feedback} ${feedback.includes('Correct') ? styles.feedbackSuccess : styles.feedbackError}`}
         >
           {feedback}
+        </div>
+      )}
+      {(exercise.feedback?.hints?.length || exercise.rubric) && (
+        <div className={styles.supportRow}>
+          {exercise.feedback?.hints?.length ? (
+            <button type="button" className={styles.supportButton} onClick={() => setShowHints((prev) => !prev)}>
+              {showHints ? 'Hide hints' : `Show hints (${exercise.feedback.hints.length})`}
+            </button>
+          ) : null}
+          {exercise.rubric ? (
+            <button type="button" className={styles.supportButton} onClick={() => setShowRubric((prev) => !prev)}>
+              {showRubric ? 'Hide rubric' : 'Show rubric'}
+            </button>
+          ) : null}
+        </div>
+      )}
+      {showHints && exercise.feedback?.hints && (
+        <ul className={styles.hintList} aria-label="Hints">
+          {exercise.feedback.hints.map((hint, index) => (
+            <li key={`${hint}-${index}`}>{hint}</li>
+          ))}
+        </ul>
+      )}
+      {showRubric && exercise.rubric && (
+        <div className={styles.rubric} aria-label="Rubric">
+          <ReactMarkdown>{exercise.rubric}</ReactMarkdown>
         </div>
       )}
     </div>

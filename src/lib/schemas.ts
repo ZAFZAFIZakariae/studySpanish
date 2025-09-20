@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const LessonSchema = z.object({
   id: z.string(),
-  level: z.enum(['B1', 'C1']),
+  level: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
   title: z.string(),
   slug: z.string(),
   tags: z.array(z.string()),
@@ -14,7 +14,7 @@ export type Lesson = z.infer<typeof LessonSchema>;
 export const ExerciseSchema = z.object({
   id: z.string(),
   lessonId: z.string(),
-  type: z.enum(['mcq','multi','cloze','short','translate','conjugate','order','match']),
+  type: z.enum(['mcq', 'multi', 'cloze', 'short', 'translate', 'conjugate', 'order', 'match']),
   promptMd: z.string(),
   options: z.array(z.string()).optional(),
   answer: z.union([z.string(), z.array(z.string())]),
@@ -26,8 +26,8 @@ export const ExerciseSchema = z.object({
     hints: z.array(z.string()).optional()
   }).optional(),
   meta: z.object({
-    difficulty: z.enum(['A2','B1','B2','C1']),
-    skills: z.array(z.enum(['read','write','listen','speak'])),
+    difficulty: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
+    skills: z.array(z.enum(['read', 'write', 'listen', 'speak'])),
     topic: z.string().optional()
   }).optional()
 });
@@ -56,7 +56,9 @@ export const FlashcardSchema = z.object({
   srs: z.object({
     bucket: z.number(),
     lastReview: z.string().optional(),
-    nextDue: z.string().optional()
+    nextDue: z.string().optional(),
+    streak: z.number().optional(),
+    lastGrade: z.enum(['again','hard','good','easy']).optional()
   }).optional()
 });
 export type Flashcard = z.infer<typeof FlashcardSchema>;

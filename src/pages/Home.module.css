@@ -140,6 +140,62 @@
   color: var(--ui-accent-strong);
 }
 
+.recommendations {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 14px;
+  font-size: 0.95rem;
+}
+
+.recommendations a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--ui-text-primary);
+}
+
+.recommendationTitle {
+  font-weight: 700;
+}
+
+.recommendationReason {
+  color: var(--ui-text-secondary);
+  font-size: 0.9rem;
+}
+
+.deckGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.deckCard {
+  padding: 16px;
+  border-radius: var(--ui-radius-md);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.deckTitle {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.deckDue {
+  font-size: 1.4rem;
+  font-family: var(--ui-font-display);
+}
+
+.deckHint {
+  color: var(--ui-text-secondary);
+  font-size: 0.85rem;
+}
+
 .libraryHeader {
   display: flex;
   flex-wrap: wrap;
@@ -148,10 +204,52 @@
   justify-content: space-between;
 }
 
+.libraryControls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.searchControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--ui-radius-pill);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+}
+
+.searchControl input {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 220px;
+}
+
 .filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.sortSelect {
+  border-radius: var(--ui-radius-pill);
+  border: 1px solid var(--ui-border);
+  padding: 8px 14px;
+  background: var(--ui-surface);
+  color: var(--ui-text-secondary);
+  font-weight: 600;
+}
+
+.filterButtons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-end;
 }
 
 .filterButton {
@@ -275,6 +373,25 @@
   font-weight: 600;
 }
 
+.lessonFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--ui-text-secondary);
+}
+
+.lessonRecommendation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-accent-soft);
+  color: var(--ui-accent-strong);
+  font-weight: 600;
+}
+
 .lessonLink {
   display: inline-flex;
   align-items: center;
@@ -308,6 +425,19 @@
   background: rgba(14, 165, 233, 0.12);
   color: #0e7490;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.topicTag:hover,
+.topicTag:focus-visible {
+  border-color: var(--ui-accent);
+  color: var(--ui-accent-strong);
+}
+
+.topicTagActive {
+  border-color: var(--ui-accent);
+  background: var(--ui-accent-soft);
+  color: var(--ui-accent-strong);
 }
 
 .topicCount {
@@ -325,6 +455,30 @@
 
   .heroStats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .libraryControls {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .searchControl {
+    width: 100%;
+  }
+
+  .searchControl input {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .filterGroup {
+    align-items: stretch;
+  }
+
+  .filterButtons {
+    justify-content: flex-start;
   }
 }
 
