@@ -23,6 +23,20 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+const networkFirst = async (request) => {
+  const cache = await caches.open(STATIC_CACHE);
+  try {
+    const response = await fetch(request);
+    if (response && response.status === 200) {
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match(request);
+    return cached ?? new Response('Offline', { status: 503 });
+  }
+};
+
 const cacheFirst = async (request) => {
   const cached = await caches.match(request);
   if (cached) {
@@ -36,7 +50,7 @@ const cacheFirst = async (request) => {
     }
     return response;
   } catch (error) {
-    return cached ?? new Response('Offline', { status: 503 });
+    return new Response('Offline', { status: 503 });
   }
 };
 
@@ -55,7 +69,20 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  event.respondWith(cacheFirst(request));
+  if (request.mode === 'navigate' || (request.destination === 'document' && request.url.startsWith(self.location.origin))) {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
+  const url = new URL(request.url);
+  if (url.origin === self.location.origin) {
+    if (url.pathname.startsWith('/assets/') || url.pathname === '/manifest.webmanifest' || url.pathname === '/icon.svg') {
+      event.respondWith(cacheFirst(request));
+      return;
+    }
+  }
+
+  event.respondWith(fetch(request));
 });
 
 const cacheDataBundle = async ({ lessons = [], exercises = [] }) => {
