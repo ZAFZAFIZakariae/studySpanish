@@ -73,6 +73,72 @@ const sortOptions: { value: SortOrder; label: string }[] = [
   { value: 'mastery', label: 'Lowest mastery' },
 ];
 
+type CollectionMatcher = (lesson: Lesson) => boolean;
+
+interface CollectionOption {
+  value: string;
+  label: string;
+  description: string;
+  matcher: CollectionMatcher;
+}
+
+const createTagMatcher = (tags: string[], mode: 'any' | 'all' = 'any'): CollectionMatcher => {
+  const normalized = tags.map((tag) => tag.toLowerCase());
+  return (lesson) => {
+    if (normalized.length === 0) return true;
+    const tagSet = new Set(lesson.tags.map((tag) => tag.toLowerCase()));
+    if (mode === 'all') {
+      return normalized.every((tag) => tagSet.has(tag));
+    }
+    return normalized.some((tag) => tagSet.has(tag));
+  };
+};
+
+const collectionOptions: CollectionOption[] = [
+  {
+    value: 'all',
+    label: 'All lessons',
+    description: 'Browse the complete imported library.',
+    matcher: createTagMatcher([]),
+  },
+  {
+    value: 'grammar',
+    label: 'Grammar focus',
+    description: 'Everything tagged as grammar drills and theory.',
+    matcher: createTagMatcher(['grammar']),
+  },
+  {
+    value: 'conjugation',
+    label: 'Conjugation labs',
+    description: 'Verb charts, templates, and conjugation workouts.',
+    matcher: createTagMatcher(['conjugation']),
+  },
+  {
+    value: 'verbs',
+    label: 'Verb workouts',
+    description: 'Lessons centred on verb nuance and irregular stems.',
+    matcher: createTagMatcher(['verbs', 'irregulars', 'irregular']),
+  },
+  {
+    value: 'pronouns',
+    label: 'Pronoun clinic',
+    description: 'Object pronouns, clitics, and reflexive fine-tuning.',
+    matcher: createTagMatcher(['pronouns', 'clitics', 'se']),
+  },
+  {
+    value: 'discourse',
+    label: 'Connectors & discourse',
+    description: 'Register, pragmatics, and discourse connectors.',
+    matcher: createTagMatcher(['connectors', 'register', 'pragmatics']),
+  },
+  {
+    value: 'articles',
+    label: 'Articles & determiners',
+    description: 'Precision drills for articles and determiners.',
+    matcher: createTagMatcher(['articles', 'determiners']),
+  },
+];
+
 const formatRelativeTime = (value?: string) => {
   if (!value) return 'Unseen';
   const date = new Date(value);
@@ -139,6 +205,9 @@ export const HomePage: React.FC = () => {
     (searchParams.get('sort') as SortOrder) ?? 'recommended'
   );
   const [tagFilter, setTagFilter] = useState<string>(searchParams.get('tag') ?? 'all');
+  const [collectionFilter, setCollectionFilter] = useState<string>(
+    searchParams.get('collection') ?? 'all'
+  );
   const [topTags, setTopTags] = useState<[string, number][]>([]);
   const [levelOptions, setLevelOptions] = useState<string[]>([]);
   const [recommendations, setRecommendations] = useState<RecommendationCard[]>([]);
@@ -265,6 +334,7 @@ export const HomePage: React.FC = () => {
     setSearchTerm(searchParams.get('q') ?? '');
     setSortOrder((searchParams.get('sort') as SortOrder) ?? 'recommended');
     setTagFilter(searchParams.get('tag') ?? 'all');
+    setCollectionFilter(searchParams.get('collection') ?? 'all');
   }, [searchParams]);
 
   const updateParam = (key: string, value: string | null) => {
@@ -274,6 +344,19 @@ export const HomePage: React.FC = () => {
     setSearchParams(next, { replace: true });
   };
 
+  const collectionCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    collectionOptions.forEach((option) => {
+      counts[option.value] = lessons.filter((lesson) => option.matcher(lesson)).length;
+    });
+    return counts;
+  }, [lessons]);
+
+  const activeCollection = useMemo(
+    () => collectionOptions.find((option) => option.value === collectionFilter) ?? collectionOptions[0],
+    [collectionFilter]
+  );
+
   const filteredLessons = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
     const tag = tagFilter === 'all' ? null : tagFilter;
@@ -281,6 +364,7 @@ export const HomePage: React.FC = () => {
       .filter((item) => {
         if (levelFilter !== 'all' && item.lesson.level !== levelFilter) return false;
         if (tag && !item.lesson.tags.includes(tag)) return false;
+        if (!activeCollection.matcher(item.lesson)) return false;
         if (normalizedSearch) {
           const haystack = [
             item.lesson.title.toLowerCase(),
@@ -313,7 +397,7 @@ export const HomePage: React.FC = () => {
         const bTime = b.lastAttemptAt ? new Date(b.lastAttemptAt).getTime() : 0;
         return bTime - aTime;
       });
-  }, [items, levelFilter, tagFilter, searchTerm, sortOrder]);
+  }, [items, levelFilter, tagFilter, searchTerm, sortOrder, activeCollection]);
 
   const levelGroups = useMemo(() => {
     const grouped = new Map<string, LessonLibraryItem[]>();
@@ -517,6 +601,36 @@ export const HomePage: React.FC = () => {
                   </button>
                 ))}
               </div>
+            </div>
+            <div
+              className={styles.collectionFilters}
+              role="group"
+              aria-label="Browse lesson collections"
+            >
+              {collectionOptions.map((option) => {
+                const count = collectionCounts[option.value] ?? 0;
+                const isActive = collectionFilter === option.value;
+                const disableOption = option.value !== 'all' && !count;
+                return (
+                  <button
+                    key={option.value}
+                    type="button"
+                    className={styles.collectionButton}
+                    data-active={isActive}
+                    aria-pressed={isActive}
+                    title={option.description}
+                    onClick={() =>
+                      updateParam('collection', option.value === 'all' ? null : option.value)
+                    }
+                    disabled={disableOption}
+                  >
+                    <span className={styles.collectionLabel}>{option.label}</span>
+                    <span className={styles.collectionCount}>
+                      {count} lesson{count === 1 ? '' : 's'}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
