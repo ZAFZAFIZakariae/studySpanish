@@ -1,0 +1,322 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-a-educacion-escuela",
+      "level": "A2",
+      "title": "V-A — Educación y vida escolar",
+      "slug": "vocab-a-educacion-escuela",
+      "tags": [
+        "vocab",
+        "educacion",
+        "topic-pack"
+      ],
+      "markdown": "# V-A — Educación y vida escolar\n\n**Objetivo:** Participar en conversaciones básicas sobre clases, tareas y recursos escolares.\n\n---\n\n## 📘 Léxico núcleo (25 términos)\n| Término | Traducción | Nota de uso |\n| --- | --- | --- |\n| la escuela | school | Institución educativa general. |\n| la clase | class | Sesión donde se enseña un tema. |\n| el aula | classroom | Espacio físico donde ocurre la clase. |\n| el profesor | teacher | Persona que enseña. |\n| el estudiante | student | Persona que aprende. |\n| el horario de clases | class schedule | Organización de materias por hora. |\n| la materia | subject | Área específica de estudio. |\n| el cuaderno | notebook | Libreta para tomar apuntes. |\n| el lápiz | pencil | Útil para escribir y borrar. |\n| el bolígrafo | pen | Útil para escribir de forma permanente. |\n| la tarea | homework | Trabajo para realizar en casa. |\n| el examen | exam | Prueba para evaluar conocimientos. |\n| estudiar | to study | Revisar contenidos para aprender. |\n| aprobar | to pass | Lograr la nota necesaria. |\n| suspender | to fail | No alcanzar la nota mínima. |\n| repasar | to review | Volver a estudiar para reforzar. |\n| el recreo | recess | Descanso entre clases. |\n| el laboratorio | laboratory | Sala equipada para experimentos. |\n| la biblioteca | library | Espacio con libros y recursos. |\n| la nota | grade | Resultado obtenido en una evaluación. |\n| la mochila | backpack | Bolso donde llevas materiales. |\n| el aula virtual | virtual classroom | Plataforma en línea para clases. |\n| inscribirse | to enroll | Registrarse en un curso. |\n| el certificado | certificate | Documento que acredita estudios. |\n| la graduación | graduation | Ceremonia al terminar los estudios. |\n\n## 🗣️ Frases útiles\n\n- **Tenemos examen el viernes.** — We have an exam on Friday. (Anuncia una evaluación.)\n- **¿Puedes prestarme tus apuntes?** — Can you lend me your notes? (Pide ayuda a un compañero.)\n- **La clase es en el aula virtual.** — The class is in the virtual classroom. (Indica el formato de la sesión.)\n\n## 🧠 Estrategias de memorización\n\n- Organiza el vocabulario por momentos del día escolar: antes, durante y después de clase.\n- Crea tarjetas con verbos clave como *estudiar*, *repasar* y *aprobar* junto con ejemplos.\n- Escucha podcasts educativos cortos y anota palabras nuevas relacionadas.\n\n## 📝 Actividades sugeridas\n\n- Planifica una semana de estudios usando materias reales.\n- Describe tu aula ideal combinando recursos físicos y virtuales.\n\n---\n\nIntegra estas palabras en tus rutinas de estudio para consolidarlas."
+    }
+  ],
+  "exercises": [
+    {
+      "promptMd": "Relaciona la palabra escolar con su significado.",
+      "options": [
+        "A. la tarea",
+        "B. el laboratorio",
+        "C. la mochila",
+        "D. la graduación",
+        "1. backpack",
+        "2. homework",
+        "3. laboratory",
+        "4. graduation"
+      ],
+      "answer": [
+        "A-2",
+        "B-3",
+        "C-1",
+        "D-4"
+      ],
+      "feedback": {
+        "correct": "¡Muy bien! Manejas los básicos para hablar de la escuela.",
+        "wrong": "Piensa dónde y cuándo usarías cada término en tu jornada escolar."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "educacion"
+      },
+      "id": "vocab-a-educacion-escuela-ex1",
+      "lessonId": "vocab-a-educacion-escuela",
+      "type": "match"
+    },
+    {
+      "promptMd": "Guardo los libros en mi ___.",
+      "answer": "mochila",
+      "feedback": {
+        "correct": "Exacto, la mochila transporta tus materiales.",
+        "wrong": "Recuerda el objeto donde llevas cuadernos y lápices."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "educacion"
+      },
+      "id": "vocab-a-educacion-escuela-ex2",
+      "lessonId": "vocab-a-educacion-escuela",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Tenemos ___ de ciencias para hacer experimentos.",
+      "answer": "laboratorio",
+      "feedback": {
+        "correct": "Muy bien, el laboratorio es el lugar ideal para experimentar.",
+        "wrong": "Piensa en la sala especial que usas en ciencias."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "educacion"
+      },
+      "id": "vocab-a-educacion-escuela-ex3",
+      "lessonId": "vocab-a-educacion-escuela",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Traduce al español: *We have to review for the math exam.*",
+      "answer": "Tenemos que repasar para el examen de matemáticas.",
+      "accepted": [
+        "Tenemos que repasar para el examen de matematicas."
+      ],
+      "feedback": {
+        "correct": "¡Genial! Así expresas la preparación para un examen.",
+        "wrong": "Incluye *repasar* y menciona el examen de matemáticas."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "educacion"
+      },
+      "id": "vocab-a-educacion-escuela-ex4",
+      "lessonId": "vocab-a-educacion-escuela",
+      "type": "translate"
+    },
+    {
+      "promptMd": "Ordena las palabras para preguntar la hora de una clase.",
+      "options": [
+        "¿A",
+        "qué",
+        "hora",
+        "empieza",
+        "la",
+        "clase",
+        "de",
+        "historia?"
+      ],
+      "answer": [
+        "¿A",
+        "qué",
+        "hora",
+        "empieza",
+        "la",
+        "clase",
+        "de",
+        "historia?"
+      ],
+      "feedback": {
+        "correct": "¡Perfecto! Ya puedes preguntar por el horario de una clase.",
+        "wrong": "Comienza con *¿A qué hora* y respeta el orden de la pregunta."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "speak"
+        ],
+        "topic": "educacion"
+      },
+      "id": "vocab-a-educacion-escuela-ex5",
+      "lessonId": "vocab-a-educacion-escuela",
+      "type": "order"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-a-educacion-escuela-01",
+      "front": "la escuela",
+      "back": "school",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-02",
+      "front": "la clase",
+      "back": "class",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-03",
+      "front": "el aula",
+      "back": "classroom",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-04",
+      "front": "el profesor",
+      "back": "teacher",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-05",
+      "front": "el estudiante",
+      "back": "student",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-06",
+      "front": "el horario de clases",
+      "back": "class schedule",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-07",
+      "front": "la materia",
+      "back": "subject",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-08",
+      "front": "el cuaderno",
+      "back": "notebook",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-09",
+      "front": "el lápiz",
+      "back": "pencil",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-10",
+      "front": "el bolígrafo",
+      "back": "pen",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-11",
+      "front": "la tarea",
+      "back": "homework",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-12",
+      "front": "el examen",
+      "back": "exam",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-13",
+      "front": "estudiar",
+      "back": "to study",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-14",
+      "front": "aprobar",
+      "back": "to pass",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-15",
+      "front": "suspender",
+      "back": "to fail",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-16",
+      "front": "repasar",
+      "back": "to review",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-17",
+      "front": "el recreo",
+      "back": "recess",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-18",
+      "front": "el laboratorio",
+      "back": "laboratory",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-19",
+      "front": "la biblioteca",
+      "back": "library",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-20",
+      "front": "la nota",
+      "back": "grade",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-21",
+      "front": "la mochila",
+      "back": "backpack",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-22",
+      "front": "el aula virtual",
+      "back": "virtual classroom",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-23",
+      "front": "inscribirse",
+      "back": "to enroll",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-24",
+      "front": "el certificado",
+      "back": "certificate",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-educacion-escuela-25",
+      "front": "la graduación",
+      "back": "graduation",
+      "tag": "vocab>a-educacion-escuela",
+      "deck": "vocab"
+    }
+  ]
+}

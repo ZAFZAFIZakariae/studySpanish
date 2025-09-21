@@ -1,0 +1,329 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-a-trabajo-oficina",
+      "level": "A2",
+      "title": "V-A — Trabajo y oficina cotidiana",
+      "slug": "vocab-a-trabajo-oficina",
+      "tags": [
+        "vocab",
+        "trabajo",
+        "topic-pack"
+      ],
+      "markdown": "# V-A — Trabajo y oficina cotidiana\n\n**Objetivo:** Describir rutinas laborales, reuniones y herramientas básicas en el entorno profesional.\n\n---\n\n## 📘 Léxico núcleo (25 términos)\n| Término | Traducción | Nota de uso |\n| --- | --- | --- |\n| el trabajo | job | Tarea o puesto que desempeñas. |\n| el empleo | employment | Situación laboral de una persona. |\n| el jefe | boss | Persona que dirige al equipo. |\n| el compañero de trabajo | coworker | Colega con quien compartes tareas. |\n| la oficina | office | Lugar de trabajo administrativo. |\n| la reunión | meeting | Encuentro para tratar temas laborales. |\n| la cita | appointment | Hora acordada para reunirse. |\n| el horario | schedule | Organización del tiempo laboral. |\n| el turno | shift | Periodo asignado de trabajo. |\n| el salario | salary | Pago regular por el trabajo. |\n| la nómina | paycheck | Documento con el pago mensual. |\n| la entrevista | interview | Conversación para evaluar candidatos. |\n| el currículum | résumé | Documento con tu experiencia laboral. |\n| contratar | to hire | Incorporar a alguien al equipo. |\n| despedir | to fire | Terminar la relación laboral. |\n| ascender | to promote | Dar a alguien un puesto superior. |\n| el permiso | leave | Autorización para ausentarse del trabajo. |\n| el proyecto | project | Conjunto de tareas con un objetivo. |\n| la fecha límite | deadline | Momento final para entregar algo. |\n| entregar | to submit | Dar un trabajo terminado. |\n| la videollamada | video call | Reunión virtual con audio y video. |\n| el portátil | laptop | Ordenador que puedes transportar. |\n| el correo electrónico | email | Mensaje enviado digitalmente. |\n| trabajar desde casa | to work from home | Realizar tareas laborales en casa. |\n| la hora extra | overtime | Tiempo de trabajo adicional al horario. |\n\n## 🗣️ Frases útiles\n\n- **Tenemos reunión a primera hora.** — We have a meeting first thing. (Anuncia el plan del día.)\n- **Te envío el informe por correo.** — I'll email you the report. (Coordina entregas digitales.)\n- **Estoy disponible después del almuerzo.** — I'm available after lunch. (Ofrece un horario para reunirse.)\n\n## 🧠 Estrategias de memorización\n\n- Agrupa vocabulario por fases del trabajo: antes, durante y después de la jornada.\n- Crea recordatorios en tu calendario con frases modelo para reuniones.\n- Practica correos breves combinando verbos como *enviar*, *entregar* y *confirmar*.\n\n## 📝 Actividades sugeridas\n\n- Planifica una agenda diaria usando cinco términos del glosario.\n- Role-play de una entrevista laboral con preguntas y respuestas básicas.\n\n---\n\nUsa estas palabras en tus tareas reales para fijarlas con rapidez."
+    }
+  ],
+  "exercises": [
+    {
+      "promptMd": "Relaciona el vocabulario laboral con su definición.",
+      "options": [
+        "A. la reunión",
+        "B. la fecha límite",
+        "C. el currículum",
+        "D. trabajar desde casa",
+        "1. résumé",
+        "2. meeting",
+        "3. to work from home",
+        "4. deadline"
+      ],
+      "answer": [
+        "A-2",
+        "B-4",
+        "C-1",
+        "D-3"
+      ],
+      "feedback": {
+        "correct": "¡Bien hecho! Ya conectas los conceptos esenciales del trabajo.",
+        "wrong": "Revisa cuándo usarías cada palabra en tu día laboral."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "trabajo"
+      },
+      "id": "vocab-a-trabajo-oficina-ex1",
+      "lessonId": "vocab-a-trabajo-oficina",
+      "type": "match"
+    },
+    {
+      "promptMd": "Preparo mi ___ para la entrevista de mañana.",
+      "answer": "currículum",
+      "accepted": [
+        "curriculum"
+      ],
+      "feedback": {
+        "correct": "Exacto, llevar un buen currículum es clave en la entrevista.",
+        "wrong": "Piensa en el documento que resume tu experiencia laboral."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "trabajo"
+      },
+      "id": "vocab-a-trabajo-oficina-ex2",
+      "lessonId": "vocab-a-trabajo-oficina",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Tenemos una ___ con el equipo a las nueve.",
+      "answer": "reunión",
+      "accepted": [
+        "reunion"
+      ],
+      "feedback": {
+        "correct": "Muy bien, así avisas sobre un encuentro profesional.",
+        "wrong": "Recuerda el sustantivo que describe un encuentro laboral."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "trabajo"
+      },
+      "id": "vocab-a-trabajo-oficina-ex3",
+      "lessonId": "vocab-a-trabajo-oficina",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Traduce al español: *I need to submit the report before the deadline.*",
+      "answer": "Necesito entregar el informe antes de la fecha límite.",
+      "accepted": [
+        "Necesito entregar el reporte antes de la fecha límite.",
+        "Necesito entregar el informe antes del plazo."
+      ],
+      "feedback": {
+        "correct": "¡Excelente! Así explicas la urgencia de la entrega.",
+        "wrong": "No olvides incluir *entregar* y *fecha límite/plazo*."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "trabajo"
+      },
+      "id": "vocab-a-trabajo-oficina-ex4",
+      "lessonId": "vocab-a-trabajo-oficina",
+      "type": "translate"
+    },
+    {
+      "promptMd": "Ordena las palabras para pedir disponibilidad en una videollamada.",
+      "options": [
+        "¿Puedes",
+        "unirte",
+        "a",
+        "la",
+        "videollamada",
+        "a",
+        "las",
+        "diez?"
+      ],
+      "answer": [
+        "¿Puedes",
+        "unirte",
+        "a",
+        "la",
+        "videollamada",
+        "a",
+        "las",
+        "diez?"
+      ],
+      "feedback": {
+        "correct": "¡Genial! Preguntas con claridad por la reunión en línea.",
+        "wrong": "Recuerda mantener el orden lógico de la pregunta."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "speak"
+        ],
+        "topic": "trabajo"
+      },
+      "id": "vocab-a-trabajo-oficina-ex5",
+      "lessonId": "vocab-a-trabajo-oficina",
+      "type": "order"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-a-trabajo-oficina-01",
+      "front": "el trabajo",
+      "back": "job",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-02",
+      "front": "el empleo",
+      "back": "employment",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-03",
+      "front": "el jefe",
+      "back": "boss",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-04",
+      "front": "el compañero de trabajo",
+      "back": "coworker",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-05",
+      "front": "la oficina",
+      "back": "office",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-06",
+      "front": "la reunión",
+      "back": "meeting",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-07",
+      "front": "la cita",
+      "back": "appointment",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-08",
+      "front": "el horario",
+      "back": "schedule",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-09",
+      "front": "el turno",
+      "back": "shift",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-10",
+      "front": "el salario",
+      "back": "salary",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-11",
+      "front": "la nómina",
+      "back": "paycheck",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-12",
+      "front": "la entrevista",
+      "back": "interview",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-13",
+      "front": "el currículum",
+      "back": "résumé",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-14",
+      "front": "contratar",
+      "back": "to hire",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-15",
+      "front": "despedir",
+      "back": "to fire",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-16",
+      "front": "ascender",
+      "back": "to promote",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-17",
+      "front": "el permiso",
+      "back": "leave",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-18",
+      "front": "el proyecto",
+      "back": "project",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-19",
+      "front": "la fecha límite",
+      "back": "deadline",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-20",
+      "front": "entregar",
+      "back": "to submit",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-21",
+      "front": "la videollamada",
+      "back": "video call",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-22",
+      "front": "el portátil",
+      "back": "laptop",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-23",
+      "front": "el correo electrónico",
+      "back": "email",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-24",
+      "front": "trabajar desde casa",
+      "back": "to work from home",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-trabajo-oficina-25",
+      "front": "la hora extra",
+      "back": "overtime",
+      "tag": "vocab>a-trabajo-oficina",
+      "deck": "vocab"
+    }
+  ]
+}

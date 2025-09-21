@@ -1,0 +1,322 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-a-compras-ropa",
+      "level": "A2",
+      "title": "V-A — Compras y ropa esencial",
+      "slug": "vocab-a-compras-ropa",
+      "tags": [
+        "vocab",
+        "compras",
+        "topic-pack"
+      ],
+      "markdown": "# V-A — Compras y ropa esencial\n\n**Objetivo:** Manejar conversaciones básicas en tiendas para pedir tallas, comparar precios y pagar con seguridad.\n\n---\n\n## 📘 Léxico núcleo (25 términos)\n| Término | Traducción | Nota de uso |\n| --- | --- | --- |\n| la tienda | the store | Lugar general para adquirir ropa u otros artículos. |\n| el mercado | the market | Espacio con varios puestos de venta. |\n| el centro comercial | the mall | Complejo con múltiples tiendas. |\n| el dependiente | sales clerk | Persona que atiende en la tienda. |\n| el probador | fitting room | Espacio donde te pruebas la ropa. |\n| la talla | size | Medida de prendas de vestir. |\n| el número | shoe size | Medida específica para calzado. |\n| la etiqueta | price tag | Etiqueta con precio e información. |\n| la caja | checkout counter | Lugar donde pagas tus compras. |\n| el recibo | receipt | Comprobante de pago. |\n| el descuento | discount | Rebaja aplicada al precio original. |\n| la oferta | sale | Promoción temporal con precio reducido. |\n| rebajado | discounted | Adjetivo; cambia de género según la prenda. |\n| caro | expensive | Adjetivo para precios altos. |\n| barato | cheap | Adjetivo para precios bajos. |\n| pagar | to pay | Verbo para cancelar el precio. |\n| el efectivo | cash | Dinero en billetes o monedas. |\n| la tarjeta de crédito | credit card | Medio de pago común en tiendas. |\n| la bolsa | shopping bag | Bolsa donde guardas la compra. |\n| la devolución | return | Acción de devolver un producto. |\n| cambiar | to exchange | Sustituir un artículo por otro. |\n| probarse | to try on | Verbo pronominal para ponerse ropa. |\n| quedar | to fit | Describe cómo se ajusta una prenda. |\n| ¿Cuánto vale? | How much is it? | Pregunta alternativa a *¿Cuánto cuesta?* |\n| ¿Tiene otra talla? | Do you have another size? | Pregunta útil cuando la talla no encaja. |\n\n## 🗣️ Frases útiles\n\n- **¿Puedo probármelo?** — Can I try it on? (Úsalo antes de entrar al probador.)\n- **Me lo llevo.** — I'll take it. (Confirma que comprarás la prenda.)\n- **¿Está incluido el descuento?** — Is the discount included? (Aclara el precio final.)\n\n## 🧠 Estrategias de memorización\n\n- Relaciona cada prenda con su talla ideal para recordar vocabulario y números.\n- Usa tarjetas con precios ficticios para practicar comparaciones caro/barato.\n- Alterna preguntas como *¿Cuánto cuesta?* y *¿Cuánto vale?* para ganar fluidez.\n\n## 📝 Actividades sugeridas\n\n- Organiza un role-play de cliente y dependiente negociando una oferta.\n- Haz una lista de compras con prendas y métodos de pago distintos.\n\n---\n\nPiensa en tus compras reales y reutiliza estas frases para automatizarlas."
+    }
+  ],
+  "exercises": [
+    {
+      "promptMd": "Relaciona el término con su significado.",
+      "options": [
+        "A. rebajado",
+        "B. la talla",
+        "C. el recibo",
+        "D. el probador",
+        "1. fitting room",
+        "2. receipt",
+        "3. size",
+        "4. discounted"
+      ],
+      "answer": [
+        "A-4",
+        "B-3",
+        "C-2",
+        "D-1"
+      ],
+      "feedback": {
+        "correct": "¡Perfecto! Ya distingues conceptos clave de compras.",
+        "wrong": "Revisa las definiciones y piensa dónde se usan en la tienda."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "compras"
+      },
+      "id": "vocab-a-compras-ropa-ex1",
+      "lessonId": "vocab-a-compras-ropa",
+      "type": "match"
+    },
+    {
+      "promptMd": "Necesito la ___ para saber el precio de la chaqueta.",
+      "answer": "etiqueta",
+      "feedback": {
+        "correct": "Exacto: la etiqueta muestra el precio y la talla.",
+        "wrong": "Piensa en el elemento que cuelga de la prenda con información."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "compras"
+      },
+      "id": "vocab-a-compras-ropa-ex2",
+      "lessonId": "vocab-a-compras-ropa",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Pagamos con ___ porque no llevamos efectivo.",
+      "answer": "tarjeta de crédito",
+      "accepted": [
+        "tarjeta de credito"
+      ],
+      "feedback": {
+        "correct": "Muy bien: la tarjeta de crédito resuelve la compra.",
+        "wrong": "Recuerda el método de pago común cuando no tienes billetes."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "pagos"
+      },
+      "id": "vocab-a-compras-ropa-ex3",
+      "lessonId": "vocab-a-compras-ropa",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Traduce al español: *Where can I find the fitting room?*",
+      "answer": "¿Dónde está el probador?",
+      "accepted": [
+        "¿Dónde puedo encontrar el probador?",
+        "Donde está el probador?"
+      ],
+      "feedback": {
+        "correct": "¡Genial! Así preguntas antes de probarte la ropa.",
+        "wrong": "Piensa en cómo pedir la ubicación del probador."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "compras"
+      },
+      "id": "vocab-a-compras-ropa-ex4",
+      "lessonId": "vocab-a-compras-ropa",
+      "type": "translate"
+    },
+    {
+      "promptMd": "Ordena las palabras para preguntar por otra talla.",
+      "options": [
+        "¿Tiene",
+        "esta",
+        "camisa",
+        "en",
+        "otra",
+        "talla?"
+      ],
+      "answer": [
+        "¿Tiene",
+        "esta",
+        "camisa",
+        "en",
+        "otra",
+        "talla?"
+      ],
+      "feedback": {
+        "correct": "¡Listo! Así suena una petición clara al dependiente.",
+        "wrong": "Empieza con *¿Tiene* y termina con la pregunta completa."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "speak"
+        ],
+        "topic": "compras"
+      },
+      "id": "vocab-a-compras-ropa-ex5",
+      "lessonId": "vocab-a-compras-ropa",
+      "type": "order"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-a-compras-ropa-01",
+      "front": "la tienda",
+      "back": "the store",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-02",
+      "front": "el mercado",
+      "back": "the market",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-03",
+      "front": "el centro comercial",
+      "back": "the mall",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-04",
+      "front": "el dependiente",
+      "back": "sales clerk",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-05",
+      "front": "el probador",
+      "back": "fitting room",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-06",
+      "front": "la talla",
+      "back": "size",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-07",
+      "front": "el número",
+      "back": "shoe size",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-08",
+      "front": "la etiqueta",
+      "back": "price tag",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-09",
+      "front": "la caja",
+      "back": "checkout counter",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-10",
+      "front": "el recibo",
+      "back": "receipt",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-11",
+      "front": "el descuento",
+      "back": "discount",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-12",
+      "front": "la oferta",
+      "back": "sale",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-13",
+      "front": "rebajado",
+      "back": "discounted",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-14",
+      "front": "caro",
+      "back": "expensive",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-15",
+      "front": "barato",
+      "back": "cheap",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-16",
+      "front": "pagar",
+      "back": "to pay",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-17",
+      "front": "el efectivo",
+      "back": "cash",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-18",
+      "front": "la tarjeta de crédito",
+      "back": "credit card",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-19",
+      "front": "la bolsa",
+      "back": "shopping bag",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-20",
+      "front": "la devolución",
+      "back": "return",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-21",
+      "front": "cambiar",
+      "back": "to exchange",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-22",
+      "front": "probarse",
+      "back": "to try on",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-23",
+      "front": "quedar",
+      "back": "to fit",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-24",
+      "front": "¿Cuánto vale?",
+      "back": "How much is it?",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-compras-ropa-25",
+      "front": "¿Tiene otra talla?",
+      "back": "Do you have another size?",
+      "tag": "vocab>a-compras-ropa",
+      "deck": "vocab"
+    }
+  ]
+}
