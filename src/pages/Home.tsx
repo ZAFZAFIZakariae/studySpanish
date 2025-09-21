@@ -37,28 +37,28 @@ interface RecommendationCard {
 
 const levelCopy: Record<string, { title: string; description: string }> = {
   A1: {
-    title: 'Level A1 · Foundations first',
-    description: 'Build confidence with essential verbs, greetings, and survival phrases.',
+    title: 'Level A1 · Essentials',
+    description: 'Get comfortable with greetings, core verbs, and everyday basics.',
   },
   A2: {
-    title: 'Level A2 · Everyday exchanges',
-    description: 'Tackle routine tasks, preferences, and descriptions with ease.',
+    title: 'Level A2 · Daily exchanges',
+    description: 'Practise small talk, preferences, and simple descriptions.',
   },
   B1: {
-    title: 'Level B1 · Build confident fluency',
-    description: 'Polish everyday grammar, narration and fast-paced conversations.',
+    title: 'Level B1 · Confident flow',
+    description: 'Work on narration, grammar refreshers, and longer chats.',
   },
   B2: {
-    title: 'Level B2 · Debate and defend ideas',
-    description: 'Stretch your argumentation with precise connectors and register shifts.',
+    title: 'Level B2 · Persuade and react',
+    description: 'Debate, explain opinions, and handle nuance.',
   },
   C1: {
-    title: 'Level C1 · Present like a pro',
-    description: 'Rehearse debates, briefings and formal presentations with advanced vocabulary.',
+    title: 'Level C1 · Professional polish',
+    description: 'Fine-tune presentations, tone, and advanced vocabulary.',
   },
   C2: {
-    title: 'Level C2 · Master nuance',
-    description: 'Perfect idiomatic turns of phrase and stylistic control for any audience.',
+    title: 'Level C2 · Nuance mastery',
+    description: 'Refine idioms and stylistic control for any audience.',
   },
 };
 
@@ -160,29 +160,32 @@ const formatRelativeTime = (value?: string) => {
   return date.toLocaleDateString();
 };
 
-const focusSteps = [
+interface QuickShortcut {
+  label: string;
+  description: string;
+  to?: string;
+  href?: string;
+}
+
+const quickShortcuts: QuickShortcut[] = [
   {
-    title: 'Study plan preview',
-    description: 'Open the dashboard to review streaks, trends, and the weakest tags before you begin.',
-    actionLabel: 'Open dashboard',
+    label: 'Browse lessons',
+    description: 'Jump straight to the full library view.',
+    href: '#lesson-library',
+  },
+  {
+    label: 'Review dashboard',
+    description: 'Check streaks and mastery trends.',
     to: '/dashboard',
   },
   {
-    title: 'Queue the right lesson',
-    description: 'Use search, level filters, and mastery stats below to choose the next objective.',
-    actionLabel: 'Browse lessons',
-    anchor: '#lesson-library',
-  },
-  {
-    title: 'Targeted flashcard sprint',
-    description: 'Pick the due deck called out in the sidebar and cap the session to match your schedule.',
-    actionLabel: 'Start trainer',
+    label: 'Flashcard trainer',
+    description: 'Clear today’s review queue.',
     to: '/flashcards',
   },
   {
-    title: 'Sync content and notes',
-    description: 'Pull the newest JSON bundle and jot findings in the changelog once you wrap up.',
-    actionLabel: 'Content manager',
+    label: 'Content manager',
+    description: 'Sync the latest lessons to your device.',
     to: '/content-manager',
   },
 ];
@@ -414,40 +417,37 @@ export const HomePage: React.FC = () => {
   }, [filteredLessons, levelFilter, levelOptions]);
 
   const roundedProgress = Math.round(stats.progress);
+  const primaryRecommendation = recommendations[0];
+  const secondaryRecommendations = recommendations.slice(1, 3);
+  const primaryDeck = deckDue[0];
+  const secondaryDecks = deckDue.slice(1, 3);
 
   return (
     <div className={styles.page} aria-labelledby="home-heading">
       <section className={`ui-card ui-card--accent ${styles.hero}`} aria-labelledby="home-heading">
         <div className={styles.heroContent}>
-          <p className={styles.heroTag}>Plan with intention</p>
           <h1 id="home-heading" className={styles.heroTitle}>
-            Your bilingual study coach for structured B1–C1 Spanish practice
+            Plan your next Spanish session
           </h1>
           <p className={styles.heroDescription} aria-live="polite">
-            Scan progress, pick a lesson, and drill the right flashcards — all in one organised workspace that works online or offline.
+            Keep tabs on progress and jump back into focused study in just a few clicks.
           </p>
           <div className={styles.heroActions}>
             <a href="#lesson-library" className="ui-button ui-button--primary">
               Browse lesson library ↗
             </a>
             <Link to="/dashboard" className="ui-button ui-button--ghost">
-              Check progress dashboard →
+              Review dashboard →
             </Link>
           </div>
-          <div className={styles.heroChips}>
-            <span className="ui-chip">Study smarter</span>
-            <span className="ui-chip">Offline ready</span>
-            <span className="ui-chip">Streak {stats.streak} 🔥</span>
-          </div>
+          <p className={styles.heroNote} aria-live="polite">
+            Streak {stats.streak} day{stats.streak === 1 ? '' : 's'} · Best {stats.bestStreak}
+          </p>
         </div>
-        <dl className={styles.heroStats} aria-label="Study stats">
+        <dl className={styles.heroStats} aria-label="Key progress stats">
           <div className={styles.heroStatsItem} title="Total lessons currently available in your offline library">
             <dt>Lessons imported</dt>
             <dd aria-live="polite">{stats.totalLessons}</dd>
-          </div>
-          <div className={styles.heroStatsItem} title="Exercises available across all lessons">
-            <dt>Practice items</dt>
-            <dd aria-live="polite">{stats.totalExercises}</dd>
           </div>
           <div className={styles.heroStatsItem} title="Percentage of exercises where the latest attempt was correct">
             <dt>Mastery progress</dt>
@@ -460,95 +460,105 @@ export const HomePage: React.FC = () => {
         </dl>
       </section>
 
-      <section className="ui-card" aria-labelledby="focus-heading">
+      <section className="ui-card" aria-labelledby="overview-heading">
         <div className="ui-section">
           <div>
-            <p className="ui-section__tag">Today’s focus loop</p>
-            <h2 id="focus-heading" className="ui-section__title">
-              Keep your speaking, writing, and recall sharp
+            <p className="ui-section__tag">Today</p>
+            <h2 id="overview-heading" className="ui-section__title">
+              Focus for this session
             </h2>
             <p className="ui-section__subtitle">
-              Cycle through these steps to keep your Spanish practice feeling like a Duolingo streak with pro-level depth.
+              Start with the highlighted lesson or clear your review queue.
             </p>
           </div>
         </div>
-        <div className={styles.focusGrid}>
-          {focusSteps.map(({ title, description, actionLabel, to, anchor }) => {
-            const ActionComponent = (to ? Link : 'a') as React.ElementType;
-            const actionProps = to ? { to } : { href: anchor ?? '#' };
-            return (
-              <article key={title} className={styles.focusCard}>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                </div>
-                <ActionComponent className={styles.focusAction} {...actionProps}>
-                  {actionLabel} →
-                </ActionComponent>
-              </article>
-            );
-          })}
+        <div className={styles.nextGrid}>
+          <article className={styles.nextCard}>
+            <h3>Recommended lesson</h3>
+            {primaryRecommendation ? (
+              <>
+                <Link
+                  to={
+                    primaryRecommendation.lessonSlug
+                      ? `/lessons/${primaryRecommendation.lessonSlug}`
+                      : '#'
+                  }
+                  className={styles.nextLink}
+                >
+                  <span className={styles.nextTitle}>{primaryRecommendation.title}</span>
+                  <span className={styles.nextMeta}>{primaryRecommendation.reason}</span>
+                </Link>
+                {secondaryRecommendations.length > 0 && (
+                  <ul className={styles.nextList}>
+                    {secondaryRecommendations.map((item) => (
+                      <li key={item.lessonId}>
+                        <Link
+                          to={item.lessonSlug ? `/lessons/${item.lessonSlug}` : '#'}
+                          className={styles.nextListLink}
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            ) : (
+              <p className={styles.nextEmpty}>Recommendations appear once you complete a lesson.</p>
+            )}
+          </article>
+          <article className={styles.nextCard}>
+            <h3>Review queue</h3>
+            {primaryDeck ? (
+              <>
+                <p className={styles.nextTitle}>{primaryDeck.deck}</p>
+                <p className={styles.nextMeta}>
+                  {primaryDeck.due} card{primaryDeck.due === 1 ? '' : 's'} due
+                </p>
+                <p className={styles.nextHint}>{primaryDeck.status}</p>
+                {secondaryDecks.length > 0 && (
+                  <ul className={styles.nextList}>
+                    {secondaryDecks.map((entry) => (
+                      <li key={entry.deck}>
+                        {entry.deck} · {entry.due} due
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            ) : (
+              <p className={styles.nextEmpty}>You're all caught up on reviews.</p>
+            )}
+          </article>
+          <div className={styles.quickActions}>
+            <h3>Shortcuts</h3>
+            <ul className={styles.quickActionsList}>
+              {quickShortcuts.map((shortcut) => {
+                const ActionComponent = (shortcut.to ? Link : 'a') as React.ElementType;
+                const actionProps = shortcut.to ? { to: shortcut.to } : { href: shortcut.href ?? '#' };
+                return (
+                  <li key={shortcut.label}>
+                    <ActionComponent className={styles.quickActionsLink} {...actionProps}>
+                      <span>{shortcut.label}</span>
+                      <span>{shortcut.description}</span>
+                    </ActionComponent>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </section>
-
-      {recommendations.length > 0 && (
-        <section className="ui-card" aria-labelledby="recommendations-heading">
-          <div className="ui-section">
-            <div>
-              <p className="ui-section__tag">Suggested next steps</p>
-              <h2 id="recommendations-heading" className="ui-section__title">
-                Resume exactly where analytics left off
-              </h2>
-              <p className="ui-section__subtitle">
-                These exercises bubble up from your latest dashboard snapshot — tackle the first card to keep momentum.
-              </p>
-            </div>
-          </div>
-          <ol className={styles.recommendations}>
-            {recommendations.map((item) => (
-              <li key={item.lessonId}>
-                <Link to={item.lessonSlug ? `/lessons/${item.lessonSlug}` : '#'}>
-                  <span className={styles.recommendationTitle}>{item.title}</span>
-                  <span className={styles.recommendationReason}>{item.reason}</span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
-
-      {deckDue.length > 0 && (
-        <section className="ui-card" aria-labelledby="deck-heading">
-          <div className="ui-section">
-            <div>
-              <p className="ui-section__tag">Flashcard readiness</p>
-              <h2 id="deck-heading" className="ui-section__title">Due decks at a glance</h2>
-              <p className="ui-section__subtitle">
-                Start with the deck that has the highest due count, or pick a deck whose due date matches your available time.
-              </p>
-            </div>
-          </div>
-          <div className={styles.deckGrid}>
-            {deckDue.map((entry) => (
-              <div key={entry.deck} className={styles.deckCard}>
-                <p className={styles.deckTitle}>{entry.deck}</p>
-                <p className={styles.deckDue}>{entry.due} due</p>
-                <p className={styles.deckHint}>{entry.status}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
 
       <section id="lesson-library" className="ui-card" aria-labelledby="library-heading">
         <div className={styles.libraryHeader}>
           <div>
             <p className="ui-section__tag">Lesson library</p>
             <h2 id="library-heading" className="ui-section__title">
-              Match today’s focus with the right material
+              Browse your lessons
             </h2>
             <p className="ui-section__subtitle">
-              Organised by level and powered by your latest mastery data so you can pick the objective that fits your next conversation or presentation.
+              Filter by level, tags, and mastery data to line up the right objective.
             </p>
           </div>
           <div className={styles.libraryControls}>
