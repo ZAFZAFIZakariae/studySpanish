@@ -6,6 +6,32 @@ import { LessonViewer } from '../components/LessonViewer';
 import { ExerciseEngine } from '../components/ExerciseEngine';
 import styles from './LessonPage.module.css';
 
+const levelOrder: Lesson['level'][] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const levelRank = new Map(levelOrder.map((level, index) => [level, index]));
+
+const computeLessonNeighbors = (lessons: Lesson[], currentLesson: Lesson) => {
+  if (lessons.length === 0) {
+    return { previous: null, next: null };
+  }
+
+  const sorted = [...lessons].sort((a, b) => {
+    const levelDiff =
+      (levelRank.get(a.level) ?? levelOrder.length) - (levelRank.get(b.level) ?? levelOrder.length);
+    if (levelDiff !== 0) return levelDiff;
+    return a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' });
+  });
+
+  const index = sorted.findIndex((lesson) => lesson.id === currentLesson.id);
+  if (index === -1) {
+    return { previous: null, next: null };
+  }
+
+  return {
+    previous: index > 0 ? sorted[index - 1] : null,
+    next: index < sorted.length - 1 ? sorted[index + 1] : null,
+  };
+};
+
 const formatRelativeTime = (value?: string) => {
   if (!value) return 'Not yet started';
   const date = new Date(value);
@@ -56,6 +82,10 @@ const LessonPage: React.FC = () => {
   const [status, setStatus] = useState<'loading' | 'ready' | 'missing'>('loading');
   const [gradeHistory, setGradeHistory] = useState<Record<string, Grade[]>>({});
   const [sessionLog, setSessionLog] = useState<Grade[]>([]);
+  const [lessonNeighbors, setLessonNeighbors] = useState<{ previous: Lesson | null; next: Lesson | null }>({
+    previous: null,
+    next: null,
+  });
 
   useEffect(() => {
     if (!slug) return;
@@ -65,8 +95,12 @@ const LessonPage: React.FC = () => {
     setExercises([]);
     setGradeHistory({});
     setSessionLog([]);
+    setLessonNeighbors({ previous: null, next: null });
     const load = async () => {
-      const found = await db.lessons.where('slug').equals(slug).first();
+      const [found, allLessons] = await Promise.all([
+        db.lessons.where('slug').equals(slug).first(),
+        db.lessons.toArray(),
+      ]);
       if (!active) return;
       if (!found) {
         setStatus('missing');
@@ -91,6 +125,7 @@ const LessonPage: React.FC = () => {
       setLesson(found);
       setExercises(lessonExercises);
       setGradeHistory(grouped);
+      setLessonNeighbors(computeLessonNeighbors(allLessons, found));
       setStatus('ready');
     };
     load();
@@ -191,6 +226,48 @@ const LessonPage: React.FC = () => {
 
   return (
     <article className={styles.page} aria-labelledby="lesson-title">
+      <nav className={styles.lessonNav} aria-label="Lesson navigation">
+        <div className={styles.lessonNavInfo}>
+          <span className={styles.lessonNavLabel}>Now studying</span>
+          <span className={styles.lessonNavCurrent} title={lesson.title}>
+            {lesson.title}
+          </span>
+        </div>
+        <div className={styles.lessonNavActions}>
+          {lessonNeighbors.previous ? (
+            <Link
+              to={`/lessons/${lessonNeighbors.previous.slug}`}
+              className={`ui-button ui-button--secondary ${styles.lessonNavButton}`}
+              aria-label={`Go to previous lesson: ${lessonNeighbors.previous.title}`}
+            >
+              ← <span className={styles.lessonNavButtonLabel}>{lessonNeighbors.previous.title}</span>
+            </Link>
+          ) : (
+            <span
+              className={`ui-button ui-button--secondary ${styles.lessonNavButton} ${styles.lessonNavButtonDisabled}`}
+              aria-disabled="true"
+            >
+              ← No earlier lesson
+            </span>
+          )}
+          {lessonNeighbors.next ? (
+            <Link
+              to={`/lessons/${lessonNeighbors.next.slug}`}
+              className={`ui-button ui-button--primary ${styles.lessonNavButton}`}
+              aria-label={`Go to next lesson: ${lessonNeighbors.next.title}`}
+            >
+              <span className={styles.lessonNavButtonLabel}>{lessonNeighbors.next.title}</span> →
+            </Link>
+          ) : (
+            <span
+              className={`ui-button ui-button--primary ${styles.lessonNavButton} ${styles.lessonNavButtonDisabled}`}
+              aria-disabled="true"
+            >
+              Last lesson →
+            </span>
+          )}
+        </div>
+      </nav>
       <header className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.heroTop}>
