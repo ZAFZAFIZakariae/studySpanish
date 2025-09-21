@@ -27,6 +27,9 @@ interface LessonLibraryItem {
   recommendationPriority?: number;
 }
 
+const compareLessonsByTitle = (a: LessonLibraryItem, b: LessonLibraryItem) =>
+  a.lesson.title.localeCompare(b.lesson.title, undefined, { numeric: true, sensitivity: 'base' });
+
 interface RecommendationCard {
   lessonId: string;
   lessonSlug?: string;
@@ -379,15 +382,19 @@ export const HomePage: React.FC = () => {
       })
       .sort((a, b) => {
         if (sortOrder === 'alphabetical') {
-          return a.lesson.title.localeCompare(b.lesson.title);
+          return compareLessonsByTitle(a, b);
         }
         if (sortOrder === 'mastery') {
-          return a.accuracy - b.accuracy;
+          const accuracyDiff = a.accuracy - b.accuracy;
+          if (accuracyDiff !== 0) return accuracyDiff;
+          return compareLessonsByTitle(a, b);
         }
         if (sortOrder === 'recent') {
           const aTime = a.lastAttemptAt ? new Date(a.lastAttemptAt).getTime() : 0;
           const bTime = b.lastAttemptAt ? new Date(b.lastAttemptAt).getTime() : 0;
-          return bTime - aTime;
+          const recentDiff = bTime - aTime;
+          if (recentDiff !== 0) return recentDiff;
+          return compareLessonsByTitle(a, b);
         }
         // recommended
         const aPriority = a.recommendationPriority ?? Number.POSITIVE_INFINITY;
@@ -398,7 +405,9 @@ export const HomePage: React.FC = () => {
         if (aReason !== bReason) return aReason - bReason;
         const aTime = a.lastAttemptAt ? new Date(a.lastAttemptAt).getTime() : 0;
         const bTime = b.lastAttemptAt ? new Date(b.lastAttemptAt).getTime() : 0;
-        return bTime - aTime;
+        const recommendedDiff = bTime - aTime;
+        if (recommendedDiff !== 0) return recommendedDiff;
+        return compareLessonsByTitle(a, b);
       });
   }, [items, levelFilter, tagFilter, searchTerm, sortOrder, activeCollection]);
 
