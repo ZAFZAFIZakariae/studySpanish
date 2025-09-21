@@ -4,6 +4,75 @@
   gap: 32px;
 }
 
+.lessonNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  border-radius: var(--ui-radius-xl);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface-strong);
+  box-shadow: var(--ui-shadow);
+}
+
+.lessonNavInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.lessonNavLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ui-text-secondary);
+}
+
+.lessonNavCurrent {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ui-text-primary);
+  max-width: clamp(200px, 45vw, 420px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lessonNavActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.lessonNavButton {
+  min-width: 0;
+  padding: 0.65rem 1.3rem;
+}
+
+.lessonNavButtonLabel {
+  display: inline-flex;
+  max-width: clamp(120px, 28vw, 260px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.lessonNavButtonDisabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.7;
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--ui-text-secondary);
+  border-color: var(--ui-border);
+  box-shadow: none;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -248,6 +317,28 @@
 }
 
 @media (max-width: 720px) {
+  .lessonNav {
+    padding: 14px 18px;
+  }
+
+  .lessonNavCurrent {
+    max-width: 100%;
+  }
+
+  .lessonNavActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lessonNavButton {
+    flex: 1 1 140px;
+    justify-content: center;
+  }
+
+  .lessonNavButtonLabel {
+    max-width: none;
+  }
+
   .hero {
     padding: 24px;
   }
