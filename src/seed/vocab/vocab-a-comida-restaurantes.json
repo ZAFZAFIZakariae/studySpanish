@@ -1,0 +1,315 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-a-comida-restaurantes",
+      "level": "A1",
+      "title": "V-A — Comida y restaurantes",
+      "slug": "vocab-a-comida-restaurantes",
+      "tags": [
+        "vocab",
+        "comida",
+        "topic-pack"
+      ],
+      "markdown": "# V-A — Comida y restaurantes\n\n**Objetivo:** Pedir en restaurantes, hablar de preferencias y entender la carta.\n\n---\n\n## 📘 Léxico núcleo (24 términos)\n| Término | Traducción | Nota de uso |\n| --- | --- | --- |\n| desayuno | breakfast | Primera comida del día. |\n| almuerzo | lunch | Comida del mediodía. |\n| cena | dinner | Comida principal de la noche. |\n| el menú | the menu | Lista general de platos. |\n| la carta | menu | Lista detallada de platos y precios. |\n| reserva | reservation | Asegurar una mesa por adelantado. |\n| mesa | table | Lugar donde te sientas a comer. |\n| camarero / camarera | waiter / waitress | Quien atiende tu mesa. |\n| cliente | customer | Quien consume en el local. |\n| plato principal | main course | Plato central de la comida. |\n| entrada | starter / appetizer | Plato ligero al inicio. |\n| guarnición | side dish | Acompañamiento del plato principal. |\n| postre | dessert | Plato dulce para cerrar. |\n| bebida | drink | Todo lo que se bebe. |\n| agua sin gas | still water | Agua sin burbujas. |\n| sin hielo | without ice | Indicación frecuente para bebidas. |\n| vegetariano / vegetariana | vegetarian | Opción sin carne. |\n| vegano / vegana | vegan | Sin productos de origen animal. |\n| alergia | allergy | Reacción a un ingrediente. |\n| sin gluten | gluten-free | Opciones para celíacos. |\n| para llevar | to go / take away | Comida para consumir fuera. |\n| pedir | to order | Solicitar un plato o bebida. |\n| delicioso | delicious | Adjetivo para sabores excelentes. |\n| propina | tip | Dinero extra para agradecer el servicio. |\n\n## 🗣️ Frases útiles\n\n- **¿Me trae el menú, por favor?** — Could you bring me the menu, please? (Pedir la carta con cortesía.)\n- **Tengo alergia a los frutos secos.** — I'm allergic to nuts. (Avisar sobre alergias.)\n- **¿Puede ser para llevar?** — Can it be to go? (Cuando no comes en el local.)\n\n## 🧭 Estrategias de memorización\n\n- Clasifica los platos en entrada, principal y postre para orientarte más rápido.\n- Aprende a combinar verbos como *pedir* y *traer* con sustantivos de comida.\n- Practica especificar preferencias (sin gluten, sin hielo) en voz alta.\n\n## 📝 Actividades sugeridas\n\n- Diseña tu propio menú con tres cursos y descríbelo a un compañero.\n- Simula tomar nota como camarero y verifica que entiendes los pedidos.\n\n---\n\nRecuerda adaptar estas palabras a tus propias experiencias para consolidarlas."
+    }
+  ],
+  "exercises": [
+    {
+      "promptMd": "Empareja el concepto gastronómico con su equivalente.",
+      "options": [
+        "A. entrada",
+        "B. plato principal",
+        "C. postre",
+        "D. propina",
+        "1. main course",
+        "2. dessert",
+        "3. tip",
+        "4. starter"
+      ],
+      "answer": [
+        "A-4",
+        "B-1",
+        "C-2",
+        "D-3"
+      ],
+      "feedback": {
+        "correct": "¡Perfecto! Ya dominas la estructura de la comida.",
+        "wrong": "Repasa el orden de los platos y el vocabulario asociado."
+      },
+      "meta": {
+        "difficulty": "A1",
+        "skills": [
+          "read"
+        ],
+        "topic": "restaurante"
+      },
+      "id": "vocab-a-comida-restaurantes-ex1",
+      "lessonId": "vocab-a-comida-restaurantes",
+      "type": "match"
+    },
+    {
+      "promptMd": "Tenemos una ___ a nombre de García.",
+      "answer": "reserva",
+      "feedback": {
+        "correct": "Exacto, *reserva* asegura la mesa.",
+        "wrong": "Piensa en lo que haces para guardar una mesa con anticipación."
+      },
+      "meta": {
+        "difficulty": "A1",
+        "skills": [
+          "read"
+        ],
+        "topic": "restaurante"
+      },
+      "id": "vocab-a-comida-restaurantes-ex2",
+      "lessonId": "vocab-a-comida-restaurantes",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Soy alérgico, ¿tienen opciones ___?",
+      "answer": "sin gluten",
+      "feedback": {
+        "correct": "Bien, *sin gluten* expresa la restricción alimentaria.",
+        "wrong": "Busca la expresión que utilizan las personas celíacas."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "dietas"
+      },
+      "id": "vocab-a-comida-restaurantes-ex3",
+      "lessonId": "vocab-a-comida-restaurantes",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Traduce al español: *The waiter brings the drinks.*",
+      "answer": "El camarero trae las bebidas.",
+      "accepted": [
+        "La camarera trae las bebidas."
+      ],
+      "feedback": {
+        "correct": "Muy bien, usaste el verbo *traer* correctamente.",
+        "wrong": "Recuerda que *camarero* es quien sirve y *traer* el verbo adecuado."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "servicio"
+      },
+      "id": "vocab-a-comida-restaurantes-ex4",
+      "lessonId": "vocab-a-comida-restaurantes",
+      "type": "translate"
+    },
+    {
+      "promptMd": "Ordena los pasos para pedir y pagar en un restaurante.",
+      "options": [
+        "Revisar",
+        "el menú",
+        "hacer",
+        "el pedido",
+        "disfrutar",
+        "la comida",
+        "pedir",
+        "la cuenta"
+      ],
+      "answer": [
+        "Revisar",
+        "el menú",
+        "hacer",
+        "el pedido",
+        "disfrutar",
+        "la comida",
+        "pedir",
+        "la cuenta"
+      ],
+      "feedback": {
+        "correct": "Buen flujo para una comida sin sorpresas.",
+        "wrong": "Piensa en el orden lógico: elegir, pedir, comer y pagar."
+      },
+      "meta": {
+        "difficulty": "A1",
+        "skills": [
+          "speak"
+        ],
+        "topic": "restaurante"
+      },
+      "id": "vocab-a-comida-restaurantes-ex5",
+      "lessonId": "vocab-a-comida-restaurantes",
+      "type": "order"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-a-comida-restaurantes-01",
+      "front": "desayuno",
+      "back": "breakfast",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-02",
+      "front": "almuerzo",
+      "back": "lunch",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-03",
+      "front": "cena",
+      "back": "dinner",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-04",
+      "front": "el menú",
+      "back": "the menu",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-05",
+      "front": "la carta",
+      "back": "menu",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-06",
+      "front": "reserva",
+      "back": "reservation",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-07",
+      "front": "mesa",
+      "back": "table",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-08",
+      "front": "camarero / camarera",
+      "back": "waiter / waitress",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-09",
+      "front": "cliente",
+      "back": "customer",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-10",
+      "front": "plato principal",
+      "back": "main course",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-11",
+      "front": "entrada",
+      "back": "starter / appetizer",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-12",
+      "front": "guarnición",
+      "back": "side dish",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-13",
+      "front": "postre",
+      "back": "dessert",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-14",
+      "front": "bebida",
+      "back": "drink",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-15",
+      "front": "agua sin gas",
+      "back": "still water",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-16",
+      "front": "sin hielo",
+      "back": "without ice",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-17",
+      "front": "vegetariano / vegetariana",
+      "back": "vegetarian",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-18",
+      "front": "vegano / vegana",
+      "back": "vegan",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-19",
+      "front": "alergia",
+      "back": "allergy",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-20",
+      "front": "sin gluten",
+      "back": "gluten-free",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-21",
+      "front": "para llevar",
+      "back": "to go / take away",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-22",
+      "front": "pedir",
+      "back": "to order",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-23",
+      "front": "delicioso",
+      "back": "delicious",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-comida-restaurantes-24",
+      "front": "propina",
+      "back": "tip",
+      "tag": "vocab>a-comida-restaurantes",
+      "deck": "vocab"
+    }
+  ]
+}

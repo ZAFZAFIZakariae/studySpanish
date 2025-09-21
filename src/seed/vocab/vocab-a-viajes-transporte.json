@@ -1,0 +1,315 @@
+{
+  "lessons": [
+    {
+      "id": "vocab-a-viajes-transporte",
+      "level": "A2",
+      "title": "V-A — Viajes y transporte",
+      "slug": "vocab-a-viajes-transporte",
+      "tags": [
+        "vocab",
+        "viajes",
+        "topic-pack"
+      ],
+      "markdown": "# V-A — Viajes y transporte\n\n**Objetivo:** Resolver trámites de viaje y moverse por la ciudad con vocabulario clave.\n\n---\n\n## 📘 Léxico núcleo (24 términos)\n| Término | Traducción | Nota de uso |\n| --- | --- | --- |\n| billete | ticket | Documento para acceder a transporte. |\n| pasaporte | passport | Documento oficial para viajar. |\n| documento de identidad | ID card | Identificación nacional. |\n| equipaje | luggage | Maletas y bolsas del viaje. |\n| maleta de mano | carry-on suitcase | Equipaje que subes contigo. |\n| facturación | check-in | Proceso de registrar equipaje. |\n| tarjeta de embarque | boarding pass | Permite subir al avión. |\n| puerta de embarque | boarding gate | Zona donde esperas el vuelo. |\n| retraso | delay | Salida más tarde de lo previsto. |\n| cancelado | cancelled | Viaje que no se realizará. |\n| horario | timetable | Tabla de horas de salida y llegada. |\n| andén | platform | Lugar de espera en estaciones. |\n| transbordo | transfer | Cambio de línea o medio. |\n| asiento | seat | Lugar asignado. |\n| ventanilla | window seat | Asiento junto a la ventana. |\n| pasillo | aisle | Pasillo o asiento junto a él. |\n| metro | subway / metro | Transporte urbano subterráneo. |\n| parada | stop | Lugar donde se detiene el transporte público. |\n| mapa | map | Representación de la ciudad. |\n| itinerario | itinerary | Plan detallado del viaje. |\n| seguro de viaje | travel insurance | Cobertura ante imprevistos. |\n| consigna | left luggage | Servicio para guardar maletas. |\n| alquiler de coches | car rental | Servicio de vehículos temporales. |\n| confirmación | confirmation | Prueba de la reserva. |\n\n## 🗣️ Frases útiles\n\n- **¿Dónde está la puerta de embarque C12?** — Where is boarding gate C12? (Buscar el punto de salida.)\n- **Tengo que hacer transbordo en Madrid.** — I have to transfer in Madrid. (Indicar cambio de vuelo o tren.)\n- **¿Cuánto tarda el metro hasta el centro?** — How long does the metro take to downtown? (Consultar tiempos de viaje.)\n\n## 🧭 Estrategias de memorización\n\n- Lleva copias digitales de documentos importantes.\n- Practica preguntas útiles con *¿Dónde está...?* y *¿Cuánto tarda...?*.\n- Relaciona palabras como *retraso* o *cancelado* con la pantalla de salidas.\n\n## 📝 Actividades sugeridas\n\n- Organiza un itinerario ficticio con horarios y conexiones.\n- Role-play en el aeropuerto para practicar check-in y dudas sobre la puerta.\n\n---\n\nRecuerda adaptar estas palabras a tus propias experiencias para consolidarlas."
+    }
+  ],
+  "exercises": [
+    {
+      "promptMd": "Une el término de viaje con su equivalente en inglés.",
+      "options": [
+        "A. billete",
+        "B. puerta de embarque",
+        "C. retraso",
+        "D. consigna",
+        "1. luggage storage",
+        "2. ticket",
+        "3. boarding gate",
+        "4. delay"
+      ],
+      "answer": [
+        "A-2",
+        "B-3",
+        "C-4",
+        "D-1"
+      ],
+      "feedback": {
+        "correct": "¡Excelente! Puedes moverte por el aeropuerto sin perderte.",
+        "wrong": "Vuelve a relacionar las palabras con los anuncios del aeropuerto."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "viajes"
+      },
+      "id": "vocab-a-viajes-transporte-ex1",
+      "lessonId": "vocab-a-viajes-transporte",
+      "type": "match"
+    },
+    {
+      "promptMd": "Necesito facturar mi ___ antes del vuelo.",
+      "answer": "equipaje",
+      "feedback": {
+        "correct": "Correcto, el equipaje se registra antes de subir al avión.",
+        "wrong": "Recuerda cómo se llama el conjunto de maletas que llevas."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "viajes"
+      },
+      "id": "vocab-a-viajes-transporte-ex2",
+      "lessonId": "vocab-a-viajes-transporte",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "El tren sale del ___ número cinco.",
+      "answer": "andén",
+      "feedback": {
+        "correct": "Muy bien, *andén* es la plataforma del tren.",
+        "wrong": "Piensa en el lugar donde esperas el tren."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "read"
+        ],
+        "topic": "transporte"
+      },
+      "id": "vocab-a-viajes-transporte-ex3",
+      "lessonId": "vocab-a-viajes-transporte",
+      "type": "cloze"
+    },
+    {
+      "promptMd": "Traduce al español: *The flight has a twenty-minute delay.*",
+      "answer": "El vuelo tiene un retraso de veinte minutos.",
+      "accepted": [
+        "El vuelo tiene un retraso de 20 minutos."
+      ],
+      "feedback": {
+        "correct": "Perfecto, así informas sobre la demora del vuelo.",
+        "wrong": "Recuerda usar *retraso* para hablar de demoras en transportes."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "write"
+        ],
+        "topic": "viajes"
+      },
+      "id": "vocab-a-viajes-transporte-ex4",
+      "lessonId": "vocab-a-viajes-transporte",
+      "type": "translate"
+    },
+    {
+      "promptMd": "Ordena las acciones para recoger un coche de alquiler.",
+      "options": [
+        "Ir",
+        "al mostrador",
+        "presentar",
+        "el pasaporte",
+        "firmar",
+        "el contrato",
+        "recoger",
+        "las llaves"
+      ],
+      "answer": [
+        "Ir",
+        "al mostrador",
+        "presentar",
+        "el pasaporte",
+        "firmar",
+        "el contrato",
+        "recoger",
+        "las llaves"
+      ],
+      "feedback": {
+        "correct": "¡Listo! Así aseguras un proceso de alquiler sin estrés.",
+        "wrong": "Piensa en el orden: identificación, firma y entrega de llaves."
+      },
+      "meta": {
+        "difficulty": "A2",
+        "skills": [
+          "speak"
+        ],
+        "topic": "viajes"
+      },
+      "id": "vocab-a-viajes-transporte-ex5",
+      "lessonId": "vocab-a-viajes-transporte",
+      "type": "order"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "vocab-a-viajes-transporte-01",
+      "front": "billete",
+      "back": "ticket",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-02",
+      "front": "pasaporte",
+      "back": "passport",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-03",
+      "front": "documento de identidad",
+      "back": "ID card",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-04",
+      "front": "equipaje",
+      "back": "luggage",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-05",
+      "front": "maleta de mano",
+      "back": "carry-on suitcase",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-06",
+      "front": "facturación",
+      "back": "check-in",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-07",
+      "front": "tarjeta de embarque",
+      "back": "boarding pass",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-08",
+      "front": "puerta de embarque",
+      "back": "boarding gate",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-09",
+      "front": "retraso",
+      "back": "delay",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-10",
+      "front": "cancelado",
+      "back": "cancelled",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-11",
+      "front": "horario",
+      "back": "timetable",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-12",
+      "front": "andén",
+      "back": "platform",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-13",
+      "front": "transbordo",
+      "back": "transfer",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-14",
+      "front": "asiento",
+      "back": "seat",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-15",
+      "front": "ventanilla",
+      "back": "window seat",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-16",
+      "front": "pasillo",
+      "back": "aisle",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-17",
+      "front": "metro",
+      "back": "subway / metro",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-18",
+      "front": "parada",
+      "back": "stop",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-19",
+      "front": "mapa",
+      "back": "map",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-20",
+      "front": "itinerario",
+      "back": "itinerary",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-21",
+      "front": "seguro de viaje",
+      "back": "travel insurance",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-22",
+      "front": "consigna",
+      "back": "left luggage",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-23",
+      "front": "alquiler de coches",
+      "back": "car rental",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    },
+    {
+      "id": "vocab-a-viajes-transporte-24",
+      "front": "confirmación",
+      "back": "confirmation",
+      "tag": "vocab>a-viajes-transporte",
+      "deck": "vocab"
+    }
+  ]
+}
