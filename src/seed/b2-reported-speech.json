@@ -1,0 +1,230 @@
+{
+  "lessons": [
+    {
+      "id": "b2-reported-speech",
+      "level": "B2",
+      "title": "B2 — Reported Speech & Sequence of Tenses",
+      "slug": "b2-reported-speech",
+      "tags": [
+        "reported speech",
+        "grammar",
+        "b2",
+        "discourse"
+      ],
+      "markdown": "# 🗣️ B2 — Reported Speech & Sequence of Tenses\n\n**Goal:** Shift direct quotations into natural reported speech, updating tense, pronouns, and time markers without losing nuance.\n\n---\n\n## 1. Core tense shifts\n- Present → imperfect: *\"Llego tarde\" → Dijo que llegaba tarde.*\n- Preterite → pluscuamperfecto when the action precedes reporting: *\"Fui al banco\" → Contó que había ido al banco.*\n- Futuro → condicional: *\"Mañana vendré\" → Prometió que vendría al día siguiente.*\n\n## 2. When the tense stays\n- If the situation is still true, keep the present: *Dice que vive en Valencia.*\n- Reporting universal truths or scheduled events keeps indicative present/future.\n- Verbs of perception or knowledge (**ver, saber, recordar**) may keep the original tense to stress immediacy.\n\n## 3. Commands, requests, advice\n- Use **que + subjuntivo** for mandates: *\"No abráis la puerta\" → Ordenó que no abriéramos la puerta.*\n- For instructions with infinitives, keep **infinitivo**: *\"Tenéis que salir\" → Dijo que teníamos que salir.*\n- **Pedir + que + subjuntivo** for polite requests: *Nos pidió que llegáramos temprano.*\n\n## 4. Questions, pronouns, and time markers\n- Replace question marks with statements using interrogative pronouns: *\"¿Dónde vives?\" → Preguntó dónde vivía.*\n- Adjust deictic adverbs: *hoy → ese día*, *mañana → al día siguiente*, *aquí → allí*.\n- Pronouns shift to match the reporter’s perspective: *\"Te llamaré\" → Me dijo que me llamaría.*\n\n---\n\n> 📝 **Summary:** In reported speech, slide tenses one step back, move commands into subjunctive, and realign time/pronoun references to the narrator’s point of view.",
+      "references": [
+        "Seco, Manuel. Gramática esencial del español. Reported speech.",
+        "RAE. Diccionario panhispánico de dudas, 'estilo indirecto'"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b2-reported-speech-ex1",
+      "lessonId": "b2-reported-speech",
+      "type": "cloze",
+      "promptMd": "Ana dijo: \"Vendré mañana\". → Ana dijo que ___ al día siguiente.",
+      "answer": "vendría",
+      "accepted": [
+        "re:^vendr[íi]a$"
+      ],
+      "feedback": {
+        "correct": "Correcto: futuro directo → condicional en estilo indirecto.",
+        "wrong": "Futuro directo pasa a condicional: *dijo que vendría*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "futuro → condicional"
+      }
+    },
+    {
+      "id": "b2-reported-speech-ex2",
+      "lessonId": "b2-reported-speech",
+      "type": "mcq",
+      "promptMd": "Selecciona la mejor transformación: **\"No puedo asistir\", comentó Marta.**",
+      "options": [
+        "Marta comentó que no podía asistir.",
+        "Marta comenta que no pudo asistir.",
+        "Marta comentó que no pueda asistir.",
+        "Marta comentó que no asistiría."
+      ],
+      "answer": "Marta comentó que no podía asistir.",
+      "feedback": {
+        "correct": "Bien: presente → imperfecto en reported speech.",
+        "wrong": "Necesitas mover el presente a imperfecto: *no podía asistir*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "presente → imperfecto"
+      }
+    },
+    {
+      "id": "b2-reported-speech-ex3",
+      "lessonId": "b2-reported-speech",
+      "type": "translate",
+      "promptMd": "Translate: **He told us not to open the door.**",
+      "answer": "Nos dijo que no abriéramos la puerta",
+      "accepted": [
+        "re:^Nos\\s+dijo\\s+que\\s+no\\s+abri[ée]ramos\\s+la\\s+puerta\\.?$"
+      ],
+      "feedback": {
+        "correct": "Exacto: mandato → que + subjuntivo (no abriéramos).",
+        "wrong": "Usa **que + subjuntivo** para órdenes: *que no abriéramos la puerta*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write",
+          "read"
+        ],
+        "topic": "mandato → subjuntivo"
+      }
+    },
+    {
+      "id": "b2-reported-speech-ex4",
+      "lessonId": "b2-reported-speech",
+      "type": "cloze",
+      "promptMd": "Nos pidieron que ___ (entregar) el informe ese mismo día.",
+      "answer": "entregáramos",
+      "accepted": [
+        "re:^entreg[áa]ramos$"
+      ],
+      "feedback": {
+        "correct": "Correcto: petición → subjuntivo imperfecto (entregáramos).",
+        "wrong": "Tras *pedir que* usa subjuntivo: *que entregáramos*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "pedir que + subjuntivo"
+      }
+    },
+    {
+      "id": "b2-reported-speech-ex5",
+      "lessonId": "b2-reported-speech",
+      "type": "multi",
+      "promptMd": "Selecciona los ajustes deícticos correctos al pasar a estilo indirecto.",
+      "options": [
+        "ayer → el día anterior",
+        "mañana → el día siguiente",
+        "hoy → ayer",
+        "aquí → allí"
+      ],
+      "answer": [
+        "ayer → el día anterior",
+        "mañana → el día siguiente",
+        "aquí → allí"
+      ],
+      "feedback": {
+        "correct": "Exacto: esos son los desplazamientos habituales de tiempo/lugar.",
+        "wrong": "Recuerda: ayer → el día anterior, mañana → el día siguiente, aquí → allí. *Hoy* pasa a *ese día*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "deixis indirecta"
+      }
+    },
+    {
+      "id": "b2-reported-speech-ex6",
+      "lessonId": "b2-reported-speech",
+      "type": "short",
+      "promptMd": "Convierte la pregunta **\"¿Dónde vives?\"** a estilo indirecto (sin sujeto explícito).",
+      "answer": "Preguntó dónde vivía",
+      "accepted": [
+        "re:^Pregunt[oó]\\s+d[oó]nde\\s+viv[ií]a\\.?$",
+        "re:^Me\\s+pregunt[oó]\\s+d[oó]nde\\s+viv[ií]a\\.?$",
+        "re:^Nos\\s+pregunt[oó]\\s+d[oó]nde\\s+viv[ií]amos\\.?$"
+      ],
+      "feedback": {
+        "correct": "Bien: la pregunta indirecta usa verbo en imperfecto y pierde signos interrogativos.",
+        "wrong": "Introduce *que* solo en preguntas totales; aquí usa *preguntó dónde vivía*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "write"
+        ],
+        "topic": "preguntas indirectas"
+      }
+    },
+    {
+      "id": "b2-reported-speech-ex7",
+      "lessonId": "b2-reported-speech",
+      "type": "mcq",
+      "promptMd": "¿Cuál mantiene correctamente la perspectiva? **\"Te llamaré esta tarde\", me dijo.**",
+      "options": [
+        "Me dijo que me llamaría esa tarde.",
+        "Me dijo que te llamaría esa tarde.",
+        "Me dijo que lo llamaría esa tarde.",
+        "Me dijo que llamaría esa tarde."
+      ],
+      "answer": "Me dijo que me llamaría esa tarde.",
+      "feedback": {
+        "correct": "Correcto: pronombre y adverbio cambian desde mi perspectiva → *me llamaría esa tarde*.",
+        "wrong": "Ajusta pronombres y tiempo: *te* pasa a *me*, *esta tarde* → *esa tarde*."
+      },
+      "meta": {
+        "difficulty": "B2",
+        "skills": [
+          "read"
+        ],
+        "topic": "pronombres y tiempo"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "b2-reported-speech-fc1",
+      "front": "Futuro directo",
+      "back": "→ Condicional: *\"Iré\" → dijo que iría*.",
+      "tag": "reported speech",
+      "deck": "grammar"
+    },
+    {
+      "id": "b2-reported-speech-fc2",
+      "front": "Mandato negativo",
+      "back": "→ Que + subjuntivo: *Ordenó que no abriéramos*.",
+      "tag": "reported speech",
+      "deck": "grammar"
+    },
+    {
+      "id": "b2-reported-speech-fc3",
+      "front": "Preguntas parciales",
+      "back": "Usan pronombre interrogativo + verbo en imperfecto: *Preguntó dónde vivía*.",
+      "tag": "reported speech",
+      "deck": "grammar"
+    },
+    {
+      "id": "b2-reported-speech-fc4",
+      "front": "Deixis temporal",
+      "back": "hoy → ese día, mañana → al día siguiente, ayer → el día anterior.",
+      "tag": "reported speech",
+      "deck": "grammar"
+    },
+    {
+      "id": "b2-reported-speech-fc5",
+      "front": "Seguimos usando presente",
+      "back": "Para verdades generales: *Dice que el agua hierve a 100 °C*.",
+      "tag": "reported speech",
+      "deck": "grammar"
+    },
+    {
+      "id": "b2-reported-speech-fc6",
+      "front": "Pronombres",
+      "back": "Ajusta a la perspectiva del narrador: *Te llamaré* → *me llamaría*.",
+      "tag": "reported speech",
+      "deck": "grammar"
+    }
+  ]
+}
