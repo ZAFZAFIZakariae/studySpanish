@@ -270,6 +270,60 @@
   box-shadow: 0 16px 45px -28px rgba(79, 70, 229, 0.55);
 }
 
+.collectionFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.collectionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 160px;
+  border-radius: var(--ui-radius-lg);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+  color: var(--ui-text-secondary);
+  font-weight: 600;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.collectionButton[data-active='true'] {
+  background: var(--ui-accent-soft);
+  color: var(--ui-accent-strong);
+  border-color: transparent;
+  box-shadow: 0 16px 45px -28px rgba(79, 70, 229, 0.55);
+}
+
+.collectionButton[data-active='true'] .collectionCount {
+  color: var(--ui-accent-strong);
+}
+
+.collectionButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+  background: var(--ui-surface-muted);
+  color: var(--ui-text-muted);
+}
+
+.collectionLabel {
+  font-weight: 700;
+}
+
+.collectionCount {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ui-text-muted);
+}
+
 .lessonGroup {
   display: flex;
   flex-direction: column;
@@ -479,6 +533,15 @@
 
   .filterButtons {
     justify-content: flex-start;
+  }
+
+  .collectionFilters {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .collectionButton {
+    flex: 1 1 160px;
   }
 }
 
