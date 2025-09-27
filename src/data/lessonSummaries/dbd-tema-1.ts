@@ -3,9 +3,9 @@ import { LessonSummaryContent } from '../../types/subject';
 export const dbdTema1Summary: LessonSummaryContent = {
   summary: {
     original:
-      'Repasamos el modelado entidad-relación, cardinalidades, restricciones de integridad y validamos casos prácticos con ejemplos de negocio.',
+      'Revisamos la evolución de la tecnología de bases de datos, los componentes de un SGBD, la jerarquía de almacenamiento y las arquitecturas más comunes.',
     english:
-      'We revisited entity-relationship modelling, discussed cardinalities and integrity constraints, and validated business case studies.',
+      'We reviewed the evolution of database technology (tecnología de bases de datos), the core DBMS components (componentes de un SGBD), the storage hierarchy (jerarquía de almacenamiento), and the dominant architectural patterns (arquitecturas de SGBD).',
   },
   translation: {
     status: 'partial',

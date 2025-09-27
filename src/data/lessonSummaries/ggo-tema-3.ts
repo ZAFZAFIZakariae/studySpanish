@@ -3,9 +3,9 @@ import { LessonSummaryContent } from '../../types/subject';
 export const ggoTema3Summary: LessonSummaryContent = {
   summary: {
     original:
-      'Aplicamos el método Bedell paso a paso, construimos la matriz de contribución y discutimos criterios de priorización entre procesos de negocio.',
+      'Analizamos la alineación negocio–TI con el modelo estratégico de Henderson y Venkatraman, enlazamos misión, DAFO y cinco fuerzas con la estrategia de SI/TI y evaluamos el papel de los stakeholders.',
     english:
-      'We executed the Bedell method end to end, built the contribution matrix, and debated prioritisation criteria across business processes.',
+      'We analysed business–IT alignment through the Henderson & Venkatraman strategic model (modelo estratégico de Henderson y Venkatraman), linked mission, SWOT, and five forces (misión, DAFO y cinco fuerzas) to the SI/TI strategy, and assessed stakeholder roles (roles de stakeholders).',
   },
   translation: {
     status: 'partial',
