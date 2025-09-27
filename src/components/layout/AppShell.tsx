@@ -26,6 +26,12 @@ const navigation: NavigationItem[] = [
     exact: true,
   },
   {
+    to: '/subjects',
+    label: 'Subjects',
+    description: 'Courses, labs & translations',
+    icon: '📚',
+  },
+  {
     to: '/dashboard',
     label: 'Insights',
     description: 'Progress analytics',
@@ -71,8 +77,8 @@ export const AppShell: React.FC<AppShellProps> = ({
             SC
           </span>
           <span className={styles.brandText}>
-            <span className={styles.brandName}>Study Spanish Coach</span>
-            <span className={styles.brandTagline}>Plan · Practise · Shine</span>
+            <span className={styles.brandName}>Study Compass</span>
+            <span className={styles.brandTagline}>Plan · Translate · Excel</span>
           </span>
         </Link>
         <nav className={styles.nav} aria-label="Main sections">

@@ -3,7 +3,8 @@ import { To } from 'react-router-dom';
 import { useWorkspaceSnapshot } from './useWorkspaceSnapshot';
 import { db } from '../db';
 import { PlannerQuickAction, PlannerTimelineCard } from '../types/planner';
-import { deckLabel, formatRelativeTime } from '../lib/plannerUtils';
+import { deckLabel, describeDueDate, formatRelativeTime } from '../lib/plannerUtils';
+import { getUpcomingSubjectFocus, subjectCatalog } from '../data/subjectCatalog';
 
 const STORAGE_KEY = 'planner-goals';
 
@@ -138,6 +139,19 @@ export const usePlannerActions = () => {
       icon: '🧠',
       badge: workspace.dueFlashcards ? `${workspace.dueFlashcards}` : undefined,
     });
+
+    const subjectFocus = getUpcomingSubjectFocus(subjectCatalog);
+    if (subjectFocus) {
+      const due = describeDueDate(subjectFocus.dueDate);
+      items.push({
+        key: 'subject-focus',
+        to: `/subjects?focus=${encodeURIComponent(subjectFocus.subjectSlug)}`,
+        label: `Prep ${subjectFocus.subjectName}`,
+        hint: subjectFocus.itemTitle ? `${subjectFocus.itemTitle} · ${due.label}` : due.label,
+        icon: subjectFocus.language === 'es' ? '🈶' : '📚',
+        badge: subjectFocus.language === 'es' ? 'EN help' : undefined,
+      });
+    }
 
     if (workspace.weakestTag) {
       items.push({
