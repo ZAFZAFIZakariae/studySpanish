@@ -20,6 +20,16 @@ import { snlpChapter5Summary } from './snlp-chapter-5';
 import { snlpChapter6Summary } from './snlp-chapter-6';
 import { englishLessonIds, lessonSummaryText } from './text';
 
+const normalizeSummaryText = (rawText: string): string =>
+  rawText
+    .replace(/\r\n/g, '\n')
+    .replace(/([a-záéíóúñ])([A-ZÁÉÍÓÚÑ][a-záéíóúñ])/g, '$1\n$2')
+    .replace(/•/g, '\n• ')
+    .replace(/\n{3,}/g, '\n\n')
+    .replace(/\n\n• /g, '\n• ')
+    .replace(/[ \t]+\n/g, '\n')
+    .trim();
+
 const lessons: Record<string, LessonSummaryContent> = {
   'sad-session-0': sadSession0Summary,
   'sad-session-1': sadSession1Summary,
@@ -43,18 +53,22 @@ const lessons: Record<string, LessonSummaryContent> = {
 };
 
 for (const [lessonId, text] of Object.entries(lessonSummaryText)) {
+  const normalizedText = normalizeSummaryText(text);
   const summary = lessons[lessonId];
 
   if (!summary) {
     throw new Error(`Missing lesson summary metadata for id: ${lessonId}`);
   }
 
-  const existingOriginal = summary.summary.original;
-  const combinedOriginal = existingOriginal ? `${existingOriginal}\n\n${text}` : text;
+  const existingOriginal = summary.summary.original?.trim();
+  const existingEnglish = summary.summary.english?.trim();
+  const combinedOriginal = existingOriginal
+    ? `${existingOriginal}\n\n${normalizedText}`
+    : normalizedText;
   const english = englishLessonIds.has(lessonId)
-    ? summary.summary.english
-      ? `${summary.summary.english}\n\n${text}`
-      : text
+    ? existingEnglish
+      ? `${existingEnglish}\n\n${normalizedText}`
+      : normalizedText
     : summary.summary.english;
 
   lessons[lessonId] = {

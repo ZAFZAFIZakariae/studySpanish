@@ -274,6 +274,7 @@
   margin: 0;
   line-height: 1.6;
   color: var(--ui-text-primary, #1f2937);
+  white-space: pre-line;
 }
 
 .summaryOriginal {
@@ -281,6 +282,7 @@
   line-height: 1.5;
   color: var(--ui-text-secondary, #475569);
   font-style: italic;
+  white-space: pre-line;
 }
 
 .translationBlock p {
