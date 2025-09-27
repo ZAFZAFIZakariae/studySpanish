@@ -3,9 +3,9 @@ import { LessonSummaryContent } from '../../types/subject';
 export const ggoTema1Summary: LessonSummaryContent = {
   summary: {
     original:
-      'Definimos qué es el gobierno de TI, revisamos objetivos estratégicos, pilares de control y relacionamos COBIT con el modelo de valor empresarial.',
+      'Aterrizamos las diferencias entre gobierno corporativo y gobierno de TI, repasamos marcos como ITGI y COBIT, y discutimos cómo el CIO equilibra riesgo, valor y rendimiento.',
     english:
-      'We defined IT governance, linked it to business value objectives, and mapped COBIT control pillars to executive expectations.',
+      'We clarified the split between corporate governance (gobierno corporativo) and IT governance (gobierno de TI), reviewed ITGI and COBIT guidance (marcos ITGI y COBIT), and discussed how the CIO balances risk, value, and performance (riesgo, valor y rendimiento).',
   },
   translation: {
     status: 'partial',

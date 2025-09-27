@@ -120,6 +120,33 @@ const SubjectsPage: React.FC = () => {
     [activeCourse, activeItemId]
   );
 
+  const renderContentSection = (item: CourseItem | null) => {
+    if (!item?.content) {
+      return null;
+    }
+
+    const englishContent = item.content.english ?? (item.language === 'en' ? item.content.original : undefined);
+    const showOriginalContent =
+      !!item.content.original &&
+      (item.language === 'es' || !englishContent || englishContent !== item.content.original);
+
+    return (
+      <section className={styles.contentBlock} aria-label="Lesson content">
+        <h3>Content</h3>
+        {englishContent && <pre className={styles.contentEnglish}>{englishContent}</pre>}
+        {showOriginalContent &&
+          (item.language === 'es' && englishContent ? (
+            <details className={styles.contentOriginalDetails}>
+              <summary>Ver contenido original en español</summary>
+              <pre className={styles.contentOriginal}>{item.content.original}</pre>
+            </details>
+          ) : (
+            <pre className={styles.contentOriginal}>{item.content.original}</pre>
+          ))}
+      </section>
+    );
+  };
+
   useEffect(() => {
     setActiveCourseId(null);
     setActiveItemId(null);
@@ -265,6 +292,8 @@ const SubjectsPage: React.FC = () => {
                   <p className={styles.summaryOriginal}>{activeItem.summary.original}</p>
                 )}
               </section>
+
+              {renderContentSection(activeItem)}
 
               {activeItem.translation && (
                 <section className={styles.translationBlock} aria-label="Translation notes">

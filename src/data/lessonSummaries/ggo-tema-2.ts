@@ -3,9 +3,9 @@ import { LessonSummaryContent } from '../../types/subject';
 export const ggoTema2Summary: LessonSummaryContent = {
   summary: {
     original:
-      'Profundizamos en modelos de valor de TI, categorizamos beneficios tangibles e intangibles y definimos métricas financieras para priorizar inversiones.',
+      'Exploramos cómo ITIL y ValIT definen el valor de TI, categorizamos beneficios tangibles e intangibles y trazamos métricas para demostrar impacto en la cartera.',
     english:
-      'We compared IT value frameworks, classified tangible versus intangible benefits, and defined financial metrics to prioritise portfolio bets.',
+      'We explored how ITIL and ValIT articulate IT value (valor de TI), classified tangible and intangible benefits (beneficios tangibles e intangibles), and mapped metrics (métricas) that evidence portfolio impact.',
   },
   translation: {
     status: 'partial',

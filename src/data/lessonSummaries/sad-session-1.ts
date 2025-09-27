@@ -3,9 +3,9 @@ import { LessonSummaryContent } from '../../types/subject';
 export const sadSession1Summary: LessonSummaryContent = {
   summary: {
     original:
-      'Identificación de drivers arquitectónicos, revisión del modelo en capas y análisis de tácticas de modifiabilidad, rendimiento y seguridad.',
+      'Contrastamos monolitos y sistemas distribuidos, identificamos drivers arquitectónicos y repasamos cómo la concurrencia, la tolerancia a fallos y la escalabilidad afectan al diseño.',
     english:
-      'We catalogued architectural drivers, reviewed the layered style, and compared starter tactics for modifiability, performance, and security.',
+      'We contrasted monoliths with distributed systems, catalogued architectural drivers (drivers arquitectónicos), and reviewed how concurrency (concurrencia), fault tolerance (tolerancia a fallos), and scalability (escalabilidad) shape the design choices.',
   },
   translation: {
     status: 'partial',

@@ -22,6 +22,10 @@ export interface CourseItem {
     original: string;
     english?: string;
   };
+  content?: {
+    original: string;
+    english?: string;
+  };
   tags: string[];
   estimatedMinutes?: number;
   dueDate?: string;
@@ -34,7 +38,7 @@ export interface CourseItem {
   };
 }
 
-export type LessonSummaryContent = Pick<CourseItem, 'summary' | 'translation'>;
+export type LessonSummaryContent = Pick<CourseItem, 'summary' | 'translation' | 'content'>;
 
 export interface CheatPaperSection {
   title: string;
