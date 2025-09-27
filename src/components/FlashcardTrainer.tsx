@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../db';
 import { describeDueStatus, isDue, summarizeBuckets, updateSRS, ReviewGrade } from '../lib/srs';
@@ -47,6 +47,8 @@ export const FlashcardTrainer: React.FC = () => {
   const [completed, setCompleted] = useState(0);
   const [skipRebuild, setSkipRebuild] = useState(false);
   const [stats, setStats] = useState<TrainerStats>({ dueTotal: 0, buckets: [] });
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [speaking, setSpeaking] = useState<'front' | 'back' | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -127,12 +129,70 @@ export const FlashcardTrainer: React.FC = () => {
     [current]
   );
 
+  const stopAudio = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    setSpeaking(null);
+  }, []);
+
+  useEffect(() => stopAudio, [stopAudio]);
+
+  useEffect(() => {
+    stopAudio();
+  }, [current, stopAudio]);
+
+  const playAudio = useCallback(
+    (side: 'front' | 'back') => {
+      if (!current) return;
+      const text = side === 'front' ? current.front : current.back;
+      stopAudio();
+      setSpeaking(side);
+
+      const audioSource = side === 'front' ? current.audioFrontUrl : current.audioBackUrl;
+      if (audioSource) {
+        const audio = new Audio(audioSource);
+        audioRef.current = audio;
+        audio.addEventListener('ended', () => {
+          setSpeaking(null);
+        });
+        audio.play().catch(() => {
+          setSpeaking(null);
+        });
+        return;
+      }
+
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = current.tag?.toLowerCase().includes('english') ? 'en-US' : 'es-ES';
+        utterance.rate = 0.95;
+        utterance.onend = () => setSpeaking(null);
+        utterance.onerror = () => setSpeaking(null);
+        window.speechSynthesis.speak(utterance);
+        return;
+      }
+
+      setSpeaking(null);
+      console.warn('Audio playback unavailable');
+    },
+    [current, stopAudio]
+  );
+
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
       if (!current) return;
       if (event.key === ' ' || event.key === 'Spacebar') {
         event.preventDefault();
         setShowBack((prev) => !prev);
+        return;
+      }
+      if (event.key.toLowerCase() === 'a') {
+        event.preventDefault();
+        playAudio(showBack ? 'back' : 'front');
         return;
       }
       if (!showBack) return;
@@ -154,7 +214,7 @@ export const FlashcardTrainer: React.FC = () => {
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [current, gradeCard, showBack]);
+  }, [current, gradeCard, playAudio, showBack]);
 
   if (!current) {
     return (
@@ -242,14 +302,53 @@ export const FlashcardTrainer: React.FC = () => {
         <p className={styles.promptText} aria-label="Flashcard front">
           {current.front}
         </p>
+        <div className={styles.audioRow}>
+          <button
+            type="button"
+            className={styles.audioButton}
+            onClick={() => playAudio('front')}
+            data-playing={speaking === 'front'}
+          >
+            🔊 Hear prompt
+          </button>
+          <span className={styles.audioHint} aria-live="polite">
+            {speaking === 'front' ? 'Playing prompt audio' : 'Hotkey A'}
+          </span>
+        </div>
         <div className={styles.cardMeta}>
           <span>{current.deck}</span>
           <span>{current.tag}</span>
           <span>{describeDueStatus(current)}</span>
         </div>
+        {current.imageUrl && (
+          <img
+            src={current.imageUrl}
+            alt={`Visual cue for ${current.front}`}
+            className={styles.contextImage}
+            loading="lazy"
+          />
+        )}
+        {current.exampleFront && (
+          <figure className={styles.contextExample}>
+            <figcaption>Example usage</figcaption>
+            <blockquote>{current.exampleFront}</blockquote>
+            {showBack && current.exampleBack && <blockquote>{current.exampleBack}</blockquote>}
+          </figure>
+        )}
         {showBack && (
           <div className={styles.answerSurface} aria-label="Flashcard back">
-            {current.back}
+            <div className={styles.answerHeader}>
+              <span>Answer</span>
+              <button
+                type="button"
+                className={styles.audioButton}
+                onClick={() => playAudio('back')}
+                data-playing={speaking === 'back'}
+              >
+                🔊 Hear answer
+              </button>
+            </div>
+            <p className={styles.answerText}>{current.back}</p>
           </div>
         )}
       </div>

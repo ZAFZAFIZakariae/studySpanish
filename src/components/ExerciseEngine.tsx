@@ -1,9 +1,10 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from '@/lib/remarkGfm';
 import { Exercise, Grade } from '../lib/schemas';
 import { gradeAnswer } from '../lib/grader';
 import { db } from '../db';
+import { SpeakingCheckpoint } from '../types/speaking';
 import { ConjugationTable } from './ConjugationTable';
 import styles from './ExerciseEngine.module.css';
 
@@ -13,6 +14,7 @@ interface ExerciseEngineProps {
 }
 
 export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrade }) => {
+  type SpeakingPreview = SpeakingCheckpoint & { url: string };
   const expectedArray = useMemo(
     () => (Array.isArray(exercise.answer) ? exercise.answer : [exercise.answer]),
     [exercise.answer]
@@ -25,6 +27,64 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrad
   const [startTime, setStartTime] = useState(() => Date.now());
   const [showHints, setShowHints] = useState(false);
   const [showRubric, setShowRubric] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [recordingError, setRecordingError] = useState<string | null>(null);
+  const [currentPreview, setCurrentPreview] = useState<string | null>(null);
+  const [checkpoints, setCheckpoints] = useState<SpeakingPreview[]>([]);
+  const canRecord =
+    typeof window !== 'undefined' &&
+    typeof navigator !== 'undefined' &&
+    'MediaRecorder' in window &&
+    Boolean(navigator.mediaDevices?.getUserMedia);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const recordStartRef = useRef<number | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const checkpointsRef = useRef<SpeakingPreview[]>([]);
+  const streamRef = useRef<MediaStream | null>(null);
+  const currentPreviewRef = useRef<string | null>(null);
+
+  const refreshCheckpoints = useCallback(async () => {
+    const rows = await db.speaking
+      .where('exerciseId')
+      .equals(exercise.id)
+      .reverse()
+      .limit(5)
+      .toArray();
+    setCheckpoints((prev) => {
+      prev.forEach((entry) => URL.revokeObjectURL(entry.url));
+      return rows.map((row) => ({ ...row, url: URL.createObjectURL(row.blob) }));
+    });
+  }, [exercise.id]);
+
+  useEffect(() => {
+    checkpointsRef.current = checkpoints;
+  }, [checkpoints]);
+
+  useEffect(() => {
+    currentPreviewRef.current = currentPreview;
+  }, [currentPreview]);
+
+  useEffect(() => {
+    refreshCheckpoints();
+    return () => {
+      checkpointsRef.current.forEach((entry) => URL.revokeObjectURL(entry.url));
+    };
+  }, [refreshCheckpoints]);
+
+  useEffect(() => () => {
+    const current = currentPreviewRef.current;
+    if (current) URL.revokeObjectURL(current);
+  }, []);
+
+  useEffect(() => () => {
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+      mediaRecorderRef.current.stop();
+    }
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((track) => track.stop());
+      streamRef.current = null;
+    }
+  }, [exercise.id]);
 
   useEffect(() => {
     setInputValue('');
@@ -50,6 +110,71 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrad
     if (exercise.type === 'conjugate') return tableValues;
     return inputValue;
   };
+
+  const updateCurrentPreview = useCallback((url: string | null) => {
+    setCurrentPreview((prev) => {
+      if (prev) URL.revokeObjectURL(prev);
+      return url;
+    });
+  }, []);
+
+  const stopStream = () => {
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((track) => track.stop());
+      streamRef.current = null;
+    }
+  };
+
+  const stopRecording = useCallback(() => {
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+      mediaRecorderRef.current.stop();
+    }
+  }, []);
+
+  const startRecording = useCallback(async () => {
+    if (!canRecord || recording) {
+      setRecordingError(canRecord ? null : 'Recording not supported in this browser');
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices!.getUserMedia({ audio: true });
+      streamRef.current = stream;
+      const recorder = new MediaRecorder(stream);
+      chunksRef.current = [];
+      recorder.ondataavailable = (event) => {
+        if (event.data?.size) {
+          chunksRef.current.push(event.data);
+        }
+      };
+      recorder.onstop = async () => {
+        const blob = new Blob(chunksRef.current, { type: 'audio/webm' });
+        chunksRef.current = [];
+        stopStream();
+        const durationMs = recordStartRef.current ? Date.now() - recordStartRef.current : 0;
+        recordStartRef.current = null;
+        updateCurrentPreview(URL.createObjectURL(blob));
+        const checkpoint: SpeakingCheckpoint = {
+          id: `${exercise.id}-${Date.now()}`,
+          exerciseId: exercise.id,
+          recordedAt: new Date().toISOString(),
+          durationMs,
+          blob,
+        };
+        await db.speaking.put(checkpoint);
+        await refreshCheckpoints();
+        setRecording(false);
+      };
+      recorder.start();
+      recordStartRef.current = Date.now();
+      mediaRecorderRef.current = recorder;
+      setRecording(true);
+      setRecordingError(null);
+    } catch (error) {
+      stopStream();
+      setRecording(false);
+      setRecordingError((error as Error).message);
+    }
+  }, [canRecord, exercise.id, recording, refreshCheckpoints, updateCurrentPreview]);
 
   const submit = async () => {
     const attemptCount = attempts + 1;
@@ -222,6 +347,59 @@ export const ExerciseEngine: React.FC<ExerciseEngineProps> = ({ exercise, onGrad
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{exercise.rubric}</ReactMarkdown>
         </div>
       )}
+      <section className={styles.speakingSection} aria-label="Speaking checkpoint">
+        <div className={styles.speakingHeader}>
+          <span className="ui-section__tag">Speaking checkpoint</span>
+          <p className={styles.speakingSubtitle}>
+            Record a quick attempt and compare your pacing with native audio from previous sessions.
+          </p>
+        </div>
+        <div className={styles.speakingControls}>
+          <button
+            type="button"
+            className={styles.recordButton}
+            onClick={recording ? stopRecording : startRecording}
+            data-recording={recording}
+            disabled={!canRecord}
+          >
+            {recording ? 'Stop recording' : 'Record your response'}
+          </button>
+          {recording && <span className={styles.recordingStatus}>Recording…</span>}
+        </div>
+        {!canRecord && (
+          <p className={styles.recordingError}>Recording isn’t supported in this browser environment.</p>
+        )}
+        {recordingError && <p className={styles.recordingError}>{recordingError}</p>}
+        {currentPreview && (
+          <div className={styles.previewBlock}>
+            <span className={styles.previewLabel}>Latest attempt</span>
+            <audio controls src={currentPreview} className={styles.audioPlayer}>
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+        )}
+        {checkpoints.length > 0 && (
+          <div className={styles.historyBlock}>
+            <h4 className={styles.historyTitle}>Recent checkpoints</h4>
+            <ul className={styles.historyList}>
+              {checkpoints.map((entry) => (
+                <li key={entry.id} className={styles.historyItem}>
+                  <div className={styles.historyMeta}>
+                    <span>{new Date(entry.recordedAt).toLocaleString()}</span>
+                    <span>{Math.round(entry.durationMs / 1000)}s</span>
+                  </div>
+                  <audio controls src={entry.url} className={styles.audioPlayer}>
+                    Your browser does not support audio playback.
+                  </audio>
+                  <a href={entry.url} download={`speaking-${entry.id}.webm`} className={styles.historyDownload}>
+                    Download
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </section>
     </div>
   );
 };

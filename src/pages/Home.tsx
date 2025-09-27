@@ -1,10 +1,12 @@
-import React, { FormEvent, useEffect, useMemo, useState } from 'react';
-import { Link, To, useSearchParams } from 'react-router-dom';
+import React, { FormEvent, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { liveQuery } from 'dexie';
 import { db } from '../db';
 import { Lesson } from '../lib/schemas';
 import { computeAnalytics } from '../lib/analytics';
 import { describeDueStatus, isDue } from '../lib/srs';
+import { usePlannerActions } from '../hooks/usePlannerActions';
+import { deckLabel as describeDeck } from '../lib/plannerUtils';
 import styles from './Home.module.css';
 
 interface LibraryStats {
@@ -34,6 +36,8 @@ interface RecommendationCard {
   reason: string;
   priority: number;
 }
+
+type TimelineId = 'yesterday' | 'today' | 'tomorrow';
 
 const levelCopy: Record<string, { title: string; description: string }> = {
   A1: {
@@ -130,21 +134,7 @@ const collectionOptions: CollectionOption[] = [
   },
 ];
 
-const deckLabel = (deck: string) => {
-  switch (deck) {
-    case 'verbs':
-      return 'Verb drills';
-    case 'vocab':
-      return 'Vocabulary';
-    case 'presentations':
-      return 'Presentation phrases';
-    case 'grammar':
-    default:
-      return 'Grammar focus';
-  }
-};
-
-const formatRelativeTime = (value?: string) => {
+const formatLibraryRelativeTime = (value?: string) => {
   if (!value) return 'Unseen';
   const date = new Date(value);
   const now = new Date();
@@ -189,6 +179,32 @@ export const HomePage: React.FC = () => {
   const [lastStudiedOn, setLastStudiedOn] = useState<string | undefined>();
   const [inspirationTag, setInspirationTag] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const { timelineCards, plannerAnchor, goalMap, updateGoal, clearGoal } = usePlannerActions();
+  const [goalDrafts, setGoalDrafts] = useState({
+    yesterday: { note: '', scheduledFor: '', reminder: '' },
+    today: { note: '', scheduledFor: '', reminder: '' },
+    tomorrow: { note: '', scheduledFor: '', reminder: '' },
+  });
+
+  useEffect(() => {
+    setGoalDrafts({
+      yesterday: {
+        note: goalMap.yesterday?.note ?? '',
+        scheduledFor: goalMap.yesterday?.scheduledFor ?? '',
+        reminder: goalMap.yesterday?.reminder ?? '',
+      },
+      today: {
+        note: goalMap.today?.note ?? '',
+        scheduledFor: goalMap.today?.scheduledFor ?? '',
+        reminder: goalMap.today?.reminder ?? '',
+      },
+      tomorrow: {
+        note: goalMap.tomorrow?.note ?? '',
+        scheduledFor: goalMap.tomorrow?.scheduledFor ?? '',
+        reminder: goalMap.tomorrow?.reminder ?? '',
+      },
+    });
+  }, [goalMap]);
 
   useEffect(() => {
     const subscription = liveQuery(async () => {
@@ -354,8 +370,10 @@ export const HomePage: React.FC = () => {
     [collectionFilter]
   );
 
+  const deferredSearchTerm = useDeferredValue(searchTerm);
+
   const filteredLessons = useMemo(() => {
-    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const normalizedSearch = deferredSearchTerm.trim().toLowerCase();
     const tag = tagFilter === 'all' ? null : tagFilter;
     return items
       .filter((item) => {
@@ -384,9 +402,38 @@ export const HomePage: React.FC = () => {
         if (recentDiff !== 0) return recentDiff;
         return a.lesson.title.localeCompare(b.lesson.title, undefined, { numeric: true, sensitivity: 'base' });
       });
-  }, [items, levelFilter, tagFilter, searchTerm, activeCollection]);
+  }, [items, levelFilter, tagFilter, deferredSearchTerm, activeCollection]);
 
-  const plannerAnchor: To = { pathname: '/', hash: '#lesson-library' };
+  const [visibleCount, setVisibleCount] = useState(24);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setVisibleCount(24);
+  }, [filteredLessons.length, deferredSearchTerm, tagFilter, levelFilter, collectionFilter]);
+
+  useEffect(() => {
+    if (!sentinelRef.current) return;
+    const element = sentinelRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const first = entries[0];
+        if (first?.isIntersecting) {
+          setVisibleCount((prev) => {
+            if (prev >= filteredLessons.length) return prev;
+            return Math.min(filteredLessons.length, prev + 24);
+          });
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [filteredLessons.length]);
+
+  const visibleLessons = useMemo(
+    () => filteredLessons.slice(0, visibleCount),
+    [filteredLessons, visibleCount]
+  );
 
   const primaryRecommendation = recommendations[0];
   const primaryDeck = deckDue[0];
@@ -406,7 +453,7 @@ export const HomePage: React.FC = () => {
       {
         id: 'review',
         label: 'Flashcard sprint',
-        title: primaryDeck ? `${deckLabel(primaryDeck.deck)} deck` : 'Flashcards',
+        title: primaryDeck ? `${describeDeck(primaryDeck.deck)} deck` : 'Flashcards',
         description: primaryDeck
           ? `${primaryDeck.due} card${primaryDeck.due === 1 ? '' : 's'} ready · ${primaryDeck.status}`
           : stats.dueCards > 0
@@ -429,42 +476,6 @@ export const HomePage: React.FC = () => {
       },
     ],
     [plannerAnchor, primaryDeck, primaryRecommendation, stats.dueCards, weakestTag]
-  );
-
-  const timelineCards = useMemo(
-    () => [
-      {
-        id: 'yesterday',
-        label: 'Yesterday',
-        title: stats.streak > 0 ? `Streak day ${stats.streak}` : 'Restart your streak',
-        description: lastStudiedOn
-          ? `Last session ${formatRelativeTime(lastStudiedOn)}`
-          : 'No activity logged yet — today is a great day to begin.',
-        to: stats.streak > 0 ? '/dashboard' : plannerAnchor,
-        action: stats.streak > 0 ? 'View insights' : 'Plan a session',
-      },
-      {
-        id: 'today',
-        label: 'Today',
-        title: primaryRecommendation ? primaryRecommendation.title : 'Choose your focus',
-        description: primaryRecommendation
-          ? primaryRecommendation.reason
-          : 'Pick a focus block below to jump into practice.',
-        to: primaryRecommendation?.lessonSlug ? `/lessons/${primaryRecommendation.lessonSlug}` : plannerAnchor,
-        action: primaryRecommendation ? 'Resume lesson' : 'Browse lessons',
-      },
-      {
-        id: 'tomorrow',
-        label: 'Tomorrow',
-        title: primaryDeck ? `${deckLabel(primaryDeck.deck)} deck` : 'Schedule a review',
-        description: primaryDeck
-          ? `${primaryDeck.due} due · ${primaryDeck.status}`
-          : 'Stay ahead by pencilling in a short flashcard sprint.',
-        to: '/flashcards',
-        action: 'Open flashcards',
-      },
-    ],
-    [plannerAnchor, primaryDeck, primaryRecommendation, stats.streak, lastStudiedOn]
   );
 
   const hasActiveFilters =
@@ -503,6 +514,35 @@ export const HomePage: React.FC = () => {
 
   const activeLevelCopy = levelFilter === 'all' ? null : levelCopy[levelFilter];
 
+  const handleGoalDraftChange = (id: TimelineId, field: 'note' | 'scheduledFor' | 'reminder', value: string) => {
+    setGoalDrafts((prev) => ({
+      ...prev,
+      [id]: {
+        ...prev[id],
+        [field]: value,
+      },
+    }));
+  };
+
+  const handleGoalSubmit = (event: FormEvent<HTMLFormElement>, id: TimelineId) => {
+    event.preventDefault();
+    const draft = goalDrafts[id];
+    updateGoal({
+      id,
+      note: draft.note.trim(),
+      scheduledFor: draft.scheduledFor ? draft.scheduledFor : null,
+      reminder: draft.reminder ? draft.reminder : null,
+    });
+  };
+
+  const handleGoalClear = (id: TimelineId) => {
+    clearGoal(id);
+    setGoalDrafts((prev) => ({
+      ...prev,
+      [id]: { note: '', scheduledFor: '', reminder: '' },
+    }));
+  };
+
   return (
     <div className={styles.page} aria-labelledby="planner-heading">
       <section className={`ui-card ui-card--accent ${styles.timeline}`} aria-labelledby="planner-heading">
@@ -530,16 +570,79 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
         <div className={styles.timelineCards} role="list">
-          {timelineCards.map((card) => (
-            <article key={card.id} className={styles.timelineCard} role="listitem">
-              <span className={styles.timelineCardLabel}>{card.label}</span>
-              <h2 className={styles.timelineCardTitle}>{card.title}</h2>
-              <p className={styles.timelineCardDescription}>{card.description}</p>
-              <Link to={card.to} className={styles.timelineCardAction}>
-                {card.action} <span aria-hidden="true">→</span>
-              </Link>
-            </article>
-          ))}
+          {timelineCards.map((card) => {
+            const draft = goalDrafts[card.id];
+            return (
+              <article key={card.id} className={styles.timelineCard} role="listitem">
+                <span className={styles.timelineCardLabel}>{card.label}</span>
+                <h2 className={styles.timelineCardTitle}>{card.title}</h2>
+                <p className={styles.timelineCardDescription}>{card.description}</p>
+                <Link to={card.actionTo} className={styles.timelineCardAction}>
+                  {card.actionLabel} <span aria-hidden="true">→</span>
+                </Link>
+                <form
+                  className={styles.timelineForm}
+                  onSubmit={(event) => handleGoalSubmit(event, card.id)}
+                  aria-label={`Schedule goal for ${card.label}`}
+                >
+                  <label htmlFor={`${card.id}-goal-note`} className={styles.timelineFormLabel}>
+                    Goal or reminder
+                  </label>
+                  <textarea
+                    id={`${card.id}-goal-note`}
+                    className={styles.timelineFormNote}
+                    value={draft.note}
+                    onChange={(event) => handleGoalDraftChange(card.id, 'note', event.target.value)}
+                    rows={2}
+                    placeholder="Describe what success looks like"
+                  />
+                  <div className={styles.timelineFormRow}>
+                    <label className={styles.timelineFormLabel} htmlFor={`${card.id}-scheduled`}>
+                      Target date
+                    </label>
+                    <input
+                      id={`${card.id}-scheduled`}
+                      type="date"
+                      value={draft.scheduledFor}
+                      onChange={(event) => handleGoalDraftChange(card.id, 'scheduledFor', event.target.value)}
+                      className={styles.timelineFormInput}
+                    />
+                    <label className={styles.timelineFormLabel} htmlFor={`${card.id}-reminder`}>
+                      Reminder time
+                    </label>
+                    <input
+                      id={`${card.id}-reminder`}
+                      type="time"
+                      value={draft.reminder}
+                      onChange={(event) => handleGoalDraftChange(card.id, 'reminder', event.target.value)}
+                      className={styles.timelineFormInput}
+                    />
+                  </div>
+                  <div className={styles.timelineFormActions}>
+                    <button type="submit" className="ui-button ui-button--small">
+                      Save plan
+                    </button>
+                    {(card.goal?.note || card.goal?.scheduledFor || card.goal?.reminder) && (
+                      <button
+                        type="button"
+                        className="ui-button ui-button--ghost ui-button--small"
+                        onClick={() => handleGoalClear(card.id)}
+                      >
+                        Clear
+                      </button>
+                    )}
+                  </div>
+                  {card.goal && (
+                    <p className={styles.timelinePlanSummary} aria-live="polite">
+                      {card.goal.note && <span>Saved: {card.goal.note}. </span>}
+                      {card.goal.scheduledFor && <span>Scheduled for {card.goal.scheduledFor}. </span>}
+                      {card.goal.reminder && <span>Reminder at {card.goal.reminder}.</span>}
+                    </p>
+                  )}
+                </form>
+              </article>
+            );
+          })}
         </div>
         <p className={styles.timelineFootnote} aria-live="polite">
           Current streak {stats.streak} day{stats.streak === 1 ? '' : 's'} · Best {stats.bestStreak}
@@ -676,16 +779,18 @@ export const HomePage: React.FC = () => {
           </p>
         ) : lessons.length === 0 ? (
           <p className={styles.emptyState} aria-live="polite">
-            No lessons imported yet. Use the Content manager to add the latest content drop.
+            No lessons imported yet. <Link to="/onboarding">Launch the guided onboarding</Link> to install the starter
+            dataset or head to the Content manager to import your own bundle.
           </p>
         ) : filteredLessons.length === 0 ? (
           <p className={styles.emptyState} aria-live="polite">
             No lessons match your filters. Try adjusting the level, collection, or search term.
           </p>
         ) : (
-          <div className={styles.lessonGrid}>
-            {filteredLessons.map((item) => {
-              const { lesson } = item;
+          <>
+            <div className={styles.lessonGrid}>
+              {visibleLessons.map((item) => {
+                const { lesson } = item;
               const masteryPercent = item.exerciseCount
                 ? Math.round((item.masteredCount / item.exerciseCount) * 100)
                 : 0;
@@ -711,15 +816,22 @@ export const HomePage: React.FC = () => {
                     )}
                   </div>
                   <div className={styles.lessonFooter}>
-                    <span>{formatRelativeTime(item.lastAttemptAt)}</span>
+                    <span>{formatLibraryRelativeTime(item.lastAttemptAt)}</span>
                     <span className={styles.lessonCta}>
                       Open lesson <span aria-hidden="true">→</span>
                     </span>
                   </div>
                 </Link>
               );
-            })}
-          </div>
+              })}
+              <div ref={sentinelRef} aria-hidden="true" />
+            </div>
+            {visibleLessons.length < filteredLessons.length && (
+              <p className={styles.loadHint} role="status">
+                Showing {visibleLessons.length} of {filteredLessons.length} lessons. Scroll for more.
+              </p>
+            )}
+          </>
         )}
       </section>
 

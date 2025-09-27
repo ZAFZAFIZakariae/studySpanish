@@ -66,6 +66,13 @@ export interface SRSDashboardSummary {
   deckBreakdown: { deck: Flashcard['deck']; due: number; total: number }[];
 }
 
+export interface WeeklyPlanItem {
+  day: string;
+  title: string;
+  description: string;
+  to?: string;
+}
+
 export interface AnalyticsSnapshot {
   lessonTimes: LessonTimeStat[];
   lessonMastery: LessonMasteryStat[];
@@ -73,6 +80,7 @@ export interface AnalyticsSnapshot {
   weakestTags: TagWeakness[];
   skillAccuracy: SkillAccuracy[];
   studyPlan: StudyRecommendation[];
+  weeklyPlan: WeeklyPlanItem[];
   activityTrend: StudyActivityPoint[];
   streak: StudyStreak;
   srs: SRSDashboardSummary;
@@ -90,6 +98,63 @@ const dayKey = (value: string | Date) => {
 const differenceInDays = (a: Date, b: Date) => {
   const msPerDay = 24 * 60 * 60 * 1000;
   return Math.round((a.getTime() - b.getTime()) / msPerDay);
+};
+
+const weekdayFormatter = new Intl.DateTimeFormat(undefined, { weekday: 'long' });
+
+const buildWeeklyPlan = (
+  recommendations: StudyRecommendation[],
+  weakestTags: TagWeakness[],
+  srs: SRSDashboardSummary
+): WeeklyPlanItem[] => {
+  const plan: WeeklyPlanItem[] = [];
+  const today = new Date();
+  let lessonIndex = 0;
+  let tagIndex = 0;
+  const lessonQueue = recommendations.slice(0, 4);
+  const tagQueue = weakestTags.slice(0, 3);
+  const fallbackDeck = srs.deckBreakdown[0];
+
+  for (let offset = 0; offset < 7; offset += 1) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + offset);
+    const day = weekdayFormatter.format(date);
+
+    if (lessonIndex < lessonQueue.length) {
+      const lesson = lessonQueue[lessonIndex++];
+      plan.push({
+        day,
+        title: `Review ${lesson.lessonTitle}`,
+        description: lesson.reason,
+        to: lesson.lessonSlug ? `/lessons/${lesson.lessonSlug}` : undefined,
+      });
+      continue;
+    }
+
+    if (tagIndex < tagQueue.length) {
+      const tag = tagQueue[tagIndex++];
+      plan.push({
+        day,
+        title: `Focus on ${tag.tag}`,
+        description: `${tag.accuracy.toFixed(1)}% accuracy across ${tag.total} attempts`,
+        to: `/?tag=${encodeURIComponent(tag.tag)}`,
+      });
+      continue;
+    }
+
+    plan.push({
+      day,
+      title: fallbackDeck
+        ? `Flashcards – ${fallbackDeck.deck}`
+        : 'Flashcard stamina',
+      description: fallbackDeck
+        ? `${fallbackDeck.due} due · ${fallbackDeck.total} total`
+        : 'Keep your recall sharp with a quick sprint.',
+      to: '/flashcards',
+    });
+  }
+
+  return plan;
 };
 
 export const computeAnalytics = (
@@ -372,13 +437,17 @@ export const computeAnalytics = (
       .sort((a, b) => b.due - a.due || b.total - a.total),
   };
 
+  const weeklyPlan = buildWeeklyPlan(studyPlan, weakestTags, srs);
+  const trimmedStudyPlan = studyPlan.slice(0, 5);
+
   return {
     lessonTimes,
     lessonMastery: lessonMastery.sort((a, b) => (b.lastAttemptAt ? new Date(b.lastAttemptAt).getTime() : 0) - (a.lastAttemptAt ? new Date(a.lastAttemptAt).getTime() : 0)),
     averageAttemptsToMastery,
     weakestTags,
     skillAccuracy,
-    studyPlan: studyPlan.slice(0, 5),
+    studyPlan: trimmedStudyPlan,
+    weeklyPlan,
     activityTrend,
     streak: {
       current: currentStreak,
