@@ -34,6 +34,8 @@ export interface CourseItem {
   };
 }
 
+export type LessonSummaryContent = Pick<CourseItem, 'summary' | 'translation'>;
+
 export interface CheatPaperSection {
   title: string;
   bullets: string[];
