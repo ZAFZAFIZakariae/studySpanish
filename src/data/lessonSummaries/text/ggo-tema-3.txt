@@ -1,0 +1,101 @@
+Alineación de negocio y SI/TILlanos CuencaAndrés Boza
+
+Introducción§La estrategia del negocio se va concretando creándose así una infraestructura del negocio Estrategiade negocio
+Infraestructurade negocio
+
+Introducción§La estrategia de SI/TI igualmente se concreta creándose una infraestructura de SI/TIEstrategiade negocioEstrategia de SI/TI
+Infraestructurade SI/TIInfraestructurade negocio
+
+Introducción§Surge la necesidad de alinear el negocio con SI/TI
+Estrategiade negocioEstrategia de SI/TI
+Infraestructurade SI/TIInfraestructurade negocio
+
+Alineación entre negocio y SI/TIEl riesgode incorporar los sistemas y tecnología de informaciónen las organizaciones se ha incrementado, debido principalmente, a que la planificación estratégica de esta no existe. La influencia de SI/TIes determinanteya que puede dar un valor añadido a servicios, productos y competencia, cambiando la manera en como se llevan a cabo los negocios
+Es importante por tanto:-Determinar la estrategia de SI/TI, y-Que esté de acuerdo con la estrategia de negocio
+
+Alineación entre negocio y SI/TIEl problema de poner de acuerdo la estrategia de SI/TI con la estrategia de negocio, se aborda desde dos perspectivas:
+DescripciónPlanificación estratégica de SI/TIHace referencia a cómo incorporar la TI en las organizaciones.
+AlineaciónGrado en el cual la estrategia de SI/TI soporta y es soportadapor la estrategia de negocio, mediante un proceso dinámico, en el cual los cambios en alguno de los elementos del proceso implican cambios en algún otro componente
+
+Modelo de alineamiento estratégico§El Modelo de alineamiento estratégico (SAM-StrategicAlignmentModel)  de Henderson y Venkatramandescribe las relaciones entre la estrategia de la organización y la de SI/TI. §Distingue 4 perspectivas:oEjecución estratégicaoTransformación tecnológicaoPotencial competitivooNivel de servicio
+
+Nota: Similar a la planificación estratégica de SI/TI
+Modelo de alineamiento estratégico
+
+Modelo de alineamiento estratégico
+
+Modelo de alineamiento estratégico
+
+Modelo de alineamiento estratégico
+
+Alcancede negocio
+Gobiernode negocioCompetencias
+Infraestructuraadministrativa
+ProcesosHabilidades
+Alcancede tecnología
+CompetenciasGobierno
+Arquitectura
+ProcesosHabilidades
+Estrategia de negocioEstrategia de TI
+Infraestructura organizacional y procesosInfraestructura de TI y procesos
+Ajuste estratégico
+Integración funcionalTecnología de informaciónNegocio
+ExternoInterno
+(Henderson y  Venkatraman., 1993)
+Modelo de alineamiento estratégico
+
+Herramientas definición estrategia§Las organizaciones utilizan múltiples herramientas para la definición de su estratégica de negocio.
+oAnálisis DAFOoAnálisis PESTELoFuerzas de Portero…
+Estrategiade negocio
+
+Herramientas definición estrategia§Las organizaciones utilizan múltiples herramientas para la definición de su estratégica de negocio.
+oAnálisis DAFOoAnálisis PESTELoFuerzas de Portero… »Pueden ser utilizadas para la estrategia de SI/TI
+Estrategiade negocio
+Estrategia de SI/TI
+
+Proceso dirección estratégica
+Identificar amenazas y oportunidadesAnalizar el entorno
+Analizar los recursos internosIdentificar fortalezas y debilidades
+Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
+Stakeholders
+
+Misión y Visión
+§Misión:oLa declaración de misión trata creencias fundamentales e identifica mercados objetivos y productos fundamentales.oEs la razón de la existencia de la empresa.§Visión:oDefine los objetivosa medio y largo plazo (de 3 a 10 años). Debe orientarse al mercado.
+Establecer misión, objetivos
+
+Proceso dirección estratégica
+Identificar Amenazas y OportunidadesAnalizar el entorno
+Analizar los recursos internosIdentificar Fortalezas y Debilidades
+Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
+Stakeholders
+
+Análisis DAFO
+Identificar Amenazas y OportunidadesAnalizar el entorno
+Analizar los recursos internosIdentificar Fortalezas y Debilidades
+Análisis DAFO
+
+Análisis DAFO§Análisis DAFO (SWOT -Strengths, Weaknesses, Opportunities, Threats)
+
+Proceso dirección estratégica
+Identificar amenazas y oportunidadesAnalizar el entorno
+Analizar los recursos internosIdentificar fortalezas y debilidades
+Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
+Stakeholders
+Análisis 5 fuerzas de Porter
+
+5 Fuerzas de PorterAnálisis 5 fuerzas de Porter
+
+5 Fuerzas de Porter
+§Las fuerzas competitivas según M.Porter:1. El poder negociador de los proveedores2. El poder negociador de los clientes3. La entrada de nuevas empresas4. La aparición de productos sustitutivos5. El posicionamiento de los competidores
+Análisis 5 fuerzas de Porter
+
+Proceso dirección estratégica
+Identificar amenazas y oportunidadesAnalizar el entorno
+Analizar los recursos internosIdentificar fortalezas y debilidades
+Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
+Stakeholders
+Análisis 5 fuerzas de Porter
+
+Recordad que laalineación entre negocio y SI/TIPermite:-Determinar la estrategia de SI/TI, y-Que esté de acuerdo con la estrategia de negocio
+
+Alineación de negocio y SI/TILlanos CuencaAndrés Boza

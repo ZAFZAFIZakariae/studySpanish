@@ -1,0 +1,61 @@
+Serviciosy AplicacionesDistribuidasMUIINF –ETSINF -UPV
+
+ContactJosé M.  Bernabéu Aubánbernabeu@upv.es
+Tutorías bajo demanda
+
+E.g., Security, resource optimization, application development
+Course Objectives•Understand main concepts of distributed systems•Identify approaches to design distributed services•Develop awareness of main challenges•Develop practical skills with hands on labs
+
+25% 25%
+25%
+GradingTheory Exam
+Lab Project
+Seminars/Lab Exam
+Seminar quizes
+
+In-classroomOn-lineAll TuesdaysLast class: December 16Mixed theory/Seminars
+Fridays:Last session: December 16Mixed Seminars/Labs/Tests
+Calendar & Classes4.5 credit Theory/Seminars1.5 credits Labs
+Flexible hours in classroom (Tuesdays)
+Exams: December 19, during class (remote). Poliformat
+
+SyllabusPreliminary
+
+Topics
+Architectures…, CoordinationSLA, QoS, Cloud
+Approaches, ConceptsNATS, Prometheus, STEP, APISIX, Docker
+01
+03
+02
+04
+Foundations
+Security
+Deployment
+Technologies
+
+Labs
+
+•Simple illustrative service•Integrate some software pieces •Queues•Inverse proxy•Authenticator•Development  
+Design, Implement, Deploy
+•Groups of 3•Typescript/ Golang•Use git•Hand in complete repo in tgzformat
+What How
+
+ImplementationProject development
+Packaging for deploymentEditing
+TechnologiesTypescript/Golang
+Docker
+Git
+VSCode
+
+QUIZ
+
+-Otros-…
+-Nivel
+-Requeridopara Desarrollo y entrega -Aconsejablepara desarrollo
+-Full time?
+-Nivel
+QuienesInformática
+Typescript
+Trabajo
+Git Linux
+Golang

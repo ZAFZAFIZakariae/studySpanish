@@ -1,0 +1,629 @@
+Advanced methods of artificial vision
+Chapter 1: Hand crafted feature extraction
+
+Index
+1.Introduction
+2.Statistical descriptors
+3.Local Binary Patterns
+4.Histogram of Oriented Gradients
+5.SIFT
+6.Gabor Filters
+2
+
+Index
+1.Introduction
+2.Statistical descriptors
+3.Local Binary Patterns
+4.Histogram of Oriented Gradients
+5.SIFT
+6.Gabor Filters
+3
+
+What is a feature?
+• A feature (also called a descriptor) is a usually numerical value that is related to some
+relevant aspect of an entire image, part of an image, or a shape resulting from a
+segmentation process.
+• Supposedly, a feature should have close values when the relevant aspect whose
+essence it is trying to capture (colour, texture, area, etc.) is similar from a human point
+of view.
+• Another highly desirable property of a good feature is its robustness, understood as
+immunity to noise (the values of the feature should not change too much if the image
+or shape on which it is calculated is affected by a moderate level of noise).
+• Generally, not a single feature is associat ed with the object of interest but several or
+many of them grouped together in what is known as a feature vector.
+4
+
+5
+Feature extraction methodology
+• How do we analyse the image?
+– Global descriptors: descripto rs for the complete image
+– Local descriptors:
+• Rectangular blocks or patches
+• Landmark extraction: Harris, SIFT,…
+• Descriptors
+– Statistical descriptors
+– Cooccurrence Matrix
+– Histograms of Oriented Gradients
+– Local Binary Patterns
+– Gabbor Filters
+– SIFT, SURF
+–… .
+
+Statistical descriptors
+• Analyse the statistical distribution of some property for each of the pixels in the image.
+• Classified into: first order methods (those based on the histogram), second order methods 
+(those based on co-occurrence matrices), and higher order methods.
+• First-order statistics:
+– The normalised histogram of the image is calculated.
+– Properties that are obtai ned from this histogram.
+6
+6
+Mean                Variance Skewne ss Kurtosis               Entropy
+
+Co-occurrence matrix
+• Histogram-based statistics have the disadvantage of losing spatial 
+information.
+• The same information would be obtained for an image of a chessboard with 
+the black and white squares swapped.
+• To capture the spatial dependencies of gr ey level values, which contribute 
+to the perception of textures present in an image, a 2D structure called co-
+occurrence matrix is defined to analyse textures.
+• The co-occurrence matrix 𝑃ሺ𝑖, 𝑗ሻ is defined by specifying a shift direction 
+𝑑ൌ𝑑 ሺ 𝑖, 𝑗ሻ and counting all pairs of pixels separated by d and having grey 
+values 𝑖 and 𝑗.
+7
+https://scikit-image.org/docs/stable/user_guide/index.html
+
+Co-occurrence matrix
+8
+8
+Contrast: 0.3307
+Correlation: 0.9032
+Energy: 0.1323
+Homogeneity: 0.8534
+1 2 3 4 5 6 7 8
+1
+2
+3
+4
+5
+6
+7
+8
+
+Index
+1.Introduction
+2.Statistical descriptors
+3.Local Binary Patterns
+4.Histogram of Oriented Gradients
+5.SIFT
+6.Gabor Filters
+9
+
+Local Binary Patterns(LBP)
+10
+Ojala T, Pietikäinen M & Mäenpää T (2002) Multiresolution gray-scale and rotation invariant texture
+classification with Local Binary Patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence
+24(7):971-987.
+
+Local Binary Patterns(LBP)
+11
+𝑃ൌ 8 y  R ൌ 1
+𝑃 P is the number of neighbours and  R is the neighbourhood radius.
+𝑃ൌ 16 y  R ൌ 2 𝑃ൌ 8 y  R ൌ 2
+
+Local Binary Patterns(LBP)
+12
+Histogram of 2௉ values
+
+Local Binary Patterns(LBP)
+13
+              
+𝑅𝑂𝑅ሺ𝑥, 𝑡ሻ performs 𝑡 different rotations of the 𝑥 bits 
+• e.g. 10000010, 00101000, and 00000101 are equivalent to the minimum code 00000101.
+• 𝑃ൌ 8 256 different and 36 rotationally invariant LBP patterns
+LBPRi (LBP Rotational Invariant)
+Uniform LBP 
+• Objetive: to reduce the number of possible patterns to the 
+really discriminating ones.
+• How? By analysing the uniformity (U) of the patterns : 
+number of transitions from 0 to 1 and 1 to 0.
+
+Local Binary Patterns(LBP)
+14
+Uniform rotationally invariant LBP: LBPriu2
+• Patterns with U=0 or U=2 are reassigned an individual pattern 
+code.
+• All other patterns are reassigned the same code (they become 
+indistinguishable).
+• LBP: 256 patterns, LBP Uniform: (58 + 1) patterns, (9+1) 
+rotationally invariant . In general (P+2)
+
+Local Binary Patterns(LBP)
+15
+Uniform rotationally invariant LBP: LBPriu2
+
+Local Binary Patterns(LBP)
+16
+http://scikit-image.org/docs/dev/auto_examples/plot_local_binary_pattern.html
+
+Local Binary Patterns(LBP)
+17
+LBP LBPri LBPriu2
+LBP LBPri
+LBPriu2
+P=8 R=1
+
+Local Binary Patterns(LBP)
+18
+
+Local Binary Patterns(LBP)
+19
+Original: i Máscara: mask Luminancia: ig LBP Histograma LBP
+sana
+Cáncer 
+grado 3
+Cáncer 
+grado 5
+
+Index
+1.Introduction
+2.Statistical descriptors
+3.Local Binary Patterns
+4.Histogram of Oriented Gradients
+5.SIFT
+6.Gabor Filters
+20
+
+Histograms of Oriented
+Gradients (HOG)
+• The histogram of oriented gradients (HOG ) is a widely used descriptor in image 
+processing for the purpose of object detection. The technique counts the occurrences of 
+gradient orientation in localised portions of an image. 
+• Algorithm:
+– Gradient calculation
+– Grouping the orientations
+– Block descriptor
+– Block normalisation
+21
+
+22
+Convolution
+7275716359626674
+7275706258616572
+6973696359636871
+6973696259626770
+7274706157596470
+6869686563646668
+6769696766676970
+6366676564666869
+-101
+-202
+-101
+10-1
+20-2
+10-1
+𝑦 𝑚, 𝑛ൌ 𝑥 𝑚, 𝑛∗ ℎ𝑚, 𝑛ൌ ෍ ෍ 𝑥𝑘, 𝑙ℎ ሾ 𝑚െ𝑘, 𝑛െ𝑙ሿ
+௟௞
+Kernel
+ℎሾെ𝑘, െ𝑙]ℎሾ𝑘, 𝑙]
+െ1 ∗62 ൅0 ∗59 ൅1 ∗62 ൅ሺെ2ሻ∗ 59 ൅0 ∗57 ൅2 ∗61 ൅ሺെ1ሻ∗ 64 ൅0 ∗63 ൅1 ∗65 ൌ 3
+3
+Imagen de salida
+22
+
+23
+Gradient Computation
+-101
+-202
+-101
+121
+000
+-1-2-1
+𝑀𝑎𝑔𝑛𝑖𝑡𝑢𝑑𝑒 ൌ 𝐺௫ଶ ൅𝐺௬ଶ
+𝐺௫ 𝐺௬
+𝑂𝑟𝑖𝑒𝑛𝑡𝑎𝑡𝑖𝑜𝑛 ൌtanିଵ 𝐺௬
+𝐺௫ 23
+
+Histograms of Oriented
+Gradients (HOG)
+• Division of the image into cells of fixed size.  
+• Calculation of a histogram of the orientations in each cell.
+• Global descriptor combines histograms of all cells.
+24
+orientation
+
+Histograms of Oriented
+Gradients (HOG)
+• Division of the range of orientations into a fixed number of intervals.
+• Assign each pixel in the cell to an interval based on the gradient orientation.
+• Accumulate the gradient magnitude of all pixels assigned to an interval.
+25
+orientation
+orientation
+
+Histograms of Oriented
+Gradients (HOG)
+Orientation histogram calculation: interpolation in orientation
+• Problems
+– Gradients with very similar orientations  can be assigned to different intervals.
+– Sensitive to small gradient variations.
+• Solution:
+– Assign each gradient to the two closest intervals with a we ight proportional to the distance from the orientation 
+to the centre of each interval.
+26
+orientation
+orientation
+
+Histograms of Oriented
+Gradients (HOG)
+Assign each gradient to the two closest intervals with a weight proportional to the distance from 
+the orientation to the centre of each interval.
+𝑔 𝑥, 𝑦ൌ 100
+𝜃 𝑥, 𝑦ൌ 45º
+Assuming that for the histogram calculation the orientation is divided into 9 intervals (without 
+considering the sign), what would be the contribution of this pixel to each of the intervals of the 
+histogram?
+27
+
+Histograms of Oriented
+Gradients (HOG)
+Assign each gradient to the two closest intervals with a weight proportional to the distance from 
+the orientation to the centre of each interval.
+𝑔 𝑥, 𝑦ൌ 100
+𝜃 𝑥, 𝑦ൌ 45º
+Assuming that for the histogram calculation the orientation is divided into 9 intervals (without 
+considering the sign), what would be the contribution of this pixel to each of the intervals of the 
+histogram?
+28
+00 000007525
+
+Histograms of Oriented
+Gradients (HOG)
+29
+Orientation histogram calculation: spatial integration
+• A histogram is calculated for each of the cells.
+• Each pixel contributes to the histogram of its corresponding cell.
+𝑖
+𝑗
+1  2  3 4  5  6  7  8  9
+
+Histograms of Oriented
+Gradients (HOG)
+30
+Orientation histogram calculation: spatial integration
+• Problems
+• Pixels in close proximity can be assigned to different cells.
+• Sensitive to small variations in object shape.
+• Solution:
+• Assign each pixel to the four nearest cells with a weight proportional to the distance of the pixel from the centre
+of each cell.
+1  2  3 4  5  6  7  8  9
+
+Histograms of Oriented
+Gradients (HOG)
+31
+Given an image and the division into cells as shown and assuming that the orientation is divided 
+into 9 intervals without considering the sign (0º-180º), in which histograms (𝑖,𝑗) of the final 
+representation and in which intervals 𝑘 and with which weight will the pixel (𝑥=12,𝑦=18) with 
+orientation 𝜃ൌ 60º contribute?
+
+Histograms of Oriented
+Gradients (HOG)
+32
+Given an image and the division into cells as shown and assuming that the orientation is divided 
+into 9 intervals without considering the sign (0º-180º), in which histograms (𝑖,𝑗) of the final 
+representation and in which intervals 𝑘 and with which weight will the pixel (𝑥=12,𝑦=18) with 
+orientation 𝜃ൌ 60º contribute?
+
+Histograms of Oriented
+Gradients (HOG)
+33
+Block normalisation
+• Grouping of cells in blocks of b x b cells.
+• Single vector per block concatenating the histograms of all cells.
+• Vector normalisation using the L2 norm.
+𝐶ଵଵ 𝐶ଵଶ
+𝐶ଶଵ 𝐶ଶଶ
+𝑣ൌሺ 𝑥ଵ, 𝑥ଶ,…, 𝑥ேሻ
+𝑣ᇱ ൌ 𝑣
+𝑣 ଶ
+ଶ ൅𝜀
+ൌ 𝑣
+𝑥ଵ
+ଶ ൅𝑥ଶ
+ଶ ൅⋯൅𝑥 ே
+ଶ ൅𝜀
+
+Histograms of Oriented
+Gradients (HOG)
+34
+Final descriptor 
+• Block overlap.  
+• For each block, normalised histogram of cells.
+• Final descriptor: concatenation of all block histograms 
+𝐻𝑂𝐺 ൌ ሺ𝑥ଵ, 𝑥ଶ… 𝑥ே)
+
+Histograms of Oriented
+Gradients (HOG)
+35
+Final descriptor
+• Each cell contributes to the description of several blocks.
+• In each block with a different normalization.
+
+Index
+1.Introduction
+2.Statistical descriptors
+3.Local Binary Patterns
+4.Histogram of Oriented Gradients
+5.SIFT
+6.Gabor Filters
+36
+
+37
+Keypoint detector
+Test image Detector: locates 
+single-scale or multi-
+scale points of interest.
+Descriptor: 
+Content invariant 
+representation
+(HOG, SIFT, etc.)
+
+38
+Harris’ detector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xx
+xx
+x
+y
+x
+xy
+x
+yx
+x
+x
+xxx
+xxx
+x
+N
+N
+N
+N
+)()()(
+)()()(
+)( 2
+2
+III
+III
+C
+
+
+
+
+2
+1
+λ0
+0λ)(xCExample
+General case RRC 
+
+
+ 
+2
+11
+λ0
+0λ)(x
+1λ 2λ
+1λ 2λhigh and       small: edge
+1λ 2λsmall and       high: edge
+1λ 2λ
+For each pixel is calculated:
+and         high: corner
+and         small: flat area
+
+39
+Harris’ detector
+• Algorithm designed for motion tracking.
+• Reduces calculation time co mpared to tracking all points. 
+• Invariant to translation and rotation.
+• Not invariant to scale changes.
+• Algorithm
+– Reduce image noise (Gaussian filter for example).
+– Image gradients calculation.
+– Construct the matrix C for each pixel.
+– Obtain and analyse determinant (          ) and trace (              )  
+of the matrix C.
+21 λλ 
+ 21 λλ 
+
+40
+Matching of features
+Original images
+Keypoints (corners) 
+detected with Harris’ 
+detector
+
+41
+Matching of features
+CORRELATION
+
+
+
+
+
+2211
+2211
+2
+2
+2
+1
+,
+21
+21
+)()(
+)()(
+),(
+xx
+xx
+xx
+xx
+xx
+xx
+xx
+NN
+NN
+ss
+ss
+R
+
+42
+Matching of features
+Need for a robust algorithm
+Search of matchings: Putative matchings
+
+43
+Robust estimation
+RANSAC (RANdom SAmple Consensus)
+Algorithm
+1. Take a sample: minimum number of points to 
+estimate the model.
+2. Look at the support of that model: number of points 
+below a distance t (consensusset).
+3. Repeat the process for N samples and select the 
+model with the highest support.
+4. Points with a distance less than t are 
+inliers.Reestimate the model with all inliers.
+
+44
+Example RANSAC
+Initial matches
+Robust estimation
+
+45
+RANSAC estimation: Panoramic image construction
+Robust estimation
+
+46
+Robust estimation
+RANSAC estimation: Panoramic image construction
+
+47
+Robust estimation
+RANSAC estimation: Panoramic image construction
+
+48
+SIFT Detector
+SIFT (Scale Invariant Feature Transform)
+• Invariant descriptor to position, scale, rotation, illumination, contrast and point of
+view.
+• Algorithm
+1. Detection of extremes in scale and space: Extract rotation and scale
+invariant points of interest (keypoints).
+2. Eliminate ‘weak’ keypoints.
+3. Orientation assignment: Assign one or more orientations to each point of
+interest.
+4. Keypoint descriptor: Use local gradients at the selected scale.
+D. Lowe, “Distinctive Image Features from Scale-Invariant  Keypoints”, International Journal of 
+Computer Vision, 60(2):91-110, 2004.
+
+49
+SIFT: Extrema detection 
+k0σ0
+k1σ0
+𝐷 𝑥, 𝑦, 𝜎ൌ 𝐿 𝑥, 𝑦, 𝑘𝜎 െ𝐿 𝑥, 𝑦, 𝜎
+𝐿 𝑥, 𝑦, 𝜎ൌ 𝐺 𝑥, 𝑦, 𝜎∗ 𝐼 𝑥, 𝑦,
+𝑘ௌ ൌ 2ௌ
+
+50
+SIFT: Weak keypoints elimination
+(a)Image 233x189
+(b) 832 extreme DoG
+(c) 729 left after low contrast 
+thresholding
+(d) 536 after Hessian ratio
+Weak keypoints
+• keypoints with low contrast (<0.03).
+• Bad edge
+
+51
+SIFT Descriptor
+Orientation assignment
+• Histogram of gradient directions for each keypoint.
+• Histogram weighted by the magnitude of the gradient and by a 
+Gaussian function with σ=1.5 s.
+22( ,) (( 1 ,) ( 1 ,) ) (( , 1 ) ( , 1 ) )
+( , ) tan 2(( ( , 1) ( , 1)) / ( ( 1, ) ( 1, )))
+mxy Lx y Lx y Lxy Lxy
+x ya L x y L x y L x yL x y
+
+   
+     
+𝐿 𝑥, 𝑦, 𝜎ൌ 𝐺 𝑥, 𝑦, 𝜎∗ 𝐼 𝑥, 𝑦,
+0 2 
+
+52
+SIFT descriptor
+Orientation assignment
+1. 16 x16 window around each keypoint.
+2. Divide into 4x4 cells.
+3. Calculate the histogram in each cell (partial vote).
+(8 bins)
+16 histograms x 8 orientations 
+= 128 features
+
+SIFT Detector
+
+SIFT: Matching of features
+Descriptor with mínimum distance
+Problems with ambiguities
+I1 I2
+
+
+
+N
+i
+ii ffffSSD
+1
+2
+2121 )(),(
+f1
+ f2
+
+SIFT: Matching of features
+Problems with ambiguities
+I1 I2
+f1
+ f2
+
+Index
+1.Introduction
+2.Statistical descriptors
+3.Local Binary Patterns
+4.Histogram of Oriented Gradients
+5.SIFT
+6.Gabor Filters
+56
+
+Gabor filters
+• Bank of linear filters.
+• Each filter analyzes whether there is any specific  frequency content in the image in specific 
+directions.
+• Image analysis with Gabor filters is thought by some to be similar to perception in the human 
+visual system.
+Source: Deep Learning: Foundations and 
+Concepts. Christopher M. Bishop and Hugh 
+Bishop
