@@ -69,7 +69,12 @@ export const FlashcardSchema = z.object({
   front: z.string(),
   back: z.string(),
   tag: z.string(),
-  deck: z.enum(['grammar', 'verbs', 'vocab', 'presentations']),
+  deck: z.enum(['grammar', 'verbs', 'vocab', 'presentations', 'culture']),
+  exampleFront: z.string().optional(),
+  exampleBack: z.string().optional(),
+  imageUrl: z.string().url().optional(),
+  audioFrontUrl: z.string().url().optional(),
+  audioBackUrl: z.string().url().optional(),
   srs: z
     .object({
       bucket: z.number(),

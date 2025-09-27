@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { liveQuery } from 'dexie';
 import { db } from '../db';
 import {
@@ -49,11 +49,13 @@ type LessonSort = 'recent' | 'accuracy';
 type SkillSort = 'accuracy' | 'volume';
 
 export const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
   const [progress, setProgress] = useState(0);
   const [snapshot, setSnapshot] = useState<AnalyticsSnapshot | null>(null);
   const [loading, setLoading] = useState(true);
   const [lessonSort, setLessonSort] = useState<LessonSort>('recent');
   const [skillSort, setSkillSort] = useState<SkillSort>('accuracy');
+  const canShare = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
 
   React.useEffect(() => {
     const subscription = liveQuery(async () => {
@@ -120,6 +122,22 @@ export const Dashboard: React.FC = () => {
     downloadCsv('lesson-mastery.csv', rows);
   };
 
+  const handleExportRecap = () => {
+    if (!snapshot) return;
+    const rows: string[][] = [
+      ['Metric', 'Value'],
+      ['Mastery progress', `${progress.toFixed(1)}%`],
+      ['Current streak', `${snapshot.streak.current} days`],
+      ['Best streak', `${snapshot.streak.best} days`],
+      ['Due flashcards', `${snapshot.srs.dueNow}`],
+      ['Weakest tag', snapshot.weakestTags[0]?.tag ?? 'N/A'],
+    ];
+    snapshot.weeklyPlan?.forEach((entry) => {
+      rows.push([`Week plan – ${entry.day}`, `${entry.title}: ${entry.description}`]);
+    });
+    downloadCsv('session-recap.csv', rows);
+  };
+
   const handleCopySummary = async () => {
     if (!snapshot) return;
     const summary = `Mastery: ${progress.toFixed(1)}%\nCurrent streak: ${snapshot.streak.current} days (best ${snapshot.streak.best})\nWeakest tag: ${snapshot.weakestTags[0]?.tag ?? 'N/A'}\nDue flashcards: ${snapshot.srs.dueNow}`;
@@ -131,6 +149,29 @@ export const Dashboard: React.FC = () => {
       // eslint-disable-next-line no-console
       console.warn('Clipboard unavailable', error);
     }
+  };
+
+  const handleShareRecap = async () => {
+    if (!snapshot || !canShare) {
+      await handleCopySummary();
+      return;
+    }
+    const summary = `Study Spanish Coach recap\nMastery: ${progress.toFixed(1)}%\nStreak: ${snapshot.streak.current} days\nWeakest tag: ${
+      snapshot.weakestTags[0]?.tag ?? 'N/A'
+    }\nDue flashcards: ${snapshot.srs.dueNow}`;
+    try {
+      await navigator.share({ title: 'Study recap', text: summary });
+    } catch (error) {
+      console.warn('Share failed', error);
+    }
+  };
+
+  const handleFocusTag = (tag: string) => {
+    navigate({ pathname: '/', search: `?tag=${encodeURIComponent(tag)}` });
+  };
+
+  const handleOpenDeck = (deck?: string) => {
+    navigate({ pathname: '/flashcards', search: deck ? `?deck=${encodeURIComponent(deck)}` : '' });
   };
 
   if (loading) {
@@ -173,8 +214,20 @@ export const Dashboard: React.FC = () => {
           <button type="button" className="ui-button ui-button--secondary" onClick={handleExportLessons}>
             Export lesson CSV
           </button>
+          <button type="button" className="ui-button ui-button--secondary" onClick={handleExportRecap}>
+            Download session recap
+          </button>
           <button type="button" className="ui-button ui-button--ghost" onClick={handleCopySummary}>
             Copy summary
+          </button>
+          <button
+            type="button"
+            className="ui-button ui-button--ghost"
+            onClick={handleShareRecap}
+            disabled={!canShare}
+            title={canShare ? 'Share this recap via installed apps' : 'Share API unavailable in this browser'}
+          >
+            Share recap
           </button>
         </div>
       </section>
@@ -228,10 +281,10 @@ export const Dashboard: React.FC = () => {
           <table className="ui-table" aria-label="Lesson mastery">
             <thead>
               <tr>
-                <th>Lesson</th>
-                <th>Mastered</th>
-                <th>Accuracy</th>
-                <th>Last studied</th>
+                <th title="Lesson title with quick access">Lesson</th>
+                <th title="Mastered exercises over total">Mastered</th>
+                <th title="Average accuracy across attempts">Accuracy</th>
+                <th title="Most recent activity">Last studied</th>
               </tr>
             </thead>
             <tbody>
@@ -282,15 +335,24 @@ export const Dashboard: React.FC = () => {
           <table className="ui-table" aria-label="Skill accuracy">
             <thead>
               <tr>
-                <th>Skill</th>
-                <th>Accuracy</th>
-                <th>Attempts</th>
+                <th title="Skill inferred from exercise metadata">Skill</th>
+                <th title="Average correctness for the skill">Accuracy</th>
+                <th title="Number of graded attempts">Attempts</th>
               </tr>
             </thead>
             <tbody>
               {sortedSkills.map((skill) => (
                 <tr key={skill.skill}>
-                  <td>{skill.skill}</td>
+                  <td>
+                    <button
+                      type="button"
+                      className={styles.metricLink}
+                      onClick={() => navigate({ pathname: '/', search: `?tag=${encodeURIComponent(skill.skill)}` })}
+                      title="Open planner filtered to this skill"
+                    >
+                      {skill.skill}
+                    </button>
+                  </td>
                   <td>{skill.accuracy.toFixed(1)}%</td>
                   <td>{skill.total}</td>
                 </tr>
@@ -309,15 +371,24 @@ export const Dashboard: React.FC = () => {
             <table className="ui-table" aria-label="Tags with lowest accuracy">
               <thead>
                 <tr>
-                  <th>Tag</th>
-                  <th>Accuracy</th>
-                  <th>Attempts</th>
+                  <th title="Tag from lesson metadata">Tag</th>
+                  <th title="Average accuracy for this tag">Accuracy</th>
+                  <th title="Attempts associated with this tag">Attempts</th>
                 </tr>
               </thead>
               <tbody>
                 {snapshot.weakestTags.map((tag) => (
                   <tr key={tag.tag}>
-                    <td>{tag.tag}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className={styles.metricLink}
+                        onClick={() => handleFocusTag(tag.tag)}
+                        title="Open planner with this tag filtered"
+                      >
+                        {tag.tag}
+                      </button>
+                    </td>
                     <td>{tag.accuracy.toFixed(1)}%</td>
                     <td>{tag.total}</td>
                   </tr>
@@ -331,15 +402,26 @@ export const Dashboard: React.FC = () => {
       <section className="ui-card" aria-label="SRS summary">
         <h3 className="ui-section__title">Spaced repetition load</h3>
         <div className={styles.srsGrid}>
-          <div className={styles.srsTile}>
+          <button
+            type="button"
+            className={styles.srsTile}
+            onClick={() => handleOpenDeck(snapshot.srs.deckBreakdown[0]?.deck)}
+            title="Open the flashcard trainer"
+          >
             <span className={styles.srsLabel}>Due now</span>
             <span className={styles.srsValue}>{snapshot.srs.dueNow}</span>
-          </div>
+          </button>
           {snapshot.srs.upcoming.map((entry) => (
-            <div key={entry.label} className={styles.srsTile}>
+            <button
+              key={entry.label}
+              type="button"
+              className={styles.srsTile}
+              onClick={() => handleOpenDeck()}
+              title="Plan flashcard time"
+            >
               <span className={styles.srsLabel}>{entry.label}</span>
               <span className={styles.srsValue}>{entry.count}</span>
-            </div>
+            </button>
           ))}
         </div>
         <div className={styles.bucketList}>
@@ -350,6 +432,31 @@ export const Dashboard: React.FC = () => {
           ))}
         </div>
       </section>
+
+      {snapshot.weeklyPlan.length > 0 && (
+        <section className="ui-card" aria-label="Adaptive weekly plan">
+          <h3 className="ui-section__title">Adaptive weekly plan</h3>
+          <ol className={styles.weekPlan}>
+            {snapshot.weeklyPlan.map((item) => (
+              <li key={item.day} className={styles.weekPlanItem}>
+                <div className={styles.weekPlanRow}>
+                  <span className={styles.weekPlanDay}>{item.day}</span>
+                  {item.to ? (
+                    <Link to={item.to} className={styles.metricLink} title={item.description}>
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <span className={styles.weekPlanTitle} title={item.description}>
+                      {item.title}
+                    </span>
+                  )}
+                </div>
+                <p className={styles.weekPlanDescription}>{item.description}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       <section className="ui-card" aria-label="Recommended exercises">
         <h3 className="ui-section__title">Study plan (next five exercises)</h3>

@@ -90,7 +90,7 @@
 .timelineCards {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .timelineCard {
@@ -102,6 +102,66 @@
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: rgba(255, 255, 255, 0.16);
   color: #ecfdf5;
+}
+
+.timelineForm {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.28);
+}
+
+.timelineFormLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(236, 253, 245, 0.75);
+}
+
+.timelineFormNote {
+  width: 100%;
+  resize: vertical;
+  min-height: 70px;
+  border-radius: var(--ui-radius-md);
+  border: 1px solid rgba(236, 253, 245, 0.35);
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+.timelineFormRow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: end;
+}
+
+.timelineFormInput {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--ui-radius-md);
+  border: 1px solid rgba(236, 253, 245, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+.timelineFormNote:focus-visible,
+.timelineFormInput:focus-visible {
+  outline: 2px solid #fef3c7;
+  outline-offset: 1px;
+}
+
+.timelineFormActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.timelinePlanSummary {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(236, 253, 245, 0.85);
 }
 
 .timelineCardLabel {
@@ -459,6 +519,13 @@
   font-weight: 600;
 }
 
+.loadHint {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--ui-text-secondary);
+  text-align: center;
+}
+
 .emptyState {
   margin: 0;
   color: var(--ui-text-secondary);
@@ -560,6 +627,14 @@
 
   .timelineStats {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .timelineCards {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineFormRow {
+    grid-template-columns: 1fr;
   }
 
   .searchForm {

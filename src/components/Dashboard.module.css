@@ -156,6 +156,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  cursor: pointer;
+  text-align: left;
 }
 
 .srsLabel {
@@ -186,4 +188,58 @@
   color: #0e7490;
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+.metricLink {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--ui-accent-strong);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.metricLink:hover,
+.metricLink:focus-visible {
+  text-decoration: none;
+}
+
+.weekPlan {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.weekPlanItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.weekPlanRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.weekPlanDay {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--ui-text-secondary);
+}
+
+.weekPlanTitle {
+  font-weight: 600;
+}
+
+.weekPlanDescription {
+  margin: 0;
+  color: var(--ui-text-secondary);
+  font-size: 0.9rem;
 }

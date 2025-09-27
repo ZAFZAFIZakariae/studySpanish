@@ -1,5 +1,6 @@
 import Dexie, { Table } from 'dexie';
 import { Lesson, Exercise, Grade, Flashcard } from './lib/schemas';
+import { SpeakingCheckpoint } from './types/speaking';
 
 class AppDB extends Dexie {
   lessons!: Table<Lesson, string>;
@@ -7,6 +8,7 @@ class AppDB extends Dexie {
   grades!: Table<Grade, string>;
   flashcards!: Table<Flashcard, string>;
   settings!: Table<{ key: string; value: any }, string>;
+  speaking!: Table<SpeakingCheckpoint, string>;
 
   constructor() {
     super('spanishAppDB');
@@ -15,7 +17,7 @@ class AppDB extends Dexie {
       exercises: 'id,lessonId,type',
       grades: 'id,exerciseId,isCorrect,score',
       flashcards: 'id,tag,deck',
-      settings: 'key'
+      settings: 'key',
     });
 
     this.version(2).stores({
@@ -23,7 +25,16 @@ class AppDB extends Dexie {
       exercises: 'id,lessonId,type',
       grades: 'id,exerciseId,isCorrect,score',
       flashcards: 'id,tag,deck',
-      settings: 'key'
+      settings: 'key',
+    });
+
+    this.version(3).stores({
+      lessons: 'id,slug,level,tags',
+      exercises: 'id,lessonId,type',
+      grades: 'id,exerciseId,isCorrect,score',
+      flashcards: 'id,tag,deck',
+      settings: 'key',
+      speaking: 'id,exerciseId',
     });
   }
 }
