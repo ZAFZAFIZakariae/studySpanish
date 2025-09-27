@@ -188,6 +188,7 @@ export const subjectCatalog: SubjectSummary[] = [
             language: 'en',
             summary: {
               original: 'Inject latency and failure into the payment gateway to validate fallbacks.',
+              english: 'Stress the payment gateway with latency and failure injections to verify fallbacks.',
             },
             tags: ['resilience', 'testing'],
             estimatedMinutes: withMinutes(120),
@@ -414,6 +415,7 @@ export const subjectCatalog: SubjectSummary[] = [
             language: 'en',
             summary: {
               original: 'Deliver stakeholder analysis slides in English with annotated Spanish glossary.',
+              english: 'Deliver stakeholder analysis slides in English and include a supporting Spanish glossary.',
             },
             tags: ['presentation', 'bilingual'],
             estimatedMinutes: withMinutes(100),
@@ -832,6 +834,7 @@ export const subjectCatalog: SubjectSummary[] = [
             language: 'en',
             summary: {
               original: 'Prepare a bilingual poster discussing bias metrics on Spanish benchmarks.',
+              english: 'Create a bilingual poster that explains bias metrics on Spanish-language benchmarks.',
             },
             tags: ['research', 'presentation'],
             estimatedMinutes: withMinutes(200),
@@ -931,6 +934,7 @@ export const subjectCatalog: SubjectSummary[] = [
             language: 'en',
             summary: {
               original: 'Review constrained Gaussian Process inference and sparse approximations.',
+              english: 'Review constrained Gaussian Process inference techniques and sparse approximation methods.',
             },
             tags: ['research', 'gaussian processes'],
             estimatedMinutes: withMinutes(110),
@@ -948,6 +952,7 @@ export const subjectCatalog: SubjectSummary[] = [
             language: 'en',
             summary: {
               original: 'Panel discussion on catastrophic forgetting mitigation strategies.',
+              english: 'Host a panel conversation that compares strategies to reduce catastrophic forgetting.',
             },
             tags: ['discussion', 'continual learning'],
             estimatedMinutes: withMinutes(75),
@@ -1047,6 +1052,7 @@ export const subjectCatalog: SubjectSummary[] = [
             language: 'en',
             summary: {
               original: 'Draft a bilingual playbook for deploying ML services ethically.',
+              english: 'Draft a bilingual playbook that guides ethical deployment of machine learning services.',
             },
             tags: ['ethics', 'project'],
             estimatedMinutes: withMinutes(210),

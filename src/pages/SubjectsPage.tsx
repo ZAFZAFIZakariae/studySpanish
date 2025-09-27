@@ -1,27 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { subjectCatalog, computeCatalogInsights } from '../data/subjectCatalog';
-import { CourseItem, SubjectMetrics, SubjectSummary } from '../types/subject';
+import { CourseItem } from '../types/subject';
 import { describeDueDate } from '../lib/plannerUtils';
+import { subjectResourceLibrary, ResourceLink } from '../data/subjectResources';
 import styles from './SubjectsPage.module.css';
-
-type LanguageFilter = 'all' | 'spanish' | 'english-ready' | 'needs-translation';
-type UrgencyFilter = 'all' | 'due-soon' | 'overdue';
-
-type SubjectMetricsMap = Record<string, SubjectMetrics>;
-
-const languageFilterCopy: Record<LanguageFilter, string> = {
-  all: 'All languages',
-  spanish: 'Spanish-first',
-  'english-ready': 'English-ready',
-  'needs-translation': 'Needs English help',
-};
-
-const urgencyFilterCopy: Record<UrgencyFilter, string> = {
-  all: 'All timelines',
-  'due-soon': 'Due soon',
-  overdue: 'Overdue',
-};
 
 const itemKindIcon: Record<CourseItem['kind'], string> = {
   lesson: '📘',
@@ -40,19 +23,21 @@ const statusCopy: Record<NonNullable<CourseItem['status']>, string> = {
   scheduled: 'Scheduled',
 };
 
-const languageBadge: Record<CourseItem['language'], string> = {
-  es: 'Spanish source',
-  en: 'English source',
+const translationStatusLabel: Record<string, string> = {
+  complete: 'English ready',
+  partial: 'English in progress',
+  machine: 'Machine translated',
+  planned: 'Translation planned',
 };
 
-const cheatCoverageLabel: Record<'full-course' | 'unit' | 'labs', string> = {
-  'full-course': 'Full course coverage',
-  unit: 'Unit bundle',
-  labs: 'Lab workflows',
+const resourceTypeIcon: Record<NonNullable<ResourceLink['type']>, string> = {
+  pdf: '📄',
+  slides: '🖥️',
+  worksheet: '📝',
 };
 
 const formatMinutes = (minutes?: number) => {
-  if (!minutes) return 'Flexible';
+  if (!minutes) return 'Flexible time';
   if (minutes < 60) {
     return `~${minutes} min`;
   }
@@ -64,64 +49,15 @@ const formatMinutes = (minutes?: number) => {
   return `${hours} hr${hours === 1 ? '' : 's'} ${remaining} min`;
 };
 
-const translationStatusLabel: Record<string, string> = {
-  complete: 'English ready',
-  partial: 'English in progress',
-  machine: 'Machine translated',
-  planned: 'Translation planned',
-};
-
-const buildMetricsMap = (catalogMetrics: SubjectMetrics[]): SubjectMetricsMap =>
-  catalogMetrics.reduce<SubjectMetricsMap>((acc, entry) => {
-    acc[entry.subject.id] = entry;
-    return acc;
-  }, {});
-
-const filterMetrics = (
-  metrics: SubjectMetrics[],
-  language: LanguageFilter,
-  urgency: UrgencyFilter
-): SubjectMetrics[] => {
-  return metrics.filter((entry) => {
-    if (language === 'spanish' && entry.subject.languageProfile.primary !== 'es') {
-      return false;
-    }
-    if (language === 'english-ready' && entry.translationCoverage < 0.75) {
-      return false;
-    }
-    if (language === 'needs-translation' && entry.spanishOnly === 0) {
-      return false;
-    }
-
-    if (urgency === 'due-soon' && entry.upcoming.length === 0) {
-      return false;
-    }
-    if (urgency === 'overdue' && entry.overdue.length === 0) {
-      return false;
-    }
-
-    return true;
-  });
-};
-
-const buildTranslationCoverageLabel = (value: number) => {
-  const percent = Math.round(value * 100);
-  if (percent >= 90) return 'Fully bilingual';
-  if (percent >= 70) return 'Almost ready in English';
-  if (percent >= 40) return 'Half bilingual';
-  if (percent > 0) return 'English scaffolding started';
-  return 'Spanish-only right now';
-};
-
-const renderTagList = (tags: string[]) =>
-  tags.map((tag) => (
-    <span key={tag} className={styles.tag}>
-      {tag}
-    </span>
-  ));
+const formatLanguage = (language: CourseItem['language']) => (language === 'es' ? 'Spanish' : 'English');
 
 const SubjectsPage: React.FC = () => {
   const { metrics: catalogMetrics, totals } = useMemo(() => computeCatalogInsights(subjectCatalog), []);
+  const metricsMap = useMemo(
+    () => new Map(catalogMetrics.map((entry) => [entry.subject.id, entry])),
+    [catalogMetrics]
+  );
+  const [searchParams, setSearchParams] = useSearchParams();
   const slugToId = useMemo(
     () =>
       subjectCatalog.reduce<Record<string, string>>((acc, subject) => {
@@ -130,7 +66,7 @@ const SubjectsPage: React.FC = () => {
       }, {}),
     []
   );
-  const [searchParams, setSearchParams] = useSearchParams();
+
   const initialSubjectId = useMemo(() => {
     const focusSlug = searchParams.get('focus');
     if (focusSlug && slugToId[focusSlug]) {
@@ -138,40 +74,21 @@ const SubjectsPage: React.FC = () => {
     }
     return catalogMetrics[0]?.subject.id ?? '';
   }, [catalogMetrics, searchParams, slugToId]);
-  const metricsMap = useMemo(() => buildMetricsMap(catalogMetrics), [catalogMetrics]);
-  const [languageFilter, setLanguageFilter] = useState<LanguageFilter>('all');
-  const [urgencyFilter, setUrgencyFilter] = useState<UrgencyFilter>('all');
-  const [activeSubjectId, setActiveSubjectId] = useState<string>(initialSubjectId);
-  const [translationExpanded, setTranslationExpanded] = useState<Record<string, boolean>>({});
 
-  const filteredMetrics = useMemo(
-    () => filterMetrics(catalogMetrics, languageFilter, urgencyFilter),
-    [catalogMetrics, languageFilter, urgencyFilter]
-  );
+  const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
+  const [activeCourseId, setActiveCourseId] = useState<string | null>(null);
+  const [activeItemId, setActiveItemId] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!filteredMetrics.length) {
-      setActiveSubjectId('');
-      return;
-    }
-
-    const stillVisible = filteredMetrics.some((entry) => entry.subject.id === activeSubjectId);
-    if (!stillVisible) {
-      setActiveSubjectId(filteredMetrics[0].subject.id);
-    }
-  }, [filteredMetrics, activeSubjectId]);
-
-  const activeMetrics = activeSubjectId ? metricsMap[activeSubjectId] : undefined;
-  const activeSubject = activeMetrics?.subject;
-
-  const handleSelectSubject = (subject: SubjectSummary) => {
-    setActiveSubjectId(subject.id);
-  };
+    setActiveSubjectId(initialSubjectId);
+  }, [initialSubjectId]);
 
   useEffect(() => {
-    const current = searchParams.get('focus');
+    const activeSubject = subjectCatalog.find((subject) => subject.id === activeSubjectId);
+    const currentSlug = searchParams.get('focus');
+
     if (!activeSubject) {
-      if (current) {
+      if (currentSlug) {
         const next = new URLSearchParams(searchParams);
         next.delete('focus');
         setSearchParams(next, { replace: true });
@@ -179,353 +96,291 @@ const SubjectsPage: React.FC = () => {
       return;
     }
 
-    if (current === activeSubject.slug) return;
+    if (currentSlug === activeSubject.slug) {
+      return;
+    }
+
     const next = new URLSearchParams(searchParams);
     next.set('focus', activeSubject.slug);
     setSearchParams(next, { replace: true });
-  }, [activeSubject, searchParams, setSearchParams]);
+  }, [activeSubjectId, searchParams, setSearchParams]);
 
-  const toggleTranslation = (itemId: string) => {
-    setTranslationExpanded((prev) => ({
-      ...prev,
-      [itemId]: !prev[itemId],
-    }));
-  };
+  const activeSubject = useMemo(
+    () => subjectCatalog.find((subject) => subject.id === activeSubjectId),
+    [activeSubjectId]
+  );
 
-  const subjectCountCopy = filteredMetrics.length === catalogMetrics.length ? 'All subjects' : `${filteredMetrics.length} subject${filteredMetrics.length === 1 ? '' : 's'}`;
+  const resources = activeSubject ? subjectResourceLibrary[activeSubject.id] ?? [] : [];
+  const activeCourse = useMemo(
+    () => (activeSubject ? activeSubject.courses.find((course) => course.id === activeCourseId) ?? null : null),
+    [activeCourseId, activeSubject]
+  );
+  const activeItem = useMemo(
+    () => (activeCourse ? activeCourse.items.find((item) => item.id === activeItemId) ?? null : null),
+    [activeCourse, activeItemId]
+  );
+
+  useEffect(() => {
+    setActiveCourseId(null);
+    setActiveItemId(null);
+  }, [activeSubjectId]);
+
+  useEffect(() => {
+    setActiveItemId(null);
+  }, [activeCourseId]);
 
   return (
     <div className={styles.page} aria-labelledby="subjects-heading">
       <header className={styles.header}>
-        <div>
-          <h1 id="subjects-heading" className={styles.title}>
-            Subjects hub
-          </h1>
-          <p className={styles.subtitle}>
-            Plan every subject in English-first detail while keeping Spanish materials intact. Filter by language support, find due labs, and open bilingual guides in one spot.
-          </p>
-        </div>
-        <div className={styles.headerStat}>
-          <span className={styles.headerStatLabel}>Bilingual coverage</span>
-          <span className={styles.headerStatValue}>{Math.round(totals.translationCoverage * 100)}%</span>
-        </div>
+        <h1 id="subjects-heading" className={styles.title}>
+          Subjects
+        </h1>
+        <p className={styles.intro}>
+          Navigate subjects like a study tree: pick a course, choose a lesson or lab, then dive into summaries, cheat sheets, and original PDFs.
+        </p>
+        <p className={styles.meta}>
+          {totals.subjects} subjects · {totals.items} lessons and resources
+        </p>
       </header>
 
-      <section className={styles.summaryGrid} aria-label="Workspace summary">
-        <article className={styles.summaryCard}>
-          <h2>{totals.subjects} subjects</h2>
-          <p>
-            {totals.items} tracked resources · {totals.assignments} assignments · {totals.labs} labs.
-          </p>
-        </article>
-        <article className={styles.summaryCard}>
-          <h2>{totals.englishReady} English-ready</h2>
-          <p>{totals.spanishOnly} items still need English scaffolding.</p>
-        </article>
-        <article className={styles.summaryCard}>
-          <h2>{totals.upcoming} upcoming</h2>
-          <p>{totals.overdue} overdue items waiting for wrap-up.</p>
-        </article>
-      </section>
-
-      <section className={styles.filters} aria-label="Subject filters">
-        <div className={styles.filterGroup} role="group" aria-label="Language filter">
-          {Object.entries(languageFilterCopy).map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              className={`${styles.filterButton} ${languageFilter === value ? styles.filterButtonActive : ''}`}
-              onClick={() => setLanguageFilter(value as LanguageFilter)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <div className={styles.filterGroup} role="group" aria-label="Timeline filter">
-          {Object.entries(urgencyFilterCopy).map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              className={`${styles.filterButton} ${urgencyFilter === value ? styles.filterButtonActive : ''}`}
-              onClick={() => setUrgencyFilter(value as UrgencyFilter)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className={styles.filterSummary}>{subjectCountCopy}</p>
-      </section>
-
-      <section className={styles.layout}>
-        <nav className={styles.subjectList} aria-label="Subjects list">
-          {filteredMetrics.length === 0 ? (
-            <p className={styles.emptyState}>
-              No subjects match the selected filters yet. Adjust filters to continue planning.
-            </p>
-          ) : (
-            filteredMetrics.map((entry) => {
-              const coverage = Math.round(entry.translationCoverage * 100);
+      <div className={styles.workspace}>
+        <nav className={styles.tree} aria-label="Study subjects">
+          <ul className={styles.treeList}>
+            {subjectCatalog.map((subject) => {
+              const isActiveSubject = subject.id === activeSubjectId;
+              const subjectCoverage = metricsMap.get(subject.id);
               return (
-                <button
-                  key={entry.subject.id}
-                  type="button"
-                  className={`${styles.subjectListItem} ${activeSubjectId === entry.subject.id ? styles.subjectListItemActive : ''}`}
-                  onClick={() => handleSelectSubject(entry.subject)}
-                >
-                  <span className={styles.subjectListTitle}>{entry.subject.name}</span>
-                  <span className={styles.subjectListSubtitle}>{entry.subject.tagline}</span>
-                  <div className={styles.subjectListMeta}>
-                    <span className={styles.chip}>{coverage}% EN ready</span>
-                    {entry.upcoming.length > 0 && <span className={`${styles.chip} ${styles.chipUrgent}`}>{entry.upcoming.length} due soon</span>}
-                    {entry.overdue.length > 0 && <span className={`${styles.chip} ${styles.chipOverdue}`}>{entry.overdue.length} overdue</span>}
-                  </div>
-                </button>
-              );
-            })
-          )}
-        </nav>
-
-        <section className={styles.subjectDetail} aria-live="polite">
-          {!activeSubject || !activeMetrics ? (
-            <div className={styles.emptyState}>
-              Select a subject to inspect bilingual resources, labs, and translation notes.
-            </div>
-          ) : (
-            <article>
-              <header className={styles.detailHeader}>
-                <div>
-                  <h2 className={styles.detailTitle}>{activeSubject.name}</h2>
-                  <p className={styles.detailTagline}>{activeSubject.tagline}</p>
-                </div>
-                <div className={styles.detailBadge} style={{ borderColor: activeSubject.color }}>
-                  {buildTranslationCoverageLabel(activeMetrics.translationCoverage)}
-                </div>
-              </header>
-
-              <div className={styles.detailMeta}>
-                <span className={styles.metaPill}>
-                  Primary language: <strong>{activeSubject.languageProfile.primary === 'es' ? 'Spanish' : 'English'}</strong>
-                </span>
-                <span className={styles.metaPill}>
-                  English support: <strong>{activeSubject.languageProfile.supportLevel}</strong>
-                </span>
-                <span className={styles.metaPill}>
-                  Credits: <strong>{activeSubject.credits}</strong>
-                </span>
-              </div>
-
-              <p className={styles.detailDescription}>{activeSubject.description.en}</p>
-              {activeSubject.description.es && (
-                <p className={styles.detailDescriptionSecondary}>{activeSubject.description.es}</p>
-              )}
-
-              <div className={styles.skillRow}>
-                {renderTagList(activeSubject.skills)}
-                {renderTagList(activeSubject.focusAreas)}
-              </div>
-
-              <div className={styles.translationBar}>
-                <div className={styles.translationProgress}>
-                  <div
-                    className={styles.translationProgressFill}
-                    style={{ width: `${Math.min(100, Math.round(activeMetrics.translationCoverage * 100))}%` }}
-                    aria-hidden="true"
-                  />
-                </div>
-                <p className={styles.translationSummary}>
-                  {activeMetrics.englishReady} items ready in English · {activeMetrics.spanishOnly} still Spanish-only.
-                </p>
-              </div>
-
-              {activeSubject.languageProfile.notes && (
-                <p className={styles.languageNotes}>{activeSubject.languageProfile.notes}</p>
-              )}
-
-              <div className={styles.courses}>
-                {activeSubject.courses.map((course) => (
-                  <section key={course.id} className={styles.courseCard} aria-labelledby={`course-${course.id}`}>
-                    <header className={styles.courseHeader}>
-                      <div>
-                        <h3 id={`course-${course.id}`} className={styles.courseTitle}>
-                          {course.title}
-                        </h3>
-                        <p className={styles.courseSubtitle}>{course.description}</p>
-                      </div>
-                      <div className={styles.courseMeta}>
-                        <span className={styles.metaChip}>{course.modality}</span>
-                        <span className={styles.metaChip}>{course.schedule}</span>
-                        <span className={styles.metaChip}>{course.languageMix.join(' · ')}</span>
-                      </div>
-                    </header>
-
-                    {course.focusAreas.length > 0 && (
-                      <div className={styles.focusAreaRow}>{renderTagList(course.focusAreas)}</div>
+                <li key={subject.id}>
+                  <button
+                    type="button"
+                    className={`${styles.treeSubject} ${isActiveSubject ? styles.treeSubjectActive : ''}`}
+                    onClick={() => setActiveSubjectId(subject.id)}
+                  >
+                    <span>
+                      <strong>{subject.name}</strong>
+                      <span className={styles.treeMeta}>{subject.tagline}</span>
+                    </span>
+                    {subjectCoverage && (
+                      <span className={styles.treeBadge}>{`${Math.round(subjectCoverage.translationCoverage * 100)}% EN`}</span>
                     )}
-
-                    <ul className={styles.itemList}>
-                      {course.items.map((item) => {
-                        const dueDescriptor = describeDueDate(item.dueDate);
-                        const expanded = translationExpanded[item.id] ?? false;
-                        const hasTranslation = Boolean(item.translation);
+                  </button>
+                  {isActiveSubject && (
+                    <ul className={styles.treeCourseList}>
+                      {subject.courses.map((course) => {
+                        const isActiveCourse = activeCourseId === course.id;
                         return (
-                          <li key={item.id} className={`${styles.item} ${styles[`tone-${dueDescriptor.tone}`]}`}>
-                            <div className={styles.itemHeader}>
-                              <span className={styles.itemIcon} aria-hidden="true">
-                                {itemKindIcon[item.kind]}
-                              </span>
-                              <div className={styles.itemBody}>
-                                <div className={styles.itemTitleRow}>
-                                  <h4 className={styles.itemTitle}>{item.title}</h4>
-                                  {item.status && (
-                                    <span className={`${styles.statusBadge} ${styles[`status-${item.status}`]}`}>
-                                      {statusCopy[item.status]}
-                                    </span>
-                                  )}
-                                </div>
-                                <p className={styles.itemSummary}>{item.summary.original}</p>
-                                {expanded && hasTranslation && (
-                                  <div className={styles.translationNotes}>
-                                    <p>
-                                      <strong>English guidance:</strong> {item.translation?.summary}
-                                    </p>
-                                    {item.translation?.glossary && item.translation.glossary.length > 0 && (
-                                      <div className={styles.glossaryRow}>
-                                        <strong>Glossary:</strong>
-                                        <div className={styles.glossaryChips}>
-                                          {item.translation.glossary.map((term) => (
-                                            <span key={term} className={styles.chipSoft}>
-                                              {term}
-                                            </span>
-                                          ))}
-                                        </div>
-                                      </div>
-                                    )}
-                                    {item.translation?.notes && <p className={styles.translationNote}>{item.translation.notes}</p>}
-                                  </div>
-                                )}
-                                {item.tags.length > 0 && <div className={styles.tagRow}>{renderTagList(item.tags)}</div>}
+                          <li key={course.id}>
+                            <button
+                              type="button"
+                              className={`${styles.treeCourse} ${isActiveCourse ? styles.treeCourseActive : ''}`}
+                              onClick={() =>
+                                setActiveCourseId((current) => (current === course.id ? null : course.id))
+                              }
+                            >
+                              <div className={styles.treeCourseHead}>
+                                <strong>{course.title}</strong>
+                                <span className={styles.treeMeta}>{course.modality.toUpperCase()}</span>
                               </div>
-                            </div>
-
-                            <div className={styles.itemMeta}>
-                              <span className={`${styles.metaBadge} ${styles[`tone-${dueDescriptor.tone}`]}`}>
-                                {dueDescriptor.label}
-                              </span>
-                              <span className={styles.metaChip}>{languageBadge[item.language]}</span>
-                              <span className={styles.metaChip}>{formatMinutes(item.estimatedMinutes)}</span>
-                              {hasTranslation ? (
-                                <button
-                                  type="button"
-                                  className={`${styles.metaButton} ${expanded ? styles.metaButtonActive : ''}`}
-                                  onClick={() => toggleTranslation(item.id)}
-                                >
-                                  {expanded ? 'Hide English notes' : 'Show English notes'}
-                                </button>
-                              ) : (
-                                <span className={`${styles.metaBadge} ${styles.badgeSoft}`}>
-                                  Needs English outline
-                                </span>
-                              )}
-                              {item.translation && (
-                                <span className={`${styles.metaChip} ${styles.metaTranslationStatus}`}>
-                                  {translationStatusLabel[item.translation.status] ?? 'Translation'}
-                                </span>
-                              )}
-                            </div>
-
-                            {item.lab && (
-                              <details className={styles.labDetails}>
-                                <summary>Lab checklist</summary>
-                                <p className={styles.labEnvironment}>
-                                  <strong>Environment:</strong> {item.lab.environment}
-                                </p>
-                                <ul>
-                                  {item.lab.checklists.map((step, index) => (
-                                    <li key={`${item.id}-step-${index}`}>{step}</li>
-                                  ))}
-                                </ul>
-                                {item.lab.deliverable && (
-                                  <p className={styles.labDeliverable}>
-                                    <strong>Deliverable:</strong> {item.lab.deliverable}
-                                  </p>
-                                )}
-                              </details>
+                              <span className={styles.treeMeta}>{course.description}</span>
+                            </button>
+                            {isActiveCourse && (
+                              <ul className={styles.treeItemList}>
+                                {course.items.map((item) => {
+                                  const isActiveItem = activeItemId === item.id;
+                                  return (
+                                    <li key={item.id}>
+                                      <button
+                                        type="button"
+                                        className={`${styles.treeItem} ${isActiveItem ? styles.treeItemActive : ''}`}
+                                        onClick={() => {
+                                          setActiveCourseId(course.id);
+                                          setActiveItemId(item.id);
+                                        }}
+                                      >
+                                        <span className={styles.treeItemIcon} aria-hidden="true">
+                                          {itemKindIcon[item.kind]}
+                                        </span>
+                                        <span className={styles.treeItemLabel}>{item.title}</span>
+                                        <span className={styles.treeItemKind}>{item.kind}</span>
+                                      </button>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
                             )}
                           </li>
                         );
                       })}
                     </ul>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
 
-                    {course.cheatPapers && course.cheatPapers.length > 0 && (
-                      <div className={styles.cheatSection} aria-label="Cheat papers">
-                        <h4 className={styles.cheatHeading}>Cheat papers</h4>
-                        <div className={styles.cheatGrid}>
-                          {course.cheatPapers.map((paper) => (
-                            <article key={paper.id} className={styles.cheatCard}>
-                              <header className={styles.cheatCardHeader}>
-                                <div>
-                                  <h5 className={styles.cheatTitle}>{paper.title}</h5>
-                                  <p className={styles.cheatDescription}>{paper.description}</p>
-                                </div>
-                                <div className={styles.cheatBadges}>
-                                  <span className={styles.metaChip}>{cheatCoverageLabel[paper.coverage]}</span>
-                                  <span className={styles.metaChip}>{languageBadge[paper.language]}</span>
-                                </div>
-                              </header>
-                              <div className={styles.cheatSummaries}>
-                                <p className={styles.cheatSummary}>{paper.englishSummary}</p>
-                                {paper.spanishSummary && (
-                                  <p className={styles.cheatSummarySecondary}>{paper.spanishSummary}</p>
-                                )}
-                              </div>
-                              <div className={styles.cheatOutline}>
-                                {paper.sections.map((section) => (
-                                  <details key={`${paper.id}-${section.title}`} className={styles.cheatSectionDetails}>
-                                    <summary>{section.title}</summary>
-                                    <ul>
-                                      {section.bullets.map((bullet, index) => (
-                                        <li key={`${paper.id}-${section.title}-${index}`}>{bullet}</li>
-                                      ))}
-                                    </ul>
-                                  </details>
-                                ))}
-                              </div>
-                              {paper.studyTips.length > 0 && (
-                                <div className={styles.cheatTips}>
-                                  <p className={styles.cheatTipsHeading}>Study tips</p>
-                                  <ul>
-                                    {paper.studyTips.map((tip, index) => (
-                                      <li key={`${paper.id}-tip-${index}`}>{tip}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-                              {paper.downloadHint && (
-                                <p className={styles.cheatDownload}>{paper.downloadHint}</p>
-                              )}
-                            </article>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </section>
-                ))}
-              </div>
+        <section className={styles.detail} aria-live="polite">
+          {!activeSubject ? (
+            <p className={styles.emptyState}>Select a subject to explore its lessons and labs.</p>
+          ) : !activeCourse ? (
+            <div className={styles.detailPlaceholder}>
+              <h2>{activeSubject.name}</h2>
+              <p>{activeSubject.description.en}</p>
+              <p className={styles.meta}>Pick a course on the left to reveal its lessons and labs.</p>
+            </div>
+          ) : !activeItem ? (
+            <div className={styles.detailPlaceholder}>
+              <h2>{activeCourse.title}</h2>
+              <p>{activeCourse.description}</p>
+              <p className={styles.meta}>Choose a lesson or lab from the tree to load the full study kit.</p>
+            </div>
+          ) : (
+            <article className={styles.itemDetail}>
+              <header className={styles.detailHeader}>
+                <p className={styles.breadcrumb}>
+                  <span>{activeSubject.name}</span>
+                  <span aria-hidden="true">›</span>
+                  <span>{activeCourse.title}</span>
+                </p>
+                <h2>
+                  <span className={styles.detailIcon} aria-hidden="true">
+                    {itemKindIcon[activeItem.kind]}
+                  </span>
+                  {activeItem.title}
+                </h2>
+                <div className={styles.detailMetaRow}>
+                  <span>{formatLanguage(activeItem.language)}</span>
+                  {activeItem.dueDate && <span>{describeDueDate(activeItem.dueDate).label}</span>}
+                  {activeItem.estimatedMinutes && <span>{formatMinutes(activeItem.estimatedMinutes)}</span>}
+                  {activeItem.status && <span>{statusCopy[activeItem.status]}</span>}
+                </div>
+              </header>
 
-              {activeSubject.reflectionPrompts.length > 0 && (
-                <aside className={styles.reflectionBox} aria-label="Reflection prompts">
-                  <h3>Reflection prompts</h3>
-                  <ul>
-                    {activeSubject.reflectionPrompts.map((prompt) => (
-                      <li key={prompt}>{prompt}</li>
+              <section className={styles.summaryBlock} aria-label="Lesson summary">
+                <h3>Summary</h3>
+                <p className={styles.summaryEnglish}>
+                  {activeItem.summary.english ?? activeItem.translation?.summary ?? activeItem.summary.original}
+                </p>
+                {activeItem.summary.original && activeItem.language === 'es' && (
+                  <p className={styles.summaryOriginal}>{activeItem.summary.original}</p>
+                )}
+              </section>
+
+              {activeItem.translation && (
+                <section className={styles.translationBlock} aria-label="Translation notes">
+                  <h3>Translation support</h3>
+                  <p className={styles.meta}>{translationStatusLabel[activeItem.translation.status] ?? 'Translation status'}</p>
+                  {activeItem.translation.summary && <p>{activeItem.translation.summary}</p>}
+                  {activeItem.translation.glossary && (
+                    <ul className={styles.glossaryList}>
+                      {activeItem.translation.glossary.map((term) => (
+                        <li key={term}>{term}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {activeItem.translation.notes && <p className={styles.meta}>{activeItem.translation.notes}</p>}
+                </section>
+              )}
+
+              {activeItem.tags.length > 0 && (
+                <section className={styles.tagBlock} aria-label="Key themes">
+                  <h3>Key themes</h3>
+                  <div className={styles.tagPillRow}>
+                    {activeItem.tags.map((tag) => (
+                      <span key={tag} className={styles.tagPill}>
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {activeItem.kind === 'lab' && activeItem.lab && (
+                <section className={styles.labBlock} aria-label="Lab checklist">
+                  <h3>Lab workspace</h3>
+                  <p className={styles.meta}>{activeItem.lab.environment}</p>
+                  <ul className={styles.checklist}>
+                    {activeItem.lab.checklists.map((entry) => (
+                      <li key={entry}>{entry}</li>
                     ))}
                   </ul>
-                </aside>
+                  {activeItem.lab.deliverable && <p>Deliverable: {activeItem.lab.deliverable}</p>}
+                </section>
+              )}
+
+              {(activeCourse.cheatPapers?.length ?? 0) > 0 && (
+                <section className={styles.cheatBlock} aria-label="Cheat sheets">
+                  <h3>Cheat sheets & planners</h3>
+                  <ul className={styles.cheatList}>
+                    {activeCourse.cheatPapers!.map((cheat) => (
+                      <li key={cheat.id} className={styles.cheatCard}>
+                        <h4>{cheat.title}</h4>
+                        <p className={styles.meta}>{cheat.description}</p>
+                        <p>{cheat.englishSummary}</p>
+                        {cheat.sections && (
+                          <details>
+                            <summary>Included sections</summary>
+                            <ul>
+                              {cheat.sections.map((section) => (
+                                <li key={section.title}>
+                                  <strong>{section.title}</strong>
+                                  <ul>
+                                    {section.bullets.map((bullet) => (
+                                      <li key={bullet}>{bullet}</li>
+                                    ))}
+                                  </ul>
+                                </li>
+                              ))}
+                            </ul>
+                          </details>
+                        )}
+                        {cheat.studyTips && (
+                          <details>
+                            <summary>Study tips</summary>
+                            <ul>
+                              {cheat.studyTips.map((tip) => (
+                                <li key={tip}>{tip}</li>
+                              ))}
+                            </ul>
+                          </details>
+                        )}
+                        {cheat.downloadHint && <p className={styles.meta}>{cheat.downloadHint}</p>}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {resources.length > 0 && (
+                <section className={styles.resources} aria-label="Original materials">
+                  <h3>Original PDFs & slide decks</h3>
+                  <ul className={styles.resourceList}>
+                    {resources.map((resource) => (
+                      <li key={resource.href}>
+                        <a
+                          className={styles.resourceLink}
+                          href={resource.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span className={styles.resourceIcon} aria-hidden="true">
+                            {resource.type ? resourceTypeIcon[resource.type] : '📄'}
+                          </span>
+                          <span>
+                            <span className={styles.resourceLabel}>{resource.label}</span>
+                            {resource.description && <br />}
+                            {resource.description && <span className={styles.meta}>{resource.description}</span>}
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
               )}
             </article>
           )}
         </section>
-      </section>
+      </div>
     </div>
   );
 };
