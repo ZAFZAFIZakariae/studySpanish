@@ -7,6 +7,7 @@ import FlashcardsPage from './pages/FlashcardsPage';
 import ContentManagerPage from './pages/ContentManagerPage';
 import { useHighContrast } from './hooks/useHighContrast';
 import AppShell from './components/layout/AppShell';
+import SubjectsPage from './pages/SubjectsPage';
 
 const App: React.FC = () => {
   const { enabled, toggle } = useHighContrast();
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/flashcards" element={<FlashcardsPage />} />
+          <Route path="/subjects" element={<SubjectsPage />} />
           <Route path="/content-manager" element={<ContentManagerPage />} />
           <Route path="/lessons/:slug" element={<LessonPage />} />
           <Route

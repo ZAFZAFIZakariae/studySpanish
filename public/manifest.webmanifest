@@ -1,11 +1,11 @@
 {
-  "name": "Study Spanish Coach",
-  "short_name": "Spanish Coach",
+  "name": "Study Compass",
+  "short_name": "StudyCompass",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#111827",
   "theme_color": "#1d4ed8",
-  "description": "Offline-first Spanish lessons, analytics, and flashcards for B1–C1 learners.",
+  "description": "Offline-first bilingual study hub with subjects, labs, flashcards, and translation aids.",
   "icons": [
     {
       "src": "/icon.svg",
