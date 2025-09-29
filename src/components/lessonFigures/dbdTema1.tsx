@@ -282,7 +282,7 @@ export const dbdTema1Figures: Record<string, FigureRenderer> = {
           width: 160,
           height: 120,
           title: '1. Usuario',
-          lines: ['INSERT / UPDATE / DELETE'],
+          lines: ['INSERT', 'UPDATE', 'DELETE'],
           fill: '#ede9fe',
         })}
         {createLabeledBox({
@@ -291,7 +291,7 @@ export const dbdTema1Figures: Record<string, FigureRenderer> = {
           width: 160,
           height: 120,
           title: '2. Traducción',
-          lines: ['Esquemas externo/lógico/físico'],
+          lines: ['Esquemas externo', 'lógico/físico'],
         })}
         {createLabeledBox({
           x: 390,
