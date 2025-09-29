@@ -205,7 +205,6 @@ export const createDiagram = (
               height={node.height - contentPadding * 2}
             >
               <div
-                xmlns="http://www.w3.org/1999/xhtml"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
