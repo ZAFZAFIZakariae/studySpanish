@@ -30,10 +30,21 @@ export type DiagramOptions = {
 const defaultWidth = 760;
 const defaultHeight = 360;
 
+type Point = {
+  x: number;
+  y: number;
+};
+
 const toArray = (lines?: string[]) => {
   if (!lines) return [] as string[];
   return lines;
 };
+
+const contentPadding = 16;
+const headerLineHeight = 22;
+const bodyLineHeight = 18;
+const lineGap = 8;
+const approximateCharWidth = 6.2;
 
 const computeCenter = (node: Required<Pick<DiagramNode, 'x' | 'y'>> & {
   width: number;
@@ -42,6 +53,65 @@ const computeCenter = (node: Required<Pick<DiagramNode, 'x' | 'y'>> & {
   x: node.x + node.width / 2,
   y: node.y + node.height / 2,
 });
+
+const computeEdgePoint = (
+  node: Required<Pick<DiagramNode, 'x' | 'y' | 'width' | 'height'>>,
+  target: Point
+): Point => {
+  const center = computeCenter(node);
+  const dx = target.x - center.x;
+  const dy = target.y - center.y;
+
+  if (dx === 0 && dy === 0) {
+    return center;
+  }
+
+  const halfWidth = node.width / 2;
+  const halfHeight = node.height / 2;
+  const absDx = Math.abs(dx);
+  const absDy = Math.abs(dy);
+
+  if (absDx === 0) {
+    return {
+      x: center.x,
+      y: center.y + Math.sign(dy) * halfHeight,
+    };
+  }
+
+  if (absDy === 0) {
+    return {
+      x: center.x + Math.sign(dx) * halfWidth,
+      y: center.y,
+    };
+  }
+
+  const scaleX = halfWidth / absDx;
+  const scaleY = halfHeight / absDy;
+  const scale = Math.min(scaleX, scaleY);
+
+  return {
+    x: center.x + dx * scale,
+    y: center.y + dy * scale,
+  };
+};
+
+const adjustPointAlongLine = (from: Point, to: Point, distance: number): Point => {
+  const dx = to.x - from.x;
+  const dy = to.y - from.y;
+  const length = Math.hypot(dx, dy) || 1;
+  return {
+    x: from.x + (dx / length) * distance,
+    y: from.y + (dy / length) * distance,
+  };
+};
+
+const clampPadding = (lineLength: number, requested: number) => {
+  if (lineLength <= 0) {
+    return 0;
+  }
+  const maxPadding = Math.max(0, lineLength / 2 - 1);
+  return Math.max(0, Math.min(requested, maxPadding));
+};
 
 export const createDiagram = (
   altText: string,
@@ -53,7 +123,31 @@ export const createDiagram = (
   const background = options?.background ?? '#f8fafc';
 
   const nodeMap = new Map(
-    nodes.map((node) => [node.id, { ...node, width: node.width ?? 170, height: node.height ?? 90 }])
+    nodes.map((node) => {
+      const width = node.width ?? 170;
+      const linesArray = toArray(node.lines);
+      const usableWidth = Math.max(40, width - contentPadding * 2);
+      const approxCharsPerLine = Math.max(10, Math.floor(usableWidth / approximateCharWidth));
+      const estimatedBodyLines = linesArray.reduce((count, line) => {
+        const trimmed = line.trim();
+        if (!trimmed) return count + 1;
+        return count + Math.max(1, Math.ceil(trimmed.length / approxCharsPerLine));
+      }, 0);
+      const contentHeight =
+        headerLineHeight +
+        (estimatedBodyLines > 0 ? lineGap + estimatedBodyLines * bodyLineHeight : 0);
+      const minimumHeight = Math.max(90, contentPadding * 2 + contentHeight);
+      const height = Math.max(node.height ?? 0, minimumHeight);
+      return [
+        node.id,
+        {
+          ...node,
+          width,
+          height,
+          linesArray,
+        },
+      ];
+    })
   );
 
   const svgStyle: React.CSSProperties = {
@@ -90,7 +184,7 @@ export const createDiagram = (
       </defs>
       <rect x={0} y={0} width="100%" height="100%" rx={18} fill={background} />
       {Array.from(nodeMap.values()).map((node) => {
-        const centerLines = toArray(node.lines);
+        const centerLines = node.linesArray;
         const fontColor = node.textColor ?? '#0f172a';
         return (
           <g key={node.id}>
@@ -104,28 +198,51 @@ export const createDiagram = (
               stroke="#0284c7"
               strokeWidth={1.4}
             />
-            <text
-              x={node.x + node.width / 2}
-              y={node.y + 26}
-              textAnchor="middle"
-              fontSize={15}
-              fontWeight={600}
-              fill={fontColor}
+            <foreignObject
+              x={node.x + contentPadding}
+              y={node.y + contentPadding}
+              width={node.width - contentPadding * 2}
+              height={node.height - contentPadding * 2}
             >
-              {node.title}
-            </text>
-            {centerLines.map((line, index) => (
-              <text
-                key={`${node.id}-line-${index}`}
-                x={node.x + node.width / 2}
-                y={node.y + 48 + index * 18}
-                textAnchor="middle"
-                fontSize={13}
-                fill={fontColor === '#0f172a' ? '#1f2937' : fontColor}
+              <div
+                xmlns="http://www.w3.org/1999/xhtml"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  textAlign: 'center',
+                  height: '100%',
+                  color: fontColor,
+                }}
               >
-                {line}
-              </text>
-            ))}
+                <div
+                  style={{
+                    fontSize: 15,
+                    fontWeight: 600,
+                    lineHeight: `${headerLineHeight}px`,
+                    marginBottom: centerLines.length > 0 ? lineGap : 0,
+                    wordBreak: 'break-word',
+                  }}
+                >
+                  {node.title}
+                </div>
+                {centerLines.map((line, index) => (
+                  <div
+                    key={`${node.id}-line-${index}`}
+                    style={{
+                      fontSize: 13,
+                      lineHeight: `${bodyLineHeight}px`,
+                      marginTop: index === 0 ? 0 : 4,
+                      color: fontColor === '#0f172a' ? '#1f2937' : fontColor,
+                      wordBreak: 'break-word',
+                    }}
+                  >
+                    {line}
+                  </div>
+                ))}
+              </div>
+            </foreignObject>
           </g>
         );
       })}
@@ -135,22 +252,51 @@ export const createDiagram = (
         if (!fromNode || !toNode) return null;
         const fromCenter = computeCenter(fromNode);
         const toCenter = computeCenter(toNode);
-        const midX = (fromCenter.x + toCenter.x) / 2;
-        const midY = (fromCenter.y + toCenter.y) / 2 - 6;
+        const fromEdge = computeEdgePoint(fromNode, toCenter);
+        const toEdge = computeEdgePoint(toNode, fromCenter);
+        const baseDx = toEdge.x - fromEdge.x;
+        const baseDy = toEdge.y - fromEdge.y;
+        const baseLength = Math.hypot(baseDx, baseDy);
+        const startPadding = clampPadding(baseLength, 12);
+        const endPadding = clampPadding(baseLength, 18);
+        const start = adjustPointAlongLine(fromEdge, toEdge, startPadding);
+        const end = adjustPointAlongLine(toEdge, fromEdge, endPadding);
+        const lineDx = end.x - start.x;
+        const lineDy = end.y - start.y;
+        const lineLength = Math.hypot(lineDx, lineDy) || 1;
+        const midX = (start.x + end.x) / 2;
+        const midY = (start.y + end.y) / 2;
+        const labelDistance = Math.min(18, lineLength / 3);
+        let normalX = -lineDy / lineLength;
+        let normalY = lineDx / lineLength;
+        if (normalY > 0) {
+          normalX *= -1;
+          normalY *= -1;
+        }
+        const labelX = midX + normalX * labelDistance;
+        const labelY = midY + normalY * labelDistance;
         return (
           <g key={`${link.from}-${link.to}-${link.label ?? 'plain'}`}>
             <line
-              x1={fromCenter.x}
-              y1={fromCenter.y}
-              x2={toCenter.x}
-              y2={toCenter.y}
+              x1={start.x}
+              y1={start.y}
+              x2={end.x}
+              y2={end.y}
               stroke="#0f172a"
               strokeWidth={1.6}
               strokeDasharray={link.dashed ? '6 4' : undefined}
               markerEnd="url(#diagram-arrowhead)"
             />
             {link.label && (
-              <text x={midX} y={midY} textAnchor="middle" fontSize={12} fontWeight={600} fill="#0f172a">
+              <text
+                x={labelX}
+                y={labelY}
+                textAnchor="middle"
+                dominantBaseline="central"
+                fontSize={12}
+                fontWeight={600}
+                fill="#0f172a"
+              >
                 {link.label}
               </text>
             )}
