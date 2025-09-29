@@ -1,157 +1,52 @@
-Introducción al Gobierno de TI
+# Tema 1 · Introducción al Gobierno de TI
 
-Contenido
-§Gobierno§Gobierno corporativo§Gobierno de TI
+## Objetivos
+- Entender el concepto de gobierno y su aplicación en las organizaciones.
+- Diferenciar gobierno corporativo y gobierno de TI.
+- Identificar los actores clave y su responsabilidad.
+- Reconocer marcos de referencia que apoyan la implantación del gobierno de TI.
 
-Gobierno
+## Panorama general
+- El **gobierno** establece expectativas, define responsabilidades y supervisa el desempeño (OCDE, Allen, Mueller).
+- El **gobierno corporativo** articula la relación entre propietarios, consejo y dirección para maximizar valor y gestionar riesgos.
+- El **CIO** debe participar en estos foros para alinear TI con la estrategia empresarial.
 
-Gobierno corporativo§El gobierno corporativo fijaexpectativas claraspara la conducta de la entidad que está siendo gobernada, y dirige, controlae influenciafuertemente en dicha entidad para cumplir estas expectativas(Allen, 2005).   
-§El gobierno establece: (Mueller,2008)oCadenas de responsabilidad, autoridad y comunicación.oMedición, políticas, estándares y mecanismos de control para permitir a las personas llevar a cabo sus roles y responsabilidades.
+![Capas del gobierno corporativo](figure:ggo-tema-1/niveles)
+Caption: Asamblea, consejo y dirección general coordinan la toma de decisiones y supervisión.
 
-Gobierno corporativo
-§Para la OCDE (2016) el gobierno es el sistema por que cual se dirigen y controlan las empresas, especificando su estructura, la distribución de derechos y responsabilidadesentre los diversos componentes de la empresa, y el establecimiento de reglas y procedimientospara tomar decisiones en los asuntos corporativos.
+## Gobierno de TI
+- Extiende los principios del gobierno corporativo al uso de la tecnología.
+- Objetivo: garantizar que las inversiones en TI generen valor y se gestionen los riesgos tecnológicos.
+- Preguntas clave (IT Governance Institute):
+  - ¿Está TI alineada con el negocio?
+  - ¿Se entregan los beneficios esperados?
+  - ¿Se gestiona el riesgo TI?
+  - ¿Se optimizan recursos y rendimiento?
 
-Gobierno Corporativo
-§Actividad:
-Dirección general
-Consejo de administraciónAsamblea de accionistas
-Tienen su capital invertido . Evalúan rendimientos y riesgos de las inversiones
+## Componentes principales
+- **Alineación estratégica:** TI soporta objetivos de negocio.
+- **Entrega de valor:** medición de beneficios y prioridades de portafolio.
+- **Gestión de recursos:** talento, infraestructura y servicios.
+- **Gestión de riesgos:** continuidad, seguridad, cumplimiento.
+- **Medición del desempeño:** indicadores y tableros.
 
-Gobierno Corporativo
-§Actividad:
-Dirección general
-Consejo de administraciónAsamblea de accionistas
-Propietarios, inversionistas y consejeros externos. Determinan estrategias a seguir y supervisan las acciones del grupo directivo
+![Relación entre negocio y TI](figure:ggo-tema-1/alineacion)
+Caption: El gobierno de TI conecta la estrategia corporativa con procesos, tecnología y personas.
 
-Gobierno Corporativo
-§Actividad:
-Dirección general
-Consejo de administraciónAsamblea de accionistas
-Grupo gerencial (presidente, gerente, directores,...).Encargado de la dirección general de la empresa, departamentos o subdivisiones.
+## Marcos y estándares
+- **COBIT**: control y auditoría de procesos TI (planificar, construir, ejecutar, monitorizar).
+- **ITIL**: mejores prácticas para gestión de servicios TI.
+- **ISO/IEC 38500**: principios para directores y consejos sobre uso de TI.
+- **ISO/IEC 27001, 20000**: seguridad y gestión de servicios.
 
-Gobierno Corporativo
-§Actividad:
-Dirección general
-Consejo de administraciónAsamblea de accionistas
-¿Dónde participa el CIO ?
+## Roles y responsabilidades
+- Consejo y alta dirección: definen políticas, aprueban inversiones y supervisan riesgos.
+- CIO / Dirección TI: traduce objetivos de negocio en iniciativas tecnológicas, reporta métricas.
+- Unidades de negocio: priorizan necesidades y co-crean soluciones.
+- Auditoría y control interno: evalúan cumplimiento y madurez.
 
-Gobierno Corporativo
-§Actividad:
-Dirección general
-Consejo de administraciónAsamblea de accionistas
-¿Dónde participa el CIO ?
-≃CIO
-
-Gobierno Corporativo
-§Actividad:
-Dirección general
-Consejo de administraciónAsamblea de accionistas
-No todos los directivos están al mismo nivel
-≃CIO
-
-Gobierno TI§A partir del año 2000 las organizaciones se enfrentan a una complejidad cada vez mayor con avances vertiginosos en nuevas tecnologías.
-
-Gobierno corporativo
-(Weill y Ross, 2004)
-
-Gobierno TI§El gobierno de TI se centra en el uso de la tecnología para satisfacer los objetivos de la organizaciónfijados por la dirección (Hamakery Hutton, 2004)
-§Parenty Reich (2007) distinguen dos formas de gobierno de TI:oGobierno del riesgode las TI (Visión defensiva)oGobierno del valorde las TI (Visión estratégica)
-
-Gobierno TI§Dahlbergy Kivijarvi(2006) indican que el gobierno de TI debe ser integral e incluiroProcesos y estructura de gobiernooAlineamientode negociooOperaciones de TIoMedición del desempeñooEstrategia de valor
-§El IT GovernanceInstituteindica que el gobierno de TI asegura: oGestionan riesgosoAlineamientocon el negociooGestionan el desempempeñooGestionan recursosoEntrega valoral negocio
-
-Gobierno TI
-§El IT GovernanceInstituteindica que el gobierno de TI asegura: oGestionan riesgosoAlineamiento con el negociooGestionan el despempeñooGestionan recursosoEntrega valor al negocio
-AsignaturaTema 1Tema 2Tema 3Tema 4Tema 5
-¿Quién?¿El CIO, el consejo, la dirección?
-
-Gobierno TI§El gobierno de TI es la capacidad de organización que ejerceel consejo, la dirección ejecutiva y la gestión de TIpara controlar la formulación e implementación de la estrategia de TI y de esta manera asegurar la fusión de los negocios y de TI. (Van Grembergen, 2002)§El gobierno de TI es responsabilidadde la junta directiva (o consejo de administración)y la dirección ejecutiva. Es una parte integral del gobierno de la empresay consiste en las estructuras de dirección, organización y procesos que aseguren que la organización sostiene y extiende las estrategias y objetivos de la organización.  (IT Governance Institute, 2001)
-
-Gobierno de TI frente a Gestión de TI (Peterson, 2003)
-!"#$B&##
-'E$&BF*F$+B
-I$-&.
-'E$&BF*F$+B
-/0F&EB*1
-OBF&EB*1
-PE&#&BF 4"F"E&
-!"#
-$%&%'()(&G
-!"#
-+I-(.&%&/(
-Prestación de servicios y productos para la organización interna de TI y la gestión de las operaciones actuales
-Es específico de la organización, y no pueden ser externalizados
-
-Gobierno TIEntonces ¿Cual es el papel del CIO en la Gobernanza de TI?
-Twoquestionsthenarise: Are boardspreparedtoasktherightquestionsofmanagement, and in particular theCIO?Are CIOspreparedtotakeonthisbroaderresponsibility?
-IftheCIO doesnotstep up, othersmaysupplanthisorherrole.
-
-58
-¿Cuantos proyectos de TI tienen resultados positivos en el negocio?
-...todavía no es suficiente!
-La mitad o menosMás de la mitad
-!"#$%#
-
-11 September 2008IT Governance Event - UCISA 60
-Mitigar el riesgo: Garantizar la seguridad y la continuidad de las operaciones comerciales internas, y reducir al mínimo la exposición al factor de riesgo externo
-Maximizar la rentabilidad: Mejorar los resultados empresariales;  Aumentar los ingresos y las ganancias, flujo de caja, la reducción del costo de la operación
-Mejorar el rendimiento: Mejorar de extremo a extremo el rendimiento operaciones comerciales.  Aumentar  la satisfacción de cliente y empleados
-Aumentar la agilidad: Habilitar la organización empresarial y las operaciones para adaptarse a las cambiantes necesidades del negocio
-el CIO debe combinar entre muchas prioridades que compiten
-
-11 September 2008IT Governance Event - UCISA 61
-Mitigar el riesgo: Garantizar la seguridad y la continuidad de las operaciones comerciales internas, y reducir al mínimo la exposición al factor de riesgo externo
-Maximizar la rentabilidad: Mejorar los resultados empresariales;  Aumentar los ingresos y las ganancias, flujo de caja, la reducción del costo de la operación
-Mejorar el rendimiento: Mejorar de extremo a extremo el rendimiento operaciones comerciales.  Aumentar  la satisfacción de cliente y empleados
-Aumentar la agilidad: Habilitar la organización empresarial y las operaciones para adaptarse a las cambiantes necesidades del negocio
-el CIO debe combinar entre muchas prioridades que compiten
-Cuadro de mando
-Gestión de riesgos
-Bedell
-Arquitecturas
-
-62
-Necesidades, problemas y desafíos
-Procedure, Audits, MetricsControl
-StrategicTacticalOperations
-Demand IT andBusinessResources
-Supply
-Capital, Capacity, PrioritiesPlanning
-Alignment Flexibility
-EfficiencyQuality
-Lack of Business aligned strategy
-Reduce costs across business 
-Ineffective project Management
-Deployment Complexity through lack of standard & legacy
-No Audit Trails 
-Management of Service Changes
-Must reduce IT costs by 30%
-Lack of IT resource transparency
-Missed targets due to lack of steering control 
-Deployment Complexity in number of project
-Cannot aggregate need and distribute ROI
-No means of governing outsourced contracts
-No means of capturing demands
-No means of prioritization of business need
-No means of reporting SLA
-Making new outsourcing decisions
-Do thethingsright
-Do thingsright
-
-Who are the Decision Makers? 
-Business and IT CollaborationIT DecisionBusiness Decision
-De-centralised
-Centralized
-Federal
-Business Exec.
-Business Exec./Mgt.
-Business Mgt.
-IT Exec.
-IT Exec./Mgt.
-IT Management
-Business and IT Exec.
-Business and ITExec./Mgt.
-Business and IT Mgt.
-Non-CooperativeCooperative
-
-Introducción al Gobierno de TI
+## Beneficios de un gobierno eficaz
+- Mejor alineación negocio-TI.
+- Transparencia en inversiones y costos.
+- Reducción de riesgos operacionales y regulatorios.
+- Mayor satisfacción de usuarios y clientes internos.

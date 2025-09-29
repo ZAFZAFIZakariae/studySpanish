@@ -1,61 +1,43 @@
-Serviciosy AplicacionesDistribuidasMUIINF –ETSINF -UPV
+# Sesión 0 · Presentación del curso Servicios y Aplicaciones Distribuidas
 
-ContactJosé M.  Bernabéu Aubánbernabeu@upv.es
-Tutorías bajo demanda
+## Información general
+- **Docente:** José M. Bernabéu Aubán (bernabeu@upv.es).
+- **Tutorías:** bajo demanda.
+- **Créditos:** 4,5 de teoría/seminarios + 1,5 de laboratorio.
+- **Calendario:**
+  - Martes: teoría y seminarios en aula (modalidad mixta).
+  - Viernes: seminarios, laboratorios y pruebas.
+  - Última sesión: 16 de diciembre.
+  - Examen final: 19 de diciembre (remoto, Poliformat).
 
-E.g., Security, resource optimization, application development
-Course Objectives•Understand main concepts of distributed systems•Identify approaches to design distributed services•Develop awareness of main challenges•Develop practical skills with hands on labs
+## Objetivos del curso
+- Comprender los conceptos fundamentales de los sistemas distribuidos.
+- Identificar patrones y aproximaciones para diseñar servicios distribuidos.
+- Conocer los principales retos: seguridad, coordinación, optimización de recursos.
+- Desarrollar habilidades prácticas mediante laboratorios guiados.
 
-25% 25%
-25%
-GradingTheory Exam
-Lab Project
-Seminars/Lab Exam
-Seminar quizes
+![Componentes del curso](figure:sad-session-0/estructura)
+Caption: Relación entre teoría, seminarios y laboratorio dentro del curso.
 
-In-classroomOn-lineAll TuesdaysLast class: December 16Mixed theory/Seminars
-Fridays:Last session: December 16Mixed Seminars/Labs/Tests
-Calendar & Classes4.5 credit Theory/Seminars1.5 credits Labs
-Flexible hours in classroom (Tuesdays)
-Exams: December 19, during class (remote). Poliformat
+## Evaluación
+- **Examen teórico:** 25 %.
+- **Proyecto de laboratorio:** 25 %.
+- **Seminarios / examen práctico:** 25 %.
+- **Cuestionarios de seminario:** 25 %.
 
-SyllabusPreliminary
+## Programa de contenidos
+1. Fundamentos de sistemas distribuidos.
+2. Arquitecturas, coordinación y contratos (SLA, QoS, Cloud).
+3. Seguridad y gobierno.
+4. Despliegue y tecnologías (NATS, Prometheus, STEP, APISIX, Docker).
 
-Topics
-Architectures…, CoordinationSLA, QoS, Cloud
-Approaches, ConceptsNATS, Prometheus, STEP, APISIX, Docker
-01
-03
-02
-04
-Foundations
-Security
-Deployment
-Technologies
+## Laboratorios
+- Diseño e implementación de un servicio ilustrativo que integre colas, proxy inverso, autenticación y despliegue.
+- Trabajo en grupos de tres personas.
+- Tecnologías principales: TypeScript o Go, Docker, Git, VS Code.
+- Entrega del repositorio completo en formato `.tgz`.
 
-Labs
-
-•Simple illustrative service•Integrate some software pieces •Queues•Inverse proxy•Authenticator•Development  
-Design, Implement, Deploy
-•Groups of 3•Typescript/ Golang•Use git•Hand in complete repo in tgzformat
-What How
-
-ImplementationProject development
-Packaging for deploymentEditing
-TechnologiesTypescript/Golang
-Docker
-Git
-VSCode
-
-QUIZ
-
--Otros-…
--Nivel
--Requeridopara Desarrollo y entrega -Aconsejablepara desarrollo
--Full time?
--Nivel
-QuienesInformática
-Typescript
-Trabajo
-Git Linux
-Golang
+## Requisitos y recomendaciones
+- Conocimientos previos de informática, programación y sistemas.
+- Nivel aconsejado: experiencia en TypeScript/Golang, Git, Linux y herramientas de desarrollo colaborativo.
+- Dedicación distribuida entre sesiones presenciales y trabajo autónomo.

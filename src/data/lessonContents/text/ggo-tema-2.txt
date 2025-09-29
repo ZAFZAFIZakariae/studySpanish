@@ -1,46 +1,50 @@
-Entrega de Valor
+# Tema 2 · Entrega de Valor en el Gobierno de TI
 
-IntroducciónNo existe una definición totalmente aceptada de valor de TI
+## Objetivos
+- Comprender cómo se define y mide el valor generado por las inversiones en TI.
+- Revisar principios de ITIL 4 y Val IT relacionados con la entrega de valor.
+- Identificar prácticas para asegurar beneficios durante todo el ciclo de vida de los servicios.
 
-Introducción
+## ¿Qué entendemos por valor?
+- No existe una definición única; depende de los beneficios percibidos por clientes y stakeholders.
+- El IT Governance Institute señala que el valor se materializa cuando las iniciativas se entregan **a tiempo**, **dentro del presupuesto** y **con los beneficios prometidos**.
+- ITIL 4 define valor como “beneficios, utilidad e importancia percibida”.
 
-IntroducciónPara IT Governance Institute (ITGI) en un documento denominado “Reunión Informativa sobre Gobernabilidad TI”, los principios básicos del valor de la TIson: oentregar a tiempo, odentro del presupuesto y ocon los beneficios prometidos
+![Componentes del valor de TI](figure:ggo-tema-2/componentes)
+Caption: Balance entre beneficios, costos, riesgos y experiencia percibida.
 
-ITILITIL4 define valor como:“Los beneficios , utilidad e importancia percibidos de algo”La gestión de serviciosde ITIL 4 consiste en ”un conjunto de capacidadesorganizadas especializadas para proporcionar valor a los clientesen forma de servicios”
+## Principios de ITIL 4
+- **Centrarse en el valor**: entender cómo los consumidores usan los servicios y medir su impacto en objetivos de negocio.
+- Incorporar el enfoque en el valor en operaciones diarias y proyectos de mejora.
+- Empoderar al personal para identificar oportunidades de valor continuo.
 
-ITILEl primer principio de ITIL es “centrarse en el valor”. Para ello se recomienda:oConocercomo utilizan los consumidores los serviciosoIncentivar al personal a concentrarse en el valoroCentrarse en el valordurante las actividades operacionales normales, así como durante las iniciativas de mejoraoIncluir el foco en el valoren cada paso de cualquier iniciativa de mejora.
+## Marco Val IT
+- Desarrollado por ITGI para maximizar el valor de negocio derivado de inversiones en TI.
+- Se estructura en dos ámbitos:
+  - **Gobierno**: integra prácticas de valor en la organización, asegura el valor óptimo en la cartera.
+  - **Gestión**: garantiza el valor en cada inversión individual monitorizando métricas clave.
+- Preguntas guía: ¿estamos haciendo lo correcto? ¿obtenemos los beneficios esperados?
+- Complementa a COBIT, que se centra en la ejecución adecuada de procesos.
 
-ValITEl marco ValIT del ITGI
+![Flujo de creación de valor según Val IT](figure:ggo-tema-2/valit-flujo)
+Caption: Desde la demanda estratégica hasta la operación y medición de resultados.
 
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSILos principiosde ValIT se pueden agrupar en dos grandes bloques:oLas inversiones basadas en las TSI: Cartera de inversionesoPrácticas para la entrega de valor: Monitorización de métricas clave de las inversiones
+## Proceso de creación de valor
+1. **Demandas estratégicas** generan un modelo conceptual del servicio (visión de negocio + atributos arquitectónicos).
+2. **Diseño lógico** traduce la visión en requisitos detallados y arquitectura técnica.
+3. **Transición** prepara el servicio para producción, catálogo y soporte.
+4. **Operación y monitorización** controlan métricas, resuelven incidencias y aseguran niveles de servicio.
 
-ValIT—Definition of Key Terms Used in Val IT
+## Medición y comunicación del valor
+- Pasos clave (Pratt, Herrmann):
+  1. Analizar objetivos de negocio y contexto.
+  2. Identificar stakeholders y expectativas.
+  3. Modelar capacidades de negocio y su relación con TI.
+  4. Definir métricas que conecten resultados de TI con beneficios empresariales.
+  5. Elaborar narrativa y plan de comunicación del impacto.
 
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSI
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSIrecibe demandas estratégicas y desarrolla el modelo conceptual del servicio para representar el servicio de TI o empresarial nuevo o mejorado que se solicita. El modelo conceptual del servicio es el puente entre la empresa y TI, ya que proporciona el contexto empresarial para el servicio junto con los atributos arquitectónicos de alto nivel.
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSIrecibe el modelo conceptual del servicio y diseña y desarrolla el modelo lógico del servicio con requisitos más detallados que describen cómo se diseñará el servicio de TI o empresarial recientemente solicitado y sus componentes. El modelo lógico del servicio puede considerarse como lo que tradicionalmente se expresa en términos de TI como el "diseño del sistema".
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSIrecibe el plano lógico del servicio después de que haya pasado por el proceso de desarrollo, prueba y aprobación de lanzamiento. Es responsable de las tareas para realizar la transición del servicio a la producción y hacerlo consumible por la empresa, incluida la creación de la entrada del catálogo de servicios.
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSIproporciona un marco para integrar la monitorización, la administración, la resolución y otros aspectos operativos asociados con los servicios realizados y/o aquellos en construcción. También proporciona una descripción general integral del negocio de las operaciones de TI y los servicios que prestan estos equipos.
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSI
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSI
-GobiernoGestión1 . Objetivo: Embeber en la organización las prácticas de gestión de valor logrando el valor óptimo a partir de las inversiones de TSI3. Objetivo: Asegurar valoren inversiones individualizadas basadas en TSI2. Objetivo: Asegurar el valoróptimo a lo largo de la cartera de inversiones en TSI
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSI
-
-ValITEl marco ValIT del ITGI tiene como objetivofacilitar la creación de valor de negocio a partir de las inversiones basadas en las TSIVal IT se centra en la decisión de invertir (¿estamos haciendo lo correcto?) y la realización de beneficios (¿estamos obteniendo beneficios?), mientras que COBITestá enfocado en la ejecución(¿lo estamos haciendo correctamente, y lo estamos logrando bien?).
-
-4 pasos para demostrar el valor de TI para el negociooPrimero, asegure la alineación entre el negocio y la TIoEntregue resultados comerciales, no proyectos de TIoIdentificar métricas de TI que demuestren el éxito empresarialoComparta la historia del impacto de TIMary Pratt, CIO.com, 2022
-
-6 steps to measure the business value of ITo1. Analysis of business goals and businessenvironmento2. Analysis of stakeholderso3. Modeling the business capabilitieso4. Model the business-IT relationshipso5. Measure the value propositiono6. Planning the communicationWolfgang Herrmann CIO.de, 2023
-
-Análisis de Valor
-
-Análisis de Valor
-
-Entrega de Valor
+## Buenas prácticas
+- Priorizar iniciativas por contribución a objetivos estratégicos.
+- Mantener portafolios equilibrados entre innovación, mejora y operación.
+- Revisar periódicamente beneficios y ajustar inversiones según resultados.
+- Transparencia en costos y riesgos para facilitar la toma de decisiones.

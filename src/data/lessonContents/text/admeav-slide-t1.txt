@@ -1,163 +1,67 @@
-Advanced methods of artificial vision
-Chapter 1: Hand crafted feature extraction
+# T1 · Hand-Crafted Feature Extraction
 
-Index
-1.Introduction
-2.Statistical descriptors
-3.Local Binary Patterns
-4.Histogram of Oriented Gradients
-5.SIFT
-6.Gabor Filters
-2
+## Objetivos de la lección
+- Diferenciar descriptores globales y locales para representar imágenes.
+- Repasar métricas estadísticas clásicas para caracterizar texturas.
+- Comprender el funcionamiento de LBP, HOG, SIFT y filtros de Gabor.
+- Identificar fortalezas y limitaciones de las características diseñadas manualmente.
 
-Index
-1.Introduction
-2.Statistical descriptors
-3.Local Binary Patterns
-4.Histogram of Oriented Gradients
-5.SIFT
-6.Gabor Filters
-3
+## Esquema de contenidos
+- Introducción y fundamentos de los descriptores.
+- Estadísticos de primer y segundo orden.
+- Local Binary Patterns (LBP) y sus variantes invariantes.
+- Histogram of Oriented Gradients (HOG).
+- Descriptores basados en puntos clave: SIFT.
+- Bancos de filtros y respuestas en frecuencia (Gabor).
 
-What is a feature?
-• A feature (also called a descriptor) is a usually numerical value that is related to some
-relevant aspect of an entire image, part of an image, or a shape resulting from a
-segmentation process.
-• Supposedly, a feature should have close values when the relevant aspect whose
-essence it is trying to capture (colour, texture, area, etc.) is similar from a human point
-of view.
-• Another highly desirable property of a good feature is its robustness, understood as
-immunity to noise (the values of the feature should not change too much if the image
-or shape on which it is calculated is affected by a moderate level of noise).
-• Generally, not a single feature is associat ed with the object of interest but several or
-many of them grouped together in what is known as a feature vector.
-4
+![Panorama de descriptores clásicos](figure:admeav/t1-taxonomy)
+Caption: Relación entre descriptores globales, locales y basados en puntos clave utilizados en visión clásica.
 
-5
-Feature extraction methodology
-• How do we analyse the image?
-– Global descriptors: descripto rs for the complete image
-– Local descriptors:
-• Rectangular blocks or patches
-• Landmark extraction: Harris, SIFT,…
-• Descriptors
-– Statistical descriptors
-– Cooccurrence Matrix
-– Histograms of Oriented Gradients
-– Local Binary Patterns
-– Gabbor Filters
-– SIFT, SURF
-–… .
+## ¿Qué es una característica?
+- Valor numérico que captura un aspecto relevante (color, textura, forma) de una imagen completa o de una región.
+- Debe ser **discriminativa** (valores cercanos para ejemplos similares) y **robusta** frente a ruido o cambios moderados.
+- Normalmente se combinan en **vectores de características** para describir objetos o escenas.
 
-Statistical descriptors
-• Analyse the statistical distribution of some property for each of the pixels in the image.
-• Classified into: first order methods (those based on the histogram), second order methods 
-(those based on co-occurrence matrices), and higher order methods.
-• First-order statistics:
-– The normalised histogram of the image is calculated.
-– Properties that are obtai ned from this histogram.
-6
-6
-Mean                Variance Skewne ss Kurtosis               Entropy
+## Metodología de extracción
+- **Descriptores globales**: se calculan sobre la imagen completa (histogramas de color, momentos geométricos).
+- **Descriptores locales**: se aplican sobre regiones o puntos clave.
+  - División en parches regulares.
+  - Detección de landmarks (Harris, DoG) y posterior descripción.
+- Pipeline típico: detección → descripción → agregación (bag-of-words, concatenación).
 
-Co-occurrence matrix
-• Histogram-based statistics have the disadvantage of losing spatial 
-information.
-• The same information would be obtained for an image of a chessboard with 
-the black and white squares swapped.
-• To capture the spatial dependencies of gr ey level values, which contribute 
-to the perception of textures present in an image, a 2D structure called co-
-occurrence matrix is defined to analyse textures.
-• The co-occurrence matrix 𝑃ሺ𝑖, 𝑗ሻ is defined by specifying a shift direction 
-𝑑ൌ𝑑 ሺ 𝑖, 𝑗ሻ and counting all pairs of pixels separated by d and having grey 
-values 𝑖 and 𝑗.
-7
-https://scikit-image.org/docs/stable/user_guide/index.html
+## Estadísticos clásicos
+- **Primer orden** (histograma): media, varianza, asimetría, curtosis, entropía.
+- **Segundo orden** (matriz de co-ocurrencias): captura dependencia espacial entre intensidades.
+  - Permite derivar contraste, correlación, energía, homogeneidad.
+- **Órdenes superiores**: modelados complejos (momento centralizado, cumulantes).
 
-Co-occurrence matrix
-8
-8
-Contrast: 0.3307
-Correlation: 0.9032
-Energy: 0.1323
-Homogeneity: 0.8534
-1 2 3 4 5 6 7 8
-1
-2
-3
-4
-5
-6
-7
-8
+## Local Binary Patterns
+- Comparan cada píxel con sus vecinos: valores mayores reciben 1, menores 0; el patrón binario describe la textura.
+- Se parametriza con **P vecinos** y **radio R**. Se generan histogramas de patrones para caracterizar una región.
+- Variantes:
+  - **LBPri**: agrupa patrones equivalentes bajo rotaciones.
+  - **LBPriu2**: se queda con patrones uniformes (máximo dos transiciones) para reducir dimensionalidad.
+- Útiles para texturas finas y robustos a cambios de iluminación suaves.
 
-Index
-1.Introduction
-2.Statistical descriptors
-3.Local Binary Patterns
-4.Histogram of Oriented Gradients
-5.SIFT
-6.Gabor Filters
-9
+## Histogram of Oriented Gradients
+- Divide la imagen en celdas, calcula gradientes y acumula orientaciones ponderadas por magnitud.
+- Normaliza bloques contiguos para ganar invariancia a iluminación y contraste.
+- Popular en detección de peatones y objetos rígidos gracias a su sensibilidad a bordes.
 
-Local Binary Patterns(LBP)
-10
-Ojala T, Pietikäinen M & Mäenpää T (2002) Multiresolution gray-scale and rotation invariant texture
-classification with Local Binary Patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence
-24(7):971-987.
+## SIFT
+- Detecta puntos clave mediante diferencia de gaussianas en escala y localiza extremos subpíxel.
+- Asigna orientación dominante para lograr invariancia a rotación.
+- Describe cada punto con histogramas de gradiente locales (128 dimensiones clásicas).
+- Estable para correspondencias entre imágenes con cambios de escala, rotación y moderados cambios de iluminación.
 
-Local Binary Patterns(LBP)
-11
-𝑃ൌ 8 y  R ൌ 1
-𝑃 P is the number of neighbours and  R is the neighbourhood radius.
-𝑃ൌ 16 y  R ൌ 2 𝑃ൌ 8 y  R ൌ 2
+## Filtros de Gabor
+- Simulan receptores de la corteza visual: senos modulados por gaussianas.
+- Responden a frecuencias y orientaciones específicas; bancos multiescala capturan texturas.
+- Útiles en reconocimiento facial, análisis de texturas y biometría.
 
-Local Binary Patterns(LBP)
-12
-Histogram of 2௉ values
-
-Local Binary Patterns(LBP)
-13
-              
-𝑅𝑂𝑅ሺ𝑥, 𝑡ሻ performs 𝑡 different rotations of the 𝑥 bits 
-• e.g. 10000010, 00101000, and 00000101 are equivalent to the minimum code 00000101.
-• 𝑃ൌ 8 256 different and 36 rotationally invariant LBP patterns
-LBPRi (LBP Rotational Invariant)
-Uniform LBP 
-• Objetive: to reduce the number of possible patterns to the 
-really discriminating ones.
-• How? By analysing the uniformity (U) of the patterns : 
-number of transitions from 0 to 1 and 1 to 0.
-
-Local Binary Patterns(LBP)
-14
-Uniform rotationally invariant LBP: LBPriu2
-• Patterns with U=0 or U=2 are reassigned an individual pattern 
-code.
-• All other patterns are reassigned the same code (they become 
-indistinguishable).
-• LBP: 256 patterns, LBP Uniform: (58 + 1) patterns, (9+1) 
-rotationally invariant . In general (P+2)
-
-Local Binary Patterns(LBP)
-15
-Uniform rotationally invariant LBP: LBPriu2
-
-Local Binary Patterns(LBP)
-16
-http://scikit-image.org/docs/dev/auto_examples/plot_local_binary_pattern.html
-
-Local Binary Patterns(LBP)
-17
-LBP LBPri LBPriu2
-LBP LBPri
-LBPriu2
-P=8 R=1
-
-Local Binary Patterns(LBP)
-18
-
-Local Binary Patterns(LBP)
+## Ventajas y limitaciones
+- **Ventajas**: interpretables, requerimientos de datos moderados, buen rendimiento en dominios controlados.
+- **Limitaciones**: sensibilidad a transformaciones complejas, dificultad para generalizar sin ingeniería manual, dimensionalidad alta al combinar múltiples descriptores.
 19
 Original: i Máscara: mask Luminancia: ig LBP Histograma LBP
 sana
