@@ -72,6 +72,13 @@ const svgBase = (
   options: { width?: number; height?: number } = {}
 ) => {
   const { width = 720, height = 360 } = options;
+  const svgStyle: React.CSSProperties = {
+    display: 'block',
+    width: `${width}px`,
+    minWidth: `${width}px`,
+    height: `${height}px`,
+    minHeight: `${height}px`,
+  };
   return (
     <svg
       role="img"
@@ -79,6 +86,8 @@ const svgBase = (
       viewBox={viewBox}
       width={width}
       height={height}
+      preserveAspectRatio="xMidYMid meet"
+      style={svgStyle}
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
