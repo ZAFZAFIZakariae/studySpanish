@@ -6,6 +6,7 @@ import { describeDueDate } from '../lib/plannerUtils';
 import { subjectResourceLibrary, ResourceLink } from '../data/subjectResources';
 import styles from './SubjectsPage.module.css';
 import { lessonFigureRegistry } from '../components/lessonFigures';
+import InlineMarkdown from '../components/InlineMarkdown';
 
 const itemKindIcon: Record<CourseItem['kind'], string> = {
   lesson: '📘',
@@ -250,7 +251,7 @@ const SubjectsPage: React.FC = () => {
           if (block.type === 'paragraph') {
             return (
               <p key={index} className={styles.contentParagraph}>
-                {block.text}
+                <InlineMarkdown text={block.text} />
               </p>
             );
           }
@@ -265,7 +266,7 @@ const SubjectsPage: React.FC = () => {
                 : styles.contentHeadingLevel3;
             return (
               <HeadingTag key={index} className={`${styles.contentHeading} ${headingClass}`}>
-                {block.text}
+                <InlineMarkdown text={block.text} />
               </HeadingTag>
             );
           }
@@ -287,17 +288,27 @@ const SubjectsPage: React.FC = () => {
             return (
               <figure key={index} className={styles.contentFigure}>
                 <div className={styles.contentFigureMedia}>{figureContent}</div>
-                {block.caption && <figcaption className={styles.contentFigureCaption}>{block.caption}</figcaption>}
+                {block.caption && (
+                  <figcaption className={styles.contentFigureCaption}>
+                    <InlineMarkdown text={block.caption} />
+                  </figcaption>
+                )}
               </figure>
             );
           }
 
           return (
             <div key={index} className={styles.contentListBlock}>
-              {block.heading && <p className={styles.contentListHeading}>{block.heading}</p>}
+              {block.heading && (
+                <p className={styles.contentListHeading}>
+                  <InlineMarkdown text={block.heading} />
+                </p>
+              )}
               <ul className={styles.contentList}>
                 {block.items.map((itemText, itemIndex) => (
-                  <li key={itemIndex}>{itemText}</li>
+                  <li key={itemIndex}>
+                    <InlineMarkdown text={itemText} />
+                  </li>
                 ))}
               </ul>
             </div>
