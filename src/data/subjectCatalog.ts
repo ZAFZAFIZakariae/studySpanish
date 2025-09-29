@@ -80,7 +80,7 @@ export const subjectCatalog: SubjectSummary[] = [
             title: 'Sesión 3 · Modelos de servicio en la nube',
             language: 'es',
             ...getLessonContent('sad-session-3'),
-            tags: ['cloud', 'governanza'],
+            tags: ['cloud', 'gobernanza'],
             estimatedMinutes: withMinutes(85),
             dueDate: toIsoDate(12),
             status: 'scheduled',

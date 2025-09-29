@@ -156,7 +156,7 @@ export const Dashboard: React.FC = () => {
       await handleCopySummary();
       return;
     }
-    const summary = `Study Spanish Coach recap\nMastery: ${progress.toFixed(1)}%\nStreak: ${snapshot.streak.current} days\nWeakest tag: ${
+    const summary = `Study Compass recap\nMastery: ${progress.toFixed(1)}%\nStreak: ${snapshot.streak.current} days\nWeakest tag: ${
       snapshot.weakestTags[0]?.tag ?? 'N/A'
     }\nDue flashcards: ${snapshot.srs.dueNow}`;
     try {
