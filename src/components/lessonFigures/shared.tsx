@@ -46,6 +46,42 @@ const bodyLineHeight = 18;
 const lineGap = 8;
 const approximateCharWidth = 6.2;
 
+const estimateWrappedLineCount = (text: string, approxCharsPerLine: number) => {
+  const trimmed = text.trim();
+  if (!trimmed) {
+    return 0;
+  }
+
+  const effectiveChars = Math.max(1, Math.floor(approxCharsPerLine));
+  let lineCount = 1;
+  let currentLineUsage = 0;
+
+  for (const char of trimmed) {
+    if (char === '\n') {
+      lineCount += 1;
+      currentLineUsage = 0;
+      continue;
+    }
+
+    const charWidth = char === '\t' ? 4 : 1;
+
+    if (currentLineUsage === 0) {
+      currentLineUsage = Math.min(charWidth, effectiveChars);
+      continue;
+    }
+
+    if (currentLineUsage + charWidth > effectiveChars) {
+      lineCount += 1;
+      currentLineUsage = Math.min(charWidth, effectiveChars);
+      continue;
+    }
+
+    currentLineUsage += charWidth;
+  }
+
+  return lineCount;
+};
+
 const computeCenter = (node: Required<Pick<DiagramNode, 'x' | 'y'>> & {
   width: number;
   height: number;
@@ -118,9 +154,10 @@ export const createDiagram = (
   config: { nodes: DiagramNode[]; links?: DiagramLink[]; options?: DiagramOptions }
 ) => {
   const { nodes, links = [], options } = config;
-  const width = options?.width ?? defaultWidth;
-  const height = options?.height ?? defaultHeight;
   const background = options?.background ?? '#f8fafc';
+
+  let autoWidth = 0;
+  let autoHeight = 0;
 
   const nodeMap = new Map(
     nodes.map((node) => {
@@ -128,16 +165,23 @@ export const createDiagram = (
       const linesArray = toArray(node.lines);
       const usableWidth = Math.max(40, width - contentPadding * 2);
       const approxCharsPerLine = Math.max(10, Math.floor(usableWidth / approximateCharWidth));
+      const titleLineCount = Math.max(1, estimateWrappedLineCount(node.title, approxCharsPerLine));
       const estimatedBodyLines = linesArray.reduce((count, line) => {
         const trimmed = line.trim();
-        if (!trimmed) return count + 1;
-        return count + Math.max(1, Math.ceil(trimmed.length / approxCharsPerLine));
+        if (!trimmed) {
+          return count + 1;
+        }
+        return count + Math.max(1, estimateWrappedLineCount(trimmed, approxCharsPerLine));
       }, 0);
       const contentHeight =
-        headerLineHeight +
+        titleLineCount * headerLineHeight +
         (estimatedBodyLines > 0 ? lineGap + estimatedBodyLines * bodyLineHeight : 0);
       const minimumHeight = Math.max(90, contentPadding * 2 + contentHeight);
       const height = Math.max(node.height ?? 0, minimumHeight);
+
+      autoWidth = Math.max(autoWidth, node.x + width);
+      autoHeight = Math.max(autoHeight, node.y + height);
+
       return [
         node.id,
         {
@@ -145,10 +189,15 @@ export const createDiagram = (
           width,
           height,
           linesArray,
+          titleLineCount,
+          bodyLineCount: estimatedBodyLines,
         },
       ];
     })
   );
+
+  const width = Math.max(options?.width ?? defaultWidth, Math.ceil(autoWidth + contentPadding));
+  const height = Math.max(options?.height ?? defaultHeight, Math.ceil(autoHeight + contentPadding));
 
   const svgStyle: React.CSSProperties = {
     display: 'block',
@@ -220,7 +269,7 @@ export const createDiagram = (
                     fontSize: 15,
                     fontWeight: 600,
                     lineHeight: `${headerLineHeight}px`,
-                    marginBottom: centerLines.length > 0 ? lineGap : 0,
+                    marginBottom: node.bodyLineCount > 0 ? lineGap : 0,
                     wordBreak: 'break-word',
                   }}
                 >
