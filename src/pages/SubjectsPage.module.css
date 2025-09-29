@@ -291,18 +291,53 @@
   gap: 16px;
 }
 
-.contentEnglish,
-.contentOriginal {
-  margin: 0;
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 12px;
   border-radius: 12px;
   background: var(--ui-surface-subtle, #f1f5f9);
-  color: var(--ui-text-primary, #1f2937);
-  white-space: pre-wrap;
-  line-height: 1.6;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.95rem;
-  overflow-x: auto;
+  line-height: 1.6;
+  color: var(--ui-text-primary, #1f2937);
+}
+
+.contentParagraph {
+  margin: 0;
+}
+
+.contentListBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contentListHeading {
+  margin: 0;
+  font-weight: 600;
+}
+
+.contentList {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contentList li {
+  margin: 0;
+}
+
+.contentEnglish {
+  background: var(--ui-surface-subtle, #f1f5f9);
+}
+
+.contentOriginal {
+  background: rgba(148, 163, 184, 0.12);
 }
 
 .contentOriginalDetails {
@@ -329,7 +364,7 @@
 }
 
 .contentOriginalDetails[open] .contentOriginal {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .translationBlock p {
@@ -487,6 +522,23 @@
   .detailPlaceholder p,
   .labBlock .meta {
     color: rgba(226, 232, 240, 0.82);
+  }
+
+  .contentEnglish,
+  .contentOriginal {
+    background: rgba(15, 23, 42, 0.55);
+  }
+
+  .contentOriginal {
+    background: rgba(148, 163, 184, 0.18);
+  }
+
+  .contentListHeading {
+    color: rgba(226, 232, 240, 0.92);
+  }
+
+  .contentList li {
+    color: rgba(226, 232, 240, 0.9);
   }
 
   .tagPill {

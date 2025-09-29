@@ -120,6 +120,73 @@ const SubjectsPage: React.FC = () => {
     [activeCourse, activeItemId]
   );
 
+  const createContentBlocks = (text: string) => {
+    const sections = text
+      .split(/\n{2,}/)
+      .map((section) => section.trim())
+      .filter(Boolean);
+
+    return sections.map((section) => {
+      const lines = section
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      const bulletLines = lines.filter((line) => line.startsWith('•'));
+
+      if (bulletLines.length === lines.length && bulletLines.length > 0) {
+        return {
+          type: 'list' as const,
+          items: bulletLines.map((line) => line.replace(/^•\s*/, '').trim()),
+        };
+      }
+
+      if (bulletLines.length === lines.length - 1 && !lines[0]?.startsWith('•')) {
+        return {
+          type: 'list' as const,
+          heading: lines[0],
+          items: bulletLines.map((line) => line.replace(/^•\s*/, '').trim()),
+        };
+      }
+
+      return {
+        type: 'paragraph' as const,
+        text: lines.join(' '),
+      };
+    });
+  };
+
+  const renderContentBlocks = (text: string, variant: 'english' | 'original') => {
+    const blocks = createContentBlocks(text);
+
+    return (
+      <div
+        className={`${styles.contentText} ${variant === 'english' ? styles.contentEnglish : styles.contentOriginal}`}
+      >
+        {blocks.map((block, index) => {
+          if (block.type === 'paragraph') {
+            return (
+              <p key={index} className={styles.contentParagraph}>
+                {block.text}
+              </p>
+            );
+          }
+
+          return (
+            <div key={index} className={styles.contentListBlock}>
+              {block.heading && <p className={styles.contentListHeading}>{block.heading}</p>}
+              <ul className={styles.contentList}>
+                {block.items.map((itemText, itemIndex) => (
+                  <li key={itemIndex}>{itemText}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   const renderContentSection = (item: CourseItem | null) => {
     if (!item?.content) {
       return null;
@@ -133,15 +200,15 @@ const SubjectsPage: React.FC = () => {
     return (
       <section className={styles.contentBlock} aria-label="Lesson content">
         <h3>Content</h3>
-        {englishContent && <pre className={styles.contentEnglish}>{englishContent}</pre>}
+        {englishContent && renderContentBlocks(englishContent, 'english')}
         {showOriginalContent &&
           (item.language === 'es' && englishContent ? (
             <details className={styles.contentOriginalDetails}>
               <summary>Ver contenido original en español</summary>
-              <pre className={styles.contentOriginal}>{item.content.original}</pre>
+              {renderContentBlocks(item.content.original, 'original')}
             </details>
           ) : (
-            <pre className={styles.contentOriginal}>{item.content.original}</pre>
+            renderContentBlocks(item.content.original, 'original')
           ))}
       </section>
     );
