@@ -361,18 +361,37 @@
   gap: 8px;
 }
 
-.contentFigure img {
-  width: 100%;
+.contentFigureMedia {
+  position: relative;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border-radius: 12px;
+  padding-bottom: 4px;
+}
+
+.contentFigureMedia::-webkit-scrollbar {
+  height: 8px;
+}
+
+.contentFigureMedia::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+  border-radius: 999px;
+}
+
+.contentFigureMedia > svg,
+.contentFigureMedia > img {
+  display: block;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
 }
 
-.contentFigure svg {
+.contentFigureMedia > svg {
+  background: #ffffff;
+}
+
+.contentFigureMedia > img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
-  background: #ffffff;
 }
 
 .contentFigureCaption {

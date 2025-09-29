@@ -286,7 +286,7 @@ const SubjectsPage: React.FC = () => {
 
             return (
               <figure key={index} className={styles.contentFigure}>
-                {figureContent}
+                <div className={styles.contentFigureMedia}>{figureContent}</div>
                 {block.caption && <figcaption className={styles.contentFigureCaption}>{block.caption}</figcaption>}
               </figure>
             );
