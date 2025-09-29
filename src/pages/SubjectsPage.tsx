@@ -5,6 +5,7 @@ import { CourseItem } from '../types/subject';
 import { describeDueDate } from '../lib/plannerUtils';
 import { subjectResourceLibrary, ResourceLink } from '../data/subjectResources';
 import styles from './SubjectsPage.module.css';
+import { lessonFigureRegistry } from '../components/lessonFigures';
 
 const itemKindIcon: Record<CourseItem['kind'], string> = {
   lesson: '📘',
@@ -120,40 +121,122 @@ const SubjectsPage: React.FC = () => {
     [activeCourse, activeItemId]
   );
 
-  const createContentBlocks = (text: string) => {
-    const sections = text
-      .split(/\n{2,}/)
-      .map((section) => section.trim())
-      .filter(Boolean);
+  type ContentBlock =
+    | { type: 'paragraph'; text: string }
+    | { type: 'heading'; level: 1 | 2 | 3; text: string }
+    | { type: 'list'; heading?: string; items: string[] }
+    | { type: 'figure'; alt: string; caption?: string; src?: string; figureId?: string };
 
-    return sections.map((section) => {
-      const lines = section
-        .split('\n')
-        .map((line) => line.trim())
-        .filter(Boolean);
+  const createContentBlocks = (text: string): ContentBlock[] => {
+    const lines = text.split('\n');
+    const blocks: ContentBlock[] = [];
+    let paragraphBuffer: string[] = [];
+    let listBuffer: string[] | null = null;
+    let listHeading: string | undefined;
+    let pendingListHeading: string | null = null;
 
-      const bulletLines = lines.filter((line) => line.startsWith('•'));
+    const flushParagraph = () => {
+      if (paragraphBuffer.length > 0) {
+        const paragraphText = paragraphBuffer.join(' ').trim();
+        if (paragraphText) {
+          blocks.push({ type: 'paragraph', text: paragraphText });
+        }
+        paragraphBuffer = [];
+      }
+    };
 
-      if (bulletLines.length === lines.length && bulletLines.length > 0) {
-        return {
-          type: 'list' as const,
-          items: bulletLines.map((line) => line.replace(/^•\s*/, '').trim()),
-        };
+    const flushList = () => {
+      if (listBuffer && listBuffer.length > 0) {
+        blocks.push({ type: 'list', heading: listHeading, items: listBuffer });
+      }
+      listBuffer = null;
+      listHeading = undefined;
+    };
+
+    const getNextNonEmptyLine = (startIndex: number) => {
+      for (let i = startIndex; i < lines.length; i += 1) {
+        const next = lines[i].trim();
+        if (next) {
+          return next;
+        }
+      }
+      return null;
+    };
+
+    for (let i = 0; i < lines.length; i += 1) {
+      const rawLine = lines[i];
+      const line = rawLine.trim();
+
+      if (!line) {
+        flushParagraph();
+        flushList();
+        pendingListHeading = null;
+        continue;
       }
 
-      if (bulletLines.length === lines.length - 1 && !lines[0]?.startsWith('•')) {
-        return {
-          type: 'list' as const,
-          heading: lines[0],
-          items: bulletLines.map((line) => line.replace(/^•\s*/, '').trim()),
-        };
+      const headingMatch = line.match(/^(#{1,3})\s+(.*)$/);
+      if (headingMatch) {
+        flushParagraph();
+        flushList();
+        pendingListHeading = null;
+        const level = headingMatch[1].length as 1 | 2 | 3;
+        blocks.push({ type: 'heading', level, text: headingMatch[2].trim() });
+        continue;
       }
 
-      return {
-        type: 'paragraph' as const,
-        text: lines.join(' '),
-      };
-    });
+      const imageMatch = line.match(/^!\[(.*?)]\((.*?)\)$/);
+      if (imageMatch) {
+        flushParagraph();
+        flushList();
+        pendingListHeading = null;
+        let caption: string | undefined;
+        const nextLine = lines[i + 1]?.trim();
+        if (nextLine && /^Caption:/i.test(nextLine)) {
+          caption = nextLine.replace(/^Caption:\s*/i, '').trim();
+          i += 1;
+        }
+        const source = imageMatch[2].trim();
+        const isInlineFigure = source.startsWith('figure:');
+        blocks.push({
+          type: 'figure',
+          alt: imageMatch[1].trim(),
+          ...(isInlineFigure ? { figureId: source.replace(/^figure:/, '') } : { src: source }),
+          ...(caption ? { caption } : {}),
+        });
+        continue;
+      }
+
+      const normalizedListMatch = line.match(/^(?:•|-|\*)\s+(.*)$/);
+      if (normalizedListMatch) {
+        flushParagraph();
+        if (!listBuffer) {
+          listBuffer = [];
+          listHeading = pendingListHeading ?? undefined;
+        }
+        listBuffer.push(normalizedListMatch[1].trim());
+        pendingListHeading = null;
+        continue;
+      }
+
+      if (line.endsWith(':')) {
+        const nextNonEmpty = getNextNonEmptyLine(i + 1);
+        if (nextNonEmpty && /^(?:•|-|\*)\s+/.test(nextNonEmpty)) {
+          flushParagraph();
+          flushList();
+          pendingListHeading = line.replace(/:$/, '').trim();
+          continue;
+        }
+      }
+
+      flushList();
+      pendingListHeading = null;
+      paragraphBuffer.push(line);
+    }
+
+    flushParagraph();
+    flushList();
+
+    return blocks;
   };
 
   const renderContentBlocks = (text: string, variant: 'english' | 'original') => {
@@ -169,6 +252,43 @@ const SubjectsPage: React.FC = () => {
               <p key={index} className={styles.contentParagraph}>
                 {block.text}
               </p>
+            );
+          }
+
+          if (block.type === 'heading') {
+            const HeadingTag = block.level === 1 ? 'h4' : block.level === 2 ? 'h5' : 'h6';
+            const headingClass =
+              block.level === 1
+                ? styles.contentHeadingLevel1
+                : block.level === 2
+                ? styles.contentHeadingLevel2
+                : styles.contentHeadingLevel3;
+            return (
+              <HeadingTag key={index} className={`${styles.contentHeading} ${headingClass}`}>
+                {block.text}
+              </HeadingTag>
+            );
+          }
+
+          if (block.type === 'figure') {
+            const renderer = block.figureId ? lessonFigureRegistry[block.figureId] : undefined;
+            const figureContent = renderer
+              ? renderer(block.alt)
+              : block.src
+              ? (
+                  <img src={block.src} alt={block.alt} />
+                )
+              : null;
+
+            if (!figureContent) {
+              return null;
+            }
+
+            return (
+              <figure key={index} className={styles.contentFigure}>
+                {figureContent}
+                {block.caption && <figcaption className={styles.contentFigureCaption}>{block.caption}</figcaption>}
+              </figure>
             );
           }
 

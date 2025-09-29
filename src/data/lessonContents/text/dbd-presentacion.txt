@@ -1,138 +1,50 @@
-DISEÑO Y GESTIÓN DE 
-BASES DE DATOS
-Grado en Ingeniería Informática
-Módulo de Tecnología Específica: Sistemas de Información
-Profesores: Laura Mota, Pedro Valderas y Abel Gómez
+# Presentación · Diseño y Gestión de Bases de Datos
 
-Grado en Ingeniería Informática
-Semestre Asignatura Carácter T P
-1B
-1A
-2A
-2B
-3A
-3B
-Bases de Datos y Sistemas de Información OB 4,5 1,5
-Diseño y Gestión de Bases de Datos 4,5     1,5
-Sistemas de Información Estratégicos 3       1,5
-Formación en la materia Bases de Datos en el Grado en Ingeniería 
-Informática (Especialización: Sistemas de Información)
-4A
-4B
-Diseño y Gestión de Bases de Datos. Presentación. 2
-Módulo
-SI
+## Información general
+- **Grado:** Ingeniería Informática (Especialización en Sistemas de Información).
+- **Carácter:** Obligatoria (4,5 créditos teoría + 1,5 créditos práctica).
+- **Profesorado:** Laura Mota, Pedro Valderas y Abel Gómez.
 
-Título de Grado en Ingeniería Informática
-Asignatura
-Diseño y Gestión de 
-Bases de Datos
-Bases de Datos y 
-Sistemas de Información
-Estudio y uso avanzado de bases de datos 
-relacionales (SQL). Diseño básico de bases de 
-datos relacionales (UML).
-Objetivo
-Diseño y Gestión de Bases de Datos. Presentación. 3
-Estudio de los aspectos tecnológico de los 
-SGBD relacionales y la administración de 
-sistemas de bases de datos. Diseño avanzado
-de bases de datos relacionales.
+## Propósito de la asignatura
+- Profundizar en la administración y explotación de SGBD relacionales.
+- Diseñar soluciones avanzadas que integren aspectos lógicos y físicos.
+- Complementar los conocimientos adquiridos en “Bases de Datos y Sistemas de Información”.
 
-Objetivos específicos de la asignatura Diseño y Gestión de 
-Bases de Datos:
-Objetivo 1: Gestión y Administración de Bases de Datos
-Estudio de los Sistemas de Gestión de Bases de Datos: componentes, 
-funciones y arquitecturas. 
-Estudio de las estrategias y técnicas para el control de la 
-independencia, la integridad, y la seguridad en los Sistemas de Gestión 
-de Bases de Datos. 
-Estudio de las tareas de administración en un sistema de bases de 
-datos: implementación, optimización, rendimiento.
-Objetivo 2: Diseño de Bases de Datos
-Estudio del diseño físico: factores, desnormalización.
-Programación en el servidor.
-Aplicación a casos de estudio.
-Diseño y Gestión de Bases de Datos. Presentación. 4
+## Objetivos específicos
+- **Gestión y administración:**
+  - Analizar componentes, funciones y arquitecturas de un SGBD.
+  - Dominar estrategias de independencia, integridad y seguridad.
+  - Planificar tareas de implementación, optimización y monitorización.
+- **Diseño avanzado:**
+  - Evaluar factores del diseño físico y decisiones de desnormalización.
+  - Programar lógica en el servidor (PL/SQL, triggers, paquetes).
+  - Aplicar metodologías a casos de estudio reales.
 
-Programa de teoría: Unidades didácticas
+![Mapa de competencias de la asignatura](figure:dbd-presentacion/competencias)
+Caption: Conexión entre gestión, diseño y habilidades prácticas que se desarrollan durante el semestre.
+
+## Programa de teoría
 1. Sistemas de Gestión de Bases de Datos.
-2. Procesamiento de transacciones y mantenimiento de la integridad.
-3. Recuperación de bases de datos.
-4. Control de la concurrencia en bases de datos
-5. Implementación de bases de datos
-6. Optimización de consultas en bases de datos.
+2. Procesamiento de transacciones e integridad.
+3. Recuperación ante fallos.
+4. Control de la concurrencia.
+5. Implementación interna de bases de datos.
+6. Optimización de consultas.
 7. Seguridad en bases de datos.
-8. Diseño físico de bases de datos.
+8. Diseño físico.
 9. Programación en el servidor.
-Diseño y Gestión de Bases de Datos. Presentación. 5
 
-Programa de prácticas: 
-Práctica 1. El SGBD Oracle.
-Práctica 2. Procesamiento de transacciones y 
-mantenimiento de la integridad en Oracle.
-Práctica 3. Recuperación de bases de datos en Oracle.
-Práctica 4. Control de la concurrencia en Oracle.
-Práctica 5. Implementación de bases de datos en Oracle (2 
-sesiones).
-Práctica 6. Optimización de consultas en Oracle.
-Práctica 7. Seguridad en Oracle.
-Práctica 8. Programación en el servidor (2 sesiones).
-Diseño y Gestión de Bases de Datos. Presentación. 6
+## Programa de prácticas
+- **P1:** Introducción al entorno Oracle.
+- **P2:** Procesamiento de transacciones e integridad.
+- **P3:** Recuperación ante fallos.
+- **P4:** Concurrencia en Oracle.
+- **P5:** Implementación física (2 sesiones).
+- **P6:** Optimización de consultas.
+- **P7:** Seguridad.
+- **P8:** Programación en el servidor (2 sesiones).
 
-Evaluación:
-• Prueba escrita PE1:
-• Peso: 35% de la nota final.
-• Unidades didácticas evaluadas: Temas 1, 2, 3 y 4.
-• Realizada en fecha planificada por la escuela.
-• Prueba escrita PE2:
-• Peso: 30% de la nota final.
-• Unidades didácticas evaluadas: Temas 5, 6, 7 y 8.
-• Realizada en fecha planificada por la escuela.
-• Prueba práctica PP1:
-• Peso: 35% de la nota final.
-• Unidades didácticas evaluadas: Tema 9 y prácticas realizadas sobre Oracle.
-• Realizada en fecha planificada por la escuela.
-• Para aprobar, se exige un mínimo de 1 punto en cada una de las tres pruebas 
-(PE1, PE2 y PP1).
-• Recuperación en fecha planificada por la escuela:
-- PE1 y PE2: examen escrito en fecha planificada por la escuela.
-- PP1: examen en laboratorio en fecha planificada por la escuela.
-Diseño y Gestión de Bases de Datos. Presentación. 7
-
-Evaluación:
-• En caso de presentarse a la recuperación de algún acto, la nota que será tenida en 
-cuenta será la última obtenida. Si tras la recuperación no se cumple el requisito de 
-mínimos arriba descrito, la calificación máxima que se podrá obtener en la 
-asignatura será de 4,5 puntos.
-• La evaluación para los alumnos con dispensa será la misma que para los alumnos 
-sin dispensa.
-Diseño y Gestión de Bases de Datos. Presentación. 8
-
-Bibliografía:
- Fundamentals of Database Systems (6th ed.). Elmasri, R.; 
-Navathe, S.B. Addison-Wesley, 2011.
-(Edición en español: Fundamentos de Sistemas de Bases de Datos. (5ª ed.) 
-Elmasri, R.; Navathe, S. Addison Wesley, Prentice Hall, 2007)
-An Introduction to Database Systems. (8th ed.)  Date, C.J, 
-Prentice Hall, 2003
-(Edición en español: Introducción a los Sistemas de Bases de Datos. (7ª ed.)      
-Date, CJ, Prentice Hall, 2001)
-Diseño y Gestión de Bases de Datos. Presentación. 9
-
-Bibliografía:
- Database Administration. 
-Mullins C. S. Addison Wesley, 2013
- Database Systems Implementation. 
-García Molina, H.; Ullman, J.; Widom, J. Morgan Kaufman, 2001
- Databases and Transaction Processing.                                           
-Lewis, P.; Berstein, A.; Kifer, M. Springer, 2002
- Database Tuning
-Shasha, D.; Bonet, P. Morgan Kaufman, 2003
- Database Management Systems
-Ramakrishnan, R. McGraw Hill, 1998
- Database Design for Smarties
-Muller R.J. Springer, 2002
- Database Design: Know it All
-Buxton, S., Fryman, L. et al. Morgan Kaufmann, 2009
-Diseño y Gestión de Bases de Datos. Presentación. 10
+## Evaluación orientativa
+- Participación en laboratorio y entregas asociadas a cada práctica.
+- Pruebas escritas que cubren bloques teóricos específicos.
+- Proyecto o caso integrador con énfasis en administración y diseño.

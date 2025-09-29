@@ -1,103 +1,47 @@
-Advanced methods of artificial vision
-Presentation
+# T0 · Advanced Methods of Artificial Vision
 
-Faculty
-• Aula 4P - 1.2
-– Rocío del Amor, madeam2.upv.es
-2
+## Objetivos de la sesión
+- Conocer la estructura del curso y las personas de referencia.
+- Entender cómo se organizarán teoría, prácticas y evaluación.
+- Identificar los recursos tecnológicos y bibliográficos necesarios.
 
-Syllabus
-3
+## Equipo docente y logística
+- **Profesora responsable:** Rocío del Amor (madeam2@upv.es).
+- **Aula:** 4P – 1.2 con dinámica híbrida entre masterclass y notebook colaborativo.
+- Se trabajará con **Google Colab**; a partir de la próxima sesión es imprescindible traer portátil con acceso a la plataforma.
 
-Computer vision
-4
+## Plan docente
+- **Bloques teóricos:**
+  1. Extracción de características manuales.
+  2. Extracción basada en CNN.
+  3. Transformadores para visión.
+  4. Modelos grandes Visión-Lenguaje.
+  5. Metodologías avanzadas de aprendizaje.
+  6. Autoencoders.
+  7. Segmentación.
+  8. Detección y seguimiento.
+  9. Redes generativas adversarias.
+- **Prácticas asociadas:** P1–P5 cubren desde descriptores manuales hasta GANs.
+- **Evaluaciones clave:**
+  - Examen parcial (T1–T5): 5 de noviembre de 2025.
+  - Examen final (T6–T9): 21 de enero de 2025.
+  - Presentación del proyecto: 15 de enero de 2025.
 
-Syllabus
-5
-Theory:
-T0. Presentation
-T1. Hand-crafted feature extraction (P1) 
-T2. CNN-based feature extraction
-T3. Transformer-based feature extraction 
-T4. Large Vision-Language Models
-T5. Avanced Learning Methodologies (P2) 
-T6. Autoencoders 
-T7. Segmentation (P3) 
-T8. Object detection and tracking (P4) 
-T9. Generative adversarial networks (P5)
+![Cronograma de teoría, prácticas y evaluaciones](figure:admeav/t0-roadmap)
+Caption: Resumen visual de los hitos del semestre y relación entre temas, prácticas y exámenes.
 
-Syllabus
-T0,T1
- T1
-T2
-T1
-T2
-T2
- T3
-T4
-T5
-EX
- T6T3
-T7
-T9
-T9
-T8
-P1
-P2
- P3
-T3
- T3
-T5
-R
-6
-T7
-T8T8
-T6
-P4
-T9
-P5
-T
-EX
-05/11/2025
-Exam (T1-T5)
-21/01/2025
-Exam (T6-T9)
-15/01/2025
-Project presentation
+## Metodología de las clases teóricas
+- Cada sesión magistral se acompaña de un **notebook interactivo** para experimentar con código.
+- Se alternarán **explicaciones guiadas** (15–20 minutos) con bloques prácticos en Colab.
+- Se fomentará el trabajo colaborativo y la discusión guiada.
 
-Theoretical class structure
-• The theory classes will be 
-accompanied by a notebook 
-in Python (Google Collab).
-• Starting from the next 
-session, it is essential that 
-you all bring your computers 
-with a Google Collab 
-account.
-https://colab.research.google.com
-Jupyter Notebook
-15 o 20 minutos
-Theory class
-Masterclass 
-(*.PPT)
-7
+## Sistema de evaluación
+- **Laboratorio (20 %)**: participación y entregables desarrollados durante las sesiones prácticas.
+- **Pruebas escritas (40 %)**: dos exámenes que combinan teoría y resolución de problemas.
+- **Proyecto final (40 %)**: evaluación del código (20 %) y defensa oral (20 %). Se permite recuperar el proyecto tras feedback.
+- La **nota final** será el máximo entre la evaluación ordinaria y la recuperación.
 
-Assesment
-8
-The assessment of the content will consist of two parts:
-- Participation and performance in lab sessions (20% of the mark). They 
-will be assessed through the work done in the laboratory class.
-- Theoretical-practical contents (40% of the mark). They will be evaluated 
-through two written tests, each accounting for 20% of the mark, one in the 
-middle of the semester and another at the end.
-- Evaluation of the work (40% of the mark): the code presented (20%) and 
-an oral presentation of the same (20%) will be evaluated. The work may be 
-recovered by improving it as necessary in order to pass the evaluation.
-The final mark of the course, for all students, will be the maximum between the 
-ordinary evaluation and the recovery.
-
-References
-• Deep learning (Goodfellow, Ian)
-• Deep learning with Python (Chollet, François)
-• Deep Learning: Foundations and Concepts (Bishop)
-9
+## Bibliografía recomendada
+- Goodfellow, Bengio & Courville — *Deep Learning*.
+- Chollet — *Deep Learning with Python*.
+- Bishop — *Deep Learning: Foundations and Concepts*.
