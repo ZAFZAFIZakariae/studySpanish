@@ -19,6 +19,7 @@ export type DiagramLink = {
   to: string;
   label?: string;
   dashed?: boolean;
+  via?: { x: number; y: number }[];
 };
 
 export type DiagramOptions = {
@@ -44,7 +45,8 @@ const contentPadding = 16;
 const headerLineHeight = 22;
 const bodyLineHeight = 18;
 const lineGap = 8;
-const approximateCharWidth = 6.2;
+const approximateCharWidth = 5.2;
+const minimumNodeWidth = 160;
 
 const estimateWrappedLineCount = (text: string, approxCharsPerLine: number) => {
   const trimmed = text.trim();
@@ -80,6 +82,25 @@ const estimateWrappedLineCount = (text: string, approxCharsPerLine: number) => {
   }
 
   return lineCount;
+};
+
+const collectSegments = (title: string, lines: string[]) => {
+  const segments: string[] = [];
+  const pushSegments = (value: string) => {
+    value
+      .split(/\r?\n/)
+      .map((segment) => segment.trim())
+      .forEach((segment) => {
+        if (segment) {
+          segments.push(segment);
+        }
+      });
+  };
+
+  pushSegments(title);
+  lines.forEach(pushSegments);
+
+  return segments;
 };
 
 const computeCenter = (node: Required<Pick<DiagramNode, 'x' | 'y'>> & {
@@ -149,6 +170,36 @@ const clampPadding = (lineLength: number, requested: number) => {
   return Math.max(0, Math.min(requested, maxPadding));
 };
 
+const sanitizePoints = (points: { x: number; y: number }[]) =>
+  points.map((point) => ({ x: Number(point.x) || 0, y: Number(point.y) || 0 }));
+
+const applySegmentPadding = (points: Point[]) => {
+  if (points.length < 2) {
+    return points;
+  }
+
+  const [first, second] = points;
+  const lastIndex = points.length - 1;
+  const last = points[lastIndex];
+  const penultimate = points[lastIndex - 1];
+
+  const firstSegmentLength = Math.hypot(second.x - first.x, second.y - first.y);
+  const lastSegmentLength = Math.hypot(last.x - penultimate.x, last.y - penultimate.y);
+
+  const startPadding = clampPadding(firstSegmentLength, 16);
+  const endPadding = clampPadding(lastSegmentLength, 24);
+
+  const start =
+    startPadding > 0 ? adjustPointAlongLine(first, second, startPadding) : { ...first };
+  const end = endPadding > 0 ? adjustPointAlongLine(last, penultimate, endPadding) : { ...last };
+
+  if (points.length === 2) {
+    return [start, end];
+  }
+
+  return [start, ...points.slice(1, -1), end];
+};
+
 export const createDiagram = (
   altText: string,
   config: { nodes: DiagramNode[]; links?: DiagramLink[]; options?: DiagramOptions }
@@ -161,8 +212,16 @@ export const createDiagram = (
 
   const nodeMap = new Map(
     nodes.map((node) => {
-      const width = node.width ?? 170;
       const linesArray = toArray(node.lines);
+      const textSegments = collectSegments(node.title, linesArray);
+      const longestSegment = textSegments.reduce((max, segment) => Math.max(max, segment.length), 0);
+      const baseWidth = node.width ?? minimumNodeWidth;
+      const estimatedContentWidth =
+        longestSegment > 0 ? longestSegment * approximateCharWidth + approximateCharWidth * 2 : 0;
+      const width = Math.max(
+        minimumNodeWidth,
+        Math.ceil(Math.max(baseWidth, contentPadding * 2 + estimatedContentWidth))
+      );
       const usableWidth = Math.max(40, width - contentPadding * 2);
       const approxCharsPerLine = Math.max(10, Math.floor(usableWidth / approximateCharWidth));
       const titleLineCount = Math.max(1, estimateWrappedLineCount(node.title, approxCharsPerLine));
@@ -176,7 +235,7 @@ export const createDiagram = (
       const contentHeight =
         titleLineCount * headerLineHeight +
         (estimatedBodyLines > 0 ? lineGap + estimatedBodyLines * bodyLineHeight : 0);
-      const minimumHeight = Math.max(90, contentPadding * 2 + contentHeight);
+      const minimumHeight = Math.max(110, contentPadding * 2 + contentHeight + bodyLineHeight);
       const height = Math.max(node.height ?? 0, minimumHeight);
 
       autoWidth = Math.max(autoWidth, node.x + width);
@@ -262,6 +321,7 @@ export const createDiagram = (
                   textAlign: 'center',
                   height: '100%',
                   color: fontColor,
+                  whiteSpace: 'pre-line',
                 }}
               >
                 <div
@@ -271,6 +331,7 @@ export const createDiagram = (
                     lineHeight: `${headerLineHeight}px`,
                     marginBottom: node.bodyLineCount > 0 ? lineGap : 0,
                     wordBreak: 'break-word',
+                    whiteSpace: 'pre-line',
                   }}
                 >
                   {node.title}
@@ -284,6 +345,7 @@ export const createDiagram = (
                       marginTop: index === 0 ? 0 : 4,
                       color: fontColor === '#0f172a' ? '#1f2937' : fontColor,
                       wordBreak: 'break-word',
+                      whiteSpace: 'pre-line',
                     }}
                   >
                     {line}
@@ -298,47 +360,83 @@ export const createDiagram = (
         const fromNode = nodeMap.get(link.from);
         const toNode = nodeMap.get(link.to);
         if (!fromNode || !toNode) return null;
-        const fromCenter = computeCenter(fromNode);
+        const viaPoints = sanitizePoints(link.via ?? []);
         const toCenter = computeCenter(toNode);
-        const fromEdge = computeEdgePoint(fromNode, toCenter);
-        const toEdge = computeEdgePoint(toNode, fromCenter);
-        const baseDx = toEdge.x - fromEdge.x;
-        const baseDy = toEdge.y - fromEdge.y;
-        const baseLength = Math.hypot(baseDx, baseDy);
-        const startPadding = clampPadding(baseLength, 12);
-        const endPadding = clampPadding(baseLength, 18);
-        const start = adjustPointAlongLine(fromEdge, toEdge, startPadding);
-        const end = adjustPointAlongLine(toEdge, fromEdge, endPadding);
-        const lineDx = end.x - start.x;
-        const lineDy = end.y - start.y;
-        const lineLength = Math.hypot(lineDx, lineDy) || 1;
-        const midX = (start.x + end.x) / 2;
-        const midY = (start.y + end.y) / 2;
-        const labelDistance = Math.min(18, lineLength / 3);
-        let normalX = -lineDy / lineLength;
-        let normalY = lineDx / lineLength;
-        if (normalY > 0) {
-          normalX *= -1;
-          normalY *= -1;
+        const fromCenter = computeCenter(fromNode);
+
+        const firstTarget = viaPoints[0] ?? toCenter;
+        const lastTarget = viaPoints.length > 0 ? viaPoints[viaPoints.length - 1] : fromCenter;
+
+        const fromEdge = computeEdgePoint(fromNode, firstTarget);
+        const toEdge = computeEdgePoint(toNode, lastTarget);
+
+        const rawPoints: Point[] = [fromEdge, ...viaPoints, toEdge];
+        const paddedPoints = applySegmentPadding(rawPoints);
+
+        const pathD = paddedPoints
+          .map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`)
+          .join(' ');
+
+        type Segment = { start: Point; end: Point; dx: number; dy: number; length: number };
+        const segments: Segment[] = [];
+
+        for (let index = 1; index < paddedPoints.length; index += 1) {
+          const startPoint = paddedPoints[index - 1];
+          const endPoint = paddedPoints[index];
+          const dx = endPoint.x - startPoint.x;
+          const dy = endPoint.y - startPoint.y;
+          const length = Math.hypot(dx, dy);
+          segments.push({ start: startPoint, end: endPoint, dx, dy, length });
         }
-        const labelX = midX + normalX * labelDistance;
-        const labelY = midY + normalY * labelDistance;
+
+        const totalLength = segments.reduce((sum, segment) => sum + segment.length, 0);
+
+        let labelX = 0;
+        let labelY = 0;
+        let normalX = 0;
+        let normalY = -1;
+
+        if (totalLength > 0) {
+          const target = totalLength / 2;
+          let travelled = 0;
+
+          for (const segment of segments) {
+            if (travelled + segment.length >= target) {
+              const remaining = target - travelled;
+              const ratio = segment.length > 0 ? remaining / segment.length : 0;
+              labelX = segment.start.x + segment.dx * ratio;
+              labelY = segment.start.y + segment.dy * ratio;
+              const scale = segment.length > 0 ? segment.length : 1;
+              normalX = -segment.dy / scale;
+              normalY = segment.dx / scale;
+              break;
+            }
+            travelled += segment.length;
+          }
+
+          if (normalY > 0) {
+            normalX *= -1;
+            normalY *= -1;
+          }
+        }
+
+        const labelDistance = Math.min(18, totalLength > 0 ? totalLength / 3 : 0);
+        const offsetLabelX = labelX + normalX * labelDistance;
+        const offsetLabelY = labelY + normalY * labelDistance;
         return (
           <g key={`${link.from}-${link.to}-${link.label ?? 'plain'}`}>
-            <line
-              x1={start.x}
-              y1={start.y}
-              x2={end.x}
-              y2={end.y}
+            <path
+              d={pathD}
+              fill="none"
               stroke="#0f172a"
               strokeWidth={1.6}
               strokeDasharray={link.dashed ? '6 4' : undefined}
               markerEnd="url(#diagram-arrowhead)"
             />
-            {link.label && (
+            {link.label && totalLength > 0 && (
               <text
-                x={labelX}
-                y={labelY}
+                x={offsetLabelX}
+                y={offsetLabelY}
                 textAnchor="middle"
                 dominantBaseline="central"
                 fontSize={12}

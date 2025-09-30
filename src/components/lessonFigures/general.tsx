@@ -195,6 +195,64 @@ export const generalFigures: Record<string, FigureRenderer> = {
         { from: 'center', to: 'durability' },
       ],
     }),
+  'dbd-tema-2/recuperacion': (altText) =>
+    createDiagram(altText, {
+      nodes: [
+        {
+          id: 'buffer',
+          x: 40,
+          y: 160,
+          width: 200,
+          title: 'Buffer manager',
+          lines: ['Páginas sucias', 'Pin / unpin'],
+        },
+        {
+          id: 'recovery',
+          x: 300,
+          y: 100,
+          width: 220,
+          title: 'Recovery manager',
+          lines: ['Analiza', 'Rehace / deshace'],
+          fill: '#fef3c7',
+        },
+        {
+          id: 'log',
+          x: 300,
+          y: 260,
+          width: 220,
+          title: 'Registro WAL',
+          lines: ['Entradas REDO / UNDO'],
+          fill: '#ede9fe',
+        },
+        {
+          id: 'disk',
+          x: 580,
+          y: 160,
+          width: 200,
+          title: 'Ficheros de datos',
+          lines: ['Segmentos en disco'],
+          fill: '#dcfce7',
+        },
+        {
+          id: 'checkpoint',
+          x: 300,
+          y: 20,
+          width: 200,
+          title: 'Checkpoint',
+          lines: ['LSN', 'Dirty page table'],
+        },
+      ],
+      links: [
+        { from: 'buffer', to: 'recovery', label: 'Páginas modificadas' },
+        { from: 'recovery', to: 'buffer', label: 'Operaciones UNDO', via: [{ x: 200, y: 60 }] },
+        { from: 'recovery', to: 'log', label: 'Registros REDO/UNDO' },
+        { from: 'log', to: 'recovery', label: 'Lectura secuencial', dashed: true },
+        { from: 'log', to: 'disk', label: 'Flush WAL', via: [{ x: 520, y: 300 }] },
+        { from: 'recovery', to: 'disk', label: 'Forzar escritura', via: [{ x: 480, y: 80 }] },
+        { from: 'checkpoint', to: 'log', label: 'Marca LSN' },
+        { from: 'checkpoint', to: 'disk', label: 'Sincroniza buffers', via: [{ x: 520, y: 40 }] },
+      ],
+    }),
   'dbd-presentacion/competencias': (altText) =>
     createDiagram(altText, {
       nodes: [

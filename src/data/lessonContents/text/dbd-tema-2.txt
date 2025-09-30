@@ -34,6 +34,16 @@ Caption: Main transaction states and transitions triggered by commits, rollbacks
 ![ACID properties and supporting mechanisms (Propiedades ACID y mecanismos de soporte)](figure:dbd-tema-2/acid)
 Caption: How ACID properties map to DBMS components that enforce them.
 
+### Recovery architecture (Arquitectura de recuperación)
+![DBMS recovery workflow (Flujo de recuperación de un SGBD)](figure:dbd-tema-2/recuperacion)
+Caption: Recovery manager interactions across buffer manager, WAL log, checkpoints, and persistent data files.
+
+- **Buffer manager** pushes dirty pages and reports failures when a page cannot be written.
+- **Recovery manager** inspects the log, generates REDO/UNDO actions, and orchestrates rollbacks.
+- **Write-ahead logging (WAL)** flushes records to disk before data pages to guarantee durability.
+- **Checkpoints** capture the log sequence number (LSN) and dirty page table so restart work is bounded.
+- **Data files** receive forced writes when the recovery manager issues redo or checkpoint flushes.
+
 ## 4. Transactions in SQL (Transacciones en SQL)
 - A transaction starts implicitly with the first DML statement and ends with `COMMIT` or `ROLLBACK`.
 - You can delimit it explicitly with `BEGIN TRANSACTION` / `START TRANSACTION`.

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { subjectCatalog, computeCatalogInsights } from '../data/subjectCatalog';
 import { CourseItem } from '../types/subject';
@@ -164,15 +164,6 @@ const SubjectsPage: React.FC = () => {
   const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
   const [activeCourseId, setActiveCourseId] = useState<string | null>(null);
   const [activeItemId, setActiveItemId] = useState<string | null>(null);
-  const compactUserOverride = useRef(false);
-  const [compactMode, setCompactMode] = useState<boolean>(() => {
-    if (typeof window === 'undefined') {
-      return false;
-    }
-    return typeof window.matchMedia === 'function'
-      ? window.matchMedia('(max-width: 1100px)').matches
-      : false;
-  });
 
   useEffect(() => {
     setActiveSubjectId(initialSubjectId);
@@ -200,23 +191,6 @@ const SubjectsPage: React.FC = () => {
     setSearchParams(next, { replace: true });
   }, [activeSubjectId, searchParams, setSearchParams]);
 
-  useEffect(() => {
-    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
-      return;
-    }
-    const media = window.matchMedia('(max-width: 1100px)');
-    const handleChange = (event: MediaQueryListEvent) => {
-      if (!compactUserOverride.current) {
-        setCompactMode(event.matches);
-      }
-    };
-    if (!compactUserOverride.current) {
-      setCompactMode(media.matches);
-    }
-    media.addEventListener('change', handleChange);
-    return () => media.removeEventListener('change', handleChange);
-  }, []);
-
   const activeSubject = useMemo(
     () => subjectCatalog.find((subject) => subject.id === activeSubjectId),
     [activeSubjectId]
@@ -231,18 +205,6 @@ const SubjectsPage: React.FC = () => {
     () => (activeCourse ? activeCourse.items.find((item) => item.id === activeItemId) ?? null : null),
     [activeCourse, activeItemId]
   );
-  const handleToggleCompactMode = () => {
-    compactUserOverride.current = true;
-    setCompactMode((prev) => !prev);
-  };
-  const activeItemHasFigures = useMemo(() => {
-    if (!activeItem?.content) {
-      return false;
-    }
-    const original = activeItem.content.original ?? '';
-    const english = activeItem.content.english ?? '';
-    return /figure:/.test(`${original}\n${english}`);
-  }, [activeItem]);
   const translationDetails = useMemo(() => {
     if (!activeItem?.translation) {
       return null;
@@ -504,11 +466,7 @@ const SubjectsPage: React.FC = () => {
     return blocks;
   };
 
-  const renderContentBlocks = (
-    text: string,
-    variant: 'english' | 'original',
-    options: { hideFigures?: boolean } = {},
-  ) => {
+  const renderContentBlocks = (text: string, variant: 'english' | 'original') => {
     const blocks = createContentBlocks(text);
 
     return (
@@ -563,10 +521,6 @@ const SubjectsPage: React.FC = () => {
           }
 
           if (block.type === 'figure') {
-            if (options.hideFigures) {
-              return null;
-            }
-
             return (
               <LessonFigure
                 key={index}
@@ -640,15 +594,15 @@ const SubjectsPage: React.FC = () => {
     return (
       <section className={styles.contentBlock} aria-label="Lesson content">
         <h3>Content</h3>
-        {englishContent && renderContentBlocks(englishContent, 'english', { hideFigures: compactMode })}
+        {englishContent && renderContentBlocks(englishContent, 'english')}
         {showOriginalContent &&
           (item.language === 'es' && englishContent ? (
             <details className={styles.contentOriginalDetails}>
               <summary>Ver contenido original en español</summary>
-              {renderContentBlocks(item.content.original, 'original', { hideFigures: compactMode })}
+              {renderContentBlocks(item.content.original, 'original')}
             </details>
           ) : (
-            renderContentBlocks(item.content.original, 'original', { hideFigures: compactMode })
+            renderContentBlocks(item.content.original, 'original')
           ))}
       </section>
     );
@@ -769,7 +723,7 @@ const SubjectsPage: React.FC = () => {
               <p className={styles.meta}>Choose a lesson or lab from the tree to load the full study kit.</p>
             </div>
           ) : (
-            <article className={styles.itemDetail} data-compact={compactMode ? 'on' : 'off'}>
+            <article className={styles.itemDetail}>
               <header className={styles.detailHeader}>
                 <p className={styles.breadcrumb}>
                   <span>{activeSubject.name}</span>
@@ -788,18 +742,6 @@ const SubjectsPage: React.FC = () => {
                   {activeItem.estimatedMinutes && <span>{formatMinutes(activeItem.estimatedMinutes)}</span>}
                   {activeItem.status && <span>{statusCopy[activeItem.status]}</span>}
                 </div>
-                {activeItemHasFigures && (
-                  <button
-                    type="button"
-                    className={`${styles.compactToggle} ${compactMode ? styles.compactToggleActive : ''}`}
-                    aria-pressed={compactMode}
-                    onClick={handleToggleCompactMode}
-                    title={compactMode ? 'Show full layout with illustrations' : 'Hide illustrations for a compact view'}
-                  >
-                    <span aria-hidden="true">{compactMode ? '🗂️' : '🖼️'}</span>
-                    <span>{compactMode ? 'Compact mode on' : 'Compact mode off'}</span>
-                  </button>
-                )}
               </header>
 
               <section className={styles.summaryBlock} aria-label="Lesson summary">
