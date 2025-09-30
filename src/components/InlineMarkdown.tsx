@@ -1,7 +1,6 @@
 import React from 'react';
-import katex from 'katex';
-import 'katex/dist/katex.min.css';
 import styles from './InlineMarkdown.module.css';
+import { loadKatex } from '@/utils/loadKatex';
 
 const superscriptMap: Record<string, string> = {
   '⁰': '0',
@@ -165,42 +164,89 @@ const preprocessText = (text: string) => {
   return convertEquationSegments(withNumericVectors);
 };
 
-const renderMath = (expression: string, key: number, displayMode = false) => {
+const MathExpression: React.FC<{ expression: string; displayMode?: boolean }> = ({
+  expression,
+  displayMode = false,
+}) => {
   const trimmed = expression.trim();
+  const [html, setHtml] = React.useState<string | null>(null);
+  const [hasError, setHasError] = React.useState(false);
+
+  React.useEffect(() => {
+    let cancelled = false;
+
+    if (!trimmed) {
+      setHtml(null);
+      setHasError(false);
+      return;
+    }
+
+    const render = async () => {
+      try {
+        const katex = await loadKatex();
+        if (!katex || cancelled) {
+          if (!cancelled) {
+            setHasError(true);
+            setHtml(null);
+          }
+          return;
+        }
+
+        const rendered = katex.renderToString(trimmed, {
+          throwOnError: false,
+          displayMode,
+          strict: 'ignore',
+        });
+
+        if (!cancelled) {
+          setHtml(rendered);
+          setHasError(false);
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setHasError(true);
+          setHtml(null);
+        }
+      }
+    };
+
+    render();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [trimmed, displayMode]);
+
   if (!trimmed) {
     return null;
   }
-  try {
-    const html = katex.renderToString(trimmed, {
-      throwOnError: false,
-      displayMode,
-      strict: 'ignore',
-    });
+
+  if (html) {
     if (displayMode) {
       return (
-        <div
-          key={`md-math-${key}`}
-          className={styles.blockMath}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className={styles.blockMath} dangerouslySetInnerHTML={{ __html: html }} />
       );
     }
     return (
-      <span
-        key={`md-math-${key}`}
-        className={styles.inlineMath}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    );
-  } catch (error) {
-    const fallbackClassName = `${styles.inlineMath} ${styles.mathError}`;
-    return (
-      <span key={`md-math-${key}`} className={fallbackClassName}>
-        {expression}
-      </span>
+      <span className={styles.inlineMath} dangerouslySetInnerHTML={{ __html: html }} />
     );
   }
+
+  if (hasError) {
+    const fallbackClassName = `${styles.inlineMath} ${styles.mathError}`;
+    return <span className={fallbackClassName}>{expression}</span>;
+  }
+
+  if (displayMode) {
+    return <div className={styles.blockMath}>{expression}</div>;
+  }
+
+  return <span className={styles.inlineMath}>{expression}</span>;
 };
+
+const renderMath = (expression: string, key: number, displayMode = false) => (
+  <MathExpression key={`md-math-${key}`} expression={expression} displayMode={displayMode} />
+);
 
 const renderTokens = (text: string): React.ReactNode[] => {
   const pattern = new RegExp(

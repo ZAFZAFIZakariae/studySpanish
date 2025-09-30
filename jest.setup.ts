@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
 
-jest.mock('katex', () => ({
-  __esModule: true,
-  default: {
-    renderToString: jest.fn(() => '<span class="katex-mock" />'),
-  },
-}));
+jest.mock('@/utils/loadKatex', () => {
+  const renderToString = jest.fn(() => '<span class="katex-mock" />');
+  return {
+    loadKatex: jest.fn(() => Promise.resolve({ renderToString })),
+  };
+});
 
 export {};
