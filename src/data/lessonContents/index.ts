@@ -7,11 +7,13 @@ const cloneTranslation = (translation?: TranslationSupport): TranslationSupport 
     return undefined;
   }
 
-  const { glossary, ...rest } = translation;
+  const { glossary, vocabulary, milestones, ...rest } = translation;
 
   return {
     ...rest,
     ...(glossary ? { glossary: [...glossary] } : {}),
+    ...(vocabulary ? { vocabulary: vocabulary.map((entry) => ({ ...entry })) } : {}),
+    ...(milestones ? { milestones: milestones.map((milestone) => ({ ...milestone })) } : {}),
   };
 };
 

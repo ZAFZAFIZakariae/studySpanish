@@ -1,0 +1,16 @@
+.inlineMath {
+  font-family: var(--ui-font-mono, 'JetBrains Mono', 'Fira Code', monospace);
+  background: rgba(148, 163, 184, 0.2);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.inlineSub {
+  font-size: 0.85em;
+  vertical-align: sub;
+}
+
+.inlineSup {
+  font-size: 0.85em;
+  vertical-align: super;
+}

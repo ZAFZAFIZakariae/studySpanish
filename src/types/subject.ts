@@ -2,11 +2,24 @@ export type SubjectLanguage = 'en' | 'es';
 
 export type TranslationStatus = 'complete' | 'partial' | 'machine' | 'planned';
 
+export interface TranslationMilestone {
+  label: string;
+  date: string;
+}
+
+export interface TranslationVocabularyEntry {
+  term: string;
+  translation: string;
+  note?: string;
+}
+
 export interface TranslationSupport {
   status: TranslationStatus;
-  summary: string;
+  summary?: string;
   notes?: string;
   glossary?: string[];
+  vocabulary?: TranslationVocabularyEntry[];
+  milestones?: TranslationMilestone[];
 }
 
 export type CourseItemKind = 'lesson' | 'reading' | 'assignment' | 'lab' | 'project';
@@ -35,6 +48,11 @@ export interface CourseItem {
     environment: string;
     checklists: string[];
     deliverable?: string;
+  };
+  notebook?: {
+    id: string;
+    path: string;
+    colabUrl?: string;
   };
 }
 

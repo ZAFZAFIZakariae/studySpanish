@@ -39,11 +39,10 @@
 }
 
 .tree {
-  border-radius: 18px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: #ffffff;
   padding: 16px;
-  box-shadow: 0 18px 40px -32px rgba(15, 23, 42, 0.35);
 }
 
 .treeList,
@@ -77,18 +76,17 @@
   gap: 12px;
   align-items: flex-start;
   cursor: pointer;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition: background 0.18s ease;
 }
 
 .treeSubject:hover,
 .treeSubject:focus-visible {
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(148, 163, 184, 0.16);
   outline: none;
 }
 
 .treeSubjectActive {
-  background: rgba(16, 185, 129, 0.16);
-  transform: translateY(-1px);
+  background: rgba(37, 99, 235, 0.12);
 }
 
 .treeMeta {
@@ -113,25 +111,24 @@
   width: 100%;
   text-align: left;
   border: none;
-  background: rgba(15, 23, 42, 0.03);
+  background: rgba(148, 163, 184, 0.08);
   padding: 12px;
   border-radius: 12px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition: background 0.18s ease;
 }
 
 .treeCourse:hover,
 .treeCourse:focus-visible {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(148, 163, 184, 0.18);
   outline: none;
 }
 
 .treeCourseActive {
-  background: rgba(59, 130, 246, 0.22);
-  transform: translateY(-1px);
+  background: rgba(37, 99, 235, 0.15);
 }
 
 .treeCourseHead {
@@ -145,7 +142,7 @@
   width: 100%;
   text-align: left;
   border: none;
-  background: rgba(148, 163, 184, 0.15);
+  background: rgba(241, 245, 249, 0.9);
   padding: 10px 12px;
   border-radius: 10px;
   cursor: pointer;
@@ -153,19 +150,20 @@
   grid-template-columns: 24px 1fr auto;
   gap: 8px;
   align-items: center;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition: background 0.18s ease, border-color 0.18s ease;
+  border: 1px solid transparent;
 }
 
 .treeItem:hover,
 .treeItem:focus-visible {
-  background: rgba(79, 70, 229, 0.22);
+  background: rgba(224, 231, 255, 0.5);
+  border-color: rgba(129, 140, 248, 0.4);
   outline: none;
 }
 
 .treeItemActive {
-  background: rgba(129, 140, 248, 0.32);
+  background: rgba(129, 140, 248, 0.25);
   color: #1e1b4b;
-  transform: translateY(-1px);
 }
 
 .treeItemIcon {
@@ -186,12 +184,11 @@
 }
 
 .detail {
-  border-radius: 20px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: #ffffff;
   padding: 28px;
   min-height: 420px;
-  box-shadow: 0 24px 48px -36px rgba(15, 23, 42, 0.4);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -249,6 +246,23 @@
   color: var(--ui-text-secondary, #475569);
 }
 
+.compactToggle {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: rgba(241, 245, 249, 0.8);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.compactToggleActive {
+  background: rgba(226, 232, 240, 0.8);
+}
+
 .summaryBlock,
 .contentBlock,
 .translationBlock,
@@ -272,19 +286,47 @@
   font-size: 1.2rem;
 }
 
-.summaryEnglish {
+.summaryStack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summaryChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.24);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.summaryEnglish,
+.summaryOriginal,
+.summaryPlaceholder {
   margin: 0;
   line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.summaryEnglish {
   color: var(--ui-text-primary, #1f2937);
   white-space: pre-line;
 }
 
 .summaryOriginal {
-  margin: 0;
-  line-height: 1.5;
   color: var(--ui-text-secondary, #475569);
-  font-style: italic;
   white-space: pre-line;
+}
+
+.summaryPlaceholder {
+  color: var(--ui-text-tertiary, #64748b);
+  font-style: italic;
 }
 
 .contentBlock {
@@ -354,6 +396,14 @@
   margin: 0;
 }
 
+.contentOrderedList {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .contentFigure {
   margin: 0;
   display: flex;
@@ -382,7 +432,9 @@
 .contentFigureMedia > img {
   display: block;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--ui-border, #e2e8f0);
+  box-shadow: none;
+  background: #ffffff;
 }
 
 .contentFigureMedia > svg {
@@ -398,6 +450,60 @@
   margin: 0;
   font-size: 0.85rem;
   color: var(--ui-text-secondary, #475569);
+}
+
+.contentFigureFallback {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 12px;
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+  padding: 16px;
+  background: rgba(241, 245, 249, 0.6);
+  color: var(--ui-text-secondary, #475569);
+  font-size: 0.9rem;
+}
+
+.contentFigureFallback span {
+  font-size: 1.1rem;
+}
+
+.contentCallout {
+  border-left: 4px solid rgba(148, 163, 184, 0.6);
+  background: rgba(241, 245, 249, 0.6);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contentCalloutNote {
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+.contentCalloutInfo {
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(219, 234, 254, 0.6);
+}
+
+.contentCalloutWarning {
+  border-color: rgba(248, 113, 113, 0.6);
+  background: rgba(254, 226, 226, 0.5);
+}
+
+.contentCalloutTip {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(220, 252, 231, 0.5);
+}
+
+.contentCalloutTitle {
+  margin: 0;
+  font-weight: 600;
+}
+
+.contentCalloutBody {
+  margin: 0;
 }
 
 .contentEnglish {
@@ -445,6 +551,63 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.translationStatus {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ui-text-tertiary, #64748b);
+}
+
+.translationVocabulary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.translationVocabulary ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.translationVocabulary li {
+  margin: 0;
+}
+
+.translationMilestones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.translationMilestones ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.translationMilestones li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.milestoneDate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(226, 232, 240, 0.5);
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
 .tagPillRow {
@@ -525,18 +688,17 @@
   gap: 12px;
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: #ffffff;
   color: inherit;
   text-decoration: none;
-  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  transition: border-color 0.18s ease, background 0.18s ease;
 }
 
 .resourceLink:hover,
 .resourceLink:focus-visible {
-  border-color: rgba(59, 130, 246, 0.5);
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px -24px rgba(59, 130, 246, 0.45);
+  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(248, 250, 252, 0.9);
 }
 
 .resourceIcon {

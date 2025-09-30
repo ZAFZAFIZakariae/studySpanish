@@ -604,6 +604,12 @@ export const subjectCatalog: SubjectSummary[] = [
               status: 'partial',
               summary: 'Notas en español sobre interpretación de matrices.',
             },
+            notebook: {
+              id: 'admeav-notebook-glcm',
+              path: 'subjects/Admeav/Teoria/Notebooks/unit_1/example_glcm.ipynb',
+              colabUrl:
+                'https://colab.research.google.com/github/study-compass/content/blob/main/subjects/Admeav/Teoria/Notebooks/unit_1/example_glcm.ipynb',
+            },
           },
           {
             id: 'admeav-notebook-lbp',

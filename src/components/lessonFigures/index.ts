@@ -8,4 +8,5 @@ export const lessonFigureRegistry: Record<string, FigureRenderer> = {
   ...dbdTema1Figures,
 };
 
+export { default as LessonFigure } from './LessonFigure';
 export type { FigureRenderer };
