@@ -101,8 +101,8 @@ const toNotebookCells = (raw: string): NotebookCell[] => {
             : [];
 
           const formattedOutputs = outputs
-            .map((value) => String(value).trimEnd())
-            .filter((value) => value.length > 0);
+            .map((value: unknown) => String(value).trimEnd())
+            .filter((value: string) => value.length > 0);
 
           return {
             id: baseId,
@@ -114,7 +114,7 @@ const toNotebookCells = (raw: string): NotebookCell[] => {
 
         return null;
       })
-      .filter((cell): cell is NotebookCell => cell !== null);
+      .filter((cell: NotebookCell | null): cell is NotebookCell => cell !== null);
   } catch (error) {
     console.warn('Failed to parse notebook', error);
     return [];
