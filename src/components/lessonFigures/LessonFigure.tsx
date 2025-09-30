@@ -29,7 +29,7 @@ const LessonFigure: React.FC<LessonFigureProps> = ({
   if (renderer) {
     content = renderer(alt);
   } else if (assetUrl) {
-    content = <img src={assetUrl} alt={alt} />;
+    content = <img src={assetUrl} alt={alt} loading="lazy" decoding="async" />;
   }
 
   if (!content) {
