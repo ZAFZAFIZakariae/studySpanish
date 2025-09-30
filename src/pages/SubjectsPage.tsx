@@ -1,12 +1,13 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { subjectCatalog, computeCatalogInsights } from '../data/subjectCatalog';
 import { CourseItem } from '../types/subject';
 import { describeDueDate } from '../lib/plannerUtils';
 import { subjectResourceLibrary, ResourceLink } from '../data/subjectResources';
 import styles from './SubjectsPage.module.css';
-import { lessonFigureRegistry } from '../components/lessonFigures';
+import { LessonFigure } from '../components/lessonFigures';
 import InlineMarkdown from '../components/InlineMarkdown';
+import NotebookPreview from '../components/notebooks/NotebookPreview';
 
 const itemKindIcon: Record<CourseItem['kind'], string> = {
   lesson: '📘',
@@ -36,6 +37,87 @@ const resourceTypeIcon: Record<NonNullable<ResourceLink['type']>, string> = {
   pdf: '📄',
   slides: '🖥️',
   worksheet: '📝',
+};
+
+const translationPlaceholderPatterns = [
+  /resumen en inglés/i,
+  /english summary/i,
+  /pendiente de traducir/i,
+  /coming soon/i,
+];
+
+const isPlaceholderSummary = (text?: string) => {
+  if (!text) {
+    return true;
+  }
+  return translationPlaceholderPatterns.some((pattern) => pattern.test(text));
+};
+
+const romanMap: Record<string, number> = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
+};
+
+const romanToNumber = (value: string) => {
+  const chars = value.toUpperCase().split('');
+  let total = 0;
+  let previous = 0;
+  for (let i = chars.length - 1; i >= 0; i -= 1) {
+    const current = romanMap[chars[i]] ?? 0;
+    if (current < previous) {
+      total -= current;
+    } else {
+      total += current;
+      previous = current;
+    }
+  }
+  return total || 1;
+};
+
+const decodeOrderedMarker = (marker: string): { style: OrderedListStyle; value: number } => {
+  if (/^\d+$/.test(marker)) {
+    return { style: 'decimal', value: parseInt(marker, 10) };
+  }
+  if (/^[IVXLCDM]+$/.test(marker)) {
+    return { style: 'upper-roman', value: romanToNumber(marker) };
+  }
+  if (/^[ivxlcdm]+$/.test(marker)) {
+    return { style: 'lower-roman', value: romanToNumber(marker) };
+  }
+  if (/^[A-Z]$/.test(marker)) {
+    return { style: 'upper-alpha', value: marker.charCodeAt(0) - 64 };
+  }
+  if (/^[a-z]$/.test(marker)) {
+    return { style: 'lower-alpha', value: marker.charCodeAt(0) - 96 };
+  }
+  return { style: 'decimal', value: parseInt(marker, 10) || 1 };
+};
+
+const normalizeCalloutIntent = (intent: string): 'note' | 'info' | 'warning' | 'tip' => {
+  const upper = intent.toUpperCase();
+  if (upper === 'WARNING' || upper === 'CAUTION' || upper === 'DANGER') {
+    return 'warning';
+  }
+  if (upper === 'TIP' || upper === 'SUCCESS') {
+    return 'tip';
+  }
+  if (upper === 'INFO' || upper === 'IMPORTANT') {
+    return 'info';
+  }
+  return 'note';
+};
+
+const formatMilestoneDate = (isoDate: string) => {
+  const parsed = new Date(isoDate);
+  if (Number.isNaN(parsed.getTime())) {
+    return isoDate;
+  }
+  return parsed.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 };
 
 const formatMinutes = (minutes?: number) => {
@@ -80,6 +162,15 @@ const SubjectsPage: React.FC = () => {
   const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
   const [activeCourseId, setActiveCourseId] = useState<string | null>(null);
   const [activeItemId, setActiveItemId] = useState<string | null>(null);
+  const compactUserOverride = useRef(false);
+  const [compactMode, setCompactMode] = useState<boolean>(() => {
+    if (typeof window === 'undefined') {
+      return false;
+    }
+    return typeof window.matchMedia === 'function'
+      ? window.matchMedia('(max-width: 1100px)').matches
+      : false;
+  });
 
   useEffect(() => {
     setActiveSubjectId(initialSubjectId);
@@ -107,6 +198,23 @@ const SubjectsPage: React.FC = () => {
     setSearchParams(next, { replace: true });
   }, [activeSubjectId, searchParams, setSearchParams]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+      return;
+    }
+    const media = window.matchMedia('(max-width: 1100px)');
+    const handleChange = (event: MediaQueryListEvent) => {
+      if (!compactUserOverride.current) {
+        setCompactMode(event.matches);
+      }
+    };
+    if (!compactUserOverride.current) {
+      setCompactMode(media.matches);
+    }
+    media.addEventListener('change', handleChange);
+    return () => media.removeEventListener('change', handleChange);
+  }, []);
+
   const activeSubject = useMemo(
     () => subjectCatalog.find((subject) => subject.id === activeSubjectId),
     [activeSubjectId]
@@ -121,12 +229,72 @@ const SubjectsPage: React.FC = () => {
     () => (activeCourse ? activeCourse.items.find((item) => item.id === activeItemId) ?? null : null),
     [activeCourse, activeItemId]
   );
+  const handleToggleCompactMode = () => {
+    compactUserOverride.current = true;
+    setCompactMode((prev) => !prev);
+  };
+  const activeItemHasFigures = useMemo(() => {
+    if (!activeItem?.content) {
+      return false;
+    }
+    const original = activeItem.content.original ?? '';
+    const english = activeItem.content.english ?? '';
+    return /figure:/.test(`${original}\n${english}`);
+  }, [activeItem]);
+  const translationDetails = useMemo(() => {
+    if (!activeItem?.translation) {
+      return null;
+    }
+    const summary = !isPlaceholderSummary(activeItem.translation.summary)
+      ? activeItem.translation.summary?.trim()
+      : undefined;
+    const notes = activeItem.translation.notes?.trim();
+    const glossary = (activeItem.translation.glossary ?? [])
+      .map((term) => term.trim())
+      .filter((term) => term.length > 0);
+    const vocabulary = (activeItem.translation.vocabulary ?? []).filter(
+      (entry) => entry.term && entry.translation
+    );
+    const milestones = activeItem.translation.milestones ?? [];
+    const hasDetails = Boolean(summary || notes || glossary.length || vocabulary.length || milestones.length);
+    if (!hasDetails) {
+      return null;
+    }
+    return {
+      status: activeItem.translation.status,
+      summary,
+      notes,
+      glossary,
+      vocabulary,
+      milestones,
+    };
+  }, [activeItem]);
+  const summaryInfo = useMemo(() => {
+    if (!activeItem) {
+      return { original: '', english: undefined as string | undefined, showEnglish: false, placeholder: true };
+    }
+    const original = activeItem.summary.original?.trim() ?? '';
+    const englishRaw = activeItem.summary.english?.trim();
+    const translationFallback = activeItem.translation?.summary?.trim();
+    const english = !isPlaceholderSummary(englishRaw)
+      ? englishRaw
+      : !isPlaceholderSummary(translationFallback)
+      ? translationFallback
+      : undefined;
+    const showEnglish = Boolean(english && english !== original);
+    const placeholder = !english && activeItem.language !== 'en';
+    return { original, english, showEnglish, placeholder };
+  }, [activeItem]);
+
+  type OrderedListStyle = 'decimal' | 'upper-roman' | 'lower-roman' | 'upper-alpha' | 'lower-alpha';
 
   type ContentBlock =
     | { type: 'paragraph'; text: string }
     | { type: 'heading'; level: 1 | 2 | 3; text: string }
     | { type: 'list'; heading?: string; items: string[] }
-    | { type: 'figure'; alt: string; caption?: string; src?: string; figureId?: string };
+    | { type: 'ordered-list'; heading?: string; items: string[]; style: OrderedListStyle; start: number }
+    | { type: 'figure'; alt: string; caption?: string; src?: string; figureId?: string }
+    | { type: 'callout'; intent: 'note' | 'info' | 'warning' | 'tip'; title: string; lines: string[] };
 
   const createContentBlocks = (text: string): ContentBlock[] => {
     const lines = text.split('\n');
@@ -134,7 +302,12 @@ const SubjectsPage: React.FC = () => {
     let paragraphBuffer: string[] = [];
     let listBuffer: string[] | null = null;
     let listHeading: string | undefined;
+    let orderedListBuffer: string[] | null = null;
+    let orderedListHeading: string | undefined;
+    let orderedListStyle: OrderedListStyle = 'decimal';
+    let orderedListStart = 1;
     let pendingListHeading: string | null = null;
+    let calloutBuffer: { intent: 'note' | 'info' | 'warning' | 'tip'; title: string; lines: string[] } | null = null;
 
     const flushParagraph = () => {
       if (paragraphBuffer.length > 0) {
@@ -154,6 +327,35 @@ const SubjectsPage: React.FC = () => {
       listHeading = undefined;
     };
 
+    const flushOrderedList = () => {
+      if (orderedListBuffer && orderedListBuffer.length > 0) {
+        blocks.push({
+          type: 'ordered-list',
+          heading: orderedListHeading,
+          items: orderedListBuffer,
+          style: orderedListStyle,
+          start: orderedListStart,
+        });
+      }
+      orderedListBuffer = null;
+      orderedListHeading = undefined;
+      orderedListStyle = 'decimal';
+      orderedListStart = 1;
+    };
+
+    const flushCallout = () => {
+      if (calloutBuffer) {
+        const linesCopy = calloutBuffer.lines.map((entry) => entry.trim()).filter((entry) => entry.length > 0);
+        blocks.push({
+          type: 'callout',
+          intent: calloutBuffer.intent,
+          title: calloutBuffer.title,
+          lines: linesCopy,
+        });
+        calloutBuffer = null;
+      }
+    };
+
     const getNextNonEmptyLine = (startIndex: number) => {
       for (let i = startIndex; i < lines.length; i += 1) {
         const next = lines[i].trim();
@@ -171,14 +373,22 @@ const SubjectsPage: React.FC = () => {
       if (!line) {
         flushParagraph();
         flushList();
+        flushOrderedList();
+        flushCallout();
         pendingListHeading = null;
         continue;
+      }
+
+      if (calloutBuffer && !line.startsWith('>')) {
+        flushCallout();
       }
 
       const headingMatch = line.match(/^(#{1,3})\s+(.*)$/);
       if (headingMatch) {
         flushParagraph();
         flushList();
+        flushOrderedList();
+        flushCallout();
         pendingListHeading = null;
         const level = headingMatch[1].length as 1 | 2 | 3;
         blocks.push({ type: 'heading', level, text: headingMatch[2].trim() });
@@ -189,6 +399,8 @@ const SubjectsPage: React.FC = () => {
       if (imageMatch) {
         flushParagraph();
         flushList();
+        flushOrderedList();
+        flushCallout();
         pendingListHeading = null;
         let caption: string | undefined;
         const nextLine = lines[i + 1]?.trim();
@@ -207,9 +419,57 @@ const SubjectsPage: React.FC = () => {
         continue;
       }
 
+      if (line.startsWith('>')) {
+        const calloutMatch = line.match(/^>\s*\[!([A-Z]+)]\s*(.*)$/i);
+        if (calloutMatch) {
+          flushParagraph();
+          flushList();
+          flushOrderedList();
+          const [, intentRaw, titleText] = calloutMatch;
+          const intent = normalizeCalloutIntent(intentRaw);
+          const title = titleText?.trim() ? titleText.trim() : intentRaw.toUpperCase();
+          calloutBuffer = { intent, title, lines: [] };
+          pendingListHeading = null;
+          continue;
+        }
+
+        if (calloutBuffer) {
+          calloutBuffer.lines.push(line.replace(/^>\s?/, ''));
+          continue;
+        }
+
+        const quoted = line.replace(/^>\s?/, '').trim();
+        paragraphBuffer.push(quoted);
+        continue;
+      }
+
+      const orderedMatch = line.match(/^((?:\d+)|(?:[IVXLCDM]+)|(?:[ivxlcdm]+)|(?:[A-Z])|(?:[a-z]))[.)]\s+(.*)$/);
+      if (orderedMatch) {
+        flushParagraph();
+        flushList();
+        const marker = orderedMatch[1];
+        const { style, value } = decodeOrderedMarker(marker);
+        if (!orderedListBuffer) {
+          orderedListBuffer = [];
+          orderedListHeading = pendingListHeading ?? undefined;
+          orderedListStyle = style;
+          orderedListStart = value;
+        } else if (style !== orderedListStyle) {
+          flushOrderedList();
+          orderedListBuffer = [];
+          orderedListHeading = pendingListHeading ?? undefined;
+          orderedListStyle = style;
+          orderedListStart = value;
+        }
+        orderedListBuffer.push(orderedMatch[2].trim());
+        pendingListHeading = null;
+        continue;
+      }
+
       const normalizedListMatch = line.match(/^(?:•|-|\*)\s+(.*)$/);
       if (normalizedListMatch) {
         flushParagraph();
+        flushOrderedList();
         if (!listBuffer) {
           listBuffer = [];
           listHeading = pendingListHeading ?? undefined;
@@ -221,26 +481,34 @@ const SubjectsPage: React.FC = () => {
 
       if (line.endsWith(':')) {
         const nextNonEmpty = getNextNonEmptyLine(i + 1);
-        if (nextNonEmpty && /^(?:•|-|\*)\s+/.test(nextNonEmpty)) {
+        if (nextNonEmpty && (/^(?:•|-|\*)\s+/.test(nextNonEmpty) || /^((?:\d+)|(?:[IVXLCDM]+)|(?:[ivxlcdm]+)|(?:[A-Z])|(?:[a-z]))[.)]/.test(nextNonEmpty))) {
           flushParagraph();
           flushList();
+          flushOrderedList();
           pendingListHeading = line.replace(/:$/, '').trim();
           continue;
         }
       }
 
       flushList();
+      flushOrderedList();
       pendingListHeading = null;
       paragraphBuffer.push(line);
     }
 
     flushParagraph();
     flushList();
+    flushOrderedList();
+    flushCallout();
 
     return blocks;
   };
 
-  const renderContentBlocks = (text: string, variant: 'english' | 'original') => {
+  const renderContentBlocks = (
+    text: string,
+    variant: 'english' | 'original',
+    options: { hideFigures?: boolean } = {},
+  ) => {
     const blocks = createContentBlocks(text);
 
     return (
@@ -271,29 +539,66 @@ const SubjectsPage: React.FC = () => {
             );
           }
 
-          if (block.type === 'figure') {
-            const renderer = block.figureId ? lessonFigureRegistry[block.figureId] : undefined;
-            const figureContent = renderer
-              ? renderer(block.alt)
-              : block.src
-              ? (
-                  <img src={block.src} alt={block.alt} />
-                )
-              : null;
+          if (block.type === 'ordered-list') {
+            return (
+              <div key={index} className={styles.contentListBlock}>
+                {block.heading && (
+                  <p className={styles.contentListHeading}>
+                    <InlineMarkdown text={block.heading} />
+                  </p>
+                )}
+                <ol
+                  className={styles.contentOrderedList}
+                  style={{ listStyleType: block.style }}
+                  start={block.start}
+                >
+                  {block.items.map((itemText, itemIndex) => (
+                    <li key={itemIndex}>
+                      <InlineMarkdown text={itemText} />
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            );
+          }
 
-            if (!figureContent) {
+          if (block.type === 'figure') {
+            if (options.hideFigures) {
               return null;
             }
 
             return (
-              <figure key={index} className={styles.contentFigure}>
-                <div className={styles.contentFigureMedia}>{figureContent}</div>
-                {block.caption && (
-                  <figcaption className={styles.contentFigureCaption}>
-                    <InlineMarkdown text={block.caption} />
-                  </figcaption>
-                )}
-              </figure>
+              <LessonFigure
+                key={index}
+                figureId={block.figureId}
+                alt={block.alt}
+                caption={block.caption ? <InlineMarkdown text={block.caption} /> : undefined}
+                className={styles.contentFigure}
+                mediaClassName={styles.contentFigureMedia}
+                captionClassName={styles.contentFigureCaption}
+                fallbackClassName={styles.contentFigureFallback}
+              />
+            );
+          }
+
+          if (block.type === 'callout') {
+            const intentClass =
+              block.intent === 'warning'
+                ? styles.contentCalloutWarning
+                : block.intent === 'tip'
+                ? styles.contentCalloutTip
+                : block.intent === 'info'
+                ? styles.contentCalloutInfo
+                : styles.contentCalloutNote;
+            return (
+              <div key={index} className={`${styles.contentCallout} ${intentClass}`}>
+                <p className={styles.contentCalloutTitle}>{block.title}</p>
+                {block.lines.map((line, lineIndex) => (
+                  <p key={lineIndex} className={styles.contentCalloutBody}>
+                    <InlineMarkdown text={line} />
+                  </p>
+                ))}
+              </div>
             );
           }
 
@@ -304,13 +609,15 @@ const SubjectsPage: React.FC = () => {
                   <InlineMarkdown text={block.heading} />
                 </p>
               )}
-              <ul className={styles.contentList}>
-                {block.items.map((itemText, itemIndex) => (
-                  <li key={itemIndex}>
-                    <InlineMarkdown text={itemText} />
-                  </li>
-                ))}
-              </ul>
+              {block.type === 'callout' ? null : (
+                <ul className={styles.contentList}>
+                  {block.items.map((itemText, itemIndex) => (
+                    <li key={itemIndex}>
+                      <InlineMarkdown text={itemText} />
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           );
         })}
@@ -331,15 +638,15 @@ const SubjectsPage: React.FC = () => {
     return (
       <section className={styles.contentBlock} aria-label="Lesson content">
         <h3>Content</h3>
-        {englishContent && renderContentBlocks(englishContent, 'english')}
+        {englishContent && renderContentBlocks(englishContent, 'english', { hideFigures: compactMode })}
         {showOriginalContent &&
           (item.language === 'es' && englishContent ? (
             <details className={styles.contentOriginalDetails}>
               <summary>Ver contenido original en español</summary>
-              {renderContentBlocks(item.content.original, 'original')}
+              {renderContentBlocks(item.content.original, 'original', { hideFigures: compactMode })}
             </details>
           ) : (
-            renderContentBlocks(item.content.original, 'original')
+            renderContentBlocks(item.content.original, 'original', { hideFigures: compactMode })
           ))}
       </section>
     );
@@ -460,7 +767,7 @@ const SubjectsPage: React.FC = () => {
               <p className={styles.meta}>Choose a lesson or lab from the tree to load the full study kit.</p>
             </div>
           ) : (
-            <article className={styles.itemDetail}>
+            <article className={styles.itemDetail} data-compact={compactMode ? 'on' : 'off'}>
               <header className={styles.detailHeader}>
                 <p className={styles.breadcrumb}>
                   <span>{activeSubject.name}</span>
@@ -479,33 +786,97 @@ const SubjectsPage: React.FC = () => {
                   {activeItem.estimatedMinutes && <span>{formatMinutes(activeItem.estimatedMinutes)}</span>}
                   {activeItem.status && <span>{statusCopy[activeItem.status]}</span>}
                 </div>
+                {activeItemHasFigures && (
+                  <button
+                    type="button"
+                    className={`${styles.compactToggle} ${compactMode ? styles.compactToggleActive : ''}`}
+                    aria-pressed={compactMode}
+                    onClick={handleToggleCompactMode}
+                    title={compactMode ? 'Show full layout with illustrations' : 'Hide illustrations for a compact view'}
+                  >
+                    <span aria-hidden="true">{compactMode ? '🗂️' : '🖼️'}</span>
+                    <span>{compactMode ? 'Compact mode on' : 'Compact mode off'}</span>
+                  </button>
+                )}
               </header>
 
               <section className={styles.summaryBlock} aria-label="Lesson summary">
                 <h3>Summary</h3>
-                <p className={styles.summaryEnglish}>
-                  {activeItem.summary.english ?? activeItem.translation?.summary ?? activeItem.summary.original}
-                </p>
-                {activeItem.summary.original && activeItem.language === 'es' && (
-                  <p className={styles.summaryOriginal}>{activeItem.summary.original}</p>
-                )}
+                <div className={styles.summaryStack}>
+                  {summaryInfo.original && (
+                    <p className={styles.summaryOriginal} lang={activeItem.language}>
+                      <span className={styles.summaryChip} aria-hidden="true">
+                        {(activeItem.language ?? 'es').toUpperCase()}
+                      </span>
+                      <span>{summaryInfo.original}</span>
+                    </p>
+                  )}
+                  {summaryInfo.showEnglish && summaryInfo.english ? (
+                    <p className={styles.summaryEnglish} lang="en">
+                      <span className={styles.summaryChip} aria-hidden="true">EN</span>
+                      <span>{summaryInfo.english}</span>
+                    </p>
+                  ) : summaryInfo.placeholder ? (
+                    <p className={styles.summaryPlaceholder}>
+                      <span className={styles.summaryChip} aria-hidden="true">EN</span>
+                      <span>English recap coming soon.</span>
+                    </p>
+                  ) : null}
+                </div>
               </section>
 
               {renderContentSection(activeItem)}
 
-              {activeItem.translation && (
+              {activeItem.notebook && (
+                <NotebookPreview
+                  notebookId={activeItem.notebook.id}
+                  path={activeItem.notebook.path}
+                  colabUrl={activeItem.notebook.colabUrl}
+                />
+              )}
+
+              {translationDetails && (
                 <section className={styles.translationBlock} aria-label="Translation notes">
                   <h3>Translation support</h3>
-                  <p className={styles.meta}>{translationStatusLabel[activeItem.translation.status] ?? 'Translation status'}</p>
-                  {activeItem.translation.summary && <p>{activeItem.translation.summary}</p>}
-                  {activeItem.translation.glossary && (
+                  <p className={styles.translationStatus}>
+                    {translationStatusLabel[translationDetails.status] ?? 'Translation status'}
+                  </p>
+                  {translationDetails.summary && <p>{translationDetails.summary}</p>}
+                  {translationDetails.glossary.length > 0 && (
                     <ul className={styles.glossaryList}>
-                      {activeItem.translation.glossary.map((term) => (
+                      {translationDetails.glossary.map((term) => (
                         <li key={term}>{term}</li>
                       ))}
                     </ul>
                   )}
-                  {activeItem.translation.notes && <p className={styles.meta}>{activeItem.translation.notes}</p>}
+                  {translationDetails.vocabulary.length > 0 && (
+                    <div className={styles.translationVocabulary}>
+                      <h4>Key vocabulary</h4>
+                      <ul>
+                        {translationDetails.vocabulary.map((entry) => (
+                          <li key={entry.term}>
+                            <strong>{entry.term}</strong>
+                            <span> — {entry.translation}</span>
+                            {entry.note && <span className={styles.meta}> · {entry.note}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {translationDetails.milestones.length > 0 && (
+                    <div className={styles.translationMilestones}>
+                      <h4>Upcoming milestones</h4>
+                      <ul>
+                        {translationDetails.milestones.map((milestone) => (
+                          <li key={`${milestone.label}-${milestone.date}`}>
+                            <span className={styles.milestoneDate}>{formatMilestoneDate(milestone.date)}</span>
+                            <span>{milestone.label}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {translationDetails.notes && <p className={styles.meta}>{translationDetails.notes}</p>}
                 </section>
               )}
 

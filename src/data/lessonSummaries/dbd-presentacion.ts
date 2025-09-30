@@ -10,6 +10,18 @@ export const dbdPresentacionSummary: LessonSummaryContent = {
   translation: {
     status: 'partial',
     summary:
-      'Resumen en inglés con fechas de entregas y vocabulario esencial para documentación de bases de datos.',
+      'Native Spanish summary is available; an English draft is being edited with subject terminology cross-checks.',
+    notes:
+      'Focus on aligning terminology for the Oracle toolchain before releasing the English version to students.',
+    vocabulary: [
+      { term: 'sílabo', translation: 'syllabus outline' },
+      { term: 'ponderación', translation: 'grading weight', note: 'Breakdown across theory, labs, and project' },
+      { term: 'entrega', translation: 'submission', note: 'Usually graded deliverables in the lab component' },
+    ],
+    milestones: [
+      { label: 'Glossary review', date: '2024-04-05' },
+      { label: 'Draft English summary', date: '2024-04-08' },
+      { label: 'Faculty approval window', date: '2024-04-12' },
+    ],
   },
 };

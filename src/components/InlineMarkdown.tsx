@@ -1,13 +1,18 @@
 import React from 'react';
+import styles from './InlineMarkdown.module.css';
 
 const renderTokens = (text: string): React.ReactNode[] => {
   const pattern = new RegExp(
     [
+      '~~[^~]+?~~',
       '\\*\\*[^*]+?\\*\\*',
       '__[^_]+?__',
       '\\*[^*]+?\\*',
       '_[^_]+?_',
+      '~[^~]+?~',
+      '\\^[^^]+?\\^',
       '`[^`]+?`',
+      '\\$[^$]+?\\$',
       '\\[[^\\]]+?\\]\\([^\\s)]+?\\)',
     ].join('|'),
     'g'
@@ -24,7 +29,9 @@ const renderTokens = (text: string): React.ReactNode[] => {
 
     const token = match[0];
 
-    if (/^\*\*.+\*\*$/.test(token) || /^__.+__$/.test(token)) {
+    if (/^~~.+~~$/.test(token)) {
+      nodes.push(<del key={`md-del-${key}`}>{token.slice(2, -2)}</del>);
+    } else if (/^\*\*.+\*\*$/.test(token) || /^__.+__$/.test(token)) {
       nodes.push(
         <strong key={`md-strong-${key}`}>{token.slice(2, -2)}</strong>
       );
@@ -32,9 +39,27 @@ const renderTokens = (text: string): React.ReactNode[] => {
       nodes.push(
         <em key={`md-em-${key}`}>{token.slice(1, -1)}</em>
       );
+    } else if (/^~.+~$/.test(token)) {
+      nodes.push(
+        <span key={`md-sub-${key}`} className={styles.inlineSub}>
+          {token.slice(1, -1)}
+        </span>
+      );
+    } else if (/^\^.+\^$/.test(token)) {
+      nodes.push(
+        <span key={`md-sup-${key}`} className={styles.inlineSup}>
+          {token.slice(1, -1)}
+        </span>
+      );
     } else if (/^`.+`$/.test(token)) {
       nodes.push(
         <code key={`md-code-${key}`}>{token.slice(1, -1)}</code>
+      );
+    } else if (/^\$.+\$$/.test(token)) {
+      nodes.push(
+        <span key={`md-math-${key}`} className={styles.inlineMath}>
+          {token.slice(1, -1)}
+        </span>
       );
     } else {
       const linkMatch = token.match(/^\[([^\]]+)]\(([^)]+)\)$/);

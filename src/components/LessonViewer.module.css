@@ -1,0 +1,63 @@
+.viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.viewer :global(table) {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.viewer :global(th),
+.viewer :global(td) {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.figure {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.figureMedia {
+  border-radius: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.figureMedia > :global(svg),
+.figureMedia > img {
+  display: block;
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+.figureCaption {
+  font-size: 0.9rem;
+  color: var(--ui-text-secondary, #475569);
+}
+
+.figureFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border-radius: 12px;
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+  padding: 16px;
+  background: rgba(241, 245, 249, 0.6);
+  font-size: 0.9rem;
+  color: var(--ui-text-secondary, #475569);
+}
+
+.figureFallback span {
+  font-size: 1.2rem;
+}
