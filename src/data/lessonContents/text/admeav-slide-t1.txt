@@ -32,12 +32,14 @@ Caption: Relación entre descriptores globales, locales y basados en puntos clav
 ## Estadísticos clásicos
 - **Primer orden** (histograma): media, varianza, asimetría, curtosis, entropía.
 - **Segundo orden** (matriz de co-ocurrencias): captura dependencia espacial entre intensidades.
-  - Permite derivar contraste, correlación, energía, homogeneidad.
+  - La matriz de co-ocurrencias se denota como P(i, j; d) y cuenta los pares de píxeles separados por un desplazamiento vectorial d = d(i, j) con niveles de gris i y j.
 - **Órdenes superiores**: modelados complejos (momento centralizado, cumulantes).
 
 ## Local Binary Patterns
 - Comparan cada píxel con sus vecinos: valores mayores reciben 1, menores 0; el patrón binario describe la textura.
 - Se parametriza con **P vecinos** y **radio R**. Se generan histogramas de patrones para caracterizar una región.
+  - Ejemplos habituales: P = 8, R = 1; P = 16, R = 2; P = 8, R = 2.
+  - La operación ROR(x, t) realiza t rotaciones del patrón x para obtener el código mínimo; con P = 8 hay 256 patrones y 36 clases invariantes a rotación.
 - Variantes:
   - **LBPri**: agrupa patrones equivalentes bajo rotaciones.
   - **LBPriu2**: se queda con patrones uniformes (máximo dos transiciones) para reducir dimensionalidad.
@@ -48,11 +50,61 @@ Caption: Relación entre descriptores globales, locales y basados en puntos clav
 - Normaliza bloques contiguos para ganar invariancia a iluminación y contraste.
 - Popular en detección de peatones y objetos rígidos gracias a su sensibilidad a bordes.
 
+### Flujo general del descriptor
+1. Cálculo de gradientes.
+2. Agrupación de las orientaciones en histogramas por celda.
+3. Construcción de vectores por bloque concatenando celdas adyacentes.
+4. Normalización de cada bloque antes de formar el descriptor global.
+
+### Ejemplo de convolución inicial
+- Píxel de entrada 8×8 tomado del ejemplo de las diapositivas:
+  - Filas: [74 66 62 59 63 71 75 72], [72 65 61 58 62 70 75 72], [71 68 63 59 63 69 73 69], [70 67 62 59 62 69 73 69], [70 64 59 57 61 70 74 72], [68 66 64 63 65 68 69 68], [70 69 67 66 67 69 69 67], [69 68 66 64 65 67 66 63].
+- Kernel Sobel horizontal:
+  - Filas: [-1 0 1], [-2 0 2], [-1 0 1].
+- Convolución discreta: y[m, n] = Σₖ Σₗ x[k, l] · h[m - k, n - l]; en el ejemplo el píxel central vale aproximadamente 3.
+
+### Cálculo de gradientes
+- Filtro Sobel horizontal Gₓ:
+  - Filas: [-1 0 1], [-2 0 2], [-1 0 1].
+- Filtro Sobel vertical Gᵧ:
+  - Filas: [-1 -2 -1], [0 0 0], [1 2 1].
+- Magnitud: |G| = √(Gₓ² + Gᵧ²).
+- Orientación: θ = atan2(Gᵧ, Gₓ).
+
+### Interpolación angular
+- Problemas: gradientes casi iguales pueden caer en bins distintos y pequeñas variaciones de orientación alteran el histograma.
+- Solución: repartir cada gradiente entre los dos intervalos más cercanos en proporción a la distancia del ángulo al centro del bin.
+- Ejemplo de las diapositivas: para g(x, y) = 100 y θ(x, y) = 45° con 9 bins en [0°, 180°) sin signo, la contribución se reparte como [0, 25, 75, 0, 0, 0, 0, 0, 0].
+
+### Integración espacial
+- Problema: píxeles próximos pueden caer en celdas diferentes y pequeñas variaciones de forma alteran los histogramas.
+- Solución: cada píxel se distribuye entre las cuatro celdas más cercanas ponderando por la distancia al centro de cada celda (interpolación bilineal).
+
+### Normalización por bloques y descriptor final
+- Agrupar b × b celdas para formar un vector de bloque v = (x₁, x₂, …, xₙ).
+- Normalización L2: v' = v / √(x₁² + x₂² + … + xₙ² + ε²).
+- El descriptor HOG final se obtiene concatenando todos los vectores normalizados: HOG = (x₁, x₂, …, x_N).
+
 ## SIFT
-- Detecta puntos clave mediante diferencia de gaussianas en escala y localiza extremos subpíxel.
+- Detecta puntos clave mediante diferencias de gaussianas en escala y localiza extremos subpíxel.
 - Asigna orientación dominante para lograr invariancia a rotación.
 - Describe cada punto con histogramas de gradiente locales (128 dimensiones clásicas).
 - Estable para correspondencias entre imágenes con cambios de escala, rotación y moderados cambios de iluminación.
+
+### Detección de extremos DoG
+- Pirámide de escalas basada en una σ₀ inicial y factores k por octava.
+- Diferencia de Gaussianas: D(x, y, σ) = L(x, y, kσ) - L(x, y, σ).
+- Suavizado previo: L(x, y, σ) = G(x, y, σ) * I(x, y).
+
+### Asignación de orientación y descriptor
+- Magnitud del gradiente alrededor del punto clave:
+  - m(x, y) = √((L(x + 1, y) - L(x - 1, y))² + (L(x, y + 1) - L(x, y - 1))²).
+- Orientación local:
+  - θ(x, y) = atan2(L(x, y + 1) - L(x, y - 1), L(x + 1, y) - L(x - 1, y)).
+- Las contribuciones al histograma se ponderan con una gaussiana de desviación σ = 1.5·s para suavizar.
+
+### Emparejamiento de descriptores
+- Distancia euclídea al cuadrado (SSD) entre descriptores: SSD(f₁, f₂) = Σᵢ (f₁,ᵢ - f₂,ᵢ)².
 
 ## Filtros de Gabor
 - Simulan receptores de la corteza visual: senos modulados por gaussianas.
@@ -62,472 +114,15 @@ Caption: Relación entre descriptores globales, locales y basados en puntos clav
 ## Ventajas y limitaciones
 - **Ventajas**: interpretables, requerimientos de datos moderados, buen rendimiento en dominios controlados.
 - **Limitaciones**: sensibilidad a transformaciones complejas, dificultad para generalizar sin ingeniería manual, dimensionalidad alta al combinar múltiples descriptores.
-19
-Original: i Máscara: mask Luminancia: ig LBP Histograma LBP
-sana
-Cáncer 
-grado 3
-Cáncer 
-grado 5
 
-Index
-1.Introduction
-2.Statistical descriptors
-3.Local Binary Patterns
-4.Histogram of Oriented Gradients
-5.SIFT
-6.Gabor Filters
-20
+## Detector de esquinas de Harris
+- Matriz de estructura para cada píxel: C(x) = Σ_{(u,v) ∈ Nₓ} [Ix(u,v)² Ix(u,v) Iy(u,v); Ix(u,v) Iy(u,v) Iy(u,v)²].
+- Interpretación mediante autovalores:
+  - λ₁ y λ₂ grandes ⇒ esquina.
+  - λ₁ grande y λ₂ pequeña (o viceversa) ⇒ borde.
+  - Ambos pequeños ⇒ región plana.
+- Factorización: C(x) = R⁻¹ diag(λ₁, λ₂) R, donde R alinea los ejes con los autovectores.
 
-Histograms of Oriented
-Gradients (HOG)
-• The histogram of oriented gradients (HOG ) is a widely used descriptor in image 
-processing for the purpose of object detection. The technique counts the occurrences of 
-gradient orientation in localised portions of an image. 
-• Algorithm:
-– Gradient calculation
-– Grouping the orientations
-– Block descriptor
-– Block normalisation
-21
-
-22
-Convolution
-7275716359626674
-7275706258616572
-6973696359636871
-6973696259626770
-7274706157596470
-6869686563646668
-6769696766676970
-6366676564666869
--101
--202
--101
-10-1
-20-2
-10-1
-𝑦 𝑚, 𝑛ൌ 𝑥 𝑚, 𝑛∗ ℎ𝑚, 𝑛ൌ ෍ ෍ 𝑥𝑘, 𝑙ℎ ሾ 𝑚െ𝑘, 𝑛െ𝑙ሿ
-௟௞
-Kernel
-ℎሾെ𝑘, െ𝑙]ℎሾ𝑘, 𝑙]
-െ1 ∗62 ൅0 ∗59 ൅1 ∗62 ൅ሺെ2ሻ∗ 59 ൅0 ∗57 ൅2 ∗61 ൅ሺെ1ሻ∗ 64 ൅0 ∗63 ൅1 ∗65 ൌ 3
-3
-Imagen de salida
-22
-
-23
-Gradient Computation
--101
--202
--101
-121
-000
--1-2-1
-𝑀𝑎𝑔𝑛𝑖𝑡𝑢𝑑𝑒 ൌ 𝐺௫ଶ ൅𝐺௬ଶ
-𝐺௫ 𝐺௬
-𝑂𝑟𝑖𝑒𝑛𝑡𝑎𝑡𝑖𝑜𝑛 ൌtanିଵ 𝐺௬
-𝐺௫ 23
-
-Histograms of Oriented
-Gradients (HOG)
-• Division of the image into cells of fixed size.  
-• Calculation of a histogram of the orientations in each cell.
-• Global descriptor combines histograms of all cells.
-24
-orientation
-
-Histograms of Oriented
-Gradients (HOG)
-• Division of the range of orientations into a fixed number of intervals.
-• Assign each pixel in the cell to an interval based on the gradient orientation.
-• Accumulate the gradient magnitude of all pixels assigned to an interval.
-25
-orientation
-orientation
-
-Histograms of Oriented
-Gradients (HOG)
-Orientation histogram calculation: interpolation in orientation
-• Problems
-– Gradients with very similar orientations  can be assigned to different intervals.
-– Sensitive to small gradient variations.
-• Solution:
-– Assign each gradient to the two closest intervals with a we ight proportional to the distance from the orientation 
-to the centre of each interval.
-26
-orientation
-orientation
-
-Histograms of Oriented
-Gradients (HOG)
-Assign each gradient to the two closest intervals with a weight proportional to the distance from 
-the orientation to the centre of each interval.
-𝑔 𝑥, 𝑦ൌ 100
-𝜃 𝑥, 𝑦ൌ 45º
-Assuming that for the histogram calculation the orientation is divided into 9 intervals (without 
-considering the sign), what would be the contribution of this pixel to each of the intervals of the 
-histogram?
-27
-
-Histograms of Oriented
-Gradients (HOG)
-Assign each gradient to the two closest intervals with a weight proportional to the distance from 
-the orientation to the centre of each interval.
-𝑔 𝑥, 𝑦ൌ 100
-𝜃 𝑥, 𝑦ൌ 45º
-Assuming that for the histogram calculation the orientation is divided into 9 intervals (without 
-considering the sign), what would be the contribution of this pixel to each of the intervals of the 
-histogram?
-28
-00 000007525
-
-Histograms of Oriented
-Gradients (HOG)
-29
-Orientation histogram calculation: spatial integration
-• A histogram is calculated for each of the cells.
-• Each pixel contributes to the histogram of its corresponding cell.
-𝑖
-𝑗
-1  2  3 4  5  6  7  8  9
-
-Histograms of Oriented
-Gradients (HOG)
-30
-Orientation histogram calculation: spatial integration
-• Problems
-• Pixels in close proximity can be assigned to different cells.
-• Sensitive to small variations in object shape.
-• Solution:
-• Assign each pixel to the four nearest cells with a weight proportional to the distance of the pixel from the centre
-of each cell.
-1  2  3 4  5  6  7  8  9
-
-Histograms of Oriented
-Gradients (HOG)
-31
-Given an image and the division into cells as shown and assuming that the orientation is divided 
-into 9 intervals without considering the sign (0º-180º), in which histograms (𝑖,𝑗) of the final 
-representation and in which intervals 𝑘 and with which weight will the pixel (𝑥=12,𝑦=18) with 
-orientation 𝜃ൌ 60º contribute?
-
-Histograms of Oriented
-Gradients (HOG)
-32
-Given an image and the division into cells as shown and assuming that the orientation is divided 
-into 9 intervals without considering the sign (0º-180º), in which histograms (𝑖,𝑗) of the final 
-representation and in which intervals 𝑘 and with which weight will the pixel (𝑥=12,𝑦=18) with 
-orientation 𝜃ൌ 60º contribute?
-
-Histograms of Oriented
-Gradients (HOG)
-33
-Block normalisation
-• Grouping of cells in blocks of b x b cells.
-• Single vector per block concatenating the histograms of all cells.
-• Vector normalisation using the L2 norm.
-𝐶ଵଵ 𝐶ଵଶ
-𝐶ଶଵ 𝐶ଶଶ
-𝑣ൌሺ 𝑥ଵ, 𝑥ଶ,…, 𝑥ேሻ
-𝑣ᇱ ൌ 𝑣
-𝑣 ଶ
-ଶ ൅𝜀
-ൌ 𝑣
-𝑥ଵ
-ଶ ൅𝑥ଶ
-ଶ ൅⋯൅𝑥 ே
-ଶ ൅𝜀
-
-Histograms of Oriented
-Gradients (HOG)
-34
-Final descriptor 
-• Block overlap.  
-• For each block, normalised histogram of cells.
-• Final descriptor: concatenation of all block histograms 
-𝐻𝑂𝐺 ൌ ሺ𝑥ଵ, 𝑥ଶ… 𝑥ே)
-
-Histograms of Oriented
-Gradients (HOG)
-35
-Final descriptor
-• Each cell contributes to the description of several blocks.
-• In each block with a different normalization.
-
-Index
-1.Introduction
-2.Statistical descriptors
-3.Local Binary Patterns
-4.Histogram of Oriented Gradients
-5.SIFT
-6.Gabor Filters
-36
-
-37
-Keypoint detector
-Test image Detector: locates 
-single-scale or multi-
-scale points of interest.
-Descriptor: 
-Content invariant 
-representation
-(HOG, SIFT, etc.)
-
-38
-Harris’ detector
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-xx
-xx
-x
-y
-x
-xy
-x
-yx
-x
-x
-xxx
-xxx
-x
-N
-N
-N
-N
-)()()(
-)()()(
-)( 2
-2
-III
-III
-C
-
-
-
-
-2
-1
-λ0
-0λ)(xCExample
-General case RRC 
-
-
- 
-2
-11
-λ0
-0λ)(x
-1λ 2λ
-1λ 2λhigh and       small: edge
-1λ 2λsmall and       high: edge
-1λ 2λ
-For each pixel is calculated:
-and         high: corner
-and         small: flat area
-
-39
-Harris’ detector
-• Algorithm designed for motion tracking.
-• Reduces calculation time co mpared to tracking all points. 
-• Invariant to translation and rotation.
-• Not invariant to scale changes.
-• Algorithm
-– Reduce image noise (Gaussian filter for example).
-– Image gradients calculation.
-– Construct the matrix C for each pixel.
-– Obtain and analyse determinant (          ) and trace (              )  
-of the matrix C.
-21 λλ 
- 21 λλ 
-
-40
-Matching of features
-Original images
-Keypoints (corners) 
-detected with Harris’ 
-detector
-
-41
-Matching of features
-CORRELATION
-
-
-
-
-
-2211
-2211
-2
-2
-2
-1
-,
-21
-21
-)()(
-)()(
-),(
-xx
-xx
-xx
-xx
-xx
-xx
-xx
-NN
-NN
-ss
-ss
-R
-
-42
-Matching of features
-Need for a robust algorithm
-Search of matchings: Putative matchings
-
-43
-Robust estimation
-RANSAC (RANdom SAmple Consensus)
-Algorithm
-1. Take a sample: minimum number of points to 
-estimate the model.
-2. Look at the support of that model: number of points 
-below a distance t (consensusset).
-3. Repeat the process for N samples and select the 
-model with the highest support.
-4. Points with a distance less than t are 
-inliers.Reestimate the model with all inliers.
-
-44
-Example RANSAC
-Initial matches
-Robust estimation
-
-45
-RANSAC estimation: Panoramic image construction
-Robust estimation
-
-46
-Robust estimation
-RANSAC estimation: Panoramic image construction
-
-47
-Robust estimation
-RANSAC estimation: Panoramic image construction
-
-48
-SIFT Detector
-SIFT (Scale Invariant Feature Transform)
-• Invariant descriptor to position, scale, rotation, illumination, contrast and point of
-view.
-• Algorithm
-1. Detection of extremes in scale and space: Extract rotation and scale
-invariant points of interest (keypoints).
-2. Eliminate ‘weak’ keypoints.
-3. Orientation assignment: Assign one or more orientations to each point of
-interest.
-4. Keypoint descriptor: Use local gradients at the selected scale.
-D. Lowe, “Distinctive Image Features from Scale-Invariant  Keypoints”, International Journal of 
-Computer Vision, 60(2):91-110, 2004.
-
-49
-SIFT: Extrema detection 
-k0σ0
-k1σ0
-𝐷 𝑥, 𝑦, 𝜎ൌ 𝐿 𝑥, 𝑦, 𝑘𝜎 െ𝐿 𝑥, 𝑦, 𝜎
-𝐿 𝑥, 𝑦, 𝜎ൌ 𝐺 𝑥, 𝑦, 𝜎∗ 𝐼 𝑥, 𝑦,
-𝑘ௌ ൌ 2ௌ
-
-50
-SIFT: Weak keypoints elimination
-(a)Image 233x189
-(b) 832 extreme DoG
-(c) 729 left after low contrast 
-thresholding
-(d) 536 after Hessian ratio
-Weak keypoints
-• keypoints with low contrast (<0.03).
-• Bad edge
-
-51
-SIFT Descriptor
-Orientation assignment
-• Histogram of gradient directions for each keypoint.
-• Histogram weighted by the magnitude of the gradient and by a 
-Gaussian function with σ=1.5 s.
-22( ,) (( 1 ,) ( 1 ,) ) (( , 1 ) ( , 1 ) )
-( , ) tan 2(( ( , 1) ( , 1)) / ( ( 1, ) ( 1, )))
-mxy Lx y Lx y Lxy Lxy
-x ya L x y L x y L x yL x y
-
-   
-     
-𝐿 𝑥, 𝑦, 𝜎ൌ 𝐺 𝑥, 𝑦, 𝜎∗ 𝐼 𝑥, 𝑦,
-0 2 
-
-52
-SIFT descriptor
-Orientation assignment
-1. 16 x16 window around each keypoint.
-2. Divide into 4x4 cells.
-3. Calculate the histogram in each cell (partial vote).
-(8 bins)
-16 histograms x 8 orientations 
-= 128 features
-
-SIFT Detector
-
-SIFT: Matching of features
-Descriptor with mínimum distance
-Problems with ambiguities
-I1 I2
-
-
-
-N
-i
-ii ffffSSD
-1
-2
-2121 )(),(
-f1
- f2
-
-SIFT: Matching of features
-Problems with ambiguities
-I1 I2
-f1
- f2
-
-Index
-1.Introduction
-2.Statistical descriptors
-3.Local Binary Patterns
-4.Histogram of Oriented Gradients
-5.SIFT
-6.Gabor Filters
-56
-
-Gabor filters
-• Bank of linear filters.
-• Each filter analyzes whether there is any specific  frequency content in the image in specific 
-directions.
-• Image analysis with Gabor filters is thought by some to be similar to perception in the human 
-visual system.
-Source: Deep Learning: Foundations and 
-Concepts. Christopher M. Bishop and Hugh 
-Bishop
+## Emparejamiento de características
+- Correlación normalizada entre ventanas centradas en x₁ y x₂: R(x₁, x₂) = Σ_{(u,v) ∈ N} s₁(u,v) s₂(u,v) / (√(Σ_{(u,v) ∈ N} s₁(u,v)²) · √(Σ_{(u,v) ∈ N} s₂(u,v)²)).
+- Se buscan emparejamientos putativos y posteriormente se aplica un método robusto (p.ej., RANSAC) para filtrar outliers.
