@@ -101,8 +101,8 @@ const convertRowListMatrices = (text: string) =>
       return match;
     }
     const latexRows = rows
-      .map((row) => formatMatrixRow(row.slice(1, -1)))
-      .filter((row) => row.length > 0);
+      .map((row: string) => formatMatrixRow(row.slice(1, -1)))
+      .filter((row: string) => row.length > 0);
     if (latexRows.length === 0) {
       return match;
     }
@@ -114,14 +114,14 @@ const convertSemicolonMatrices = (text: string) =>
     const content = match.slice(1, -1);
     const rows = content
       .split(';')
-      .map((row) => row.trim())
-      .filter((row) => row.length > 0);
+      .map((row: string) => row.trim())
+      .filter((row: string) => row.length > 0);
     if (rows.length < 2) {
       return match;
     }
     const latexRows = rows
-      .map((row) => formatMatrixRow(row))
-      .filter((row) => row.length > 0);
+      .map((row: string) => formatMatrixRow(row))
+      .filter((row: string) => row.length > 0);
     if (latexRows.length === 0) {
       return match;
     }
@@ -133,8 +133,8 @@ const convertNumericVectors = (text: string) =>
     const content = bracket.slice(1, -1);
     const values = content
       .split(',')
-      .map((value) => value.trim())
-      .filter((value) => value.length > 0);
+      .map((value: string) => value.trim())
+      .filter((value: string) => value.length > 0);
     if (values.length < 3) {
       return `${prefix}${bracket}`;
     }
