@@ -1,134 +1,134 @@
-# Tema 1 · Sistemas de Gestión de Bases de Datos
+# Topic 1 · Database Management Systems (Sistemas de Gestión de Bases de Datos)
 
-## Objetivos de la lección
-- Revisar las características que definen a la tecnología de bases de datos moderna.
-- Comprender qué componentes y funciones integran un Sistema de Gestión de Bases de Datos (SGBD).
-- Recordar la jerarquía de almacenamiento y el ciclo de transferencia de datos entre disco y memoria.
-- Comparar las arquitecturas centrales y cliente-servidor empleadas para desplegar SGBD.
-- Identificar los objetivos operativos que guían el diseño de un SGBD.
+## Lesson objectives (Objetivos de la lección)
+- Review the characteristics that define modern database technology (tecnología de bases de datos).
+- Understand the components and functions that make up a Database Management System—DBMS (Sistema de Gestión de Bases de Datos, SGBD).
+- Revisit the storage hierarchy and the data-transfer cycle between disk and memory.
+- Compare central and client–server architectures used to deploy DBMS platforms.
+- Identify the operational goals that guide DBMS design.
 
-## Mapa de contenidos
-- Características de la tecnología de bases de datos.
-- Sistemas de gestión de bases de datos.
-- Transferencia de datos en un SGBD.
-- Arquitecturas básicas de SGBD.
-- Objetivos prioritarios de un SGBD.
+## Content map (Mapa de contenidos)
+- Characteristics of database technology (tecnología de bases de datos).
+- Database management systems (Sistemas de gestión de bases de datos).
+- Data transfer inside a DBMS (Transferencia de datos en un SGBD).
+- Baseline DBMS architectures (Arquitecturas básicas de SGBD).
+- Priority objectives for a DBMS (Objetivos prioritarios de un SGBD).
 
-## 1. Tecnología de bases de datos
-Las bases de datos son colecciones estructuradas de datos persistentes que residen en memoria secundaria. La "tecnología de bases de datos" engloba el software que permite definir, crear y manipular esas estructuras, asegurando que el sistema de información de la organización permanece integrado y accesible.
+## 1. Database technology (Tecnología de bases de datos)
+Databases are structured collections of persistent data stored in secondary memory. “Database technology” covers the software that defines, creates, and manipulates those structures so the organization’s information system stays integrated and accessible.
 
-### Propiedades esenciales
-- **Soporte del sistema de información**: centraliza la información de la organización y garantiza su persistencia.
-- **Servicio a distintos usuarios**: habilita concurrencia segura y vistas parciales adaptadas a cada colectivo.
-- **Abstracción de datos**: separa la especificación lógica de las estructuras respecto a su implementación física.
-- **Integridad y seguridad**: controla la calidad de los datos, el acceso simultáneo, la recuperación ante fallos y la autorización de usuarios.
+### Essential properties (Propiedades esenciales)
+- **Information-system support (Soporte del sistema de información):** centralizes organizational information and preserves it.
+- **Service for multiple users (Servicio a distintos usuarios):** enables safe concurrency and tailored views for each group.
+- **Data abstraction (Abstracción de datos):** separates logical structure specifications from their physical implementation.
+- **Integrity and security (Integridad y seguridad):** governs data quality, concurrent access, failure recovery, and user authorization.
 
-### Independencia y niveles de esquema
-Se distinguen tres niveles independientes que aportan independencia de datos:
-- **Esquema lógico**: describe tablas y relaciones sobre las que se formulan consultas.
-- **Esquema físico**: define cómo se materializan esas estructuras en disco (índices, ficheros, heap, etc.).
-- **Esquemas externos**: proporcionan vistas parciales para colectivos concretos.
+### Independence and schema levels (Independencia y niveles de esquema)
+Three independent levels provide data independence:
+- **Logical schema (Esquema lógico):** describes tables and relationships for queries.
+- **Physical schema (Esquema físico):** defines how those structures live on disk—indexes, files, heaps.
+- **External schemas (Esquemas externos):** deliver partial views for specific audiences.
 
-![Esquemas en el laboratorio de Ciclismo](figure:dbd-tema-1/esquemas)
-Caption: Entorno del laboratorio BDASI con esquemas lógico y físico, la base de datos Ciclismo en disco y SQL Developer como cliente.
+![Schemas in the Cycling lab (Esquemas en el laboratorio de Ciclismo)](figure:dbd-tema-1/esquemas)
+Caption: The BDASI lab environment with logical and physical schemas, the Cycling database on disk, and SQL Developer as the client.
 
-### Panorama general de la tecnología
-La combinación de niveles de esquema, control de concurrencia, mecanismos de seguridad y persistencia se visualiza en una arquitectura de capas donde el SGBD actúa como mediador entre aplicaciones y datos.
+### Technology overview (Panorama general de la tecnología)
+Combining schema levels, concurrency control, security mechanisms, and persistence produces a layered architecture where the DBMS mediates between applications and data.
 
-![Resumen de características de la tecnología de bases de datos](figure:dbd-tema-1/resumen)
-Caption: Diagrama que resume integración de datos, vistas parciales, control de integridad y seguridad bajo una arquitectura en niveles.
+![Database technology feature summary (Resumen de características de la tecnología de bases de datos)](figure:dbd-tema-1/resumen)
+Caption: Diagram summarizing data integration, partial views, integrity control, and security within a layered architecture.
 
-## 2. Sistemas de gestión de bases de datos (SGBD)
-Un SGBD es la herramienta software que implementa un modelo de datos para crear, consultar y administrar bases de datos. Cada modelo propone estructuras concretas (tablas, registros, listas) y operadores para trabajar con ellas.
+## 2. Database management systems (Sistemas de gestión de bases de datos, SGBD)
+A DBMS is the software tool that implements a data model to create, query, and administer databases. Each model proposes specific structures (tables, records, lists) and the operators used to manipulate them.
 
-### Modelos y familias históricas
-- Jerárquicos: basados en árboles de segmentos.
-- En red: registros enlazados mediante conjuntos.
-- Relacionales: tablas de tuplas con álgebra relacional y SQL.
-- Objeto-relacionales: extienden el modelo relacional con tipos y constructores orientados a objetos.
+### Historical models and families (Modelos y familias históricas)
+- Hierarchical (Jerárquicos): segment-tree structures.
+- Network (En red): records linked by sets.
+- Relational (Relacionales): tuple tables with relational algebra and SQL.
+- Object-relational (Objeto-relacionales): extend the relational model with object-oriented types and constructors.
 
-### Funciones fundamentales de un SGBD
-- **Definición**: lenguajes DDL para describir esquemas.
-- **Manipulación**: lenguajes DML para consultas y actualizaciones.
-- **Gestión**: herramientas de administración, seguridad, copias y monitorización.
+### Core DBMS functions (Funciones fundamentales de un SGBD)
+- **Definition (Definición):** DDL languages describe schemas.
+- **Manipulation (Manipulación):** DML languages support queries and updates.
+- **Management (Gestión):** administration, security, backup, and monitoring tooling.
 
-### Concurrencia y paralelismo
-Todos los SGBD modernos son multiusuario: coordinan transacciones concurrentes sobre una misma CPU. Algunos también aprovechan el paralelismo distribuido en varias CPUs o nodos para acelerar las operaciones.
+### Concurrency and parallelism (Concurrencia y paralelismo)
+Modern DBMS platforms are multi-user: they coordinate concurrent transactions on the same CPU. Some also harness distributed parallelism across multiple CPUs or nodes to accelerate workloads.
 
-## 3. Transferencia de datos en un SGBD
-Los SGBD gestionan grandes volúmenes de datos almacenados en discos. Por ello, deben optimizar el movimiento entre memoria secundaria y memoria principal, respetando la jerarquía de almacenamiento.
+## 3. Data transfer within a DBMS (Transferencia de datos en un SGBD)
+DBMS engines manage large volumes of disk-resident data. They must optimize movement between secondary storage and main memory while respecting the storage hierarchy.
 
-### Jerarquía de almacenamiento
-- **Memoria principal y cachés**: acceso rápido pero capacidad limitada; la CPU opera directamente sobre esta capa.
-- **Memoria secundaria**: discos magnéticos, ópticos o cintas con gran capacidad pero acceso más lento.
+### Storage hierarchy (Jerarquía de almacenamiento)
+- **Main memory and caches (Memoria principal y cachés):** fast access yet limited capacity; the CPU operates directly here.
+- **Secondary memory (Memoria secundaria):** magnetic, optical, or tape storage with higher capacity but slower access.
 
-### Organización en disco
-- Las relaciones se guardan en ficheros compuestos por registros que describen objetos concretos.
-- Los discos se organizan en superficies, pistas y cilindros; la unidad de transferencia es el **bloque** o página, tanto para direccionar como para intercambiar datos entre memoria secundaria y principal.
+### On-disk organization (Organización en disco)
+- Relations are stored in files made of records that represent concrete objects.
+- Disks use surfaces, tracks, and cylinders; the transfer unit is the **block (bloque)** or page for addressing and moving data between secondary and main memory.
 
-### Flujo de una consulta
-1. El usuario lanza una consulta sobre su vista (esquema externo) o directamente sobre el esquema lógico.
-2. El SGBD traduce la consulta entre esquemas lógico y físico para determinar qué bloques del disco necesita.
-3. Solicita al sistema operativo la lectura de esos bloques y los carga en los buffers de memoria principal.
-4. Devuelve los resultados al programa o herramienta cliente sin modificar el estado de la base de datos.
+### Query flow (Flujo de una consulta)
+1. The user issues a query against their view (external schema) or the logical schema.
+2. The DBMS translates the query across logical and physical schemas to identify required disk blocks.
+3. It asks the operating system to read those blocks and loads them into main-memory buffers.
+4. It returns results to the application or client tool without changing database state.
 
-![Ciclo de atención de una consulta SQL](figure:dbd-tema-1/consulta)
-Caption: Flujo de traducción entre esquemas y lectura de bloques que siguen las consultas SELECT.
+![Lifecycle of a SQL query (Ciclo de atención de una consulta SQL)](figure:dbd-tema-1/consulta)
+Caption: Translation steps across schemas and block reads followed by SELECT queries.
 
-### Flujo de una actualización
-1. Se repiten los pasos de traducción y lectura de bloques usados en las consultas.
-2. El SGBD aplica las operaciones INSERT, DELETE o UPDATE en los buffers de memoria principal.
-3. Solicita la escritura de los bloques modificados en disco según su política de transferencia.
+### Update flow (Flujo de una actualización)
+1. Repeat the translation and block-reading steps used for queries.
+2. Apply INSERT, DELETE, or UPDATE operations inside the main-memory buffers.
+3. Request that modified blocks be written back to disk according to the transfer policy.
 
-![Ciclo de actualización con escritura diferida](figure:dbd-tema-1/actualizacion)
-Caption: Pasos necesarios para aplicar cambios en memoria y persistir los bloques actualizados en disco.
+![Deferred-write update cycle (Ciclo de actualización con escritura diferida)](figure:dbd-tema-1/actualizacion)
+Caption: Steps for applying changes in memory and persisting updated blocks to disk.
 
-### Claves operativas
-- El SGBD sólo puede operar sobre los buffers que le asigna el sistema operativo.
-- Toda lectura o escritura se realiza en unidades de bloque.
-- Las escrituras pueden diferirse; la política de transferencia decide cuándo se persisten los cambios.
+### Operational keys (Claves operativas)
+- The DBMS can operate only on the buffers assigned by the operating system.
+- All reads or writes occur in block units (unidades de bloque).
+- Writes may be deferred; the transfer policy decides when changes persist.
 
-## 4. Arquitecturas básicas de SGBD
-El despliegue de un SGBD puede seguir distintos modelos según la capacidad de las máquinas y la distribución de la lógica de aplicación.
+## 4. Baseline DBMS architectures (Arquitecturas básicas de SGBD)
+DBMS deployments follow different models depending on machine capacity and how application logic is distributed.
 
-### Arquitectura centralizada
-- Terminales ligeras conectadas a un servidor central sin capacidad de proceso local.
-- El servidor ejecuta las aplicaciones, el SGBD, la interfaz y gestiona los dispositivos de E/S.
+### Centralized architecture (Arquitectura centralizada)
+- Thin terminals connect to a central server with no local processing power.
+- The server runs applications, the DBMS engine, user interfaces, and I/O devices.
 
-![Terminales conectadas a un servidor central](figure:dbd-tema-1/centralizada)
-Caption: Esquema clásico donde todo el procesamiento reside en el host central y las terminales sólo visualizan.
+![Terminals connected to a central server (Terminales conectadas a un servidor central)](figure:dbd-tema-1/centralizada)
+Caption: Classic layout where all processing stays on the host and terminals only display.
 
-### Arquitectura cliente-servidor
-- Servidores especializados (web, correo, ficheros, base de datos) comparten recursos por red.
-- Los clientes ejecutan parte de la lógica de aplicación y ofrecen las interfaces de usuario.
-- La red conecta sitios geográficamente distribuidos que colaboran sobre los mismos esquemas.
+### Client–server architecture (Arquitectura cliente-servidor)
+- Specialized servers (web, mail, file, database) share resources over the network.
+- Clients execute part of the application logic and host user interfaces.
+- The network connects geographically distributed sites collaborating on the same schemas.
 
-![Servicios especializados y clientes distribuidos](figure:dbd-tema-1/servicios)
-Caption: Distribución de servidores dedicados y clientes que acceden al esquema lógico mediante la red.
+![Specialized services and distributed clients (Servicios especializados y clientes distribuidos)](figure:dbd-tema-1/servicios)
+Caption: Dedicated servers and clients accessing the logical schema via the network.
 
-### Cliente-servidor orientado a bases de datos
-- El cliente ejecuta programas de interfaz y lógica (Visual, C++, Java…).
-- El servidor se centra en procesar consultas SQL y transacciones.
-- Ambos cooperan a través de la red sobre el mismo esquema lógico y físico.
+### Database-oriented client–server (Cliente-servidor orientado a bases de datos)
+- The client runs UI and logic programs (Visual, C++, Java…).
+- The server focuses on SQL queries and transaction processing.
+- Both cooperate over the network using the same logical and physical schema.
 
-![Reparto de responsabilidades en un SGBD cliente-servidor](figure:dbd-tema-1/cliente-servidor)
-Caption: División entre programas cliente y motor del SGBD para gestionar consultas y transacciones.
+![Client–server responsibility split (Reparto de responsabilidades en un SGBD cliente-servidor)](figure:dbd-tema-1/cliente-servidor)
+Caption: Division between client applications and the DBMS engine to handle queries and transactions.
 
-### Laboratorio BDASI como ejemplo práctico
-- SQL Developer actúa como cliente sobre el motor Oracle.
-- La base de datos Ciclismo reside en el servidor del laboratorio.
-- El esquema lógico se comparte con los alumnos mientras el esquema físico lo controla la administración.
+### BDASI lab as a practical example (Laboratorio BDASI como ejemplo práctico)
+- SQL Developer acts as the client on top of the Oracle engine.
+- The Cycling database (base de datos Ciclismo) resides on the lab server.
+- Students share the logical schema while the physical schema is managed by administration.
 
-![SQL Developer conectado al SGBD Oracle](figure:dbd-tema-1/lab)
-Caption: Vista del entorno del laboratorio BDASI que combina cliente SQL y motor Oracle.
+![SQL Developer connected to Oracle DBMS (SQL Developer conectado al SGBD Oracle)](figure:dbd-tema-1/lab)
+Caption: BDASI lab environment combining the SQL client and Oracle engine.
 
-## 5. Objetivos de un SGBD
-1. **Procesar correctamente transacciones en entornos concurrentes**:
-   - Seguridad en bases de datos (Tema 7).
-   - Procesamiento de transacciones e integridad (Tema 2).
-   - Recuperación y tolerancia a fallos (Tema 3).
-   - Control de concurrencia (Tema 4).
-2. **Procesar eficientemente transacciones concurrentes**:
-   - Implementación física de bases de datos (Tema 5).
-   - Optimización de consultas (Tema 6).
-   - Diseño físico de bases de datos relacionales (Tema 8).
+## 5. DBMS objectives (Objetivos de un SGBD)
+1. **Process transactions correctly in concurrent environments (Procesar correctamente transacciones en entornos concurrentes):**
+   - Database security—Topic 7 (Seguridad en bases de datos).
+   - Transaction processing and integrity—Topic 2 (Procesamiento de transacciones e integridad).
+   - Recovery and fault tolerance—Topic 3 (Recuperación y tolerancia a fallos).
+   - Concurrency control—Topic 4 (Control de concurrencia).
+2. **Process concurrent transactions efficiently (Procesar eficientemente transacciones concurrentes):**
+   - Physical database implementation—Topic 5 (Implementación física de bases de datos).
+   - Query optimization—Topic 6 (Optimización de consultas).
+   - Physical design for relational databases—Topic 8 (Diseño físico de bases de datos relacionales).

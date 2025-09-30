@@ -1,0 +1,18 @@
+# Notebook focus
+- Practice Local Binary Patterns (**Patrones Binarios Locales**) on controlled datasets before moving to real-world textures.
+- Compare standard, rotation-invariant, and uniform LBP variants with quantitative charts.
+
+## Workflow outline
+1. Load the sample images and apply grayscale plus optional Gaussian smoothing to reduce noise.
+2. Compute LBP features with varying `P` (points) and `R` (radius) values; document the configuration in both English and Spanish.
+3. Build normalised histograms, explaining how bins relate to texture micro-patterns (**micro-patrones**).
+4. Train a lightweight classifier (k-NN or SVM) and log accuracy to validate the descriptor choice.
+
+## Analysis questions
+- How does increasing the radius affect rotational robustness? Reference the Spanish descriptor names when comparing results.
+- Which variant yields the most stable histogram across lighting changes?
+
+## Submission items
+- Notebook executed end-to-end with markdown commentary summarising findings.
+- Table comparing metrics (accuracy, F1-score) for each LBP variant with bilingual column headers.
+- Short retrospective noting open issues to address in the SIFT session.

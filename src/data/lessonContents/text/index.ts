@@ -1,9 +1,15 @@
+import admeavLabSesion1 from './admeav-lab-sesion1.txt?raw';
+import admeavNotebookGlcm from './admeav-notebook-glcm.txt?raw';
+import admeavNotebookLbp from './admeav-notebook-lbp.txt?raw';
+import admeavNotebookSift from './admeav-notebook-sift.txt?raw';
 import admeavSlideT0 from './admeav-slide-t0.txt?raw';
 import admeavSlideT1 from './admeav-slide-t1.txt?raw';
 import admeavSlideT2 from './admeav-slide-t2.txt?raw';
 import dbdPresentacion from './dbd-presentacion.txt?raw';
 import dbdTema1 from './dbd-tema-1.txt?raw';
 import dbdTema2 from './dbd-tema-2.txt?raw';
+import ggoBedellEjercicio from './ggo-bedell-ejercicio.txt?raw';
+import ggoStakeholders from './ggo-stakeholders.txt?raw';
 import ggoTema1 from './ggo-tema-1.txt?raw';
 import ggoTema2 from './ggo-tema-2.txt?raw';
 import ggoTema3 from './ggo-tema-3.txt?raw';
@@ -28,6 +34,8 @@ export const lessonSummaryText: Record<string, string> = {
   'ggo-tema-1': ggoTema1,
   'ggo-tema-2': ggoTema2,
   'ggo-tema-3': ggoTema3,
+  'ggo-bedell-ejercicio': ggoBedellEjercicio,
+  'ggo-stakeholders': ggoStakeholders,
   'sad-session-0': sadSession0,
   'sad-session-1': sadSession1,
   'sad-session-2': sadSession2,
@@ -38,12 +46,20 @@ export const lessonSummaryText: Record<string, string> = {
   'snlp-chapter-4': snlpChapter4,
   'snlp-chapter-5': snlpChapter5,
   'snlp-chapter-6': snlpChapter6,
+  'admeav-lab-sesion1': admeavLabSesion1,
+  'admeav-notebook-glcm': admeavNotebookGlcm,
+  'admeav-notebook-lbp': admeavNotebookLbp,
+  'admeav-notebook-sift': admeavNotebookSift,
 };
 
 export const englishLessonIds = new Set<string>([
   'admeav-slide-t0',
   'admeav-slide-t1',
   'admeav-slide-t2',
+  'admeav-lab-sesion1',
+  'admeav-notebook-glcm',
+  'admeav-notebook-lbp',
+  'admeav-notebook-sift',
   'snlp-chapter-1',
   'snlp-chapter-2',
   'snlp-chapter-3',

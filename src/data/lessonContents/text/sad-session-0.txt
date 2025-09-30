@@ -1,43 +1,43 @@
-# Sesión 0 · Presentación del curso Servicios y Aplicaciones Distribuidas
+# Session 0 · Course introduction for Distributed Applications and Services (Servicios y Aplicaciones Distribuidas)
 
-## Información general
-- **Docente:** José M. Bernabéu Aubán (bernabeu@upv.es).
-- **Tutorías:** bajo demanda.
-- **Créditos:** 4,5 de teoría/seminarios + 1,5 de laboratorio.
-- **Calendario:**
-  - Martes: teoría y seminarios en aula (modalidad mixta).
-  - Viernes: seminarios, laboratorios y pruebas.
-  - Última sesión: 16 de diciembre.
-  - Examen final: 19 de diciembre (remoto, Poliformat).
+## General information (Información general)
+- **Instructor (Docente):** José M. Bernabéu Aubán (bernabeu@upv.es).
+- **Office hours (Tutorías):** on demand.
+- **Credits (Créditos):** 4.5 theory/seminars + 1.5 lab.
+- **Schedule (Calendario):**
+  - Tuesdays: theory and seminars in the classroom (modalidad mixta · blended format).
+  - Fridays: seminars, labs, and assessments.
+  - Final class session on 16 December.
+  - Final exam on 19 December (remote, via Poliformat).
 
-## Objetivos del curso
-- Comprender los conceptos fundamentales de los sistemas distribuidos.
-- Identificar patrones y aproximaciones para diseñar servicios distribuidos.
-- Conocer los principales retos: seguridad, coordinación, optimización de recursos.
-- Desarrollar habilidades prácticas mediante laboratorios guiados.
+## Course objectives (Objetivos del curso)
+- Understand the fundamental concepts of distributed systems (sistemas distribuidos).
+- Identify patterns and approaches for designing distributed services (servicios distribuidos).
+- Recognize the main challenges: security (seguridad), coordination (coordinación), resource optimization (optimización de recursos).
+- Build practical skills through guided lab work (laboratorios guiados).
 
-![Componentes del curso](figure:sad-session-0/estructura)
-Caption: Relación entre teoría, seminarios y laboratorio dentro del curso.
+![Course components (Componentes del curso)](figure:sad-session-0/estructura)
+Caption: How theory, seminars, and labs interlock across the course.
 
-## Evaluación
-- **Examen teórico:** 25 %.
-- **Proyecto de laboratorio:** 25 %.
-- **Seminarios / examen práctico:** 25 %.
-- **Cuestionarios de seminario:** 25 %.
+## Assessment (Evaluación)
+- **Theory exam (Examen teórico):** 25 %.
+- **Lab project (Proyecto de laboratorio):** 25 %.
+- **Seminars / practical exam (Seminarios / examen práctico):** 25 %.
+- **Seminar quizzes (Cuestionarios de seminario):** 25 %.
 
-## Programa de contenidos
-1. Fundamentos de sistemas distribuidos.
-2. Arquitecturas, coordinación y contratos (SLA, QoS, Cloud).
-3. Seguridad y gobierno.
-4. Despliegue y tecnologías (NATS, Prometheus, STEP, APISIX, Docker).
+## Content roadmap (Programa de contenidos)
+1. Fundamentals of distributed systems (Fundamentos de sistemas distribuidos).
+2. Architectures, coordination, and service contracts (Arquitecturas, coordinación y contratos: SLA, QoS, Cloud).
+3. Security and governance (Seguridad y gobierno).
+4. Deployment and tooling—NATS, Prometheus, STEP, APISIX, Docker.
 
-## Laboratorios
-- Diseño e implementación de un servicio ilustrativo que integre colas, proxy inverso, autenticación y despliegue.
-- Trabajo en grupos de tres personas.
-- Tecnologías principales: TypeScript o Go, Docker, Git, VS Code.
-- Entrega del repositorio completo en formato `.tgz`.
+## Laboratories (Laboratorios)
+- Design and implement an illustrative service that integrates queues, a reverse proxy, authentication, and deployment.
+- Work in teams of three people (grupos de tres personas).
+- Core technologies: TypeScript or Go, Docker, Git, VS Code.
+- Deliver the full repository as a `.tgz` package.
 
-## Requisitos y recomendaciones
-- Conocimientos previos de informática, programación y sistemas.
-- Nivel aconsejado: experiencia en TypeScript/Golang, Git, Linux y herramientas de desarrollo colaborativo.
-- Dedicación distribuida entre sesiones presenciales y trabajo autónomo.
+## Requirements and recommendations (Requisitos y recomendaciones)
+- Previous knowledge of computer science, programming, and operating systems.
+- Suggested experience: TypeScript/Golang, Git, Linux, and collaborative development tooling.
+- Time split between in-class sessions and autonomous work (trabajo autónomo).

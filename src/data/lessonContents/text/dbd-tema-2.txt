@@ -1,65 +1,65 @@
-# Tema 2 · Procesamiento de transacciones e integridad
+# Topic 2 · Transaction processing and integrity (Procesamiento de transacciones e integridad)
 
-## Objetivos de aprendizaje
-- Definir qué es una transacción y cómo evoluciona su estado.
-- Revisar las propiedades ACID que debe garantizar un SGBD.
-- Describir cómo se expresan y validan las transacciones en SQL.
-- Comprender las estrategias para verificar restricciones de integridad.
+## Learning objectives (Objetivos de aprendizaje)
+- Define what a transaction (transacción) is and how its state evolves.
+- Review the ACID properties that a DBMS (SGBD) must guarantee.
+- Describe how SQL expresses and validates transactions.
+- Understand strategies for verifying integrity constraints (restricciones de integridad).
 
-## Mapa conceptual
-- Concepto de transacción y operaciones básicas de SQL.
-- Estados y propiedades del procesamiento de transacciones.
-- Delimitación de transacciones en SQL y control de confirmaciones.
-- Tipos de restricciones de integridad y su comprobación.
+## Concept map (Mapa conceptual)
+- Transaction concepts and core SQL operations.
+- Transaction-processing states and properties.
+- Delimiting transactions in SQL and controlling commits (control de confirmaciones).
+- Types of integrity constraints and how to enforce them.
 
-![Ciclo de vida de una transacción](figure:dbd-tema-2/estados)
-Caption: Estados principales de una transacción y transiciones ocasionadas por commits, rollbacks y fallos.
+![Transaction lifecycle (Ciclo de vida de una transacción)](figure:dbd-tema-2/estados)
+Caption: Main transaction states and transitions triggered by commits, rollbacks, and failures.
 
-## 1. Concepto de transacción
-- Una **transacción** agrupa operaciones de lectura y escritura que deben ejecutarse como una unidad atómica.
-- En SQL, la manipulación se realiza mediante `SELECT`, `INSERT`, `UPDATE` y `DELETE` sobre una o varias tablas.
-- Ejemplo: alta de un departamento y reasignación de un empleado requieren cambios coordinados para mantener la integridad referencial.
+## 1. Transaction concept (Concepto de transacción)
+- A **transaction (transacción)** groups read/write operations that must execute as one atomic unit.
+- In SQL, manipulation happens through `SELECT`, `INSERT`, `UPDATE`, and `DELETE` across one or more tables.
+- Example: creating a department and reassigning an employee require coordinated changes to preserve referential integrity (integridad referencial).
 
-## 2. Operaciones y estados
-- Estados típicos: **activa**, **parcialmente confirmada**, **confirmada**, **fallida** y **abortada**.
-- Las transacciones pueden finalizar con `COMMIT` (persistencia) o `ROLLBACK` (reversión).
-- Los sistemas deben manejar abortos por errores lógicos, violaciones de restricción o fallos del sistema.
+## 2. Operations and states (Operaciones y estados)
+- Typical states: **active (activa)**, **partially committed (parcialmente confirmada)**, **committed (confirmada)**, **failed (fallida)**, and **aborted (abortada)**.
+- Transactions end with `COMMIT` (persist results) or `ROLLBACK` (reverse them).
+- Systems must handle aborts caused by logical errors, constraint violations, or system failures.
 
-## 3. Propiedades ACID
-- **Atomicidad:** todo o nada; se apoya en registros de log y mecanismos de undo.
-- **Consistencia:** cada transacción debe llevar la BD de un estado válido a otro.
-- **Aislamiento:** las transacciones concurrentes no deben interferir de forma observable.
-- **Durabilidad:** una vez confirmado, el resultado permanece incluso ante fallos.
+## 3. ACID properties (Propiedades ACID)
+- **Atomicity (Atomicidad):** all or nothing, backed by logs and undo mechanisms.
+- **Consistency (Consistencia):** each transaction moves the database from one valid state to another.
+- **Isolation (Aislamiento):** concurrent transactions must not interfere in observable ways.
+- **Durability (Durabilidad):** once committed, results survive failures.
 
-![Propiedades ACID y mecanismos de soporte](figure:dbd-tema-2/acid)
-Caption: Relación entre propiedades ACID y componentes del SGBD que las aseguran.
+![ACID properties and supporting mechanisms (Propiedades ACID y mecanismos de soporte)](figure:dbd-tema-2/acid)
+Caption: How ACID properties map to DBMS components that enforce them.
 
-## 4. Transacciones en SQL
-- Una transacción inicia de forma implícita con la primera instrucción DML y finaliza con `COMMIT` o `ROLLBACK`.
-- Es posible delimitarla explícitamente con `BEGIN TRANSACTION` / `START TRANSACTION`.
-- SQL ofrece **puntos de salvaguarda** (`SAVEPOINT`) para deshacer parcialmente operaciones sin abortar toda la transacción.
-- El modo de autocommit de los clientes determina si cada sentencia se confirma automáticamente.
+## 4. Transactions in SQL (Transacciones en SQL)
+- A transaction starts implicitly with the first DML statement and ends with `COMMIT` or `ROLLBACK`.
+- You can delimit it explicitly with `BEGIN TRANSACTION` / `START TRANSACTION`.
+- SQL provides **savepoints (puntos de salvaguarda / SAVEPOINT)** to partially undo operations without aborting the whole transaction.
+- Client auto-commit mode decides whether each statement is committed automatically.
 
-## 5. Restricciones de integridad
-- Tipos principales:
-  - **Clave primaria (CP)** y **unicidad**.
-  - **Claves ajenas (CAj)** para relaciones entre tablas.
-  - **Restricciones de dominio y comprobaciones (`CHECK`)**.
-  - Reglas de negocio avanzadas (triggers).
-- Deben mantenerse tanto en operaciones individuales como en transacciones compuestas.
+## 5. Integrity constraints (Restricciones de integridad)
+- Main types:
+  - **Primary key (Clave primaria, CP)** and **uniqueness (unicidad)**.
+  - **Foreign keys (Claves ajenas, CAj)** linking tables.
+  - **Domain constraints and checks (Restricciones de dominio, `CHECK`).**
+  - Advanced business rules via triggers (reglas de negocio con triggers).
+- They must hold for single operations and multi-statement transactions alike.
 
-## 6. Estrategias de comprobación
-- **Previa a la modificación (immediate):** se valida antes de escribir; evita estados inconsistentes pero puede requerir bloqueos.
-- **Diferida:** se permite temporalmente la inconsistencia y se valida al confirmar; requiere registro de cambios intermedios.
-- SQL permite marcar restricciones como `DEFERRABLE INITIALLY DEFERRED` para posponer su comprobación al commit.
-- Las acciones sobre claves ajenas (`ON DELETE/UPDATE`) definen comportamiento (RESTRICT, CASCADE, SET NULL, SET DEFAULT).
+## 6. Validation strategies (Estrategias de comprobación)
+- **Immediate (Previa a la modificación):** validate before writing; prevents inconsistent states but may require locks.
+- **Deferred (Diferida):** allow temporary inconsistency and validate at commit; requires tracking intermediate changes.
+- SQL lets you mark constraints as `DEFERRABLE INITIALLY DEFERRED` to postpone checks until commit time.
+- Foreign-key actions (`ON DELETE/UPDATE`) define behavior—RESTRICT, CASCADE, SET NULL, SET DEFAULT.
 
-## 7. Integridad en SQL
-- Declaración de restricciones en `CREATE TABLE` o `ALTER TABLE`.
-- Uso de disparadores (`CREATE TRIGGER`) para reglas personalizadas.
-- Control de errores mediante manejo de excepciones en procedimientos almacenados para reaccionar ante violaciones.
+## 7. Integrity in SQL (Integridad en SQL)
+- Declare constraints in `CREATE TABLE` or `ALTER TABLE`.
+- Use triggers (`CREATE TRIGGER`) for customized rules.
+- Handle errors via exception management in stored procedures to react to violations.
 
-## 8. Buenas prácticas
-- Diseñar transacciones cortas que bloqueen la menor cantidad de filas posible.
-- Documentar claramente qué restricciones son diferibles y bajo qué condiciones.
-- Supervisar logs de transacciones y planificar tareas de mantenimiento (checkpoint, backups) que garanticen durabilidad.
+## 8. Good practices (Buenas prácticas)
+- Design short transactions that lock as few rows as possible.
+- Document clearly which constraints are deferrable (restricciones diferibles) and under what conditions.
+- Monitor transaction logs and schedule maintenance tasks—checkpoints, backups—to guarantee durability.
