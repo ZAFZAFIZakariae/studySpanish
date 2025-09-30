@@ -1,0 +1,18 @@
+# Notebook goals
+- Explore Grey Level Co-occurrence Matrix (**matriz de co-ocurrencia de niveles de gris**) behaviour on texture samples.
+- Show how window size and distance parameters influence contrast, dissimilarity, energy, and homogeneity.
+
+## Step-by-step guide
+1. Load the texture atlas images and convert them to grayscale if required.
+2. Generate GLCMs with multiple `distances` and `angles`, mirroring the values listed in the Spanish slide deck.
+3. Compute summary statistics using `skimage.feature.graycoprops` and record them in a bilingual table (English header with Spanish term in parentheses).
+4. Plot heatmaps to visualise dominant relationships and annotate observations directly on the figures.
+
+## Reflection prompts
+- Which parameter combination best separates wood versus fabric textures? Justify referencing the Spanish metric name (**homogeneidad**, **contraste**, etc.).
+- Identify any preprocessing steps that stabilise the metrics when lighting changes.
+
+## Deliverables
+- Executed notebook with commentary cells explaining each metric.
+- PNG exports of the comparison charts inserted into the report template.
+- Two bullet conclusions about how GLCM features feed downstream classifiers.

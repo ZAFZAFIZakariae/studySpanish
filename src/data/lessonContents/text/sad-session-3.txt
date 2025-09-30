@@ -1,53 +1,53 @@
-# Sesión 3 · Modelos de servicio y despliegue en la nube
+# Session 3 · Cloud service and deployment models (Modelos de servicio y despliegue en la nube)
 
-## Objetivos
-- Diferenciar los modelos IaaS, PaaS y SaaS y su reparto de responsabilidades.
-- Analizar escenarios de uso de nubes públicas, privadas e híbridas.
-- Introducir criterios para seleccionar proveedores y controlar costes.
+## Objectives (Objetivos)
+- Differentiate IaaS, PaaS, and SaaS models and how responsibilities are shared (reparto de responsabilidades).
+- Analyze scenarios that use public, private, and hybrid clouds (nubes públicas, privadas e híbridas).
+- Introduce criteria for choosing providers and controlling costs.
 
-## Recordatorio de computación en la nube
-- Recursos compartidos de cómputo, almacenamiento y red disponibles bajo demanda.
-- Elasticidad, autoservicio y pago por uso como características definitorias.
+## Cloud computing refresher (Recordatorio de computación en la nube)
+- Shared compute, storage, and networking resources available on demand (recursos compartidos bajo demanda).
+- Elasticity, self-service (autoservicio), and pay-per-use as defining traits.
 
-## Modelos de servicio
-- **IaaS:** control granular sobre VMs, redes y almacenamiento; requiere gestionar SO, runtime y parches.
-- **PaaS:** la plataforma gestiona el runtime; el equipo se enfoca en código y datos; ideal para apps web y APIs.
-- **SaaS:** aplicaciones completas consumidas como servicio; configuración y gestión de usuarios recae en el cliente.
+## Service models (Modelos de servicio)
+- **IaaS:** granular control over VMs, networks, and storage; you manage the OS, runtime, and patches (SO, runtime y parches).
+- **PaaS:** the platform runs the runtime; the team focuses on code and data—great for web apps and APIs.
+- **SaaS:** complete applications consumed as a service; the customer handles configuration and user management.
 
-![Responsabilidades según modelo](figure:sad-session-3/responsabilidades)
-Caption: Qué partes gestiona el proveedor y cuáles permanecen bajo control del cliente en IaaS, PaaS y SaaS.
+![Responsibilities per model (Responsabilidades según modelo)](figure:sad-session-3/responsabilidades)
+Caption: Which layers the provider manages versus what the customer controls across IaaS, PaaS, and SaaS.
 
-## Selección del modelo
-- Variables clave: velocidad de entrega, requisitos de control, cumplimiento normativo, habilidades del equipo.
-- Un portafolio real combina modelos según necesidades de cada workload.
+## Choosing a model (Selección del modelo)
+- Key variables: delivery speed, control requirements, regulatory compliance, team skills (habilidades del equipo).
+- Real portfolios mix models depending on each workload’s needs.
 
-## Proveedores principales
-- **AWS:** amplitud de servicios, liderazgo en IaaS y ecosistema serverless.
-- **Azure:** integración con stack Microsoft, capacidades híbridas y gobierno corporativo.
-- **Google Cloud:** fortaleza en datos/ML, innovación en contenedores y redes de alto rendimiento.
+## Leading providers (Proveedores principales)
+- **AWS:** broad service catalog, leadership in IaaS, and a rich serverless ecosystem.
+- **Azure:** tight integration with the Microsoft stack, hybrid capabilities, and enterprise governance tools.
+- **Google Cloud:** strong data/ML services, container innovation, and high-performance networking.
 
-## Estrategias multi-cloud e híbridas
-- Motivos: resiliencia, localización de datos, negociación.
-- Costes: duplicar operaciones, diseñar para el mínimo común denominador, complejidad de red e identidad.
-- Enfoque pragmático: portabilidad de aplicaciones, datos gobernados donde aportan más valor.
+## Multi-cloud and hybrid strategies (Estrategias multi-cloud e híbridas)
+- Reasons: resilience, data locality, negotiation leverage (resiliencia, localización de datos, negociación).
+- Costs: duplicated operations, designing for the lowest common denominator, network and identity complexity.
+- Pragmatic approach: aim for application portability and place governed data where it creates the most value.
 
-## Nube pública, privada e híbrida
-- **Pública:** infraestructura compartida; elasticidad y menor CAPEX, pero con retos de cumplimiento y ruido.
-- **Privada:** control total y personalización; mayor inversión y riesgo de sobreaprovisionamiento.
-- **Híbrida:** combina ambas para respetar gravedad de datos y latencias; exige coordinación operativa rigurosa.
+## Public, private, and hybrid clouds (Nube pública, privada e híbrida)
+- **Public (Pública):** shared infrastructure; elasticity and lower CAPEX, with compliance and noisy-neighbor challenges.
+- **Private (Privada):** full control and customization; higher investment and risk of overprovisioning.
+- **Hybrid (Híbrida):** combines both to respect data gravity and latency; demands disciplined operational coordination.
 
-## Casos de uso destacados
-- **Aplicaciones web:** capas stateless en PaaS/serverless, bases gestionadas, despliegues blue-green.
-- **Big Data & Analytics:** data lakes en almacenamiento de objetos, pipelines serverless, catálogos y gobierno.
-- **IA/ML:** notebooks gestionados, entrenamiento con GPU/TPU, pipelines de MLOps.
-- **Backup & DR:** replicación cross-region, backups inmutables, pruebas periódicas de recuperación.
+## Highlight use cases (Casos de uso destacados)
+- **Web applications (Aplicaciones web):** stateless tiers on PaaS/serverless, managed databases, blue-green deployments.
+- **Big data & analytics:** object storage data lakes, serverless pipelines, catalogs, and governance.
+- **AI/ML:** managed notebooks, GPU/TPU training, MLOps pipelines.
+- **Backup & disaster recovery (Backup & DR):** cross-region replication, immutable backups, periodic recovery drills.
 
-## Costes y FinOps
-- Modelos de precio: on-demand, reservados/commit, spot/preemptible, serverless.
-- Supervisar egress y primas de servicios gestionados.
-- FinOps: etiquetado, presupuestos, automatización de apagados y right-sizing.
+## Costs and FinOps (Costes y FinOps)
+- Pricing models: on-demand, reserved/committed, spot/preemptible, serverless.
+- Monitor egress fees and managed-service premiums.
+- FinOps practices: tagging, budgets, automated shutdowns, and right-sizing.
 
-## Gobierno y cumplimiento
-- Modelo de responsabilidad compartida: el proveedor asegura la nube, el cliente lo que ejecuta sobre ella.
-- Diseñar con requisitos de residencia de datos, auditoría y retención.
-- Planificar estrategias de salida para mitigar lock-in (formatos portables, backups, automatización).
+## Governance and compliance (Gobierno y cumplimiento)
+- Shared responsibility model: the provider secures the cloud; the customer secures what runs on it.
+- Design for data residency, audit, and retention requirements (residencia de datos, auditoría y retención).
+- Plan exit strategies to mitigate lock-in—portable formats, backups, automation.

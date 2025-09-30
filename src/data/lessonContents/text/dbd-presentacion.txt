@@ -1,50 +1,50 @@
-# Presentación · Diseño y Gestión de Bases de Datos
+# Introduction · Database Design and Management (Diseño y Gestión de Bases de Datos)
 
-## Información general
-- **Grado:** Ingeniería Informática (Especialización en Sistemas de Información).
-- **Carácter:** Obligatoria (4,5 créditos teoría + 1,5 créditos práctica).
-- **Profesorado:** Laura Mota, Pedro Valderas y Abel Gómez.
+## General information (Información general)
+- **Degree (Grado):** Computer Engineering, Information Systems specialization (Ingeniería Informática – Sistemas de Información).
+- **Type (Carácter):** Mandatory course—4.5 theory credits + 1.5 lab credits.
+- **Faculty (Profesorado):** Laura Mota, Pedro Valderas, and Abel Gómez.
 
-## Propósito de la asignatura
-- Profundizar en la administración y explotación de SGBD relacionales.
-- Diseñar soluciones avanzadas que integren aspectos lógicos y físicos.
-- Complementar los conocimientos adquiridos en “Bases de Datos y Sistemas de Información”.
+## Course purpose (Propósito de la asignatura)
+- Deepen skills in administering and operating relational DBMSs (SGBD relacionales).
+- Design advanced solutions that integrate logical and physical aspects.
+- Reinforce knowledge from “Databases and Information Systems” (Bases de Datos y Sistemas de Información).
 
-## Objetivos específicos
-- **Gestión y administración:**
-  - Analizar componentes, funciones y arquitecturas de un SGBD.
-  - Dominar estrategias de independencia, integridad y seguridad.
-  - Planificar tareas de implementación, optimización y monitorización.
-- **Diseño avanzado:**
-  - Evaluar factores del diseño físico y decisiones de desnormalización.
-  - Programar lógica en el servidor (PL/SQL, triggers, paquetes).
-  - Aplicar metodologías a casos de estudio reales.
+## Specific objectives (Objetivos específicos)
+- **Management and administration (Gestión y administración):**
+  - Analyze DBMS components, functions, and architectures.
+  - Master independence, integrity, and security strategies (independencia, integridad y seguridad).
+  - Plan implementation, optimization, and monitoring tasks.
+- **Advanced design (Diseño avanzado):**
+  - Evaluate physical design factors and denormalization choices.
+  - Program server-side logic—PL/SQL, triggers, packages (lógica en el servidor).
+  - Apply methodologies to real case studies.
 
-![Mapa de competencias de la asignatura](figure:dbd-presentacion/competencias)
-Caption: Conexión entre gestión, diseño y habilidades prácticas que se desarrollan durante el semestre.
+![Course competency map (Mapa de competencias de la asignatura)](figure:dbd-presentacion/competencias)
+Caption: How management, design, and hands-on abilities connect throughout the semester.
 
-## Programa de teoría
-1. Sistemas de Gestión de Bases de Datos.
-2. Procesamiento de transacciones e integridad.
-3. Recuperación ante fallos.
-4. Control de la concurrencia.
-5. Implementación interna de bases de datos.
-6. Optimización de consultas.
-7. Seguridad en bases de datos.
-8. Diseño físico.
-9. Programación en el servidor.
+## Theory syllabus (Programa de teoría)
+1. Database management systems (Sistemas de Gestión de Bases de Datos).
+2. Transaction processing and integrity (Procesamiento de transacciones e integridad).
+3. Failure recovery (Recuperación ante fallos).
+4. Concurrency control (Control de la concurrencia).
+5. Internal database implementation.
+6. Query optimization (Optimización de consultas).
+7. Database security (Seguridad en bases de datos).
+8. Physical design (Diseño físico).
+9. Server-side programming (Programación en el servidor).
 
-## Programa de prácticas
-- **P1:** Introducción al entorno Oracle.
-- **P2:** Procesamiento de transacciones e integridad.
-- **P3:** Recuperación ante fallos.
-- **P4:** Concurrencia en Oracle.
-- **P5:** Implementación física (2 sesiones).
-- **P6:** Optimización de consultas.
-- **P7:** Seguridad.
-- **P8:** Programación en el servidor (2 sesiones).
+## Lab syllabus (Programa de prácticas)
+- **P1:** Introduction to the Oracle environment (Introducción al entorno Oracle).
+- **P2:** Transaction processing and integrity.
+- **P3:** Failure recovery.
+- **P4:** Concurrency in Oracle (Concurrencia en Oracle).
+- **P5:** Physical implementation—two sessions (Implementación física).
+- **P6:** Query optimization.
+- **P7:** Security (Seguridad).
+- **P8:** Server-side programming—two sessions (Programación en el servidor).
 
-## Evaluación orientativa
-- Participación en laboratorio y entregas asociadas a cada práctica.
-- Pruebas escritas que cubren bloques teóricos específicos.
-- Proyecto o caso integrador con énfasis en administración y diseño.
+## Assessment overview (Evaluación orientativa)
+- Lab participation and deliverables tied to each practice (participación en laboratorio).
+- Written tests covering specific theory blocks.
+- Integrative project or case study emphasizing administration and design.

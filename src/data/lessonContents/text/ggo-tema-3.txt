@@ -1,44 +1,44 @@
-# Tema 3 · Alineación entre negocio y SI/TI
+# Topic 3 · Business and IS/IT Alignment (Alineación entre negocio y SI/TI)
 
-## Objetivos
-- Comprender por qué negocio y TI deben compartir una visión estratégica.
-- Analizar el Modelo de Alineamiento Estratégico de Henderson y Venkatraman.
-- Revisar herramientas para formular estrategias coherentes en ambos ámbitos.
+## Objectives (Objetivos)
+- Understand why business and IT must share a strategic vision (visión estratégica).
+- Analyze the Strategic Alignment Model (Modelo de Alineamiento Estratégico) from Henderson and Venkatraman.
+- Review tools for building coherent strategies in both domains.
 
-## Conceptos clave
-- Las empresas desarrollan simultáneamente **estrategia de negocio** y **estrategia de SI/TI**, que se materializan en infraestructuras organizativas y tecnológicas.
-- La alineación busca que los cambios en una dimensión se reflejen coordinadamente en la otra.
-- La falta de planificación estratégica de TI incrementa riesgos y limita el valor aportado.
+## Key concepts (Conceptos clave)
+- Organizations develop **business strategy (estrategia de negocio)** and **information systems/IT strategy (estrategia de SI/TI)** at the same time, and each materializes through organizational and technological infrastructures.
+- Alignment aims to ensure changes in one dimension are reflected in the other in a coordinated way.
+- The absence of IT strategic planning (planificación estratégica de TI) raises risk and limits the value delivered.
 
-![Dimensiones de la alineación](figure:ggo-tema-3/dimensiones)
-Caption: Relación entre estrategias, infraestructuras y procesos de negocio y de TI.
+![Dimensions of alignment (Dimensiones de la alineación)](figure:ggo-tema-3/dimensiones)
+Caption: The link between strategies, infrastructures, and processes for business and IT.
 
-## Modelo de Alineamiento Estratégico (SAM)
-- Propone cuatro perspectivas:
-  1. **Ejecución estratégica:** la estrategia de negocio guía la organización de TI.
-  2. **Transformación tecnológica:** la estrategia de TI impulsa nuevas capacidades de negocio.
-  3. **Potencial competitivo:** TI habilita ventajas diferenciadoras.
-  4. **Nivel de servicio:** la infraestructura de TI soporta procesos internos.
-- Distingue dos ejes: **ajuste estratégico** (externo vs. interno) e **integración funcional** (negocio vs. TI).
+## Strategic Alignment Model (Modelo de Alineamiento Estratégico, SAM)
+- Proposes four perspectives:
+  1. **Strategy execution (Ejecución estratégica):** business strategy guides how IT is organized.
+  2. **Technology transformation (Transformación tecnológica):** IT strategy drives new business capabilities.
+  3. **Competitive potential (Potencial competitivo):** IT enables differentiated advantages.
+  4. **Service level (Nivel de servicio):** the IT infrastructure supports internal processes.
+- Distinguishes two axes: **strategic fit (ajuste estratégico)**—external vs. internal—and **functional integration (integración funcional)**—business vs. IT.
 
-![Perspectivas del SAM](figure:ggo-tema-3/sam)
-Caption: Las cuatro vistas del modelo SAM conectan estrategia, infraestructura y procesos.
+![SAM perspectives (Perspectivas del SAM)](figure:ggo-tema-3/sam)
+Caption: The four SAM views connect strategy, infrastructure, and processes.
 
-## Herramientas para definir estrategia
-- **Análisis DAFO (SWOT):** identifica fortalezas, debilidades, oportunidades y amenazas.
-- **Análisis PESTEL:** examina factores políticos, económicos, sociales, tecnológicos, ecológicos y legales.
-- **Cinco fuerzas de Porter:** evalúa competencia, clientes, proveedores, nuevos entrantes y sustitutos.
-- Estas herramientas se aplican tanto a negocio como a SI/TI para asegurar coherencia.
+## Tools for defining strategy (Herramientas para definir estrategia)
+- **SWOT analysis (Análisis DAFO):** identifies strengths, weaknesses, opportunities, and threats.
+- **PESTEL analysis (Análisis PESTEL):** reviews political, economic, social, technological, environmental, and legal factors.
+- **Porter’s five forces (Cinco fuerzas de Porter):** evaluates competitors, customers, suppliers, new entrants, and substitutes.
+- Apply these tools to both business and IS/IT to maintain coherence.
 
-## Proceso de dirección estratégica
-1. Analizar entorno y stakeholders para detectar oportunidades y riesgos.
-2. Evaluar recursos internos para reconocer fortalezas y debilidades.
-3. Definir misión y visión orientadas al mercado.
-4. Formular e implementar estrategias.
-5. Evaluar resultados y ajustar.
+## Strategic management process (Proceso de dirección estratégica)
+1. Analyze the environment and stakeholders (entorno y stakeholders) to detect opportunities and risks.
+2. Assess internal resources (recursos internos) to recognize strengths and weaknesses.
+3. Define market-oriented mission and vision (misión y visión orientadas al mercado).
+4. Formulate and implement strategies (formular e implementar estrategias).
+5. Evaluate results and adjust as needed (evaluar resultados y ajustar).
 
-## Buenas prácticas de alineación
-- Incluir responsables de TI en la definición de objetivos corporativos.
-- Traducir prioridades de negocio en hojas de ruta tecnológicas.
-- Revisar periódicamente la cartera de proyectos para asegurar contribución estratégica.
-- Establecer indicadores compartidos entre negocio y TI.
+## Alignment good practices (Buenas prácticas de alineación)
+- Include IT leaders (responsables de TI) when defining corporate objectives.
+- Translate business priorities into technology roadmaps (hojas de ruta tecnológicas).
+- Review the project portfolio regularly to guarantee strategic contribution.
+- Establish shared indicators between business and IT (indicadores compartidos entre negocio y TI).

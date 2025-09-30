@@ -1,0 +1,20 @@
+# Lab scope
+- Launch the notebook **Sesion1_FeatureExtraction_student.ipynb** and run the setup cells to install `scikit-image`, `opencv-python`, and plotting helpers.
+- Document every preprocessing choice in a Markdown cell so you can compare pipelines during the retrospective.
+
+## Part A · Edge and texture baselines
+- Load the starter dataset and compute Sobel and Canny edges, noting how kernel sizes affect noise sensitivity.
+- Extract Grey Level Co-occurrence Matrix (GLCM) features with `skimage.feature.graycomatrix`; log contrast, energy, and homogeneity values.
+
+## Part B · Key descriptors (descriptores clave)
+- Implement Histogram of Oriented Gradients (HOG) and Local Binary Patterns (LBP) blocks; capture both the Spanish term (**Patrones Binarios Locales**) and the English explanation.
+- Compare descriptor dimensionality and runtime in a small table inside the notebook.
+
+## Part C · Classification drill
+- Train a simple SVM classifier using the extracted features and record accuracy, precision, and recall.
+- Discuss overfitting risks and list hyperparameters that require tuning in the follow-up lab.
+
+## Submission checklist
+- Export the executed notebook with all outputs visible.
+- Attach a short reflection (5 sentences) highlighting which descriptor balances performance and compute cost.
+- Upload any custom helper scripts referenced in the notebook.

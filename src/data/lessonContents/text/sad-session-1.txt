@@ -1,59 +1,59 @@
-# Sesión 1 · De monolitos a sistemas distribuidos
+# Session 1 · From monoliths to distributed systems (De monolitos a sistemas distribuidos)
 
-## Objetivos
-- Reconocer fortalezas y límites de las aplicaciones monolíticas.
-- Identificar señales que motivan la transición hacia arquitecturas distribuidas.
-- Introducir propiedades clave de los sistemas distribuidos.
+## Objectives (Objetivos)
+- Recognize the strengths and limits of monolithic applications (aplicaciones monolíticas).
+- Spot the signals that push teams toward distributed architectures (arquitecturas distribuidas).
+- Introduce the key properties of distributed systems (sistemas distribuidos).
 
-## Monolitos en contexto
-- Aplicación única que agrupa interfaz, lógica de negocio y acceso a datos.
-- Despliegue “todo o nada”; pipelines sencillos con un artefacto.
-- Ventajas iniciales: rapidez, simplicidad operativa, onboarding ágil.
-- Riesgos al crecer: límites difusos, builds lentos, regresiones frecuentes.
+## Monoliths in context (Monolitos en contexto)
+- Single application bundling the UI, business logic, and data access (interfaz, lógica de negocio y acceso a datos).
+- “All-or-nothing” deployment; simple pipelines with one artifact.
+- Early advantages: speed, operational simplicity, fast onboarding.
+- Growth risks: fuzzy boundaries, slow builds, frequent regressions.
 
-## Monolitos modulares
-- Separan responsabilidades internas mediante módulos bien definidos.
-- Mantienen un único despliegue, pero facilitan futuras extracciones.
-- Señales de estrés: conflictos de integración, cuellos de botella de coordinación, riesgos operativos.
+## Modular monoliths (Monolitos modulares)
+- Separate internal responsibilities through clearly defined modules.
+- Keep a single deployment while easing future extractions.
+- Stress signals: integration conflicts, coordination bottlenecks, operational risk.
 
-## ¿Cuándo siguen siendo válidos?
-- Equipos pequeños, productos con alcance limitado o baja criticidad.
-- Herramientas internas y prototipos temporales.
+## When do they still fit? (¿Cuándo siguen siendo válidos?)
+- Small teams, limited-scope products, or low-criticality workloads.
+- Internal tools and temporary prototypes.
 
-## Motivaciones para distribuir
-- Necesidad de escalar dominios específicos.
-- Requerimientos de releases independientes.
-- Reducción del impacto de fallos y de las ventanas de despliegue.
+## Motivations to distribute (Motivaciones para distribuir)
+- The need to scale specific domains (escalar dominios específicos).
+- Requirements for independent releases (releases independientes).
+- Reduce the blast radius of failures and shorten deployment windows.
 
-![Transición de monolito a servicios](figure:sad-session-1/transicion)
-Caption: Evolución desde un monolito inicial hasta dominios desacoplados con servicios propios.
+![Transition from monolith to services (Transición de monolito a servicios)](figure:sad-session-1/transicion)
+Caption: How a monolith evolves into decoupled domains with dedicated services.
 
-## Sistemas distribuidos: definición
-- Conjunto de computadores conectados que ofrecen una vista unificada al usuario.
-- Propiedades clave:
-  - **Concurrencia y paralelismo** para throughput.
-  - **Tolerancia a fallos** mediante replicación y degradación controlada.
-  - **Escalabilidad** vertical y horizontal.
-  - **Transparencia**: la distribución es invisible para el usuario.
+## Distributed systems defined (Sistemas distribuidos: definición)
+- A set of connected computers that offer a unified view to the user.
+- Key properties:
+  - **Concurrency and parallelism (Concurrencia y paralelismo)** to raise throughput.
+  - **Fault tolerance (Tolerancia a fallos)** via replication and controlled degradation.
+  - **Scalability (Escalabilidad)** both vertical and horizontal.
+  - **Transparency (Transparencia):** distribution is invisible to the user.
 
-## Costes de la distribución
-- Latencia de red y serialización (“network tax”).
-- Consistencia eventual y conflictos entre réplicas.
-- Superficie de seguridad ampliada: autenticación, autorización, gestión de secretos.
-- Complejidad operativa: observabilidad, CI/CD maduro, automatización.
+## Distribution costs (Costes de la distribución)
+- Network latency and serialization overhead—the “network tax.”
+- Eventual consistency and conflicts between replicas (consistencia eventual y conflictos).
+- Expanded security surface: authentication, authorization, secret management.
+- Operational complexity: observability, mature CI/CD, automation.
 
-## Impulsores de la migración
-- Escalar de forma selectiva dominios como pagos o pedidos.
-- Permitir despliegues independientes alineados con equipos y límites de negocio.
-- Mejorar resiliencia al desacoplar responsabilidades.
+## Migration drivers (Impulsores de la migración)
+- Selectively scale domains such as payments or orders.
+- Enable independent deployments aligned with teams and business boundaries.
+- Improve resilience by decoupling responsibilities.
 
-## Ruta de migración
-1. Modularizar el monolito y detectar “seams”.
-2. Extraer dominios autónomos priorizando los más conflictivos.
-3. Establecer plataforma compartida: gateway, descubrimiento, observabilidad.
-4. Reforzar disciplina operativa (tests, automatización, monitoreo).
+## Migration route (Ruta de migración)
+1. Modularize the monolith and spot seams (modularizar y detectar “seams”).
+2. Extract autonomous domains, prioritizing the most troublesome ones.
+3. Establish a shared platform: gateway, service discovery, observability.
+4. Strengthen operational discipline—tests, automation, monitoring.
 
-## Conclusiones
-- Monolitos proporcionan valor inicial pero requieren vigilancia ante señales de fatiga.
-- Los sistemas distribuidos habilitan agilidad y escalado, pero introducen retos técnicos y organizativos.
-- Las decisiones arquitectónicas son económicas: se asumen costes para desbloquear beneficios concretos.
+## Conclusions (Conclusiones)
+- Monoliths deliver initial value but need oversight when fatigue signals appear.
+- Distributed systems unlock agility and scale yet introduce technical and organizational challenges.
+- Architectural decisions are economic bets: we accept costs to unlock specific benefits.

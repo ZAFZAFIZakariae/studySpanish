@@ -1,52 +1,52 @@
-# Tema 1 · Introducción al Gobierno de TI
+# Topic 1 · Introduction to IT Governance (Gobierno de TI)
 
-## Objetivos
-- Entender el concepto de gobierno y su aplicación en las organizaciones.
-- Diferenciar gobierno corporativo y gobierno de TI.
-- Identificar los actores clave y su responsabilidad.
-- Reconocer marcos de referencia que apoyan la implantación del gobierno de TI.
+## Objectives (Objetivos)
+- Understand the concept of governance (gobierno) and how organizations apply it.
+- Distinguish between corporate governance (gobierno corporativo) and IT governance (gobierno de TI).
+- Identify the key actors (actores clave) and their responsibilities.
+- Recognize reference frameworks (marcos de referencia) that support IT governance roll-outs.
 
-## Panorama general
-- El **gobierno** establece expectativas, define responsabilidades y supervisa el desempeño (OCDE, Allen, Mueller).
-- El **gobierno corporativo** articula la relación entre propietarios, consejo y dirección para maximizar valor y gestionar riesgos.
-- El **CIO** debe participar en estos foros para alinear TI con la estrategia empresarial.
+## Overview (Panorama general)
+- **Governance (gobierno)** sets expectations, defines accountability, and oversees performance (OECD, Allen, Mueller).
+- **Corporate governance (gobierno corporativo)** connects owners, the board, and executive management to maximize value and manage risk.
+- The **CIO (director de TI)** must take part in those forums to align IT with the business strategy.
 
-![Capas del gobierno corporativo](figure:ggo-tema-1/niveles)
-Caption: Asamblea, consejo y dirección general coordinan la toma de decisiones y supervisión.
+![Layers of corporate governance (Capas del gobierno corporativo)](figure:ggo-tema-1/niveles)
+Caption: Shareholders, the board, and the executive team coordinate decision-making and oversight.
 
-## Gobierno de TI
-- Extiende los principios del gobierno corporativo al uso de la tecnología.
-- Objetivo: garantizar que las inversiones en TI generen valor y se gestionen los riesgos tecnológicos.
-- Preguntas clave (IT Governance Institute):
-  - ¿Está TI alineada con el negocio?
-  - ¿Se entregan los beneficios esperados?
-  - ¿Se gestiona el riesgo TI?
-  - ¿Se optimizan recursos y rendimiento?
+## IT Governance (Gobierno de TI)
+- Extends corporate governance principles to the use of technology.
+- Goal: ensure IT investments generate value (valor) and that technology risks (riesgos tecnológicos) are controlled.
+- Key questions from the IT Governance Institute (ITGI):
+  - Is IT aligned with the business (negocio)?
+  - Are promised benefits (beneficios) being delivered?
+  - Are IT risks (riesgos TI) being managed?
+  - Are resources and performance (recursos y rendimiento) optimized?
 
-## Componentes principales
-- **Alineación estratégica:** TI soporta objetivos de negocio.
-- **Entrega de valor:** medición de beneficios y prioridades de portafolio.
-- **Gestión de recursos:** talento, infraestructura y servicios.
-- **Gestión de riesgos:** continuidad, seguridad, cumplimiento.
-- **Medición del desempeño:** indicadores y tableros.
+## Core components (Componentes principales)
+- **Strategic alignment (Alineación estratégica):** IT supports business objectives.
+- **Value delivery (Entrega de valor):** benefits are measured and the portfolio is prioritized.
+- **Resource management (Gestión de recursos):** talent, infrastructure, and services are stewarded.
+- **Risk management (Gestión de riesgos):** continuity, security, and compliance stay under control.
+- **Performance measurement (Medición del desempeño):** dashboards and indicators track outcomes.
 
-![Relación entre negocio y TI](figure:ggo-tema-1/alineacion)
-Caption: El gobierno de TI conecta la estrategia corporativa con procesos, tecnología y personas.
+![Relationship between business and IT (Relación entre negocio y TI)](figure:ggo-tema-1/alineacion)
+Caption: IT governance connects corporate strategy with processes, technology, and people.
 
-## Marcos y estándares
-- **COBIT**: control y auditoría de procesos TI (planificar, construir, ejecutar, monitorizar).
-- **ITIL**: mejores prácticas para gestión de servicios TI.
-- **ISO/IEC 38500**: principios para directores y consejos sobre uso de TI.
-- **ISO/IEC 27001, 20000**: seguridad y gestión de servicios.
+## Frameworks and standards (Marcos y estándares)
+- **COBIT**: controls and audits IT processes (plan, build, run, monitor).
+- **ITIL**: best practices for IT service management (gestión de servicios TI).
+- **ISO/IEC 38500**: principles for directors and boards on responsible IT use.
+- **ISO/IEC 27001, 20000**: security and service management baselines.
 
-## Roles y responsabilidades
-- Consejo y alta dirección: definen políticas, aprueban inversiones y supervisan riesgos.
-- CIO / Dirección TI: traduce objetivos de negocio en iniciativas tecnológicas, reporta métricas.
-- Unidades de negocio: priorizan necesidades y co-crean soluciones.
-- Auditoría y control interno: evalúan cumplimiento y madurez.
+## Roles and responsibilities (Roles y responsabilidades)
+- Board and senior leadership (consejo y alta dirección): set policy, approve investments, and oversee risk.
+- CIO / IT leadership (CIO / dirección de TI): translate business objectives into technology initiatives and report metrics.
+- Business units (unidades de negocio): prioritize needs and co-create solutions.
+- Audit and internal control (auditoría y control interno): evaluate compliance and maturity.
 
-## Beneficios de un gobierno eficaz
-- Mejor alineación negocio-TI.
-- Transparencia en inversiones y costos.
-- Reducción de riesgos operacionales y regulatorios.
-- Mayor satisfacción de usuarios y clientes internos.
+## Benefits of effective governance (Beneficios de un gobierno eficaz)
+- Stronger business–IT alignment (alineación negocio-TI).
+- Transparency in investments and costs (inversiones y costos).
+- Reduced operational and regulatory risk (riesgos operacionales y regulatorios).
+- Higher satisfaction from users and internal customers (usuarios y clientes internos).
