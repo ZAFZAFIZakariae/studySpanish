@@ -9,6 +9,8 @@ import { LessonFigure } from '../components/lessonFigures';
 import InlineMarkdown from '../components/InlineMarkdown';
 import NotebookPreview from '../components/notebooks/NotebookPreview';
 
+type OrderedListStyle = 'decimal' | 'upper-roman' | 'lower-roman' | 'upper-alpha' | 'lower-alpha';
+
 const itemKindIcon: Record<CourseItem['kind'], string> = {
   lesson: '📘',
   reading: '📖',
@@ -285,8 +287,6 @@ const SubjectsPage: React.FC = () => {
     const placeholder = !english && activeItem.language !== 'en';
     return { original, english, showEnglish, placeholder };
   }, [activeItem]);
-
-  type OrderedListStyle = 'decimal' | 'upper-roman' | 'lower-roman' | 'upper-alpha' | 'lower-alpha';
 
   type ContentBlock =
     | { type: 'paragraph'; text: string }
@@ -602,14 +602,14 @@ const SubjectsPage: React.FC = () => {
             );
           }
 
-          return (
-            <div key={index} className={styles.contentListBlock}>
-              {block.heading && (
-                <p className={styles.contentListHeading}>
-                  <InlineMarkdown text={block.heading} />
-                </p>
-              )}
-              {block.type === 'callout' ? null : (
+          if (block.type === 'list') {
+            return (
+              <div key={index} className={styles.contentListBlock}>
+                {block.heading && (
+                  <p className={styles.contentListHeading}>
+                    <InlineMarkdown text={block.heading} />
+                  </p>
+                )}
                 <ul className={styles.contentList}>
                   {block.items.map((itemText, itemIndex) => (
                     <li key={itemIndex}>
@@ -617,9 +617,11 @@ const SubjectsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              )}
-            </div>
-          );
+              </div>
+            );
+          }
+
+          return null;
         })}
       </div>
     );
