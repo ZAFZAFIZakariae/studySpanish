@@ -2,6 +2,15 @@ export type SubjectLanguage = 'en' | 'es';
 
 export type TranslationStatus = 'complete' | 'partial' | 'machine' | 'planned';
 
+export type ResourceType = 'pdf' | 'slides' | 'worksheet';
+
+export interface ResourceLink {
+  label: string;
+  href: string;
+  description?: string;
+  type?: ResourceType;
+}
+
 export interface TranslationMilestone {
   label: string;
   date: string;
@@ -44,6 +53,7 @@ export interface CourseItem {
   dueDate?: string;
   status?: CourseItemStatus;
   translation?: TranslationSupport;
+  resources?: ResourceLink[];
   lab?: {
     environment: string;
     checklists: string[];

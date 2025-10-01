@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { subjectCatalog, computeCatalogInsights } from '../data/subjectCatalog';
-import { CourseItem } from '../types/subject';
+import { CourseItem, ResourceLink } from '../types/subject';
 import { describeDueDate } from '../lib/plannerUtils';
-import { subjectResourceLibrary, ResourceLink } from '../data/subjectResources';
+import { subjectResourceLibrary } from '../data/subjectResources';
 import styles from './SubjectsPage.module.css';
 import { LessonFigure } from '../components/lessonFigures';
 import InlineMarkdown from '../components/InlineMarkdown';
@@ -196,7 +196,6 @@ const SubjectsPage: React.FC = () => {
     [activeSubjectId]
   );
 
-  const resources = activeSubject ? subjectResourceLibrary[activeSubject.id] ?? [] : [];
   const activeCourse = useMemo(
     () => (activeSubject ? activeSubject.courses.find((course) => course.id === activeCourseId) ?? null : null),
     [activeCourseId, activeSubject]
@@ -205,6 +204,8 @@ const SubjectsPage: React.FC = () => {
     () => (activeCourse ? activeCourse.items.find((item) => item.id === activeItemId) ?? null : null),
     [activeCourse, activeItemId]
   );
+  const resources = activeSubject ? subjectResourceLibrary[activeSubject.id] ?? [] : [];
+  const itemResources = activeItem?.resources ?? [];
   const translationDetails = useMemo(() => {
     if (!activeItem?.translation) {
       return null;
@@ -581,6 +582,25 @@ const SubjectsPage: React.FC = () => {
     );
   };
 
+  const renderResourceLinks = (links: ResourceLink[]) => (
+    <ul className={styles.resourceList}>
+      {links.map((resource) => (
+        <li key={resource.href}>
+          <a className={styles.resourceLink} href={resource.href} target="_blank" rel="noopener noreferrer">
+            <span className={styles.resourceIcon} aria-hidden="true">
+              {resource.type ? resourceTypeIcon[resource.type] : '📄'}
+            </span>
+            <span>
+              <span className={styles.resourceLabel}>{resource.label}</span>
+              {resource.description && <br />}
+              {resource.description && <span className={styles.meta}>{resource.description}</span>}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+
   const renderContentSection = (item: CourseItem | null) => {
     if (!item?.content) {
       return null;
@@ -609,13 +629,33 @@ const SubjectsPage: React.FC = () => {
   };
 
   useEffect(() => {
-    setActiveCourseId(null);
-    setActiveItemId(null);
-  }, [activeSubjectId]);
+    if (!activeSubject) {
+      setActiveCourseId(null);
+      setActiveItemId(null);
+      return;
+    }
+
+    const firstCourse = activeSubject.courses[0];
+    if (!firstCourse) {
+      setActiveCourseId(null);
+      setActiveItemId(null);
+      return;
+    }
+
+    setActiveCourseId(firstCourse.id);
+    const firstItem = firstCourse.items[0];
+    setActiveItemId(firstItem ? firstItem.id : null);
+  }, [activeSubject, activeSubjectId]);
 
   useEffect(() => {
-    setActiveItemId(null);
-  }, [activeCourseId]);
+    if (!activeCourse) {
+      setActiveItemId(null);
+      return;
+    }
+
+    const firstItem = activeCourse.items[0];
+    setActiveItemId(firstItem ? firstItem.id : null);
+  }, [activeCourse, activeCourseId]);
 
   return (
     <div className={styles.page} aria-labelledby="subjects-heading">
@@ -893,30 +933,17 @@ const SubjectsPage: React.FC = () => {
                 </section>
               )}
 
+              {itemResources.length > 0 && (
+                <section className={styles.resources} aria-label="Lesson downloads">
+                  <h3>Lesson downloads</h3>
+                  {renderResourceLinks(itemResources)}
+                </section>
+              )}
+
               {resources.length > 0 && (
                 <section className={styles.resources} aria-label="Original materials">
                   <h3>Original PDFs & slide decks</h3>
-                  <ul className={styles.resourceList}>
-                    {resources.map((resource) => (
-                      <li key={resource.href}>
-                        <a
-                          className={styles.resourceLink}
-                          href={resource.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span className={styles.resourceIcon} aria-hidden="true">
-                            {resource.type ? resourceTypeIcon[resource.type] : '📄'}
-                          </span>
-                          <span>
-                            <span className={styles.resourceLabel}>{resource.label}</span>
-                            {resource.description && <br />}
-                            {resource.description && <span className={styles.meta}>{resource.description}</span>}
-                          </span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  {renderResourceLinks(resources)}
                 </section>
               )}
             </article>
