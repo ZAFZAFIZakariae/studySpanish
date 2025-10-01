@@ -1,9 +1,4 @@
-export interface ResourceLink {
-  label: string;
-  href: string;
-  description?: string;
-  type?: 'pdf' | 'slides' | 'worksheet';
-}
+import { ResourceLink } from '../types/subject';
 
 export const subjectResourceLibrary: Record<string, ResourceLink[]> = {
   sad: [
@@ -56,6 +51,24 @@ export const subjectResourceLibrary: Record<string, ResourceLink[]> = {
       label: 'Stakeholder analysis template (PDF)',
       href: new URL('../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Análisis de stakeholders 2024.pdf', import.meta.url).href,
       type: 'worksheet',
+    },
+    {
+      label: 'Bedell portfolio analysis working paper (PDF)',
+      href: new URL(
+        '../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP.pdf',
+        import.meta.url
+      ).href,
+      type: 'pdf',
+      description: 'Academic walkthrough of Bedell\'s scoring method with a worked portfolio example.',
+    },
+    {
+      label: 'Business value analysis methodology case (PDF)',
+      href: new URL(
+        '../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain.pdf',
+        import.meta.url
+      ).href,
+      type: 'pdf',
+      description: 'Conference case applying ISO 38500, COBIT, Bedell, and IIRA to innovative supply-chain IT.',
     },
   ],
   snlp: [

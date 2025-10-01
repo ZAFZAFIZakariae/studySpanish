@@ -1,11 +1,26 @@
 import { CourseItem, SubjectMetrics, SubjectSummary } from '../types/subject';
 import { getLessonContent } from './lessonContents';
+import { subjectResourceLibrary } from './subjectResources';
 
 const DAY_IN_MS = 86_400_000;
 const now = Date.now();
 const toIsoDate = (offsetDays: number) => new Date(now + offsetDays * DAY_IN_MS).toISOString();
 
 const withMinutes = (minutes: number) => minutes;
+
+const pickResourceLink = (subjectId: string, label: string) => {
+  const pool = subjectResourceLibrary[subjectId] ?? [];
+  const match = pool.find((resource) => resource.label === label);
+
+  if (!match) {
+    if (process.env.NODE_ENV === 'test') {
+      return { label, href: '#', type: 'pdf', description: 'Resource unavailable in test environment.' };
+    }
+    throw new Error(`Missing resource "${label}" for subject "${subjectId}"`);
+  }
+
+  return { ...match };
+};
 
 export const subjectCatalog: SubjectSummary[] = [
   {
@@ -121,6 +136,73 @@ export const subjectCatalog: SubjectSummary[] = [
         schedule: 'Jueves · Aula 1.5',
         languageMix: ['es'],
         focusAreas: ['COBIT', 'alineación', 'valor de TI'],
+        cheatPapers: [
+          {
+            id: 'ggo-bedell-quick-sheet',
+            title: 'Bedell alignment quick sheet',
+            language: 'en',
+            coverage: 'unit',
+            description: 'Track Bedell weighting decisions alongside the official worksheet and working paper.',
+            englishSummary:
+              'Step-by-step prompts to capture business, organisational, and SI/IT scores in English while reviewing the Bedell portfolio case.',
+            sections: [
+              {
+                title: 'Scoring checklist',
+                bullets: [
+                  'List the services or systems under evaluation with their owners.',
+                  'Record criticality and effectiveness values before applying weights.',
+                  'Apply Bedell weighting factors for business, organisation, and SI/IT axes.',
+                  'Total each axis and compute the overall priority index.',
+                ],
+              },
+              {
+                title: 'Stakeholder cues',
+                bullets: [
+                  'Link each score to a COBIT objective or governance driver.',
+                  'Note stakeholder concerns that could change weighting decisions.',
+                  'Capture evidence or metrics you will need for the review board.',
+                ],
+              },
+            ],
+            studyTips: [
+              'Fill in the sheet while reading the working paper to mirror the sample calculations.',
+              'Translate Spanish column headers from the original worksheet into English notes for quick reference.',
+            ],
+            downloadHint: 'Pair with the Bedell portfolio analysis PDF in Lesson downloads for the numeric walkthrough.',
+          },
+          {
+            id: 'ggo-innovative-value-playbook',
+            title: 'Innovative IT value playbook',
+            language: 'en',
+            coverage: 'unit',
+            description: 'Condenses the innovative IT value methodology into a reusable two-phase canvas.',
+            englishSummary:
+              'Keeps ISO 38500 principles, COBIT practices, Bedell scoring, and IIRA checkpoints aligned when evaluating innovation portfolios.',
+            sections: [
+              {
+                title: 'Planning phase canvas',
+                bullets: [
+                  'Stakeholders & pain points to address with innovation.',
+                  'Guiding principles from ISO 38500 and COBIT to enforce.',
+                  'Innovation backlog snapshot with expected value targets.',
+                ],
+              },
+              {
+                title: 'Execution scorecard',
+                bullets: [
+                  'Evidence sources to validate benefits and risks.',
+                  'Value metrics and governance checkpoints to monitor.',
+                  'Bedell-style weighting to prioritise initiatives.',
+                ],
+              },
+            ],
+            studyTips: [
+              'Review the playbook before stakeholder interviews to rehearse governance language.',
+              'Highlight metrics you can reuse for your own sector and jot them into the scorecard.',
+            ],
+            downloadHint: 'Use alongside the innovative IT value PDF to capture sector-specific insights.',
+          },
+        ],
         items: [
           {
             id: 'ggo-tema-1',
@@ -184,6 +266,55 @@ export const subjectCatalog: SubjectSummary[] = [
               status: 'partial',
               summary: 'Comentarios en inglés añadidos en cada sección de la plantilla.',
             },
+          },
+          {
+            id: 'ggo-bedell-method-portfolio',
+            kind: 'reading',
+            title: 'Reading · Bedell method portfolio case',
+            language: 'en',
+            summary: {
+              original:
+                "Review the Bedell method through the portfolio working paper and follow the scoring walkthrough to practise prioritising services.",
+            },
+            tags: ['portfolio analysis', 'governance'],
+            estimatedMinutes: withMinutes(55),
+            dueDate: toIsoDate(4),
+            status: 'in-progress',
+            resources: [
+              {
+                ...pickResourceLink('ggo', 'Bedell portfolio analysis working paper (PDF)'),
+                description: 'Original working paper with the full scoring walkthrough.',
+              },
+              {
+                ...pickResourceLink('ggo', 'Método Bedell worksheet (PDF)'),
+                description: 'Official Spanish template used during the worked example.',
+              },
+            ],
+          },
+          {
+            id: 'ggo-innovative-it-value',
+            kind: 'reading',
+            title: 'Reading · Business value of innovative IT',
+            language: 'en',
+            summary: {
+              original:
+                'Study the innovative IT value methodology case to see how ISO 38500, COBIT, Bedell, and IIRA combine for governance decisions.',
+            },
+            tags: ['value management', 'case study'],
+            estimatedMinutes: withMinutes(75),
+            dueDate: toIsoDate(11),
+            status: 'scheduled',
+            resources: [
+              {
+                ...pickResourceLink('ggo', 'Business value analysis methodology case (PDF)'),
+                label: 'Innovative IT value methodology case (PDF)',
+                description: 'Conference paper combining ISO 38500, COBIT, Bedell, and IIRA.',
+              },
+              {
+                ...pickResourceLink('ggo', 'Alineación de negocio y TI slides (PDF)'),
+                description: 'Spanish lecture deck referenced throughout the case study.',
+              },
+            ],
           },
         ],
       },
