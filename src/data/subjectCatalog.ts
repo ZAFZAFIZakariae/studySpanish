@@ -1,4 +1,4 @@
-import { CourseItem, SubjectMetrics, SubjectSummary } from '../types/subject';
+import { CourseItem, ResourceLink, SubjectMetrics, SubjectSummary } from '../types/subject';
 import { getLessonContent } from './lessonContents';
 import { subjectResourceLibrary } from './subjectResources';
 
@@ -8,7 +8,7 @@ const toIsoDate = (offsetDays: number) => new Date(now + offsetDays * DAY_IN_MS)
 
 const withMinutes = (minutes: number) => minutes;
 
-const pickResourceLink = (subjectId: string, label: string) => {
+const pickResourceLink = (subjectId: string, label: string): ResourceLink => {
   const pool = subjectResourceLibrary[subjectId] ?? [];
   const match = pool.find((resource) => resource.label === label);
 
