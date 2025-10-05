@@ -1,0 +1,813 @@
+# Extracted content
+Source: subjects/Dbd/Teoria/Tema 1/tema1_DBD.pdf
+
+### Page 1
+Diseño y Gestión de Bases de
+Datos
+Tema 1
+Sistemas de Gestión de Bases de
+Datos
+Profesores: Laura Mota y Pedro Valderas
+1
+
+### Page 2
+2
+ Revisar las características de la tecnología de bases de datos.
+ Revisar el concepto de sistema de gestión de bases de datos:
+componentes y funciones.
+ Revisar la jerarquía de almacenamiento en un computador y
+las técnicas de gestión asociadas.
+ Conocer las distintas arquitecturas de los sistemas de gestión
+de bases de datos.
+Objetivos:
+Sistemas de gestión de bases de datos.
+2
+
+### Page 3
+3
+1 Características de la tecnología de bases de datos.
+2 Sistemas de gestión de bases de datos (SGBD).
+3 Transferencia de datos en un SGBD.
+4 Arquitecturas básicas de SGBD.
+5 Objetivos de un SGBD
+Sistemas de gestión de bases de datos.
+3
+
+### Page 4
+4
+1 Características de la tecnología de bases de datos.
+Colección estructurada de datos.BASE DE DATOS
+L o sm e c a n i s m o sd ee s t r u c t u r a c i ó nd ed a t o s
+(estructuras de datos) que se pueden utilizar
+dependen del sistema informático (SGBD) con el
+que se vaya a crear y manipular la base de datos.
+Sistema de gestión de bases de datos (SGBD)
+Una base de datos es una colección estructurada de datos de carácter persistente, es decir
+almacenada en memoria secundaria.
+La “tecnología de bases de datos” es la tecnología software que se ha desarrollado para
+gestionar (crear y manipular) bases de datos. Los sistemas informáticos (programas) creados con
+este propósito se denominan sistemas de gestión de bases de datos.
+Desde la aparición de la tecnología de bases de datos en la década de los años 60, han aparecido
+muchos sistemas de gestión de bases de datos (comerciales o académicos), según sus
+características estos sistemas se pueden agrupar en familias con propiedades comunes. Estas
+familias se diferencian entre sí principalmente en la forma de organizar los datos en la base de
+datos, es decir en el tipo de estructuras de datos utilizadas. Así, por ejemplo, en los sistemas de
+gestión de bases de datos relacionales los datos se organizan en tablas (o relaciones).
+4
+
+### Page 5
+5
+1 Características de la tecnología de bases de datos.
+La tecnología de bases de datos ha evolucionado
+intentando dar respuesta a las exigencias de
+funcionalidad y eficiencia que los usuarios plantean a
+los sistemas de información.
+¿Características de esta
+tecnología?
+El sistema de información de una organización contiene toda la información relacionada con las
+actividades propias de la organización.
+En el estado actual de desarrollo de la informática, se puede afirmar que el núcleo del sistema
+de información de cualquier organización es una (o varias) bases de datos, y que, por lo tanto,
+los sistemas de información actuales están soportados por tecnología de bases de datos.
+5
+
+### Page 6
+6
+1 Características de la tecnología de bases de datos.
+Servicio a distintos
+usuarios
+•Accesibilidad simultánea para
+distintos usuarios (concurrencia).
+•Definición de vistas parciales de
+los datos para distintos usuarios.
+Soporte del SI de la
+organización
+•Integración de la información
+de la organización.
+•Persistencia de los datos.
+La tecnología de bases de datos no ha dejado de evolucionar desde su aparición en la década de
+los 60 hasta su estado de desarrollo actual.
+Independientemente de las distintas familias de sistemas de gestión de bases de datos que han
+ido apareciendo, esta tecnología tiene unas características (propiedades) genéricas que la
+definen:
+1) Soporte  del sistema de información de la organización: por compleja y grande que sea una
+organización, su sistema de información puede construirse con tecnología de bases de
+datos, es decir sobre una (o varias) bases de datos.
+2) Servicio  a distintos usuarios: como soporte del sistema de información de la organización,
+esta tecnología debe ser capaz de dar servicio (atender peticiones de información) a todos
+los sectores o departamentos de la organización, por lo que debe permitir y controlar el
+acceso simultáneo de muchos usuarios al sistema. Por otro lado, si el sistema de
+información reúne (integra) toda la información de la organización, la base de datos creada
+puede ser muy compleja, por lo que la posibilidad de ofrecer “vistas parciales” de la misma a
+distintos colectivos de usuarios puede simplificar y facilitar su uso.
+6
+
+### Page 7
+7
+1 Características de la tecnología de bases de datos.
+Abstracción de
+datos
+•Independencia de las aplicaciones
+respecto a la representación física
+(implementación) de los datos.
+Integridad de los
+datos
+•Control de la calidad de la
+información almacenada
+(integridad): restricciones,
+concurrencia, recuperación.
+Seguridad de los
+datos
+•Control de la privacidad de la
+información almacenada.
+3) Abstracción  de datos: esta característica es una caso particular del principio de abstracción
+presente en otros ámbitos de la informática: la separación entre especificación e
+implementación. En el caso de las bases de datos, esto significa separar la especificación
+(definición) de las estructuras de datos de la base de datos de su implementación
+(almacenamiento en memoria secundaria). Este principio asegura que los programas
+(aplicaciones) que se desarrollen para acceder a la base de datos sean independientes de
+aspectos físicos de implementación, contribuyendo de esta forma a la durabilidad del
+software desarrollado.
+4) Integridad  de los datos: esta característica hace referencia al control de la calidad de los
+datos. Asegurar que los datos almacenados en la base de datos no se deterioran con el
+tiempo (se pierden, se degradan, …),  es un objetivo principal de la tecnología de bases de
+datos. Esta característica se asegura controlando el uso de la base de datos por parte de los
+usuarios: acceso simultáneo de varios usuarios a los mismos datos, fallos del sistema durante
+el uso de la base de datos, etc.
+5) Seguridad  de los datos: esta característica hace referencia al control del acceso a los datos.
+La base de datos, como núcleo del sistema de información de la organización, va a ser
+accedida por numerosos usuarios. Poder controlar quiénes son los usuarios autorizados y las
+tareas para las que están autorizados es también un objetivo importante de la tecnología de
+bases de datos.
+7
+
+### Page 8
+8
+1 Características de la tecnología de bases de datos.
+Independencia de datos
+Definición de la base de datos a distintos
+niveles de abstracción
+Esquemas de base de datos
+En los sistemas de gestión de bases de datos, la característica de la “abstracción de datos”
+(independencia de datos) se asegura definiendo la base de datos a distintos niveles de
+abstracción: esquemas de la base de datos.
+8
+
+### Page 9
+9
+1 Características de la tecnología de bases de datos.
+Esquema lógico: definición de las estructuras de datos
+de la base de datos.
+Esquema físico: implementación de las estructuras de
+datos definidas en el esquema lógico.
+Esquema externo: “subconjunto” del esquema lógico
+(vistas).
+La definición (especificación) de las estructuras de datos que constituyen la base de datos se
+realiza en el esquema lógico (obligatorio).
+La forma de implementación en memoria secundaria de las estructuras de datos definidas en el
+esquema lógico se realiza en el esquema físico (obligatorio).
+Las posibles vistas parciales de la base de datos definidas para distintos colectivos de usuarios se
+definen es los esquemas externos, como “subconjuntos” del esquema lógico (opcional).
+9
+
+### Page 10
+10
+1 Características de la tecnología de bases de datos.
+SELECT dorsal, nombre
+FROM Ciclista
+Esquemas externos
+(vistas)
+Esquema lógico
+(especificación)
+Esquema físico
+(implementación)
+Arquitectura de
+niveles
+ORACLE
+SOImplementación de la
+BD en disco
+Disco1
+Ciclista (dorsal, ..., …)
+Equipo (nomeq, ..., …)
+Etapa (netapa, ..., …)
+Maillot (codigo, ..., …)
+......
+Table Ciclista
+INDEX (dorsal)
+DATAFILE Disco1:F1
+Table Equipo
+HEAP
+DATAFILE Disco1:F2
+........
+F1
+datos
+datos
+Asignatura BDSI
+Laboratorio DSIC
+SQLDeveloper
+solicitudsolicitud
+lectura
+En el diagrama se muestra el entorno de trabajo del laboratorio de la asignatura BDASI
+(semestre 3A), en él se pueden distinguir:
+• Los esquemas de la base de datos (relacional) Ciclismo:
+ el esquema lógico de la base de datos donde se definen las tablas, sobre él se
+formulan las consultas (SELECT);
+ el esquema físico donde se elige la implementación de cada tabla del esquema
+lógico, este esquema no es visible para los alumnos (gestionado por el administrador
+de la base de datos);
+ la ausencia de esquemas externos.
+Todos estos esquemas (independientes entre sí) se almacenan en disco y están disponibles
+para uso del SGBD. (Independencia de datos)
+• La base de datos (Ciclismo) en disco. (Persistencia de los datos).
+• El sistema de gestión de bases de datos (relacional): software de Oracle.
+• La herramienta‐cliente para el diseño de consultas (SQL) a la base de datos: herramienta
+SQLDeveloper de Oracle.
+10
+
+### Page 11
+1111
+1 Características de la tecnología de bases de datos.
+Aplicación 1 Aplicación 2 Aplicación 3
+Esquemas externos
+(vistas)
+Esquema lógico
+(especificación)
+Esquema físico
+(implementación)
+Descripción unificada de
+los datos
+Independencia
+de datos
+Control de la integridad
+Control de la seguridadSGBD
+SO
+Integración de toda
+la información de la
+organización
+Persistencia
+BD
+Accesibilidad simultánea
+para distintos usuarios
+Arquitectura de
+niveles
+disco
+Vistas
+parciales
+DATOS SOFTWARE
+datos
+datos
+solicitud
+lectura/
+escritura
+En este diagrama se ilustran todas las características de la tecnología de bases de datos en un
+diagrama genérico:
+• Soporte del SI de la organización: integración de toda la información de la organización en un
+repositorio en memoria secundaria: base de datos. (Persistencia)
+• Servicio a distintos usuarios: acceso simultáneo y vistas parciales (esquemas externos) para
+los usuarios.
+• Abstracción de datos: definición de distintos esquemas (independientes entre sí) de la base
+de datos. (Independencia de datos)
+• Control de la integridad: control del acceso concurrente, control ante fallos del sistema, …
+• Control de la seguridad: control de los usuarios autorizados, y de los permisos concedidos
+para realizar operaciones sobre la base de datos, …
+11
+
+### Page 12
+12
+1 Características de la tecnología de bases de datos.
+2 Sistemas de gestión de bases de datos (SGBD).
+3 Transferencia de datos en un SGBD.
+4 Arquitecturas básicas de SGBD.
+5 Objetivos de un SGBD.
+Sistemas de Gestión de bases de Datos.
+12
+
+### Page 13
+13
+2 Sistemas de gestión de bases de datos.
+Herramienta (software) para la gestión (creación
+y manipulación) de bases de datos.SGBD
+SGBD
+Modelo de Datos
+•Estructuras de datos
+•Operadores asociados
+Como ya se ha comentado, un sistema de gestión de bases de datos es una herramienta de
+software que sirve para gestionar (crear y manipular) bases de datos.
+Un SGBD se construye basándose en un modelo de datos. Un modelo de datos es una propuesta
+teórica de SGBD.
+En un modelo de datos se proponen un tipo de estructuras de datos para organizar los datos en
+la base de datos, y un lenguaje para manipular dichas estructuras.
+Los fabricantes de sistemas de gestión de bases de datos utilizan la propuesta de un modelo para
+construir sus productos.
+13
+
+### Page 14
+14
+2 Sistemas de gestión de bases de datos.
+Familias de SGBD:
+jerárquicos jerárquico registro (segmento), árbol
+en red  red registro, lista (set)
+relacionales relacional registro (tupla), tabla (relación)
+objeto‐ relacional + registro (tupla), tabla (relación) +
+relacionales OO constructores de tipos
+OO OO constructores de tipos
+SGBD modelo estructuras
+tiempo
+A lo largo de la historia de la tecnología de bases de datos, se han propuesto varios modelos de
+datos que han dado lugar a las distintas familias de sistemas de gestión de bases de datos.
+Como se puede observar, cada familia se basa en un modelo de datos distinto, y cada modelo
+propone unas estructuras de datos distintas.
+En el dibujo aparecen las familias en orden cronológico.
+En la familia relacional, los sistemas de gestión de bases de datos se basan en el modelo
+relacional de datos. En este modelo los datos se organizan en tablas (relaciones) y existen
+lenguajes algebraicos (Álgebra Relacional) o lógicos (SQL) para manipular estas estructuras.
+14
+
+### Page 15
+15
+2 Sistemas de gestión de bases de datos.
+Funciones de un SGBD
+•Definición de datos
+•Manipulación de datos
+(consulta y actualización)
+•Gestión y administración
+Componentes de un SGBD
+•Lenguajes de definición de
+esquemas (DDL)
+•Lenguaje de manipulación
+(DML)
+•Herramientas para la gestión
+Si un SGBD debe servir para crear y manipular (consultar y actualizar) bases de datos, debe tener
+componentes para realizar estas funciones: un lenguaje de definición de los datos en sus
+distintos esquemas (Data Description Language) y un lenguaje de manipulación de datos (Data
+Manipulation Language).
+Además, el SGBD debe tener componentes para realizar las tareas de administración: copias de
+seguridad, definición de usuarios, …
+15
+
+### Page 16
+16
+2 Sistemas de gestión de bases de datos.
+SGBD
+AA
+BB
+A
+B
+tiempo
+Ejecución concurrente
+(intercalada) de los procesos A y B
+Ejecución paralela de los
+procesos A y B
+n CPU paralelismo
+monousuario (SGBD de PC)
+multiusuario (concurrencia)
+1 CPU
+Es importante diferenciar entre los SGBDs que trabaja en modo concurrente y los SGBDs que
+trabaja en modo paralelo, como se ilustra en el dibujo.
+Todos los SGBD actuales son multiusuario (ejecución concurrente) y muchos de ellos contemplan
+el paralelismo (ejecución paralela).
+16
+
+### Page 17
+17
+1 Características de la tecnología de bases de datos.
+2 Sistemas de gestión de bases de datos (SGBD).
+3 Transferencia de datos en un SGBD.
+4 Arquitecturas básicas de SGBD.
+Sistemas de Gestión de bases de Datos.
+17
+
+### Page 18
+18
+3 Transferencia de datos en un SGBD.
+Tecnología de bases de datos (SGBD):
+•Gran volumen de datos
+•Persistencia en el tiempo
+Almacenamiento en memoria
+secundaria (discos)
+tecnología actual
+•Jerarquía de almacenamiento
+•Transferencia de datos
+estudio
+La tecnología de bases de datos permite gestionar grandes volúmenes de datos almacenados en
+memoria secundaria. Con la tecnología informática actual esto significa el uso de
+almacenamiento en disco.
+Por este motivo, para entender bien el funcionamiento de un SGBD es importante revisar la
+jerarquía de almacenamiento de datos en un computador (memoria principal y memoria
+secundaria) y las técnicas de gestión asociadas (transferencia de datos).
+18
+
+### Page 19
+19
+3 Transferencia de datos en un SGBD.
+Jerarquía de almacenamiento en un computador:
+Almacenamiento primario: memoria principal y memorias caché.
+• CPU opera directamente.
+• Acceso rápido.
+• Capacidad limitada.
+Almacenamiento secundario: discos magnéticos, discos ópticos, cintas.
+• CPU no puede operar directamente.
+• Acceso lento.
+• Capacidad alta.
+Como es bien sabido, en un computador existen dos tipos de almacenamiento de características
+muy distintas: almacenamiento primario y almacenamiento secundario.
+Las diferencias entre ambos tipos de almacenamiento van a determinar el funcionamiento del
+SGBD ya que la base de datos va a estar almacenada en memoria secundaria (disco), pero sólo
+en memoria principal se podrán consultar y actualizar los datos.
+19
+
+### Page 20
+20
+3 Transferencia de datos en un SGBD.
+Almacenamiento de los datos de una base de datos en disco:
+Fichero: los datos de una base de datos se almacenan en disco
+organizados en ficheros con registros.
+Registro: colección de valores de datos bajo una misma estructura.
+• Los valores de un registro hacen referencia a un mismo objeto y
+representan sus propiedades.
+• Los registros deben almacenarse en disco de un modo que haga
+posible su localización de la forma más eficaz cuando sea
+necesario.
+Usualmente, cada relación de una base de datos relacional se guarda en disco en un fichero.
+Cada tupla de la relación se guarda en un registro del fichero. Estos conceptos se estudian en
+profundidad en el Tema 5.
+20
+
+### Page 21
+21
+3 Transferencia de datos en un SGBD.
+• Superficie
+• Pista
+• Cilindro
+• Bloque o página (formateo)
+Dispositivo de almacenamiento secundario de acceso directo.
+ Cabeza de
+lectura/escritura Pista
+Brazo
+.
+.
+.
+.
+.
+.
+paquete de discos
+cilindro
+Disco:
+21
+
+### Page 22
+22
+3 Transferencia de datos en un SGBD.
+Bloque:
+•Unidad de direccionamiento.
+•Unidad de transferencia de datos entre memoria secundaria y
+memoria principal.
+bloque
+Pistas: círculos concéntricos
+(superficie de almacenamiento)
+superficie
+dirección del bloque: [superficie + ] pista + bloque
+De todas las característica de un disco (dispositivo de almacenamiento secundario) interesa
+destacar el concepto de bloque como unidad de direccionamiento en el disco y como unidad de
+transferencia entre los dos niveles de la jerarquía de almacenamiento: primario y secundario.
+22
+
+### Page 23
+23
+Administrador
+de E/S del SO
+3 Transferencia de datos en un SGBD.
+Transferencia de datos entre memoria principal y disco:
+ Cabeza de
+lectura/escritura Pista
+Brazo
+.
+.
+.
+.
+.
+. paquete de discos
+cilindro
+dirección del bloque
++
+dirección del buffer
+buffer buffer buffer
+Memoria Principal
+lectura
+escritura
+Software
+buffer
+Acceso a los datos
+Memoria Secundaria
+bloque
+Buffer: espacio
+para un bloque
+Cualquier software que gestione datos almacenados en disco deberá realizar (o solicitar) tareas
+de transferencia de datos entre memoria secundaria y memoria principal.
+Según el concepto de bloque, esta transferencia de datos se hará siempre en unidades del
+tamaño de un bloque.
+23
+
+### Page 24
+24
+3 Transferencia de datos en un SGBD.
+4
+Aplicación 1
+Esquema externo1
+Esquema lógico
+Esquema físico
+2.1
+2.2
+2.3
+1
+3
+SGBD
+datos
+buffers SGBD
+bloque(s)
+área 1consulta sobre las
+estructuras de datos del
+esquema externo1
+correspondencia
+entre esquemas
+solicita lectura de
+bloque(s) de
+datos del disco
+solicitud del usuario
+transferencia de datos
+operación del SGBD
+BD
+En el diagrama se ilustran los pasos seguidos en un SGBD para satisfacer una operación de
+consulta de un usuario:
+(1) El  usuario solicita una consulta sobre la base de datos, formulada sobre su esquema
+externo, o bien directamente sobre el esquema lógico de la base de datos (el esquema
+externo no es obligatorio).
+(2) El  SGBD debe consultar los esquemas de la base de datos para traducir la consulta del
+usuario en una petición de lectura de bloques del disco. El SGBD traduce la consulta sobre el
+esquema externo en una consulta sobre el esquema lógico, y posteriormente, consultado el
+esquema físico, en una operación (u operaciones) de lectura de bloques del disco.
+(3) El  SGBD solicita la ejecución de esas operaciones de lectura de bloques de disco. Estos
+bloques, que contienen los datos solicitados por el usuario, son transferidos al área de
+memoria principal (buffers) asignada al SGBD.
+(4) El  SGBD debe transferir los datos solicitados por el usuario de los bloques (en memoria
+principal) al área de trabajo del programa (o herramienta) desde la que se realizó la
+consulta.
+Es importante observar que una operación de consulta no modifica el contenido (estado) de la
+base de datos. Los bloques son transferidos de disco a memoria principal sin afectar a la base de
+datos.
+Si el SGBD es un sistema relacional (por ejemplo Oracle), la consulta consistirá en una instrucción
+SELECT (SQL), que como es sabido puede seleccionar datos de una o varias filas de una o varias
+tablas de la base de datos. Para satisfacer esta consulta se deberán recuperar los registros que
+contienen esas filas.
+24
+
+### Page 25
+25
+3 Transferencia de datos en un SGBD.
+Para entender el paso (2) sobre la correspondencia entre esquemas, realizada por el SGBD,
+véase el siguiente ejemplo.
+Supóngase una base de datos sobre la docencia en la Universidad. En el esquema lógico de esta
+base de datos existirá, entre otras, una tabla Profesor con la información sobre los profesores de
+la Universidad. Este esquema lógico, con la definición de las tablas, tendrá su correspondiente
+esquema físico en el que se elige la implementación de cada tabla en el SGBD que vaya a
+soportar la base de datos (no se presenta). Como la Universidad consta de muchos
+departamentos, es probable que se decida definir un esquema externo para cada
+departamento, con el fin de ofrecer una “vista parcial” de la base de datos (con los datos
+propios) a cada uno de ellos.
+Uno de estos esquemas externos corresponderá al departamento DSIC. En él existirán vistas
+(tablas virtuales) que muestren los datos, relevantes para el DSIC, de cada tabla del esquema
+lógico. Una de estas vistas será la vista Profesor‐DSIC en la que se muestra información sólo de
+los profesores del DSIC.
+En el ejemplo se observa como el usuario formula una consulta sobre el esquema externo del
+DSIC (vista Profesor‐DSIC). El SGBD debe traducir esta consulta en una consulta sobre el
+esquema lógico (tabla Profesor). Posteriormente esta consulta debe ser traducida en una (o
+varias) operaciones de petición de bloques de datos.
+25
+
+### Page 26
+26
+3 Transferencia de datos en un SGBD.
+4
+Aplicación 1
+Esquema externo1
+Esquema lógico
+Esquema físico
+2.1
+2.2
+2.3
+1
+3
+SGBD
+datos
+buffers SGBD
+bloque(s)
+área 1actualización sobre las
+estructuras de datos del
+esquema externo1
+correspondencia
+entre esquemas
+solicita lectura de
+bloque(s) de
+datos del disco
+solicitud del usuario
+transferencia de datos
+operación del SGBD
+BD
+5
+solicita escritura de
+bloque(s) de datos en
+el disco
+En el diagrama se ilustran los pasos seguidos en un SGBD para satisfacer una operación de
+actualización (inserción, borrado o modificación) de un usuario:
+En una operación de actualización, los bloques con los datos a actualizar deben ser primero
+leídos (transferidos a memoria principal). Sólo estando en memoria principal el SGBD podrá
+ejecutar las operaciones de actualización requeridas por el usuario. Por este motivo, los pasos
+(1), (2), y (3) coinciden con los mismos pasos en el diagrama para una operación de consulta.
+(4) El SGBD ejecuta sobre los datos (en memoria principal) las actualizaciones requeridas por el
+usuario. La actualización se realiza a partir de datos proporcionados por el usuario.
+(5) El SGBD solicita la escritura en disco de los bloques actualizados para de esta forma actualizar
+la base de datos.
+Es importante observar que la operación de actualización del usuario se ejecuta en el paso (4)
+pero la actualización de la base de datos en el disco no tiene lugar hasta el paso (5).
+Si el SGBD es un sistema relacional (por ejemplo Oracle), la actualización consistirá en una
+instrucción INSERT, DELETE o UPDATE (SQL), que, como es sabido, puede actualizar datos de una
+o varias filas de una tabla de la base de datos.
+26
+
+### Page 27
+27
+3 Transferencia de datos en un SGBD.
+ El SGBD sólo puede operar sobre los buffers de memoria principal que tiene
+asignados.
+ Para poder manipular (leer o actualizar) datos de la BD, los bloques de disco
+donde se encuentran almacenados los datos deben ser leídos (transferidos del
+disco a los buffers del SGBD). Esto lo realiza el SGBD en cooperación con el SO
+del computador.
+ En el caso de una operación de actualización, los bloque donde se encuentran
+los datos actualizados deben ser escritos (transferidos del buffer del SGBD al
+disco) para actualizar la BD. Esto puede hacerse inmediatamente después de la
+operación de actualización o en algún momento posterior.
+ La decisión de cuándo un bloque actualizado es transferido del buffer al disco
+depende de la política de transferencia de bloques del SGBD (Tema 3).
+Una actualización puede no ser registrada en la BD en disco (paso 5)
+hasta tiempo después de que se ejecutó la operación de actualización
+(paso 4).
+27
+
+### Page 28
+28
+1 Características de la tecnología de bases de datos.
+2 Sistemas de gestión de bases de datos (SGBD).
+3 Transferencia de datos en un SGBD.
+4 Arquitecturas básicas de SGBD.
+5 Objetivos de un SGBD.
+Sistemas de Gestión de bases de Datos.
+28
+
+### Page 29
+29
+Red
+Arquitectura centralizada:
+4 Arquitecturas básicas de SGBD.
+Programas de
+aplicación SGBD Control de
+pantalla
+SOFTWARE
+Sistema Operativo
+Dispositivos
+de E/S
+CPU Controlador
+de disco
+Controlador
+de memoria
+Pantalla Pantalla Pantalla
+29
+
+### Page 30
+30
+4 Arquitecturas básicas de SGBD.
+ Uso de terminales sin capacidad de procesamiento conectadas
+por red al servidor central.
+ Las terminales sólo realizan la función de visualización.
+ Toda la funcionalidad del sistema (SGBD, ejecución de
+programas de las aplicaciones, procesamiento de la interfaz, …)
+la realiza el servidor central.
+Arquitectura centralizada:
+30
+
+### Page 31
+31
+4 Arquitecturas básicas de SGBD.
+Arquitectura cliente‐servidor:
+Red
+Servidor
+de web
+SGBD Servidor
+de e‐mail
+Servidor de
+ficheros
+Servidor
+de…
+Esquema lógico
+Cliente Cliente Cliente
+31
+
+### Page 32
+32
+4 Arquitecturas básicas de SGBD.
+Arquitectura cliente‐servidor:
+Esquema físico
+Red
+Red de
+comunicaciones
+…Cliente 1
+(sitio 1)
+Cliente 2
+(sitio 2)
+Cliente n
+(sitio n)
+32
+
+### Page 33
+33
+4 Arquitecturas básicas de SGBD.
+Arquitectura cliente‐servidor:
+ Servidores especializados con funciones específicas
+conectados en red.
+ Máquinas cliente con capacidad de procesamiento para la
+ejecución de programas de aplicación.
+ Las máquinas cliente proporcionan al usuario las interfaces
+necesarias para utilizar los servidores (software cliente).
+33
+
+### Page 34
+34
+4 Arquitecturas básicas de SGBD.
+Arquitectura cliente‐servidor para SGBD:
+Programas de
+interfaz
+Programas de
+aplicación (Visual,
+C++, Java, …)
+Procesamiento
+de consultas
+(SQL)
+Procesamiento
+de
+transacciones
+ClienteServidor
+Red
+Red de
+comunicaciones
+…Cliente 1
+(sitio 1)
+Cliente 2
+(sitio 2)
+Cliente n
+(sitio n)
+Esquema lógico
+34
+
+### Page 35
+35
+4 Arquitecturas básicas de SGBD.
+Laboratorio de la asignatura BDASI:
+SQL
+Developer
+BD
+(ciclismo)
+SGBD
+Oracle
+35
+
+### Page 36
+36
+1 Características de la tecnología de bases de datos.
+2 Sistemas de gestión de bases de datos (SGBD).
+3 Transferencia de datos en un SGBD.
+4 Arquitecturas básicas de SGBD.
+5 Objetivos de un SGBD.
+Sistemas de Gestión de bases de Datos.
+36
+
+### Page 37
+37
+Sistemas de Gestión de bases de Datos.
+Objetivo 1: Procesar correctamente transacciones
+en un entorno concurrente.
+ Seguridad en bases de datos: Tema 7.
+ Procesamiento de transacciones y mantenimiento de la
+integridad: Tema 2.
+ Recuperación de la base de datos: Tema 3.
+ Control de la concurrencia en bases de datos: Tema 4.
+37
+
+### Page 38
+38
+Objetivo 2: Procesar eficientemente transacciones
+en un entorno concurrente.
+Sistemas de Gestión de bases de Datos.
+ Implementación de bases de datos: Tema 5.
+ Diseño físico de una base de datos relacionales: Tema 8.
+ Optimización de consultas en bases de datos: Tema 6.
+38

@@ -1,0 +1,6 @@
+# Extracted content
+Source: subjects/Ggo/project/StakeHolder.archimate
+Notes:
+- ArchiMate file is not a ZIP archive; storing binary notice instead.
+
+[No textual XML resources extracted]

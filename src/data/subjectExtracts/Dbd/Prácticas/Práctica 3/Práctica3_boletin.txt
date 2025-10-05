@@ -1,0 +1,109 @@
+# Extracted content
+Source: subjects/Dbd/Prácticas/Práctica 3/Práctica3_boletin.pdf
+
+### Page 1
+Departamento de Sistemas Informáticos y Computación
+         1
+Diseño y Gestión de Bases de Datos
+Práctica 3: Recuperación de bases de datos en Oracle.
+
+1) Arrancar el servidor Oracle con la herramienta SQL*Plus y arranca el SQL Developer.
+2) Revisa en el servidor todos los elementos que intervienen en el proceso de recuperación en Oracle:
+• Buffer de datos.
+• Buffer de diario.
+• Espacio de deshacer.
+• Grupos de diario.
+Analiza: la ubicación, la estructura y el tamaño de estos elementos.
+/*Hacer el ejercicio 5. No lo hemos puesto aquí, aunque es donde debería ir, para no alterar la numeración de
+los demás ejercicios lo que supondría tener que cambiar todos los vídeos solución para ajustarlos a la nueva
+numeración*/
+3) Gestión de los grupos de diario:
+• Observa cuál es el grupo de diario actual.
+• Añade un nuevo miembro a un grupo de diario.
+• Añade un nuevo grupo de diario.
+• Haz que el nuevo grupo sea el grupo actual (current).
+4) Análisis de los puntos de control (checkpoint). Pon en marcha dos sesiones (abre dos Hojas de Trabajo de
+SQL con dos conexiones distintas), conectándote con el usuario que has creado en la práctica 2 desde las
+que ejecutarás las transacciones T1 y T2 que se indican en los ejercicios siguientes. Si no lo has cambiado,
+el usuario era Cosmos y la contraseña paso.
+a) Comprueba cómo Oracle recupera la base de datos en caso de fallo (terminación anómala del sistema):
+• En la transacción T1 realiza una modificación sobre un profesor. Confirma la transacción T1.
+• En la transacción T2 realiza una modificación sobre otro profesor distinto. No confirmes la
+transacción T2.
+• Fuerza un checkpoint. El checkpoint lo puede ejecutar un usuario con rol de administración (SYS,
+SYSTEM), con la instrucción de SQL: ALTER SYSTEM CHECKPOINT. En la herramienta SQL Developer
+se puede realizar el checkpoint  desde la ventana de administración: menú Almacenamiento →
+Grupos de Redo Log + Botón de la derecha → Forzar Punto de Control.
+• Simula un fallo del sistema:
+o Desde el SQL*Plus, cierra el servidor en modo ABORT
+1.
+o Cierra el SQL Developer.
+• Desde el SQL*Plus, vuelve a arrancar el servidos.
+• Arranca de nuevo el SQL Developer e inicia una sesión desde una ventana Hoja de Trabajo de SQL,
+como Cosmos y consulta la tabla Profesor.
+Contesta a las siguientes preguntas:
+• ¿Qué efecto tiene el chekpoint sobre el servidor?
+
+1 Este modo de cerrar el servidor  no asegura que los bloques (actualizados) en el buffer de datos sean transferidos a disco, tampoco
+anula las transacciones activas (interrumpidas) en el momento del cierre, por lo tanto, al volver a arrancar el servidor,  el sistema
+debe ejecutar el proceso de recuperación de la base de datos. Este modo de cierre simula una terminación anormal debida a un fallo
+del sistema con pérdida de memoria principal.
+
+### Page 2
+Departamento de Sistemas Informáticos y Computación
+         2
+• ¿Cuál es el estado de la base de datos en disco después de cerrar el servidor en modo ABORT?
+¿Qué crees que ha pasado con las actualizaciones de las transacciones T1 y T2?
+• ¿Qué tareas de recuperación han tenido lugar al volver a arrancar el servidor?
+b) Repite el ejercicio anterior sin realizar el checkpoint y contesta a las siguientes preguntas:
+• ¿Cuál es el estado de la base de datos en disco después de cerrar el servidor en modo ABORT ?
+¿Qué crees que ha pasado con las actualizaciones de las transacciones T1 y T2?
+• ¿Qué tareas de recuperación han tenido lugar al volver a arrancar el servidor?
+5) Analizar el contenido de los ficheros de diario en línea de Oracle (online redo log file): para ello es necesario
+realizar varias tareas previas como administrador y con el usuario Cosmos:
+a) Conéctate en una sesión del SQLDeveloper con el usuario Cosmos de Oracle:
+i) Crea una tabla para realizar sobre ella algunas operaciones de DML:
+CREATE TABLE recupera(a varchar2(100), b number);
+ii) Deja la conexión activa.
+b) Conéctate en una sesión con el usuario sys de Oracle:
+i) Ejecutar esta consulta para ver los ficheros de diario en línea de Oracle:
+SELECT DISTINCT member AS logfilename FROM v$logfile;
+El resultado de esta consulta debe ser (el orden es irrelevante):
+/home/oracle/app/oracle/oradata/prueba/redo01.log
+/home/oracle/app/oracle/oradata/prueba/redo02.log
+/home/oracle/app/oracle/oradata/prueba/redo03.log
+ii) Ejecutar el procedimiento DBMS_LOGMNR.ADD_LOGFILE sobre estos ficheros  (esto habilita la
+inspección en los ficheros de diario sobre los que se ejecuta):
+execute DBMS_LOGMNR.ADD_LOGFILE ('/home/oracle/app/oracle/oradata/prueba/redo01.log');
+execute DBMS_LOGMNR.ADD_LOGFILE ('/home/oracle/app/oracle/oradata/prueba/redo02.log');
+execute DBMS_LOGMNR.ADD_LOGFILE ('/home/oracle/app/oracle/oradata/prueba/redo03.log');
+iii)  Cambiar el comportamiento del servidor sobre la información de diario que se registra
+(incrementa esta información lo que lo hace más comprensible):
+alter database add supplemental log data (all) columns;
+iv) Obtener el instante del reloj del sistema Oracle:
+select systimestamp from dual;
+Y si resultado de esta consulta fuese:
+10/03/22 09:05:32,376683000 +01:00
+v) Ejecutar el inicio de la minería en los ficheros de diario:
+EXECUTE DBMS_LOGMNR.START_LOGMNR(STARTTIME => to_date('10/03/2022 09:05:32',
+'DD/MM/YYYY HH24:MI:SS'),OPTIONS => dbms_logmnr.dict_from_online_catalog);
+vi) Comprobad que se puede consultar la información de diario:
+select * from v$logmnr_contents;
+c) Vuelve a la sesión de Cosmos:
+i) Realizar varias transacción sobre la tabla Recupera (alguna confirmando y alguna anulando) y
+observa después de cada operación individual el contenido de diario con la consulta (ejecutada en
+la sesión de sys):
+
+### Page 3
+Departamento de Sistemas Informáticos y Computación
+         3
+select scn, table_name, operation, sql_redo,sql_undo
+from v$logmnr_contents
+where username='COSMOS';
+d) Vuelve a la sesión de sys para dejar el servidor como estaba originalmente:
+i) Termina la minería del diario:
+execute dbms_logmnr.end_logmnr();
+ii) Deshabilita  el comportamiento del servidor sobre la información de diario que se registra:
+ALTER DATABASE DROP SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
+ALTER DATABASE DROP SUPPLEMENTAL LOG DATA;
+e) Vuelve a la sesión de Cosmos y borra la tabla Recupera.

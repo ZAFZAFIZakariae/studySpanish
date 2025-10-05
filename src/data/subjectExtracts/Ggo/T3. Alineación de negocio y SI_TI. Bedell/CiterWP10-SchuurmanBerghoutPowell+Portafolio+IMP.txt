@@ -1,0 +1,1030 @@
+# Extracted content
+Source: subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP.pdf
+
+### Page 1
+Working Papers on Information Systems ISSN 1535-6078
+Calculating the Importance of Information Systems: The
+Method of Bedell Revisited
+Peter Schuurman
+University of Groningen, The Netherlands
+Egon W. Berghout
+University of Groningen, The Netherlands
+Philip Powell
+University of Bath, United Kingdom
+Abstract
+Various portfolio methods have been suggested to evaluate the information systems used in
+organizations. A characteristic method for portfolio analysis is the method of Bedell (1985).
+This paper provides an overview of the purpose and functioning of this method. The
+explanation is supported by an elaborated example.
+Keywords: Information system, importance, effectiveness, portfolio management, resource
+allocation.
+Permanent URL: http://sprouts.aisnet.org/8-37
+Copyright: Creative Commons Attribution-Noncommercial-No Derivative Works License
+Reference: Schuurman, P.M., Berghout, E.W., Powell, P. (2008). "Calculating the
+Importance of Information Systems: The Method of Bedell Revisited," University of
+Groningen, Netherlands . Sprouts: Working Papers on Information Systems, 8(37).
+http://sprouts.aisnet.org/8-37
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 2
+Calculating the importance of information
+systems
+The method of Bedell revisited
+
+
+Peter Schuurman
+Egon Berghout
+Philip Powell
+
+University of Groningen
+Centre for IT Economics Research
+P.O. Box 800
+9700 AV  Groningen
+The Netherlands
+CITER WP/010/PSEBPP
+June 2008
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 3
+CITER mission
+CITER is an independent research group
+within the Department of Economics,
+University of Groningen. Our research is
+focused on the economics of information
+technologies. Our research aims at
+understanding and analyzing the dynamics
+and the processes of development,
+distribution and implementation of infor-
+mation and communications technologies
+and improving their efficiency and
+effectiveness.
+
+We investigate particular economic issues
+in the economics of information
+technologies. For instance, the differences
+between ‘Open’ and ‘proprietary’
+technologies, the characteristics of hard-
+ware and software commercial demand
+and supply and the diffusion of new
+technologies. We also study the efficient
+and effective use of those technologies,
+how we can improve IT management and
+increase the benefits of investment in
+information technologies.
+
+The objectives of our research are
+especially useful for organizations using
+information technologies and to firms
+competing in this arena, as well as to
+policy makers and to society as a whole.
+
+Our research is conducted in close
+cooperation with industry, non-profit
+organizations and governmental partners,
+as our field of research is subject to
+frequent techno-logical and political
+changes.
+Contact information
+University of Groningen
+CITER-WSN245
+P.O. Box 800
+9700 AV  Groningen
+The Netherlands
+Tel. +31-50-363-3864
+info@CITER.nl
+Projects and main venues of research
+/square4 Cost/benefit management of IT.
+/square4 Decision-support methods for implementation decisions
+within organizations.
+/square4 Evaluation of legacy systems.
+/square4 Innovation and technical change in ICT.
+/square4 ‘Open’ vs. ‘proprietary’ software modes of
+development.
+/square4 Software patenting and appropriation strategies.
+/square4 Tools and strategies for the IT Control Officer.
+
+Sponsors
+Getronics PinkRoccade
+
+UWV
+
+Researchers
+Prof. dr. E.W. Berghout
+
+Drs. Ing. A.L.
+Commandeur
+
+Dr. E. Harison
+
+Prof. dr. P. Powell
+
+Dr. T.J.W. Renkema
+
+P.M. Schuurman, MSc.
+
+E.J. Stokking, MSc.
+
+e.w.berghout@rug.nl
+
+a.l.commandeur@rug.nl
+
+
+e.harison@rug.nl
+
+mnspp@management.bath.ac.uk
+
+
+t.j.w.renkema@rug.nl
+
+p.m.schuurman@rug.nl
+
+e.j.stokking@rug.nl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 4
+1
+Calculating the importance of information
+systems
+The method of Bedell revisited
+Peter Schuurman, University of Groningen, p.m.schuurman@rug.nl
+Egon Berghout, University of Groningen, e.w.berghout@rug.nl
+Philip Powell, University of Bath, mnspp@management.bath.ac.uk
+Abstract
+Various portfolio methods have been suggested to ev aluate the information
+systems used in organizations. A characteristic met hod for portfolio analysis is
+the method of Bedell (1985). This paper provides an  overview of the purpose and
+functioning of this method. The explanation is supp orted by an elaborated
+example.
+Keywords: Information system, importance, effectiveness, port folio management, resource
+allocation.
+1. Introduction
+Portfolio and multi criteria methods are generally accepted as being more
+successful than strictly financial approaches when it comes to the valuation of IS.
+In this report, one of these portfolio methods, Bed ell’s method, is revisited. As
+CIO of a large banking group, Bedell first publishe d his method in 1985 in: The
+computer solution: Strategies for success in the in formation age . The book
+illustrates the battle of reducing administrative p erfection and bringing more IT
+resources to the core business processes. Bedell’s method has been improved by
+Van Reeken in various publications (Van Reeken, 1992; Van Reeken, 1994).
+Bedell’s method links business value to information  systems in a systematic and
+transparent approach and has been successfully appl ied by many organizations.
+The technique is a classical portfolio approach, wh ich requires limited effort,
+because most analysis is based on management team assessments of the current
+organisational setting. This implies that the metho d can be completed without
+extensive prior research. The application of this m ethod, however, does require
+in-depth knowledge of the approach and because Bede ll’s original work is
+unavailable, this report provides a fresh insight i nto his work. The approach has
+also been adapted to current state-of-the-art thinking about IS management.
+The remainder of the paper is composed as follows. The foundation of the
+method is explained in Section 2. Next, Section 3 c ontains in-depth information
+on how the method works and the variables are to be  determined. To clarify the
+method even further, an exemplary case is included in Section 4. Finally, in
+Section 5, the conclusions are discussed. The origi nal method as well as some of
+the work of Van Reeken is accounted for in Appendix A.
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 5
+2
+2. Foundation
+The method provides decision support for IS resourc e allocation questions on
+three levels of the organization (Figure 1):
+(1) Should the organization as a whole invest in IS?,
+(2) On which business processes should the investments focus?, and
+(3) Which concrete investments should be made? This  may refer to new IS or
+enhancements to existing information systems.
+Based on a limited amount of data, the method calcu lates effectiveness/
+importance-portfolios for IS on these three levels.  An example of a level 2
+(business process) portfolio for a production proce ss with a view of the possible
+activities is shown in Figure 2. It is these kind o f portfolios which can be used for
+answering the IS resource allocation questions.
+The most important principle of the method is that the level of effectiveness  of
+the information systems should ideally be approxima tely equal to their level of
+strategic  importance (the diagonal in Figure 2). For now, a system is re garded to
+be effective when it is cost-effective, has a high technical quality, and is
+functionally appropriate. And it is strategically i mportant when the activities
+supported are crucial to the organization or busine ss process in obtaining its
+strategic objectives (Bedell, 1985); these concepts  and their determination will
+
+Figure 1: The three questions of Bedell
+
+Figure 2: An effectiveness/importance portfolio for a production process
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 6
+3
+be further explained in Section 3. The effectivenes s functions as the “as-is”
+situation, whereas importance indicates the to-be situation. This way, ineffective
+systems (compared to their importance) indicate are as for improvement, while
+outperforming ones should be kept stable, or might even receive less attention
+than in the current situation. The underlying assum ption is that if effectiveness
+and importance are in line, “we can now focus our energies on increasing
+information systems effectiveness, confident that, as we do so, computing
+support to the organization as a whole will improve”  (Bedell, 1985: 33).
+An organization is viewed on three different levels  of abstraction. These are
+determined to be (1) the entire organization, which (2) exists of a set of business
+processes, that (3) each of subsist of activities. In the Bedell method existing
+information systems are related to these activities  (Figure 3). This facilitates the
+calculation of comparable IS effectiveness /importance numbers throughout the
+organization (using the equations as explained in t he next section). Bottom-up,
+the effectiveness of the IS to the activities is st ep-by-step adjusted for the level
+of importance of IS to the intended organizational level. The results are
+combined into portfolios which are then assessed to p-down; each step further
+focusing the allocation of resources on a lower organizational level. This way, the
+method provides an IS effectiveness/importance-port folio for each of the three
+organizational levels, using only the aspects shown  in Figure 3. The available
+portfolios and their purpose are described next.
+(1) The highest level portfolio indicates the effec tiveness of all information
+systems in the organization together reflecting the  strategic importance of
+information systems in general to the organization (Figure 4). This portfolio
+provides support in assessing whether an organizati on should improve its IS at
+all. The organization in Figure 4 needs improvements to its IS as the effectiveness
+is severely lacking considering their importance. With the knowledge of the total
+rating, the organization has to determine which bus iness processes should
+receive most attention.
+
+Figure 3: The key concepts (based on Bedell, 1985)
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 7
+4
+(2) The second portfolio demonstrates the effective ness of all information
+systems supporting a business process together refl ecting the strategic
+importance of the supported business process to the  organization, weighted by
+the importance of information systems in general to the business process (Figure
+5). The weights are added to prevent over prioritizing of IS resource allocation to
+business processes which are independent of IS. Thi s portfolio provides support
+in assessing on which business processes the improv ements should focus. In
+Figure 5, the systems supporting business processes  (2) and (3) are
+outperforming their importance, whereas (1) and (4)  are laggin. Especially the
+portfolio of activities in business process (1) should carefully be observed, due to
+the large difference and high importance rating of the business process.
+(3) The last portfolio indicates effectiveness of t he single information systems
+supporting the activities in a particular business process in reflection to the
+strategic importance of the supported activities to a business process (Figure 6).
+This figure indicates lacking activities and eventu ally supplies data to calculate
+the impact of improvements and determine which impr ovements should be
+made. In Figure 6, activity (a) is located perfectl y, activity (c) doesn’t need much
+attention. However, activities (b) and (d) are dete rmined as underperforming
+
+Figure 4: Organizational-level portfolio
+
+Figure 5: Business process–level portfolio
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 8
+5
+and whether these activities can be enhanced by mea ns of information system
+improvement should be examined.
+Knowing which activities have priority, the organiz ation can identify change
+projects. For each of the projects, their impact on  the performance can be
+established. Together with the costs and risks of t he project, this delta in
+performance will determine the projects priority se quence. In the next section,
+the method is explained.
+3. Operationalization
+Although the portfolio analysis moves top-down rega rding to the organizational
+levels, the calculations in the method are made bottom-up. The organization first
+has to establish the logical organizational, busine ss process, and activity
+boundaries. Van Reeken (1992) advises the use of in formation strategy planning
+(ISP) methodology or Porter’s value chain analysis if these overviews are not
+available. After having established the organizatio nal design to be used, the
+organization has to determine the starting variables. These are the
+•  Current importance of each of the business processes to the organization,
+(Importance Business Process Organization, IBO)
+•  Current importance of each of the activities to the business processes,
+(Importance Activity Business Process, IAB)
+•  Potential importance of information systems in general to the business
+processes,
+(Importance Information Systems Business Process, IIB)
+•  Effectiveness of each information system to an activity.
+(Effectiveness System Activity, ESA)
+The importance variables have to be determined base d on the perceived
+importance in obtaining the strategic goals of the organization or business
+process. Based on these elements the processes, act ivities and systems are
+scored 0-10. In Figure 7, a diagram is presented to  guide this scoring for the
+importance of business processes to the organizatio n. A comparable diagram is
+
+Figure 6: Activity-level portfolio
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 9
+6
+used to value the other two importance variables. T hese questions could be
+substantiated by linking the importance to the dete rmined business goals (Weill
+and Vitale, 1999).
+The effectiveness of the single information systems  to the activities (ESA) also
+has to be scaled as absent (0) to high (0-10). This  is done by IS management in
+cooperation with the business organization based on  their perception of the
+cost-effective, technical quality, and functional appropriateness.
+With the information available, the organization can calculate the variables to be
+placed at the axis of the portfolios. First the org anization has to calculate the
+effectiveness of the single information systems to the business processes
+(Effectiveness System Business Process, ESB), by we ighting the effectiveness of
+the single information system to the activity (ESA)  by the importance of the
+activity to the business process it supports (IAB) (Equation 1).
+/g1831/g1845/g1828 = /g1831/g1845/g1827 ∗ /g1835/g1827/g1828  Equation 1
+
+Figure 7: Determining strategic importance scores (based on Bedell, 1985)
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 10
+7
+Next, the effectiveness of the single systems to the business processes (ESB) can
+be combined to calculated the total effectiveness o f all information systems
+supporting a certain business process (Effectivenes s Information Systems
+Business Process, EIB). This is calculated by dividing the total effectiveness scores
+of the single information systems to the business process by the total importance
+of the activities to the business process (Equation 2).
+/g1831/g1835/g1828 = /uni2211(/g1831/g1845/g1828 )
+/uni2211(/g1835/g1827/g1828 ) Equation 2
+To move another level up in the three organizationa l levels, the effectiveness of
+the single systems to the organization (Effectivene ss System Organization, ESO)
+can be calculated by weighing them by the importance of the business processes
+they support to the organization (Importance Busine ss Process Organization,
+IBO, Equation 3).
+/g3533(/g1831/g1845/g1841 ) = /g3533(/g1831/g1845/g1828 ∗ /g1835/g1828/g1841 ) Equation 3
+As the single systems are related to the top level,  the activities should also
+(Importance Activity Organization, IAO). Remember that information systems can
+only contribute via the activities they enhance. Th e activities’ importance to the
+business process are thus also weighed against the importance of the business
+processes they are part of to the organization (Equation 4).
+/g3533(/g1835/g1827/g1841 ) = /g3533(/g1835/g1827/g1828 ∗ /g1835/g1828/g1841 ) Equation 4
+Now both the single systems as well as the activities they enhance are related to
+the organizational level, the effectiveness of all information systems in general to
+the organization can be calculated (Effectiveness I nformation Systems
+Organization, EIO, Equation 5). This provides the o rganization with the level for
+their current level of performance.
+/g1831/g1835/g1841 = /uni2211(/g1831/g1845/g1841 )
+/uni2211(/g1835/g1827/g1841 ) Equation 5
+To reflect the numbers of the effectiveness of all IS to a certain business process
+to the importance of the business process to the or ganization, the latter have to
+be weighed by the importance of IS to the business process. This results in the
+so-called Focus Factor (FF, Equation 6).
+/g1832/g1832 = /g1835/g1828/g1841 ∗ /g1835/g1835/g1828  Equation 6
+The final calculation before the assessment of the portfolios can then be made,
+the organization can determine the future potential  of IS in general to the
+organization (Importance Information System Organization, IIO, Equation 7).
+/g1835/g1835/g1841 =
+/uni2211(/g1832/g1832 )
+/uni2211(/g1835/g1828/g1841 ) Equation 7
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 11
+8
+Now the organization can create the three different portfolios as described in the
+previous section by selecting the needed variables. Based on these portfolios the
+organization can identify whether an organization h as to improve their IS
+portfolios and if so, which areas should be focused  on. To prioritize the
+improvements, the to-be effectiveness of a system has to be determined, so the
+potential added effectiveness of the improvements c an be calculated (Equation
+8). To provide an overall view, the added effective ness is weighed against the
+cost determined for realizing and exploiting the im provement; this is called the
+Project Return Index (PRI, Equation 9).
+/g1827/g1856/g1856/g1857/g1856 = (/g1831/g1845 /g1827/g2869− /g1831/g1845 /g1827/g2868) ∗ /g1835/g1827/g1841  Equation 8
+/g1842/g1844/g1835 = /g1827/g1856/g1856/g1857/g1856
+/g1829/g1867/g1871/g1872  Equation 9
+As the resources for the implementation of improvem ents are likely to be
+limited, the organization will not be able to apply them all. As the main principle
+of the method is to bring the effectiveness of IS t o the organization to the same
+level as the importance of IS to the organization, the organization will be wise to
+select those improvements which bring the future ef fectiveness of the IS to the
+organization closest to the importance. This future  effectiveness can be
+calculated by dividing the total of project return indexes for the chosen
+improvements by the total importance of the activit ies to the organization
+(Equation 10).
+/g1831/g1835 /g1841/g2869= /g1831/g1835 /g1841/g2868+ /uni2211(/g1842/g1844/g1835 )
+/uni2211(/g1835/g1827/g1841 ) Equation 10
+To provide an overview of how all variables fit tog ether the total complexity of
+the method is represented in Figure 8. The method is clarified with an example in
+the next section.
+4. Example
+In this Section an example is presented to illustra te Bedell’s method. The
+example uses the steps as identified by Van Reeken (1992) and concerns an
+
+Figure 8: All aspects of the method
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 12
+imaginary banking organisation
+is a small, simplified company
+each accommodated in a separate bu
+transaction banking, retail banking, and services
+has been rapidly changing during the last
+the influence of IS. The board of directors of IBG is under the impression that IBG
+is not coping well with these changes, and has ther efore ordered an evaluation
+of the IS portfolio.
+Step 1: Determine the importance of all organizational
+the organization
+The importance of each of the
+assessment by the board of directors, the results are list
+Table 1: Business processes and IBO
+Business process
+Asset Management
+Transaction Banking
+Retail Banking
+Services
+Asset Management is seen as the core process in obtaining the organizat ions
+strategic goals. Therefore
+organization (IBO) has been set at
+Asset Management must obtain theirs.
+determined to be strategic (8)
+Banking is found to be contributing to the long ter m plan
+accomplish strategic objectives (6).
+to the strategic objectives,
+stated to be administrative (overhead, 2).
+Step 2: Determine the import
+processes
+Each of the business processes consists of several activities; these are
+Table 2. The importance of the
+strategic goals is listed in the column I
+Asset
+management
+imaginary banking organisation  called the International Banking Group (IBG)
+company which consists of only four business processes
+each accommodated in a separate bu siness unit ; these are, asset management,
+transaction banking, retail banking, and services  (Figure 9). The banking business
+has been rapidly changing during the last few years, especially when considering
+the influence of IS. The board of directors of IBG is under the impression that IBG
+is not coping well with these changes, and has ther efore ordered an evaluation
+
+Figure 9: IBG organization chart
+Step 1: Determine the importance of all organizational business processes
+The importance of each of the business processes to IBG was determined in an
+assessment by the board of directors, the results are list ed in Table 1.
+O
+seen as the core process in obtaining the organizat ions
+Therefore the importance of the business process to the
+been set at 10. Thus, if IBG is to achieve its strategic goals,
+Asset Management must obtain theirs. The process of Transaction Banking is
+determined to be strategic (8) . According to the board of directors, Retail
+Banking is found to be contributing to the long ter m plan s, but does not
+accomplish strategic objectives (6). Finally, services, are not directly contributi
+to the strategic objectives, but are of operational importance; therefore they are
+administrative (overhead, 2).
+Step 2: Determine the import ance of all activities executed in the business
+Each of the business processes consists of several activities; these are listed in
+. The importance of the activity to the business process in obtaining its
+strategic goals is listed in the column I AB. The judgements are made based on
+Board of
+directors
+Transaction
+banking Retail banking
+Services
+the International Banking Group (IBG). IBG
+business processes ,
+; these are, asset management,
+The banking business
+few years, especially when considering
+the influence of IS. The board of directors of IBG is under the impression that IBG
+is not coping well with these changes, and has ther efore ordered an evaluation
+business processes  to
+IBG was determined in an
+IBO
+10
+8
+6
+2
+seen as the core process in obtaining the organizat ions
+the importance of the business process to the
+Thus, if IBG is to achieve its strategic goals,
+Transaction Banking is
+According to the board of directors, Retail
+s, but does not
+are not directly contributing
+but are of operational importance; therefore they are
+business
+listed in
+in obtaining its
+The judgements are made based on
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 13
+10
+observations of the management responsible for each of the respective business
+processes.
+Table 2: Business processes, activities, and IAB
+Business process Activities IAB
+Asset Management Trading 5
+ Mergers & Acquisitions 10
+ Risk Management 10
+Transaction Banking  Operations  10
+ Policy & Portfolio 10
+ MIS 5
+Retail Banking Private Banking 5
+ Corporate Clients 10
+ Bankshops 5
+Services  Finance & Risk Management  1
+ IT 1
+ HRM 5
+Step 3: Determine the effectiveness of the systems currently in place to the
+activities
+Next, the IT management of IBG joined forces with t he management of the
+business processes to determine the effectiveness of each of the systems to the
+supported activities (ESA, Table 3). It can be seen  that the MIS, Private Banking,
+and HRM activities are maximally supported. In addition, it should be noted that
+the activities of Mergers & Acquisitions and Banksh ops have an effectiveness
+rating of zero. The system supporting these activities are is thus regarded totally
+insufficient. There might be several reasons behind  this. The activities can, for
+instance, be suffering from efficiency failures, lacking timeliness, or total lack of a
+(computerised) information system 1.
+Table 3: Business processes, activities, IAB, and ESA
+Business process  Activity  IAB  ESA
+Asset Management Trading 5 5
+ Mergers & Acquisitions 10 0
+ Risk Management  10  5
+Transaction Banking Operations 10 5
+ Policy & Portfolio 10 5
+ MIS 5 10
+Retail Banking Private Banking 5 10
+ Corporate Clients 10 2
+ Bankshops  5 0
+Services Finance & Risk Management 1 5
+ IT 1 5
+ HRM 5 10
+Step 4: Calculate the effectiveness of the single systems and the total of
+information systems
+The importance of the activities to the business pr ocesses and the effectiveness
+of the single systems in supporting the activities can now be multiplied to
+calculate the system’s effectiveness to the business process (ESB, Table 4).
+
+1 The absence of computerized information does not h ave to results in an ESA score of zero by
+default; manual operations might be just as adequate in serving an activity.
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 14
+11
+Table 4: Business processes, activities, IAB, ESA, and ESB
+Business process  Activity  IAB  ESA  ES B
+Asset Management Trading 5 5 25
+ Mergers & Acquisitions  10  0 0
+ Risk Management 10 5 50
+Transaction Banking  Operations  10  5 50
+ Policy & Portfolio 10 5 50
+ MIS  5 10  50
+Retail Banking Private Banking 5 10 50
+ Corporate Clients  10 2 20
+ Bankshops 5 0 0
+Services  Finance & Risk Management  1 5 5
+ IT 1 5 5
+ HRM  5 10  50
+Next, the effect from the information systems (i.e.  all systems together) to the
+assessed business process (EIB) is calculated by dividing the sum of all ESB scores
+for the business process by the sum of all its associated IAB scores (Table 5).
+Table 5: Business processes, Sum(IAB), Sum(ESB), and EIB
+Business process Sum(ESB) Sum(IAB) EIB
+Asset Management 75 25 3,0
+Transaction Banking 150 25 6,0
+Retail Banking 70 20 3,5
+Services 60 7 8,6
+To calculate the effect of the systems to the organization (ESO), the current state
+of the IS, first the sums of the ESB-scores have to  be multiplied by the
+importance rate of the activities to the organizati on (IAO) for each of the
+business processes (as already determined in Step 1 , Table 1). Then, the
+effectiveness of all information systems to the organization can be computed by
+dividing the total ESO-scores of all business proce sses weighted against their
+IAO-score, 2.490, by the total IAB-scores of all business processes, also weighted
+by the IAO, 584. This results in a current effectiv eness score, EIO, for IBG of 4,3
+(Table 6).
+Table 6: Business processes, Sum(ESB), Sum(ESO), Sum(IAB), Sum(IAO), and EIB
+Business process Sum(ESB) Sum(ESO) Sum(IAB) Sum(IAO) EIB
+Asset Management  75  750  25  250  3,0
+Transaction Banking 150 1.200 25 200 6,0
+Retail Banking  70  420  20  120  3,5
+Services 60 120 7 14 8,6
+Total  2.490  584
+EIO = 2.490 / 584 = 4,3
+Step 5: Determine the potential importance of the information systems to the
+business processes and calculate the focus factors and the potential
+importance of the information systems to the organization
+Based on the data from steps 1-4, with knowledge of  the market (sector and
+technology), IBG can determine the importance of in formation systems to each
+of the business processes. Following Van Reeken (19 92), IBG decided to reduce
+complexity by determining the importance of the inf ormation systems to the
+business processes (the IIB scores) by taking the m aximum of the IAB-scores for
+each business process (Table 7).
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 15
+12
+Table 7: Business processes, IBO, and IIB
+Business process  IBO II B
+Asset Management 10 10
+Transaction Banking  8 10
+Retail Banking 6 10
+Services  2 5
+Multiplying the IIA-scores with the IBO-scores prov ides the focus factors (FF). In
+addition, the final current importance of the infor mation systems to the
+organization as a whole is computed by dividing the  sum of the focus factors
+with the sum of the IBO-scores (Table 8). The poten tial of information systems
+for IBG is thus 9,6.
+Table 8: Business processes, IBO, IIB, and FF
+Business process IBO IIB FF
+Asset Management  10  10  100
+Transaction Banking 8 10 80
+Retail Banking  6 10  60
+Services 2 5 10
+Total 26  250
+IIO = 250 / 26 = 9,6
+Step 6: Determine whether or not to invest in information systems as a whole
+To determine whether or not to invest in informatio n systems at all, the
+organizational measures of importance (IIO) and eff iciency (EIO) are used. The
+highest level portfolio for IBG is represented in Figure 10.
+The IIO is used as an indicator of what the level o f support of the information
+systems for the organization should  be, whereas the EIO indicates the current
+level. The underlying idea is that the point should  be on the lower-left to upper-
+right diagonal. If this is the case, than the total  effectiveness of the systems to
+the organization is equal to their importance; whic h is accepted as a good
+outcome for the portfolio. The further the horizont al amplitude from the
+diagonal, the worse the portfolio is matched to the  wanted situation. For IBG it
+seems that the feeling of the board of directors wa s justified, the effect of the
+information systems is indeed too low in comparison to their importance. In line
+with the “aggressively invest” quadrant, it would b e advisable for IBG to try to
+create an additional overall effectiveness of 5,3 (9,6-4,3).
+
+Figure 10: IBG’s organizational portfolio
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 16
+13
+Step 7: Determine which business processes to make information system
+investments in
+The next question for IBG, after having determined that investment are essential,
+is which business processes are most in need of imp rovement. To decide this,
+each business process is placed in Figure 11 on the  coordinates of its Focus
+Factor and the effectiveness of its information sys tems to the business process
+(EIB). The figure provides a nuanced view of the re sults from step 6. It can be
+seen that especially the Asset Management and Servi ces business processes
+diverge quite a lot from their ideal. The informati on systems servicing Asset
+Management require the most attention; developments should be considered in
+this area. The information systems supporting the l atter process are
+‘overqualified’ for their job; investments should not be made and resource used
+to manage these IS might be of better use when appl ied to different systems.
+Transaction Banking and to a lesser degree Retail B anking are close to the
+diagonal and hardly needs any adjustment at all.
+Step 8: Determine which activity to invest in for the business process
+After having found out the organization needs inves tments into the information
+systems of certain business processes, the board of  directors would now like to
+know which activities requires most attention, so t hey are now assessed. For
+each of the business processes the effectiveness an d importance of the systems
+and activities to the business process can be plott ed. This is done for the Asset
+Management process in Figure 12.
+The diagonal and the horizontal distance of the systems to it, is again essential to
+analysing the current state of the systems. It can be seen that the Finance & Risk
+Management systems, but most importantly, the Merge rs & Acquisitions
+systems should be considered for enhancement. The T rading systems are found
+to be perfectly suitable for their purpose.
+
+Figure 11: Business process portfolio
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 17
+14
+Step 9: Select investment proposals
+In the last phase of the portfolio management cycle , IBG is to decide which
+project proposals to implement (naturally, smaller changes could also be
+assessed). To do this, possible projects are identi fied and the overview as
+provided in Table 10 as been established. The activities lacking a “cost” attribute
+are not regarded in any of the project proposals. T he original ESA scores are
+copied from Step 3 (Table 3). Additionally, the ESA’ points are determined based
+on the to-be situation as described in the project proposals. Note that even
+though the Services business process is far from ne eding investments (Step 7,
+Figure 11), a project was proposed in this area.
+Step 10: Prioritize investment proposals
+At last, IBG can decide where to put their money. P rioritizing is based on the
+level of added effectiveness per invested euro. In Table 10, the improvements
+are weighted by the importance of the activity on t o the organization (IAO,
+calculated by multiplying the importance of the act ivity to the business process,
+IAB from Table 1, by the importance of the business process to the organization,
+IBO from Table 2) are related to the size of the required investment.
+Without looking at the investment sizes, the Merger s & Acquisitions project
+would likely be accepted. However, when assessing t he Project Return Indices,
+the project drops considerably in prioritization. The Policy & Portfolio project will
+provide IBG with the most value for money.
+For each project, the value in the ‘added’ column c an be regarded as the
+improvement of the considered system’s effectiveness to the organization (ESO).
+When divided by the sum of the importance of the ac tivities to IBG (Sum(IAO),
+Table 6), the improvement of the total effectivenes s of information systems to
+the organization is computed. That is, how much clo ser the investments bring
+IBG to the wanted level of importance.
+
+Figure 12: Research and development portfolio
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 18
+15
+If eventually, the board of directors would only approve the Trading and Policy &
+Portfolio projects, this would result in a EIO’ of 4,3+(250+400)/584=5,4. If all
+projects were to be realized, the outcome would be a EIO’ of 6,5. Therefore,
+recalling the IIO of 9,6, it might be advisable for the board to continue to look for
+additional projects. Also, as a project to be realized is dependent on the available
+resources, IBG should always keep less ambitious (E SA’) and less expensive
+scenarios in mind; after all, they might have a better PRI.
+5. Discussion and conclusions
+In this paper the method of Bedell is revisited. Al though the method appears to
+be intended for decision support for new IS investm ents, it can just as easily
+support the assessment of recourse allocation to on-going operations.
+There are however some drawbacks of using the method. In its current form, the
+approach is, for instance, unable to cope with syst ems serving multiple activities
+and/or activities in multiple business processes. In addition, the determination of
+importance and effectiveness scores is neither transparent nor objective. Future
+research is necessary to deal with these problems.
+6. References
+Bedell, E.F., (1985), The computer solution: Strategies for success in th e information age , USA,
+ISBN: 0-87094-474-6, pp. xi-267.
+Van Reeken, A., (1994), Experience using Bedell's information economics met hod for IT/IS
+investment selection , Maastricht Research School of Economics of Techno logy and
+Organizations (METEOR), Maastricht.
+Van Reeken, A.J., (1992), "Investeringsselectie van informatiesystemen: De methode van Eugene
+Bedell", Handboek BIK Rijksuniversiteit Limburg , pp 1-24.
+Weill, P., and Vitale, M., (1999), "Assessing the H ealth of an Information Systems Applications
+Portfolio: An Example From Process Manufacturing", MIS Quarterly  23:4, pp 601-624.
+
+
+Table 9: Business processes, activities, and investments
+Business process Activity ESA ESA’ Cost (K€)
+Asset Management Trading 5 10 100
+ Mergers & Acquisitions 0 5 300
+ Risk Management 5 5 -
+Transaction Banking Operations 5 5 -
+ Policy & Portfolio 5 10 50
+ MIS  10  10  -
+Retail Banking Private Banking 10 10 -
+ Corporate Clients 2 2 -
+ Bankshops 0 5 120
+Services Finance & Risk Management 5 5 -
+ IT 5 10 75
+ HRM  10  10  -
+Table 10: Business processes, activities, improvements, investments, and relative improvements
+Business process  Activity  IAO  ESA  ESA’  Added  Cost  PRI
+Asset Management Trading 50 5 10 250 100 2,50
+ Mergers & Acquisitions 100 0 5 500 300 1,67
+Transaction Banking Policy & Portfolio 80 5 10 400 50 8,00
+Retail Banking Bankshops 30 0 5 150 120 1,25
+Services  IT  2 5 10  10  75  0,13
+
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 19
+16
+Appendix A: Accounting for Bedell’s method
+In the original method of Bedell, total nine variab les are defined in order to
+determine the extent to which an IS supports the or ganization’s activities; four
+for effectiveness issues (Table 11), and five deter mining importance (Table 12).
+Table 13 contains an explanation of the key concept s as used by Bedell; the
+variables themselves are further explained in Table  14. Using the variables he
+draws up a portfolio method to guide both the resou rce allocation of an (IS)
+organization and the setting of priorities for improvements.
+To draw up the portfolio, Bedell assigns points on a 0-10 scale to the
+“determine” variables. An organization does not have to determine all variables,
+as the other variables are calculated by multiplyin g sets of basis variables. In
+general, the importance variables are based on the strategic contribution of the
+independent aspects to the dependent aspects of the  variables; and the
+effectiveness is determined by a direct effectivene ss rate. An overview is
+presented in Table 15. The composition of the portfolios has not been changed in
+this paper and is therefore not further included here.
+In 1992 Van Reeken drew attention to the method of Bedell in The Netherlands.
+In this paper (Van Reeken, 1992) he refined to method. The largest change lies in
+emphasising that the assessment should be of the function  which is part of a
+certain activity, rather than seeing a system as the enabler. Therefore, Van
+Reeken adds the layer of function  to the method. This results in a clearer
+distinction between the functions executed in an ac tivity (this includes both the
+computerised as the non-computerised systems; calle d systems by Bedell) and
+the computerised systems (called information systems by Bedell). This could lead
+to a situation in which the computerisation of form erly non-computerised
+function is more likely to be included in the inves tment proposals than when
+using Bedell’s original terminology. In addition, Van Reeken slightly adjusted the
+calculation of the PRI.
+Table 11: Effectiveness variables by Bedell (Source: Bedell, 1985: 35)
+How effectively  does …  support the …  Variable n ame
+How Effectively does the System support the Activity  ESA index
+How Effectively do Information Systems support the Activity EIA index
+How Effectively  does the System  support the Organization  ESO index
+How Effectively do Information Systems support the Organization EIO index
+
+Table 12: Importance variables by Bedell (Source: Bedell, 1985: 36)
+How important is … to the … Variable name
+How Important  is the System  to the Activity  ISA index
+How Important is the System to the Organization ISO index
+How Important  are Information Systems  to the Activity  IIA index
+How Important are Information Systems to the Organization IIO index
+How Important  Is the Activity  to the Organization  IAO index
+Table 13: Concepts used by Bedell
+Concept Description
+Effectiveness  The level of functional appropriateness, technical appropriateness, and cost -
+effectiveness
+Importance
+System One particular information system
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 20
+17
+Information systems  All information systems supporting a particular activity/organization
+Activity A function that is performed by a group or  individual within the organization
+Organization
+Table 14: Description of Bedell’s variables (based on Bedell, 1985: 35-36)
+Variable Measures the extent to which… Level
+ESA A particular system supports the activity it wa s built to support Determine
+EIA  Information systems in total support a particular activity  Determine
+ESO A particular system supports the entire organiz ation Calculate
+EIO  Information systems in total support the entire organization  Calculate
+ISA A particular system is necessary in achieving t he activity’s objectives Determine
+ISO  A particular system contributes to achieving the objectives of the orga nization
+as a whole
+Calculate
+IIA  Information systems contribute to achieving the objectives of a specific activity  Calculate
+IIO Information systems contribute to achieving the  objectives of the organization
+as a whole
+Calculate
+IAO The activity contributes to achieving the objec tives of the organization as a
+whole
+Determine
+Table 15: Determining Bedell’s variables (p. 37-41, 45-47, 55-58, 66)
+Variable Determination Points
+ESA  Highly effective 10 Functionally appropriate, tech nically adequate, and cost-
+effective. Little or no additional work required than routine
+maintenance.
+ Moderately effective 5 Reasonable support to the a ctivity, but substantial
+improvements are necessary to improve functional
+appropriateness, technical quality, or cost-effecti veness;
+however, it does not need to be replaced
+ Ineffective 1 The system support the activity it w as designed to support,
+but ineffectively. Improvements are so extensive, t hat, in
+the long term, the system will have to be replaced.
+ No support  0 No system is currently installed, or it is so ineff ective as to
+be worthless.
+EIA =∑(ESA*ISA)/∑(ISA)  Weighting the effectiveness of each system by its
+importance to the activity.
+ESO =ESA  Under the assumption that a system is only used by  one
+activity.
+   If several activities share the same system, the s ystem’s
+support to the organization as a whole is a functio n of how
+effectively it supports each sharing activity and h ow
+important each sharing activity is to the organization.
+EIO =∑(ESA*ISO)/∑(ISO)  Weighting the effectiveness of each system by its
+importance to the organization.
+ISA  Strategic factor  10  Absolute essential in achieving significant strateg ic
+objectives of the activity.
+ Major support factor  5 If it is not absolutely essential to the activity i n achieving
+important strategic objectives, but can, or already  does,
+play a vital role in supporting the activity; alter natives
+would be more costly, or cause major disruptions to install.
+ Minor support factor  1 The system helps the activity achieve its strategic objectives
+but reasonable alternatives are available that ar n ot
+significantly more costly, less convenient, or less  effective,
+and would not significantly disrupt operations.
+ Not useful 0 The activity does not derive benefits from its use.
+ISO =ISA*IAO  The importance of each system to the activity by t he
+activity’s importance to the organization.
+IIA  Strategic factor  10  The information systems support is absolutely essential in
+achieving a significant portion of the activity’s s trategic
+objectives.
+ Operational support
+factor
+5 The information systems are not absolutely essent ial in
+achieving most of the activity’s strategic objects but the
+systems can, or already do, provide critical operat ional
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 21
+18
+support for the activity; alternatives would be mor e costly,
+or cause major disruptions to install.
+ Minor support factor  1 The information systems help, or could help, the ac tivity
+function but strategic objectives or critical opera tions do
+not depend on computing.
+ Not applicable 0 Information systems can help the activity in little or no way
+to achieve its objectives.
+IIO =∑(IAO*IIA)/∑(IAO)
+=∑(FF)/ ∑(IAO)
+ Weighting the importance of information systems fo r each
+activity by the activity’s importance to the organization.
+IAO  Critically strategic
+activity
+10  The activity must achieve, difficult to achieve , outstanding
+performance on its strategic objectives for the organization
+as a whole.
+ Strategic activity 8 The activity must accomplish most strategic objectives for
+the organization’s long-term goals to be achieved.
+ Contributory activity 6 The activity may directly contribute to meeting the
+organization’s long-term goals, but the organizatio n may
+still succeed even if the activity fails to achieve a substantial
+portion of its strategic objectives.
+ Support activity 4 The activity does not directly work to achieve the
+organization’s goals, but supports critically strat egic and
+strategic activities in achieving their objectives;  its failure
+will not prevent the organization from attaining it s long-
+term goals.
+ Overhead activity  2 The activity must be done but does not contribute d irectly
+to achieving the organization’s long-term goals.
+ Detrimental activity  0 The activity works against achieving the organization’s long -
+term goals.
+FF  =IAO*IIA   Determines the importance of computing in an activi ty to
+the organization as a whole.
+
+                             Sprouts - http://sprouts.aisnet.org/8-37
+
+### Page 22
+Working Papers on Information Systems | ISSN 1535-6078
+
+Editors:
+Michel Avital, University of Amsterdam
+Kevin Crowston, Syracuse University
+
+Advisory Board:
+Kalle Lyytinen, Case Western Reserve University
+Roger Clarke, Australian National University
+Sue Conger, University of Dallas
+Marco De Marco, Universita’ Cattolica di Milano
+Guy Fitzgerald, Brunel University
+Rudy Hirschheim, Louisiana State University
+Blake Ives, University of Houston
+
+Sirkka Jarvenpaa, University of Texas at Austin
+John King, University of Michigan
+Rik Maes, University of Amsterdam
+Dan Robey, Georgia State University
+Frantz Rowe, University of Nantes
+Detmar Straub, Georgia State University
+Richard T. Watson, University of Georgia
+Ron Weber, Monash University
+Kwok Kee Wei, City University of Hong Kong
+
+Sponsors:
+Association for Information Systems (AIS)
+AIM
+itAIS
+Addis Ababa University, Ethiopia
+American University, USA
+Case Western Reserve University, USA
+City University of Hong Kong, China
+Copenhagen Business School, Denmark
+Hanken School of Economics, Finland
+Helsinki School of Economics, Finland
+Indiana University, USA
+Katholieke Universiteit Leuven, Belgium
+Lancaster University, UK
+Leeds Metropolitan University, UK
+National University of Ireland Galway, Ireland
+New York University, USA
+Pennsylvania State University, USA
+Pepperdine University, USA
+Syracuse University, USA
+University of Amsterdam, Netherlands
+University of Dallas, USA
+University of Georgia, USA
+University of Groningen, Netherlands
+University of Limerick, Ireland
+University of Oslo, Norway
+University of San Francisco, USA
+University of Washington, USA
+Victoria University of Wellington, New Zealand
+Viktoria Institute, Sweden
+
+Editorial Board:
+Margunn Aanestad, University of Oslo
+Steven Alter, University of San Francisco
+Egon Berghout, University of Groningen
+Bo-Christer Bjork, Hanken School of Economics
+Tony Bryant, Leeds Metropolitan University
+Erran Carmel, American University
+Kieran Conboy, National U. of Ireland Galway
+Jan Damsgaard, Copenhagen Business School
+Robert Davison, City University of Hong Kong
+Guido Dedene,
+Katholieke Universiteit Leuven
+Alan Dennis, Indiana University
+Brian Fitzgerald, University of Limerick
+Ole Hanseth, University of Oslo
+Ola Henfridsson, Viktoria Institute
+Sid Huff, Victoria University of Wellington
+Ard Huizing, University of Amsterdam
+Lucas Introna, Lancaster University
+Panos Ipeirotis, New York University
+Robert Mason, University of Washington
+John Mooney, Pepperdine University
+Steve Sawyer, Pennsylvania State University
+Virpi Tuunainen, Helsinki School of Economics
+Francesco Virili, Universita' degli Studi di Cassino
+
+Managing Editor:
+Bas Smit, University of Amsterdam
+
+Office:
+Sprouts
+University of Amsterdam
+Roetersstraat 11, Room E 2.74
+1018 WB Amsterdam, Netherlands
+Email: admin@sprouts.aisnet.org
