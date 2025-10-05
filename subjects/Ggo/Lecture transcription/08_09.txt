@@ -1,0 +1,168 @@
+
+María Llanos Cuenca Gonzalez started transcription
+
+María Llanos Cuenca Gonzalez
+0 minutes 3 seconds0:03
+María Llanos Cuenca Gonzalez 0 minutes 3 seconds
+Llamando buenas tardes a a todos y a todas. Bienvenidos a al máster, a a esta edición, este año la verdad es que creo que bueno se ha llenado el máster YY ya hay lista de espera y todo, o sea que nada, enhorabuena a los que habéis podido entrar por estar aquí.
+María Llanos Cuenca Gonzalez 0 minutes 22 seconds
+¿YY vamos a ir viendo un poquito cómo vamos a organizar la asignatura y en cuanto a la A la organización con la parte de teams, las las sesiones, los grupos de trabajo y demás, y y a lo que es el temario de la asignatura, vale?
+María Llanos Cuenca Gonzalez 0 minutes 41 seconds
+¿Es el dentro de la asignatura de a ver que me vuelva aquí, vale? ¿Dentro de la asignatura de gestión y gobierno, vale? Sí que es cierto. ¿Teníais COST? Antes vale la parte de gestión y gobierno aquí, pues sería una G. Tendríamos la clase las online, ya sabéis que son lunes y viernes.
+María Llanos Cuenca Gonzalez 1 minute 3 seconds
+Y las presenciales martes, miércoles y jueves. Si alguno de vosotros no pudiera asistir a clase presencial, podéis solicitar la dispensa de asistencia. Lo tenéis en el en la página web de la escuela, vale en la que sé que ya hay alguna dispensa concedida, pero si alguno no la ha pedido todavía, creo que el plazo es hasta el 20 de septiembre o el 22 de septiembre para.
+María Llanos Cuenca Gonzalez 1 minute 27 seconds
+Solicitar la dispensa si os conceden la dispensa, eso no quiere decir que no podáis venir a clase. Yo el año pasado tenía un alumno que tenía dispensa de asistencia, pero los días que él podía acudía a clase y hacía las tareas que hacíamos en el aula, porque siempre trabajas en equipo y siempre bueno, pues es un poco más ameno que que seguirlo todo. Solamente 11 en casa solo vale para los trabajos y todo, pues siempre es mejor.
+María Llanos Cuenca Gonzalez 1 minute 54 seconds
+El laboratorio de de la clase de teoría es el el Linus Torvalds, por si hay alguien que que no es de la de aquí, de la Politécnica de Valencia. Este laboratorio está en el edificio 1 G, lo que es la escuela y está en el primer piso. Sabéis que aquí han estado de obras, estaba toda esta parte de la terraza que la estaban arreglando.
+María Llanos Cuenca Gonzalez 2 minutes 15 seconds
+Han numerado también algunas aulas. ¿Vale? ¿Bueno, pues esta sería la el laboratorio donde vamos a hacer las prácticas, vale?
+María Llanos Cuenca Gonzalez 2 minutes 24 seconds
+Bueno, para que por presentarme luego os preguntaré un poquito a vosotros para que me digáis de qué intensificación de Nis y demás, yo soy Llanos Cuenca ya no, ya no sé si el nombre es un nombre que no es de Valencia, por eso quizá es un poco extraño para alguno de vosotros y imparto clases en, pues en bastantes titulaciones de las que da.
+María Llanos Cuenca Gonzalez 2 minutes 46 seconds
+E informática, tanto en el grado como en el máster en el doble grado de informática y ADE en el grado de robótica y en un máster de gestión de cadena de suministro. Yo soy licenciada en informática de los del plan antiguo, pero el doctorado lo tengo en gestión de cadena de suministro. Entonces tengo pues el un perfil.
+María Llanos Cuenca Gonzalez 3 minutes 7 seconds
+¿Un poco así, mezclado de de lo que es la parte de de informática con la parte de gestión en cuanto a lo que hago, o aparte de la docencia, pues todo el tema de investigación, sabéis qué hay en el Directorio de de la UPV? ¿Podéis entrar a buscar cada 1 de los profesores? ¿Bueno, pues ahí podéis entrar YY ver un poco cuál es mi actividad a nivel?
+
+Hernan Lopez Perez
+43 minutes 10 seconds43:10
+Hernan Lopez Perez 43 minutes 10 seconds
+No todo bien.
+
+María Llanos Cuenca Gonzalez
+43 minutes 11 seconds43:11
+María Llanos Cuenca Gonzalez 43 minutes 11 seconds
+No vale muy bien, vale, no sé si en el chat alguien vale, iré poniendo el chat y así, así no se me escapa, intentaré veros YY no se me escapa ninguna. ¿Vale? Pues nada, si no tenéis ninguna duda, lo dejamos hoy YY mañana ya.
+María Llanos Cuenca Gonzalez 43 minutes 29 seconds
+Empezamos ya a trabajar YY hablamos un poquito más de cerca.
+
+Anass Lambaraa
+43 minutes 34 seconds43:34
+Anass Lambaraa 43 minutes 34 seconds
+Perdona, perdona, María, esto me surge una duda. Y es que respecto a lo de antes, lo del tema de la dispensa, si el el trabajo está relacionado con ambas clases, tanto las teorías como las prácticas.
+
+María Llanos Cuenca Gonzalez
+43 minutes 35 seconds43:35
+María Llanos Cuenca Gonzalez 43 minutes 35 seconds
+Dime.
+María Llanos Cuenca Gonzalez 43 minutes 48 seconds
+Si, si, si va a ir va a ir todo continuo.
+
+Anass Lambaraa
+43 minutes 50 seconds43:50
+Anass Lambaraa 43 minutes 50 seconds
+¿Vale, porque es que yo, por ejemplo, tengo tengo bastante accesibilidad a las clases teóricas y a las prácticas, solo puedo, solo puedo ir una horita entonces?
+
+María Llanos Cuenca Gonzalez
+43 minutes 51 seconds43:51
+María Llanos Cuenca Gonzalez 43 minutes 51 seconds
+Sí.
+María Llanos Cuenca Gonzalez 43 minutes 58 seconds
+Ajá.
+María Llanos Cuenca Gonzalez 44 minutes 2 seconds
+Es que a ver, en realidad está.
+María Llanos Cuenca Gonzalez 44 minutes 7 seconds
+Tan clara como pueda parecer en el horario de lo que es teoría y práctica, vale, entonces yo en estas clases a lo mejor explico algún concepto y luego trabajáis y en la parte de y en los martes también vale, pero va a estar todo continuado. A lo mejor empezáis una actividad el martes y la acabamos al lunes siguiente. O hacéis una actividad y el lunes lo que hacéis es ponerla en común.
+María Llanos Cuenca Gonzalez 44 minutes 31 seconds
+Vale, os voy, os voy dando paso y ahí que eso lo haréis también. ¿Iréis haciendo ya pequeñas presentaciones, vale? Entonces va a estar todo muy relacionado.
+
+Anass Lambaraa
+44 minutes 41 seconds44:41
+Anass Lambaraa 44 minutes 41 seconds
+Claro, yo es más por el tema de de los grupos de trabajo, porque claro, de aquí voy a asistir bastante a clase. El tema de no poder juntarme con otros alumnos que no sean de dispensa no sé.
+
+María Llanos Cuenca Gonzalez
+44 minutes 45 seconds44:45
+María Llanos Cuenca Gonzalez 44 minutes 45 seconds
+Je je.
+María Llanos Cuenca Gonzalez 44 minutes 53 seconds
+¿Pues si vas a tener dificultad en seguirlo, pues a lo mejor yo lo que puedas hacer con todos bien, pero lo pero la entrega final que vayas tú trabajando en tu en tu, en tu trabajo de manera individual, porque es que sino también vas a va a ser un poco complicado si ellos van avanzando y luego tú al día siguiente no sabes qué es lo que han hecho?
+María Llanos Cuenca Gonzalez 45 minutes 16 seconds
+Sabes o ellos te van a tener que estar esperando entonces lo que te puedas unir a las actividades en grupo fenomenal porque podrás utilizar y retroalimentar eso para el trabajo que tú vayas haciendo, pero si tienes dispensa, haz la entrega, tu tu individual o intentar contactar con alguien que tenga dispensa, vale, si os parece.
+María Llanos Cuenca Gonzalez 45 minutes 39 seconds
+Para, como también algunos nos conocéis.
+María Llanos Cuenca Gonzalez 45 minutes 43 seconds
+El a ver.
+María Llanos Cuenca Gonzalez 45 minutes 48 seconds
+¿Vale?
+María Llanos Cuenca Gonzalez 45 minutes 54 seconds
+Vale, aquí vamos a añadir.
+María Llanos Cuenca Gonzalez 46 minutes
+Dispensa, vale.
+María Llanos Cuenca Gonzalez 46 minutes 3 seconds
+Y poner sí o no. Si ya la tenéis concedida, o bueno cuando os concedan la dispensa. ¿Vale, y entonces? ¿Así pues, aquellos que tenéis concedida la dispensa y necesitáis uniros a un grupo, queréis uniros a un grupo? ¿Porque no queréis hacer el trabajo solo? Pues podéis ver aquí quién tiene dispensa.
+María Llanos Cuenca Gonzalez 46 minutes 23 seconds
+Vale y os ponéis en contacto con con entre vosotros.
+María Llanos Cuenca Gonzalez 46 minutes 30 seconds
+Parece.
+
+Anass Lambaraa
+46 minutes 32 seconds46:32
+Anass Lambaraa 46 minutes 32 seconds
+Vale, sí, sí, muchas gracias.
+
+María Llanos Cuenca Gonzalez
+46 minutes 33 seconds46:33
+María Llanos Cuenca Gonzalez 46 minutes 33 seconds
+Vale, pues nada, perfecto.
+María Llanos Cuenca Gonzalez 46 minutes 37 seconds
+¿Vale?
+María Llanos Cuenca Gonzalez 46 minutes 40 seconds
+Muy bien.
+María Llanos Cuenca Gonzalez 46 minutes 43 seconds
+Pues alguna duda más.
+María Llanos Cuenca Gonzalez 46 minutes 49 seconds
+No.
+María Llanos Cuenca Gonzalez 46 minutes 51 seconds
+Vale, pues nada, si no hay, dime.
+J
+
+Juan Pablo Gomez Gil
+46 minutes 52 seconds46:52
+Juan Pablo Gomez Gil 46 minutes 52 seconds
+La yo tengo, pues como una situación pues particular, y yo yo justamente yo llego mañana a España y ya, pues podría seguir diciendo a las clases que en la Universidad, pues presencialmente si lo que por mañana en no alcanza a llegar el vuelo para la clase, pero es la única, no voy a estar por dispensa y.
+
+María Llanos Cuenca Gonzalez
+47 minutes 1 second47:01
+María Llanos Cuenca Gonzalez 47 minutes 1 second
+Max.
+María Llanos Cuenca Gonzalez 47 minutes 15 seconds
+Vale, no pasa nada, no pasa nada. Hay otra compañera que también tenía el mismo problema que que llegabais después. Entonces no pasa nada de, pues de las imagínate que que yo hago. 5 actividades de aula, pues tú tendrás cuatro. Es que no pasa nada, es despreciable, no pasa nada.
+María Llanos Cuenca Gonzalez 47 minutes 34 seconds
+¿Vale?
+J
+Juan Pablo Gomez Gil
+47 minutes 36 seconds47:36
+Juan Pablo Gomez Gil 47 minutes 36 seconds
+Muchas gracias.
+
+María Llanos Cuenca Gonzalez
+47 minutes 40 seconds47:40
+María Llanos Cuenca Gonzalez 47 minutes 40 seconds
+¿Alguna duda más?
+María Llanos Cuenca Gonzalez 47 minutes 45 seconds
+Nada más vale, pues nada, encantada. Bienvenidos todos YY todas y nos vemos mañana para arrancar.
+
+Martin Salvador Sanchez Garcia
+47 minutes 55 seconds47:55
+Martin Salvador Sanchez Garcia 47 minutes 55 seconds
+Hasta mañana.
+
+María Llanos Cuenca Gonzalez
+47 minutes 56 seconds47:56
+María Llanos Cuenca Gonzalez 47 minutes 56 seconds
+Vale hasta mañana, gracias hasta mañana.
+María Llanos Cuenca Gonzalez 47 minutes 57 seconds
+Hasta mañana, adiós hasta luego, adiós.
+
+Daniel Carracedo Rodriguez
+47 minutes 57 seconds47:57
+Daniel Carracedo Rodriguez 47 minutes 57 seconds
+Hasta mañana hasta mañana, adiós.
+
+Anass Lambaraa
+47 minutes 57 seconds47:57
+Anass Lambaraa 47 minutes 57 seconds
+Hasta luego, Chao.
+
+María Llanos Cuenca Gonzalez stopped transcription
