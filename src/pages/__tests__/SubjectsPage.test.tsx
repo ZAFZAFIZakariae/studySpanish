@@ -1,6 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import SubjectsPage from '../SubjectsPage';
 
@@ -25,5 +26,22 @@ describe('SubjectsPage', () => {
     const translationSection = within(detail).getByRole('region', { name: /translation notes/i });
     expect(within(translationSection).getByText(/english in progress/i)).toBeInTheDocument();
     expect(within(translationSection).getByText(/notas bilingües con el vocabulario administrativo clave/i)).toBeInTheDocument();
+  });
+
+  it('lists advanced database theory units including temas 3 y 4', async () => {
+    render(
+      <MemoryRouter>
+        <SubjectsPage />
+      </MemoryRouter>
+    );
+
+    const user = userEvent.setup();
+    const dbdButton = await screen.findByRole('button', { name: /diseño de bases de datos/i });
+    await user.click(dbdButton);
+
+    expect(await screen.findByRole('button', { name: /tema 3 · dependencias avanzadas y 4fn/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /tema 4 · transacciones y concurrencia/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /cuestiones tema 3/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /cuestiones tema 4/i })).toBeInTheDocument();
   });
 });
