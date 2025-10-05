@@ -1,0 +1,238 @@
+# Extracted content
+Source: subjects/Dbd/Prácticas/Práctica 2/Práctica2_boletin.pdf
+
+### Page 1
+Departamento de Sistemas Informáticos y Computación
+        1
+Diseño y Gestión de Bases de Datos
+Práctica 2: Procesamiento de transacciones y mantenimiento de la
+integridad en Oracle
+
+1) Arrancar el servidor Oracle con la herramienta SQL*Plus y arranca el SQL Developer.
+2) En la ventana de administración conéctate con una conexión normal y el usuario system (contraseña:
+oracle). Crea un usuario1 nuevo con las siguientes características:
+ Pestaña Usuario:
+o Nombre: Cosmos.
+o Contraseña: paso (o la que quieras, pero recuérdala después).
+o Tablespace por defecto2: USERS.
+o Tablespace temporal: TEMP.
+ Pestaña Roles Otorgados: CONNECT y RESOURCE.
+ Pestaña Cuotas: marcar UNLIMITED en el tablespace USERS.
+3) Conéctate con una conexión normal, y el usuario Cosmos. Crea, para este usuario, el esquema lógico que
+aparece en el ANEXO 1 para una base de datos sobre la docencia en la Universidad (utiliza el fichero “BD‐
+Esquema” con las instrucciones de creación de tablas que está disponible en PoliformaT, puedes copiar y
+pegar sin problemas). Reflexiona sobre cómo se ha definido la comprobación de la integridad para cada
+restricción.
+4) Abre la ventana de navegación de esquemas con la conexión del usuario Cosmos para consultar su
+esquema de usuario. Revisa el esquema lógico de la base de datos creada: definición de tablas (atributos
+y restricciones). Respecto al esquema físico de la base de datos se han asumido los valores que ORACLE
+utiliza por defecto.
+/*Hacer el ejercicio 12. No lo hemos puesto aquí, aunque es donde debería ir, para no alterar la numeración
+de los demás ejercicios lo que supondría tener que cambiar todos los vídeos solución para ajustarlos a la nueva
+numeración*/
+5) En la ventana Hoja de trabajo de SQL, carga la base de datos (utiliza el fichero “BD‐Carga” con las
+correspondientes instrucciones de inserción, disponible en PoliformaT). Realiza operaciones de consulta
+sobre las tablas.
+6) Estudio de la atomicidad en el procesamiento de transacciones:
+a) En la ventana Hoja de trabajo de SQL, ejecuta la siguiente transacción que inserta dos filas en la tabla
+Profesor:
+
+  /*Inicio implícito de transacción*/
+  INSERT INTO profesor (cod_pro, nombre)  VALUES ('JR', 'Juan Ruiz');
+  INSERT INTO profesor (cod_pro, nombre)  VALUES ('JR', 'Javier Pérez');
+  COMMIT;
+Esta transacción viola la restricción de clave primaria para la tabla Profesor. ¿Qué filas se han insertado?
+¿En qué modo se ha comprobado la restricción de clave primaria de la tabla Profesor?
+b) En la ventana Hoja de trabajo de SQL, ejecuta la siguiente transacción que inserta dos filas en la tabla
+Profesor:
+
+
+1 La creación de usuarios se estudia en la práctica 7, sin embargo, para poder trabajar con el Oracle es preciso crear algunos ahora.
+ 2Tablespace: división del espacio en disco utilizada por Oracle para gestionar el almacenamiento secundario. Este concepto se
+estudiará en la práctica 5.
+
+### Page 2
+Departamento de Sistemas Informáticos y Computación
+        2
+  /*Inicio implícito de transacción*/
+  SET CONSTRAINT cp_prof DEFERRED;
+  INSERT INTO profesor (cod_pro, nombre)  VALUES (‘PG’, ‘Pepa Gómez’);
+  INSERT INTO profesor (cod_pro, nombre)  VALUES (‘PG’, ‘Paca Gutiérrez’);
+  COMMIT;
+Esta transacción viola la restricción de clave primaria para la tabla Profesor. ¿Qué filas se han insertado?
+¿En qué modo se ha comprobado la restricción de clave primaria de la tabla Profesor? Después la ejecución
+de esta transacción, ¿en qué modo se comprobará la restricción de clave primaria de la tabla Profesor?
+c) Asegúrate de que la tabla Profesor se queda en el mismo estado que estaba antes de comenzar el
+ejercicio 6, para ello borra las filas que sea necesario.
+7) Necesidad del concepto de transacción: en el SGBD Oracle no se contempla la directriz actualización en
+cascada para la restauración de la integridad referencial. ¿Cómo podrías modificar el código de un
+profesor, que tiene asignada docencia, sin violar la integridad referencial de la tabla Docencia?
+8) Estudio del aislamiento en el procesamiento de transacciones: para simular el acceso concurrente en un
+servidor, inicia dos sesiones desde dos ventanas Hoja de trabajo de SQL (debes usar dos conexiones
+normales distintas, aunque sean ambas para Cosmos). En cada sesión realiza las siguientes transacciones
+(los ti indican el orden en que se deben realizar las operaciones):
+Sesión 1  Sesión 2
+t0 consulta el número de profesores
+  t1 consulta el número de profesores
+t2 inserta un nuevo profesor
+t3 consulta el número de profesores
+  t4 consulta el número de profesores
+t5 confirma la transacción
+  t6 consulta el número de profesores
+  t7 inserta un nuevo profesor
+  t8 consulta el número de profesores
+  t9 anula la transacción
+t10 consulta el número de profesores
+
+
+  t11 consulta el número de profesores
+¿Cómo se interpretan los resultados de las sucesivas operaciones de consulta de las dos transacciones? ¿Y
+el resultado de la consulta posterior a la finalización de la transacción en ambas sesiones?
+9) Estudio de la persistencia de transacciones:
+a) En la ventana Hoja de Trabajo de SQL ejecuta la siguiente:
+Sesión 1
+t0 consulta los profesores que hay
+t1 inserta una nueva profesora de código ‘XX’ y nombre ‘Ana’.
+t3 consulta los profesores que hay (comprueba que está Ana)
+t4 confirma la transacción
+Desde  la  herramienta  SQL*Plus,  conectado  como  sys,  simula  una  caída  del  sistema  ejecutando  la
+instrucción:
+   SQL> SHUTDOWN ABORT
+Cierra el SQL Developer y vuelve a entrar conectándote como Cosmos, comprueba que la profesora Ana
+está en la base de datos.
+
+### Page 3
+Departamento de Sistemas Informáticos y Computación
+        3
+b) En la ventana Hoja de Trabajo de SQL ejecuta la siguiente:
+Sesión 1
+t0 consulta los profesores que hay
+t1 borra a la profesora de código ‘XX’ y nombre ‘Ana’.
+t3 consulta los profesores que hay (comprueba que no está Ana)
+Desde  la  herramienta  SQL*Plus,  conectado  como  sys,  simula  otra  caída  del  sistema  ejecutando  la
+instrucción:
+   SQL> SHUTDOWN ABORT
+Cierra el SQL Developer y vuelve a entrar conectándote como Cosmos, comprueba si la profesora Ana está
+o no en la base de datos.
+c) ¿Con  las  observaciones  realizadas  puedes  afirmar  que  el  sistema  mantiene  la  propiedad  de
+persistencia de una transacción?
+10) Plantea una transacción en la que se utilicen los puntos de salvaguarda (SAVEPOINT) y las instrucciones de
+anulación parcial (ROLLBACK TO SAVEPOINT). Comprueba el resultado de la ejecución de la transacción.
+11) Salida del sistema:
+a) Cierra el SQL Developer.
+b) Desde la herramienta SQL*Plus, conectado como sys, cierra el servidor Oracle: SQL> SHUTDOWN
+c) Para el proceso listener: $> lsnrctl stop
+12) Genera el esquema gráfico de la base de datos, para ello ve a la opción Archivo  Data Modeler 
+Importar  Diccionario de Datos y realiza los siguientes pasos:
+ Elige el nombre de la conexión con la que has conectado a Cosmos. Pulsa Siguiente.
+ En “Importar a:” elige la opción “New Relational Model” y selecciona en la lista a Cosmos. Pulsa
+Siguiente.
+ Selecciona todas las tablas del esquema que has creado. Pulsa Siguiente.
+ Pulsa Terminar y Cerrar.
+Intenta interpreta el gráfico:
+ ¿Qué significa el asterisco rojo delante de un atributo?
+ ¿Qué significa la P, la F o la U delante de un atributo?
+ ¿Qué significan las líneas que conectan las tablas? ¿Continua/discontinua? ¿Con una pata o varias
+patas?
+
+### Page 4
+Departamento de Sistemas Informáticos y Computación
+        4
+
+ANEXO 1: Esquema lógico de la base de datos “Docencia”
+/*Eliminación de las tablas en caso de que existan*/
+DROP TABLE docencia cascade constraints PURGE;
+DROP TABLE asg_master cascade constraints PURGE;
+DROP TABLE asignatura cascade constraints PURGE;
+DROP TABLE profesor cascade constraints PURGE;
+DROP TABLE departamento cascade constraints PURGE;
+
+
+/*Creación de la tabla DEPARTAMENTO*/
+CREATE TABLE departamento(
+cod_dep CHAR(5) NOT NULL CONSTRAINT cp_dep PRIMARY KEY
+DEFERRABLE INITIALLY IMMEDIATE,
+nombre VARCHAR(40) NOT NULL,
+director VARCHAR(20),
+telefono CHAR(15));
+
+/*Creación de la tabla PROFESOR*/
+CREATE TABLE profesor(
+cod_pro CHAR(5)  NOT NULL CONSTRAINT cp_prof PRIMARY KEY
+DEFERRABLE INITIALLY IMMEDIATE,
+nombre VARCHAR(40) NOT NULL,
+telefono CHAR(15),
+cod_dep CHAR(5) CONSTRAINT ca_prof_dep
+REFERENCES departamento(cod_dep)
+DEFERRABLE INITIALLY IMMEDIATE);
+
+/*Creación de la tabla ASIGNATURA*/
+CREATE TABLE asignatura(
+cod_asg CHAR(5) NOT NULL CONSTRAINT cp_asi PRIMARY KEY
+DEFERRABLE INITIALLY IMMEDIATE,
+nombre VARCHAR(40) NOT NULL CONSTRAINT nom_asg_unico UNIQUE,
+semestre CHAR(2) NOT NULL,
+teoria number(3,1) NOT NULL,
+prac number(3,1) NOT NULL,
+cod_dep CHAR(5) CONSTRAINT ca_asi_dep
+REFERENCES departamento(cod_dep)
+DEFERRABLE INITIALLY IMMEDIATE);
+
+/*Creación de la tabla ASG_MASTER*/
+CREATE TABLE asg_master
+(cod_asg CHAR(5) NOT NULL CONSTRAINT cp_asi_master PRIMARY KEY
+DEFERRABLE INITIALLY IMMEDIATE
+CONSTRAINT ca_asi_mas
+REFERENCES asignatura(cod_asg)
+DEFERRABLE INITIALLY IMMEDIATE,
+nom_master VARCHAR2(30 BYTE) NOT NULL);
+
+/*Creación de la tabla DOCENCIA*/
+CREATE TABLE docencia(
+cod_pro CHAR(5) NOT NULL CONSTRAINT ca_doc_prof
+REFERENCES profesor(cod_pro)
+DEFERRABLE INITIALLY IMMEDIATE,
+cod_asg CHAR(5) NOT NULL CONSTRAINT ca_doc_asi
+REFERENCES asignatura(cod_asg)
+DEFERRABLE INITIALLY IMMEDIATE,
+gteo number(2) NOT NULL,
+gprac number(2) NOT NULL,
+CONSTRAINT cp_doc PRIMARY KEY(cod_pro, cod_asg)
+DEFERRABLE INITIALLY IMMEDIATE);
+
+### Page 5
+Departamento de Sistemas Informáticos y Computación
+        5
+ANEXO 2: Script para incorporar información a la base de datos “Docencia”
+
+/*Inserción de tuplas en la tabla DEPARTAMENTO*/
+INSERT INTO departamento
+ VALUES('DSIC','Sistemas Informáticos y Computación','V. Botti','3500');
+INSERT INTO departamento
+ VALUES('DISCA','Ingeniería de Sistemas y Automática','A. Crespo','6400');
+/*Inserción de tuplas en la tabla PROFESOR*/
+INSERT INTO profesor VALUES('JCC','Juan Carlos Casamayor','3523','DSIC');
+INSERT INTO profesor VALUES('MCG','Matilde Celma Giménez','3234','DISCA');
+INSERT INTO profesor VALUES('MJV','Maria José Vicent','3666','DSIC');
+INSERT INTO profesor VALUES('LMH','Laura Mota Herranz','3754','DSIC');
+INSERT INTO profesor VALUES('MAP','Maria Ángeles Pastor','1254','DISCA');
+/*Inserción de tuplas en la tabla ASIGNATURA*/
+INSERT INTO asignatura VALUES('BDA','Bases de Datos','3A',4.5,1.5,'DSIC');
+INSERT INTO asignatura VALUES('AD3','Algoritmos’,'2B',3,3,'DSIC');
+INSERT INTO asignatura VALUES('BDV','Bases de Datos Avanzadas','5A',3,3,'DSIC');
+INSERT INTO asignatura VALUES('APB','Aplicaciones de BD','3B',3,3,'DSIC');
+INSERT INTO asignatura VALUES('SO','Sistemas Operativos','2A',3,3,'DISCA');
+/*Inserción en la tabla ASG_MASTER*/
+INSERT INTO asg_master VALUES('TGD','MITSS');
+/*Inserción de tuplas en la tabla DOCENCIA*/
+INSERT INTO docencia VALUES('MCG','SO',1,1);
+INSERT INTO docencia VALUES('MCG','BDA',2,1);
+INSERT INTO docencia VALUES('MCG','AD3',1,1);
+INSERT INTO docencia VALUES('JCC','BDA',1,2);
+INSERT INTO docencia VALUES('JCC','TGD',1,1);
+INSERT INTO docencia VALUES('MJV','BDA',1,2);
+INSERT INTO docencia VALUES('MJV','BDV',1,2);
+INSERT INTO docencia VALUES('LMH','BDA',0,2);
+INSERT INTO docencia VALUES('MJV','APB',1,3);
+/*Confirmación de la transacción*/
+commit;

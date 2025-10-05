@@ -1,0 +1,287 @@
+# Extracted content
+Source: subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_solución.pdf
+
+### Page 1
+2º Parcial Diseño y Gestión de Bases de Datos (19/01/2023)
+Apellidos, Nombre:…………………………………………………………………………………………………………………..
+1. Dado el plan P1:
+P1= r3(z), r1(x), w1(x), r2(x), w2(x), r1(y), w2(y), r3(x), c2, c3, c1
+ resuelve las siguientes cuestiones:
+a)  (0,2 puntos)
+• ¿Es serializable por conflictos? Justifica la respuesta.
+El grafo de serialización del plan no tiene ciclos por lo que el plan es serializable por conflictos:
+
+
+
+
+• En caso de que la respuesta anterior sea afirmativa, ¿cuáles son los posibles planes en serie equivalentes por
+conflictos? ¿Es el plan cronológico uno de ellos?
+El plan en serie equivalente por conflictos es T1-T2-T3 que no es el plan en serie cronológico.
+
+
+b) (0,3 puntos)
+• Comprueba si el protocolo B2F Explícito admite el plan P dando una traza de su ejecución que incluya los
+bloqueos y desbloqueos necesarios. También se puede usar promociones y degradación de los bloqueos. Usa
+la tabla 1 para contestar esta pegunta. INDICA CLARAMENTE SI EL PLAN ES ACEPTADO O NO.
+• ¿El plan sería aceptado por el protocolo B2F implícito?
+El protocolo B2F Implícito no aceptaría el plan ya que la transacción T2 no podrá nunca leer x antes de que la
+libere la transacción T1 y esto sólo puede ocurrir cuando se confirme la transacción T1, es decir, T2 no puede
+leer x hasta que no acabe T1.
+t T1 T2 T3
+t0   r3(z) (BL implícito de z por T3)
+t1 r1(x) (BL implícito de x por T1)
+t2 w1(x) (BE implícito de x por T1)
+t3  r2(x) (T2 espera hasta que x sea liberado)
+
+### Page 2
+P1= r3(z), r1(x), w1(x), r2(x), w2(x), r1(y), w2(y), r3(x), c2, c3, c1
+PROTOCOLO B2F EXPLÍCITO
+El protocolo de bloqueos B2F Explícito admite el plan.
+ Estado de bloqueo de los elementos de datos
+t T1 T2 T3 x y z
+t0    Desbloqueado Desbloqueado Desbloqueado
+t1   BL(z) Desbloqueado Desbloqueado BL(T3)
+t2   r3(z) Desbloqueado Desbloqueado BL(T3)
+t3 BE(x)   BE(T1) Desbloqueado BL(T3)
+t4 r1(x)   BE(T1) Desbloqueado BL(T3)
+t5 w1(x)   BE(T1) Desbloqueado BL(T3)
+t6 BL(y)   BE(T1) BL(T1) BL(T3)
+t7 D(x)   Desbloqueado BL(T1) BL(T3)
+t8  BE(x)  BE(T2) BL(T1) BL(T3)
+t9  r2(x)  BE(T2) BL(T1) BL(T3)
+t10  w2(x)  BE(T2) BL(T1) BL(T3)
+t11 r1(y)   BE(T2) BL(T1) BL(T3)
+t12 D(y)   BE(T2) Desbloqueado BL(T3)
+t13  BE(y)  BE(T2) BE(T2) BL(T3)
+t14  w2(y)  BE(T2) BE(T2) BL(T3)
+t15  D(x)  Desbloqueado BE(T2) BL(T3)
+t16  D(y)  Desbloqueado Desbloqueado BL(T3)
+t17   BL(x) BL(T3) Desbloqueado BL(T3)
+t18   r3(x) BL(T3) Desbloqueado BL(T3)
+t19   D(z) BL(T3) Desbloqueado Desbloqueado
+t20   D(x) Desbloqueado Desbloqueado Desbloqueado
+t21  c2  Desbloqueado Desbloqueado Desbloqueado
+t22   c3 Desbloqueado Desbloqueado Desbloqueado
+t23 c1   Desbloqueado Desbloqueado Desbloqueado
+
+
+
+
+
+
+
+
+
+
+2. (0,25 puntos) Dado el plan P2:
+
+### Page 3
+P2= r2(y), r3(z), r1(y), w1(y), r3(y), r2(z), c2, w3(x), r1(x), c1, w3(z), c3
+• Comprueba si el protocolo OMT admite este plan. En caso de no admitirlo explica el motivo. Usa la tabla 2
+para contestar esta pegunta. Supón que las marcas de tiempo de lectura y escritura de todos los elementos
+de datos son anteriores al inicio del plan (p.e. t-20).
+
+Marcas de tiempo
+x y z
+t T1 T2 T3 ML ME ML ME ML ME
+t-1    t-20 t-20 t-20 t-20 t-20 t-20
+t0  r2(y)  t-20 t-20 t0 t-20 t-20 t-20
+t1   r3(z) t-20 t-20 t0 t-20 t1 t-20
+t2 r1(y)   t-20 t-20 t2 t-20 t1 t-20
+t3 w1(y)   t-20 t-20 t2 t2 t1 t-20
+t4   r3(y)
+t5
+t6
+t7
+t8
+t9
+t10
+t11
+t12
+
+El protocolo no admite el plan. En t4 la transacción T3 falla al intentar leer y ya que MT_E(y) > MT(T3) (t2 > t1), es decir y
+ha sido escrito por una transacción más joven que T1 por lo que no se puede permitir la lectura por T3.
+
+### Page 4
+3. (0,25 puntos) Dado el plan P2 (es el mismo que en la pregunta anterior):
+P2= r2(y), r3(z), r1(y), w1(y), r3(y), r2(z), c2, w3(x), r1(x), c1, w3(z), c3
+• Comprueba si el protocolo Multiversión admite este plan. En cada operación de lectura indica qué versión lee la transacción. En caso de no admitirlo explica el motivo.
+Usa la tabla 3 para contestar esta pregunta. Supón que al inicio del plan hay sólo una versión de cada elemento de datos cuyas marcas de tiempo de lectura y escritura
+son anteriores al inicio del plan (p.e. t-20).
+
+El protocolo admite el plan.
+
+Marcas de tiempo
+x1 y1 z1 y2 x2 z2
+t T1 T2 T3 ML ME ML ME ML ME ML ME ML ME ML ME
+t-1    t-20 t-20 t-20 t-20 t-20 t-20
+t0  r2(y)
+Lee y1
+ t-20 t-20 t0 t-20 t-20 t-20
+t1   r3(z)
+Lee z1 t-20 t-20 t0 t-20 t1 t-20
+t2 r1(y)
+Lee y1   t-20 t-20 t2 t-20 t1 t-20
+t3 w1(y)   t-20 t-20 t2 t-20 t1 t-20 t2 t2
+t4   r3(y)
+Lee y1 t-20 t-20 t2 t-20 t1 t-20 t2 t2
+t5  r2(z)
+Lee z1  t-20 t-20 t2 t-20 t1 t-20 t2 t2
+t6  c2  t-20 t-20 t2 t-20 t1 t-20 t2 t2
+t7   w3(x) t-20 t-20 t2 t-20 t1 t-20 t2 t2 t1 t1
+t8 r1(x)
+Lee x2   t-20 t-20 t2 t-20 t1 t-20 t2 t2 t2 t1
+t9 c1   t-20 t-20 t2 t-20 t1 t-20 t2 t2 t2 t1
+t10   w3(z) t-20 t-20 t2 t-20 t1 t-20 t2 t2 t2 t1 t1 t1
+t11   c3 t-20 t-20 t2 t-20 t1 t-20 t2 t2 t2 t1 t1 t1
+
+### Page 5
+Cada una de las 20 cuestiones siguientes vale 0,1 puntos. Cada cuestión mal contestada resta 1/3 de una respuesta
+correcta. Nota Test = (0,1 × Respuestas_correctas) − ((0,1/3) × Respuestas_incorrectas).
+1) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) Un índice es un fichero  que constituye una estructura de datos auxiliar para acceder a los registros de un fichero
+de datos.
+b) Un fichero de datos puede tener más de un índice primario.
+c) En un índice las direcciones de los registros pueden ser únicamente el bloque en que está el registro.
+d) Un índice se puede definir sobre varios campos.
+2) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) Un índice es disperso si tiene menos entradas que registros tiene el fichero de datos que indexa.
+b) Un índice puede construirse como un fichero ordenado o como un árbol de búsqueda.
+c) Si un índice se define sobre varios campos, el orden en que se indiquen estos campos en la definición del índice es
+relevante.
+d) No se puede definir un índice cuando el fichero que indexa ya tiene registros almacenados.
+3) ¿Qué significa que la búsqueda de un valor en un índice en árbol es uniforme?
+a) Que todos los nodos hojas están al mismo nivel.
+b) Que la ocupación de todos los nodos es al menos del 50%.
+c) Que el coste de localizar un valor en el índice es siempre el mismo.
+d) Que el árbol es independiente del orden de llegada de los valores.
+4) Respecto a los índices en árbol B+, ¿cuál de las siguientes afirmaciones es FALSA?
+a) Todos los valores del campo de indexación del fichero aparecen en las hojas del índice.
+b) Los punteros a registro de datos sólo aparecen en las hojas.
+c) Los punteros a nodos del árbol sólo aparecen en los nodos internos.
+d) En general ocupan más espacio que lo índices en árbol
+5) Sea un fichero con 200.000 registros de tamaño 100 bytes y sea 10 el factor de bloque del fichero. Supón que el fichero
+tiene un índice ordenado multinivel sobre el campo A que es clave, ¿cuántas entradas tendrá el primer nivel del índice
+dependiendo de que esté ordenado por A o no lo esté?
+a) 200.000 si está desordenado y 20.000 si está ordenado
+b) 20.000 si está desordenado y 200.000 si está ordenado
+c) 200.000 tanto si está ordenado como desordenado.
+d) 20.000 tanto si está ordenado como desordenado.
+
+### Page 6
+6) ¿Qué afirmación sobre el fichero disperso es CIERTA?
+a) Asegura la búsqueda más económica, con condición de igualdad sobre el campo de dispersión.
+b) Es muy flexible y no exige casi ninguna tarea de administración.
+c) Asegura una búsqueda ordenada muy eficiente, por igualdad sobre el campo de dispersión.
+d) Un fichero disperso es siempre una organización para un fichero mixto.
+7) Dada una operación de búsqueda con condición de selección A>=9 en un fichero, ¿cuál sería la organización para el
+fichero que haría más eficiente esa operación?
+a) Desordenado.
+b) Ordenado por A.
+c) Disperso por A.
+d) Ordenado por A o disperso por A dependiendo del tamaño del fichero.
+8) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) En un fichero mixto se almacenan registros de distinto tipo que están relacionados entre sí por el valor de un campo.
+b) Un fichero con estructura de índice es un índice que almacena todos los campos del registro del fichero que indexa.
+c) Los ficheros con estructura de índice permiten el acceso ordenado a los registros del fichero muy eficientemente.
+d) Los grupos en los que se agrupan los registros en un fichero mixto tienen siempre la misma cantidad de registros.
+9) ¿Cuál de las siguientes afirmaciones es CIERTA?
+a) El coste estimado de una operación de búsqueda con la condición A=7 es igual al coste estimado de la operación
+de búsqueda con condición A<>7 en un fichero ordenado por A.
+b) El coste estimado de una op eración de búsqueda con la condición A=7 es igual al coste estimado de la operación
+de búsqueda con condición A<>7 en un fichero disperso por A.
+c) El coste estimado de una operación de búsqueda con la condición A=7 es igual al coste estimado de la operación
+de búsqueda con condición A<>7 en un fichero desordenado.
+d) El coste estimado de una operación de búsqueda con la condición A=7 es igual al coste estimado de la operación
+de búsqueda con condición A<>7 en un fichero con un índice de agrupación sobre A.
+10) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) En el mejor de los casos, la inserción o eliminación de registros tiene el mismo coste en las tres organizaciones de
+ficheros.
+b) El recorrido completo de todo un fichero es más costoso en un fichero disperso por los cubos de desbordamiento.
+c) El mejor de los casos para borrar un registro en un fichero desordenado es cuando el registro es el primer registro
+del primer bloque del fichero.
+d) El peor de los casos para insertar un registro en un fichero ordenado es cuando el registro debe ser el primer registro
+del primer bloque del fichero.
+
+### Page 7
+11) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) Un fichero es una estructura de datos en memoria secundaria que almacena un conjunto de registros en una
+secuencia determinada.
+b) Los bloques de un fichero son bloques contiguos del disco.
+c) La secuencia en que se almacenan los registros en un fichero depende de la organización del fichero.
+d) Los registros de un fichero pueden ser, en ciertas ocasiones, de distinto tipo.
+12) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) Un bloque es la unidad de transferencia de datos entre memoria principal y memoria secundaria.
+b) Un bloque es la unidad de direccionamiento de datos.
+c) Desde un punto de vista físico, un fichero es una secuencia de bloques.
+d) Un bloque se puede almacenar en dos discos distintos.
+13) Indica la opción FALSA. Un fichero puede tener registros de longitud variable porque
+a) tiene campos de longitud variable.
+b) tiene campos que pueden ser nulos.
+c) es un fichero mixto.
+d) tiene campos con restricción de unicidad.
+14) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) El formato de registro determina cómo se distribuyen los registros en un bloque de disco.
+b) La gestión de bloques determina cómo se gestionan los bloques del fichero en disco.
+c) La organización del fichero determina cómo se almacenan los registros en los bloques.
+d) El formato de bloques suele estar fijada por el SGBD.
+15) Sea B el tamaño del bloque y L el tamaño del registro de longitud fija de un fichero. ¿Cuál de las siguientes afirmaciones
+es FALSA?
+a) El factor de bloque del fichero es: B div L.
+b) Si L> B es posible una organización no extendida para el formato de bloque.
+c) El espacio libre en el bloque es B – (B div L) * L.
+d) En una organización extendida se minimiza el espacio libre en los bloques.
+
+### Page 8
+16) ¿Cuál de las siguientes no es una forma para gestionar los bloques de un fichero?
+a) Continua.
+b) Enlazada.
+c) Indexada.
+d) Extendida.
+17) Sea la siguiente expresión de Álgebra Relacional: πA,B(πA,B,C(σC<7∧(B=5∨A=1)(R))), ¿a cuál de las siguientes expresiones es
+equivalente?:
+a) πA,B(σC < 7(σ(B=5 ∨ A=1) (R)))
+b) πA,B,C (σC<7 (σ(B=5 ∨ A=1) (R)))
+c) πA,B (σC<7 (σB=5 (σA=1 (R))))
+d) πA,B,C (σC<7 (σB=5 (σA=1 (R))))
+18) La selección y la proyección son dos operadores que se pueden conmutar:
+a) Siempre.
+b) Nunca.
+c) Cuando la condición de la selección sólo afecta a atributos que aparecen en la lista de la proyección.
+d) Cuando los atributos de la lista de proyección se usan en la condición de la selección.
+19) ¿Qué operación del Álgebra no usa la ordenación de las filas de una tabla en ninguno de sus posibles métodos?
+a) Proyección.
+b) Unión.
+c) Producto cartesiano.
+d) Concatenación.
+20) Respecto a la selectividad de la concatenación, ¿cuál de las siguientes afirmaciones es FALSA?
+a) Está entre 0 y 1.
+b) Sirve para que el sistema pueda estimar cuántas filas va a tener una concatenación.
+c) Es el cociente entre el número de pares de filas de ambas tablas que cumplen la condición de la concatenación y la
+cardinalidad del producto cartesiano entre ambas tablas.
+d) Es el resultado de multiplicar las cardinalidades de las dos tablas por la selectividad de la condición de
+concatenación.
+
+### Page 9
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20

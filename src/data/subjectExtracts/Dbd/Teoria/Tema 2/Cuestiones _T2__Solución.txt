@@ -1,0 +1,84 @@
+# Extracted content
+Source: subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución.pdf
+
+### Page 1
+1
+
+Tecnología de Bases de Datos
+Solución Ejercicios Tema 2
+1. a)
+La a) es la correcta ya que, con la definición de la base de datos a distintos niveles de abstracción, el acceso
+del usuario a los datos se hace a través de su esquema externo sin tener en cuenta cómo se guardan los
+datos en disco. A esta propiedad se le llama independencia de datos.
+2. d)
+Es falsa porque la instrucción COMMIT no implica que los bloques modificados por la transacción sean
+transferidos a disco (este punto se trata con más profundidad en el Tema 3).
+3. a)
+La b) es falsa porque para llegar a “confirmada parcialmente” el usuario debe haber ya confirmado
+(commit) la transacción y , por tanto, él ya no puede anularla. La c) es falsa porque los bloques de una
+transacción confirmada por el usuario pueden no estar en disco y aun así ser confirmada por el sistema.
+La d) es falsa porque si se viola una restricción en modo inmediato, la operación que ha provocado la
+violación es eliminada pero la transacción sigue.
+4. a)
+Hay restricciones que para satisfacerse necesitan que se realicen varias operaciones de actualización
+juntas. Si sólo se pudieran comprobar en modo inmediato, se violarían siempre.
+5.
+Número Nombre Salario Jefe
+1 Pepe 1000
+2 Juan  1100 1
+3 María 1000 1
+4 Luis 1500
+6 Alfredo 1200 3
+7 Luis 1200 9
+8 Jorge 1200 4
+9 Ana 1000 10
+10 Esteban 1600
+
+6. a)
+Si las restricciones (de CP, de VNN y de CAj) están en modo inmediato se comprobarán después de la
+primera operación de la transacción y después de la segunda. La primera operación no viola ninguna
+restricción (tiene número y es único, tiene nombre y existe el empleado de número 1) por lo tanto Alfredo
+puede quedarse. Sin embargo, la segunda operación viola la restricción de CP ya que existe otro empleado
+con número 6 por lo tanto Luisa no puede entrar en la base de datos.
+7. a)
+Como R
+k se comprueba en modo inmediato, la operación que ha provocado su violación, Oi, se rechaza y
+la transacción sigue.
+8. a)
+Como se ha dicho en la cuestión 4, hay restricciones que para satisfacerse necesitan que se realicen varias
+operaciones de actualización juntas. Si sólo se pudieran comprobar en modo inmediato, se violarían
+siempre. Esto es independiente de si está en un entorno concurrente o monousuario.
+9. c)
+10. b)
+Aunque parezca un sinsentido, es posible que los cambios realizados por una transacción confirmada no
+estén grabados en el disco. (Ver Tema 3)
+11. c)
+De nuevo, aunque parezca un sinsentido, es posible que los cambios realizados por una transacción no
+confirmada estén grabados ya en disco. (Ver Tema 3)
+
+### Page 2
+Departamento de Sistemas Informáticos y Computación
+           2
+
+12.
+
+A partir del estado confirmada parcialmente la transacción puede pasar a los siguientes estados:
+a) Confirmada: el SGBD hace todas las comprobaciones necesarias para asegurar la correcta
+ejecución de la transacción (Ej. la comprobación de restricciones de integridad). El SGBD debe
+tomar, en ese momento, las medidas necesarias para asegurar que todas las actualizaciones de
+la transacción quedarán grabadas permanentemente en la BD en disco.
+b) Fallada: en las comprobaciones que hace el SGBD, después de la confirmación del usuario, ocurre
+alguna circunstancia que no hace posible la confirmación definitiva de la transacción (Ej. la
+violación de una restricción de integridad). El SGBD debe asegurar  que la transacción no deja
+ningún efecto en la base de datos, deshaciendo en su caso, los cambios que haya podido realizar.
+13.
+Según se vio en teoría, cuando las restricciones se comprueban en forma inmediata, si alguna operación
+de una transacción viola alguna restricción definida con modo inmediato, el SGBD rechaza esta operación y
+prosigue con el resto de las operaciones  de la transacción. Este comportamiento puede provocar que la
+transacción original del usuario no se ejecute completamente, omitiéndose alguna de sus operaciones. Esto
+iría en contra de la propiedad de atomicidad del conjunto de propiedades ACID.
+14.
+El modo de comprobación de las restricciones de integridad correcto es el modo diferido, ya que se
+adecúa a la forma académica de procesar las transacciones (todas las operaciones de una transacción se
+ejecutan y sobre la base de datos resultante de ejecut ar todas las operaciones se comprueban las
+restricciones), satisfaciendo así la propiedad de atomicidad del entorno ACID.

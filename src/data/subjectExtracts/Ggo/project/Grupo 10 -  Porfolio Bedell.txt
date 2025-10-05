@@ -1,0 +1,22 @@
+# Extracted content
+Source: subjects/Ggo/project/Grupo 10 -  Porfolio Bedell.xlsx
+
+### Sheet: Caso Bedell
+ Procesos de negocio  IBO  Actividades  IAB  ESA  ESB = ESA*IAB Sum(ESB)  Sum (IAB)  EIB = sum(ESB)/sum (IAB)  Sum (ESO) = Sum(ESB)*IBO  Sum (IAO)= Sum (IAB)*IBO  EIB = sum(ESB)/sum (IAB)  IIB=Max IAB FF = IBO*IIB IIO = suma(FF)/suma(IBO) EIO=sum(ESO)/suma(IAO)
+ Logística y gestión de distribución 10 Control de stock 10 5
+ Datos de demanda 6
+ Modelo de IA 10
+ Gestión de ventas 4 Control de costes
+ Datos de ventas historicas
+ Servicios (TI y recursos humanos) 6 Integración de TI y paneles de control 6 7
+ Capacitación del personal para la adopción 6 6
+ Gestión financiera 7 Gestión financiera y de riesgos  9 6
+ Control presupuestario 9 7
+ Análisis de rentabilidad 8 5
+ 27 0 0 0
+ EIO=sum(ESO)/sum(IA0)= #DIV/0!
+ IIO = sum (FF) / sum (IBO)= 0
+
+### Sheet: Hoja2
+
+### Sheet: Hoja3

@@ -1,0 +1,71 @@
+# Extracted content
+Source: subjects/Ggo/Presentación GGO 202526.pdf
+
+### Page 1
+Máster Universitario en Ingeniería InformáticaAsignatura: Gestión y Gobierno de TI
+
+### Page 2
+Planificación
+Aula: G 1.0 - L. TORVALDS
+
+### Page 3
+§DOE:       Dr. Llanos Cuenca (Responsable)  llcuenca@cigip.upv.esTutorías bajo demanda
+Profesora en:•Grado y máster en Ingeniería Informática•Doble grado en Ingeniería Informática y ADE•Grado en Informática Industrial y Robótica•Máster U. con mención de calidad Ingeniería Avanzada de Producción , Logística y Cadena de Suministro en la UPV
+•Licenciada en Informática•Doctorada por el programa  Gestión de la Cadena de Suministro en el contexto de Empresa Virtual, Ingeniería y Modelización Empresarial
+•Colaboraciones docentes: Eindhoven, Finlandia, Dinamarca, Grecia...•Responsable Proyectos de Investigación y de Innovación Educativa•Certificados: TOGAF, SAP•Member of the IFAC Technical Committee (TC) 5.3. “Enterprise Integration and Networking” •Editorial board: International Journal of Production Management and Engineering (JCR, Q3)•Program committee member of the International Conference  on Health Informatics•Directora General de Planificación, Eficiencia Tecnológica y Atención al Paciente en la CSUSP (2019-2023)
+Profesorado
+
+### Page 4
+Profesorado Visitante§Dña. Alix Vargas alixjehynna@gmail.com
+Profesora en:•School of Engineering and Computer Science for different masters of the University of Hertfordshire.
+•Inventory and Warehouse Coordinator, Mars-KIND, London, UK•PhD Industrial and Production Engineering, Universitat Politècnica of València (UPV), Spain•MSc Advanced Manufacturing, Logistics and Supply Chain Management, UPV, Spain•MBA International Business, Carlos III University of Madrid, Spain•MSc Project Management in Engineering, University Distrital FJC, Colombia •BSc Industrial Engineering, University Distrital FJC, Colombia
+
+### Page 5
+Objetivo§ObjetivooProporcionar al alumno la formación suficiente para avanzar en la teoría y la práctica en relación a la gestión y el gobierno de las TI y su alineación con el negocio. oCapacitará al alumno en la ejecución de sus responsabilidades y creación de valor para el negocio. oEl alumno conocerá los principales objetivos y marcos de gobierno de TI, problemas, métodos y normas, y será capaz de identificar cómo las TI pueden ayudar a las organizaciones a alcanzar sus metas y objetivos, así como mitigar los problemas encontrados.
+
+### Page 6
+Contenido§Entrega de valor§Alineación de negocio y SI/TI§Gestión de recursos: Arquitectura empresarial §Medición del rendimiento§Riesgo y cumplimiento§Marcos de Gobierno de TI
+
+### Page 7
+Prácticas de Laboratorio
+BEDELL
+RIESGOS
+
+### Page 8
+Actividades en Seminario
+Empresas Colaboradoras con GGOArtículos
+Webinars
+Vídeos
+Presentaciones Alumnos
+
+### Page 9
+Seminarios de Empresas
+
+### Page 10
+Oferta Laboral
+Fuente: www.infojobs.net
+
+### Page 11
+Evaluación
+
+### Page 12
+EvaluaciónTrabajo académico: Aborda los temas presentados en la asignatura, y valorarán el desarrollo y aplicación de los conocimientos adquiridos. Se entregará mediante una memoria y se realizará una presentación del mismo (40%).Prácticas: Tendrán un peso (20%).Exámenes: Dos exámenes tipo test (30%)Actividades de aula: Se evalúa de forma global como observación (10%).Se establece una nota mínima de 3 puntos sobre la nota media de los exámenes tipo test para aprobar la asignatura.
+
+### Page 13
+EvaluaciónRecuperaciónAmbos parciales son recuperables al final del cuatrimestre, pudiendo incluir preguntas tipo test y/o preguntas abiertas. La realización de este examen anula cualquier nota obtenida previamente en los exámenes anteriores tipo test.Se establece una nota mínima de 3 puntos sobre la nota media de los examenes para aprobar la asignatura.El trabajo a desarrollar puede ser recuperado mediante una nueva entrega con una nota máxima de 8.En el caso de no alcanzar la nota mínima, la nota final será el mínimo entre 4 y la nota calculada de la asignatura sin considerar mínimos.
+
+### Page 14
+EvaluaciónDispensaEl método de evaluación para los alumnos con dispensa será similar al resto del alumnado con las siguientes particularidades:Se entregará mediante una memoria y se realizará una presentación del mismo (40%).Los trabajos de prácticas tendrán un peso (20%).Las dos pruebas escritas se realizarán mediante exámenes tipo test (40%). Se establece una nota mínima de 3 puntos sobre la nota media de los exámenes tipo test para aprobar la asignatura.Las prácticas pueden realizarlas de forma presencial/síncrona o pueden realizarlas de forma diferida.
+
+### Page 15
+Fechas Clave§Exámeneso28 Octubre: Primer parcialo16 Diciembre: Segundo parcial
+§Trabajoo17  Diciembre: Presentación trabajos•La solicitud y asignación de la empresa se realizará como máximo hasta el 7 de Octubre•Sesión de seguimiento 2 de Diciembre para revisar avance del proyecto
+§Entrega de valor§Alineación de negocio y SI/TI§Gestión de recursos: Arquitectura empresarial
+§Arquitectura Empresarial§Medición del rendimiento§Riesgo y cumplimiento§Marcos de Gobierno de TI
+
+### Page 16
+EvaluaciónCompetencias Transversales
+https://www.upv.es/entidades/vecal/compromiso-social-y-medioambiental/
+
+### Page 17
+Máster Universitario en Ingeniería InformáticaAsignatura: Gestión y Gobierno de TI

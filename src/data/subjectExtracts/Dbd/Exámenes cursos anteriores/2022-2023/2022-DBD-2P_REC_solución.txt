@@ -1,0 +1,267 @@
+# Extracted content
+Source: subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución.pdf
+
+### Page 1
+Recuperación 2º Parcial Diseño y Gestión de Bases de Datos (01/02/2023)
+
+1. Sean tres transacciones T1 = {O1,1, O1,2}, T2 = {O2,1, O2,2, O2,3} y T3 = {O3,1, O3,2} donde Oi,j es la operación j de la
+transacción i (1  i  3)
+a) (0,2 puntos) ¿Qué es un plan de ejecución de un conjunto de transacciones? Pon un ejemplo de ordenación de las
+operaciones de T1, T2 y T3 que no sea un plan, otro con un plan en serie y otro con un plan concurrente.
+Un plan de ejecución de un conjunto de transacciones es un ordenamiento de las operaciones de las transacciones en el
+que las operaciones de cada transacción aparecen en el plan en el mismo orden que aparecen en la transacción.
+No_Plan = {O1,2, O2,1, O2,2, O2,3, O1,1, O3,1, O3,2}
+Plan_Serie = {O1,1, O1,2, O2,1, O2,2, O2,3, O3,1, O3,2} (Hay seis planes en serie: T1->T2->T3, T1->T3->T2, T2->T1->T3, T2->T3->T1, T3-
+>T1->T2, T3->T2->T1
+Plan_concurrente = {O1,1, O2,1, O2,2, O1,2, O2,3, O3,1, O3,2} (hay muchos planes posibles
+
+b) (0,15 puntos) Comprueba si el protocolo B2F Implícito admite el plan P1 (es el mismo que en la cuestión anterior)
+dando una traza de su ejecución . Usa la tabla para contestar esta pegunta. INDICA CLARAMENTE SI EL PLAN ES
+ACEPTADO O NO, en caso de no ser aceptado, explica el motivo.
+P1= r3(z), r1(x), w1(x), r1(y), c1, r2(x), r3(x), c3, w2(x), w2(y), c2
+ Estado de bloqueo de los elementos de datos
+t T1 T2 T3 x y z
+    Desbloqueado Desbloqueado Desbloqueado
+t0   r3(z) BL Implícito Desbloqueado Desbloqueado BL(T3)
+t1 r1(x) BL Implícito   BL(T1) Desbloqueado BL(T3)
+t2 w1(x) BE Implícito   BE(T1) Desbloqueado BL(T3)
+t3 r1(y) BL Implícito   BE(T1) BL(T1) BL(T3)
+t4 c1 (Desbloqueo)   Desbloqueado Desbloqueado BL(T3)
+t5  r2(x) BL Implícito  BL(T2) Desbloqueado BL(T3)
+t6   r3(x) BL Implícito BL(T2) y BL(T3) Desbloqueado BL(T3)
+t7   c3 (Desbloqueo) BL(T2) Desbloqueado Desbloqueado
+t8  w2(x) BE Implícito  BE(T2) Desbloqueado Desbloqueado
+t9  w2(x) BE Implícito  BE(T2) BE(T2) Desbloqueado
+t10  c2 (Desbloqueo)  Desbloqueado Desbloqueado Desbloqueado
+
+El plan es aceptado por el protocolo B2F Implícito
+
+### Page 2
+c) (0,15 puntos) Pon un ejemplo de un plan con tres transacciones en el que, con el protocolo B2F explícito, se daría
+el problema del bloqueo mortal. Da una traza de su ejecución de tu plan que incluya los bloqueos y el punto en el
+que se produciría el bloqueo mortal. Usa la tabla para la ejecución  (pueden sobrarte columnas en la parte de los
+estados de los elementos de datos). ¿Cómo se resolvería el problema?
+Plan = {r3(y), r1(x), r2(x), w1(x), w2(x), c3, c1, c2}
+ Estado de bloqueo de los elementos de datos
+t T1 T2 T3 x y
+    Desbloqueado Desbloqueado
+t0   BL(y) Desbloqueado BL(T3)
+t1   r3(y) Desbloqueado BL(T3)
+t2 BL(x)   BL(T1) BL(T1)
+t3 r1(x)   BL(T1) BL(T1)
+t4  BL(x)  BL(T1) y BL(T2) BL(T1)
+t5  r2(x)  BL(T1) y BL(T2) BL(T1)
+t6 BE(x) espera   BL(T1) y BL(T2)
+t7  BE(x) espera  BL(T1) y BL(T2)
+t8
+t9
+t10
+t11
+t12
+t13
+t14
+t15
+t16
+t17
+t18
+t19
+t20
+t21
+t22
+t23
+t23
+t23
+t23
+
+Para resolver el bloqueo mortal el sistema abortará alguna de las transacciones implicadas (en este caso T1 o T2) y luego
+volvería a lanzarla.
+
+### Page 3
+2. (0,25 puntos)
+Sea el siguiente plan de ejecución de tres transacciones en el que la primera instrucción de cada transacción marca su
+inicio y donde los ti son instantes de tiempo (ti < tj  si i < j):
+
+Suponiendo que se aplica el protocolo OMT:
+a) ¿Cuál es el plan en serie al que debería ser equivalente el plan concurrente anterior? T1T2T3
+b) Si antes del inicio del plan, tanto MT_E(X) como MT_L(X) (marcas de tiempo de escritura y de lectura de X) valen
+t-20 donde t-20 < t0, comprueba si el protocol o OMT admite el plan dando una traza de su ejecución . Usa la tabla
+para contestar esta pegunta. Si en algún instante el plan ya no es posible di por qué y explica qué condición ha
+permitido detectar el problema.
+  X
+t T1 T2 T3 ML ME
+    t-20 t-20
+t0 w1(X)   t-20 t0
+t1  r2(X)  t1 t0
+t2  w2(X)  t1 t1
+t3   r3(X) t3 t1
+t4  r2(X)  t3 t1
+t5   w3(X) t3 t3
+t6 r1(X)
+t7
+t8
+t9
+La operación r1(X) de T1 se aborta ya que MT(T1) < MT_E(X) (t0 < t3). T1 debe revertirse e introducirse de nuevo en el
+sistema.
+En t6 el protocolo ha detectado que T1 está intentando leer un dato modificado por una transacción que en el plan en
+serie equivalente cronológico es más joven que ella.
+
+### Page 4
+3. (0,25 puntos)
+Supón un entorno concurrente controlado por el protocolo Multiversión que hay tres versiones del elemento x (sean x0,
+x1 y x2) cuyas marcas de tiempo son las que se indican más abajo (donde ti < tj si i<j), en un momento determinado la
+transacción T con marca de tiempo MT(T) = t4 ejecuta la instrucción w(x) que es rechazada.
+
+
+
+
+a) ¿Qué condición o condiciones se han evaluado para detectar que la operación deba rechazarse?
+b) ¿Qué se controla con esa condición?
+c) ¿Qué marca de tiempo debería tener T para que la operación fuera aceptada y cuáles serían las marcas de tiempo
+de la versión creada? (puede haber varias respuestas correctas)
+
+a) De las tres versiones de x que hay se busca la que tenga mayor marca de tiempo de escritura que cumpla que:
+MT_E(xi) <= MT(T). En este caso esa versión es x0. Dado que MT_L(x0) > MT(T), la operación es rechazada ya que x0
+ha sido leída por una transacción más joven que T.
+b) Con esta  condición se controla que la versión “anterior” al elemento de datos x no ha sido leída por ninguna
+transacción T* posterior (cronológicamente) a T.
+c) Hay varias posibilidades:
+ MT(T) = t6 La versión creada x4 tendría MT_L(x4) =  t6 y MT_E(x4) =  t6
+ MT(T) = t9 La versión creada x4 tendría MT_L(x4) =  t9 y MT_E(x4) =  t9
+
+
+
+ MT_L MT_E
+x0 t5 t2
+x1 t5 t5
+x2 t8 t8
+
+### Page 5
+Cada una de las 20 cuestiones siguientes vale 0,1 puntos. Cada cuestión mal contestada resta 1/3 de una respuesta
+correcta. Nota Test = (0,1  Respuestas_correctas)  ((0,1/3)  Respuestas_incorrectas). Puedes usar el espacio en blanco
+al final de la página como espacio en sucio.
+1) Sea F un fichero  con 106 registros que tiene  tres atributos A, B y C tal que A es clave y B y C no lo son , ¿cuál de las
+siguientes afirmaciones es FALSA?
+a) No es lo mismo definir un índice sobre (B, C) que definirlo sobre (C, B).
+b) F podría tener a la vez un índice primario sobre A y un índice de agrupación sobre B.
+c) Un índice disperso sobre F tendría menos de 106 entradas.
+d) F podría tener a la vez un índice secundario sobre B y un índice secundario sobre C.
+2) ¿Cuál de las siguientes afirmaciones es FALSA?
+a) Un índice es denso si tiene la misma cantidad de entradas que registros tiene el fichero de datos que indexa.
+b) En un índice multinivel, el primer nivel puede ser un índice primario, secundario o de agrupación.
+c) Un índice puede construirse como un fichero ordenado o como un árbol de búsqueda.
+d)  En un índice multinivel de altura 4, la búsqueda de un valor en el índice puede suponer el acceso a menos de cuatro
+bloques del índice.
+3) ¿Qué significa que la ocupación de los nodos en un índice en árbol es uniforme?
+a) Que todos los nodos hojas están al mismo nivel.
+b) Que la ocupación de todos los nodos es al menos del 50%.
+c) Que el coste de localizar la dirección de un registro dado un valor del campo de indexación es siempre el mismo.
+d) Que el árbol es independiente del orden de llegada de los valores.
+4) Respecto a los índices en árbol B+, ¿cuál de las siguientes afirmaciones es FALSA?
+a) Todos los valores del campo de indexación del fichero aparecen en las hojas del índice.
+b) Los nodos hoja están doblemente enlazados entre sí.
+c) Los punteros a nodos del árbol aparecen en los nodos internos y en los nodos hoja.
+d) Si el orden del índice es p, en un nodo hoja hay  p valores del campo de indexación y p-1 punteros a registro del
+fichero indexado.
+5) Sea F un fichero con 200.000 registros ordenado por A y sea 10 el factor de bloque del fichero. Supón que el fichero
+tiene un índice sobre el campo A, ¿cuántas entradas tendrá el índice según A sea clave o no?
+a) 200.000 si A es clave y 2.000 si A no es clave y cada valor de A se repite 10 veces.
+b) 200.000 si A es clave y 20.000 si A no es clave y cada valor de A se repite 10 veces.
+c) 20.000 si A es clave y 20.000 si A no es clave y cada valor de A se repite 10 veces.
+d) 20.000 si A es clave y 2.000 si A no es clave y cada valor de A se repite 10 veces.
+
+### Page 6
+6) ¿Qué afirmación sobre el fichero disperso es FALSA?
+a) Asegura la búsqueda más económica, con condición de rango sobre el campo de dispersión.
+b) Exige conocer de antemano el tamaño estimado que va a tener el fichero.
+c) No es adecuado para hacer búsquedas ordenadas por el campo de dispersión.
+d) Si hay muchas colisiones la eficiencia de las búsquedas por igualdad en el campo de dispersión disminuye.
+7) Dada una operación de búsqueda con condición de selección A>=9 en un fichero  desordenado, ¿qué índice sería el
+más adecuado?
+a) Índice B+ sobre A.
+b) Índice B sobre A.
+c) Los índices sólo son útiles con condiciones de igualdad.
+d) Índice primario sobre A.
+8) Sea F un fichero con dos campos A (clave) y B y se quiere definir un índice sobre A ¿cuál de las siguientes afirmaciones
+es CIERTA?
+a) En lugar de definir el fichero F y el índice, se puede organizar todo en una única estructura de índice donde para
+cada valor de A en lugar de un puntero a registro se almacene el valor de B asociado a ese A.
+b) Se puede definir el fichero F y el índice donde para cada valor de A en lugar de un puntero a registro se almacene
+el valor de B asociado a ese A.
+c) En lugar de definir el f ichero F y el índice, se puede organizar todo en una única estructura de índice donde para
+cada valor de A además de un puntero a registro se almacene el valor de B asociado a ese A.
+d) En este caso no se puede organizar todo en una única estructura por ser A clave.
+9) ¿Cuál de las siguientes afirmaciones es CIERTA?
+a) En el peor de los casos, la inserción o eliminación de registros tiene el mismo coste en las tres organizaciones de
+ficheros.
+b) En el mejor de los casos, la inserción o eliminación de registros tiene el  mismo coste en las tres organizaciones de
+ficheros.
+c) En un fichero disperso el coste de modificar un campo es siempre eficiente sea cual sea el campo.
+d) Los cubos de desbordamiento en un fichero disperso agilizan las búsquedas ordenadas en el fichero.
+10) ¿Cuál de las siguientes afirmaciones es CIERTA?
+a) Un registro es la unidad de transferencia de datos entre memoria principal y memoria secundaria.
+b) Un registro es la unidad de direccionamiento de datos.
+c) Desde un punto de vista lógico, un fichero es una secuencia de registros.
+d) Un bloque se puede almacenar en dos discos distintos.
+
+### Page 7
+11) ¿Cuál será la mejor implementación de una tabla cuya clave primaria está formada por todas sus columnas y cuya
+forma de manipulación no se conoce?
+a) Como un fichero ordenado, para pode r realizar búsquedas rápidas y poder comprobar la restricción de unicidad
+eficientemente.
+b) Como un fichero desordenado para permitir una manipulación flexible y con un índice sobre las columnas de la
+clave primaria para poderla comprobar eficientemente.
+c) Como un fichero disperso, con función de dispersión sobre la clave primaria.
+d) Organizada como un índice.
+12) Si <P1, K1, P2, K2, …, Pq-1, Kq-1, Pq> representa un nodo de un índice en árbol B, ¿qué condición se cumple para todos los
+valores X del subárbol apuntado por el puntero P2?
+a) K1 < X < K2
+b) K1 < X  K2
+c) K1  X < K2
+d) K1  X  K2
+13) ¿Cuál de las siguientes reglas NO es una regla heurística para la optimización de consultas?
+a) Mover las selecciones hacia abajo en las ramas del árbol.
+b) Mover las proyecciones hacia arriba en las ramas del árbol.
+c) Combinar un producto cartesiano con una selección para obtener una concatenación.
+d) Descomponer las selecciones con condiciones conjuntivas en una secuencia de selecciones simples.
+14) Sea la siguiente expresión de Álgebra Relacional: A,B(A,B,C(C<7B=5A=1(R))), ¿a cuál de las siguientes expresiones es
+equivalente después de aplicar tantas veces como sea posible la regla de transformación1 (Cascada de )?:
+a) A,B(C < 7((B=5  A=1) (R)))
+b) A,B,C (C<7 ((B=5  A=1) (R)))
+c) A,B (C<7 (B=5 (A=1 (R))))
+d) A,B,C (C<7 (B=5 (A=1 (R))))
+15) Sobre los mé todos de búsqueda para resolver una selección con condición simple  sobre una tabla , ¿ cuál de las
+siguientes afirmaciones es FALSA?:
+a) La búsqueda lineal se puede aplicar siempre sea cual sea la condición de la selección.
+b) La búsqueda binaria se puede aplicar siempre sea cual sea la condición de la selección.
+c) La búsqueda con direccionamiento calculado sólo se puede aplicar a condiciones de igualdad.
+d) La búsqueda con índice sólo se puede aplicar a condiciones de igualdad y de rango.
+
+### Page 8
+16) ¿Sea R una tabla con 1.000 tuplas y sea la operación del álgebra relacional: A=7 R, ¿cuál de las siguientes afirmaciones
+es FALSA sobre la selectividad de la condición A=7, slA=7?
+a) Si A es la clave primaria de R, entonces slA=7 = 1/1.000
+b) Sirve para que el sistema pueda estimar cuántas filas va a tener una selección.
+c) Si en R, en el atributo A aparecen 20 valores distribuidos uniformemente, entonces slA=7 = 1/20
+d) El SGBD en todo momento conoce con exactitud el valor de slA=7
+17) ¿Qué métodos hay para computar un operador en un árbol de consulta?
+a) Materializada e indexada
+b) Indexada y en flujo
+c) Materializada y en flujo
+d) Materializada, indexada y en flujo.
+18) Sobre los árboles de consulta, ¿cuál de las siguientes afirmaciones es FALSA?
+a) Se evalúan de arriba abajo.
+b) La ejecución de un nodo implica sustituir el nodo por el resultado de la operación del nodo.
+c) Un nodo con un operador binario tendrá siempre dos hijos.
+d) Los nodos hoja son tablas del esquema.
+19) En el diseño físico de una base de datos, ¿cuál de las siguientes acciones no es adecuada para mejorar el rendimiento
+de la base de datos?:
+a) Desnormalización.
+b) Partición de tablas (horizontal o verticalmente).
+c) Fusión de tablas.
+d) Eliminación de claves primarias.
+20) Respecto a la implementación estándar de una base de datos relacional, ¿cuál de las siguientes afirmaciones es FALSA?
+a) Es útil definir índices sobre las claves primarias y sobre conjuntos con restricción de unicidad.
+b) Es útil definir índices sobre las claves ajenas.
+c) Es útil definir índices sobre atributos que pueden ser nulos y que se usan en condiciones de desigualdad.
+d)  En general, una organización desordenada es adecuada para cualquier tabla si no se conoce ni el tamaño que va a
+tener ni las consultas que se van a realizar sobre ella.

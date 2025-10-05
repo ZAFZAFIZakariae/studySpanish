@@ -1,0 +1,102 @@
+# Extracted content
+Source: subjects/Ggo/project/Stakeholder Analysis _Power and Influence_ AdaptiveBMS.xlsx
+
+### Sheet: Data
+ Stakeholder Analysis Tool
+ provided by adaptivebms.com Issue 2.05
+ Stakeholder Analysis
+ Prepared By: Chris Coles Date: 2005-03-01 00:00:00
+ Project: Proyeccion de necesidades de distribuidores con IA
+ Description: How do we communicate the new 0% waste processes to the team?
+ Instructions:
+ 1) Enter a Code for each Stakeholder. Codes are used to identify the points on the graphs
+ 2) Enter values for Attitude, Activity, Power, and Interest, using the rating scales
+ 3) Use the graphs to help develop communication plans and strategies with you team
+ Stakeholder Categories Relevant Stakeholders
+Name Code
+Initial Attitude
+-10 - 10 Activity
+0 - 10 Attitude Rating Power
+0 - 10 Interest
+0 - 10 Power Rating Selections Int/Pow Line Attitude Activity Line
+ Distribuidores Adrian Davise AD 4 2 8 2 10 20 10 10 x y x y
+ Consumidores Consum Cn 8 1 8 1 8 8 9 9 4 10 -10 4
+ Proveedores Green SL GS 4 1 4 6 3 18 8 8 5 8 -8 4
+ Competidores Pepsi co PC -10 0 0 0 10 0 7 7 8 5 -4 8
+ CEO Ivan Crespo IC 3 3 9 10 9 90 6 6 10 4 -4 10
+ Manager Tanya Yatt TY 7 7 49 8 8 64 5 5
+ Desarrolladores Barry Allen BA 10 10 100 5 10 50 4 4 4 10
+ Trabajadores Steven J. Silva Gomez SJ -4 2 -8 2 7 14 3 3 4 8
+ Accionistas Berkshire Hathaway BH 8 3 24 10 8 80 2 2 8 4
+ Jefe de proyecto Jon ander Gomez JA 7 10 70 9 9 81 1 1 10 4
+ Diseñadores Silvia Garcia SG 9 9 81 4 8 32 0 0
+ 0 0 -3
+ 0 0 -4
+ 0 0 -5
+ 0 0 -6
+ 0 0 -7
+ 0 0 -8
+ 0 0 -9
+ 0 0 -10
+
+### Sheet: Charts
+ Interest/Power Plot:
+The reference line represents the ideal balance for a vital stakeholder. Points above the line represent stakeholders with potentially high influence on the success of the project; they can either be powerful supporters or powerful detractors.
+ Attitude/Activity Plot:
+The reference line on the left marks the point at which stakeholders are considered potentially adversarial to the project. The reference line on the right marks the point at which stakeholders are considered potentially supportive of the project.
+
+### Sheet: Notes
+ Stake Holder Analysis
+ Quantify the impact of the various stakeholders on a project, task or mission:
+
+-Who are the key supporters?
+-Who are the key opponents?
+
+ Purpose
+ Identify the key supporters that can help advance the project so you can keep them informed and develop their support
+ Identify the key opponents that could negatively affect the project so you can address their needs/objections correctly
+ Data
+ List of stakeholders with the following attributes numerically evaluated:
+ Attitude towards the project:
+-(-10 = strongly against to +10 = strongly for)
+ Activity relative to the project:
+-(0 = completely passive to 10 = strongly active)
+ Power within the organization to affect the project:
+-(0 = no effective power to 10 = powerful influence)
+ Interest in the project:
+-(0 = no interest to 10 = very interested)
+ Apply a code to each name for graphing purposes.
+ Process
+ Using a small team, evaluate and record the attitude, activity, power, and interest for each stakeholder.
+ Evaluate the two plots to determine the status of each stakeholder.
+ Caution:
+ This tool is seen as Machiavellian by some people. So do use plenty of empathy when using this tool.
+When you use it properly, the identification of Key Opponents can help you identify and address their concerns sufficiently to let the project proceed smoothly.
+Do change the rankings as people change there attitudes. Out-of-date Stakeholder analysis forms can cause a lot of damage too.
+ Reference:
+ Method as per the excellent 'Mintab Quality Companion 3' application. Www.minitab.com
+
+### Sheet: TermsOfUse
+ Terms of Use
+ Copyright (C) 2011 Adaptive Business Management Systems Ltd. All rights reserved.
+ This 'TermsOfUse' worksheet may not be modified, removed, or deleted.
+ Limited Use Policy
+ You may make archival copies and customize this template (the "Software") for personal use or for your company use. The customized template (with your specific personal or company information) may be used and shared within your company, but this template or any document including or derived from this template may NOT be sold, distributed, or placed on a public server such as the internet.
+ No Warranties
+
+THE SOFTWARE AND ANY RELATED DOCUMENTATION ARE PROVIDED TO YOU "AS IS."
+Adaptive Business Management Systems MAKES NO WARRANTIES, EXPRESS OR IMPLIED, AND EXPRESSLY DISCLAIMS ALL
+REPRESENTATIONS, ORAL OR WRITTEN, TERMS, CONDITIONS, AND WARRANTIES, INCLUDING BUT NOT
+LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. WITHOUT LIMITING THE ABOVE YOU ACCEPT THAT THE SOFTWARE MAY NOT MEET
+YOUR REQUIREMENTS, OPERATE ERROR FREE, OR IDENTIFY ANY OR ALL ERRORS OR PROBLEMS, OR DO
+SO ACCURATELY. This Agreement does not affect any statutory rights you may have as a consumer.
+ Limitation of Liability
+ IN NO EVENT SHALL Adaptive Business Management Systems  BE LIABLE TO YOU, FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS,
+LOST SAVINGS, OR ANY OTHER DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES
+ARISING FROM THE USE OR THE INABILITY TO USE THE SOFTWARE (EVEN IF WE OR AN AUTHORIZED DEALER
+OR DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES), OR ANY MISTAKES AND
+NEGLIGENCE IN DEVELOPING THIS SOFTWARE, OR FOR ANY CLAIM BY ANY OTHER PARTY. THE
+ORGANIZATION, BUSINESS, OR PERSON USING THIS SOFTWARE BEARS ALL RISKS AND RESPONSIBILITY
+FOR THE QUALITY AND PERFORMANCE OF THIS SOFTWARE.
+ Some states do not allow the limitation or exclusion of liability for incidental or consequential damages,so the above limitation may not apply to you.

@@ -1,0 +1,158 @@
+# Extracted content
+Source: subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P_solución.pdf
+
+### Page 1
+2º Parcial Diseño y Gestión de Bases de Datos (17/01/2024)
+Apellidos, Nombre: …………………………………………………………………………………………………………………..
+
+Contesta las preguntas del examen con claridad y brevedad.
+1. a) 0,1 puntos b) 0,2 puntos c) 0,3 puntos
+a. ¿Qué es una transacción?
+Secuencia de operaciones de acceso a la base de datos (consulta o actualización) que constituyen una unidad de ejecución.
+
+b. En un entorno monousuario, ¿qué implica procesar correctamente una transacción?
+Procesar correctamente una transacción significa:
+(a) todas las operaciones de la transacción se ejecutan con éxito y sus cambios (actualizaciones) quedan grabados
+permanentemente en la base de datos,
+o bien
+(b) la transacción no tiene ningún efecto en la base de datos.
+
+c. Modo de comprobación de una restricción de integridad. Explica qué es, qué opciones hay y qué implica cada
+opción.
+El modo de comprobación de una restricción de integridad determina cuándo se comprueba la restricción y qué se hace
+si se viola. Hay dos posibilidades:
+• Inmediato: la restricción se comprueba d espués de cada operación SQL que pueda violar la restricción.  En
+caso de violación, el sistema anula la instrucción SQL que ha provocado la violación y la transacción continúa.
+• Diferido: la restricción se comprueba d espués de cada transacción que contenga una operación SQL que
+pueda violar la restricción. En caso de violación, el sistema anula la transacción entera.
+2. (0,4 puntos) Explica el protocolo WAL (Write Ahead Logging) de gestión del diario
+Protocolo de escritura en el diario  (WAL: Write-Ahead Logging):
+• Forzar la escritura del diario : antes de que se confirme definitivamente una transacción (SGBD), las entradas de
+diario correspondientes a actualizaciones de la transacción deben haber sido grabadas en el fichero de diario en
+disco. Esto permite rehacer transacciones confirmadas en caso de fallo.
+• Escritura anticipada del diario: antes de que un bloque de datos actualizado por una transacción sea transferido a
+disco, las entradas de diario correspondientes a actualizaciones del bloque deben haber sido grabadas en el fichero
+de diario en disco. Esto permite deshacer transacciones interrumpidas o anuladas.
+
+### Page 2
+3. a) 0,1 puntos b) 0,1 puntos
+ En el diagrama de más abajo se muestran las últimas transacciones ejecutadas en el sistema. En el instante k se produce
+un fallo. Este fallo obliga al SGBD a realizar tareas de recuperación cuando se vuelve a arrancar el sistema.
+
+
+
+Para cada uno de los supuestos siguientes índica qué haría el SGBD para recuperarse en cada una de las cuatro
+estrategias posibles de actualización:
+a. El fallo supone la pérdida de memoria principal.
+• Inmediata- No Forzar: Deshacer T2 y Rehacer T4
+• Inmediata- Forzar: Deshacer T2
+• Diferida- No Forzar: Rehacer T4
+• Diferida- Forzar: Nada
+
+b. El fallo supone la pérdida de la memoria secundaria donde está almacenada la base de datos, pero la copia del
+diario en disco no se ha perdido.
+Esta pregunta requiere un poco de reflexión. Hay dos posibles contestaciones razonables:
+1. No se permite hacer una copia de seguridad mientras hay transacciones activas.  De manera que la situación
+planteada en el gráfico no es posible.
+2. Si se pueden hacer la copia de seguridad mientras hay transacciones activas (lo que se llama copia en caliente),
+dependiendo de las estrategias tendríamos:
+a. Inmediata- No Forzar:
+i. En la copia de seguridad puede haber datos modificados po r T1 y T2 que son transacciones que
+en el momento del fallo no estaban confirmadas -> Deshacer T1, T2
+ii. En la copia de seguridad tenemos certeza de que están los cambios realizados por las
+transacciones confirmadas antes del punto de contr ol del instante 0 pero no las confirmadas
+después -> Rehacer T4, T5 y T7
+b. Inmediata- Forzar:
+i. En la copia de seguridad puede haber datos modificados po r T1 y T2 que son transacciones que
+en el momento del fallo no estaban confirmadas -> Deshacer T1, T2
+ii. En la copia de seguridad tenemos certeza de que están los cambios realizados por las
+transacciones confirmadas antes de hacer la copia de seguridad pero no las confirmadas después
+-> Rehacer T4 y T7
+c. Diferida- No Forzar:
+i. En la copia de seguridad no puede haber datos modificados po r transacciones no confirmadas.
+No hay que deshacer nada.
+ii. En la copia de seguridad tenemos certeza de que están los cambios realizados por las
+transacciones confirmadas antes del punto de contr ol del instante 0 pero no las confirmadas
+después -> Rehacer T4, T5 y T7
+d. Diferida- Forzar:
+
+### Page 3
+i. En la copia de seguridad no puede haber datos modificados po r transacciones no confirmadas.
+No hay que deshacer nada.
+ii. En la copia de seguridad tenemos certeza de que están los cambios realizados por las
+transacciones confirmadas antes de hacer la copia de seguridad pero no las confirmadas después
+-> Rehacer T4 y T7
+4. a) 0,2 puntos b) 0,3 puntos
+a. ¿Qué es un plan recuperable?
+Un plan es recuperable si una transacción T no se puede confirmar antes de que se confirmen todas las transacciones que
+han actualizado (escrito) un elemento de datos leído por T.
+
+b. ¿Evita la anomalía de lectura sucia? Justifica tu respuesta con un ejemplo
+No, pero evita tener que anular transacciones confirmadas. El siguiente plan concurrente es recuperable pero se da la
+anomalía de lectura sucia en el instante t
+2. Al confirmarse T2 antes que T1 el plan es recuperable.
+
+t T1 T2
+t0  r2(x)
+t1  w2(x)
+t2 r1(x)
+t3  r2(y)
+t4  w2(y)
+t5  c2
+t6 c1
+
+
+5. a) 0,15 puntos b) 0,65 puntos
+Sea el protocolo multiversión y sea el siguiente plan de ejecución concurrente:
+Tiempo t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11
+ r2(x) r3(y) w2(x) r1(x) w3(y) r2(y) c2 w1(x) r3(x) r1(y) c1 c3
+Suponiendo que:
+• Siempre se cumple que ti < tj si i < j
+• Al inicio del plan sólo hay una versión de x y una de y que llamaremos x0 e y0
+• La transacción más joven que ha leído y ha escrito x0 e y0, es T0
+• La marca de tiempo de T0 es t-10
+a. Contesta a las siguientes preguntas:
+¿Cuál es el plan en serie cronológico equivalente para
+la ejecución de T0, T1, T2 y T3? T0 → T2 → T3 → T1
+¿Cuál es la marca de tiempo de lectura de x0 en t0? t-10 o t0 según se considere que la operación r2(x) se ha
+hecho ya o no. Daremos por buenas ambas
+soluciones.
+¿Cuál es la marca de tiempo de escritura de x0 en t0? MT(T0) = t-10
+¿Puede cambiar la marca de tiempo de lectura de x0?  Sí. Cuando la lea una transacción más joven que T0
+¿Puede cambiar la marca de tiempo de escritura de x0? Nunca.
+¿Puede cambiar la marca de tiempo de T0? Nunca.
+b. Comprueba si el protocolo admite el plan de ejecución. Usa la tabla de la página siguiente para responder a esta
+pregunta (pueden sobrarte filas y/o columnas):
+• en el caso de que la operación sea una lectura, en la primera columna, indica qué versión se lee y cómo se
+elige entre todas las que hay.
+• en el caso de una escritura, en la primera columna, indica qué versión se crea y qué condiciones se han
+comprobado para permitir la creación, si es que se puede crear.
+• En las columnas debajo de Versiones, indica el nombre de la versión y sus marcas de tiempo de lectura (ML) y
+escritura (ME).
+
+### Page 4
+Operación x0 y0 x1 y1 x2
+Versión leída/escrita Condición
+comprobada t T1 T2 T3 ML ME ML ME ML ME ML ME ML ME
+  t-1    t-10 t-10 t-10 t-10
+Lee la versión x0 que es la versión de x con
+mayor marca de escritura menor que MT(T2)  t0  r2(x)  t0 t-10 t-10 t-10
+Lee la versión y0 que es la versión de y con
+mayor marca de escritura menor que MT(T3)  t1   r3(y) t0 t-10 t1 t-10
+Crea x1 ¿ML(x0) <=MT(T2)?
+t0 <=t0 t2  w2(x)  t0 t-10 t1 t-10 t0 t0
+Lee la versión x1 que es la versión de x con
+mayor marca de escritura menor que MT(T1)  t3 r1(x)   t0 t-10 t1 t-10 t3 t0
+Crea y1  ¿ML(y0) <=MT(T3)?
+t1 <=t1 t4   w3(y) t0 t-10 t1 t-10 t3 t0 t1 t1
+Lee la versión y0 que es la versión de y con
+mayor marca de escritura menor que MT(T2)  t5  r2(y)  t0 t-10 t1 t-10 t3 t0 t1 t1
+  t6  c2  t0 t-10 t1 t-10 t3 t0 t1 t1
+Crea x2 ¿ML(x1) <=MT(T1)?
+t3 <=t3 t7 w1(x)   t0 t-10 t1 t-10 t3 t0 t1 t1 t3 t3
+Lee la versión x1 que es la versión de x con
+mayor marca de escritura menor que MT(T3)  t8   r3(x) t0 t-10 t1 t-10 t3 t0 t1 t1 t3 t3
+Lee la versión y1 que es la versión de y con
+mayor marca de escritura menor que MT(T1)  t9 r1(y)   t0 t-10 t1 t-10 t3 t0 t3 t1 t3 t3
+  t10 c1   t0 t-10 t1 t-10 t3 t0 t3 t1 t3 t3
+  t11   c3 t0 t-10 t1 t-10 t3 t0 t3 t1 t3 t3

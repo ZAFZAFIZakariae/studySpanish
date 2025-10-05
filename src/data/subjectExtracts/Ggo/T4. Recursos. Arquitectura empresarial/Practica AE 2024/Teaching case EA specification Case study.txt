@@ -1,0 +1,1569 @@
+# Extracted content
+Source: subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study.pdf
+
+### Page 1
+Teaching Case
+Enterprise Architecture Specification Case Study
+
+
+Annette Lerine Steenkamp
+Amal Alawdah
+Osama Almasri
+Keke Gai
+Nidal Khattab
+Carval Swaby
+College of Management
+Lawrence Technological University
+Southfield, Michigan 48302, United States of America
+asteenkam@ltu.edu
+
+Ramy Abaas
+Agile Healthcare Software Inc. 2033 E. 15 Mile Rd.
+Sterling Heights, Michigan 48310, United States of America
+Ramy@agilehcs.com
+
+
+ABSTRACT
+
+A graduate course in enterprise architecture had a team project component in which a real-world business case, provided by an
+industry sponsor, formed the basis of the project charter and the architecture statement of work.  The paper aims to share the
+team project experience on developing the architecture specifications based on the business case of an accountable health care
+organization. Students collaborated as a team in various roles to develop the architecture specifications for a new business
+initiative of the sponsoring organization, XYZ ACO. The teaching case describes the case study approach and the architecture
+approach adopted for the architecture process, and is accompanied by Teaching Case Notes which provide a selection of the
+models developed by members of the project team towards the architecture specifications. The course started with coverage of
+enterprise architecture theory , best practices and standards, and the team project gave students the opportunity to apply their
+theoretical knowledge and “learn by doing”. Students were challenged to interpret the business case, the project charter and
+project requirements, and each team member was allocated an architecture viewpoint and a role to play. The Teaching Case
+presents a summary of the team project and the lessons learned in performing the project.
+
+Keywords: Design specification, Architecture, Process improvement, Modeling.
+
+1. INTRODUCTION
+
+Developing enterprise architecture (EA) specifications for an
+enterprise is a non-trivial task, especially in the ever
+changing business and technology environment of today. In
+the case of health care organizations the complexity of their
+business operations have escalated as new legislation has
+been introduced, and there is increasing demand for
+improved quality of health care services including Medicare
+services, and reduction in health care expenditure. Health
+care organizations are also challenged by their competitors,
+and must leverage all their assets to survive and prosper.
+Emerging information technologies offer opportunities to
+achieve such goals, but there are also significant challenges
+such as disparate systems in use, concerns such as ease-of-
+use, transparency, accountability and security, to name a few.
+Project-Based Learning (PBL) engages students to
+apply academic knowledge to applications in the real world.
+It has been found that PBL stimulates student learning by
+using acquired knowledge for applied learning (Rivet &
+Krajcik, 2004; Steenkamp, White & Kakish, 2002). Team-
+based student projects have become common in coursework
+in the field of Information Technology (IT), as reported by
+many authors including Meyer (2005) and Stephens (2001).
+In a literature survey of student team effectiveness Stephens
+(2001) has found that there is a need for effective teamwork
+management in the academic context. A standards-based
+approach to team projects has been followed by the senior
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+105
+
+### Page 2
+author over many years, where teams are informed by
+international standards and best practices in IT projects.
+In this paper a case study format was used, after Cappel
+and Schwager (2002), to report on experience in a team
+project for a graduate course in enterprise architecture (EA),
+and falls in the category of a project-based case. For
+background, the goal of the graduate course was to provide a
+comprehensive perspective of enterprise architecture within
+the context of the global business environment of a
+competitive enterprise. Intended outcomes for the course
+were that students are able to
+• Identify, interpret and adopt the best practices in the
+field of IT architecture design and deployment as promoted
+by international standards organizations.
+• Lead and manage the process of IT architecture
+design within the organization.
+• Participate in architecture design project as lead
+designer.
+• Define the viewpoints and views relevant to
+stakeholders, and design models of the enterprise
+architecture.
+The course was offered in blended mode of delivery
+requiring that teaching and collaboration be done in both
+face-to-face and virtual modes. The pedagogy was designed
+to incorporate various didactical methods suited to the adult
+learner, and requiring higher-order cognitive skills such as
+the application of concepts and theories, analysis of the
+business case, synthesis of concerns and principles as
+relevant for the deliverables of the project, and evaluation of
+alternative models (Bloom et al., 1956).  The pedagogy also
+recognizes the importance of problem solving and
+interpersonal skills and communication that are valued by
+academia and practice alike (Tang et al., 2001).  The course
+started with covering the theory and best practices of EA,
+during which students executed individual home assignments
+as part of the course requirements. Orientation was provided
+for these assignments and detailed feedback on student
+papers followed after grading them. Part of the course
+involved an industry sponsored team projec t which
+commenced after a substantial part of the EA syllabus had
+been covered. The team project exposed students to a real-
+world situation, challenges and concerns and a “learn by
+doing” experience. Team members were required to
+collaborate in various roles relating to the architecture
+process, starting with the interpretation of the business case,
+the project charter and project requirements. Working on a
+team project gave the small class of students experience to
+work on a sizable project in the limited period of the
+academic term, and was complementary to some theory-
+based individual assignments mentioned earlier.  In addition
+the team project offered students the opportunity to apply
+standards and best practices in EA and team management.
+The paper aims to share the team project experience in
+the course when developing the architecture design
+specifications based on the real-world business case of an
+Accountable Health Care organization, here called XYZ
+ACO Inc. With the urgent need of affordable healthcare in
+the United States the opportunity to collaborate with the
+project sponsor was regarded as opportune and appropriate.
+Sections of the paper include the case study approach
+followed, the architecture approach adopted, and some
+models of the Enterprise Architecture Specifications, and
+concludes with a summary of the lessons learned in
+performing the project. The paper is complemented by
+Teaching Case Notes (Steenkamp et al., 2012) with
+additional models developed by the teams that are available
+on request.
+
+2. CASE STUDY APPROACH
+
+A project-based case, also called a “systems solution case”
+(Cappel and Schwager (2002), requires sustained
+involvement of all stakeholders to meet the requirements,
+and is particularly suited for IT and IS courses such as IT
+architecture, networking, systems analysis and design,
+programming, and systems development, as reported in
+several papers by the senior author, and also by others
+(Hogue, A, Kapralos, B. and Desjardins, F., 2011). This
+system solution case reports on an initiative relating to the
+Health Care Delivery System of XYZ ACO Inc. The project
+work and architecture tasks focused on developing the EA
+Architecture Specifications during the Planning and Analysis
+stages of the architecture process, and are described in
+Section 3. XYZ ACO’s mission, strategic direction, core
+principles and requirements for the new XYZ ACO
+architecture initiative were provided by the XYZ ACO
+sponsor, and along with the course’s teamwork assignments
+stated in the project charter, framed the team project
+requirements.
+
+2.1 XYZ ACO Inc. Business Case
+XYZ ACO was formed in a partnership between the XYZ
+ACO Hospital and 10 Provider Groups consisting of
+approximately 920 physicians, 630 independent specialists,
+pharmacies, and laboratories. The XYZ ACO mission is to
+improve the quality of health care services, including
+Medicare services, and reduce the growth in health care
+expenditures.  It aims to achieve this by providing
+coordinated high quality care services, and to introduce
+economies of scale in negotiating one contract with all the
+payers on behalf of all the groups of the enterprise. As part
+of the XYZ ACO Strategic vision a new approach was
+formulated to provide quality healthcare while managing
+healthcare for private patients in the USA. The intent has
+been to create an accountable care organization using a novel
+care delivery model which would comply with, and be
+governed by, the Affordable Care Act of the Centers for
+Medicare and Medicaid Services (CMS). The Affordable
+Care Act includes a number of provisions designed to:
+improve the quality of Medicare services; support innovation
+and the establishment of new payment models in the
+program; better align Medicare payments with provider costs;
+strengthen program integrity within Medicare; and put
+Medicare on a firmer financial footing. In addition to
+improving quality, XYZ ACO’s initiatives seek to reduce
+escalation of health care expenditures. It is widely
+recognized that the current trajectory for the nation's health
+care spending is unsustainable. Medicare beneficiaries share
+the burden of rising costs, as they pay higher premiums and
+larger cost-sharing.
+The XYZ ACO Group has now been operating
+independently for three years, and despite strong leadership
+each business entity is still separately managed and
+accounted for on separate balance sheets and healthcare
+contracts, making profitability a challenge. Corporate
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+106
+
+### Page 3
+concerns include:
+1. There is no clear concept of ‘Member (Patient)’
+across the group. Recent privacy legislation complicates use
+of Member information in any case, and an analysis is
+required of these implications, for preparation of a privacy
+statement.
+2. Financial reporting is required, at least on a monthly
+basis, to be of operational and tactical use. There is n o
+visibility across all units to manage cost and provide high
+quality care.
+3
+. There is no comprehensive business architecture on
+which to base and manage operations of the group as a whole.
+4. Hospitals use different application packages.
+5. Each business within the group uses different
+application packages. There is no basis for achieving
+economies of scale in materials and resource purchasing or
+management, neither for cost management nor for cross-
+selling services to identified customers.
+6. The infrastructure currently does not support
+operations within an integrated business model.
+7. XYZ ACO uses a range of IT Practice Management
+Systems, and since the group’s mission is now primarily
+towards profitable managed health care this diversity of
+systems presents a major flaw in the data and business
+architectures, as no ready measures of income per member
+are available across the group.
+Figure 1 shows the XYZ ACO Business Capability Map
+for management of categories of services provided by the
+project sponsor (ACO Inc., 2012). IT support was found to
+be at Level 1 Capability, and the EA Project described in this
+paper is one of the initiatives to improve this capability.
+Key factors for successful implementation and
+operation of the intended accountable care organization
+using the new care delivery model were provided in the
+business case. These include care management, financial and
+performance analytics, predictive modeling, electronic
+medical records, quality reporting, data warehouses,
+evidence guidelines and care protocols, provider profiling
+and network management, and are to be implemented by
+XYZ ACO. The team project focused on scheduling,
+reporting and performance management.
+
+2.2 Project Charter
+XYZ ACO Inc. realizes it cannot deliver the strategic vision
+and addr
+ess the above mentioned concerns with the current
+EA and business capability, and are planning to implement
+its future EA in several project releases. With agreement
+from XYZ ACO Management the project sponsor presented
+a Requ
+est for Architecture Work to the EA Project Team
+outlining the project charter. The team interpreted the
+requirements in terms of a Statement of Architecture Work
+document using the template in Table 1, which includes hints
+for using the template.
+The project charter defined the deliverables for the team
+assignment
+s of the course, as well as the scope of the EA
+initiative to be undertaken for XYZ ACO.
+Deliverables for Project.  The key deliverables were
+the Architecture Project Plan and Statement of Architectur e
+Work document for the sponsored EA initiative described in
+Section 2.1; architecture principles derived from the
+concerns stated in the Business Case; architecture analysis
+for each of the allocated viewpoints; and the Architecture
+Specification Document.
+
+
+
+Figure 1. XYZ ACO Business Capability Map (ACO Inc., 2012, pp.5)
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+107
+
+### Page 4
+Statement of Architecture Work (SAW) Template
+Statement of Work title (Hint: Keep it precise and informative; avoid meaningless project names)
+Project Request and Background (Hint: 25 words or less stating the issues)
+Project Description and Scope (Hint: Usually determined by scale and complexity of the enterprise itself. The key is to
+understand what can realistically be achieved with the available resources and competencies; focus on delivering achievable
+value; this should cover: 1. Horizontal scope, i.e. the breadth of enterprise area to be covered, E.g. business functions,
+locations 2. Vertical scope, i.e. the level of detail that will be created for each domain. E.g. conceptual, logical, physical for
+business, applications, information or technology
+Architecture Vision (Hint: Just a statement is needed)
+Managerial Approach (Hint: What is the approach?: Conventional whole of business architecture covering detailed current
+and target architectures; Segment approach using a high-level conceptual framework with detailed future architecture
+focusing only on major business areas)
+Change of Scope Procedures (Hint: All change requests of any type may be funneled through one consistent Change
+Management Governance process. Many companies adopt ITIL processes for this)
+Responsibilities and deliverables (Hint: include a table)
+Roles Responsibilities Deliverables
+
+Acceptance criteria (Hint: include a table)
+Criteria Procedures
+Compliance with RAW Compare RAW-SAW for consistency
+Additional criteria Additional procedures
+Project Plan and Schedule (Note:  This is usually a Microsoft Project plan based on a standard EA template. For this
+assignment you are only required to identify 5 or 6 steps and estimate percentage of effort)
+Steps  Tasks Percent Effort
+1 - 6 1 - ….
+
+
+
+
+
+Scope of EA Initiative.  In accordance with the purpose
+of the EA initiative for XYZ ACO Inc. the project team was
+charged to develop the Architecture Specifications that
+address specific concerns relating to accountable and
+affordable health care as part of the group’s strategic vision
+stated in Section 2.1. The scope of the project was
+constrained and governed by the business drivers and
+concerns as defined in the Architecture Statement of Work
+(refer Table 1).  A complete list of concerns and principles
+are provided in the Teaching Case Notes, Table 2 along with
+descriptions, rationale and implications of each. XYZ ACO’s
+key architecture principles are summarized in the list below:
+Principle 1: Improve care quality and access to health
+care
+Principle 2: Affordability - reduce the cost of health
+services
+Principle 3: Provide Information transparency among
+participating businesses and stakeholders
+Principle 4: Design must promote reuse within and
+among XYZ hospital chain
+Principle 5: Provide a flexible balance in complexity,
+manageability and performance
+Principle 6: Components must maintain high cohesion
+and a low coupling
+Principle 7: High Security of information, business
+systems, data, application and infrastructure
+The EA initiative is to be implemented in several
+project releases. Release 1 will address the Service
+Performance Management Capability to support Principle 1
+and Principle 3 above and represents the scope of the
+Architecture Description, as specified in this case study. In
+addition Principles 4 to 7 above were to be implemented for
+all viewpoints of architecture development.
+
+
+
+
+Figure 2 is the Business System Context Diagram for
+XYZ ACO for Release 1.  In the diagram internal systems
+are on the right colored in gray, while external systems and
+Table 1. Statement of Architecture Work Template
+Figure 2. XYZ ACO Business Context Diagram
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+108
+
+### Page 5
+individuals (e.g. Patients and Payers) are shown on the left
+colored in light gray.  XYZ ACO would serve as orchestrator
+between internal and external entities, with an Enterprise
+Information Integration (EII) component providing data
+integration capabilities both internally and externally. The
+EII component will be partially implemented in Release 1 to
+support Service Performance Management in the areas of
+Patient Appointment Management, Service Performance
+Management and Enterprise Calendar Management. Future
+releases will address principles of the business systems
+architecture viewpoint focused on the Centralized Payment
+Management using a unique member identification number.
+The application architecture to realize Service Performance
+Management capabilities should address concerns pertinent
+to assessing the primary care physician/ specialist functions
+and quality of service provided to patients treated at XYZ
+ACO hospitals. This includes reporting on their daily,
+weekly and monthly work schedules, medical procedures
+performed, and patients’ review of health care services
+received during visits and/or treatment at XYZ ACO
+hospitals.
+For Release 1 a Performance Analysis of the initiative
+was done in terms of Goals and Measures at three levels,
+namely the Organization Level (strategic), the Process Level
+(tactical) and Activity Level (operational), focusing on the
+Design and Implementation, and Management activities to
+achieve the stated Goals and Measures. Table 2 is a summary
+of this analysis, and facilitated the alignment of IT Strategic
+Planning with the enterprise strategy, particularly as it has
+bearing on the new XYZ ACO Health Care initiative. At the
+Activity Level the scope and planning for the EA Project are
+described in the Architecture Project Plan and the Statement
+of Architecture Work (developed as part of Team
+Assignment 1). The architecture approach followed by the
+project team is described in Section 3.
+
+2.3 Teamwork
+The team was formed based on architecture roles and
+interests of the five students in the class, and the architecture
+viewpoints assigned. The team was culturally diverse and all
+students but one were foreign born. All students were
+educated up to the undergraduate degree level outside the
+United States and all of them studied for their masters’
+degrees in the United States. Experience in the fields of
+architecture and application development varied among team
+members, with some expertise and skills in business analysis,
+information systems development, software engineering, and
+database modeling represented in the team. General
+guidelines were provided regarding expectations of
+teamwork as well as the goals and project requirements
+within the context of the project charter. Team members
+were assigned to particular viewpoints, with the course
+faculty member and the XYZ ACO project sponsor playing
+active roles in the project. On-ground team project tutorials
+were held by the faculty member during which potential
+views (of the viewpoints) were considered, the
+representation schemes and notation discussed and
+determined for the models that were being developed.
+Guidance was given to team members for each viewpoint
+entertained in the project in the form of design patterns,
+templates, and representative principles for developing
+models for each viewpoint. The concerns of the target
+organization were presented by the project sponsor, and
+further analyzed by the team. The project sponsor also
+supported the team when there was need for clarification on
+particular aspects of the business case. The assignment
+deliverables developed during the course are addressed in
+Section 3.4. Team members were required to collaborate
+with each other as they developed models for the views of
+the respective viewpoints assigned to them, making the
+teamwork a very real architecture experience. The team
+became aware of the importance of alignment and
+architecture governance for the XYZ ACO initiative within
+the context of the enterprise strategy. Ultimately the intent
+was to obtain seamless integration of the viewpoint
+architectures developed by each team member.
+Factors influencing successful teamwork include
+following a defined teamwork process. This involves
+obtaining participation and involvement of all team members,
+and maintaining sound team management. In this project the
+faculty member served as team lead and assumed
+responsibility for managing the teamwork process. Quality
+individual efforts should be followed by the integration of
+the independent deliverables into a coherent result, here the
+EA Specification Document. A key success factor for
+working professionals when participating in this type of team
+project is regular communication among team members.
+Team members should be committed to the team by sharing
+a sense of purpose, working in the assigned roles as business
+and technology architects, and displaying mutual trust in
+each other.
+
+2.4 Selection of the Architecture Approach
+Extensive experience has been built over a number years on
+architecture approaches in the education context by the
+senior author. The students were exposed to a number of
+widely published architecture approaches (CEA, 2012; The
+Open
+Group, 2012; Cameron and Purao, 2010; Cameron,
+2008; Zachman, 2007; Schekkerman, 2006; Steenkamp et al,
+2004), and were well versed in the frameworks,
+methodologies, and tools that are used in the practice.
+Projects like the one reported here require an agile and lean
+approach which requires student teams to apply the theory of
+architecture development with rigor while also providing
+experience with interpreting the project charter, developing a
+project plan, performing analysis of the organization, and
+understanding the process and project requirements for the
+EA project. There was a tight time constraint to meet the
+project charter, and an agile and lean architecture approach
+that has been used in a number of architecture projects over
+several years was adopted in this project.
+
+2.5 Architecture Viewpoints Addressed
+The architecture viewpoints of interest for the XYZ ACO
+health care initiative and the EA team project were
+considered in allocating teamwork responsibilities. With the
+scope of the project charter in mind, viewpoints entertained
+were the Information, Business System , Data, Application
+and Enterprise Security Viewpoints; the overarching
+Enterprise Viewpoint was addressed by faculty and the
+project sponsor.
+
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+109
+
+### Page 6
+Level Goals and Measures Design and Implementation Management
+Organization (Strategic) Goals defined and Measures determined
+Goals are: Quality systems, Affordable systems and care, Accountability, Transparency,
+Ease-of-Use, High Security
+Measures are:
+ Quality: Improved Patient Service (SPR) – # favorable patient  reviews per doctor/
+specialist per month
+ Affordability: Ratio of  Services/ Cost (Financial); # patients serviced per month; #
+medical procedures performed per month
+ Accountability: Compliance with AC Act
+ Transparency: Data/ Information available to all through authorizations
+ Ease-of-Use: User satisfaction
+ Security: # security lapses
+Develop XYZ ACO Enterprise Strategic Plan
+which:
+ Ensures that performance of the enterprise is
+attained in terms of the Goals and Measures
+ Enables business continuity
+ Supports existing XYZ ACO Systems
+ Complies with Principles/ Concerns for the
+EA viewpoint
+ Calls for the Design and Implementation of
+an integrated EA Dashboard which indicates
+measures and  has drilldown capability
+ Authorizes the EA initiative
+ Plan, monitor, review and control enterprise
+performance  in accordance with the
+Enterprise Strategic Plan
+ Verify that Goals and Measures are
+communicated.
+ Review EA Project progress i.t.o. stated
+Goals and Measures.
+ Maintain Senior Management support for EA
+initiative
+ Review Tactical Planning
+ Review alignment of tactical strategy with
+enterprise strategy
+
+Process (Tactical)
+Goals for business processes for EA initiative are defined and measures determined
+Process Goals
+Princ. 1- Improve care quality and access to health care
+Princ. 2: Affordability - reduce the cost of health services
+Princ. 3: Provide  Information transparency among participating stakeholders
+Princ. 4: System Design must promote reuse within and among XYZ hospital chain
+Princ. 5: Flexible balance in complexity, manageability and performance
+Princ. 7: High Security of information, business systems, data, application and infrastructure
+Process Measures are:(Refined for IT Strategic Planning and Control)
+ Quality: Improved Patient Service (SPR) – # favorable patient  reviews per
+doctor/specialist per month
+ Affordability: Ratio of  Services/ Cost (Financial); number of patients serviced per month;
+# medical procedures performed per month
+ Accountability: Compliance with AC Act
+ Reuse: Templates, rubrics XYZ ACO standards enforced
+ Transparency: Data/ Information available to all through authorizations
+ Ease-of-Use: User satisfaction
+ Security: number of security lapses
+ Align process Goals and Measures with
+Organization Level goals
+
+ Perform XYZ ACO Tactical planning: IT
+Strategic Plan developed in several Releases;
+supports Enterprise Strategic Plan
+
+ Architecture initiative complies with
+Principles/ Concerns of EA for  all
+viewpoints
+
+ Meta Architecture Analysis is done for
+enterprise viewpoints
+
+ Authorize EA Projects
+
+ Plan, monitor, review and control the Tactical
+performance  in accordance with Tactical
+Plan/ IT Strategic Plan
+ Verify that process Goals and Measures are
+communicated
+ Review EA Project Releases per Design and
+Implementation i.t.o. business process Goals
+and Measures for EA initiative
+ Verify that Strategy and IT Strategic  Plan for
+EA initiative is well articulated and
+communicated to stakeholders
+ Maintain Senior Management support for the
+EA initiative
+ Maintain Stakeholder support for EA Project
+ Track alignment of IT Strategic Plan with
+Enterprise Strategic Plan
+
+
+Activity (Operational)
+ Release 1 Goals
+Princ. 4: System Design must promote reuse within and among XYZ hospital chain
+Princ. 5: Flexible balance in complexity, manageability and performance
+Princ. 6: Components must maintain high cohesion and a low coupling
+Princ. 7: High Security of information, business systems, data, application and infrastructure
+Activity Measures:
+ Quality: Improved Quality of Patient Service (SPR) – satisfaction ratio (# favorable
+patient  reviews per doctor/ specialist per month)
+ Transparency: Data/ Information available to all (# incidents of non-accessible data/
+information)
+ Reuse: Templates, rubrics XYZ ACO standards enforced
+ Ease-of-Use: User satisfaction with user interfaces
+ Security: defined for all viewpoints; number of security lapses
+ Align Goals & Measure with IT Strategic
+Plan
+ Develop EA Project Plan Release 1
+ Define SAW document
+ Refine viewpoint principles
+ Perform Meta Architecture Analysis for
+viewpoints
+ Identify and select  standards
+ Define views for each viewpoint and develop
+models  (conceptual, logical, physical)
+ Maintain EA Repository and System
+Documentation
+ Implement EA Release 1 initiative
+ Plan, monitor, review and control the EA
+Project performance  in accordance with EA
+Project Plan
+ Goals & Measures for EA Project Release 1
+are communicated
+ EA Project Goals and Measures are met
+ Track alignment of EA Project Plan with IT
+Strategic Plan
+
+Table 2. XYZ ACO Performance Matrix (adopted from Harmon, 2007, pp.6 )
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+110
+
+### Page 7
+3. ARCHITECTURE APPROACH
+
+An architecture approach for developing the enterprise
+architecture specifications involves the architecture
+processes and steps of the methodology supporting the
+processes to be followed, and the tools to construct the
+models of the architecture. The selected architecture
+approach is systematic and has the features of agile and lean
+development as described in this section. This approach is
+characterized by five essential components, namely the
+architecture principles and concerns relevant for an EA
+initiative, the architecture meta-architecture framework, the
+architecture process model, the supporting architecture
+methodology, and the tool environment for developing the
+models for the EA architecture specification. These
+components are described in brief in the next sub-sections.
+
+3.1 Meta-Architecture Framework
+The complexity of systems and processes of medium to large
+enterprises requires that IT systems not be viewed in
+isolation, but that all relevant factors and concerns be taken
+into consideration when developing architecture models. The
+meta-architecture framework is based on the interpretation of
+architecture, as the fundamental organization of a system
+embodied in its components, their relationships to each other,
+and to the environment, and the principles guiding the
+architecture design and evolution. The architecture design
+specifications are a blueprint of the policies, plans, processes,
+systems and stakeholders of the organization, and serve as a
+starting point for analysis, design, and decision making. The
+goal of rigorously documenting the EA is to provide insight
+in the organizational structures, processes, and technologies
+that make up the organization, allowing opportunities for
+improvements in efficiency and strategy alignment to be
+examined. A meta-architecture framework provides an
+analytical frame of reference to deal with the complexities
+when planning, developing and integrating the constituent
+architectures of the EA. It provides guidance by analyzing
+the enterprise assets in terms of viewpoints and constituent
+views when defining architecture models of a target
+enterprise system. This analytical schema enables architects
+to consider all relevant organizational matters, including
+concerns of stakeholders, principles underpinning decisions
+of policy makers and architects, roles of stakeholders,
+standards, and model notations when modeling the
+architecture specifications.
+The analysis was performed by the project team of the
+XYZ ACO Group, structured into the Enterprise Information,
+Business Systems, Data, Application and Enterprise Security
+Viewpoints, and given in the Teaching Case Notes, Table 1.
+The meta-architecture framework schema is given in Table 3
+below. In the project the analysis was done for each
+viewpoint of concern providing the data for each cell in the
+matrix.
+
+3.1.1 Summary of Me ta-Architecture Framework
+Attributes: The meta-architecture framework has a matrix
+representation scheme with attributes to be instantiated for
+the models of views of viewpoints of importance to
+stakeholders. The terminology used here is reviewed briefly.
+A Viewpoint defines abstractions on the set of models
+representing the EA. It is a specification of the conventions
+for constructing and using the views that contain identity,
+state, and behavior of a model. The term View is used to
+refer to the expression of a system’s architecture (strategic,
+tactical and operational) with respect to a particular
+viewpoint and may be of a particular Type, namely
+conceptual, logical or physical. A viewpoint may have one or
+more views that are expressed in terms of models. Viewpoint
+Models are the collection of models that are developed for
+the views of a viewpoint. A view is based on a pattern or
+template from which to develop individual models by
+establishing the purposes and audience for the view, and the
+techniques for its creation and analysis. This taxonomy may
+be used to manage the inherent complexities in architecture
+work. When modeling a view a particular language is used to
+describe the view as defined below. The Architecture Phase
+refers to the phase in the architecture process model when
+the model of a view is developed.
+Other framework attributes are summarized next:
+•
+ Purpose pertains to the intent and use of architecture
+views, and to facilitate the expression and communicatio n of
+the viewpoints thereby laying a foundation for quality
+through standardization of elements and practices for
+architecture descriptions. The purpose is determined by what
+a stakeholder wants to achieve. The purpose is categorized
+into the processes of designing, deciding, and informing.
+Design views support architects and designers in the design
+process from initial sketch to detailed design, and typically
+focus on a specific conceptual domain (e.g. application
+architecture, business process model) but can also be used to
+define the inter -dependencies between domain architectures;
+Deciding views assist managers in the process of decision
+making by offering insight into cross -domain architecture
+relations, typically through projections and intersections o f
+underlying models (ex: cross -reference tables, landscape
+maps, lists, and reports); Informing views help to inform any
+stakeholder about the enterprise architecture, in order to
+achieve understanding, obtain commitment, and convince
+adversaries (e.g. illustrations, animations, flyers, etc).
+• Stakeholder(s) refer to people who have key roles in,
+or concerns about, the EA such as for example users,
+developers, or managers. Stakeholders may be individuals,
+teams, or organizations interested in a view of an
+architecture initiative.
+• Concerns and Principles  embodied in a view.
+Concerns are the key interests important to the stakeholders
+of the target system, and determine the acceptability of a new
+architecture design for the stakeholders. Architecture
+Principles provide guidance for analysts, architects and
+designers when developing architecture models. (refer
+Section 3.2)
+
+
+Model Portfolio for Each Viewpoint
+Model  View/
+Type
+Stage/
+Phase
+Purpose Concern/
+Principle
+Stakeholder Content  Layer Aspect Standard/
+Best practice
+Modeling
+Language
+Tool
+Data Data Data Data Data Data Data Data Data  Data Data
+Table 3. Schema of Meta-Architecture Framework
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+111
+
+### Page 8
+• Content refers to what is contained in a view, and is
+characterized by the three abstraction levels: Detail,
+Coherence, and Overview. Detail provides the necessary
+information at the various architecture layers to the
+interested stakeholders in the various domain s (e.g.
+information, product, process, and organization domains at
+the business layer; data domain and application domain at
+the application layer; and technical infrastructure domain at
+the technology layer of the architecture). Detail can span the
+gamut from UML components and deployment diagrams to
+business process models. Coherence content extends the
+view to more than one layer in order to focus on
+architecture relationships (e.g. process -uses-system or
+application-uses-object). Typical stakeholders ar e
+operational managers responsible for a collection of IT
+services or business processes. Overview content represents
+multiple layers at a very high level (e.g. an executive
+overview) to be addressed by management and enterprise
+architects.
+•
+ Layer includes business, application, and
+technology layers (these layers correspond to the business,
+system, and technology levels in the Zachman framework).
+• Aspect refers to the structure, behavior, or
+information (these aspects correspond to the network,
+function, and data aspects of the Zachman framework).
+• Modeling language is the syntactical definition
+used when developing a model, and is formal, semi -formal,
+textual or graphic.
+• Standard/ Best practice refers to the de facto or de
+jure standard or best pr actice adopted when developing a
+model.
+• Tool refers to the automated capability used to
+develop the model, and which supports the modeling
+languages for the definition, development, generation,
+editing, and management of architecture views.
+
+3.2 Concerns and Principles
+Concerns and principles pertain to the EA initiative’s
+functioning, development, and operation, including
+considerations such as performance, reliability, security,
+distribution, and extensibility. The principles should be
+stable, but flexible enough to accommodate changes in the
+IT environment. Table 4 shows the main concerns and
+principles for this team project, here completed for the
+overarching Enterprise Viewpoint using the TOGAF 9
+template (The Open G roup, 2012). Each principle is
+identified by name and number, a descriptive statement, the
+rationale and implications. Decisions drawn from the
+Enterprise Viewpoint may have greater long-term value
+than those made from any particular viewpoint. Table 2 in
+the Teaching Case Notes provides the principles for all the
+viewpoints considered by the project team that guided the
+architecture and design level development efforts for the
+XYZ ACO project.
+
+
+OVERARCHING ENTERPRISE VIEWPOINT
+CONCERN/
+PRINCIPLE
+DEFINITION
+Quality   XYZ ACO Group Quality Care
+ Statement The Enterprise should provide excellence in care through its coordinated care services.
+ Rationale Strategic Business Vision is to have an accountable health care organization providing coordinated excellence in health care
+services.
+ Implications Health care services provided by all stakeholders must be of consistent quality throughout the enterprise; Requires that a
+systematic enterprise architecture be developed adhering to all the stated principles
+ Affordability  Affordable Health Care Services
+ Statement Health Care Services should be affordable for the membership
+ Rationale Strategic Business Vision
+ Implications Costs should be contained by all stakeholders throughout the Group; sustainable health care spending; comply with
+Affordable Healthcare Act of the Centers for Medicare & MediCaid Services (CMS)
+ Accountability Accountable Health Care Services
+ Statement XYZ ACO aims to manage healthcare costs through accountability by all stakeholders
+ Rationale Strategic Business Vision
+ Implications All stakeholders must be accountable for their services and behavior and healthcare must be managed; confidentiality if
+patients must be maintained
+Ease of Use  Applications easy to use
+ Statement Software Systems and User Interfaces must be easy to use
+ Rationale Complexity must be reduced to avoid mistakes
+ Implications Flexibility and ease of use must be balanced in terms of complexity, manageability and performance
+ Transparency  Information Transparency and Visibility
+ Statement Data and information must be transparent to stakeholders
+ Rationale Data and information must be transparent (visible) to the users based on need to know and responsibility
+ Implications Authorizations must be given and authentication performed on all classes of users of the systems
+  Table 4. Concerns/ Principles Governing the Enterprise Viewpoint
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+112
+
+### Page 9
+3.3 Architecture Process Model
+Like other life cycle process models an architecture process
+model structures the architecture processes into interrelated
+life cycle stages to depict the tasks of architects an d
+developers who will plan, manage, develop, evaluate and
+maintain the enterprise architecture. The Architecture
+Process Model in Figure 3 illustrates the stages of
+architecture development processes and the relationship
+between the enterprise strategy and IT strategy of XYZ
+ACO and was provided to the team as part of the
+architecture approach.  It represents an iterative process to
+ensure the agile development of the EA specification that is
+efficient and adaptive to business needs. The focus in the
+project was on the Information/ Business Systems
+Architecture Stage and the Architecture Stage. The team
+project sponsor provided some input regarding the
+enterprise and IT strategies of XYX ACO to give context to
+the EA initiative.  This agile process model, informed by the
+Agile Manifesto (Beck et al., 2013), was of particular value
+in the project since the time constraints of the project were
+finite. The four core values of agile process models and
+supporting methodologies are: 1. Stakeholders and their
+interactions have priority over processes and tools; 2.
+Working software, in projects of this kind the prototypes,
+are regarded as of more value than comprehensive
+documentation; 3. Customer collaboration, in this case the
+project sponsor, was of essential value; and 4. The project
+plan was used as a living document and updated as the
+project progressed. The main principles of Lean
+Development as described by Poppendieck (2007) were
+incorporated, including elimination of redundant work,
+focus on quality, continuous learning, mutual respect of
+stakeholders and team members, adherence to the project
+plan to deliver specific project deliverables, and always
+aiming to integrate the artifacts (of deliverables) into an
+integrated whole.
+3.4 Architecture Methodology
+Along with the architecture process model, the lean
+architecture methodology provided detailed steps and
+guidelines to be followed in the process model stages and
+phases, as well as specific deliverables for this team project.
+As mentioned a selection of the models developed in this
+project are given in the Teaching Case Notes supporting this
+paper.
+The steps of the methodology are given in Table 5,
+along with the required artifacts to be developed and the
+main team assignments (TAs) resulting from executing the
+steps of the methodology. Each team member was
+responsible for models relating to the assigned viewpoint,
+and team members collaborated to develop artifacts of
+mutual interest.
+
+3.5 Tool environment
+The project team used the following tools to accomplish this
+project:
+•
+ Microsoft Project to create the project plan, define
+the schedule, the work -breakdown-structure, assign
+resources and monitor resource usage;
+• Microsoft Visio to develop the use cases;
+• OpenText ProVision Workbench for developi ng the
+architecture models;
+• Microsoft Excel to create the budget estimation, and
+manage cost to budget allocations;
+• Microsoft Word For project documentation;
+• Blackboard/WIMBA and Skype for online meetings
+of the project team.
+
+
+
+
+Figure 3. Enterprise Architecture Process Model
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+113
+
+### Page 10
+Architecture Stage/Phase Steps Deliverables
+IT Architecture Stage
+Planning Phase
+
+1. Review project charter
+2. Review  viewpoint guidelines
+3. Adopt architecture framework
+4. Prepare Architecture Project Plan
+5. Determine Framework/review concerns/
+principles within context of chosen
+architecture framework for viewpoint.
+
+
+
+Architecture Project Plan - TA1
+Framework and Process Model
+Overarching and viewpoint concerns/
+principles
+Architecture Stage
+IT Analysis Phase
+
+6. Perform functional analysis; analyze project
+requirements, interpret project charter; develop
+viewpoint definitions
+Viewpoint definitions: Function tables
+7. Gather information requirements from team
+and project sponsors relevant to viewpoint
+Viewpoint requirements: Use-cases and
+scenarios
+8. Choose representation schemes, modeling
+notations and CASE tool.
+Representation schemes/ notions
+9. Adopt documentation method and template. EAB documentation method and
+project folder format
+10. Adopt method for alignment with enterprise
+and IT strategies.
+Performance Matrix and alignment
+method
+11. Model logical views and document using
+CASE tool.
+System component diagram, UML
+sequence diagrams, UML class
+diagram using tools (Section 3.5)
+12. Develop Draft Architecture Description Draft Architecture Specification
+TA2
+Target Architecture Stage
+Build IT Architecture
+Phase
+13. Determine draft architecture design/scope;
+model physical views and document using
+PVW
+Assigned architecture
+14. Develop Service Level Agreement Service Level Agreement
+15. Develop Disaster Recovery Plan Disaster Recovery Plan
+16. Complete the Architecture Specification
+Document
+Final Architecture Specification
+Document
+TA3
+
+
+
+4. MODELS
+
+This section summarizes the models developed by team
+members as home assignments. A selection of models
+developed by the team when following the architecture
+process model of Figure 3 for each viewpoint, is included in
+this paper as appropriate, and some others are provided in
+the Teaching Case Notes accompanying the paper. The
+models vary in level of detail and type, such as conceptual,
+logical and physical. A conceptual model is an abstract
+rendering of a view, whereas a logical model provides more
+generic static and behavioral data needed to implement the
+model in reality. A physical model includes decisions about
+software and hardware systems and related infrastructure of
+an implementation, and represents the intended reality. The
+analysis of the project charter and teamwork requirements
+for the architecture initiative enabled the team to fully
+populate the meta-architecture framework (refer Teaching
+Case Table 3. Schema of Meta-Architecture Framework),
+and a selection of these models, developed by the team in
+the architecture stages and phases, are indicated in the
+populated architecture framework in Teaching Case Notes,
+Table 1. To facilitate referencing in this Teaching Case and
+supporting Teaching Case Notes, Table 6 below provides
+the partial architecture framework showing the first three
+columns (of Teaching Case Notes,  Table 1), i.e. the
+viewpoint, model portfolios and views/model types. Figures
+and tables in bold are actually shown in either the Teaching
+Case paper or the supporting Teaching Case Notes. As
+mentioned the viewpoints of interest in this team project
+were Enterprise, Information, Business System, Data,
+Application and Enterprise Security viewpoints. It must be
+noted that other viewpoints would also be needed but were
+not addressed due to team size and time constraints, and are
+by no means of lesser importance.
+
+4.1 Enterprise Viewpoint Models
+Enterprise Viewpoint models provide the context of the EA
+initiative, the strategies, concerns and principles of XYZ
+ACO. Table 6 lists the models developed by the team,
+included in this paper and in the supporting Teaching Case
+Notes: Teaching Case Notes Table 3 (1.1) XYZ ACO
+Business Strategy, and Teaching Case Notes Figure 2 (5.1)
+XYZ ACO Value Chains. The XYZ ACO Performance
+Matrix (Table 2) presented in this paper, summarizes the
+performance analysis of the EA initiative for XYZ ACO in
+terms of goals and measures at three levels, namely the
+Organization Level (strategic), the Process Level (tactical)
+and Activity Level (operational). The XYZ ACO business
+strategy is stated in the Teaching Case Study Notes, Table 3.
+
+
+Table 5. Architecture Methodology
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+114
+
+### Page 11
+Viewpoint Model portfolio View/Model type
+Enterprise XYZ ACO Value Chains Teaching Case Notes Figure 1 Process Model/  Conceptual
+ Statement of Arch. Work Template Teaching Case Table 1 SAW Template/ Logical
+ Populated Architecture Framework Teaching Case Notes Table 1   Framework/ Conceptual
+ XYZ ACO Performance Matrix Teaching Case Table  2 Strategic-Tactical-Operational/
+Planning
+ Business Strategy Table Teaching Case Notes Table 3 Strategy Statement
+ XYZ ACO Principles & Concerns, Teaching Case Table 4
+Viewpoint  Principles & Concerns  Teaching Case Notes Table 2
+Statement of Princ. & Concerns/
+Planning
+Information Hierarchy of Information Needs Teaching Case Notes Figure 3  Inf. Req. Diagram/ Strategic-Tactical-
+Operational/ Planning
+ Core Information Requirements Teaching Case Notes Figure 4  Information Req.Diagram / Logical
+ Summary of Information Flows Teaching Case Notes Figure 5 Information Flow/ Logical
+Business
+Systems
+XYZ ACO Business Capability Map Teaching Case  Figure 1  Bus. Taxonomy/ Conceptual
+ XYZ ACO Business Context Diagram Teaching Case  Figure 2  Business Context
+ Patient Appointment Scheduling Teaching Case Notes Figure 6 Process model/ Conceptual/
+ Service Performance Management Teaching Case Notes Figure 7 Process model/ Logical
+Data Partial CRUD Matrix Teaching Case Notes Table 5 Functional/ Logical
+ Conceptual Data Model Teaching Case Notes Figure 8 Data model/ Conceptual
+Application Physician Performance Reporting System Use Case Teaching
+Case Notes Figure 9
+Use case/ Conceptual
+ Patient Appointment Manager System Use Case Teaching Case
+Notes Figure 10
+Use case/ Conceptual
+Security Composite Enterprise Security Diagram Teaching Case Notes
+Figure 11
+Enterprise security/ Conceptual
+ High Level Security Model of XYZ ACO Teaching Case Notes
+Figure 12
+Security model/ Conceptual
+ Information Security Management Teaching Case Notes Figure
+13
+Strategic- Tactical- Operational/
+Security
+
+
+
+4.2 Information Viewpoint
+This section contains the models for the Information
+Architecture viewpoint. The Information Architecture
+represents the information required by the processes and
+activities performed within the XYZ ACO. The architecture
+describes the interdependencies, connections and
+relationships of information entities. Teaching Case Notes
+Figure 3 gives the Hierarchy of Information Requirements
+of this initiative summarized into three categories, namely
+strategic, tactical, and operational information. The figure
+shows a systemic structure of information requirements for
+the entire enterprise, since effective information analysis
+should consider all levels of the business in order to obtain
+comprehensive information architecture for the enterprise as
+described by Perks & Beveridge (2003).
+
+4.3 Business Systems Viewpoint
+The business systems viewpoint comprises the business
+processes, systems, and other resources that are used to
+perform XYZ ACO’s operational activities. Release 1 of the
+new EA addressed Service Performance Management
+capability and Patient Appointment Scheduling, defining
+the scope of the project. The business systems viewpoint
+was guided by two core principles namely Quality and
+Accountability. Adherence to the other principles was
+required for all viewpoints of architecture specifications.
+Table 6. Partial Architecture Framework
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+115
+
+### Page 12
+Models for this viewpoint include the XYZ ACO Business
+Capability Map in Figure 1, which highlights some key
+capabilities to be leveraged in realizing the stated enterprise
+strategy. Other models for this viewpoint include the XYZ
+ACO Business Context Diagram in Figure 2, Patient
+Appointment Manager System (Teaching Case Notes,
+Figure 5.9) and Physician Performance Reporting System
+(Teaching Case Notes, Figure 5.10).
+
+4.4 Data Viewpoint
+Data is the most valuable asset of an organization, and may
+be aggregated, analyzed, and acted upon to deliver
+meaningful information. XYZ ACO has recognized the
+need for accurate and reliable data for accountable care and
+the key principles of share ability, accessibility, and security.
+A comprehe
+nsive data analysis of this viewpoint was done
+to identify the XYZ ACO organizations that create, read,
+update, and delete data from each of the data entities, and
+resulted in the partial CRUD Matrix (Teaching Case Notes,
+Table 5. The CRUD Matrix provides a list of data entities
+and the business systems that access the data based on the
+requirement, i.e. (C) create, (R) review, (U) update, and (D)
+delete. It also includes a Conceptual Data Model of XYZ
+ACO (Teaching Case Notes, Figure 8, containing the main
+classes along with their attributes and data types. The
+relationships among classes are governed by the share
+ability and accessibility principles.
+
+4.5 Application Viewpoint
+Models of relevance to Release 1 of the EA Initiative were
+developed by the team and include the Service Performance
+Reporting System which forms part of Service Performance
+Management, and the Patient Appointment Manager System.
+The application architecture to realize the Service
+Performance Management capability shown in Figure 1
+addresses concerns pertinent to assessing PCPs/Specialists
+work and their quality of service provided to patients treated
+at XYZ hospital. This principally includes reporting on their
+daily, weekly and monthly work schedule, medical
+procedures performed, and patients’ review of health care
+service received during visits and/or treatment at XYZ
+hospital.
+
+4.6 Enterprise Security Viewpoint
+The requirements of the XYZ ACO Enterprise Security
+Architecture is holistic and encompass all security-related
+concerns of the EA initiative, including physical, data,
+information, application, and infrastructure security. This
+means that the security architecture viewpoint is regarded as
+a composite viewpoint requiring models in all viewpoints.
+In addition, other security related concerns deal with:
+•
+ Corporate governance, including the security
+compliance to information security policy and procedures.
+• Security management on the strategic, ta ctical and
+operational level.
+• Legal, ethical and social concerns pertaining to
+information security.
+• Human resources concerns relating to all people
+directly and indirectly, such as the security culture, security
+awareness and training.
+• Security of physical facilities including all the
+resources needed to house and protect IT systems in the
+organization (e.g. physical access control and security
+doors).
+Among the models developed for this viewpoint are
+Composite Enterprise Security Diagram (Teaching Case
+Notes, Figure 11), High Level Security Model (Teaching
+Case Notes, Figure 12) and Organizational Levels of
+Information Security Management (Teaching Case Notes,
+Figure 13).
+
+5. DISCUSSION
+
+A selection of artifacts developed and used in the team
+project is included in this Teaching Case paper. Some
+supporting models also developed by the project team are
+given in the Teaching Case Notes. Feedback on the course
+design and integration of a team project into the course has
+been positive. For their Course Reflection students reported
+that their exposure to theory and practice of enterprise
+architecture adequately prepared them for the course
+assignments. In particular the coverage of technology,
+representation schemes, notations, and tools available to
+model the behavior and structure of target architectures
+prepared them for the team assignments.
+In the individual assignments, completed early in the
+course, students found it stimulating to analyze a business
+problem of their own choice and propose an IT enablement
+intuitive with EA focus, and that it enhanced their problem
+solving skills. Students’ feedback regarding the team project
+component of the course included a number of points:
+• the benef icial experience of learning -to-use while
+applying their theoretical knowledge to the XYZ ACO
+business case;
+• team members’ varying academic and experiential
+backgrounds were complementary, challenging them to
+collaborate efficiently in areas of individu al competence,
+while also sharing and integrating the deliverables of their
+assigned tasks into the architecture design document;
+• team members were equipped to work
+independently on their architecture viewpoint as assigned in
+project;
+• collaboration among team members was a positive
+learning experience;
+• the tools provided in the course to develop
+architecture models were very useful;
+• collaboration was facilitated by the file exchange
+capability in BB helped team members to exchange files
+efficiently; color coding used to differentiate the team
+members’ contributions was very helpful when multiple
+team members are working and modifying the same
+document;
+• The team project provided an understanding of the
+different viewpoints of the EA. How these vi ewpoints
+interact, interrelate and complement each other is something
+that would have been hard to understand without this team
+project;
+• It became clear what the value of IT enablement
+and the EA are to an enterprise;
+Student feedback also raised some issues they
+experienced, such as:
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+116
+
+### Page 13
+• Different levels of performance of team members at
+times resulted in project delays, and reduced other team
+members’ motivation and quality of the final outcome;
+• Experimenting with a tool such as Google Docs
+could have been better
+• It was hard to integrate artifacts into a consistent
+and coherent architecture design document; there were
+duplications and other redundancies, inconsistent
+terminology and naming of figures and tables, and similar
+issues;
+• While peer reviewing of team members’  artifacts to
+ensure quality control was time consuming, but at the same
+time afforded the opportunity to review and comment on
+each others’ work;
+•
+ Some students felt the insufficient number of face -
+to-face meetings and that the virt ual meeting technology,
+Wimba, was not as good as they needed;
+• Some students would have preferred to have the
+team project start earlier in the term, so that there would be
+more time to integrate the multiple models, deliver quality
+deliverables, and develop a prototype of the target system;
+•
+ Team members needed more involvement of the
+project sponsor, and only later in the project understood the
+importance of reaching out for support.
+From the faculty perspective this team project
+experience also demonstrated how a culturally diverse
+group of students, faculty and sponsor, representing six
+nationalities, can work effectively on a team project. The
+project emphasized the need for a sound foundation in IT
+systems, project management and supporting tools, and
+affirmed that specific prerequisite knowledge and
+experience are needed before allowing students to register
+for this type of course. It is just too time-consuming to tutor
+team members in areas of lacking knowledge and skills
+once the team project has started and also causes frustration
+among other well prepared team members.  It was important
+to complement the on-ground class sessions with team
+tutorials during which specific issues and problems were
+discussed and addressed. Reviewing and grading team
+project deliverables represent a considerable investment of
+faculty’s time, but the value of meaningful feedback to team
+members cannot be overstated.  The challenges of managing
+a team project of this nature should not be under estimated.
+This project is another example of the benefits of having a
+course where students apply theoretical knowledge to a
+problem of practice, learning by doing, and the importance
+of virtual collaboration tools when collaborating in a hybrid
+mode, i.e. face- to-face in-class and virtual communication
+among team members.
+
+6. ACKNOWLEDGEMENTS
+
+This project was sponsored by a healthcare organization in
+Michigan, and is based on the challenges facing the
+organization to provide affordable and accountable health
+care. The authors thank the sponsor, with appreciation for
+making the business case available, sponsoring the project
+and supporting the team in the architecture work.
+
+
+
+7
+. REFERENCES
+
+ACO Inc. (2012). ACO Strategic Business Plan, Private
+Communication, pp. 5.
+Beck, K., Beedle, M., van Bennekum, A., Cockburn, A.,
+Cunningham, W., Fowler, M. & Thomas, D. (2013)
+Manifesto for Agile Software Development. Retrieved
+from Manifesto for Agile Software Development:
+http://agilemanifesto.org/
+Bloom, B.S., Engelhart, M.D., Furst, E.J., Hill, W.H. &
+Krathwohl, D.R. (1956) Taxonomy of Educational
+Objectives: the classification of educational goals;
+Handbook I: Cognitive Domain, New York, David
+McKay Co. Inc.
+Cameron, B. H. & Purao, S. (May 2010) “Enterprise
+Integration:  An Experiential Learning Model.”
+Information Systems Education Journal, 3(2), pp. 9-14.
+Cameron, B. H. (2008) “Enterprise Systems Education:
+New Challenges and Directions.” Proceedings of the
+Americas Conference on Information Systems, Canada.
+Cappel, J.J. & Schwager, P.H. (2002) “Writing IS Teaching
+Cases: Guidelines for JISE Submission.”  Journal of
+Information Systems Education, Vol. 13 (4).
+Center for Enterprise Architecture, College of Information
+Sciences and Technology, Pennsylvania State
+University, United States of America, Retrieved from
+http://ea.ist.psu.edu/about.php
+Dumdum, U. R. & Tastle, W. I. (1998) "Towards a Broader
+Competency-Based IS Education: A proposed
+Improvement Package for Analysis of Case Studies."
+Proceedings of ISECON'98, October 15-18, pp. 28-33.
+Harmon, P. (2007) Business Process Change, a Guide for
+Business Managers and BPM and Six Sigma
+Professionals, Second Edition, Morgan Kaufmann.
+Hogue, A., Kapralos, B. and Desjardins, F. (2011) “The
+Role of Project-Based Learning in IT: A Case Study in
+a Game Development and Entrepreneurship Program.”
+Interactive Technology and Smart Education, Vol.8
+N0.2 pp. 120-134.
+Meyer, (2005) “Capstone Design Outcome Assessment:
+Instruments for Quantitative Evaluation.” Frontiers in
+Education (FIE '05) Proceedings 35th Annual
+Conference. Indianapolis, USA.
+Perks, C. and Beveridge, T. (2001) Guide to Enterprise IT
+Architecture, Springer, 2001.
+Poppendieck, M. (2007) “Lean software development.”
+Companion to the Proceedings of the 29th International
+Conference on Software Engineering (pp. 165-166),
+Washington: IEEE. Retrieved from
+http://dx.doi.org/10.1109/ICSECOMPANION.2007.46
+Rivet, A. E. & Krajcik, J. S. (2004) “Contextualizing
+Instruction in Project-Based Science: Activating
+Students' Prior Knowledge and Experiences to Support
+Learning.” Proceeding of  6th International Conference
+on Learning Sciences, pp.435-442.
+Schekkerman, J. (2006) How to Survive in the Jungle of
+Enterprise Architecture Frameworks: Creating or
+Choosing an Enterprise Architecture Framework,
+Trafford Publishing Company.
+Steenkamp, A.L., Kakish, K., Basal, A., Dawwas, M.,
+Konda, D. & Shulaiba, R. (2004) “A Team Project on
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+117
+
+### Page 14
+Information Technology Infrastructure Architecture.”
+Proceedings of ICIER2004, Washington DC.
+Steenkamp, A L, White T & Kakish, K. (2002) “A Project-
+centred Approach to Teaching Information Technology
+and System Architectures.” Journal of Informatics
+Education & Research, Vol.4, No.2.
+Steenkamp, A.L., Alawdah, A., Alomari, O., Gai, K.,
+Khattab, N. & Swaby, C. (2013) Teaching Case Notes,
+available from JISE on request.
+Stephens (2001) “A Meta-Analysis of Research on Student
+Team Effectiveness: A Proposed Application of Phased
+Interventions.” Proceedings of the International
+Academy for Information Management (IAIM) -
+International Conference on Informatics Education &
+Research (ICIER2001), New Orleans, LA, December,
+pp. 14-16.
+Tang, H-L., S. Lee, & S. Koh (2000-2001) “Educational
+Gaps as Perceived by IS Educators: A Survey of
+Knowledge and Skill Requirements.” Journal of
+Computer Information Systems, (Winter), pp. 76-84.
+The Open Group (2011) Open Group Standard, TOGAF®
+Version 9.1, The Open Group.
+Zachman, A. J. (June 2007) The Framework for Enterprise
+Architecture: Background, Retrieved May 26, 2012,
+from Enterprise Information Management Institute:
+http://www.eiminstitute.org/library/eimi-
+archives/volume-1-issue-4-june-2007-edition/the-
+fram
+ework-for-enterprise-architecture-background-
+description-and-utility.
+
+AUTHOR BIOGRAPHIES
+
+Annette Lerine Steenkamp  is a Professor Computer and
+Information Systems in the
+College of Management,
+Lawrence Technological
+University, Michigan, USA. In
+her academic career she has
+taught extensively in Software
+Engineering, as well as
+Enterprise Architectures,
+Enterprise and Information
+Technology Life Cycle
+Processes, and research
+methodology in graduate and doctoral programs. At present
+she has an active research agenda supervising a number of
+doctoral dissertation research projects in the areas of
+enterprise architecture, knowledge management and
+approaches to process improvement in organizations. She
+has published a number of journal and conference articles in
+the field of Enterprise Architecture addressing architecture
+approaches, processes and viewpoints.
+
+
+Amal A. Alawdah is a doctoral candidate in the Doctor of
+Management in Information
+Technology. She has Bachelor’s
+and Master ’s degrees in
+Computer Science. She resides
+in Southfield, Michigan with
+her family and is currently
+working on her dissertation.
+
+Osama Almasri is a doctoral candidate in the Doctor of
+Management in Information
+Technology with research
+interest in embedded systems
+engineering. H e holds a
+Bachelor’s in Electrical
+Engineering and a Master’s in
+Electrical and Computer
+Engineering.
+
+
+
+
+Keke Gai  is a doctoral student for the Doctor of
+Management in Information
+Technology degree at Lawrence
+Technological University,
+Michigan, USA. He holds
+degrees from Nanjing University
+of Science and Technology
+(B.Eng.), the University of
+British Columbia (M.E.T) and
+Lawrence Technological
+University (M.B.A). His
+research interests include cloud
+computing, service-oriented
+architecture, mobile enterprise architecture, and business
+process improvement. He has several publications in
+academic journals and conference proceedings.
+
+Nidal Khattab  is a Senior Project Engineer and the Auto-
+Coded Software Discipline Leader at Powertrain Embedded
+Controls Department in General Motors for more than 10
+years. He holds a Bachelor’s in
+Electrical Engineering, a Higher
+Graduate Diploma in Computer
+Sciences and Automatic Control,
+a Master’s in Electrical and
+Computer Engineering, and
+currently he is a doctoral
+candi
+date in the Doctor of
+Management in Information
+Technology at Lawrence
+Technological University. Areas
+of interest include Embedded Software Engineering
+Development, Process Improvement, and Knowledge
+Management.
+
+Carval Swaby is principal consultant at CGS Strategy LLC,
+U.S.A. and current doctoral
+student in the DMIT Program
+in the College of Management
+at Lawrence Technological
+University in Southfield,
+Michigan, U.S.A.  He has over
+twenty-five years broad-range
+experience in the field of IT,
+working across several
+industries – including financial
+services, insurance, banking,
+and manufacturing. His expertise ranges from application
+development through to enterprise IT management and
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+118
+
+### Page 15
+consulting. His current areas of specialization includes IT
+strategy planning, enterprise architecture (EA), business
+architecture, business process management (BPM), and
+capability model and roadmap development. Mr. Swaby
+holds a MSc. in Management of Information Systems and
+BSc. in Computer Science and Math from the University of
+the West Indies, Jamaica.
+
+Ramy Abaas has graduate degrees in engineering and
+management. He is an executive
+director focusing on the
+Healthcare business and
+Information Technology. He is
+employed by Agile Healthcare
+(AgileHCS), which offers
+extensive experience in
+Healthcare, is an Accountable
+Care Organization (ACO) and
+care quality (HEDIS). He has an
+extensive background in the
+healthcare domain and experience in team building, and has
+proven management skills in the areas of Medicare and
+Medicaid.
+
+Journal of Information Systems Education, Vol. 24(2) Summer 2013
+119
+
+### Page 16
+Copyright
+of
+Journal
+of
+Information
+Systems
+Education
+is
+the
+property
+of
+Journal
+of
+Information
+Systems
+Education
+and
+its
+content
+may
+not
+be
+copied
+or
+emailed
+to
+multiple
+sites
+or
+posted
+to
+a
+listserv
+without
+the
+copyright
+holder's
+express
+written
+permission.
+However,
+users
+may
+print,
+download,
+or
+email
+articles
+for
+individual
+use.

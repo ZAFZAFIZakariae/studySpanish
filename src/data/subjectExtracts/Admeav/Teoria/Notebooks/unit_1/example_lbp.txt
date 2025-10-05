@@ -1,0 +1,83 @@
+# Extracted content
+Source: subjects/Admeav/Teoria/Notebooks/unit_1/example_lbp.ipynb
+
+### Cell 1 · Markdown
+
+# Local Binary Patterns
+
+This example shows how to compute the Local Binary Patterns (lbp) of one image.
+
+Local Binary Patterns (LBP) is a texture descriptor used in image processing and computer vision for analyzing patterns or textures within an image. It works by comparing each pixel with its surrounding neighbors and encoding this local relationship as a binary number, which is then converted into a decimal value. This value serves as a feature that describes the texture in the local region of the image.
+LBP was first described in 1994 by Ojala et al.[1]
+
+## References
+ [1] T. Ojala, M. Pietikäinen, and D. Harwood (1996), "A Comparative Study of Texture Measures with Classification Based on Feature Distributions", Pattern Recognition, vol. 29, pp. 51-59.
+
+### Cell 2 · Code
+```python
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage.feature import local_binary_pattern
+
+from google.colab import drive
+
+# Mount the drive folder
+drive.mount('/content/drive') #(X)
+
+# Function to compute and normalize the histogram
+def calculate_histogram(lbp):
+    # Get unique patterns and their frequency
+    hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, lbp.max() + 1), range=(0, lbp.max() + 1))
+
+    # Normalize the histogram by dividing by the total number of pixels
+    hist = hist.astype("float")
+    hist /= (hist.sum() + 1e-6)  # avoid division by zero
+
+    return hist
+
+# Load the image in grayscale
+# Reading the image with OPENCV
+
+# Upload your photo
+#img_path = "/content/drive/My Drive/ADVIDEO/foto_valery.jpg"
+
+image = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+
+# LBP parameters
+radius = 1  # Radius of the circular neighborhood
+n_points = 8 * radius  # Number of points in the circular neighborhood
+
+# Compute the LBP
+lbp = local_binary_pattern(image, n_points, radius, method='uniform')
+
+# Compute the LBP histogram
+hist_lbp = calculate_histogram(lbp)
+
+# Visualize the original image, LBP image, and the histogram
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 6))
+
+# Show the original image
+ax1.imshow(image, cmap='gray')
+ax1.set_title('Original Image')
+ax1.axis('off')
+
+# Show the LBP image
+ax2.imshow(lbp, cmap='gray')
+ax2.set_title('LBP Image')
+ax2.axis('off')
+
+# Show the LBP histogram
+ax3.bar(np.arange(len(hist_lbp)), hist_lbp, width=0.8, color='blue', edgecolor='black')
+ax3.set_title('LBP Histogram')
+ax3.set_xlabel('LBP Patterns')
+ax3.set_ylabel('Normalized Frequency')
+
+plt.tight_layout()
+plt.show()
+```
+
+### Cell 3 · Markdown
+**EXERCISE**
+
+Load the 3 histological images provided. Obtain their LBPs and make a study of the LBP parameters to obtain a better differentiation between the different grades of cancer from the biopsies.

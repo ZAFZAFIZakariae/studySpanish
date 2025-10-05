@@ -1,0 +1,698 @@
+# Extracted content
+Source: subjects/Dbd/Prácticas/Práctica 1/practica1_2019.pdf
+
+### Page 1
+Práctica 1
+El SGBD Oracle
+Introducción al servidor Oracle y
+sus herramientas
+1
+
+### Page 2
+2
+Práctica 1.
+ Conocer la estructura del servidor Oracle.
+ Conocer las dos componentes de un servidor Oracle: la
+instancia y el almacenamiento secundario.
+ Conocer el concepto de conexión con el servidor Oracle y los
+modos de conexión.
+ Utilizar las herramientas Oracle: SQL*Plus y SQL Developer.
+ Conocer la forma de arrancar y apagar el servidor Oracle.
+Objetivos:
+2
+
+### Page 3
+3
+Práctica 1. Descripción del servidor Oracle
+Ordenador con
+software Oracle
+Servidor Oracle
+Base de Datos
+Oracle
+InstanciaAlmacenamiento secundario
+del servidor  (permanente)
+SGA: Reserva de memoria
+principal para uso del
+servidor (temporal)
+Procesos de fondo
+SGA
+El identificador del servidor Oracle que se va a utilizar en las prácticas es prueba
+En un ordenador que va a desempeñar las funciones de servidor de bases de datos y en el que se
+encuentra instalado el software de Oracle, se podrá poner en funcionamiento este servidor. Una
+vez hecha esta puesta en funcionamiento en el ordenador se encontrarán dos componentes
+asociadas al servidor Oracle, la instancia y la base de datos Oracle que explicaré más adelante.
+En un ordenador que va a hacer de servidor Oracle es posible poner en marcha más de un
+servidor, sin embargo, esto no es común. Habitualmente en un ordenador que va a realizar la
+función de servidor de bases de datos, se pone en marcha un servidor Oracle con los recursos
+suficientes para poder dar servicio al conjunto de usuarios que así lo requieran.
+3
+
+### Page 4
+4
+Práctica 1. Instancia Oracle
+Instancia Oracle: SGA (System Global Area) + Procesos de fondo
+ Es el medio para acceder al almacenamiento secundario (Base de Datos
+Oracle) del servidor.
+ System Global Area (SGA): reserva en memoria principal, contiene bloques
+de disco (transferidos) e información de control para uso del servidor.
+ Procesos de fondo: realizan tareas del servidor.
+Procesos de fondo
+CKPT
+LGWR
+DBWR
+ PMON
+SMON
+ ARC
+Instancia
+SGA
+Buffers datos Buffer diario
+Área compartida
+La primera de las componentes de un servidor Oracle es la instancia que está compuesta por:
+• SGA (Systema Global Area): área de memoria principal de uso exclusivo para el servidor
+Oracle, y en la que se pueden distinguir tres componentes (Cache de buffers de base de
+datos, buffer de diario y área compartida) con diferentes usos que después veremos. La SGA
+es muy grande, centenares de megas o incluso gigas y es la componente que permite acceder
+a la información almacenada en disco.
+• Procesos de fondo: estos procesos realizan tareas comunes del servidor sin dar un servicio
+específico a las solicitudes de los usuarios.
+4
+
+### Page 5
+5
+Práctica 1. SGA: System Global Area
+System Global Area (SGA): reservada en memoria principal, contiene datos e
+información de control para uso del servidor. Consta de tres partes:
+ Cache de Buffers de Base de Datos.
+ Buffer de Diario.
+ Área Compartida.
+SGA
+Buffers datos Buffer diario
+Área compartida
+5
+
+### Page 6
+6
+Práctica 1. SGA: Área compartida
+Área compartida:
+ Cache de biblioteca: contiene el texto de las últimas instrucciones SQL, el
+código del análisis, y un plan para su ejecución.
+ Cache del diccionario de datos: contiene la definición de las tablas
+recientemente accedidas y los privilegios de los usuarios conectados.
+SGA
+Buffers datos Buffer diario
+Área compartida
+ Área
+compartida
+Cache de
+diccionario
+de datos
+Cache de
+biblioteca
+El área compartida permite optimizar el funcionamiento del servidor.
+6
+
+### Page 7
+7
+Práctica 1. SGA: Cache de buffers de base de datos
+Buffer de datos:
+ Almacena los bloques de datos y de índices que han sido accedidos más
+recientemente para agilizar el acceso.
+ Sirve para minimizar los accesos a la memoria secundaria.
+ Puede ser muy grande.
+SGA
+Buffers datos Buffer diario
+Área compartida
+7
+
+### Page 8
+8
+Práctica 1. SGA: Buffer de diario
+Buffer de diario:
+ Almacena los cambios realizados por las transacciones sobre la BD con
+fines de recuperación.
+ Se utiliza secuencialmente.
+ Buffer circular (se reescribe).
+ Pequeño.
+SGA
+Buffers datos Buffer diario
+Área compartida
+Mucho más pequeño que la zona de buffers de datos, varias decenas de megas.
+8
+
+### Page 9
+9
+Práctica 1. Procesos de fondo
+Procesos de fondo: realizan las tareas generales del servidor, no están
+dedicados a ninguna conexión de usuario.
+ DBWR: escritor de base de datos
+ LGWR escritor de diario
+ CKPT: proceso de puntos de control
+ SMON: monitor del sistema
+ PMON: monitor de procesos
+ ARC:  archivador
+ …
+Procesos de fondo
+CKPT
+LGWR
+DBWR
+ PMON
+SMON
+ ARC
+Instancia
+SGA
+DBWR: transfiere los buffers de base de datos que han sido modificados y los reescribe en el
+disco.
+LGWR: transfiere las entradas del diario y las escribe en el fichero de diario en disco.
+CKPT: realiza las tareas asociadas a la ejecución de un punto de control.
+SMON: supervisor del sistema que se encarga de todas las recuperaciones que sean necesarias
+durante el arranque.
+PMON: monitor de procesos que libera los recursos de una transacción cuando ésta falla
+ARC: relacionado con guardar el diario en disco.
+9
+
+### Page 10
+10
+Práctica 1. Almacenamiento secundario de Oracle
+Fichero de
+parámetros
+Fichero de
+palabra de
+paso
+Ficheros de
+diario
+archivados
+Base de datos Oracle
+Ficheros de
+control
+Ficheros de
+datos
+Ficheros de
+diario
+El almacenamiento secundario de Oracle está compuesto por una serie de ficheros que caen
+bajo la denominación de base de datos Oracle. Además, hay otro conjunto de ficheros de un uso
+menos relevante como son el fichero de parámetros, el fichero de palabra de paso y los ficheros
+diarios archivados.
+Hay que destacar que Oracle usa una terminología propia, no hay que confundir el término base
+de datos de Oracle con el que comúnmente se usa en campo de las bases de datos.
+10
+
+### Page 11
+Base de datos Oracle
+Ficheros de
+control
+Ficheros de
+datos
+Ficheros de
+diario
+11
+Práctica 1. Almacenamiento secundario de Oracle
+Fichero de
+parámetros
+Fichero de
+palabra de
+paso
+Ficheros de
+diario
+archivados
+Objetos de base de datos (tablas, índices,
+disparadores, …)  de todos los usuarios
+de la BD Oracle
+Información sobre las
+transacciones ejecutadas para
+tareas de recuperación
+Datos sobre el estado del
+servidor y estructura física
+del almacenamiento
+secundario
+Los ficheros que componen la base de datos Oracle son:
+• Ficheros de control: si hay varios (es lo recomendado) son todos réplicas. En ellos están
+registrados datos sobre el estado del servidor y sobre la estructura física del almacenamiento
+secundario.
+• Ficheros de datos: constituyen el espacio donde se almacenan todos los datos de los objetos
+de los usuarios (tablas, índices, etc.). Existen algunos ficheros de datos especiales que el
+servidor usa para la realización de sus tareas, como el espacio de deshacer (control de
+concurrencia y recuperación) y el espacio temporal (realización de paginado virtual para
+ordenaciones).
+• Ficheros de diario: son los ficheros donde se registra toda la información de las operaciones
+de actualización en las transacciones de usuarios, para realizar la recuperación, si fuese
+necesario.
+11
+
+### Page 12
+12
+Práctica 1. Almacenamiento secundario de Oracle
+Fichero de
+parámetros
+Fichero de
+palabra de
+paso
+Definición de la
+Instancia
+Usuarios con autorización
+para arrancar el servidor
+Ficheros de diario
+históricos
+Base de datos Oracle
+Ficheros de
+control
+Ficheros de
+datos
+Ficheros de
+diario
+Ficheros de
+diario
+archivados
+Fuera de la base de datos Oracle hay otros ficheros de interés:
+• Fichero de parámetros: en este fichero se les da valor a los parámetros que configuran el
+servidor Oracle. Hay parámetros para todas las componentes del servidor y para definir el
+funcionamiento de multitud aspectos (existen más de 1000 parámetros, todos ellos con un
+valor por defecto de forma que sólo es necesario establecer los que se deseen).
+• Fichero de palabra de paso: en este fichero se registra la acreditación de aquellos usuarios
+que necesiten realizar una administración remota con privilegio de conexión SYSDBA.
+• Ficheros de diario archivados: corresponden a los ficheros de diario que un proceso de
+fondo, el archivador, va guardando en una ubicación diferente para salvaguardarlos.
+Fichero de parámetros en:
+/opt/oracle/admin/prueba/scripts/initpruebaTemp.ora
+12
+
+### Page 13
+13
+Práctica 1. Base de datos e instancia Oracle
+El servidor no se
+puede utilizar
+Servidor Oracle
+BD
+Instancia
+El servidor ya se
+puede utilizar
+BD
+Arrancar el servidor
+Oracle
+Ordenador con
+software Oracle
+Servidor Oracle
+Parar el servidor
+Oracle
+En un ordenador que realiza las tareas de servidor Oracle, hasta que no se haya arrancado la
+instancia, y por tanto realizado la reserva de memoria correspondiente a la SGA y puesto en
+marcha los procesos de fondo, el servidor de base de datos no es operativo y, por tanto, la
+información almacenada en las estructuras físicas de la base de datos Oracle no es accesibles.
+La única forma de acceder a la información almacenada en la base de datos Oracle es
+arrancando la instancia asociada a esa base de datos.
+13
+
+### Page 14
+14
+Práctica 1. Conexión con el servidor Oracle
+Conexión
+cliente-servidor
+Servidor Oracle
+BD
+Instancia
+Máquina virtual (Linux):
+DBD-…-XX
+Usuarios predefinidos en el servidor Oracle:
+sys (oracle)
+system (oracle)
+…
+Usuario Linux:
+oracle (2025.DBD ) Acceso a la máquina virtual: portal-ng.dsic.upv.es
+Usuario: <usuario_UPV> (<contraseña_UPV>)
+Escritorio remoto: DBD…
+SQL*Plus
+SQL Developer
+Herramientas
+Oracle
+Vídeo: 1.- Arranque y parada de la máquina virtual
+Vídeo: 2.- Conexión a la máquina virtual
+Antes de continuar con las explicaciones sobre el sistema de gestión de base de datos Oracle voy
+a presentar la configuración del laboratorio donde se realizarán las prácticas de la asignatura.
+Cada uno de vosotros va a tener una máquina virtual propia, a esta máquina virtual podréis
+acceder desde el portal del disc portal-ng.dsic.upv.es que es un sitio web donde tendréis que
+autenticaros con el usuario y la contraseña de la upv
+Ahí, en el portal podéis arrancar la máquina virtual y establecer una conexión remota a esa
+máquina.
+Para ilustrar cómo hacer esto os hemos dejado dos vídeos en el Poliformat.
+El video uno arranque y parada de la máquina virtual y el video dos conexión a la máquina
+virtual
+A partir de ahora en las prácticas cada vez que haya un video ilustrativo de algún punto en
+concreto lo indicaré de esta forma
+Desde la máquina virtual podemos establecer una conexión cliente servidor con el SQL
+developer o bien en una sesión local
+14
+
+### Page 15
+15
+Práctica 1. Proceso Listener
+1. Poner en marcha el proceso listener (desde una terminal Linux):
+$ lsnrctl start
+2. Parar el proceso listener (desde una terminal Linux):
+$ lsnrctl stop
+El proceso listener es un proceso de Oracle que se ejecuta en el
+ordenador donde está instalado el servidor Oracle, y tiene como
+función atender las peticiones de conexión al servidor por la red.
+/home/oracle/app/oracle/product/12.1.0/dbhome_1/network/admin
+El proceso listener es un proceso de Oracle, tipo demonio, que se ejecuta en el ordenador donde
+está instalado el servidor Oracle, y tiene como función atender las peticiones de conexión al
+servidor por la red.
+La configuración de este proceso se encuentra en el fichero listener.ora que se encuentra en un
+directorio de instalación del servidor.
+Listener es un proceso servidor que provee la conectividad de red con la base de datos Oracle. El
+listener está configurado para escuchar la conexión en un puerto específico en el servidor de
+base de datos. Cuando se pide una conexión a la base de datos, el listener devuelve la
+información relativa a la conexión. La información de una conexión para una instancia de una
+base de datos provee el nombre de usuario, la contraseña y el SID de la base de datos. Si estos
+datos no son correctos se devolverá un mensaje de error.
+Sin este proceso no se puede establecer la conexión al servidor.
+15
+
+### Page 16
+16
+Práctica 1. Conexión a un servidor Oracle: sesión
+listener.ora
+ClienteCliente Servidor
+listener
+connect hr/pp_hr@prueba
+Proceso
+Usuario
+Servicio prueba: parámetros de conexión al servidor Oracle.
+(fichero de servicios en el ordenador cliente: tnsnames.ora)
+1
+2
+Proceso
+Servidor
+3
+tnsnames.ora
+SQL* Plus
+ Servidor
+Oracle
+Las fases para establecer una conexión entre un programa cliente y un servidor Oracle son las
+siguientes una vez el listener está arrancado:
+(1) Petición de conexión: desde un ordenador cliente se realiza una petición de conexión usando
+alguna herramienta cliente. En la transparencia esta herramienta cliente es el SQL*Plus. En la
+petición el usuario proporciona una cadena de conexión en la que se incluye el nombre de un
+servicio (prueba). Este servicio está definido localmente en un fichero de servicios
+(tnsnames.ora) que le permite saber al proceso usuario los datos de la conexión: ordenador
+servidor, puerto de escucha en el ordenador servidor del listener de Oracle y el SID del servidor
+al que nos queremos conectar. En la cadena aparece además el nombre del usuario de la
+conexión y su contraseña.
+Resolución de la petición de conexión: el proceso usuario del ordenador cliente se pone en
+contacto por la red con el proceso listener del ordenador servidor, proporcionándole los datos
+de la conexión. El listener comprueba la petición de conexión y la acreditación del usuario.
+(2) Puesta en marcha de un proceso servidor: si todo es correcto, el listener pone en marcha un
+proceso servidor en el ordenador servidor y le deriva la conexión del proceso usuario.
+(3) Mantenimiento de la conexión: a partir de ese momento el proceso usuario y el proceso
+servidor mantienen la conexión.
+16
+
+### Page 17
+17
+Práctica 1. Proceso usuario – Proceso servidor
+ Proceso usuario:
+ Se ejecuta en el ordenador cliente.
+ Se lanza cuando una herramienta o una aplicación se ejecuta en el
+ordenador cliente.
+ Genera llamadas al servidor Oracle.
+ Proceso servidor:
+ Se ejecuta en el ordenador servidor.
+ Sirve a un único proceso usuario.
+ Utiliza un área exclusiva de memoria (PGA) para funciones de:
+ordenación, información de la sesión, …
+ Procesa las llamadas generadas por el proceso usuario.
+ Devuelve los resultados al proceso usuario.
+17
+
+### Page 18
+18
+Práctica 1. Conexión con el servidor Oracle: modos
+Conexión en modo NORMAL:
+Para realizar tareas de usuario final o tareas administrativas que no
+afectan al servidor.
+Conexión en modo SYSDBA:
+Para realizar tareas administrativas que afectan al servidor:
+• Arrancar.
+• Parar.
+• Realizar copias de seguridad completas.
+• Realizar restauraciones de la base de datos completas.
+Se haga desde donde se haga la conexión, existen dos modos de conexión con el servidor Oracle:
+• En modo normal: es una conexión para realizar tareas de usuario final (manejar la
+información de sus objetos o manipular sus objetos) o tareas administrativas que no afectan
+de forma sustancial al servidor como un todo (crear o alterar usuarios, modificar el
+almacenamiento secundario, alterar la configuración de algún recurso del servidor, etc.).
+• En modo SYSDBA: es una conexión para realizar tareas administrativas que afectan de forma
+sustancial al servidor (arrancar, parar, realizar copias de seguridad completas de la base de
+datos, restaurar completamente la base de datos, etc.).
+18
+
+### Page 19
+19
+Práctica 1. Conexión con el servidor Oracle: usuarios
+Usuarios predefinidos:
+Administradores:
+• sys:
+ Administrador con privilegio de conexión en modo SYSDBA.
+ Puede realizar todas las tareas administrativas.
+• system:
+ Administrador sin privilegio de conexión en modo SYSDBA.
+ Puede realizar tareas administrativas que no exijan el modo
+SYSDBA.
+Otros usuarios.
+Contraseña para sys y system: oracle
+Cuando se instala el software del servidor Oracle y se crea una base de datos Oracle, siempre se
+crean un conjunto de usuarios predefinidos. Entre ellos cabe distinguir:
+• Usuario sys: es el administrador con más privilegios (puede hacer cualquier operación sobre
+el servidor). Siempre se debe conectar en modo SYSDBA.
+• Usuario system: puede tareas administrativas que no exijan el modo de conexión SYSDBA, ya
+que no tiene este privilegio de modo de conexión. Estas tareas son casi todas excepto algunas
+que tienen un impacto global sobre el servidor (apagar o arrancar el servidor, realizar una
+copia de seguridad completa de la base de datos o una restauración completa de la base de
+datos, etc.).
+Además de estos dos usuarios, pueden crearse otros muchos dependiendo del software que se
+instale en el ordenador que va a realizar las tareas de servidor.
+19
+
+### Page 20
+SQL*Plus:
+Herramienta de línea de comandos para la administración y uso de un
+servidor Oracle.
+Exige el conocimiento del lenguaje.
+Muy básica.
+Incomoda.
+Siempre funciona.
+SQL Developer:
+Herramienta gráfica para la administración y uso de un servidor Oracle.
+Muy cómoda.
+Muchas funcionalidades y modos de uso.
+Necesita el entorno gráfico.
+20
+Práctica 1. Herramientas Oracle
+Las herramientas Oracle que utilizaremos son:
+• SQL*Plus:
+• Herramienta en modo línea de comando con la que se pueden realizar tareas
+administrativas o acciones de usuario final contra un servidor Oracle.
+• Es muy básica y un podo rudimentaria. Exige un conocimiento preciso del lenguaje.
+• La ventaja es que funciona en cualquier contexto, usando cualquier soporte de
+conexión y no necesita soporte gráfico.
+• SQL Developer:
+• Es una herramienta gráfica con la que se pueden realizar tanto tareas administrativas
+como trabajos de usuario final.
+• Es muy cómoda y moderna. Tiene muchas funcionalidades y es muy versátil.
+• Necesita que el entorno gráfico del ordenador en el que se ejecute este activado y es
+un poco pesada (está desarrollada en Java)
+• Es de instalación autónoma y sirve tanto para realizar conexiones locales como
+remotas.
+20
+
+### Page 21
+21
+Práctica 1. Herramienta SQL*Plus
+ Ejecutar la herramienta (desde terminal LINUX):
+$ sqlplus /nolog (sin conexión)
+Ejemplos:
+SQL> connect system/oracle
+SQL> connect sys/oracle as sysdba
+ Conectarse al servidor Oracle
+SQL> connect usuario/contraseña [@servicio]
+[AS {NORMAL|SYSDBA}]
+Parámetros de conexión: definidos en el servicio o valores por defecto
+(variables del sistema)
+ Ejecutar la herramienta + Conectarse al servidor Oracle
+$ sqlplus usuario/contraseña [@servicio]
+[AS {NORMAL|SYSDBA}]
+Para poner en marcha el SQL*Plus tenemos que ejecutar en una terminal de Linux el comando:
+sqlplus usuario/contraseña[@servicio] [as {normal|sysdba}]
+Toda la cadena detrás del comando sqlplus es la “cadena de conexión”. La parte del servicio está
+relacionado con las conexiones remotas que no veremos en esta asignatura. Ejemplos de
+cadenas de conexión:
+• system/oracle: al ponerse en marcha el SQL*Plus se intentará establecer una conexión con el
+usuario Oracle system y le estamos indicando que la contraseña de este usuario es oracle,
+para que el servidor haga la verificación.
+• /nolog: es una cadena de conexión especial que le indica a la herramienta SQL*Plus que no
+realice el intento de establecer conexión en su puesta en marcha. Más adelante, una vez
+lanzada la herramienta, tendremos que conectarnos al servidor, mediante la ejecución de la
+instrucción correspondiente.
+• sys/oracle as sysdba: lo mismo que en el primer ejemplo, sólo que ahora al poner en marcha
+el SQL*Plus se intentará establecer una conexión con el usuario sys. Como este usuario
+siempre se ha de conectar en modo SYSDBA, se usa ese modo de conexión.
+21
+
+### Page 22
+22
+Práctica 1. Arrancar el servidor  Oracle en SQL*Plus
+1. Poner en marcha el proceso listener:
+$ lsnrctl start
+2. Ejecutar la herramienta SQL*Plus
+$ sqlplus /nolog
+3. Arrancar el servidor Oracle:
+ Conectarse con el usuario sys en modo SYSDBA
+SQL> connect sys/oracle as sysdba
+ Arrancar el servidor
+SQL> startup
+Vídeo: 3.- Arrancar y parar el Oracle
+22
+
+### Page 23
+1. Parar el servidor Oracle:
+ Conectarse con el usuario sys en modo SYSDBA
+SQL> connect sys/oracle as sysdba
+ Apagar el servidor
+SQL> shutdown
+2. Cerrar la herramienta SQL*Plus
+SQL> exit
+3. Parar el proceso listener :
+$ lsnrctl stop
+23
+Práctica 1. Parar el servidor  Oracle en SQL*Plus
+Video: 3.- Arrancar y parar el Oracle
+Modos de parada del servidor:
+• Normal: la parada se espera a que no haya sesiones abiertas.
+• Transactional: la parada se espera a que no haya transacciones activas.
+• Immediate: se fuerza un punto de control, y se cierran todos los ficheros.
+• Abort: se apaga el servidor sin miramientos.
+23
+
+### Page 24
+24
+Práctica 1. Herramienta SQL Developer
+ Ejecutar la herramienta (desde terminal LINUX):
+$ sqldeveloper
+ Tipos de uso de la herramienta (ventanas):
+ Navegación de esquemas de usuario: Ventana de navegación de
+esquemas.
+ Administración del servidor Oracle: Ventana de administración.
+ Ejecución de instrucciones (SQL, SQL*Plus y PL/SQL): Ventana de
+Trabajo de SQL.
+Vídeo: 4.- Arrancar el SQL Developer. Creación de conexiones
+La herramienta SQL Developer tiene diferentes tipos de usos, de los que se pueden destacar
+tres:
+• Navegación de esquemas: esta forma de uso está orientada a un usuario normal. Al
+conectarse la herramienta presenta el esquema de objetos del usuario, catalogado por tipo
+de objeto, permitiendo la navegación por él.
+• Administración del servidor: este uso está orientado a administradores de la base de datos.
+Permite operar sobre el servidor, alterar su configuración en sus diversas componentes y
+realizar tareas que afectan globalmente sobre el servidor (en esta versión no se puede
+arrancar y parar el servidor desde el SQL Developer).
+• Ejecución de instrucciones: existe una hoja de trabajo que permite ejecutar instrucciones
+SQL, SQL*Plus y bloques de programa PL/SQL. Con esta forma de uso se puede realizar
+cualquier operación sobre el servidor, aunque se requiere un conocimiento del lenguaje.
+24
+
+### Page 25
+25
+Práctica 1. SQL Developer: conexiones
+Para trabajar con el sistema usando el SQL Developer hay que
+utilizar conexiones.
+ Conexión en SQL Developer: definición de un conjunto de
+parámetros de conexión a un servidor Oracle.
+Definición de conexiones: local a la herramienta SQL Developer
+Video: 4.- Arrancar el SQL Developer. Creación de conexiones
+Lo primero que se debe hace cuando se empieza a trabajar con el SQL Developer es crear una
+conexión. Una conexión del SQL Developer es una denominación a la información que determina
+el servidor Oracle con el que se quiere conectar. La forma de crear una conexión de este tipo es
+elegir en el menú Ver la opción Conexiones.
+Al crear una conexión aparece una ventana en la que hay que especificar los siguientes datos:
+• Nombre de conexión: es un identificador para la conexión que se está creando.
+• Usuario: si se especifica, esta conexión sólo podrá ser utilizada por ese usuario para
+establecer la conexión con el servidor Oracle.
+• Contraseña: si se especifica y se guarda, al usar esta conexión del SQL Developer, no se
+pedirá el usuario y la contraseña establecida para la acreditación al conectarse con el servidor
+Oracle.
+• Tipo de conexión: es la forma de establecer la conexión con el servidor. Hay que dejar el
+valor Básico.
+• Rol: define el modo de conexión, valor por defecto corresponde a un modo de conexión
+normal, y SYSDBA a un modo de conexión SYSDBA.
+• Nombre del host: es el ordenador que hace de servidor Oracle. Hay que indicar el nombre
+completo o la IP de este ordenador.
+• Puerto: es el puerto en el ordenador que hace de servidor Oracle donde se encuentra
+escuchando el listener.
+• SID (System Identification): es el identificador que distingue a la instancia Oracle que se está
+ejecutando en el ordenador que hace de servidor Oracle.
+25
+
+### Page 26
+26
+Práctica 1. SQL Developer: Navegación de esquemas
+Al conectarse en modo normal, la navegación de esquemas es la forma de trabajo por defecto.
+En esta forma de trabajo, en la ventana Conexiones del menú Ver se despliega la taxonomía de
+objetos de la base de datos Oracle (tablas, índices, vistas, disparadores, …) de forma que se
+puede ir navegando por todos ellos y seleccionar alguno de algún tipo para realizar operaciones
+sobre él. Las acciones que se pueden realizar sobre cada objeto dependen del tipo de objeto que
+tenga.
+26
+
+### Page 27
+27
+Práctica 1. SQL Developer: Administración
+Para administrar el sistema usando el SQL Developer hay que
+utilizar conexiones de tipo DBA.
+ Conexión DBA: es una conexión de las ya creadas que se
+incluye en la lista de conexiones DBA (Opción DBA del
+menú Ver) .
+Ventana
+conexiones
+DBA
+Permite:
+• Crear una nueva conexión e incluirla
+en DBA o
+• Elegir una existente e incluirla en DBA
+Al elegir esta opción, se puede crear una conexión para trabajar en modo DBA. Para ello hay que
+elegir una de las conexiones SQL Developer ya creadas que permita el modo de conexión
+SYSDBA con el servidor Oracle (o crearla en ese momento si no existe ninguna).
+Para administrar el servidor desde el SQL Developer, es necesario tener creada al menos una
+conexión de este tipo.
+Lo que se podrá administrar en este modo dependerá de los privilegios del usuario que se
+conecte.
+27
+
+### Page 28
+28
+Práctica 1. SQL Developer: Administración
+Si se está conectado en modo administrativo, el SQL Developer proporciona una visión del
+servidor Oracle, permitiendo observar sus componentes agrupadas en varias categorías de las
+que vamos a estudiar:
+• Almacenamiento: da acceso a todos los elementos que requieren almacenamiento
+secundario, ficheros diarios archivados, ficheros de control, ficheros de datos, ficheros de
+diario (grupos de Redo Logs), Segmentos de Rollback, Tablespaces y Grupos de Tablespaces
+Temporales.
+• Configuración de la Base de Datos: en esta sección se pueden consultar y editar los
+parámetros de configuración del servidor.
+• Seguridad: aquí se pueden administrar todos los aspectos de seguridad del servidor Oracle,
+usuarios, roles y perfiles.
+28
+
+### Page 29
+29
+Práctica 1. SQL Developer: hoja de trabajo SQL
+El último tipo de uso posible en el SQL Developer es la ejecución de instrucciones. Este uso se
+realiza mediante la herramienta Hoja de Trabajo de SQL, que se encuentra en el menú
+Herramientas. Esta herramienta permite ejecutar instrucciones SQL, SQL*Plus y bloques de
+programa PL/SQL.
+Al elegir esta opción en el menú Herramientas se requerirá que se indique cuál va a ser la
+conexión del SQL Developer mediante la cual se solicita la ejecución de las instrucciones editadas
+en la hoja de trabajo. Hay que elegir una entre la que haya creadas o se podrá crear una nueva si
+es el caso.
+En la transparencia se muestran los tres modos de trabajo del SQL Developer:
+• Ventana Conexiones: modo de navegación de esquemas.
+• Ventana DBA: modo de administración del sistema.
+• Ventana Hoja de trabajo de SQL: ejecución de instrucciones.
+29

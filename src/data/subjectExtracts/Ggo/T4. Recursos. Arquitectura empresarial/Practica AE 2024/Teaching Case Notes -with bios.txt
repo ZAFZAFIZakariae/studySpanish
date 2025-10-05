@@ -1,0 +1,1626 @@
+# Extracted content
+Source: subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios.pdf
+
+### Page 1
+Teaching Case Notes
+
+Enterprise Architecture Specification Case Study
+
+
+Annette Lerine Steenkamp
+Amal Alawdah
+Osama Almasri
+Keke Gai
+Nidal Khattab
+Carval Swaby
+College of Management
+Lawrence Technological University
+Southfield, Michigan 48302, United States of America
+Steenkamp@ltu.edu
+
+
+ABSTRACT
+
+These Teaching Case Notes are intended to accompany the Teaching Case paper with the same title. It contains models
+developed by the project team. A selection of models developed by team members for the respective viewpoints, namely
+Enterprise, Information Business Systems, Data, Application and Enterprise Security Viewpoints.
+
+
+1. INTRODUCTION
+
+The Teaching Case Notes provided here are in support of the
+Teaching Case Study on Enterprise Architecture Specification
+paper by the authors and the team project sponsor. A selection
+of the models developed by team members for the respective
+viewpoints are presented in the sections below.
+
+2. ARCHITECTURE MODELS
+
+Architecture models were developed for the enterprise,
+information, business systems, data, application  and
+enterprise security viewpoints. The models are summarized
+per viewpoint in the sub -sections below. The populated
+Architecture Framework is given in Table 1 to facilitate
+referencing in the Teaching Case paper (TC paper) and these
+Teaching Case Notes ( TC Notes).  The partial architecture
+framework (first three columns) are given in the TC paper,
+Table 5. The model portfolio was developed during the
+Information/ Business Systems Architecture stages for the
+viewpoints (Enterprise, Information, Business Systems, Data,
+Application and Enterprise Security) that were addressed by
+the project team. Models included are stated in bold type.
+Table 2 lists the XYZ ACO Concerns and Principles
+addressed by the team, arranged per architecture viewpoint.
+Cross-referencing among viewpoints is given where relevant.
+The core principles and concerns of the Business Systems
+Architecture viewpoint will be implemented over several
+stages of the architecture development cycle, with selected
+concerns of Business Performance Mana gement, being
+targeted for Release 1 (see Teaching Case, Section 1.1 Scope
+of Architecture).
+
+2.1 Enterprise Viewpoint Models
+A selection of supplementary models to those given in the
+Teaching Case Paper, developed by the team, is included in
+this section for the Enterprise Viewpoint. The Enterprise
+Viewpoint  focuses on the  and overarching concerns and
+principles of the business, and includes the business strategy,
+the XYZ ACO value chains, and the XYZ ACO EA as
+interpreted by the team in the form of a conceptual model at
+the start of the project.
+Business Strategy.  Table 3 presents a synopsis of the
+XYZ ACO Business Strategy and some corporate concerns.
+The Value Chain Model . Figure 1 shows the primary
+and support activities for XYZ ACO to achieve patient value.
+Transparency and share -ability of data and information
+according to authorizations of use are concerns.
+Enterprise Architecture Model. The As-Is EA diagram
+in Figure 2  shows a conceptualization of the XYZ ACO assets
+in a layered model. The current EA cannot deliver XYZ ACO
+services, due in part to the disparate systems utilized by
+separate contracts, manage ment, and accounting involved in
+the XYZ ACO enterprise systems.
+
+### Page 2
+Model Portfolio for Enterprise Viewpoint
+Model
+
+View/
+Model type
+Stage/
+Phase
+Purpose Concern/
+Principle
+Stakeholder Content Layer Aspect Standard Modeling
+language
+Tool
+
+Organization
+Diagram
+
+System
+Diagram
+Enterprise
+Strategy
+Planning
+Strategic
+Planning
+Existing status in
+XYZ ACO
+Senior Man/
+Employees/
+Collaborator
+s
+Overview Business Structure XYZ
+ACO
+Graphic  Visio
+XYZ ACO
+Value Chains
+TC Notes
+Figure 1
+Process
+model/
+Conceptual
+Enterprise
+Strategy
+Planning
+Strategy
+Planning
+Quality, Affordability
+Accountability,
+Security
+Transparency, Ease-
+of-use
+Senior Man.
+Archit.
+Team
+Overview Business Structure   BPMN Graphic Visio
+ACO Current
+State EA
+EA Model
+
+Architectur
+e
+Stage
+Planning Existing status/
+Concerns &
+principles
+Project
+Team
+Overview  Business
+Technic
+al
+Structure
+Behavior
+TOG Graphic Visio
+XYZ ACO
+Performance
+Matrix
+TC Paper
+Table 2
+Strategic-
+Tactical-
+Operational
+/ Planning
+Enterprise
+Strategy
+Planning/
+IT Strategy
+Analysis/
+Alignment
+/
+Project
+Planning
+Quality, Affordability
+Accountability,
+Security
+Transparency, Ease-
+of-use
+All
+collaborator
+s
+Coherence Strategic
+/
+Tactical/
+Operatio
+nal
+Static Rummler-
+Brache
+Tabular MS
+Word
+Populated Arch.
+Framework
+TC Paper
+Table 6
+TC Notes Table
+1
+Framework
+/
+Conceptual
+IT Strategy
+Stage/
+Analysis
+Operation
+al
+Planning
+All viewpoints for
+EA initiative
+Project
+Team
+Coherence  Business
+Technol
+ogy
+Structure  DMIT Matrix Ms
+Word
+Business
+Strategy Table
+TC Notes Table
+3
+Strategy
+statement
+Enterprise
+Strategy
+Planning
+Strategy
+Planning
+Quality, Affordability
+Accountability,
+Security
+Transparency, Ease-
+of-use
+XYZ ACO
+Senior Man
+Project team
+Overview Business
+
+Static XYZ
+ACO
+Tabular MS
+Word
+Principles/
+Concerns
+Statement
+of Princ. &
+Concerns
+EA Project
+Planning
+Adoption
+in Arch.
+Specs.
+Quality, Affordability
+Accountability
+Project
+Team
+Coherence All
+Layers
+
+Static XYZ
+ACO
+Tabular MS
+Word
+
+### Page 3
+TC Paper
+Table 4
+TC Notes Table
+2
+Transparency
+Ease-of-Use, Security
+Model Portfolio for Information Viewpoint
+Hierarchy of
+Information
+Needs
+TC Notes Fig. 3
+Inf. Req.
+Diagram/
+Strategic-
+Tactical-
+Operation
+al
+Information
+Architectur
+e.
+Informatio
+n Analysis
+Accessibility,
+Sharability
+Security
+Project
+Team
+Overvie
+w
+All
+Layers
+Structur
+e
+XYZ
+ACO
+Graphic PVW
+Core Information
+Entities.
+
+Conceptua
+l
+Information
+Architectur
+e
+Informatio
+n Analysis
+Accessibility,
+Sharability
+Security
+Archit.
+Team
+Overvie
+w
+Strategic Static XYZ
+ACO
+Tabular MS
+Word
+Summary of
+Information
+Flows
+TC Notes Fig. 5
+Inf. Flow
+diagram/
+Logical
+Information
+Architectur
+e
+Informatio
+n Analysis
+Accessibility,
+Sharability
+Security
+Project
+Team
+Overvie
+w
+Strategic Dynami
+c
+XYZ
+ACO
+Graphic PVW
+ Core Information
+Requirements
+TC Notes Fig. 4
+Inf.  Req.
+diagram/
+Logical
+Information
+Architectur
+e
+Informatio
+n Analysis
+Accessibility,
+Sharability
+Security
+Project
+Team
+Overvie
+w
+Strategic Structur
+e
+XYZ
+ACO
+Graphic  PVW
+Model Portfolio for Business Systems Viewpoint
+Business
+Capability Map
+TC Fig. 1
+Bus.
+Taxonom
+y
+diagram/
+Conceptua
+l
+Business
+Systems
+Architectur
+e
+Informing,
+deciding
+Business capability,
+business processes
+Business
+Analyst,
+Project Team
+Coheren
+ce
+Business Structur
+e
+TOGAF
+9.1
+Graphic Map Visio
+Business Context
+Diagram
+TC Fig. 2
+Business
+Context
+
+Business
+Systems
+Architectur
+e
+Informing,
+deciding,
+designing
+Initiative Business
+scope, Key internal/
+external interfaces &
+interactions
+All
+collaborators
+Providers,
+Payers,
+Patients
+Overvie
+w
+Business Busines
+s
+Behavi
+or
+Business
+Std
+Graphic
+System
+diagram
+Visio
+Patient
+Appointment
+Scheduling
+TC Notes Fig. 6
+Process
+model/
+Logical
+
+Business
+Systems
+Architectur
+e
+Inform,
+deciding,
+designing
+Accessibility,
+Sharability
+Security, Ease-of-
+use
+All
+collaborators
+Providers,
+Payers,
+Patients
+Coheren
+ce
+Business System
+behavio
+r
+BPMN BPMN
+Process
+diagram
+Visio
+
+### Page 4
+Service
+Performance
+Management
+TC Notes Fig.  7
+Process
+model/
+Logical
+Business
+Systems
+Architectur
+e
+Inform,
+deciding,
+designing
+Accessibility,
+Sharability
+Security, Ease-of-
+use
+All
+collaborators
+Providers,
+Payers,
+Patients
+Coheren
+ce
+Business System
+behavio
+r
+BPMN BPMN
+ Process
+diagram
+Visio
+Model Portfolio for Data Viewpoint
+Partial CRUD
+Matrix
+TC Notes Table
+5
+Functional
+/
+Logical
+Architectur
+e - IT
+Analysis
+Analysis,
+Deciding,
+Designing
+Accessibility,
+Sharability Security
+Architects
+Designers
+Users
+Coheren
+ce
+Data Static  Data Std Tabular MS
+Word
+High-Level
+Entity
+Relationship Data
+Model
+ER
+Model/
+Conceptua
+l
+Architectur
+e - IT
+Analysis
+Data
+Analysis
+Accessibility,
+Sharability
+Security, Data  an
+asset
+Architects
+Designers
+Coheren
+ce
+Data Static Federal
+Std -
+Data
+modeling
+UML
+ER Diagram
+Visio
+Relationship
+Between Arch.
+Schemas
+Arch.
+Schemas/
+Conceptua
+l
+Architectur
+e - IT
+Analysis
+Data
+Analysis
+All viewpoints
+
+Architects
+and
+Developers
+Overvie
+w
+Data Structur
+e
+Arch.
+Std
+System
+Diagram
+MS
+Powe
+r
+Point
+Conceptual Data
+Model
+TC Notes Fig. 8
+Data
+Model/
+Conceptua
+l
+Architectur
+e - IT
+Analysis
+Data
+Analysis
+Accessibility,
+Sharability
+Security
+Architects,
+Designers,
+Developers
+Coheren
+ce
+Data Static Data
+Model
+Std
+UML
+Class
+diagram
+Visio
+Model Portfolio for Application Viewpoint
+Application
+Model
+
+Functional
+/
+Conceptua
+l
+Architectur
+e - IT
+Analysis
+Planning Consistency,
+Technology
+independence
+Archit.
+Team
+Overvie
+w
+Applicati
+on
+Structur
+e
+Applicati
+on.
+Model
+Std
+System
+Diagram
+MS
+Word
+Patient
+Appointment
+Manager System
+TC Notes Fig. 9
+Use case/
+Conceptua
+l
+Architectur
+e - Build
+Designing Ease-of-use,
+Structured,
+Consistency,
+Technology
+independence
+Architects
+Designers
+Users
+Coheren
+ce
+Applicati
+on
+Behavi
+or
+TOGAF  UML
+Use case
+Visio
+Physician Perf.
+Rep. System
+TC Notes Fig. 10
+Use case/
+Conceptua
+l
+Architectur
+e - Build
+Designing Ease-of-use,
+Structured,
+Consistency,
+Technology
+independence
+Architects
+Designers
+Users
+Coheren
+ce
+Applicati
+on
+Behavi
+or
+TOGAF  UML
+Use case
+Visio
+Model Portfolio for Enterprise Security Viewpoint
+
+### Page 5
+Composite
+Enterprise
+Security Diagram
+TC Notes Fig. 11
+Enterprise
+Security/
+Conceptua
+l
+Architectur
+e – IT
+Analysis
+Informing  Security for all
+viewpoints
+Physical Security of
+assets
+Management
+Project
+Team
+Overvie
+w
+All
+layers
+Structur
+e
+IFIP Std Graphic/
+System
+diagram
+Visio
+High Level
+Security Model
+TC Notes Fig. 12
+Security
+model/
+Conceptua
+l
+Architectur
+e –
+IT Analysis
+Informing/
+Designing
+Security at all levels Project
+Team
+Overvie
+w
+All
+layers
+Structur
+e
+TOGAF
+9.1
+Graphic Visio
+Information
+Security
+Management
+TC Notes Fig. 13
+Strategic-
+Tactical-
+Operation
+al/
+Security
+Architectur
+e –
+IT Analysis
+Informing  Security at all levels Project
+Team
+Overvie
+w
+All
+organizat
+ion
+levels
+Structur
+e
+NIST
+Std
+Graphic Visio
+Group Roles
+identification
+
+Roles/
+Security
+Architectur
+e –
+IT Analysis
+Informing/
+Deciding/
+Designing
+Secure accessibility
+Groups &
+permissions
+Management
+Project
+Team
+Overvie
+w
+Business Static  XYZ
+ACO
+Matrix/
+System
+Diagram
+MS
+Word
+User Mapping
+
+User
+Taxonom
+y/
+Security
+Architectur
+e -
+IT Analysis
+Informing/
+Deciding/
+Designing
+Secure accessibility Management
+Project
+Team
+Overvie
+w
+Business  Static  XYZ
+ACO
+Matrix/
+System
+diagram
+MS
+Excel
+,
+MS
+Word
+Permission
+Identification
+Permissio
+ns/
+Security
+Architectur
+e –
+IT Analysis
+Informing/
+Deciding/
+Designing
+Secure permissions Management
+Project
+Team
+Coheren
+ce
+Data  Dynami
+c
+XYZ
+ACO
+Matrix/
+System
+diagram
+Ms
+Excel
+,
+MS
+Word
+User
+Authentication
+User
+Authent./
+Security
+Architectur
+e -
+IT Analysis
+Informing/
+Deciding
+Secure authentication  Management
+Project
+Team
+Overvie
+w
+Data  Dynami
+c
+DBMS Matrix/
+System
+diagram
+Visio
+MS
+Word
+Data Encryption/
+Decryption
+Requirements
+Encryptio
+n/
+Security
+
+Architectur
+e –
+IT Analysis
+Informing/
+Deciding
+Rules for encryption/
+decryption
+Management
+Project
+Team
+Coheren
+ce
+Data Static XYZ
+ACO
+Tabular MS
+Word
+Access Control
+Process Model
+Access/
+Security
+Architectur
+e –
+IT Analysis
+Informing/
+Deciding
+Access control Management
+Project
+Team
+Coheren
+ce
+Data
+Applicati
+on
+Dynami
+c
+Technolo
+gy
+Graphic /
+Process
+diagram
+Visio
+
+
+
+
+Table 1. Populated Architecture Framework
+
+### Page 6
+OVERARCHING ENTERPRISE VIEWPOINT
+PRINCIPLE/
+CONCERN
+DEFINITION
+Quality   XYZ ACO Group Quality Care
+ Statement Enterprise should provide excellence in care through its coordinated care services.
+ Rationale Strategic Business Vision is to have an accountable health care organization providing coordinated
+excellence in health care services.
+ Implications Health care services provided by all stakeholders must be of consistent quality throughout the enterprise;
+Requires that a systematic enterprise architecture be developed adhering to all the stated principles
+ Affordability  Affordable Health Care Services
+ Statement Health Care Services should be affordable for the membership
+ Rationale Strategic Business Vision
+ Implications Costs should be contained by all stakeholders throughout the Group; sustainable health care spending;
+comply with Affordable Healthcare Act of the Centers for Medicare & Medicaid Services (CMS)
+ Accountability Accountable Health Care Services
+ Statement XYZ ACO aims to manage healthcare costs through accountability by all stakeholders
+ Rationale Strategic Business Vision
+ Implications All stakeholders must be accountable for their services and behavior and healthcare must be managed;
+confidentiality if patients must be maintained
+Ease of Use Applications easy to use (also Application Viewpoint)
+ Statement Software Systems and User Interfaces must be easy to use
+ Rationale Complexity must be reduced to avoid mistakes
+ Implications Flexibility and ease of use must be balanced in terms of complexity, manageability and performance for
+applications.
+Transparency Information Transparency and Visibility (also security views and enterprise security viewpoint)
+ Statement Data and information must be transparent to stakeholders
+ Rationale Data and information must be transparent (visible) to the users based on need to know and responsibility
+ Implications Authorizations must be given and authentication performed on all classes of users of the systems
+INFORMATION ARCHITECTURE VIEWPOINT
+  Accessibility  Maximize accessibility of information (also Data Viewpoint)
+  Statement Purpose of information management is to make information maximally accessible, visible and
+transparent to the Enterprise as a whole.
+  Rationale Principle represents “Information as a Service”, and stakeholders of XYZ ACO businesses must have
+access to pertinent information.
+  Implications A common set of policies, procedures, and standards governing information management and access for
+both the short and the long term must be established and developed. For maximum enterprise-wide
+benefit information accessibility must be implemented and managed in all systems
+Information
+Security
+Information is secure within XYZ ACO (also Data and Enterprise Security Viewpoints)
+  Statement Information is protected from unauthorized use, access, disruption, modification, perusal, inspection,
+recording and disclosure. In addition to the traditional aspects of information systems, this includes, but
+is not limited to, information protection of confidentiality, integrity, authenticity and availability.
+  Rationale Open sharing of information and release of information throughout the enterprise, compliant with
+relevant legislations must be balanced with the need to restrict the availability of classified, proprietary,
+permitted, professional, and sensitive information. Current laws and regulations require the safeguarding
+of information security and privacy of data. Pre-decisional (work-in-process, not yet authorized for
+release) information must be well protected to avoid unwarranted speculation, misinterpretation, and
+inappropriate use.
+  Implications Access to information must be based on a need-to-know policy, and permissions granted on a need to
+know basis. All viewpoints must consider implications of information security.
+Information security safeguard must be implemented to restrict access to level of granted authorizations,
+such as “view only”, or “never see”. XYZ ACO requires a policy on managing during of protection for
+pre-decisional information and other works-in-progress.
+
+### Page 7
+Shareability Information is shared in XYZ ACO business environment (also Data and Security viewpoints).
+  Statement Stakeholders have access to the information necessary to assist medical personnel and patients.
+Therefore, information must be shared across the entire enterprise functions and organizations.
+  Rationale It is cost-effective to maintain accurate information in a single location instead of maintaining
+duplicative information in multiple locations. The efficiency of information collection, creation, transfer,
+assimilation, accession, and confirmation is driven by the capability of the XYZ ACO to efficiently share
+information across the enterprise. Shared information will result in improved services, reduce cost and
+enhance efficiency.
+  Implications  All participants within the enterprise must understand the relationship between value of information,
+sharing of information, and accessibility of information. Information sharing is considered in relation to
+information security so that confidential information is not compromised. A standardized model must be
+developed for information sharing to ensure all required information is available for various demands.
+Sharing information must meet the requirements of stakeholders.
+BUSINESS SYSTEMS ARCHITECTURE VIEWPOINT
+Performance Business Performance Management
+  Statement Ability to track business performance,  e.g. service performance reporting, cash payout to partner per
+day, average payout per Member per provider, etc.
+  Rationale Determine cash position of business at any time, identify payout trends, quality of service trends,  setting
+informed targets for LOBs,  etc.
+  Implications Implement automated reporting scorecard for performance monitoring and target setting for lines of
+business
+Centralization Centralize Payment Management
+  Statement Maintain a single payment system for provider partners in the network
+  Rationale Improve operational efficiency thereby reducing operating cost, which in turn improves profitability
+  Implications Implement single payment system to manage payments to  provider partners (PCP groups, Specialists,
+Service Providers)
+Uniqueness Single version of Member (Patient)
+  Statement Maintain single version of member information across all lines of business
+  Rationale Enables cross-sell / opportunity management (e.g. solicitation) to Members (Patient), driving additional
+revenue and profit.
+  Implications Implement a governable, centralized data repository for Member information/data sharing across the
+enterprise
+  Integration   Enterprise Information Integration
+  Statement Maintain information integration capability that facilitate information/data exchange across lines of
+business
+  Rationale Improve timeliness of reported information for decision making, operational visibility, data/information
+sharing
+  Implications Enable automated enterprise data/information exchange across lines of business
+DATA ARCHITECTURE VIEWPOINT
+Data Security Data is Secure within the XYZ ACO environment (also Security Views and Enterprise Security
+Viewpoint)
+Statement Data is protected from unauthorized use, access, disruption, modification, perusal, inspection, recording
+and disclosure. Data protection of confidentiality, integrity, authenticity and availability.
+Rationale Open sharing of data and release of data throughout relevant legislations must be balanced against the
+need to restrict the availability of classified, proprietary, permitted, professional, and sensitive
+information. Current laws and regulations require the safeguarding of data security and privacy. Pre-
+decisional (work-in-process, not yet authorized for release) data must be well protected to avoid
+unwarranted speculation, misinterpretation, and inappropriate purpose use.
+Implications Collection of classified and de-classified data represents a large task requiring review and de-
+classification procedures to maintain appropriate and suitable control. Information owners and users
+must determine whether aggregation results at a higher classification level. XYZ ACO needs a
+qualification policy and procedures to govern this review and de-classification. Access to information
+based on a need-to-know policy can ensure regular reviews of information. Adequate and secure access
+to information requires that security requirements are implemented at the data level (not the application
+level), and must be designed into data elements from the beginning; it should not and cannot be added
+
+### Page 8
+later. Data security safeguards may be for “view only”, or “never see”. Sensitivity labeling for access to
+pre-decisional, decisional, classified, sensitive, private, confidential, or proprietary information must be
+determined. (also Information and Security Viewpoints)
+Accessibility  Data is Accessible (also Information Viewpoint)
+Statement The purpose of data management is to make data maximally accessible, visible and transparent to the
+Enterprise as a whole (ease of use).
+Rationale Wide access to data leads to efficiency and effectiveness in decision making, and affords timely response
+to information requests and service delivery. Staff time is saved and consistency of data is improved.
+Implications Access to data does not constitute understanding of the data. Personnel should take caution not to
+misinterpret information. Access to data does not necessarily grant the user access rights to modify or
+disclose the data. This will require an education process and a change in the organizational culture,
+which currently supports a belief in ‘‘ownership’’ of data by functional units.
+Shareability  Data is shared in XYZ ACO (also Information and Security Viewpoints)
+Statement Stakeholders have access to the data necessary to assist medical personnel and patients. Data is shared
+across the entire enterprise functions and organizations.
+Rationale Data is easily accessible when it is shared across the enterprise and appropriate access to accurate data is
+essential to XYZ ACO. It is cost-effective to maintain accurate data in a single location instead of
+maintaining duplicative information in multiple locations. The efficiency of data collection, creation,
+transfer, assimilation, accession, and confirmation is driven by the capability of the XYZ ACO to
+efficiently share data across the enterprise. Shared data will result in improved services, reduce cost and
+enhance efficiency.
+Implications All participants within the enterprise must understand the relationship between value, sharing and
+accessibility of data. A common set of policies, procedures, and standards governing data management
+and access for the short and long term must be established and developed. This principle is in accordance
+with the principle of data security. Under no circumstances must the sharing of data cause confidential
+data to be compromised. A standardized model must be developed for data sharing to ensure all required
+data is available for various demands. Sharing of data must meet the requirements of stakeholders.
+Value Data is an asset
+Statement Data has value to the enterprise and is managed accordingly.
+Rationale Data is a valuable corporate resource; it has real, measurable value. The purpose of collecting data is to
+aid decision-making. Accurate, timely data is critical to accurate, timely decisions. Most corporate assets
+are carefully managed, and data is no exception.
+Implications All organizations within XYZ ACO must understand the relationship between the value, sharing and
+accessibility of data. Stewards must have the authority and means to manage the integrity of data for
+which they are accountable. A cultural transition from ‘‘data ownership’’ thinking to ‘‘data
+stewardship’’ thinking is needed. The role of data stewardship is critical because obsolete, incorrect, or
+inconsistent data could be passed to enterprise personnel and adversely affect decisions across the
+enterprise. Procedures must be developed and used to prevent and correct errors in data and to improve
+those processes that produce flawed information. Data quality will need to be measured and steps taken
+to improve data quality.
+APPLICATION VIEWPOINT
+Ease of Use Applications are easy to use (also Enterprise Viewpoint)
+Statement Application should be easy to use and require minimal time for training.
+Rationale It saves training time and application misuses by stakeholders. Also this helps proficiency and optimal
+application operating conditions.
+Implications Applications should have a common “look-and-feel” which requires careful design of the interfaces and
+application and their usability
+Independence Applications are technology independent
+Statement Applications are technology independent and must run on multiple operating systems or platforms. An
+application may be independently modified or replaced without compromising other applications.
+Rationale Applications remain operable when there are operating system upgrades or replacements; cost is
+contained.
+Implications Standards must be used in order to guarantee application portability. Application architecture must be
+designed adopting this principle.  Moreover, sometimes a middleware layer should be used to separate
+the applications from platform.
+Structural Quality Applications are well-structured
+Statement Applications must be structured to accommodate the perspectives of all XYZ ACO user communities.
+Rationale Applications take into account different communities’ needs
+Implications Design must be carefully planned and developed and prototyped to verify and validate the functionality.
+Consistency   Application design is consistent
+
+### Page 9
+Statement Applications should be consistent for all stakeholders as far as naming standards and terminology and
+usage.
+Rationale This will create a common understanding about the applications throughout XYZ ACO user community,
+ease of use, flow of information and maintenance.
+Implications This requires careful design of naming standards and acronyms with input from user communities to
+implement consistent applications.
+SECURITY VIEWPOINT
+Transparency Information Transparency and Visibility (also Enterprise Viewpoint).
+Statement Data and information must be transparent to stakeholders
+Rationale Transparency of data and information must be based on need to know and responsibility of users.
+Implications Authorizations must be given and authentication performed on all classes of users of the application
+systems.
+Security  Information Security (also Information and Data Viewpoints)
+Statement XYZ ACO should have secure risk free computer environment. For all stakeholders and users.
+Rationale Strategic Security Vision
+Implications Confidentiality, integrity, and availability of patient, personal, and business data must be secured.
+Systems, data, and technologies must be protected from unauthorized access, operation, and
+manipulation.
+Sharability Secure sharing of  XYZ ACO data and information (also Information and Data Viewpoints)
+Statement Stakeholders must have secure access to the information necessary to assist medical personnel and
+patients.
+Rationale Appropriate access to accurate information is essential to the services of ACO and must be secure.
+Implications DRM (digital rights management) technology can extend access with usage control using
+cryptography to protect data that may be outsourced or published on the network.
+
+
+
+XYZ ACO Business Strategy Statement
+XYZ ACO has developed a new approach to providing managed health care for private patients in the USA. XYZ ACO was
+formed by a partnership between XYZ Hospital, 10 Provider groups consisting of approximately 920 physicians,  630
+independent specialists, pharmacies, and laboratories. The intent is to create an accountable care organization with a new ca re
+delivery model which would comply with and be governed by the Affordable Care Act of the CMS. The Affordable Care Act
+includes a number of provisions designed to improve the quality of Medicare services, support innovation and the establishment
+of new payment models in the program, better align Medicare payments with provider costs, strengthen program integrity within
+Medicare, and put Medicare on a firmer financial footing. In addition to improving quality, ACO initiatives seek to reduce
+growth in health care expenditures. It is widely recognized that the current trajectory for the nation's health care spending  is
+unsustainable. Medicare beneficiaries share the burden of rising costs, as they pay higher premiums and larger cost -sharing
+obligations and out of- pocket expenses.
+The XYZ ACO group has now been operating independently for three years, with each entity still separate ly managed and
+accounted for on separate balance sheets and healthcare contracts. The strategic business vision is to  form an Accountable
+Healthcare Origination (i.e. ACO) to give coordinated high quality care for their patients. The goal is to manage heal thcare
+costs, provide high quality care services, and be accountable for the care and a profitable organization.
+Corporate Concerns
+• There is no clear concept of ‘Member (Patient)’ across the group. As the group’s mission is now primarily profitable
+managed health care this is a major flaw in the data and business architectures, as no ready measures of income per Member
+are available across the group.
+• Recent privacy legislation complicates use of Member information in any case, and an analysis is require d of these
+implications, for preparation of a privacy statement.
+• Financial reporting is required, at least on a monthly basis, to be of operational and tactical use. No visibility across all
+units to manage cost and provide high quality care.
+• There is no total business architecture on which to base and manage operation of the group as a whole.
+• Hospitals use different application packages.
+• Each business within the group uses different application packages. There is no basis for achieving economi es of scale in
+materials and resource purchasing or management, neither for cost management nor for cross-selling services to identified
+customers.
+• None of the infrastructure currently supports operations within an integrated business model.
+
+Table 2. Principles and Concerns governing the XYZ ACO
+Group Team Project
+Table 3. Business Strategy
+
+### Page 10
+2.2 Information Viewpoint Models
+A selection of models developed for this viewpoint are given
+in this section. The Information Viewpoint models are
+focused on the information views (of the viewpoint), and
+included here are the hierarchy of information needs of XYZ
+ACO, the core information needs of XYZ ACO Stakeholders,
+and the proposed information flows of main busine sses in
+XYZ ACO.
+Hierarchy of Information needs of XYZ ACO. Figure
+3 summarizes the hierarchy of information needs into three
+categories, namely strategic, tactical, and operational
+information.
+Information Requirements of XYZ ACO
+Stakeholders. Figure 4 di splays the core information
+requirements of XYZ ACO Stakeholders. Physicians need to
+know all necessary information about patients so that they
+can make diagnostic decisions efficiently. The Physician
+Schedule involves information of the daily, weekly, and
+monthly schedules. Service information relates to the Nurse
+Schedule, Theater Schedule, Office Information, and any
+other services’ information provided by supporting health
+care institutions. Patients are able to access detailed
+information about the phy sicians’ performance, reputation,
+skills, and schedules to help them to make a choice of
+physician. In addition the Federal Government can make
+effective financial decisions about healthcare systems based
+on the performance of participating organizations.
+Information Flow Model.  Figure 5 illustrates the
+information flow for the main businesses in XYZ ACO. The
+core information that main businesses require include patient
+information, physician schedules, physician performance
+records, service information and  organization information.
+Through a Cloud -based service, the main businesses can
+access systems and obtain the information they need
+according to their authorizations.
+
+Figure 1. XYZ ACO Value Chains
+Figure2. Conceptual XYZ ACO As-Is EA
+Figure 3. Hierarchy of Information Needs in XYZ ACO
+
+### Page 11
+Figure 4. Structure of XYZ ACO Core Information Requirements
+Figure 5. Proposed Information Flow of Main Businesses in XYZ ACO
+
+### Page 12
+2.3 Business Systems Viewpoint Models
+A selection of additional models for this viewpoint is given
+in this section. The Business Systems Viewpoint models
+focus on business related views such as business process
+views, systems, business information entities and other
+resources that are used to perform XYZ ACO’s operational
+activities.
+Patient Appointment Sc heduling. Figure 6 is a high -
+level process view of the Patient Appointment Scheduling
+business process. A patient or authorized user (primary care
+physician (PCP), specialist), Patient Care Representative
+(PCR)) may use the online, self -service appointment
+scheduling system to schedule or update appointments with
+a PCP or specialist.  Alternatively, a PCR may log the
+appointment information on behalf of the patient who has
+called in.  An Enterprise Calendar Manager (ECM)
+component provides the necessary cal endar services for
+logging appointments.
+Service Performance Management. Figure 7 provides
+a high -level view of the business process to generate the
+Service Performance Report (SPR), a feature of the Service
+Performance Management capability. Only author ized users
+such PCPs, Specialists and XYZ ACO management are
+allowed to run this report. As part of XYZ’s accountable
+health care strategy, evaluating and monitoring service
+quality performance information among PCPs and
+Specialists is critical.  Release 1  of the Business Systems
+Architecture will implement a workload and service quality
+reporting function to facilitate visibility into care service
+quality performance and accountable information regarding
+PCPs and specialists.
+Business Information Entities for Release 1. Table 4
+shows the business information entities for Release 1 of the
+EA initiative selected from the complete information analysis
+done in the team project.  The principles of concern are
+accessibility, information sharing and security.
+
+Business Information Entities
+Physician Performance Information
+Physician Schedule Information
+Patient Information
+Patient Medical History Information
+Physician Schedule Information
+Theater Schedule Information
+Weekly Schedule Information
+Daily Schedule Information
+
+
+
+2.4 Data Viewpoint Models
+A selection of models in this viewpoint of relevance to
+Release 1 of the EA Initiative, developed by the team, is
+given in this section. Data viewpoint models focus on the
+data of the software applications and included here is a
+CRUD Matrix and the conceptual data model for XYZ ACO
+Release 1.
+CRUD Matrix.  Table 5 is a partial CRUD matrix
+obtained from the data analysis to identify the XYZ ACO
+organizations that create (C), review (R) , update (U), and
+delete (D).  A list of data entities and the business s ystems
+that access the data based on the requirement is shown.
+Conceptual Data Model. Figure 8 is a class diagram of
+the conceptual data model of XYZ ACO. The diagram shows
+the main classes along with their attributes and data types.
+The relationship among classes is governed by the share -
+ability, accessibility and security principles.
+
+
+
+
+
+
+
+
+Table 4. Business Information Entities for Release
+1
+Figure 6. Patient Appointment Scheduling
+
+### Page 13
+Data Entity
+
+PCP
+Group
+Patient Service
+Provider
+Specialist XYZ ACO
+Senior
+Management
+Nurse Administrative
+Staff
+Strategy R R R R CRUD R R
+Finance R  R R CRUD R R
+HR
+Management
+R  R R CRUD R R
+Service
+Provided
+CRUD R CRUD CRUD CRUD RUD RU
+Patient Record CRUD R RU CRUD CRUD CRUD RU
+Patient Service CRUD R RU CRUD CRUD CRUD CRUD
+Claims CR R   CRUD
+Facility
+Management
+CRUD  RU CRUD CRUD CRUD CRUD
+Payroll R  R R CRUD R R
+Schedule CRUD RU CRUD CRUD CRUD CRUD CRUD
+Report R  R R CRUD R R
+
+
+
+
+
+Figure 7. Service Performance Management
+Table 5. Partial CRUD Matrix
+
+### Page 14
+Access
+XYZ ACO
+Agile HCS
+PCP Group
+XYZ ACO Hospital
+SpecialistSerive Provider
+Lab Pharmacy
+-ID : String
+-Name : String
+-Record : String
+-Qualifications : String
+-Payroll : Decimal
+-Address : String
+-Contact Info : String
+-Employee Type : Type
+Employee
+Nurse Adminstrative Staff
++PCP Group
++Specialist
++Serivice Provider
++Nurse
++Addministrative Staff
+«enumeration»
+Type
+«inherits»
+-Service Code : String
+-Time : String
+-Date : Date
+-Employee : String
+Service
+-Name : String
+-ID : String
+-Date of Birth : Date
+-Medical History : String
+-Contact Info : String
+-Address : String
+-Record : String
+-Patient Gender : Gender
+Patient
++Male
++Female
+«enumeration»
+Gender
+-Daily Schedule : String
+-Weekly Schedule : String
+-Monthly Schedule : String
+-Time : String
+-Appointments : String
+Schedule
+Consultation Treatment Operation
+-Name : String
+-Address : String
+Business Unit
+Lab PharmacyHospital
+Report
+Share
+-Theater ID : String
+-Schedule  : String
+Theater
+
+
+
+
+2.5 Application Viewpoint Models
+Additional models developed by the team for this viewpoint
+is given in this section. The Application Viewpoint Models
+focus on the applications of the EA, and here use cases for
+the proposed Release 1 are included, namely the S ervice
+Performance Management Reporting System and the
+Physician Performance Reporting System.
+Service Performance Management Reporting
+System. This system includes the Service Performance
+Reporting System. The application architecture to realize the
+functionality of Release 1 addresses Service Performance
+Figure 8. Conceptual Data Model of XYZ ACO
+
+### Page 15
+Management in terms of the concerns pertinent to assessing
+doctors’ performance and quality of service provided to
+patients treated at XYZ ACO facilities.  This essentially
+includes reporting on the daily , weekly and monthly work
+schedule, medical procedures performed, as well as patients’
+review of health care service received during visits.
+Physician Performance Reporting. Figure 9 is a high-
+level use case diagram for the Physician Performance
+Reporting System. When the patient visits the physician for
+a consultation or surgery procedure, the name of the doctor
+(physician or surgeon) is stored in the database along with
+the date and time of the visit. A XYZ ACO manager can
+request a report of the service  performance of a specific
+physician (or group of physicians) on the number of patients
+attended for a specific period (day, week, month, or year).
+The system accesses the database and prints the requested
+report.
+
+
+
+
+
+Patient Appointment Manager System.  Figure 10
+illustrates the Patient Appointment Manager System use case.
+The patient requests an appointment at a hospital to visit a
+specialist, or to receive a service at a medical laboratory.
+Based on availability for an appointment the system accesses
+the patient record, records the entered appointment
+information (date, time, and place), and confirms the
+appointment with the involved parties (e.g. patient,
+specialist). The patient or physician can cancel an
+appointment, and the system will record the ca ncelation in
+the database. When a patient requests a prescription the
+system checks for the availability of the requested
+prescription at the XYZ ACO affiliated pharmacy, and
+coordinates the delivery of the medicine to a location for
+pick-up.
+
+
+
+
+2.6 Enterprise Security Viewpoint models
+Due to the scope and complexity of the security requirements
+of an enterprise the security viewpoint is regarded as a
+composite viewpoint, and hence called the enterprise security
+viewpoint comprising all security-related concerns of the EA
+initiative, including physical, data, information, application,
+and infrastructure security. A selection of models developed
+by the team for this viewpoint is given in this section, namely
+the Composite Enterprise Security Viewpoint, High Level
+Security Model of XYZ ACO, and the Information Security
+Management Model.
+Composite Enterprise Security Viewpoint. Figure 11
+illustrates how security is viewed from a holistic st andpoint
+and its coverage for all enterprise domains.
+
+
+
+
+
+High Level Security Model of XYZ ACO. Figure 12 shows
+the security level requirements which involves the
+infrastructure that is rarely visible to the business functions.
+The fundamental purpose of having security is to protect the
+value of the systems and information assets of the enterprise.
+According to The Open Group (TOGAF 9.1, 2011) the
+generally accepted areas of concern for to security architect
+are:
+• Authentication: The substantiation of the identity of
+a person or entity related to the enterprise or system in some
+way.
+• Authorization: The definition and enforcement of
+permitted capabilities for a person or entity whose identity
+has been established.
+• Audit: The ability to provide forensic data attesting
+that the systems have been used in accordance with stated
+security policies.
+• Assurance: The ability to test and prove that the
+enterprise architecture has the security attributes required to
+uphold the stated security policies.
+• Availability: The ability of the enterprise to function
+without service interruption or depletion despite abnormal or
+malicious events.
+• Asset Protection:  The protection of information
+assets from loss or unintended disclosure, and resources from
+unauthorized and unintended use.
+• Administration: The ability to add and change
+security policies, add or change how policies are
+implemented in the enterprise, and add or change the persons
+or entities related to the systems.
+• Risk Management:  Is the organization’s attitude
+and tolerance for risk. Note that risk management here is
+different from the s pecial definition found in financial
+markets and insurance institutions that have formal risk
+management departments.
+Figure 9. Use Case Diagram for Physician
+Performance Reporting System
+Figure 10. Use Case Diagram for Patient
+Appointment Manager System
+Figure 11. Composite Enterprise Security Diagram
+
+### Page 16
+Information Security Management.  Figure 13 presents
+information security management in the enterprise at three
+main levels, namely strategic, tactical, and operational. The
+strategic level impacts the corporate strategy, the tactical
+level relates to processes and methodologies used to manage
+security, and the operational level addresses the installation
+and operation of security tools and measures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AUTHOR BIOGRAPHIES
+
+Annette Lerine Steenkamp  is a Professor Computer and
+Information Systems in the
+College of Management,
+Lawrence Technological
+University, Michigan, USA. In
+her academic career she has
+taught extensively in Software
+Engineering, as well as
+Enterprise Architectures,
+Enterprise and I nformation
+Technology Life Cycle
+Processes, and research
+methodology in graduate and doctoral programs. At present
+she has an active research agenda supervising a number of
+doctoral dissertation research projects in the areas of
+enterprise architecture, kn owledge management and
+approaches to process improvement in organizations. She has
+published a number of journal and conference articles in the
+field of Enterprise Architecture addressing architecture
+approaches, processes and viewpoints.
+
+Amal A. Alawdah  is a doctoral candidate in the Doctor  of
+Management in Information
+Technology. She has Bachelor’s
+and Master’s degrees in
+Computer Science. She resides in
+Southfield, Michigan with her
+family and is currently working
+on her dissertation.
+
+
+
+
+
+Osama Almasri  is a doctoral candidate in the Doctor  of
+Management in Information
+Technology with research interest
+in embedded systems engineering.
+He holds a Bachelor’s in Electrical
+Engineering and a Master’s in
+Electrical and Computer
+Engineering.
+
+
+
+
+Keke Gai is a doctoral student for the Doctor of Management
+in Information Technology . He
+holds a B.Eng. from Nanjing
+University of Science and
+Technology, a M.E.T. from
+University of British Columbia ,
+and M.B.A. from Lawrence
+Technological University . His
+research interests include cloud
+computing, service-orientation,
+mobile enterprise architecture,
+and business process
+improvement. He has several
+Figure 12. High Level Security Model of XYZ ACO
+Figure 13. Organization Levels of
+Information Security Management
+
+### Page 17
+publications in academic journals and conference
+proceedings.
+
+Nidal Khattab is a Senior Project Engineer and the Auto -
+Coded Software Discipline Leader
+at Powertrain Embedded Controls
+Department in General Motors for
+more than 10 years. He holds a B.
+Eng. (Elec.) , a Higher Graduate
+Diploma in Computer Sciences
+and Automatic Control, a M . Eng
+(Elec.) and M. Eng. ( Elec.&
+Comp), and currently is a doctoral
+candidate in the Doctor of
+Management in Information
+Technology. Areas of interest
+include Embedded Software Engineering Development,
+Process Improvement, and Knowledge Management.
+
+Carval Swaby is principal consultant at CGS Strategy LLC,
+U.S.A. and current doctoral
+student in the Doctor of
+Management in Information
+Technology program. He has
+over twenty -five years broad -
+range experience in the field of
+IT, working across several
+industries – including financial
+services, insurance, banking,
+and manufacturing. His
+expertize ranges from
+application development to enterprise IT management and
+consulting. His current areas of specialization includes IT
+strategy planning , enterprise architecture (EA), business
+architecture, business process management (BPM), and
+capability model and roadmap development. He holds a M.Sc.
+in Management of Information Systems and B .Sc. in
+Computer Science and Math ematics from the University of
+the West Indies, Jamaica.

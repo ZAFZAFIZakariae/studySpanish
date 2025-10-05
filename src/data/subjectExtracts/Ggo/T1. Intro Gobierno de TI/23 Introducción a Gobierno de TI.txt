@@ -1,0 +1,185 @@
+# Extracted content
+Source: subjects/Ggo/T1. Intro Gobierno de TI/23 Introducción a Gobierno de TI.pdf
+
+### Page 1
+Introducción al Gobierno de TI
+
+### Page 2
+Contenido
+§Gobierno§Gobierno corporativo§Gobierno de TI
+
+### Page 3
+Gobierno
+
+### Page 4
+Gobierno corporativo§El gobierno corporativo fijaexpectativas claraspara la conducta de la entidad que está siendo gobernada, y dirige, controlae influenciafuertemente en dicha entidad para cumplir estas expectativas(Allen, 2005).
+§El gobierno establece: (Mueller,2008)oCadenas de responsabilidad, autoridad y comunicación.oMedición, políticas, estándares y mecanismos de control para permitir a las personas llevar a cabo sus roles y responsabilidades.
+
+### Page 5
+Gobierno corporativo
+§Para la OCDE (2016) el gobierno es el sistema por que cual se dirigen y controlan las empresas, especificando su estructura, la distribución de derechos y responsabilidadesentre los diversos componentes de la empresa, y el establecimiento de reglas y procedimientospara tomar decisiones en los asuntos corporativos.
+
+### Page 6
+Gobierno Corporativo
+§Actividad:
+Dirección general
+Consejo de administraciónAsamblea de accionistas
+Tienen su capital invertido . Evalúan rendimientos y riesgos de las inversiones
+
+### Page 7
+Gobierno Corporativo
+§Actividad:
+Dirección general
+Consejo de administraciónAsamblea de accionistas
+Propietarios, inversionistas y consejeros externos. Determinan estrategias a seguir y supervisan las acciones del grupo directivo
+
+### Page 8
+Gobierno Corporativo
+§Actividad:
+Dirección general
+Consejo de administraciónAsamblea de accionistas
+Grupo gerencial (presidente, gerente, directores,...).Encargado de la dirección general de la empresa, departamentos o subdivisiones.
+
+### Page 9
+Gobierno Corporativo
+§Actividad:
+Dirección general
+Consejo de administraciónAsamblea de accionistas
+¿Dónde participa el CIO ?
+
+### Page 10
+Gobierno Corporativo
+§Actividad:
+Dirección general
+Consejo de administraciónAsamblea de accionistas
+¿Dónde participa el CIO ?
+≃CIO
+
+### Page 11
+Gobierno Corporativo
+§Actividad:
+Dirección general
+Consejo de administraciónAsamblea de accionistas
+No todos los directivos están al mismo nivel
+≃CIO
+
+### Page 12
+Gobierno TI§A partir del año 2000 las organizaciones se enfrentan a una complejidad cada vez mayor con avances vertiginosos en nuevas tecnologías.
+
+### Page 13
+Gobierno corporativo
+(Weill y Ross, 2004)
+
+### Page 14
+Gobierno TI§El gobierno de TI se centra en el uso de la tecnología para satisfacer los objetivos de la organizaciónfijados por la dirección (Hamakery Hutton, 2004)
+§Parenty Reich (2007) distinguen dos formas de gobierno de TI:oGobierno del riesgode las TI (Visión defensiva)oGobierno del valorde las TI (Visión estratégica)
+
+### Page 15
+Gobierno TI§Dahlbergy Kivijarvi(2006) indican que el gobierno de TI debe ser integral e incluiroProcesos y estructura de gobiernooAlineamientode negociooOperaciones de TIoMedición del desempeñooEstrategia de valor
+§El IT GovernanceInstituteindica que el gobierno de TI asegura: oGestionan riesgosoAlineamientocon el negociooGestionan el desempempeñooGestionan recursosoEntrega valoral negocio
+
+### Page 16
+Gobierno TI
+§El IT GovernanceInstituteindica que el gobierno de TI asegura: oGestionan riesgosoAlineamiento con el negociooGestionan el despempeñooGestionan recursosoEntrega valor al negocio
+AsignaturaTema 1Tema 2Tema 3Tema 4Tema 5
+¿Quién?¿El CIO, el consejo, la dirección?
+
+### Page 17
+Gobierno TI§El gobierno de TI es la capacidad de organización que ejerceel consejo, la dirección ejecutiva y la gestión de TIpara controlar la formulación e implementación de la estrategia de TI y de esta manera asegurar la fusión de los negocios y de TI. (Van Grembergen, 2002)§El gobierno de TI es responsabilidadde la junta directiva (o consejo de administración)y la dirección ejecutiva. Es una parte integral del gobierno de la empresay consiste en las estructuras de dirección, organización y procesos que aseguren que la organización sostiene y extiende las estrategias y objetivos de la organización.  (IT Governance Institute, 2001)
+
+### Page 18
+Gobierno de TI frente a Gestión de TI (Peterson, 2003)
+!"#$B&##
+'E$&BF*F$+B
+I$-&.
+'E$&BF*F$+B
+/0F&EB*1
+OBF&EB*1
+PE&#&BF 4"F"E&
+!"#
+$%&%'()(&G
+!"#
++I-(.&%&/(
+Prestación de servicios y productos para la organización interna de TI y la gestión de las operaciones actuales
+Es específico de la organización, y no pueden ser externalizados
+
+### Page 19
+Gobierno TIEntonces ¿Cual es el papel del CIO en la Gobernanza de TI?
+Twoquestionsthenarise: Are boardspreparedtoasktherightquestionsofmanagement, and in particular theCIO?Are CIOspreparedtotakeonthisbroaderresponsibility?
+IftheCIO doesnotstep up, othersmaysupplanthisorherrole.
+
+### Page 20
+58
+¿Cuantos proyectos de TI tienen resultados positivos en el negocio?
+...todavía no es suficiente!
+La mitad o menosMás de la mitad
+!"#$%#
+
+### Page 21
+11 September 2008IT Governance Event - UCISA 60
+Mitigar el riesgo: Garantizar la seguridad y la continuidad de las operaciones comerciales internas, y reducir al mínimo la exposición al factor de riesgo externo
+Maximizar la rentabilidad: Mejorar los resultados empresariales;  Aumentar los ingresos y las ganancias, flujo de caja, la reducción del costo de la operación
+Mejorar el rendimiento: Mejorar de extremo a extremo el rendimiento operaciones comerciales.  Aumentar  la satisfacción de cliente y empleados
+Aumentar la agilidad: Habilitar la organización empresarial y las operaciones para adaptarse a las cambiantes necesidades del negocio
+el CIO debe combinar entre muchas prioridades que compiten
+
+### Page 22
+11 September 2008IT Governance Event - UCISA 61
+Mitigar el riesgo: Garantizar la seguridad y la continuidad de las operaciones comerciales internas, y reducir al mínimo la exposición al factor de riesgo externo
+Maximizar la rentabilidad: Mejorar los resultados empresariales;  Aumentar los ingresos y las ganancias, flujo de caja, la reducción del costo de la operación
+Mejorar el rendimiento: Mejorar de extremo a extremo el rendimiento operaciones comerciales.  Aumentar  la satisfacción de cliente y empleados
+Aumentar la agilidad: Habilitar la organización empresarial y las operaciones para adaptarse a las cambiantes necesidades del negocio
+el CIO debe combinar entre muchas prioridades que compiten
+Cuadro de mando
+Gestión de riesgos
+Bedell
+Arquitecturas
+
+### Page 23
+62
+Necesidades, problemas y desafíos
+Procedure, Audits, MetricsControl
+StrategicTacticalOperations
+Demand IT andBusinessResources
+Supply
+Capital, Capacity, PrioritiesPlanning
+Alignment Flexibility
+EfficiencyQuality
+Lack of Business aligned strategy
+Reduce costs across business
+Ineffective project Management
+Deployment Complexity through lack of standard & legacy
+No Audit Trails
+Management of Service Changes
+Must reduce IT costs by 30%
+Lack of IT resource transparency
+Missed targets due to lack of steering control
+Deployment Complexity in number of project
+Cannot aggregate need and distribute ROI
+No means of governing outsourced contracts
+No means of capturing demands
+No means of prioritization of business need
+No means of reporting SLA
+Making new outsourcing decisions
+Do thethingsright
+Do thingsright
+
+### Page 24
+Who are the Decision Makers?
+Business and IT CollaborationIT DecisionBusiness Decision
+De-centralised
+Centralized
+Federal
+Business Exec.
+Business Exec./Mgt.
+Business Mgt.
+IT Exec.
+IT Exec./Mgt.
+IT Management
+Business and IT Exec.
+Business and ITExec./Mgt.
+Business and IT Mgt.
+Non-CooperativeCooperative
+
+### Page 25
+Introducción al Gobierno de TI

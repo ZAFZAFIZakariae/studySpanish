@@ -1,0 +1,66 @@
+# Extracted content
+Source: subjects/snlp/lab/Lab Session 2.pdf
+
+### Page 1
+LABORATORY SESSION 2
+Sentiment Analysis
+
+Objective:
+• Do a practical Sentiment Analysis classification in Python.
+• Using example code
+• Modifying example code to improve it
+Three proposals are offered from which you have to select one.
+Upload your results (code & accurary) and a small explanation of your work to “PoliformaT
+/ Espacio”
+
+
+1. Fine Food Reviews from Amazon
+There is a database of Fine Food Reviews in Kaggle.
+https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
+Download and put in your Google Drive for using Colab.
+
+Starting example code
+https://github.com/Storiesbyharshit/Natural-Language-Processing/blob/master/NLP-
+Tensorflow-Fine-Food-Dataset/amazon-fine-food-reviews.ipynb
+Modify the loading lines to load from your Google Drive
+
+Qualification is from 1 to 5
+For simplifying in the example 1,2,3 is BAD and 4,5 is GOOD
+
+First run the example and obtain results
+Next try to improve the network topology, hyperparam, or other things to improve results
+And much better if you add another class:   BAD, MEDIUM, EXCELENT
+
+### Page 2
+2. Restaurant Reviews from Amazon
+There is a database of Restaurant Reviews in Kaggle.
+https://www.kaggle.com/datasets/d4rklucif3r/restaurant-reviews
+or as a challenge use this other much larger (you may have to change example code)
+https://www.kaggle.com/datasets/joebeachcapital/restaurant-reviews
+or this other
+https://www.kaggle.com/datasets/vigneshwarsofficial/reviews
+
+Starting example code
+https://github.com/Storiesbyharshit/Natural-Language-Processing/blob/master/NLP-
+Reviews-Classification/nlp-reviews-classification.ipynb
+Modify the loading lines to load from your Google Drive
+
+First run the example and obtain results
+Next try to improve the network topology, hyperparam, or other things to improve results
+And much better if you load other database proposed and add more than one class:   BAD,
+MEDIUM, EXCELENT
+
+3. Wine Reviews
+There is a database of wine qualifications with points from 0 to 100.
+https://www.kaggle.com/datasets/zynicide/wine-reviews
+Download and put in your Google Drive for using Colab.
+
+Starting example code
+https://github.com/Storiesbyharshit/Natural-Language-Processing/blob/master/NLP-
+Wine-Reviews/Wine%20reviews.ipynb
+Modify the loading lines to load from your Google Drive
+
+In the example more than 90 is good, less than 90 is bad.
+First run the example and obtain results
+Next try to improve the network topology, hyperparam, or other things to improve results
+And much better if you add another class:   Good, medium, bad
