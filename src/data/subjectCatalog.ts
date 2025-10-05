@@ -8,15 +8,40 @@ const toIsoDate = (offsetDays: number) => new Date(now + offsetDays * DAY_IN_MS)
 
 const withMinutes = (minutes: number) => minutes;
 
+const resourceLabelOverrides: Record<string, Record<string, string>> = {
+  ggo: {
+    'Bedell portfolio analysis working paper (PDF)':
+      'T3. Alineación de negocio y SI TI. Bedell › Methodology for Business Value Analysis of Innovative IT in a Business Sector. The Case of the Material Supply Chain (PDF)',
+    'Método Bedell worksheet (PDF)':
+      'T3. Alineación de negocio y SI TI. Bedell › Calcular la imp del stma de información Método Bedell VA 1 (PDF)',
+    'Business value analysis methodology case (PDF)':
+      'T3. Alineación de negocio y SI TI. Bedell › CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP (PDF)',
+    'Alineación de negocio y TI slides (PDF)':
+      'T3. Alineación de negocio y SI TI. Bedell › 22 Alineación (PDF)',
+  },
+};
+
 const pickResourceLink = (subjectId: string, label: string): ResourceLink => {
   const pool = subjectResourceLibrary[subjectId] ?? [];
-  const match = pool.find((resource) => resource.label === label);
+  const overrideLabel = resourceLabelOverrides[subjectId]?.[label];
+  const lookupLabel = overrideLabel ?? label;
+  const match = pool.find((resource) => resource.label === lookupLabel);
 
   if (!match) {
     if (process.env.NODE_ENV === 'test') {
       return { label, href: '#', type: 'pdf', description: 'Resource unavailable in test environment.' };
     }
-    throw new Error(`Missing resource "${label}" for subject "${subjectId}"`);
+    console.warn(`Missing resource "${label}" for subject "${subjectId}"`);
+    return {
+      label,
+      href: '#',
+      type: 'pdf',
+      description: 'This resource could not be located in the current build.',
+    };
+  }
+
+  if (overrideLabel) {
+    return { ...match, label };
   }
 
   return { ...match };
