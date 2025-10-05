@@ -1,180 +1,111 @@
-import { ResourceLink } from '../types/subject';
+import { ResourceLink, ResourceType } from '../types/subject';
 
-export const subjectResourceLibrary: Record<string, ResourceLink[]> = {
-  sad: [
-    {
-      label: 'Session 0 overview slides (PDF)',
-      href: new URL('../../subjects/Sad/0_Presentation.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Session 1 introduction deck (PDF)',
-      href: new URL('../../subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Session 2 microservices deck (PDF)',
-      href: new URL('../../subjects/Sad/Session_2_Microservices_Bullets_Notes.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Session 3 cloud service models deck (PDF)',
-      href: new URL('../../subjects/Sad/Session_3_Cloud_Service_Models_Bullets_Notes.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-  ],
-  ggo: [
-    {
-      label: 'Introducción a Gobierno de TI slides (PDF)',
-      href: new URL('../../subjects/Ggo/T1. Intro Gobierno de TI/23 Introducción a Gobierno de TI.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Valor de TI lecture slides (PDF)',
-      href: new URL('../../subjects/Ggo/T2. Valor de TI/23 Valor TI.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Alineación de negocio y TI slides (PDF)',
-      href: new URL('../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Método Bedell worksheet (PDF)',
-      href: new URL(
-        "../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Calcular la imp del stma de información Método Bedell_VA_1.pdf",
-        import.meta.url
-      ).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Stakeholder analysis template (PDF)',
-      href: new URL('../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Análisis de stakeholders 2024.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Bedell portfolio analysis working paper (PDF)',
-      href: new URL(
-        '../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP.pdf',
-        import.meta.url
-      ).href,
-      type: 'pdf',
-      description: 'Academic walkthrough of Bedell\'s scoring method with a worked portfolio example.',
-    },
-    {
-      label: 'Business value analysis methodology case (PDF)',
-      href: new URL(
-        '../../subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain.pdf',
-        import.meta.url
-      ).href,
-      type: 'pdf',
-      description: 'Conference case applying ISO 38500, COBIT, Bedell, and IIRA to innovative supply-chain IT.',
-    },
-  ],
-  snlp: [
-    {
-      label: 'Chapter 1 slides (PDF)',
-      href: new URL('../../subjects/snlp/slides/Chapter 1.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Chapter 2 slides (PDF)',
-      href: new URL('../../subjects/snlp/slides/Chapter 2.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Chapter 3 Keras slides (PDF)',
-      href: new URL('../../subjects/snlp/slides/Chapter 3 KERAS.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Chapter 4 NLP slides (PDF)',
-      href: new URL('../../subjects/snlp/slides/Chapter 4 NLP.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Chapter 5 LLM slides (PDF)',
-      href: new URL('../../subjects/snlp/slides/Chapter 5 LLM.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Chapter 6 Speech slides (PDF)',
-      href: new URL('../../subjects/snlp/slides/Chapter 6 SPEECH.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Assignments overview (PDF)',
-      href: new URL('../../subjects/snlp/slides/Assignments.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Poster presentation template (PDF)',
-      href: new URL('../../subjects/snlp/slides/Presentation.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Lab session 1 pre-work (PDF)',
-      href: new URL('../../subjects/snlp/lab/PRE-WORK Lab Session 1.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Lab session 2 guide (PDF)',
-      href: new URL('../../subjects/snlp/lab/Lab Session 2.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Lab session 3 guide (PDF)',
-      href: new URL('../../subjects/snlp/lab/Lab Session 3.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-  ],
-  admeav: [
-    {
-      label: 'Presentation overview (PDF)',
-      href: new URL('../../subjects/Admeav/Teoria/slides/T0_Presentation.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Hand-crafted feature extraction slides (PDF)',
-      href: new URL('../../subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'CNN feature extraction slides (PDF)',
-      href: new URL('../../subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-  ],
-  dbd: [
-    {
-      label: 'Presentación inicial (PDF)',
-      href: new URL('../../subjects/Dbd/presentacionDBD.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Planificación de prácticas (PDF)',
-      href: new URL('../../subjects/Dbd/Planificación_prácticas.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Tema 1 teoría (PDF)',
-      href: new URL('../../subjects/Dbd/Teoria/tema1_DBD.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Tema 2 teoría (PDF)',
-      href: new URL('../../subjects/Dbd/Teoria/tema2_DBD.pdf', import.meta.url).href,
-      type: 'slides',
-    },
-    {
-      label: 'Cuestiones tema 2 (PDF)',
-      href: new URL('../../subjects/Dbd/Teoria/Cuestiones _T2_.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-    {
-      label: 'Cuestiones tema 2 solución (PDF)',
-      href: new URL('../../subjects/Dbd/Teoria/Cuestiones _T2__Solución.pdf', import.meta.url).href,
-      type: 'worksheet',
-    },
-  ],
+const SUBJECTS_ROOT = '../../subjects/';
+
+const resourceTypeByExtension: Partial<Record<string, ResourceType>> = {
+  pdf: 'pdf',
+  ppt: 'slides',
+  pptx: 'slides',
+  pps: 'slides',
+  ppsx: 'slides',
+  key: 'slides',
+  odp: 'slides',
+  ipynb: 'worksheet',
+  doc: 'worksheet',
+  docx: 'worksheet',
+  xls: 'worksheet',
+  xlsx: 'worksheet',
+  csv: 'worksheet',
+  txt: 'worksheet',
+  md: 'worksheet',
+  png: 'slides',
+  sql: 'worksheet',
+  url: 'worksheet',
+  archimate: 'worksheet',
 };
+
+const decodeSegment = (segment: string): string => decodeURIComponent(segment);
+
+const tidySegment = (segment: string): string =>
+  decodeSegment(segment)
+    .replace(/[_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const formatFileName = (fileName: string): string => {
+  const decoded = decodeSegment(fileName);
+  const lastDotIndex = decoded.lastIndexOf('.');
+
+  if (lastDotIndex <= 0) {
+    return tidySegment(decoded);
+  }
+
+  const base = tidySegment(decoded.slice(0, lastDotIndex));
+  const extension = decoded.slice(lastDotIndex + 1).toUpperCase();
+
+  return extension ? `${base} (${extension})` : base;
+};
+
+const buildResourceLabel = (segments: string[]): string => {
+  if (segments.length === 0) {
+    return '';
+  }
+
+  return segments
+    .map((segment, index) => (index === segments.length - 1 ? formatFileName(segment) : tidySegment(segment)))
+    .join(' › ');
+};
+
+const assetModules = import.meta.glob('../../subjects/**/*.*', {
+  eager: true,
+  as: 'url',
+}) as Record<string, string>;
+
+const collator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
+
+const resourcesBySubject = new Map<string, ResourceLink[]>();
+
+Object.entries(assetModules).forEach(([path, href]) => {
+  if (!path.startsWith(SUBJECTS_ROOT)) {
+    return;
+  }
+
+  const relativePath = path.slice(SUBJECTS_ROOT.length);
+  if (!relativePath) {
+    return;
+  }
+
+  const segments = relativePath.split('/').filter(Boolean);
+  if (segments.length < 2) {
+    return;
+  }
+
+  const [subjectFolder, ...resourceSegments] = segments;
+  const subjectId = subjectFolder.toLowerCase();
+  const label = buildResourceLabel(resourceSegments);
+
+  if (!label) {
+    return;
+  }
+
+  const fileSegment = resourceSegments[resourceSegments.length - 1] ?? '';
+  const extension = fileSegment.split('.').pop()?.toLowerCase() ?? '';
+  const type = resourceTypeByExtension[extension];
+
+  const resource: ResourceLink = { label, href };
+  if (type) {
+    resource.type = type;
+  }
+
+  const bucket = resourcesBySubject.get(subjectId) ?? [];
+  bucket.push(resource);
+  resourcesBySubject.set(subjectId, bucket);
+});
+
+export const subjectResourceLibrary: Record<string, ResourceLink[]> = Array.from(resourcesBySubject.entries()).reduce(
+  (acc, [subjectId, resources]) => {
+    acc[subjectId] = resources.slice().sort((a, b) => collator.compare(a.label, b.label));
+    return acc;
+  },
+  {} as Record<string, ResourceLink[]>
+);
