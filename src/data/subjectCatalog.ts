@@ -18,6 +18,10 @@ const resourceLabelOverrides: Record<string, Record<string, string>> = {
       'T3. Alineación de negocio y SI TI. Bedell › CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP (PDF)',
     'Alineación de negocio y TI slides (PDF)':
       'T3. Alineación de negocio y SI TI. Bedell › 22 Alineación (PDF)',
+    'T4. Recursos. Arquitectura empresarial › 23 Gestión de Recursos (PDF)':
+      'T4. Recursos. Arquitectura empresarial › 23 Gestión de Recursos (PDF)',
+    'T4. Recursos. Arquitectura empresarial › Casos › El 57 de las empresas planea invertir más en TIC en dos años, pero la falta de presupuesto será un escollo | Empresas | Cinco Días (PDF)':
+      'T4. Recursos. Arquitectura empresarial › Casos › El 57 de las empresas planea invertir más en TIC en dos años, pero la falta de presupuesto será un escollo | Empresas | Cinco Días (PDF)',
   },
 };
 
@@ -293,6 +297,44 @@ export const subjectCatalog: SubjectSummary[] = [
             },
           },
           {
+            id: 'ggo-tema-4',
+            kind: 'lesson',
+            title: 'Tema 4 · Recursos y arquitectura empresarial',
+            language: 'es',
+            summary: {
+              original: 'Sesión dedicada a la gestión de recursos y a modelar arquitecturas empresariales con ejemplos guiados.',
+              english:
+                'Lecture focused on IT resource governance and enterprise architecture blueprints with guided walk-throughs.',
+            },
+            content: {
+              original:
+                '# Gestión de recursos\n\n- Revisión de capacidades y carteras estratégicas.\n- Ejemplos de asignación de recursos soportados por COBIT.\n\n# Arquitectura empresarial\n\n- Componentes de arquitectura y principios TOGAF.\n- Caso práctico con planos de referencia.',
+              english:
+                '# Resource governance\n\n- Review strategic capability portfolios.\n- Tie resource allocation to COBIT objectives.\n\n# Enterprise architecture\n\n- Outline TOGAF components and guiding principles.\n- Apply the framework through an annotated case.',
+            },
+            tags: ['arquitectura empresarial', 'gobierno de TI'],
+            estimatedMinutes: withMinutes(95),
+            dueDate: toIsoDate(13),
+            status: 'scheduled',
+            translation: {
+              status: 'partial',
+              summary: 'Apuntes en inglés en progreso para cada bloque de la sesión.',
+            },
+            resources: [
+              {
+                ...pickResourceLink(
+                  'ggo',
+                  'T4. Recursos. Arquitectura empresarial › 01 Clase Arquitecturas y 02 Ejemplo de Arquitectura (PDF)'
+                ),
+                description: 'Diapositivas principales con el recorrido completo de la sesión.',
+              },
+              {
+                ...pickResourceLink('ggo', 'T4. Recursos. Arquitectura empresarial › 23 Gestión de Recursos (PDF)'),
+                description: 'Documento con el detalle del modelo de gobierno de recursos.',
+              },
+            ],
+          },
+          {
             id: 'ggo-bedell-method-portfolio',
             kind: 'reading',
             title: 'Reading · Bedell method portfolio case',
@@ -339,6 +381,90 @@ export const subjectCatalog: SubjectSummary[] = [
                 ...pickResourceLink('ggo', 'Alineación de negocio y TI slides (PDF)'),
                 description: 'Spanish lecture deck referenced throughout the case study.',
               },
+            ],
+          },
+          {
+            id: 'ggo-togaf-archimate',
+            kind: 'reading',
+            title: 'Reading · TOGAF y ArchiMate',
+            language: 'es',
+            summary: {
+              original: 'Material de apoyo para conectar el marco TOGAF con modelado ArchiMate y su aplicación en clase.',
+              english: 'Supplement that links the TOGAF framework with ArchiMate modelling examples used in class.',
+            },
+            tags: ['arquitectura empresarial', 'TOGAF'],
+            estimatedMinutes: withMinutes(60),
+            dueDate: toIsoDate(15),
+            status: 'scheduled',
+            translation: {
+              status: 'planned',
+              summary: 'Resumen detallado en inglés planificado para la próxima iteración.',
+            },
+            resources: [
+              {
+                ...pickResourceLink('ggo', 'T4. Recursos. Arquitectura empresarial › 03 TOGAF y Archi 2023 (PDF)'),
+                description: 'Compendio con los principios TOGAF y diagramas ArchiMate comentados.',
+              },
+            ],
+          },
+          {
+            id: 'ggo-casos-arquitectura',
+            kind: 'reading',
+            title: 'Reading · Casos de arquitectura empresarial',
+            language: 'es',
+            summary: {
+              original: 'Recopilación de artículos y notas de prensa sobre inversiones TIC y arquitectura empresarial.',
+              english: 'Curated articles covering IT investment trends and enterprise architecture decisions.',
+            },
+            tags: ['casos', 'arquitectura empresarial'],
+            estimatedMinutes: withMinutes(40),
+            dueDate: toIsoDate(16),
+            status: 'not-started',
+            translation: {
+              status: 'planned',
+              summary: 'Traducción resumida al inglés pendiente de redactar.',
+            },
+            resources: [
+              pickResourceLink(
+                'ggo',
+                'T4. Recursos. Arquitectura empresarial › Casos › El 57 de las empresas planea invertir más en TIC en dos años, pero la falta de presupuesto será un escollo | Empresas | Cinco Días (PDF)'
+              ),
+            ],
+          },
+          {
+            id: 'ggo-practica-arquitectura',
+            kind: 'lab',
+            title: 'Práctica · Caso de arquitectura empresarial',
+            language: 'es',
+            summary: {
+              original: 'Caso guiado para diseñar una arquitectura empresarial y justificar decisiones de recursos.',
+              english: 'Guided case to design an enterprise architecture and justify resource governance choices.',
+            },
+            tags: ['arquitectura empresarial', 'caso práctico'],
+            estimatedMinutes: withMinutes(120),
+            dueDate: toIsoDate(18),
+            status: 'scheduled',
+            translation: {
+              status: 'planned',
+              summary: 'Traducción del caso y notas docentes en preparación.',
+            },
+            resources: [
+              pickResourceLink(
+                'ggo',
+                'T4. Recursos. Arquitectura empresarial › Practica AE 2024 › Teaching case EA specification Case study (PDF)'
+              ),
+              pickResourceLink(
+                'ggo',
+                'T4. Recursos. Arquitectura empresarial › Practica AE 2024 › Teaching Case Notes -with bios (PDF)'
+              ),
+              pickResourceLink(
+                'ggo',
+                'T4. Recursos. Arquitectura empresarial › Practica AE 2024 › Caso de estudio XYZ ACO (DOCX)'
+              ),
+              pickResourceLink(
+                'ggo',
+                'T4. Recursos. Arquitectura empresarial › Practica AE 2024 › Ejemplo de Arquitectura Empresarial (PPTX)'
+              ),
             ],
           },
         ],
@@ -428,6 +554,106 @@ export const subjectCatalog: SubjectSummary[] = [
               status: 'partial',
               summary: 'Notas de solución en inglés en progreso.',
             },
+          },
+          {
+            id: 'dbd-tema-3',
+            kind: 'lesson',
+            title: 'Tema 3 · Dependencias avanzadas y 4FN',
+            language: 'es',
+            summary: {
+              original: 'Profundiza en dependencias multivaluadas, descomposición sin pérdida y formas normales superiores.',
+              english: 'Deep dive into multivalued dependencies, lossless decomposition, and higher normal forms.',
+            },
+            content: {
+              original:
+                '## Objetivos\n- Revisar axiomas de Armstrong para deducir dependencias.\n- Aplicar 4FN y 5FN en esquemas complejos.\n\n## Actividades\n- Resolución guiada de ejercicios de descomposición.\n- Discusión sobre cuándo relajar restricciones en modelos reales.',
+              english:
+                '## Goals\n- Use Armstrong axioms to infer hidden dependencies.\n- Apply 4NF and 5NF to complex relational schemas.\n\n## Activities\n- Work through guided decomposition drills.\n- Debate trade-offs of relaxing constraints in real projects.',
+            },
+            tags: ['normalización', 'dependencias'],
+            estimatedMinutes: withMinutes(100),
+            dueDate: toIsoDate(12),
+            status: 'scheduled',
+            translation: {
+              status: 'planned',
+              summary: 'Resumen detallado al inglés por preparar.',
+            },
+            resources: [
+              pickResourceLink('dbd', 'Teoria › Tema 3 › tema3 DBD (PDF)'),
+              pickResourceLink('dbd', 'Teoria › Tema 3 › tema3 DBD (PPSX)'),
+            ],
+          },
+          {
+            id: 'dbd-cuestiones-t3',
+            kind: 'assignment',
+            title: 'Cuestiones Tema 3',
+            language: 'es',
+            summary: {
+              original: 'Problemas de práctica sobre descomposición y dependencias multivaluadas.',
+              english: 'Practice problems covering decomposition and multivalued dependencies.',
+            },
+            tags: ['normalización', 'problemas'],
+            estimatedMinutes: withMinutes(70),
+            dueDate: toIsoDate(13),
+            status: 'not-started',
+            translation: {
+              status: 'planned',
+              summary: 'Traducción al inglés pendiente de revisión.',
+            },
+            resources: [
+              pickResourceLink('dbd', 'Teoria › Tema 3 › Cuestiones T3 (PDF)'),
+              pickResourceLink('dbd', 'Teoria › Tema 3 › Cuestiones T3 sol (PDF)'),
+            ],
+          },
+          {
+            id: 'dbd-tema-4',
+            kind: 'lesson',
+            title: 'Tema 4 · Transacciones y concurrencia',
+            language: 'es',
+            summary: {
+              original: 'Introduce control de concurrencia, serialización y recuperación de transacciones.',
+              english: 'Introduces concurrency control, serialisation, and transaction recovery foundations.',
+            },
+            content: {
+              original:
+                '### Bloque 1\n- Conceptos de transacción y propiedades ACID.\n- Serialización y conflictos clásicos.\n\n### Bloque 2\n- Métodos de control de concurrencia.\n- Recuperación ante fallos con ejemplos.',
+              english:
+                '### Block 1\n- Transaction concept and ACID guarantees.\n- Serialisation graphs and conflict analysis.\n\n### Block 2\n- Concurrency control techniques.\n- Failure recovery walkthroughs with examples.',
+            },
+            tags: ['transacciones', 'concurrencia'],
+            estimatedMinutes: withMinutes(105),
+            dueDate: toIsoDate(17),
+            status: 'scheduled',
+            translation: {
+              status: 'planned',
+              summary: 'Notas bilingües programadas después de la clase.',
+            },
+            resources: [
+              pickResourceLink('dbd', 'Teoria › Tema 4 › tema4 DBD (PDF)'),
+              pickResourceLink('dbd', 'Teoria › Tema 4 › tema4 DBD (PPSX)'),
+            ],
+          },
+          {
+            id: 'dbd-cuestiones-t4',
+            kind: 'assignment',
+            title: 'Cuestiones Tema 4',
+            language: 'es',
+            summary: {
+              original: 'Cuestionario para practicar serialización y planes de recuperación.',
+              english: 'Question set to drill serialisation checks and recovery planning.',
+            },
+            tags: ['transacciones', 'problemas'],
+            estimatedMinutes: withMinutes(75),
+            dueDate: toIsoDate(18),
+            status: 'not-started',
+            translation: {
+              status: 'planned',
+              summary: 'Traducción al inglés prevista tras las soluciones.',
+            },
+            resources: [
+              pickResourceLink('dbd', 'Teoria › Tema 4 › Cuestiones T4 (PDF)'),
+              pickResourceLink('dbd', 'Teoria › Tema 4 › Cuestiones T4 sol (PDF)'),
+            ],
           },
           {
             id: 'dbd-plan-practicas',
