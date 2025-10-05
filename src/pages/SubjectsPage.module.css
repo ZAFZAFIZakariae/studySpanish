@@ -682,6 +682,12 @@
   gap: 10px;
 }
 
+.resourceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .resourceLink {
   display: flex;
   align-items: center;
@@ -707,6 +713,56 @@
 
 .resourceLabel {
   font-weight: 600;
+}
+
+.resourceExtract {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(241, 245, 249, 0.6);
+  padding: 10px 12px;
+}
+
+.resourceExtract summary {
+  margin: 0;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ui-text-primary, #1f2937);
+}
+
+.resourceExtract summary:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+}
+
+.resourceExtract[open] summary {
+  margin-bottom: 8px;
+}
+
+.resourceExtractBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resourceExtractNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resourceExtractNotes h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ui-text-secondary, #475569);
+}
+
+.resourceExtractNotes ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--ui-text-secondary, #475569);
 }
 
 @media (max-width: 960px) {

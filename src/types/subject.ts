@@ -9,6 +9,11 @@ export interface ResourceLink {
   href: string;
   description?: string;
   type?: ResourceType;
+  extract?: {
+    source: string;
+    text: string;
+    notes?: string[];
+  };
 }
 
 export interface TranslationMilestone {

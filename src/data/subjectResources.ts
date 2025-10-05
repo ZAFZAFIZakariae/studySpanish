@@ -1,3 +1,4 @@
+import { getSubjectExtract } from './subjectExtracts';
 import { ResourceLink, ResourceType } from '../types/subject';
 
 const SUBJECTS_ROOT = '../../subjects/';
@@ -91,10 +92,19 @@ Object.entries(assetModules).forEach(([path, href]) => {
   const fileSegment = resourceSegments[resourceSegments.length - 1] ?? '';
   const extension = fileSegment.split('.').pop()?.toLowerCase() ?? '';
   const type = resourceTypeByExtension[extension];
+  const extractSourcePath = ['subjects', ...segments.map(decodeSegment)].join('/');
+  const extract = getSubjectExtract(extractSourcePath);
 
   const resource: ResourceLink = { label, href };
   if (type) {
     resource.type = type;
+  }
+  if (extract) {
+    resource.extract = {
+      source: extract.source,
+      text: extract.text,
+      ...(extract.notes ? { notes: extract.notes } : {}),
+    };
   }
 
   const bucket = resourcesBySubject.get(subjectId) ?? [];
