@@ -585,7 +585,7 @@ const SubjectsPage: React.FC = () => {
   const renderResourceLinks = (links: ResourceLink[]) => (
     <ul className={styles.resourceList}>
       {links.map((resource) => (
-        <li key={resource.href}>
+        <li key={resource.href} className={styles.resourceItem}>
           <a className={styles.resourceLink} href={resource.href} target="_blank" rel="noopener noreferrer">
             <span className={styles.resourceIcon} aria-hidden="true">
               {resource.type ? resourceTypeIcon[resource.type] : '📄'}
@@ -596,6 +596,24 @@ const SubjectsPage: React.FC = () => {
               {resource.description && <span className={styles.meta}>{resource.description}</span>}
             </span>
           </a>
+          {resource.extract && (
+            <details className={styles.resourceExtract}>
+              <summary>View extracted text</summary>
+              <div className={styles.resourceExtractBody}>
+                {renderContentBlocks(resource.extract.text, 'original')}
+                {resource.extract.notes && resource.extract.notes.length > 0 && (
+                  <div className={styles.resourceExtractNotes}>
+                    <h4>Extraction notes</h4>
+                    <ul>
+                      {resource.extract.notes.map((note) => (
+                        <li key={note}>{note}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </details>
+          )}
         </li>
       ))}
     </ul>
