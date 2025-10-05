@@ -1,12 +1,9 @@
 type GlobFunction = (pattern: string, options: { eager: true; as: 'raw' }) => Record<string, string>;
 
-const resolveGlob = (): GlobFunction | undefined => {
+const getImportMetaGlob = (): GlobFunction | undefined => {
   try {
-    // eslint-disable-next-line no-new-func
-    const result = new Function(
-      'return typeof import.meta !== "undefined" && import.meta.glob ? import.meta.glob : undefined;'
-    )();
-    return typeof result === 'function' ? (result as GlobFunction) : undefined;
+    const meta = import.meta as unknown as { glob?: GlobFunction };
+    return typeof meta.glob === 'function' ? meta.glob : undefined;
   } catch (error) {
     return undefined;
   }
@@ -43,7 +40,7 @@ const loadTextModulesWithFs = (): Record<string, string> => {
 };
 
 const textModules = (() => {
-  const glob = resolveGlob();
+  const glob = getImportMetaGlob();
   if (glob) {
     return glob('./**/*.txt', { eager: true, as: 'raw' }) as Record<string, string>;
   }
