@@ -78,6 +78,7 @@ const getPromptPreview = (markdown: string) => {
 const LessonPage: React.FC = () => {
   const { slug } = useParams();
   const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [allLessons, setAllLessons] = useState<Lesson[]>([]);
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [status, setStatus] = useState<'loading' | 'ready' | 'missing'>('loading');
   const [gradeHistory, setGradeHistory] = useState<Record<string, Grade[]>>({});
@@ -92,12 +93,13 @@ const LessonPage: React.FC = () => {
     let active = true;
     setStatus('loading');
     setLesson(null);
+    setAllLessons([]);
     setExercises([]);
     setGradeHistory({});
     setSessionLog([]);
     setLessonNeighbors({ previous: null, next: null });
     const load = async () => {
-      const [found, allLessons] = await Promise.all([
+      const [found, allLessonRecords] = await Promise.all([
         db.lessons.where('slug').equals(slug).first(),
         db.lessons.toArray(),
       ]);
@@ -123,9 +125,10 @@ const LessonPage: React.FC = () => {
         list.sort((a, b) => new Date(a.gradedAt).getTime() - new Date(b.gradedAt).getTime())
       );
       setLesson(found);
+      setAllLessons(allLessonRecords);
       setExercises(lessonExercises);
       setGradeHistory(grouped);
-      setLessonNeighbors(computeLessonNeighbors(allLessons, found));
+      setLessonNeighbors(computeLessonNeighbors(allLessonRecords, found));
       setStatus('ready');
     };
     load();
@@ -316,7 +319,7 @@ const LessonPage: React.FC = () => {
           <h2 id="lesson-content-heading" className="ui-section__title">
             Lesson content
           </h2>
-          <LessonViewer markdown={lesson.markdown} />
+          <LessonViewer markdown={lesson.markdown} lessonId={lesson.id} allLessons={allLessons} />
         </section>
 
         <section
