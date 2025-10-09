@@ -11,6 +11,7 @@ export default defineConfig({
   resolve: {
     alias,
   },
+  assetsInclude: ['**/*.txt'],
   server: {
     headers: {
       'Service-Worker-Allowed': '/',

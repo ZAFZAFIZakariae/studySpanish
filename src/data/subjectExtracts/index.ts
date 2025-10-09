@@ -1,16 +1,4 @@
-type GlobFunction = (pattern: string, options: { eager: true; as: 'raw' }) => Record<string, string>;
-
-const resolveGlob = (): GlobFunction | undefined => {
-  try {
-    // eslint-disable-next-line no-new-func
-    const result = new Function(
-      'return typeof import.meta !== "undefined" && import.meta.glob ? import.meta.glob : undefined;'
-    )();
-    return typeof result === 'function' ? (result as GlobFunction) : undefined;
-  } catch (error) {
-    return undefined;
-  }
-};
+import subjectExtractModules from './globModules';
 
 const loadModulesWithFs = (): Record<string, string> => {
   try {
@@ -42,9 +30,12 @@ const loadModulesWithFs = (): Record<string, string> => {
   }
 };
 
-const glob = resolveGlob();
-
-const modules = glob ? glob('./**/*.txt', { eager: true, as: 'raw' }) : loadModulesWithFs();
+const modules = (() => {
+  if (subjectExtractModules && Object.keys(subjectExtractModules).length > 0) {
+    return subjectExtractModules;
+  }
+  return loadModulesWithFs();
+})();
 
 type ExtractedSubjectText = {
   /** Path of the source asset inside the `subjects/` tree. */

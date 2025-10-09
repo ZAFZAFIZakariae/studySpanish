@@ -1,27 +1,13 @@
 type GlobResult = Record<string, string>;
 
-type GlobFunction = (pattern: string, options: { eager: true; as: 'url' }) => GlobResult;
+import figureAssetModules from './assetModules';
 
-const resolveGlob = (): GlobFunction | undefined => {
-  try {
-    // eslint-disable-next-line no-new-func
-    const result = new Function(
-      'return typeof import.meta !== "undefined" && import.meta.glob ? import.meta.glob : undefined;'
-    )();
-    return typeof result === 'function' ? (result as GlobFunction) : undefined;
-  } catch (error) {
-    return undefined;
+const assetModules: GlobResult = (() => {
+  if (figureAssetModules && Object.keys(figureAssetModules).length > 0) {
+    return figureAssetModules;
   }
-};
-
-const glob = resolveGlob();
-
-const assetModules: GlobResult = glob
-  ? glob('../../subjects/**/*.{png,jpg,jpeg,svg,webp}', {
-      eager: true,
-      as: 'url',
-    })
-  : {};
+  return {};
+})();
 
 const lessonFigureAssets = new Map<string, string>();
 
