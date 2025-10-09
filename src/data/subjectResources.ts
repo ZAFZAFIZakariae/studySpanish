@@ -1,7 +1,56 @@
 import { getSubjectExtract } from './subjectExtracts';
 import { ResourceLink, ResourceType } from '../types/subject';
 
+type GlobFunction = <T = unknown>(
+  pattern: string,
+  options: { eager: true; import: 'default'; query: string }
+) => Record<string, T>;
+
+const resolveGlob = (): GlobFunction | undefined => {
+  try {
+    // eslint-disable-next-line no-new-func
+    const result = new Function(
+      'return typeof import.meta !== "undefined" && import.meta.glob ? import.meta.glob : undefined;'
+    )();
+    return typeof result === 'function' ? (result as GlobFunction) : undefined;
+  } catch (error) {
+    return undefined;
+  }
+};
+
 const SUBJECTS_ROOT = '../../subjects/';
+
+const loadAssetModulesWithFs = (): Record<string, string> => {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const fs = require('fs') as typeof import('fs');
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const path = require('path') as typeof import('path');
+
+    const rootDir = path.resolve(__dirname, SUBJECTS_ROOT);
+    const result: Record<string, string> = {};
+
+    const visit = (dir: string) => {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        const entryPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          visit(entryPath);
+        } else if (entry.isFile()) {
+          const relativePath = path.relative(rootDir, entryPath).replace(/\\/g, '/');
+          const moduleId = `${SUBJECTS_ROOT}${relativePath}`;
+          result[moduleId] = `/subjects/${relativePath}`;
+        }
+      }
+    };
+
+    visit(rootDir);
+    return result;
+  } catch (error) {
+    console.warn('[subjectResources] Unable to load subject assets via fs:', error);
+    return {};
+  }
+};
 
 const resourceTypeByExtension: Partial<Record<string, ResourceType>> = {
   pdf: 'pdf',
@@ -57,10 +106,11 @@ const buildResourceLabel = (segments: string[]): string => {
     .join(' › ');
 };
 
-const assetModules = import.meta.glob('../../subjects/**/*.*', {
-  eager: true,
-  as: 'url',
-}) as Record<string, string>;
+const glob = resolveGlob();
+
+const assetModules = glob
+  ? (glob<string>('../../subjects/**/*.*', { eager: true, import: 'default', query: '?url' }) as Record<string, string>)
+  : loadAssetModulesWithFs();
 
 const collator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
 

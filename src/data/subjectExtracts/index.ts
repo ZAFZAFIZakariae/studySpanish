@@ -1,4 +1,7 @@
-type GlobFunction = (pattern: string, options: { eager: true; as: 'raw' }) => Record<string, string>;
+type GlobFunction = <T = unknown>(
+  pattern: string,
+  options: { eager: true; import: 'default'; query: string }
+) => Record<string, T>;
 
 const resolveGlob = (): GlobFunction | undefined => {
   try {
@@ -44,7 +47,7 @@ const loadModulesWithFs = (): Record<string, string> => {
 
 const glob = resolveGlob();
 
-const modules = glob ? glob('./**/*.txt', { eager: true, as: 'raw' }) : loadModulesWithFs();
+const modules = glob ? glob<string>('./**/*.txt', { eager: true, import: 'default', query: '?raw' }) : loadModulesWithFs();
 
 type ExtractedSubjectText = {
   /** Path of the source asset inside the `subjects/` tree. */
