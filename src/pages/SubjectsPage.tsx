@@ -41,6 +41,75 @@ const resourceTypeIcon: Record<NonNullable<ResourceLink['type']>, string> = {
   worksheet: '📝',
 };
 
+type ResourceTreeNode =
+  | { kind: 'group'; label: string; key: string; children: ResourceTreeNode[] }
+  | { kind: 'resource'; label: string; key: string; resource: ResourceLink };
+
+const resourceTreeCollator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
+
+const splitResourceLabel = (label: string): string[] =>
+  label
+    .split('›')
+    .map((segment) => segment.replace(/›/g, '').trim())
+    .filter((segment) => segment.length > 0);
+
+const countTreeResources = (nodes: ResourceTreeNode[]): number =>
+  nodes.reduce(
+    (total, node) => total + (node.kind === 'resource' ? 1 : countTreeResources(node.children)),
+    0
+  );
+
+const buildResourceTree = (links: ResourceLink[]): ResourceTreeNode[] => {
+  const root: ResourceTreeNode[] = [];
+
+  links.forEach((resource) => {
+    const segments = splitResourceLabel(resource.label);
+    const effectiveSegments = segments.length > 0 ? segments : [resource.label.trim() || 'Resource'];
+
+    let currentLevel = root;
+    const pathSegments: string[] = [];
+
+    effectiveSegments.forEach((segment, index) => {
+      const isLeaf = index === effectiveSegments.length - 1;
+      const pathKey = [...pathSegments, segment].join(' / ');
+
+      if (isLeaf) {
+        currentLevel.push({
+          kind: 'resource',
+          label: segment,
+          key: `${pathKey}::${resource.href}`,
+          resource,
+        });
+        return;
+      }
+
+      let groupNode = currentLevel.find(
+        (node): node is Extract<ResourceTreeNode, { kind: 'group' }> => node.kind === 'group' && node.label === segment
+      );
+
+      if (!groupNode) {
+        groupNode = { kind: 'group', label: segment, key: pathKey, children: [] };
+        currentLevel.push(groupNode);
+      }
+
+      pathSegments.push(segment);
+      currentLevel = groupNode.children;
+    });
+  });
+
+  const sortTree = (nodes: ResourceTreeNode[]) => {
+    nodes.sort((a, b) => resourceTreeCollator.compare(a.label, b.label));
+    nodes.forEach((node) => {
+      if (node.kind === 'group') {
+        sortTree(node.children);
+      }
+    });
+  };
+
+  sortTree(root);
+  return root;
+};
+
 const translationPlaceholderPatterns = [
   /resumen en inglés/i,
   /english summary/i,
@@ -582,42 +651,83 @@ const SubjectsPage: React.FC = () => {
     );
   };
 
-  const renderResourceLinks = (links: ResourceLink[]) => (
-    <ul className={styles.resourceList}>
-      {links.map((resource) => (
-        <li key={resource.href} className={styles.resourceItem}>
-          <a className={styles.resourceLink} href={resource.href} target="_blank" rel="noopener noreferrer">
-            <span className={styles.resourceIcon} aria-hidden="true">
-              {resource.type ? resourceTypeIcon[resource.type] : '📄'}
-            </span>
-            <span>
-              <span className={styles.resourceLabel}>{resource.label}</span>
-              {resource.description && <br />}
-              {resource.description && <span className={styles.meta}>{resource.description}</span>}
-            </span>
-          </a>
-          {resource.extract && (
-            <details className={styles.resourceExtract}>
-              <summary>View extracted text</summary>
-              <div className={styles.resourceExtractBody}>
-                {renderContentBlocks(resource.extract.text, 'original')}
-                {resource.extract.notes && resource.extract.notes.length > 0 && (
-                  <div className={styles.resourceExtractNotes}>
-                    <h4>Extraction notes</h4>
-                    <ul>
-                      {resource.extract.notes.map((note) => (
-                        <li key={note}>{note}</li>
-                      ))}
-                    </ul>
+  const formatFileCount = (count: number) => (count === 1 ? '1 file' : `${count} files`);
+
+  const renderResourceNodes = (nodes: ResourceTreeNode[], depth = 0): React.ReactNode => {
+    if (nodes.length === 0) {
+      return null;
+    }
+
+    const listClassNames = [depth === 0 ? styles.resourceList : styles.resourceSubList];
+    if (depth > 1) {
+      listClassNames.push(styles.resourceSubListNested);
+    }
+
+    return (
+      <ul className={listClassNames.join(' ')}>
+        {nodes.map((node) => {
+          if (node.kind === 'group') {
+            const resourceCount = countTreeResources(node.children);
+            return (
+              <li key={node.key} className={styles.resourceItem}>
+                <details className={styles.resourceGroupDetails} open={depth < 3}>
+                  <summary className={styles.resourceGroupSummary}>
+                    <span className={styles.resourceGroupSummaryText}>{node.label}</span>
+                    <span className={styles.resourceGroupCount}>{formatFileCount(resourceCount)}</span>
+                  </summary>
+                  {renderResourceNodes(node.children, depth + 1)}
+                </details>
+              </li>
+            );
+          }
+
+          const { resource, label } = node;
+          const fallbackIcon = resource.type ? resourceTypeIcon[resource.type] : '📄';
+          const showTitle = resource.label && resource.label !== label;
+
+          return (
+            <li key={node.key} className={styles.resourceItem}>
+              <a className={styles.resourceLink} href={resource.href} target="_blank" rel="noopener noreferrer">
+                <span className={styles.resourceIcon} aria-hidden="true">
+                  {fallbackIcon}
+                </span>
+                <span>
+                  <span
+                    className={styles.resourceLabel}
+                    {...(showTitle ? { title: resource.label } : {})}
+                  >
+                    {label}
+                  </span>
+                  {resource.description && <br />}
+                  {resource.description && <span className={styles.meta}>{resource.description}</span>}
+                </span>
+              </a>
+              {resource.extract && (
+                <details className={styles.resourceExtract}>
+                  <summary>View extracted text</summary>
+                  <div className={styles.resourceExtractBody}>
+                    {renderContentBlocks(resource.extract.text, 'original')}
+                    {resource.extract.notes && resource.extract.notes.length > 0 && (
+                      <div className={styles.resourceExtractNotes}>
+                        <h4>Extraction notes</h4>
+                        <ul>
+                          {resource.extract.notes.map((note) => (
+                            <li key={note}>{note}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            </details>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
+                </details>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
+
+  const renderResourceLinks = (links: ResourceLink[]) => renderResourceNodes(buildResourceTree(links));
 
   const renderContentSection = (item: CourseItem | null) => {
     if (!item?.content) {
