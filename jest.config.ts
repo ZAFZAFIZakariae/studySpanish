@@ -8,14 +8,17 @@ const config: Config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
-    '^(.*\\.txt)\\?raw$': '$1'
+    '^(.*\\.txt)\\?raw$': '$1',
+    '\\./globModules$': '<rootDir>/src/test-utils/emptyGlobModule.ts',
+    '\\./assetModules$': '<rootDir>/src/test-utils/emptyGlobModule.ts'
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   transform: {
     '^.+\\.(t|j)sx?$': [
       'ts-jest',
       {
-        tsconfig: '<rootDir>/tsconfig.test.json'
+        tsconfig: '<rootDir>/tsconfig.test.json',
+        useESM: true
       }
     ],
     '^.+\\.txt$': '<rootDir>/scripts/jestRawTextTransform.cjs'

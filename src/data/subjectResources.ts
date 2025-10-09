@@ -59,7 +59,8 @@ const buildResourceLabel = (segments: string[]): string => {
 
 const assetModules = import.meta.glob('../../subjects/**/*.*', {
   eager: true,
-  as: 'url',
+  import: 'default',
+  query: '?url',
 }) as Record<string, string>;
 
 const collator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });

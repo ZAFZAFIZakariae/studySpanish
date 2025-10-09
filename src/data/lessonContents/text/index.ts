@@ -1,16 +1,4 @@
-type GlobFunction = (pattern: string, options: { eager: true; as: 'raw' }) => Record<string, string>;
-
-const getImportMetaGlob = (): GlobFunction | undefined => {
-  try {
-    // eslint-disable-next-line no-new-func
-    const result = new Function(
-      'return typeof import.meta !== "undefined" && import.meta.glob ? import.meta.glob : undefined;'
-    )();
-    return typeof result === 'function' ? (result as GlobFunction) : undefined;
-  } catch (error) {
-    return undefined;
-  }
-};
+import lessonTextModules from './globModules';
 
 const loadTextModulesWithFs = (): Record<string, string> => {
   try {
@@ -43,9 +31,8 @@ const loadTextModulesWithFs = (): Record<string, string> => {
 };
 
 const textModules = (() => {
-  const glob = getImportMetaGlob();
-  if (glob) {
-    return glob('./**/*.txt', { eager: true, as: 'raw' }) as Record<string, string>;
+  if (lessonTextModules && Object.keys(lessonTextModules).length > 0) {
+    return lessonTextModules;
   }
   return loadTextModulesWithFs();
 })();
