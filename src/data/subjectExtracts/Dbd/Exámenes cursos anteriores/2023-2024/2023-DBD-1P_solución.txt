@@ -60,6 +60,12 @@ Clave Ajena: {A} hace referencia a T(A)
 VNN: {E,F,G,H,A}
 Y sean F_T y F_S los ficheros que almacenan las filas de T y S respectivamente, indica cuál sería la mejor
 organización para los supuestos y operaciones que se plantean sin considerar la definición de índices:
+![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_001_img_001.png)
+![Page 1, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_001_img_002.png)
+![Page 1, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_001_img_003.png)
+![Page 1, Figure 5](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_001_img_004.png)
+![Page 1, Figure 6](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_001_img_005.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -121,6 +127,7 @@ resultado de la proyección de S sobre los atributos D, F y G, en esta tabla no 
 R(A:entero, B:boolean, C:entero)
 T(A:entero, B:boolean, C: entero)
 S(D:entero, E:entero F:char(100), G:char(200), H:char(1000), A:entero)
+![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_002.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -137,3 +144,9 @@ T(A:entero, B:boolean, C: entero)
 S(D:entero, E:entero F:char(100), G:char(200), H:char(1000), A:entero)
 Dibuja el árbol de consulta para la siguiente expresión de Álgebra Relacional:
 R.A,R.B(R.A=S.A(R  S.D,S.E,S.A(S.E>76(S))))  T.A,T.B(T.C>10(T))
+![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_003.png)
+![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_003_img_001.png)
+![Page 3, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_003_img_002.png)
+![Page 3, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_003_img_003.png)
+![Page 3, Figure 5](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_003_img_004.png)
+![Page 3, Figure 6](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P_solución-images/2023-DBD-1P_solución_page_003_img_005.png)

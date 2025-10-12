@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import textwrap
 import re
 import sys
 import zipfile
@@ -356,10 +357,131 @@ def build_header(relative_path: Path, notes: list[str]) -> str:
     return "\n".join(header_lines) + "\n\n"
 
 
+def _write_support_modules() -> None:
+    glob_modules_path = OUTPUT_DIR / "globModules.ts"
+    glob_modules_path.write_text(
+        "\n".join(
+            [
+                "const subjectExtractModules = import.meta.glob('./**/*.txt', {",
+                "  eager: true,",
+                "  import: 'default',",
+                "  query: '?raw',",
+                "}) as Record<string, string>;",
+                "",
+                "export default subjectExtractModules;",
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    index_module_path = OUTPUT_DIR / "index.ts"
+    index_module_path.write_text(
+        "\n".join(
+            [
+                "import subjectExtractModules from './globModules';",
+                "",
+                "const loadModulesWithFs = (): Record<string, string> => {",
+                "  try {",
+                "    // eslint-disable-next-line @typescript-eslint/no-var-requires",
+                "    const fs = require('fs') as typeof import('fs');",
+                "    // eslint-disable-next-line @typescript-eslint/no-var-requires",
+                "    const path = require('path') as typeof import('path');",
+                "    const rootDir = __dirname;",
+                "    const result: Record<string, string> = {};",
+                "",
+                "    const visit = (dir: string) => {",
+                "      const entries = fs.readdirSync(dir, { withFileTypes: true });",
+                "      for (const entry of entries) {",
+                "        const entryPath = path.join(dir, entry.name);",
+                "        if (entry.isDirectory()) {",
+                "          visit(entryPath);",
+                "        } else if (entry.isFile() && entry.name.endsWith('.txt')) {",
+                r"          const relativePath = `./${path.relative(rootDir, entryPath).replace(/\\/g, '/')}`;",
+                "          result[relativePath] = fs.readFileSync(entryPath, 'utf8');",
+                "        }",
+                "      }",
+                "    };",
+                "",
+                "    visit(rootDir);",
+                "    return result;",
+                "  } catch (error) {",
+                "    console.warn('[subjectExtracts] Unable to load extracted text via fs:', error);",
+                "    return {};",
+                "  }",
+                "};",
+                "",
+                "const modules = (() => {",
+                "  if (subjectExtractModules && Object.keys(subjectExtractModules).length > 0) {",
+                "    return subjectExtractModules;",
+                "  }",
+                "  return loadModulesWithFs();",
+                "})();",
+                "",
+                "type ExtractedSubjectText = {",
+                "  /** Path of the source asset inside the `subjects/` tree. */",
+                "  source: string;",
+                "  /** Normalised text extracted from the source asset, excluding the metadata header. */",
+                "  text: string;",
+                "  /** Optional extraction notes declared in the file header. */",
+                "  notes?: string[];",
+                "  /** Absolute module id used by Vite (useful for debugging). */",
+                "  moduleId: string;",
+                "};",
+                "",
+                r"const headerRegex = /^# Extracted content\nSource: (?<source>subjects\/[\s\S]+?)\n(?:Notes:\n(?<notes>(?:- .+\n)+))?/;",
+                "",
+                "const map = new Map<string, ExtractedSubjectText>();",
+                "",
+                "for (const [moduleId, raw] of Object.entries(modules)) {",
+                r"  const rawText = raw.replace(/\r\n/g, '\n');",
+                "  const match = rawText.match(headerRegex);",
+                "  const source = match?.groups?.source?.trim();",
+                "",
+                "  if (!source) {",
+                "    // Skip files that do not follow the expected header format.",
+                "    continue;",
+                "  }",
+                "",
+                "  const notesBlock = match?.groups?.notes;",
+                r"  const notes = notesBlock",
+                r"    ?.split('\n')",
+                r"    .map((line) => line.replace(/^-\s*/, '').trim())",
+                "    .filter((line) => line.length > 0);",
+                "",
+                "  const text = rawText.replace(headerRegex, '').trim();",
+                "",
+                "  map.set(source.toLowerCase(), {",
+                "    source,",
+                "    text,",
+                "    ...(notes && notes.length > 0 ? { notes } : {}),",
+                "    moduleId,",
+                "  });",
+                "}",
+                "",
+                "export const subjectExtracts = map;",
+                "",
+                "export const getSubjectExtract = (sourcePath: string): ExtractedSubjectText | undefined =>",
+                "  map.get(sourcePath.toLowerCase());",
+                "",
+                "export type { ExtractedSubjectText };",
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+
 def _run_bulk_extraction() -> int:
     if not SUBJECTS_DIR.exists():
         print("Subjects directory not found.", file=sys.stderr)
         return 1
+
+    if OUTPUT_DIR.exists():
+        shutil.rmtree(OUTPUT_DIR)
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    _write_support_modules()
 
     written = 0
     for source in sorted(SUBJECTS_DIR.rglob("*")):

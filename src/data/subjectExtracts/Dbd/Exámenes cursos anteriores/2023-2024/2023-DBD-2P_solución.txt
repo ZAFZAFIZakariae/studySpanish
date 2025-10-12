@@ -33,6 +33,7 @@ disco. Esto permite rehacer transacciones confirmadas en caso de fallo.
 • Escritura anticipada del diario: antes de que un bloque de datos actualizado por una transacción sea transferido a
 disco, las entradas de diario correspondientes a actualizaciones del bloque deben haber sido grabadas en el fichero
 de diario en disco. Esto permite deshacer transacciones interrumpidas o anuladas.
+![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P_solución-images/2023-DBD-2P_solución_page_001.png)
 
 ### Page 2
 3. a) 0,1 puntos b) 0,1 puntos
@@ -75,6 +76,8 @@ ii. En la copia de seguridad tenemos certeza de que están los cambios realizado
 transacciones confirmadas antes del punto de contr ol del instante 0 pero no las confirmadas
 después -> Rehacer T4, T5 y T7
 d. Diferida- Forzar:
+![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P_solución-images/2023-DBD-2P_solución_page_002.png)
+![Page 2, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P_solución-images/2023-DBD-2P_solución_page_002_img_001.png)
 
 ### Page 3
 i. En la copia de seguridad no puede haber datos modificados po r transacciones no confirmadas.
@@ -129,6 +132,7 @@ elige entre todas las que hay.
 comprobado para permitir la creación, si es que se puede crear.
 • En las columnas debajo de Versiones, indica el nombre de la versión y sus marcas de tiempo de lectura (ML) y
 escritura (ME).
+![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P_solución-images/2023-DBD-2P_solución_page_003.png)
 
 ### Page 4
 Operación x0 y0 x1 y1 x2
@@ -156,3 +160,4 @@ Lee la versión y1 que es la versión de y con
 mayor marca de escritura menor que MT(T1)  t9 r1(y)   t0 t-10 t1 t-10 t3 t0 t3 t1 t3 t3
   t10 c1   t0 t-10 t1 t-10 t3 t0 t3 t1 t3 t3
   t11   c3 t0 t-10 t1 t-10 t3 t0 t3 t1 t3 t3
+![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P_solución-images/2023-DBD-2P_solución_page_004.png)

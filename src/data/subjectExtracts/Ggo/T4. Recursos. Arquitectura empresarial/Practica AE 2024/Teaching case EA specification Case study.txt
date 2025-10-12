@@ -69,6 +69,7 @@ management in the academic context. A standards-based
 approach to team projects has been followed by the senior
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 105
+![Page 1, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_001.png)
 
 ### Page 2
 author over many years, where teams are informed by
@@ -198,6 +199,7 @@ accounted for on separate balance sheets and healthcare
 contracts, making profitability a challenge. Corporate
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 106
+![Page 2, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_002.png)
 
 ### Page 3
 concerns include:
@@ -273,6 +275,7 @@ Specification Document.
 Figure 1. XYZ ACO Business Capability Map (ACO Inc., 2012, pp.5)
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 107
+![Page 3, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_003.png)
 
 ### Page 4
 Statement of Architecture Work (SAW) Template
@@ -349,6 +352,7 @@ Table 1. Statement of Architecture Work Template
 Figure 2. XYZ ACO Business Context Diagram
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 108
+![Page 4, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_004.png)
 
 ### Page 5
 individuals (e.g. Patients and Payers) are shown on the left
@@ -476,6 +480,7 @@ project sponsor.
 
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 109
+![Page 5, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_005.png)
 
 ### Page 6
 Level Goals and Measures Design and Implementation Management
@@ -608,6 +613,7 @@ Strategic Plan
 Table 2. XYZ ACO Performance Matrix (adopted from Harmon, 2007, pp.6 )
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 110
+![Page 6, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_006.png)
 
 ### Page 7
 3. ARCHITECTURE APPROACH
@@ -741,6 +747,7 @@ Data Data Data Data Data Data Data Data Data  Data Data
 Table 3. Schema of Meta-Architecture Framework
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 111
+![Page 7, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_007.png)
 
 ### Page 8
 • Content refers to what is contained in a view, and is
@@ -831,6 +838,7 @@ Ease of Use  Applications easy to use
   Table 4. Concerns/ Principles Governing the Enterprise Viewpoint
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 112
+![Page 8, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_008.png)
 
 ### Page 9
 3.3 Architecture Process Model
@@ -907,6 +915,7 @@ of the project team.
 Figure 3. Enterprise Architecture Process Model
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 113
+![Page 9, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_009.png)
 
 ### Page 10
 Architecture Stage/Phase Steps Deliverables
@@ -1026,6 +1035,7 @@ strategy is stated in the Teaching Case Study Notes, Table 3.
 Table 5. Architecture Methodology
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 114
+![Page 10, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_010.png)
 
 ### Page 11
 Viewpoint Model portfolio View/Model type
@@ -1099,6 +1109,7 @@ required for all viewpoints of architecture specifications.
 Table 6. Partial Architecture Framework
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 115
+![Page 11, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_011.png)
 
 ### Page 12
 Models for this viewpoint include the XYZ ACO Business
@@ -1226,6 +1237,7 @@ Student feedback also raised some issues they
 experienced, such as:
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 116
+![Page 12, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_012.png)
 
 ### Page 13
 • Different levels of performance of team members at
@@ -1355,6 +1367,7 @@ Steenkamp, A.L., Kakish, K., Basal, A., Dawwas, M.,
 Konda, D. & Shulaiba, R. (2004) “A Team Project on
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 117
+![Page 13, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_013.png)
 
 ### Page 14
 Information Technology Infrastructure Architecture.”
@@ -1486,6 +1499,7 @@ and manufacturing. His expertise ranges from application
 development through to enterprise IT management and
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 118
+![Page 14, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_014.png)
 
 ### Page 15
 consulting. His current areas of specialization includes IT
@@ -1514,6 +1528,7 @@ Medicaid.
 
 Journal of Information Systems Education, Vol. 24(2) Summer 2013
 119
+![Page 15, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_015.png)
 
 ### Page 16
 Copyright
@@ -1567,3 +1582,4 @@ articles
 for
 individual
 use.
+![Page 16, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching case EA specification Case study-images/Teaching case EA specification Case study_page_016.png)

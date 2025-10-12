@@ -5,6 +5,8 @@ Source: subjects/snlp/slides/Chapter 3 KERAS.pdf
 CHAPTER 3
 Development of DNN Models
 with KERAS
+![Page 1, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_001.png)
+![Page 1, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_001_img_001.png)
 
 ### Page 2
 What is KERAS?
@@ -19,16 +21,21 @@ such as:
 • Activation functions
 • objective functions
 • mathematical optimizers
+![Page 2, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_002.png)
 
 ### Page 3
 MultiLayer Perceptrons
 (MLP)
+![Page 3, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_003.png)
 
 ### Page 4
 Structure
+![Page 4, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_004.png)
+![Page 4, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_004_img_001.png)
 
 ### Page 5
 Structure
+![Page 5, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_005.png)
 
 ### Page 6
 Use (i)
@@ -38,12 +45,14 @@ Use (i)
 kr.function
 • Instead of
 tensorflow.keras.function
+![Page 6, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_006.png)
 
 ### Page 7
 Use (ii)
 • Start a model (layer structure)
 • model = tf.models.Sequential()
 • “model” is the object where the layers will fit
+![Page 7, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_007.png)
 
 ### Page 8
 Use (iii)
@@ -60,6 +69,7 @@ implicit
 • model.add(kr.layers.Dense(n_neuronas, input_shape=(n,))
 • If it is the last layer, n_neurons must match the number of classes.
 • model.add(kr.layers.Dense(n_classes)
+![Page 8, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_008.png)
 
 ### Page 9
 Use (iv)
@@ -72,12 +82,14 @@ Use (iv)
 • sigmoid
 • ...
 • CUSTOM
+![Page 9, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_009.png)
 
 ### Page 10
 Use (v)
 • Compact way of adding the layer and the activation function at the
 same time
 • model.add(kr.layers.Dense(n_neuronas)),activation='softmax')
+![Page 10, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_010.png)
 
 ### Page 11
 Use (vi)
@@ -85,6 +97,7 @@ Use (vi)
 • Number of parameters = 50
 • Number of classes = 10
 • model.add(kr.layers.Dense(10,input_shape=(50,),activation=‘softmax')
+![Page 11, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_011.png)
 
 ### Page 12
 Use (vii)
@@ -97,6 +110,7 @@ Use (vii)
 • Last layer neuron number = number of clases
 • Next layer should be softmax activation
 • In the other layers activation function has more liberty
+![Page 12, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_012.png)
 
 ### Page 13
 Use (viii)
@@ -109,6 +123,7 @@ optimizer=OPTIMIZER, metrics=['accuracy'])
 • history = model.fit(X_train, Y_train, batch_size=BATCH_SIZE,
 epochs=NB_EPOCH, verbose=VERBOSE, validation_data=(X_test,
 Y_test))
+![Page 13, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_013.png)
 
 ### Page 14
 Network evaluation
@@ -119,6 +134,7 @@ predicted. This is called inference.
 variable X_test
 • The function to predict an element is called
 • Y_pred = model.predict(X_test)   #inference, predices output
+![Page 14, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_014.png)
 
 ### Page 15
 Confusion Matrix
@@ -140,9 +156,11 @@ sns.heatmap(confusion_mtx, annot=True, linewidths=0.01,cmap="Greens",linecolor="
 • plt.ylabel("True Label")
 • plt.title("Confusion Matrix")
 • plt.show()
+![Page 15, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_015.png)
 
 ### Page 16
 Hyperparameters
+![Page 16, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_016.png)
 
 ### Page 17
 Hiperparámetros (definición)
@@ -154,6 +172,7 @@ process.
 control the global configuration of the model.
 • Hyperparameters are essential for the optimization and fine-tuning of
 the neural network model.
+![Page 17, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_017.png)
 
 ### Page 18
 Hyperparameters (some)
@@ -165,6 +184,7 @@ Hyperparameters (some)
 6. Regularization
 7. Network Architecture
 8. Features (quantity and type)
+![Page 18, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_018.png)
 
 ### Page 19
 1. Epochs
@@ -178,6 +198,7 @@ development to find the optimal number that balances the model's ability to
 learn and generalize without overfitting.
 • This can be monitored by comparing learning performance using the ACCURACY
 of the training set and the validation set.
+![Page 19, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_019.png)
 
 ### Page 20
 2. Batch size
@@ -190,6 +211,7 @@ de elementos individuales o en lugar de todo el conjunto de test.
 entrenamiento.
 • Lote más grande: +rápido entrenam, +estable, +memoria necesaria
 • Lote más pequeño: +generalización (-overfitting)
+![Page 20, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_020.png)
 
 ### Page 21
 3. Lost function
@@ -204,6 +226,7 @@ pérdida para que el modelo haga predicciones más precisas.
 • loss = BinaryCrossentropy()           #utilizada en problemas de clasificación binaria (2 clases)
 • loss = CategoricalCrossentropy()  #utilizada en problemas de clasificación multiclase
 • loss = SparseCategoricalCrossentropy()   #clasificación por enteros (no se ha hecho categorical)
+![Page 21, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_021.png)
 
 ### Page 22
 4. Optimizer
@@ -220,6 +243,7 @@ eficiencia y es uno de los más utilizados en la práctica
 • RMSprop (Root Mean Square Propagation)
 • Ajusta la tasa de aprendizaje para cada parámetro individualmente basándose en la magnitud de
 los gradientes
+![Page 22, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_022.png)
 
 ### Page 23
 5. Learning rate
@@ -234,6 +258,7 @@ rendimiento óptimo del modelo en una tarea específica.
 • optimizer = SDG(learning_rate=0.001)
 • optimizer = Adam(learning_rate=0.005)
 • optimizer = RMSprop (learning_rate=0.002)
+![Page 23, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_023.png)
 
 ### Page 24
 6. Regularization
@@ -252,6 +277,7 @@ kernel_regularizer=l1(0.01)))
 neuronas en una capa para evitar que dependan demasiado de ciertas características
 • model.add(Dense(64, input_dim=100, activation='relu'))
 • model.add(Dropout(0.5))
+![Page 24, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_024.png)
 
 ### Page 25
 7. Network Architecture
@@ -262,6 +288,7 @@ significativo en el rendimiento del modelo.
 2. Número de Neuronas en Cada Capa
 3. Funciones de Activación
 4. Conexiones entre Neuronas  (densamente conectadas o conexiones más específicas)
+![Page 25, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_025.png)
 
 ### Page 26
 8. Features
@@ -273,10 +300,12 @@ hiperparámetros.
 • El tamaño de la FFT en espectrograma
 • El número de bandas MEL en espectrogramas MEL
 • El número de coeficientes Mel-Cepstrum MFCC
+![Page 26, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_026.png)
 
 ### Page 27
 Convolutional Networks for
 Audio
+![Page 27, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_027.png)
 
 ### Page 28
 Intro
@@ -287,38 +316,52 @@ Intro
 • There are sounds that extend on the time axis
 • There are sounds with a large bandwidth that extend in frequency or leave a
 harmonic pattern in frequency
+![Page 28, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_028.png)
 
 ### Page 29
 2D Filter
+![Page 29, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_029.png)
+![Page 29, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_029_img_001.png)
 
 ### Page 30
 RELU Activation Function for Edge detection
 • If the filter is gradient type, negative
 numbers are removed from the result.
 • Helps to identify the edges of objects
+![Page 30, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_030.png)
+![Page 30, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_030_img_001.png)
 
 ### Page 31
 Pooling Layer
 • Reduce the size of the images (therefore the number of
 parameters/weights to train)
+![Page 31, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_031.png)
+![Page 31, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_031_img_001.png)
 
 ### Page 32
 CNN Structure
 • Each filter applied to the image produces a convolution layer.
 • The weights of each filter are the parameters to be optimized.
+![Page 32, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_032.png)
+![Page 32, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_032_img_001.png)
 
 ### Page 33
 Flattening
 • It consists of converting 2D data into 1D data to be processed by a
 network of 1D perceptrons.
+![Page 33, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_033.png)
+![Page 33, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_033_img_001.png)
 
 ### Page 34
 Final CNN Structure
 • After flattening we put a densely connected network
 • Finally the last layer is the number of classes
+![Page 34, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_034.png)
+![Page 34, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_034_img_001.png)
 
 ### Page 35
 Structure with 2 convolutional layer
+![Page 35, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_035.png)
 
 ### Page 36
 Convolution layer in Keras
@@ -328,6 +371,7 @@ the first argument
 • The next argument is the filter size
 • model.add(kr.layers.Conv2D(64,(3,3),activation='relu’))
 • In this layer therefore we will have 64x3x3 weights to optimize
+![Page 36, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_036.png)
 
 ### Page 37
 Example
@@ -352,15 +396,19 @@ _________________________________________________________________
 
 =================================================================
 Total params: 56,320
+![Page 37, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_037.png)
+![Page 37, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_037_img_001.png)
 
 ### Page 38
 Flattening
 • Before moving from convolutional to dense, perform flattening
 • model.add(tf.layers.Flatten())
+![Page 38, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_038.png)
 
 ### Page 39
 Improving Generalization
 and Accuracy
+![Page 39, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_039.png)
 
 ### Page 40
 Definitions and solutions
@@ -378,6 +426,7 @@ the one used to build the model.
 • Data augmentation
 • Data augmentation is the process of artificially generating new data from existing
 data, primarily to train new machine learning (ML) models.
+![Page 40, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_040.png)
 
 ### Page 41
 Dropout
@@ -386,6 +435,8 @@ Dropout
 pass (EPOCH)
 • KERAS
 • model.add(tf.layers.Dropout(0.3))
+![Page 41, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_041.png)
+![Page 41, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_041_img_001.png)
 
 ### Page 42
 Regularization
@@ -404,6 +455,7 @@ approximately equal to zero if that feature does not serve any purpose in the mo
 • L2 regularization technique is called Ridge regression.
 • Ridge regression adds the squared magnitude of the coefficient as a penalty term to the loss
 function(L).
+![Page 42, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_042.png)
 
 ### Page 43
 Regularization in KERAS
@@ -418,6 +470,7 @@ kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
 bias_regularizer=regularizers.l2(1e-4),
 activity_regularizer=regularizers.l2(1e-5)
 )
+![Page 43, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_043.png)
 
 ### Page 44
 Data Augmentation with Librosa
@@ -430,10 +483,12 @@ librosa
 • Add noise
 • Apply Filters
 • Shift silent
+![Page 44, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_044.png)
 
 ### Page 45
 Recursive Networks in Audio
 RNN
+![Page 45, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_045.png)
 
 ### Page 46
 Problem in sound
@@ -445,6 +500,7 @@ advance.
 fragment at once would be very expensive (e.g. Style Recognition, 30 s)
 • A network that can be fed data little by little and that has memory
 would be interesting.
+![Page 46, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_046.png)
 
 ### Page 47
 RNN Definition
@@ -453,9 +509,11 @@ memory, and therefore, has a sense of time.
 • It is achieved by implementing a type of neurons that receive an input
 from the output of a hidden layer of the previous temporal state that
 is reinjected.
+![Page 47, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_047.png)
 
 ### Page 48
 RNN recursiveness
+![Page 48, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_048.png)
 
 ### Page 49
 Problems with simple RNN
@@ -463,6 +521,7 @@ Problems with simple RNN
 • The network gradually loses memory.
 • It is only valid for short time iterations.
 • “Gradient vanishing” problem.
+![Page 49, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_049.png)
 
 ### Page 50
 LSTM networks (Long-Short Term Memory)
@@ -471,6 +530,7 @@ LSTM networks (Long-Short Term Memory)
 • They can forget past information instantly if more relevant
 information comes in.
 • They have a longer long-term memory than simple RNNs.
+![Page 50, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_050.png)
 
 ### Page 51
 LSTM
@@ -496,6 +556,13 @@ Sigmoid: 0,1 gating as switch.
 Vanishing gradient problem in
 LSTM is handled already.
 ReLU replaces tanh ok?
+![Page 51, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051.png)
+![Page 51, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051_img_002.png)
+![Page 51, Figure 3](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051_img_003.png)
+![Page 51, Figure 4](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051_img_004.png)
+![Page 51, Figure 5](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051_img_005.png)
+![Page 51, Figure 6](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051_img_006.png)
+![Page 51, Figure 7](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_051_img_007.png)
 
 ### Page 52
 it decides what component
@@ -504,9 +571,17 @@ C’t provides change contents
 Updating the cell state
 Decide what part of the cell
 state to output
+![Page 52, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_052.png)
+![Page 52, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_052_img_001.png)
+![Page 52, Figure 3](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_052_img_002.png)
+![Page 52, Figure 4](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_052_img_003.png)
+![Page 52, Figure 5](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_052_img_004.png)
+![Page 52, Figure 6](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_052_img_005.png)
 
 ### Page 53
 RNN vs LSTM
+![Page 53, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_053.png)
+![Page 53, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_053_img_001.png)
 
 ### Page 54
 How to use in KERAS
@@ -515,10 +590,12 @@ How to use in KERAS
 features)))
 • The input parameters are two-dimensional, with the first coordinate
 being considered time (to apply recursion).
+![Page 54, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_054.png)
 
 ### Page 55
 Encoder-Decoder
 Architectures
+![Page 55, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_055.png)
 
 ### Page 56
 Encoder-Decoder (background)
@@ -531,6 +608,7 @@ the input and output are of variable length.
 • They handle input and output sequences flexibly, capturing the
 relevant information in the latent representation and generating
 coherent output sequences.
+![Page 56, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_056.png)
 
 ### Page 57
 Structure
@@ -543,6 +621,8 @@ internal representation. Important information is captured in the latent
 representation.
 • Upon completion of the input sequence, the encoder produces a single vector
 (or set of vectors) that captures the key information of the input.
+![Page 57, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_057.png)
+![Page 57, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_057_img_001.png)
 
 ### Page 58
 Structure
@@ -555,6 +635,7 @@ then, at each subsequent time step, incorporates information from the latent
 vector and the output generated up to that point.
 • The output is generated step by step and is adjusted based on the
 information learned by the encoder.
+![Page 58, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_058.png)
 
 ### Page 59
 Training
@@ -567,6 +648,7 @@ encoder.
 • A loss function is used to measure the discrepancy between the
 generated output and the desired output. This function guides the
 model during training to minimize error.
+![Page 59, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_059.png)
 
 ### Page 60
 U-Net
@@ -574,6 +656,8 @@ U-Net
 decoder network
 • Convolucional layers
 are employed
+![Page 60, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_060.png)
+![Page 60, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_060_img_001.png)
 
 ### Page 61
 Spleeter
@@ -587,6 +671,8 @@ architecture.
 • Scientific References
 • https://www.theoj.org/joss-papers/joss.02154/10.21105.joss.02154.pdf
 • https://archives.ismir.net/ismir2019/latebreaking/000036.pdf
+![Page 61, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_061.png)
+![Page 61, Figure 2](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_061_img_001.png)
 
 ### Page 62
 Spleeter (Tech details)
@@ -598,6 +684,7 @@ were used to train.
 • It took 1 week to train on a GPU.
 • It can work in production at 100x on an RTX 2080 GPU
 • https://github.com/deezer/spleeter       (GITHUB)
+![Page 62, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_062.png)
 
 ### Page 63
 Spleeter (MS-DOS version)
@@ -612,9 +699,11 @@ Options:
     --overwrite         Overwrite when the target output file exists
     -h, --help          Display this help and exit
     -v, --version       Display program version and exit
+![Page 63, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_063.png)
 
 ### Page 64
 DataBases / Corpus
+![Page 64, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_064.png)
 
 ### Page 65
 Environmental Sounds
@@ -625,6 +714,7 @@ Environmental Sounds
 • Total 2000 sounds of maximum 5 seconds duration
 • The 50 classes are grouped into 5 categories
 • Is it possible to work in one category only (10 classes per cat.)
+![Page 65, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_065.png)
 
 ### Page 66
 Musical Instruments
@@ -636,6 +726,7 @@ Musical Instruments
 • 12 different musical instruments(including voice)
 • https://zenodo.org/records/1290750
 • 3,2 GB  (6705 files)
+![Page 66, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_066.png)
 
 ### Page 67
 Speech Emotion
@@ -646,6 +737,7 @@ Speech Emotion
 • Actors spoke from a selection of 12 sentences.
 • The sentences have six different emotions
 • Anger, Disgust, Fear, Happy, Neutral, Sad
+![Page 67, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_067.png)
 
 ### Page 68
 Music separated tracks by instruments
@@ -653,6 +745,7 @@ Music separated tracks by instruments
 • 4 separated tracks
 • 26 GB
 • https://sigsep.github.io/datasets/musdb.html
+![Page 68, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_068.png)
 
 ### Page 69
 Musical genres
@@ -665,12 +758,14 @@ music-genre-classification/data
 • Features computation
 • https://www.kaggle.com/code/gastngadea/generate-features-csv-
 files-from-gtzan-dataset/notebook
+![Page 69, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_069.png)
 
 ### Page 70
 Speech Emotion
 • https://www.kaggle.com/code/ashishsingh226/speech-emotion-
 recognition-using-lstm/notebook
 • Speech emotion / Mood with LSTM
+![Page 70, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_070.png)
 
 ### Page 71
 Musical Genres
@@ -680,8 +775,10 @@ visualise-classify-recommend
 • Clasic machine learning vs DNN
 • Comparison
 • Best:  XGBoost
+![Page 71, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_071.png)
 
 ### Page 72
 Genres of Popular Songs
 • https://kaavyamaha12.medium.com/training-a-tensorflow-model-
 for-predicting-the-genres-of-popular-songs-4286d87d71f6
+![Page 72, Figure 1](subjects/snlp/slides/Chapter 3 KERAS-images/Chapter 3 KERAS_page_072.png)

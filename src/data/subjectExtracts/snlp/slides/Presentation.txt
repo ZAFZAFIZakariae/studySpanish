@@ -7,6 +7,8 @@ Language Processing
 with Deep Learning
 José Javier López Monfort
 jjlopez@upv.es
+![Page 1, Figure 1](subjects/snlp/slides/Presentation-images/Presentation_page_001.png)
+![Page 1, Figure 2](subjects/snlp/slides/Presentation-images/Presentation_page_001_img_001.png)
 
 ### Page 2
 Syllabus
@@ -16,6 +18,7 @@ Syllabus
 4. Natural Language Processing: Word Embeddings
 5. Transformers & Large Language Models
 6. Speech Processing
+![Page 2, Figure 1](subjects/snlp/slides/Presentation-images/Presentation_page_002.png)
 
 ### Page 3
 Prerequisites
@@ -39,6 +42,7 @@ Prerequisites
 5. Deep Learning Frameworks:
 1. Basic knowledge of at least one deep learning framework such as TensorFlow or PyTorch.
 2. Ability to build and train simple neural network models using these frameworks.
+![Page 3, Figure 1](subjects/snlp/slides/Presentation-images/Presentation_page_003.png)
 
 ### Page 4
 Evaluation
@@ -55,3 +59,4 @@ effectively.
 1. A comprehensive exam covering all topics discussed during the course.
 2. Combination of theoretical questions and practical problems, including coding and data analysis tasks.
 3. Multiple answer questions abcd + Exercises
+![Page 4, Figure 1](subjects/snlp/slides/Presentation-images/Presentation_page_004.png)

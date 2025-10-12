@@ -53,6 +53,7 @@ iii. BEGIN
 INSERT INTO Empleado VALUES (‘0000’, ‘Pepa’, 1.500, ‘RRHH’);
 INSERT INTO Departamento (‘RRHH’, ‘Recursos Humanos’, ‘Planta 3ª’,  ‘0000’) ;
   END;
+![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_001.png)
 
 ### Page 2
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (27/01/2021)
@@ -79,6 +80,9 @@ del sistema). Considera las posibles estrategias de actualización.
 En este caso es indiferente si la estrategia es FORZAR o NO-FORZAR ya que la transacción no ha alcanzado el punto
 de confirmación. Sí que es relevante si es INMEDIATA o DIFERIDA. Las tareas que hay que hacer en cada caso se
 ven en la siguiente imagen.
+![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_002.png)
+![Page 2, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_002_img_001.png)
+![Page 2, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_002_img_002.png)
 
 ### Page 3
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (27/01/2021)
@@ -135,6 +139,8 @@ y que se cumple que ∀i ∀j ti < tj  si i <j.
 
 Comprueba si el protocolo OMT admite el plan de ejecución. Si no lo admite, indicar en qué operación falla y por
 qué. Dibuja una tabla donde quede claro cómo van cambiando las marcas de tiempo.
+![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_003.png)
+![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_003_img_001.png)
 
 ### Page 4
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (27/01/2021)
@@ -186,3 +192,4 @@ datos.
 z0 t1 t1
 z1 t9 t9
 z2 t10 t10
+![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_rec_sol-images/2020-DBD-1P_rec_sol_page_004.png)

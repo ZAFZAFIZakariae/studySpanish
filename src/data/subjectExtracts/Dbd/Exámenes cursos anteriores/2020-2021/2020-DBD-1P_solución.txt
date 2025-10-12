@@ -42,6 +42,8 @@ ii. El fallo supone la pérdida de la memoria secundaria donde está almacenada 
 la copia del diario en disco no se ha perdido.
 iii. El fallo supone la pérdida de la memoria secundaria donde está almacenada la base de datos y
 también se ha perdido la copia del diario en disco.
+![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_001_img_001.png)
 
 ### Page 2
 1er Parcial de Diseño y Gestión de Bases de Datos (26/10/2020)
@@ -83,6 +85,7 @@ de plan concurrente no recuperable también con lectura sucia.
 x0 t1 t1
 x1 t9 t2
 x2 t10 t10
+![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_002.png)
 
 ### Page 3
 SOLUCIONES 1er Parcial de Diseño y Gestión de Bases de Datos (26/10/2020)
@@ -136,6 +139,7 @@ Nada Nada Nada Nada Nada Rehacer Nada Deshacer
 Actualización INMEDIATA- FORZAR→ Algoritmo DESHACER-NO REHACER
 T1 T2 T3 T4 T5 T6 T7 T8
 Nada Nada Nada Nada Nada Nada Nada Deshacer
+![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_003.png)
 
 ### Page 4
 SOLUCIONES 1er Parcial de Diseño y Gestión de Bases de Datos (26/10/2020)
@@ -165,6 +169,8 @@ El único plan en serie equivalente por conflictos es: T
 1 -> T2 -> T3
 El plan en serie cronológico es T1 -> T2 -> T3 ya que en él las transacciones se procesan siguiendo el orden de sus marcas
 de tiempo en el plan concurrente y sí es equivalente por conflictos.
+![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_004.png)
+![Page 4, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_004_img_001.png)
 
 ### Page 5
 SOLUCIONES 1er Parcial de Diseño y Gestión de Bases de Datos (26/10/2020)
@@ -216,6 +222,7 @@ Comentarios:
 hacerse más tarde siempre que fuera antes de la petición de bloqueo de z por T3).
 Este plan es equivalente al plan en serie T 1 -> T2 -> T3 ya que, en ambos planes, los pares de operaciones en conflicto
 aparecen en el mismo orden. Éste es además el plan en serie cronológico.
+![Page 5, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_005.png)
 
 ### Page 6
 SOLUCIONES 1er Parcial de Diseño y Gestión de Bases de Datos (26/10/2020)
@@ -259,3 +266,4 @@ de la confirmación de T1. Hay lectura sucia en la operación r 2(x) ya que el e
 por T1 y aún no ha sido confirmada cuando T2 lee ese elemento.
 P’ es un plan no recuperable ya que T2 que lee un el emento de datos escrito por T1 y se confirma antes de la
 confirmación de T1.
+![Page 6, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2020-2021/2020-DBD-1P_solución-images/2020-DBD-1P_solución_page_006.png)

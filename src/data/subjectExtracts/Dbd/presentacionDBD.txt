@@ -7,6 +7,7 @@ BASES DE DATOS
 Grado en Ingeniería Informática
 Módulo de Tecnología Específica: Sistemas de Información
 Profesores: Laura Mota, Pedro Valderas y Abel Gómez
+![Page 1, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_001.png)
 
 ### Page 2
 Grado en Ingeniería Informática
@@ -27,6 +28,7 @@ Informática (Especialización: Sistemas de Información)
 Diseño y Gestión de Bases de Datos. Presentación. 2
 Módulo
 SI
+![Page 2, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_002.png)
 
 ### Page 3
 Título de Grado en Ingeniería Informática
@@ -44,6 +46,7 @@ Estudio de los aspectos tecnológico de los
 SGBD relacionales y la administración de
 sistemas de bases de datos. Diseño avanzado
 de bases de datos relacionales.
+![Page 3, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_003.png)
 
 ### Page 4
 Objetivos específicos de la asignatura Diseño y Gestión de
@@ -61,6 +64,7 @@ Objetivo 2: Diseño de Bases de Datos
 Programación en el servidor.
 Aplicación a casos de estudio.
 Diseño y Gestión de Bases de Datos. Presentación. 4
+![Page 4, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_004.png)
 
 ### Page 5
 Programa de teoría: Unidades didácticas
@@ -74,6 +78,7 @@ Programa de teoría: Unidades didácticas
 8. Diseño físico de bases de datos.
 9. Programación en el servidor.
 Diseño y Gestión de Bases de Datos. Presentación. 5
+![Page 5, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_005.png)
 
 ### Page 6
 Programa de prácticas:
@@ -88,6 +93,7 @@ Práctica 6. Optimización de consultas en Oracle.
 Práctica 7. Seguridad en Oracle.
 Práctica 8. Programación en el servidor (2 sesiones).
 Diseño y Gestión de Bases de Datos. Presentación. 6
+![Page 6, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_006.png)
 
 ### Page 7
 Evaluación:
@@ -109,6 +115,7 @@ Evaluación:
 - PE1 y PE2: examen escrito en fecha planificada por la escuela.
 - PP1: examen en laboratorio en fecha planificada por la escuela.
 Diseño y Gestión de Bases de Datos. Presentación. 7
+![Page 7, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_007.png)
 
 ### Page 8
 Evaluación:
@@ -119,6 +126,7 @@ asignatura será de 4,5 puntos.
 • La evaluación para los alumnos con dispensa será la misma que para los alumnos
 sin dispensa.
 Diseño y Gestión de Bases de Datos. Presentación. 8
+![Page 8, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_008.png)
 
 ### Page 9
 Bibliografía:
@@ -131,6 +139,7 @@ Prentice Hall, 2003
 (Edición en español: Introducción a los Sistemas de Bases de Datos. (7ª ed.)
 Date, CJ, Prentice Hall, 2001)
 Diseño y Gestión de Bases de Datos. Presentación. 9
+![Page 9, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_009.png)
 
 ### Page 10
 Bibliografía:
@@ -149,3 +158,4 @@ Muller R.J. Springer, 2002
  Database Design: Know it All
 Buxton, S., Fryman, L. et al. Morgan Kaufmann, 2009
 Diseño y Gestión de Bases de Datos. Presentación. 10
+![Page 10, Figure 1](subjects/Dbd/presentacionDBD-images/presentacionDBD_page_010.png)

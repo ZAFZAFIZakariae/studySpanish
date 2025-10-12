@@ -23,3 +23,4 @@ Implementación de bases de datos en Oracle (2ª)  10/11  12/11  14/11
 8.
 Programación en el servidor (1ª)  15/12  10/12  12/12
 Programación en el servidor (2ª)  22/12  17/12  19/12
+![Page 1, Figure 1](subjects/Dbd/Planificación_prácticas-images/Planificación_prácticas_page_001.png)

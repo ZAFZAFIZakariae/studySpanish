@@ -36,6 +36,7 @@ En el fichero disperso y en el desordenado sería necesario recorrer todos los r
 la condición, en el fichero ordenado por A se podría usar la búsqueda binaria para encontrar el primer
 registro  con  A300  y  luego  recuperar  los  siguientes  registros  mientras  A<1000,  por  ello  esta
 organización sería la más adecuada.
+![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_001.png)
 
 ### Page 2
 3. (0,3 puntos) Se dice que una tabla es volátil si sufre muchas operaciones de inserción, borrado o
@@ -97,6 +98,7 @@ nodo interno se almacenan p‐1 valores y p punteros a subárboles.
 En cada nodo interno (bloque) cabe: 24(p‐1) + 8p=2048
 24p‐24+8p=2048      p=⌊2048+24/32⌋=64
 El cada nodo interno hay 63 valores del campo de indexación y 64 punteros.
+![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_002.png)
 
 ### Page 3
 5. (0,9 puntos) Dado el siguiente esquema relacional:
@@ -129,7 +131,15 @@ WHERE T.H>0 AND T.A=R.A AND R.A=S.A;
 
  Escribe la expresión de Álgebra Relacional equivalente al árbol de consulta optimizado (obviamente
 resuelve este apartado después de haber resuelto el último de la página siguiente).
+![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_003.png)
+![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_003_img_001.png)
 
 ### Page 4
  Dibuja el árbol de consulta sin optimizar y optimízalo aplicando el algoritmo. Para cada paso de la
 transformación dibuja el árbol e indica la regla utilizada.
+![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_004.png)
+![Page 4, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_004_img_001.png)
+![Page 4, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_004_img_002.png)
+![Page 4, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_004_img_003.png)
+![Page 4, Figure 5](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_004_img_004.png)
+![Page 4, Figure 6](subjects/Dbd/Exámenes cursos anteriores/2024-2025/2024-DBD-1P_solución-images/2024-DBD-1P_solución_page_004_img_005.png)

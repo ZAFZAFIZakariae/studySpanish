@@ -34,6 +34,13 @@ Pérdida de actualizaciones: P= r
 1(x), r2(x), w1(x), w2(x), c1, c2
 
 El grafo tiene un ciclo, luego el plan P no es serializable.
+![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001_img_001.png)
+![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001_img_002.png)
+![Page 1, Figure 4](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001_img_003.png)
+![Page 1, Figure 5](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001_img_004.png)
+![Page 1, Figure 6](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001_img_005.png)
+![Page 1, Figure 7](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_001_img_006.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -55,6 +62,10 @@ Plan P3: Operaciones en conflicto y grafo de seriabilidad en el plan P3:
 
 Observamos que no hay ciclos. El plan es serializable por conflictos. El único plan en serie equivalente es:
 T2 – T3 – T1
+![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_002.png)
+![Page 2, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_002_img_001.png)
+![Page 2, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_002_img_002.png)
+![Page 2, Figure 4](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_002_img_003.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -84,6 +95,9 @@ modificados por ella aún no confirmados,.
 Si el bloqueo fuera implícito no sería posible el desbloqueo
 anterior a la finalización de la transacción, y no sería posible la
 lectura sucia.
+![Page 3, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_003.png)
+![Page 3, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_003_img_001.png)
+![Page 3, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_003_img_003.png)
 
 ### Page 4
 Departamento de Sistemas Informáticos y Computación
@@ -120,6 +134,10 @@ P’ = r1(x), w1(x), r2(x), w2(x), c1, c2
 
 5. Cuando una transacción vaya a leer y escribir un dato, directamente se solicitará el BE sin pasar por el BL
 de esta forma se evitan bloqueos mortales.
+![Page 4, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_004.png)
+![Page 4, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_004_img_001.png)
+![Page 4, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_004_img_002.png)
+![Page 4, Figure 4](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_004_img_003.png)
 
 ### Page 5
 Departamento de Sistemas Informáticos y Computación
@@ -152,6 +170,10 @@ En el instante t
 mayor que la marca de tiempo de T2 (i.e. ha sido escrito por una transacción más joven que T2). Por este
 motivo el SGBD anularía T2 ejecutándola más adelante. El plan de ejecución P 1 no estaría permitido con el
 protocolo OMT.
+![Page 5, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_005.png)
+![Page 5, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_005_img_001.png)
+![Page 5, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_005_img_002.png)
+![Page 5, Figure 4](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_005_img_003.png)
 
 ### Page 6
 Departamento de Sistemas Informáticos y Computación
@@ -165,6 +187,9 @@ Los protocolos tendrían el siguiente comportamiento:
 • Protocolo B2F: este protocolo no permitiría el plan ya que T 1 quedaría en espera al solicitar el bloqueo
 en escritura de y para la operación w1(y) porque T2 tiene que haber bloqueado para lectura Y antes de
 la operación r2(y). Es decir, la confirmación de T1 nunca podría ocurrir antes de que T2 desbloquee Y.
+![Page 6, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_006.png)
+![Page 6, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_006_img_001.png)
+![Page 6, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_006_img_002.png)
 
 ### Page 7
 Departamento de Sistemas Informáticos y Computación
@@ -200,6 +225,8 @@ t6:  La operación leer(X) de T3 se aborta ya que MT(T3) < MT_E(X) (t0 < t3). T3
 e introducirse de nuevo en el sistema.
 En t 6 el protocolo ha detectado que T3 está intentando leer un dato modificado por una
 transacción que en el plan en serie equivalente cronológico es más joven que ella.
+![Page 7, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_007.png)
+![Page 7, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_007_img_001.png)
 
 ### Page 8
 Departamento de Sistemas Informáticos y Computación
@@ -242,6 +269,7 @@ t13  r2(x) Pasa a ESPERA
 
 En el protocolo B2F Implícito, el plan no es posible ya que la lectura de x por T2 no podrá ocurrir antes de
 que se confirme T1 liberando entonces x.
+![Page 8, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_008.png)
 
 ### Page 9
 Departamento de Sistemas Informáticos y Computación
@@ -286,3 +314,4 @@ El protocolo de multiversión sí que acepta el plan. Fijaos que en la lectura r
 protocolo OMT) el valor que lee T3 es x2 (que es la versión de x creada por una transacción más joven anterior
 a T3), la marca de lectura de esta versión de x no es actualizada porque ha sido leído por una transacción más
 joven que T3 (T2).
+![Page 9, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_sol-images/Cuestiones _T4_sol_page_009.png)

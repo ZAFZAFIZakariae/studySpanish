@@ -3,128 +3,162 @@ Source: subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes.pdf
 
 ### Page 1
 Introduction: from Monoliths to Distributed SystemsServicios y Aplicaciones Distribuidas
+![Page 1, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_001.png)
 
 ### Page 2
 Welcome and Objectives•Set expecta)ons and outcomes for the course.•Understand monoliths: strengths, weaknesses, and limits.•Recognize mo)va)ons for distributed architectures.•Preview the course structure and prac)cal focus.
+![Page 2, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_002.png)
+![Page 2, Figure 2](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_002_img_001.png)
 
 ### Page 3
 What Is a Monolith?
 •Single deployable applica)on containing UI, business logic, and data access.•All parts share the same run)me and are released together.•Op)mized for simplicity and speed in early product stages.
+![Page 3, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_003.png)
 
 ### Page 4
 Monolith Deployment Model
 •All-or-nothing deployments: even small changes ship the whole app.•Build, test, and release pipelines handle one artifact.•Acceptable with compact teams and limited feature sets; problematic at scale.
+![Page 4, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_004.png)
 
 ### Page 5
 Why Monoliths Work Early
 •Rapid iteration: one repo, one CI/CD pipeline, one artifact.•Simple onboarding and local development close to production.•End-to-end tests run in a single environment.
+![Page 5, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_005.png)
 
 ### Page 6
 Modular Monoliths
 •Well-deﬁned internal modules with clear interfaces.•Single compila)on and deployment unit for opera)onal simplicity.•Good stepping stone toward future extrac)ons.
+![Page 6, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_006.png)
 
 ### Page 7
 Stress Signals in Monoliths
 •Eroding module boundaries and increasing merge conﬂicts.•Longer builds and slower feedback loops.•Coordina)on boQlenecks: unrelated changes delay releases.
+![Page 7, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_007.png)
 
 ### Page 8
 Regression Testing Burden
 •Small features trigger broad regression testing.•Risk of breaking unrelated areas slows release cadence.•Bundled, infrequent releases increase failure blast radius.
+![Page 8, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_008.png)
 
 ### Page 9
 Single Artifact Operational Risk
 •Incidents force rollbacks that revert unrelated features.•Tight coupling across domains raises deployment risk.•Discourages continuous delivery practices.
+![Page 9, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_009.png)
 
 ### Page 10
 When Monoliths Still Fit
 •Small teams and constrained domains.•Low traﬃc or internal tools with modest SLAs.•Prototypes or short-lived products.
+![Page 10, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_010.png)
 
 ### Page 11
 Transition Triggers•Sustained traﬃc growth and performance hotspots.•Need for independent release cadence per domain.•Rising incident frequency )ed to deployment coupling.•Long lead )mes and coordina)on overhead.
+![Page 11, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_011.png)
 
 ### Page 12
 Distributed System: Definition
 •Independent computers collaborate over a network.•Present a single coherent system to users.•Coordinate to share resources and tolerate partial failures.
+![Page 12, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_012.png)
 
 ### Page 13
 Core Properties•Concurrency and parallelism for throughput.•Fault tolerance via replication and graceful degradation.•Scalability through vertical and horizontal strategies.•Transparency to hide distribution details from users.
+![Page 13, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_013.png)
 
 ### Page 14
 Transparency in Practice
 •Users should not care which node handled the request.•Loca)on, replica)on, and failure handling are invisible.•Achieved with load balancers, caches, smart clients.
+![Page 14, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_014.png)
 
 ### Page 15
 Resource Sharing & Elasticity
 •Pool compute, storage, and bandwidth across nodes.•Cloud plaWorms enable elas)c scaling up and down.•Op)mize cost/performance by matching capacity to load.
+![Page 15, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_015.png)
 
 ### Page 16
 Concurrency vs Parallelism
 •Concurrency: multiple tasks progress at once (interleaving).•Parallelism: tasks execute simultaneously on different cores/nodes.•Introduce coordination: locks, optimistic control, idempotency.
+![Page 16, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_016.png)
 
 ### Page 17
 Fault-Tolerance Mindset
 •Design for failure: assume components will fail.•Techniques: retries with backoff, circuit breakers, timeouts.•Graceful degradation and redundancy to keep service usable.
+![Page 17, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_017.png)
 
 ### Page 18
 Scalability Basics
 •Ver)cal scaling: add CPU/RAM to a single node.•Horizontal scaling: add more nodes/instances.•Horizontal favored for resilience and elas)city; requires statelessness.
+![Page 18, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_018.png)
 
 ### Page 19
 The Network Tax
 •Distributed calls incur latency and serializa)on overhead.•Poten)al for packet loss and retries.•Mi)gate with batching, eﬃcient protocols, and careful API design.
+![Page 19, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_019.png)
 
 ### Page 20
 Consistency Realities
 •Replicated state causes conflicts and stale reads.•Eventual consistency is common for availability and speed.•User experience patterns: versioning, conflict resolution, read-your-writes.
+![Page 20, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_020.png)
 
 ### Page 21
 Security Surface Area
 •More services and endpoints increase attack surface.•Strong authN/authZ, transport security, and secret management are mandatory.•Adopt zero-trust networking principles.
+![Page 21, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_021.png)
 
 ### Page 22
 Operational Complexity
 •Requires mature CI/CD, automated tes)ng, and IaC.•Health checks, metrics, logs, and tracing for observability.•On-call readiness and incident response playbooks.
+![Page 22, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_022.png)
 
 ### Page 23
 Driver: Independent Releases
 •Teams ship without wai)ng on unrelated components.•Service boundaries map to business domains.•Reduces coordina)on overhead and accelerates delivery.
+![Page 23, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_023.png)
 
 ### Page 24
 Driver: Targeted Scaling
 •Scale hotspots (e.g., checkout) independently of cold paths (e.g., admin).•Aligns cost with actual demand.•Avoids scaling the entire system unnecessarily.
+![Page 24, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_024.png)
 
 ### Page 25
 Example Domain Split
 •Orders, Payments, Products, Users, Notifications as separate domains.•Each owns its storage, APIs, and scaling policies.•Technology aligns with business boundaries.
+![Page 25, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_025.png)
 
 ### Page 26
 Migration Path
 •Start from modular monolith and iden)fy seams.•Extract the most independent or painful domains ﬁrst.•Establish plaWorm capabili)es: gateway, discovery, observability.
+![Page 26, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_026.png)
 
 ### Page 27
 Trade-Offs to Acknowledge
 •Agility and resilience vs added latency and coordina)on.•Opera)onal costs rise with more moving parts.•Architecture is economics: pay costs to unlock beneﬁts.
+![Page 27, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_027.png)
 
 ### Page 28
 Key Takeaways (1)
 •Monoliths are pragmatic and effective early on.•They become a liability with growth and coordination bottlenecks.•Recognize stress signals and plan ahead.
+![Page 28, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_028.png)
 
 ### Page 29
 Key Takeaways (2)
 •Distributed systems enable independence and scaling.•They introduce latency, consistency, security, and operational challenges.•Discipline and tooling are essential to succeed.
+![Page 29, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_029.png)
 
 ### Page 30
 Common Misconceptions
 •“Microservices are faster” — network overhead is real.•“Use many languages” — polyglot increases ops and hiring costs.•“More services is beQer” — follow domains and team boundaries.
+![Page 30, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_030.png)
 
 ### Page 31
 Looking Ahead
 •Next: deﬁne microservices precisely and contrast with distributed systems.•Discuss organiza)onal and technical implica)ons.•Iden)fy when NOT to adopt microservices.
+![Page 31, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_031.png)
 
 ### Page 32
 Discussion
 •Where has a monolith been a bottleneck in your experience?•Which domains would benefit most from independent deployments?
+![Page 32, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_032.png)
 
 ### Page 33
 Closing
 •You now have the vocabulary for why distributed systems exist.•Keep trade-offs in mind—they guide the rest of the course.
+![Page 33, Figure 1](subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_033.png)

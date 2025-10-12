@@ -6,6 +6,7 @@ CHAPTER 1
 Introduction to Signals and
 Natural Language Processing
 with DL
+![Page 1, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_001.png)
 
 ### Page 2
 Revised Approach to Official Syllabus
@@ -15,6 +16,7 @@ support your learning.
 Be prepared for a dynamic and application-driven approach to NLP and
 a more practical, hands-on learning experience.
 Bring your laptop to classroom and try continuously.
+![Page 2, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_002.png)
 
 ### Page 3
 Key Changes and Principles
@@ -36,6 +38,7 @@ Key Changes and Principles
 6. Learning Objectives:
 1. Prioritize practical, applicable skills in NLP
 2. Ensure students can implement and use NLP techniques effectively
+![Page 3, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_003.png)
 
 ### Page 4
 Signals to handle
@@ -45,6 +48,7 @@ OTHER SOUNDS
 nature / industry
 TEXT
 LLM
+![Page 4, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_004.png)
 
 ### Page 5
 Signals Processing
@@ -62,6 +66,7 @@ applications like voice-controlled systems and transcription services.
 Discover how deep learning can be used for music genre classification, beat tracking,
 and music recommendation systems. This involves feature extraction techniques that
 capture the rhythm, harmony, and timbre of music. Also, music generation.
+![Page 5, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_005.png)
 
 ### Page 6
 Natural Language Processing
@@ -76,6 +81,7 @@ Learn how to apply deep learning models to tasks like sentiment analysis, machin
 translation, and text generation. This includes understanding the syntactic and semantic
 aspects of language and building models that can understand and generate coherent
 text.
+![Page 6, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_006.png)
 
 ### Page 7
 Applications for Sound Signals
@@ -94,6 +100,7 @@ Applications for Sound Signals
 • Text to speech (Speech synthesis)
 • Speech imitation (Voice cloning)
 • Music Synthesis (based on ML)
+![Page 7, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_007.png)
 
 ### Page 8
 Applications in Language Processing
@@ -108,3 +115,4 @@ Applications in Language Processing
 • Computer coding completion
 • Topic classification
 • LLM
+![Page 8, Figure 1](subjects/snlp/slides/Chapter 1-images/Chapter 1_page_008.png)

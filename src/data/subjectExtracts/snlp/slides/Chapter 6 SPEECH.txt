@@ -5,6 +5,7 @@ Source: subjects/snlp/slides/Chapter 6 SPEECH.pdf
 CHAPTER 6
 Speech Processing and
 Recognition
+![Page 1, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_001.png)
 
 ### Page 2
 Summary
@@ -12,6 +13,7 @@ Summary
 2. Core Architectures for Speech Recognition
 3. Modern Automatic Speech Recognition (ASR) Systems
 4. Practical Considerations and Future Directions
+![Page 2, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_002.png)
 
 ### Page 3
 1. Introduction and Fundamentals
@@ -20,6 +22,7 @@ Summary
 • Deep Learning's impact on speech recognition
 • Current applications and industry trends
 • Key challenges in speech recognition with DNN
+![Page 3, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_003.png)
 
 ### Page 4
 A Brief History of Speech Recognition
@@ -33,6 +36,7 @@ models to improve accuracy by considering word probabilities.
 • 2000s: Gaussian Mixture Models (GMMs) with HMMs - Enhanced
 acoustic modeling using GMMs to represent the distribution of
 speech features.
+![Page 4, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_004.png)
 
 ### Page 5
 The Deep Learning Revolution
@@ -47,6 +51,7 @@ mechanisms significantly improved accuracy and robustness.
 • End-to-End Speech Recognition - Models directly map acoustic features to
 text, simplifying the traditional pipeline and achieving state-of-the-art
 performance.
+![Page 5, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_005.png)
 
 ### Page 6
 Deep Learning's impact on speech recognition
@@ -65,6 +70,7 @@ introduced
 • Noisy environments
 • Different accents and speaking styles
 • Natural, conversational speech
+![Page 6, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_006.png)
 
 ### Page 7
 Current applications
@@ -80,6 +86,7 @@ Current applications
 • Medical dictation and documentation
 • Remote patient monitoring
 • Voice-based diagnostic tools
+![Page 7, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_007.png)
 
 ### Page 8
 Industry trends
@@ -95,6 +102,7 @@ Industry trends
 4.Integration with Other Technologies
 • Multimodal systems combining voice with vision
 • Integration with AR/VR environments
+![Page 8, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_008.png)
 
 ### Page 9
 Key challenges in speech processing with DNN
@@ -116,6 +124,7 @@ Key challenges in speech processing with DNN
 • Handling unseen speakers/conditions
 • Adapting to new languages/accents
 • Transfer learning effectiveness
+![Page 9, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_009.png)
 
 ### Page 10
 2. Core Architectures for Speech Recognition
@@ -123,6 +132,7 @@ Key challenges in speech processing with DNN
 • LSTM & GRU
 • CNN
 • Hybryd CNN-RNN
+![Page 10, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_010.png)
 
 ### Page 11
 RNN
@@ -147,6 +157,7 @@ a) Vanishing Gradients
 • Difficulty capturing long-range dependencies
 • Limited context window in practice
 • Memory inefficiency for long sequences
+![Page 11, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_011.png)
 
 ### Page 12
 LSTM
@@ -162,6 +173,7 @@ LSTM
 • Resistant to vanishing gradients
 • Better at learning speech timing patterns
 • Maintains speaker context over time
+![Page 12, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_012.png)
 
 ### Page 13
 GRU
@@ -177,6 +189,7 @@ GRU
 • Similar performance to LSTM
 • Better for shorter sequences
 • Easier to train with less data
+![Page 13, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_013.png)
 
 ### Page 14
 Applications of LSTM& GRU
@@ -185,6 +198,7 @@ Applications of LSTM& GRU
 • Speaker verification
 • Emotion recognition
 • Speech enhancement
+![Page 14, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_014.png)
 
 ### Page 15
 CNN
@@ -201,6 +215,7 @@ CNN
 • Feature extraction
 • Speech enhancement
 • Speaker/phoneme recognition
+![Page 15, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_015.png)
 
 ### Page 16
 Hybrid CNN-RNN Architectures (i)
@@ -214,6 +229,7 @@ Hybrid CNN-RNN Architectures (i)
 • RNN: Temporal modeling, sequence handling
 • Together: Better than either alone
 • Balanced efficiency and accuracy
+![Page 16, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_016.png)
 
 ### Page 17
 Hybrid CNN-RNN Architectures (ii)
@@ -227,9 +243,12 @@ Hybrid CNN-RNN Architectures (ii)
 • Reduced computational cost vs pure RNN
 • Improved accuracy
 • More robust to noise/variations
+![Page 17, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_017.png)
 
 ### Page 18
 Hybrid CNN-RNN Architectures (iii)
+![Page 18, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_018.png)
+![Page 18, Figure 2](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_018_img_001.png)
 
 ### Page 19
 3. Modern Automatic Speech Recognition Systems
@@ -237,6 +256,7 @@ Hybrid CNN-RNN Architectures (iii)
 • Connectionist Temporal Classification (CTC)
 • Attention Mechanisms in ASR
 • Transformers for Speech Recognition
+![Page 19, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_019.png)
 
 ### Page 20
 End-to-End ASR Systems vs Traditional Pipeline
@@ -252,6 +272,8 @@ End-to-End ASR Systems vs Traditional Pipeline
 • Joint optimization of all components
 • Trained on <audio, transcript> pairs
 • Simpler training and deployment
+![Page 20, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_020.png)
+![Page 20, Figure 2](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_020_img_001.png)
 
 ### Page 21
 End-to-End ASR Systems vs Traditional Pipeline
@@ -266,6 +288,7 @@ End-to-End ASR Systems vs Traditional Pipeline
 • Less interpretability
 • May need larger models
 • Less modular for specific updates
+![Page 21, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_021.png)
 
 ### Page 22
 Connectionist Temporal Classification (CTC)
@@ -283,6 +306,7 @@ Practical example:
 • System might predict: "h-e-ll-o-“          (where "-" is the blank symbol)
 • It could also be: "-h-eell-oo-"
 • All these variations convert to "hello"
+![Page 22, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_022.png)
 
 ### Page 23
 Connectionist Temporal Classification (CTC)
@@ -299,6 +323,7 @@ sees, the better it gets at matching sounds to letters.
 write it slightly differently, but as long as it reads correctly when cleaned up, it's
 considered correct. The system learns which ways of hearing and writing are
 most reliable.
+![Page 23, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_023.png)
 
 ### Page 24
 Attention Mechanisms in ASR
@@ -313,6 +338,7 @@ Attention Mechanisms in ASR
 • Attention scores relevant audio parts for each output
 • Weighted sum creates context for prediction
 • Updates focus as it generates each character
+![Page 24, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_024.png)
 
 ### Page 25
 Types of Attention
@@ -328,6 +354,7 @@ Types of Attention
 • Direct dot product between states
 • Works well for similar length sequences
 • More memory efficient
+![Page 25, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_025.png)
 
 ### Page 26
 Key Advantages of attention
@@ -351,6 +378,7 @@ Key Advantages of attention
 • We can see what parts of speech the system is focusing on
 • Like highlighting the words as they're being processed
 • Helps understand how the system makes decisions
+![Page 26, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_026.png)
 
 ### Page 27
 Transformers in Speech Recognition
@@ -370,6 +398,7 @@ Transformers in Speech Recognition
 • No vanishing gradient problems
 • Captures global relationships easier
 • More stable training
+![Page 27, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_027.png)
 
 ### Page 28
 4. Practical Considerations and Future Directions
@@ -377,6 +406,7 @@ Transformers in Speech Recognition
 • Transfer Learning in Speech Models
 • Model Optimization and Deployment
 • Future trends
+![Page 28, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_028.png)
 
 ### Page 29
 Data Augmentation for Speech
@@ -398,6 +428,7 @@ Data Augmentation for Speech
 • Preserves speech characteristics
 • Different from speed perturbation
 • Good for accent/dialect variations
+![Page 29, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_029.png)
 
 ### Page 30
 Data Augmentation for Speech
@@ -413,6 +444,7 @@ Data Augmentation for Speech
 • Reduces overfitting
 • Better real-world performance
 • Handles varied conditions
+![Page 30, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_030.png)
 
 ### Page 31
 Transfer Learning in Speech Models
@@ -430,6 +462,7 @@ Transfer Learning in Speech Models
 • Adjust for specific task
 • Use smaller target dataset
 • Keep useful knowledge
+![Page 31, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_031.png)
 
 ### Page 32
 Transfer Learning in Speech Models
@@ -450,6 +483,7 @@ Transfer Learning in Speech Models
 • Emotion detection
 • Accent adaptation
 • Language transfer
+![Page 32, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_032.png)
 
 ### Page 33
 Model Optimization and Deployment
@@ -473,6 +507,7 @@ Model Optimization and Deployment
 • Identify less important weights
 • Remove them
 • Retrain network
+![Page 33, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_033.png)
 
 ### Page 34
 Model Optimization and Deployment
@@ -492,6 +527,7 @@ Model Optimization and Deployment
 • Caching strategies
 • Pipeline optimization
 • Real-time considerations
+![Page 34, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_034.png)
 
 ### Page 35
 Future trends
@@ -509,6 +545,7 @@ Future trends
 • Reduces dependency on labeled data
 • Better representation learning
 • Cross-lingual transfer
+![Page 35, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_035.png)
 
 ### Page 36
 Future trends
@@ -530,9 +567,11 @@ Future trends
 • Continuous learning
 • Zero-shot capabilities
 • Better noise handling
+![Page 36, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_036.png)
 
 ### Page 37
 LINKS
+![Page 37, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_037.png)
 
 ### Page 38
 Speech Emotion Recognition using LSTM and RNN
@@ -543,8 +582,10 @@ RNN/blob/main/Speech_emotion_recognition_lstm%26rnn.ipynb
 • Toronto emotional speech set
 • https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-
 set-tess
+![Page 38, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_038.png)
 
 ### Page 39
 Tensorflow Speech Recognition Demo
 • https://github.com/llSourcell/tensorflow_speech_recognition_demo
 • Data is not available
+![Page 39, Figure 1](subjects/snlp/slides/Chapter 6 SPEECH-images/Chapter 6 SPEECH_page_039.png)

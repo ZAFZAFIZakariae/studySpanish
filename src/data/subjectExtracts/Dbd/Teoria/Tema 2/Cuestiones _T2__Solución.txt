@@ -55,6 +55,10 @@ estén grabados en el disco. (Ver Tema 3)
 11. c)
 De nuevo, aunque parezca un sinsentido, es posible que los cambios realizados por una transacción no
 confirmada estén grabados ya en disco. (Ver Tema 3)
+![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución-images/Cuestiones _T2__Solución_page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución-images/Cuestiones _T2__Solución_page_001_img_001.png)
+![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución-images/Cuestiones _T2__Solución_page_001_img_002.png)
+![Page 1, Figure 4](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución-images/Cuestiones _T2__Solución_page_001_img_003.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -82,3 +86,5 @@ El modo de comprobación de las restricciones de integridad correcto es el modo 
 adecúa a la forma académica de procesar las transacciones (todas las operaciones de una transacción se
 ejecutan y sobre la base de datos resultante de ejecut ar todas las operaciones se comprueban las
 restricciones), satisfaciendo así la propiedad de atomicidad del entorno ACID.
+![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución-images/Cuestiones _T2__Solución_page_002.png)
+![Page 2, Figure 2](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2__Solución-images/Cuestiones _T2__Solución_page_002_img_001.png)
