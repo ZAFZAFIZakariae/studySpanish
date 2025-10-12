@@ -96,7 +96,7 @@ Object.entries(assetModules).forEach(([path, href]) => {
   const extractSourcePath = ['subjects', ...segments.map(decodeSegment)].join('/');
   const extract = getSubjectExtract(extractSourcePath);
 
-  const resource: ResourceLink = { label, href };
+  const resource: ResourceLink = { label, href, filePath: extractSourcePath };
   if (type) {
     resource.type = type;
   }

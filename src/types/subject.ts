@@ -9,6 +9,8 @@ export interface ResourceLink {
   href: string;
   description?: string;
   type?: ResourceType;
+  /** Absolute or repository-relative path to the underlying asset on disk. */
+  filePath?: string;
   extract?: {
     source: string;
     text: string;
