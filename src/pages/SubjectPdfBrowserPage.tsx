@@ -11,6 +11,25 @@ type ExtractionStatus = {
   message?: string;
 };
 
+type ExtractedImage = {
+  path: string;
+  page: number;
+  index: number;
+  width?: number | null;
+  height?: number | null;
+  color_space?: string | null;
+};
+
+type ExtractionResult = {
+  text: string;
+  images: ExtractedImage[];
+};
+
+type ImageSelection = {
+  selected: boolean;
+  caption: string;
+};
+
 type SubjectWithPdfResources = {
   id: string;
   name: string;
@@ -54,6 +73,10 @@ const SubjectPdfBrowserPage: React.FC = () => {
 
   const [activeSubjectId, setActiveSubjectId] = useState<string>(subjectsWithPdfs[0]?.id ?? '');
   const [statuses, setStatuses] = useState<Record<string, ExtractionStatus>>({});
+  const [results, setResults] = useState<Record<string, ExtractionResult>>({});
+  const [imageSelections, setImageSelections] = useState<
+    Record<string, Record<string, ImageSelection>>
+  >({});
 
   const activeSubject = useMemo(
     () => subjectsWithPdfs.find((subject) => subject.id === activeSubjectId) ?? subjectsWithPdfs[0] ?? null,
@@ -90,6 +113,10 @@ const SubjectPdfBrowserPage: React.FC = () => {
           throw new Error(details || 'Request failed');
         }
 
+        const data = (await response.json()) as Partial<ExtractionResult>;
+        const text = typeof data.text === 'string' ? data.text : '';
+        const images = Array.isArray(data.images) ? (data.images as ExtractedImage[]) : [];
+
         setStatuses((prev) => ({
           ...prev,
           [key]: {
@@ -97,6 +124,22 @@ const SubjectPdfBrowserPage: React.FC = () => {
             message: 'Extraction completed successfully.',
           },
         }));
+        setResults((prev) => ({
+          ...prev,
+          [key]: { text, images },
+        }));
+        setImageSelections((prev) => {
+          const currentSelections = prev[key] ?? {};
+          const nextSelections: Record<string, ImageSelection> = {};
+          images.forEach((image) => {
+            const imageKey = image.path;
+            nextSelections[imageKey] = currentSelections[imageKey] ?? { selected: false, caption: '' };
+          });
+          return {
+            ...prev,
+            [key]: nextSelections,
+          };
+        });
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unexpected error while extracting PDF.';
         setStatuses((prev) => ({
@@ -106,6 +149,14 @@ const SubjectPdfBrowserPage: React.FC = () => {
             message,
           },
         }));
+        setResults((prev) => {
+          if (!(key in prev)) {
+            return prev;
+          }
+          const next = { ...prev };
+          delete next[key];
+          return next;
+        });
       }
     },
     []
@@ -162,6 +213,8 @@ const SubjectPdfBrowserPage: React.FC = () => {
             const status = statuses[key]?.state ?? 'idle';
             const message = statuses[key]?.message;
             const isLoading = status === 'loading';
+            const result = results[key];
+            const selections = imageSelections[key] ?? {};
 
             return (
               <article key={key} className={styles.resourceCard}>
@@ -187,6 +240,81 @@ const SubjectPdfBrowserPage: React.FC = () => {
                     {message ?? (status === 'idle' ? 'Ready to extract.' : '')}
                   </span>
                 </div>
+                {result && (
+                  <div className={styles.previewLayout}>
+                    <section className={styles.textPreview}>
+                      <header className={styles.previewHeader}>
+                        <h3 className={styles.previewTitle}>Extracted text</h3>
+                      </header>
+                      <div className={styles.previewContent}>
+                        {result.text ? result.text : 'No text content extracted.'}
+                      </div>
+                    </section>
+                    <section className={styles.imagePreview}>
+                      <header className={styles.previewHeader}>
+                        <h3 className={styles.previewTitle}>Extracted images</h3>
+                      </header>
+                      {result.images.length === 0 ? (
+                        <p className={styles.emptyImages}>No images extracted.</p>
+                      ) : (
+                        <ul className={styles.imageList}>
+                          {result.images.map((image) => {
+                            const imageKey = image.path;
+                            const selection = selections[imageKey] ?? { selected: false, caption: '' };
+                            return (
+                              <li key={imageKey} className={styles.imageListItem}>
+                                <label className={styles.imageSelection}>
+                                  <input
+                                    type="checkbox"
+                                    checked={selection.selected}
+                                    onChange={(event) => {
+                                      const { checked } = event.target;
+                                      setImageSelections((prev) => ({
+                                        ...prev,
+                                        [key]: {
+                                          ...(prev[key] ?? {}),
+                                          [imageKey]: {
+                                            ...(prev[key]?.[imageKey] ?? { caption: '' }),
+                                            selected: checked,
+                                          },
+                                        },
+                                      }));
+                                    }}
+                                  />
+                                  <span className={styles.imageMeta}>Page {image.page}</span>
+                                </label>
+                                <img
+                                  className={styles.imageThumbnail}
+                                  src={`/${image.path}`}
+                                  alt={`Extracted figure from page ${image.page}`}
+                                />
+                                <input
+                                  className={styles.captionInput}
+                                  type="text"
+                                  placeholder="Add a caption"
+                                  value={selection.caption}
+                                  onChange={(event) => {
+                                    const { value } = event.target;
+                                    setImageSelections((prev) => ({
+                                      ...prev,
+                                      [key]: {
+                                        ...(prev[key] ?? {}),
+                                        [imageKey]: {
+                                          ...(prev[key]?.[imageKey] ?? { selected: false }),
+                                          caption: value,
+                                        },
+                                      },
+                                    }));
+                                  }}
+                                />
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </section>
+                  </div>
+                )}
               </article>
             );
           })}

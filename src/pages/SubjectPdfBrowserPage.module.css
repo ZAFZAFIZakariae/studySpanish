@@ -154,3 +154,127 @@
   text-decoration: underline;
   outline: none;
 }
+
+.previewLayout {
+  display: grid;
+  gap: 16px;
+  border-top: 1px solid var(--ui-border, #e2e8f0);
+  padding-top: 16px;
+}
+
+@media (min-width: 960px) {
+  .previewLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.previewTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ui-text-secondary, #475569);
+}
+
+.textPreview {
+  display: flex;
+  flex-direction: column;
+}
+
+.previewContent {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: #f8fafc;
+  color: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.imagePreview {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyImages {
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px dashed var(--ui-border, #e2e8f0);
+  background: rgba(226, 232, 240, 0.25);
+  color: var(--ui-text-tertiary, #64748b);
+}
+
+.imageList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.imageListItem {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .imageListItem {
+    grid-template-columns: auto 120px minmax(0, 1fr);
+    align-items: center;
+  }
+}
+
+.imageSelection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ui-text-secondary, #475569);
+}
+
+.imageMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.imageThumbnail {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 8px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  background: #f1f5f9;
+  object-fit: contain;
+}
+
+.captionInput {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--ui-border, #e2e8f0);
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.captionInput:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
