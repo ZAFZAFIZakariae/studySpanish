@@ -32,6 +32,17 @@ A clean, coach-style workspace for organising B1–C1 Spanish practice. The app 
    npm run test    # Run the Jest test suite
    ```
 
+## Verification checklist
+
+To confirm the app is healthy, run the test suite followed by a production build:
+
+```bash
+npm test
+npm run build
+```
+
+Both commands should complete without errors. The build step prints a summary of emitted assets; large bundles are flagged with a warning but do not indicate a failure.
+
 ## Importing content
 
 Use the **Content manager** page to upload JSON bundles that follow the `SeedBundle` schema (`lessons`, `exercises`, and `flashcards` arrays). The UI validates the structure, previews new/updated records, and updates the offline cache after a successful import.
