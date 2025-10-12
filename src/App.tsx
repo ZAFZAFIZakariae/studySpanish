@@ -10,6 +10,7 @@ import AppShell from './components/layout/AppShell';
 import SubjectsPage from './pages/SubjectsPage';
 import SpanishPage from './pages/SpanishPage';
 import ParametersPage from './pages/ParametersPage';
+import SubjectPdfBrowserPage from './pages/SubjectPdfBrowserPage';
 
 const App: React.FC = () => {
   const { enabled, toggle } = useHighContrast();
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/spanish" element={<SpanishPage />} />
           <Route path="/subjects" element={<SubjectsPage />} />
+          <Route path="/subject-pdfs" element={<SubjectPdfBrowserPage />} />
           <Route path="/parameters" element={<ParametersPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/flashcards" element={<FlashcardsPage />} />

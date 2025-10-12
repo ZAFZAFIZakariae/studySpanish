@@ -31,6 +31,12 @@ const navigation: NavigationItem[] = [
     description: 'Tools and preferences',
     icon: '⚙️',
   },
+  {
+    to: '/subject-pdfs',
+    label: 'Subject PDFs',
+    description: 'Browse resources and trigger extraction',
+    icon: '📄',
+  },
 ];
 
 export const AppShell: React.FC<AppShellProps> = ({
