@@ -96,6 +96,58 @@ const createSnippet = (text: string, query: string) => {
   return `${prefix}${normalized.slice(start, end).trim()}${suffix}`;
 };
 
+const SUBJECT_ASSET_PREFIX = '/subject-assets/';
+const SUBJECTS_BASE_URL = new URL('subjects/', 'https://lesson-viewer.local/');
+
+const isExternalAsset = (value: string) =>
+  /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(value) || value.startsWith('data:') || value.startsWith('blob:');
+
+const resolveLessonImageSource = (rawSrc: string): string => {
+  const trimmed = rawSrc.trim();
+  if (!trimmed) {
+    return '';
+  }
+
+  if (trimmed.startsWith('figure:') || trimmed.startsWith('/subject-assets/')) {
+    return trimmed;
+  }
+
+  if (isExternalAsset(trimmed)) {
+    return trimmed;
+  }
+
+  let normalized = trimmed.replace(/\\/g, '/');
+  if (normalized.startsWith('/')) {
+    if (/^\/subjects\//i.test(normalized)) {
+      normalized = normalized.replace(/^\/subjects\//i, '');
+    } else {
+      return normalized;
+    }
+  } else {
+    normalized = normalized.replace(/^\.\/+/, '').replace(/^subjects\//i, '');
+  }
+
+  try {
+    const resolved = new URL(normalized, SUBJECTS_BASE_URL);
+    let pathname = resolved.pathname.replace(/^\/+/, '');
+    if (/^subjects\//i.test(pathname)) {
+      pathname = pathname.replace(/^subjects\//i, '');
+    }
+
+    if (!pathname) {
+      return trimmed;
+    }
+
+    return `${SUBJECT_ASSET_PREFIX}${pathname}${resolved.search}${resolved.hash}`;
+  } catch (error) {
+    const fallback = normalized.replace(/^\/+/, '');
+    if (!fallback) {
+      return trimmed;
+    }
+    return `${SUBJECT_ASSET_PREFIX}${fallback}`;
+  }
+};
+
 const topAnchorId = 'lesson-viewer-top';
 
 export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, allLessons = [] }) => {
@@ -294,7 +346,22 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
           );
         }
 
-        return <img src={src ?? ''} alt={alt ?? ''} {...rest} />;
+        if (typeof src === 'string') {
+          const resolvedSrc = resolveLessonImageSource(src);
+          const { className, ...imageProps } = rest;
+          const mergedClassName = [styles.markdownImage, className].filter(Boolean).join(' ');
+          return (
+            <img
+              src={resolvedSrc}
+              alt={alt ?? ''}
+              className={mergedClassName}
+              loading="lazy"
+              {...imageProps}
+            />
+          );
+        }
+
+        return <img src={typeof src === 'string' ? src : ''} alt={alt ?? ''} {...rest} />;
       },
     };
   }, [headingUsage, slugAssignments]);
