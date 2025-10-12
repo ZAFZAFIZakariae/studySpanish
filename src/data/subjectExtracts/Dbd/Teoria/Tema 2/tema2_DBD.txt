@@ -9,6 +9,9 @@ Procesamiento de transacciones y
 mantenimiento de la integridad
 Profesoras: Laura Mota y Pedro Valderas
 1
+![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_001_img_002.png)
+![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_001_img_003.png)
 
 ### Page 2
 2
@@ -20,6 +23,7 @@ integridad durante el procesamiento de transacciones.
  Revisar el tratamiento de la integridad en SQL.
 Objetivos:
 2
+![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_002.png)
 
 ### Page 3
 3
@@ -31,6 +35,7 @@ Objetivos:
 6 Comprobación de restricciones en SQL.
 Procesamiento de transacciones y mantenimiento de la integridad.
 3
+![Page 3, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_003.png)
 
 ### Page 4
 4
@@ -49,6 +54,7 @@ una tabla) y UPDATE (modificar filas de una tabla).
 La operación de consulta actúa sobre una o varias tablas, las operaciones de actualización actúan
 sobre una única tabla.
 4
+![Page 4, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_004.png)
 
 ### Page 5
 5
@@ -80,6 +86,7 @@ Comentario: las flechas rojas incluidas en la transparencia simplemente denotan 
 la tabla Departamento se relaciona cada fila de la table Empleado, no debe confundirse con la
 existencia de punteros.
 5
+![Page 5, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_005.png)
 
 ### Page 6
 6
@@ -98,6 +105,8 @@ Supóngase que se desea crear (dar de alta) un nuevo departamento en la organiza
 expresa el requerimiento de actualización de la base de datos que plantean los usuarios.
 La base de datos, una vez actualizada, quedaría como se muestra en la transparencia.
 6
+![Page 6, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_006.png)
+![Page 6, Figure 2](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_006_img_001.png)
 
 ### Page 7
 7
@@ -117,6 +126,7 @@ Planta2Ventasd2
 Planta3Personald3
 Empleado Departamento
 7
+![Page 7, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_007.png)
 
 ### Page 8
 8
@@ -135,6 +145,7 @@ Planta1Comprasd1
 Planta2Ventasd2
 Empleado Departamento
 8
+![Page 8, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_008.png)
 
 ### Page 9
 9
@@ -164,6 +175,7 @@ Para utilizar este concepto, será necesario poder indicar al SGBD qué conjunto
 constituyen una transacción, para que, de esta forma, el SGBD pueda considerar su efecto global
 antes de comprobar las restricciones de integridad definidas en el esquema de la base de datos.
 9
+![Page 9, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_009.png)
 
 ### Page 10
 10
@@ -179,6 +191,7 @@ Si el SGBD ejecuta las dos operaciones de actualización como una unidad de ejec
 (transacción) y comprueba las restricciones de integridad después de observar su efecto global,
 la base de datos puede ser actualizada sin ningún problema.
 10
+![Page 10, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_010.png)
 
 ### Page 11
 11
@@ -200,6 +213,7 @@ Empleado Departamento
 En el nuevo estado de la base de datos, después de ejecutar la transacción, se cumplen las dos
 restricciones de integridad (clave ajena y restricción R1).
 11
+![Page 11, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_011.png)
 
 ### Page 12
 12
@@ -225,6 +239,7 @@ y la actualización de la base de datos (en memoria secundaria), como se muestra
 siguiente (pasos 4 y 5). Este desajuste temporal entre los pasos 4 y 5 estará en el centro del
 funcionamiento del SGBD, como se verá en temas posteriores.
 12
+![Page 12, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_012.png)
 
 ### Page 13
 13
@@ -266,6 +281,7 @@ de la BD:
 5
 Recuérdese el desajuste temporal entre los pasos 4 y 5.
 13
+![Page 13, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_013.png)
 
 ### Page 14
 14
@@ -277,6 +293,7 @@ Recuérdese el desajuste temporal entre los pasos 4 y 5.
 6 Comprobación de restricciones en SQL.
 Procesamiento de transacciones y mantenimiento de la integridad.
 14
+![Page 14, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_014.png)
 
 ### Page 15
 15
@@ -312,6 +329,7 @@ operación de actualización significa escribir en la base de datos.
 Con la idea de simplificar el estudio de la ejecución de transacciones, se pueden considerar sólo
 dos tipos de operaciones sobre la base de datos: lectura de datos, y escritura de datos.
 15
+![Page 15, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_015.png)
 
 ### Page 16
 16
@@ -335,6 +353,7 @@ Estos pasos coinciden con los pasos que se vieron en los diagramas de las operac
 y actualización en el Tema 1.
 De nuevo, es importante fijarse en los pasos 3, 4 y 5 de ambas operaciones.
 16
+![Page 16, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_016.png)
 
 ### Page 17
 17
@@ -371,6 +390,7 @@ Una transacción confirmada definitivamente por el SGBD debe quedar grabada en l
 datos en disco. Una transacción anulada por el usuario o por el SGBD no debe tener ningún
 efecto sobre la base de datos. (Estos aspectos se estudiarán con más detalle en el Tema 4).
 17
+![Page 17, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_017.png)
 
 ### Page 18
 18
@@ -411,6 +431,7 @@ ya ha sido confirmada por el usuario (por la violación de alguna restricción d
 • Confirmada: el SGBD confirma definitivamente una transacción finalizada con confirmación
 por el usuario (comprobación válida de restricciones de integridad).
 18
+![Page 18, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_018.png)
 
 ### Page 19
 19
@@ -449,6 +470,7 @@ Si el resultado de esta comprobación es negativo (se viola alguna de las restri
 integridad) el SGBD anula la transacción. En este caso el SGBD debe asegurar que la transacción
 no deja ningún efecto sobre la base de datos (objetivo (b)).
 19
+![Page 19, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_019.png)
 
 ### Page 20
 20
@@ -473,6 +495,7 @@ grabados permanentemente en la BD.
 Si la transacción está activa y el usuario o el SGBD anula la transacción, el SGBD debe asegurar
 que la transacción no deja ningún efecto sobre la base de datos (objetivo (b)).
 20
+![Page 20, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_020.png)
 
 ### Page 21
 21
@@ -484,6 +507,7 @@ que la transacción no deja ningún efecto sobre la base de datos (objetivo (b))
 6 Comprobación de restricciones en SQL.
 Procesamiento de transacciones y mantenimiento de la integridad.
 21
+![Page 21, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_021.png)
 
 ### Page 22
 22
@@ -518,6 +542,7 @@ concurrencia de los SGBD aseguran este objetivo. (Tema 4)
 transacción confirmada definitivamente por el sistema quedarán grabados en la base de
 datos en disco. (Tema 3)
 22
+![Page 22, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_022.png)
 
 ### Page 23
 23
@@ -529,6 +554,7 @@ datos en disco. (Tema 3)
 6 Comprobación de restricciones en SQL.
 Procesamiento de transacciones y mantenimiento de la integridad.
 23
+![Page 23, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_023.png)
 
 ### Page 24
 24
@@ -551,6 +577,7 @@ usuario, o después del final de una transacción, el usuario solicita una opera
 manipulación (DML) sobre la base de datos, esta operación le indica al SGBD el inicio de la
 siguiente transacción.
 24
+![Page 24, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_024.png)
 
 ### Page 25
 25
@@ -578,6 +605,7 @@ Las marcas de savepoint y la instrucción ROLLBACK TO SAVEPOINT permiten definir
 transacciones en una, la ejecución de cada una de ellas dependerá de las condiciones del
 contexto de ejecución. Puede verse como la definición de partes opcionales en una transacción.
 25
+![Page 25, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_025.png)
 
 ### Page 26
 26
@@ -590,6 +618,7 @@ operaciones ejecutadas desde el establecimiento de marca_savepoint y la
 marca de savepoint es borrada. La transacción continúa en la instrucción
 siguiente al ROLLBACK ejecutado (no finaliza la transacción).
 26
+![Page 26, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_026.png)
 
 ### Page 27
 27
@@ -611,6 +640,7 @@ COMMIT
 4 Definición de transacciones en SQL.
 Definición de transacciones en SQL (operaciones de usuario):
 27
+![Page 27, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_027.png)
 
 ### Page 28
 28
@@ -632,6 +662,7 @@ La variante SET TRANSACTION sirve para dar al SGBD directrices relativas a la ej
 transacciones. Esta instrucción se debe ejecutar entre transacciones y el alcance de la directriz
 es la transacción siguiente.
 28
+![Page 28, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_028.png)
 
 ### Page 29
 29
@@ -652,6 +683,7 @@ La instrucción SET TRANSACTION tiene tres argumentos (opcionales) cuyo signific
 en la transparencia.
 El argumento nivel de aislamiento se estudiará con más detalle en el Tema 10.
 29
+![Page 29, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_029.png)
 
 ### Page 30
 30
@@ -667,6 +699,7 @@ modo de ejecución de la siguiente transacción.
  Existen unos valores por defecto para los tres modos: READ WRITE,
 SERIALIZABLE, y un tamaño del área de diagnóstico indeterminada.
 30
+![Page 30, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_030.png)
 
 ### Page 31
 31
@@ -678,6 +711,7 @@ SERIALIZABLE, y un tamaño del área de diagnóstico indeterminada.
 6 Comprobación de restricciones en SQL.
 Procesamiento de transacciones y mantenimiento de la integridad.
 31
+![Page 31, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_031.png)
 
 ### Page 32
 32
@@ -717,6 +751,7 @@ Como la base de datos sólo evoluciona por la ejecución de transacciones de usu
 restricciones de integridad “deberán” ser comprobadas en cada nuevo estado de la base de
 datos, es decir, después de la ejecución de cada transacción.
 32
+![Page 32, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_032.png)
 
 ### Page 33
 33
@@ -734,6 +769,7 @@ deben quedar grabados permanentemente en la BD.
 La comprobación de restricciones de integridad tiene que ver con las propiedades de
 Atomicidad y Consistencia del principio ACID de la ejecución de transacciones.
 33
+![Page 33, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_033.png)
 
 ### Page 34
 34
@@ -745,6 +781,7 @@ Atomicidad y Consistencia del principio ACID de la ejecución de transacciones.
 6 Comprobación de restricciones.
 Procesamiento de transacciones y mantenimiento de la integridad.
 34
+![Page 34, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_034.png)
 
 ### Page 35
 35
@@ -774,6 +811,7 @@ REFERENCES nom_relación [(nom_atributo)]
 [ON UPDATE {CASCADE| SET NULL| SET DEFAULT| NO ACTION}]
 [cuándo_comprobar]
 35
+![Page 35, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_035.png)
 
 ### Page 36
 36
@@ -798,6 +836,7 @@ mayor flexibilidad en la ejecución de transacciones. Anular operaciones individ
 transacción ofrece al usuario la oportunidad de corregir el error sin tener que esperar a la
 finalización de la transacción y su posible anulación.
 36
+![Page 36, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_036.png)
 
 ### Page 37
 37
@@ -815,6 +854,7 @@ la base de datos. Este modo se puede cambiar dinámicamente o no durante la ejec
 transacciones. Para poder cambiar el modo, la restricción debe haber recibido esa propiedad de
 cambio en su definición.
 37
+![Page 37, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_037.png)
 
 ### Page 38
 38
@@ -830,6 +870,7 @@ UD2.3 BDA
 En esta transparencia se presenta la cáusula cuándo_comprobar con la notación BNF que se usa
 para definir instrucciones SQL.
 38
+![Page 38, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_038.png)
 
 ### Page 39
 39
@@ -857,6 +898,7 @@ la cláusulacuándo_comprobar de una restricción de integridad se puede escribi
 formas posibles. En la transparencia se incluyen todas ellas y se explica el comportamiento que
 implican.
 39
+![Page 39, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_039.png)
 
 ### Page 40
 40
@@ -878,6 +920,7 @@ La variante de la instrucción SET de la forma SET CONSTRAINT permite cambiar di
 (durante la ejecución de la transacción) el modo de comprobación de una (o varias) restricción
 de integridad, siempre que ésta se haya definido con la propiedad DEFERRABLE.
 40
+![Page 40, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_040.png)
 
 ### Page 41
 41
@@ -891,6 +934,7 @@ R1: “A todo departamento pertenece al menos un empleado”
 Ejemplo:
 Sea el esquema lógico de la base de datos relacional del ejemplo inicial del tema.
 41
+![Page 41, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_041.png)
 
 ### Page 42
 42
@@ -920,6 +964,7 @@ Esta es la definición del esquema lógico anterior en el lenguaje SQL.
 En los sistemas de gestión de bases de datos actuales no es posible la definición de asertos por lo
 que la restricción R1 debería ser controlada por programa.
 42
+![Page 42, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_042.png)
 
 ### Page 43
 43
@@ -943,6 +988,9 @@ sobre la base de datos de ejemplo, con la indicación de la comprobación de la 
 Obsérvese el modo de comprobación de cada restricción y su efecto en la ejecución de la
 transacción.
 43
+![Page 43, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_043.png)
+![Page 43, Figure 2](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_043_img_001.png)
+![Page 43, Figure 3](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_043_img_002.png)
 
 ### Page 44
 44
@@ -958,6 +1006,7 @@ Ejemplo:
 RI en modo
 inmediato
 44
+![Page 44, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_044.png)
 
 ### Page 45
 45
@@ -976,6 +1025,7 @@ diferido
 RI en modo
 inmediato
 45
+![Page 45, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_045.png)
 
 ### Page 46
 46
@@ -1007,6 +1057,7 @@ opción de DEFERRABLE) son la restricción de clave ajena y la restricción R1. 
 para ambas restricciones asegura que se pueda actualizar la base de datos, y dar de alta un
 nuevo departamento.
 46
+![Page 46, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_046.png)
 
 ### Page 47
 47
@@ -1021,6 +1072,7 @@ Para ilustrar el usos de la propiedad DEFERRABLE, se va a usar un ejemplo genér
 aparece definida una restricción R1, con modo de comprobación IMMEDIATE y con la propiedad
 DEFERRABLE.
 47
+![Page 47, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_047.png)
 
 ### Page 48
 48
@@ -1049,6 +1101,7 @@ violación, anula la instrucción (deshaciendo sus cambios) y la transacción pu
 Una operación es relevante para una restricción de integridad si su ejecución puede violar la
 restricción.
 48
+![Page 48, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_048.png)
 
 ### Page 49
 49
@@ -1074,3 +1127,4 @@ violación, se rechaza la transacción completa.
 Los SGBDs hacen una comprobación de la integridad inteligente, sólo comprueban aquellas
 restricciones que son relevantes para las operaciones que se ejecutan en la transacción.
 49
+![Page 49, Figure 1](subjects/Dbd/Teoria/Tema 2/tema2_DBD-images/tema2_DBD_page_049.png)

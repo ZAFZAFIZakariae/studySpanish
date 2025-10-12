@@ -4,6 +4,9 @@ Source: subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_.pdf
 ### Page 1
 Advanced methods of artificial vision
 Unit 2: CNN-based feature extraction
+![Page 1, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_001.png)
+![Page 1, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_001_img_001.png)
+![Page 1, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_001_img_002.png)
 
 ### Page 2
 Contents
@@ -15,6 +18,8 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 2
+![Page 2, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_002.png)
+![Page 2, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_002_img_002.png)
 
 ### Page 3
 Contents
@@ -26,6 +31,7 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 3
+![Page 3, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_003.png)
 
 ### Page 4
 4
@@ -33,6 +39,7 @@ A neural network (NN) is a set of layers composed of neurons.
 NN of 2 layers NN of 3 layers
 fully connected layers: Denses
 Neural Networks: Structure
+![Page 4, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_004.png)
 
 ### Page 5
 5
@@ -70,6 +77,7 @@ Neural Networks: Structure
 2 𝑎1
 2 ො𝑦
 Neural Networks: Structure
+![Page 5, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_005.png)
 
 ### Page 6
 6
@@ -116,6 +124,7 @@ Neural Networks: Structure
 𝑤1,1
 2
 Neural Networks: Structure
+![Page 6, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_006.png)
 
 ### Page 7
 Optimization
@@ -127,6 +136,8 @@ MLP   𝑥𝑖
 𝑦𝑖 − ො𝑦𝑖 2
 𝑦𝑖
 Optimise 𝑊0, 𝑊1, 𝑊2, 𝑏0, 𝑏1, 𝑏2
+![Page 7, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_007.png)
+![Page 7, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_007_img_003.png)
 
 ### Page 8
 Optimization
@@ -143,6 +154,7 @@ Optimization
 2 +𝑤1
 2 −0.5×𝑤0 ×𝑤1 +1.7×𝑤1
 To solve this system
+![Page 8, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_008.png)
 
 ### Page 9
 Optimization: Gradient Descent
@@ -156,6 +168,7 @@ Iterative process:
 - High values: fast learning but be
 careful with convergence
 - Valores bajos: slow learning
+![Page 9, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_009.png)
 
 ### Page 10
 Gradient descent variants
@@ -194,15 +207,20 @@ the
 algorithm
 Hyperparameter to optimise, the batch size: for example in CNNs it is
 usually 256 for a training set of 1.2 million.
+![Page 10, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_010.png)
 
 ### Page 11
 Forward-Backward propagation
 11
 Training data
+![Page 11, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_011.png)
+![Page 11, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_011_img_003.png)
+![Page 11, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_011_img_004.png)
 
 ### Page 12
 Effect of learning rate
 12
+![Page 12, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_012.png)
 
 ### Page 13
 Data partitioning
@@ -212,6 +230,7 @@ Training (70-80%) Test (20-30%)
 20-30%  training
 Validation Test (20-30%)Training
 batch1 batch2 batch3 batch4 batch5 .  .  . Batch N-1 batch N
+![Page 13, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_013.png)
 
 ### Page 14
 Training process
@@ -225,6 +244,8 @@ Test
 Model with highest accuracy
 or lowest validation loss
 epoch 2
+![Page 14, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_014.png)
+![Page 14, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_014_img_007.png)
 
 ### Page 15
 Activation functions
@@ -240,13 +261,25 @@ Relu (Rectified Linear Unit)
 Elu (Exponential Linear Unit) (𝛼=1)
 Leaky Relu (𝛼=0.3)
 𝑓 𝑥 = α∗(𝑒𝑥 −1) 𝑥 < 0 +𝑥(𝑥 ≥ 0)
+![Page 15, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_015.png)
+![Page 15, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_015_img_003.png)
+![Page 15, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_015_img_004.png)
+![Page 15, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_015_img_005.png)
+![Page 15, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_015_img_006.png)
+![Page 15, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_015_img_007.png)
 
 ### Page 16
 Optimizers
 16
+![Page 16, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_016.png)
+![Page 16, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_016_img_003.png)
+![Page 16, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_016_img_004.png)
 
 ### Page 17
 17
+![Page 17, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_017.png)
+![Page 17, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_017_img_003.png)
+![Page 17, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_017_img_004.png)
 
 ### Page 18
 18
@@ -265,14 +298,18 @@ error stops improving.
 1+𝑘𝑡𝑒−𝑘𝑡
 𝜂0,𝑘: hyperparameters    𝑡: number of epoch
 NN: learning rate optimization
+![Page 18, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_018.png)
 
 ### Page 19
 Detecting overfitting
 19
+![Page 19, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_019.png)
 
 ### Page 20
 Detecting overfitting
 20
+![Page 20, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_020.png)
+![Page 20, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_020_img_003.png)
 
 ### Page 21
 21
@@ -311,6 +348,7 @@ W 𝑡 +1 = 𝑊 𝑡 −η𝛻𝐽+λ𝑅(𝑊)
 Update without regularization
 Update with regularization
 Loss with regularizationLoss without regularization
+![Page 21, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_021.png)
 
 ### Page 22
 Drop-oupt
@@ -324,6 +362,7 @@ randomly deactivated again for the next batch.
 given pattern occurs. It ensures that there are multiple, redundant nodes that will be triggered when similar inputs
 are presented, which in turn helps our model to generalise.
 Without drop-out Drop-out with 𝑝 = 0.5
+![Page 22, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_022.png)
 
 ### Page 23
 23
@@ -334,6 +373,9 @@ of algorithms based on deep learning.
 • It offers a more intuitive and high-level set of abstractions. Training can still be
 done on GPU, remembering that this is the only way we have to train a neural
 network in an allowable time interval.
+![Page 23, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_023.png)
+![Page 23, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_023_img_005.png)
+![Page 23, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_023_img_006.png)
 
 ### Page 24
 24
@@ -350,6 +392,7 @@ center=True, scale=True)
 keras.layers.Flatten(data_format=None)
 https://keras.io/layers/core/
 Keras documentation
+![Page 24, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_024.png)
 
 ### Page 25
 25
@@ -368,6 +411,7 @@ model.add(Activation('relu'))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(10, activation='softmax'))
 https://keras.io/models/sequential/
+![Page 25, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_025.png)
 
 ### Page 26
 26
@@ -388,6 +432,7 @@ predictions = Dense(10, activation='softmax')(x)
 # We create the model object as a union of inputs and architecture
 model = Model(inputs=inputs, outputs=predictions)
 https://keras.io/models/model/
+![Page 26, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_026.png)
 
 ### Page 27
 27
@@ -406,6 +451,7 @@ nesterov=True),
 # Example for a regression problem
 model.compile(optimizer='rmsprop',
               loss='mse')
+![Page 27, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_027.png)
 
 ### Page 28
 28
@@ -426,6 +472,7 @@ model.compile(optimizer='rmsprop', loss=‘sparse_categorical_crossentropy',
               metrics=['accuracy'])
 model.fit(data, labels, epochs=10, validation_data=(data_v, labels_v),
 batch_size=32)
+![Page 28, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_028.png)
 
 ### Page 29
 29
@@ -442,6 +489,7 @@ from sklearn.metrics import classification_report
 predictions = model.predict(x=X_test, batch_size=None)
 print(classification_report(y_labels,predictions.argmax(axis=1))
 %% Returns more metrics
+![Page 29, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_029.png)
 
 ### Page 30
 Contents
@@ -453,12 +501,14 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 30
+![Page 30, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_030.png)
 
 ### Page 31
 Concept of image
 31
 Gray image RGB image
 level: 0….255 (black….white)
+![Page 31, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_031.png)
 
 ### Page 32
 Problem with images
@@ -471,6 +521,11 @@ Problem with images
 Example: In the MNIST database for image classification
 • When the size of the image starts to grow, using fully connected
 layers (one neuron per pixel) becomes unfeasible.
+![Page 32, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_032.png)
+![Page 32, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_032_img_003.png)
+![Page 32, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_032_img_005.png)
+![Page 32, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_032_img_006.png)
+![Page 32, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_032_img_007.png)
 
 ### Page 33
 Hand-crafted learning
@@ -484,6 +539,10 @@ SURF
 Colour
 Data Feature Extraction Classification or
 Regression
+![Page 33, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_033.png)
+![Page 33, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_033_img_010.png)
+![Page 33, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_033_img_011.png)
+![Page 33, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_033_img_012.png)
 
 ### Page 34
 Automated learning
@@ -491,6 +550,8 @@ Automated learning
 (Data)2
 Feature extraction Classification
 Deep neural networks
+![Page 34, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_034.png)
+![Page 34, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_034_img_009.png)
 
 ### Page 35
 Convolutional neural networks
@@ -503,6 +564,8 @@ processing data that has a grid-like topology. They take advantadge of:
 – pooling / subsampling hidden units
 Multilayer Perceptron Convolutional neural network
 3
+![Page 35, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_035.png)
+![Page 35, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_035_img_003.png)
 
 ### Page 36
 Convolution
@@ -531,6 +594,7 @@ Kernel
 −1 ∗62+0∗59+1∗62+(−2)∗59+0∗57+2∗61+(−1)∗64+0∗63+1∗65 = 3
 3
 Imagen de salida
+![Page 36, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_036.png)
 
 ### Page 37
 37
@@ -541,6 +605,7 @@ Convolution
 1 2 1
 0 0 0
 -1 -2 -1
+![Page 37, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_037.png)
 
 ### Page 38
 Local connectivity
@@ -559,6 +624,18 @@ wN11 … wNN1
 w111 … w1N1
 … … …
 wN11 … wNN1
+![Page 38, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038.png)
+![Page 38, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_003.png)
+![Page 38, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_005.png)
+![Page 38, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_006.png)
+![Page 38, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_007.png)
+![Page 38, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_008.png)
+![Page 38, Figure 7](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_009.png)
+![Page 38, Figure 8](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_010.png)
+![Page 38, Figure 9](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_011.png)
+![Page 38, Figure 10](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_012.png)
+![Page 38, Figure 11](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_013.png)
+![Page 38, Figure 12](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_038_img_015.png)
 
 ### Page 39
 Parameter sharing
@@ -596,6 +673,30 @@ Kernel of
 feature map 2
 Kernel of
 feature map 3
+![Page 39, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039.png)
+![Page 39, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_003.png)
+![Page 39, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_004.png)
+![Page 39, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_006.png)
+![Page 39, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_008.png)
+![Page 39, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_009.png)
+![Page 39, Figure 7](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_010.png)
+![Page 39, Figure 8](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_011.png)
+![Page 39, Figure 9](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_012.png)
+![Page 39, Figure 10](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_013.png)
+![Page 39, Figure 11](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_014.png)
+![Page 39, Figure 12](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_015.png)
+![Page 39, Figure 13](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_016.png)
+![Page 39, Figure 14](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_017.png)
+![Page 39, Figure 15](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_018.png)
+![Page 39, Figure 16](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_019.png)
+![Page 39, Figure 17](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_020.png)
+![Page 39, Figure 18](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_021.png)
+![Page 39, Figure 19](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_022.png)
+![Page 39, Figure 20](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_023.png)
+![Page 39, Figure 21](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_024.png)
+![Page 39, Figure 22](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_027.png)
+![Page 39, Figure 23](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_028.png)
+![Page 39, Figure 24](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_039_img_029.png)
 
 ### Page 40
 Feature maps
@@ -607,17 +708,29 @@ w111 … w1N1
 … … …
 wN11 … wNN1
 Learnable
+![Page 40, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_040.png)
+![Page 40, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_040_img_004.png)
+![Page 40, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_040_img_005.png)
+![Page 40, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_040_img_006.png)
+![Page 40, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_040_img_007.png)
 
 ### Page 41
 Feature maps
 41
 Input image Feature map 1 Feature map 2
+![Page 41, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_041.png)
 
 ### Page 42
 Pooling
 42
 maxpooling
 Pooling is performed in non overlapping neighborhoods (subsampling)
+![Page 42, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_042.png)
+![Page 42, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_042_img_003.png)
+![Page 42, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_042_img_005.png)
+![Page 42, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_042_img_006.png)
+![Page 42, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_042_img_007.png)
+![Page 42, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_042_img_008.png)
 
 ### Page 43
 Contents
@@ -629,11 +742,14 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 43
+![Page 43, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_043.png)
 
 ### Page 44
 Convolutional layers
 44
 Filtro
+![Page 44, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_044.png)
+![Page 44, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_044_img_003.png)
 
 ### Page 45
 Convolutional layers
@@ -656,6 +772,20 @@ N. of output images
 𝐾
 𝑁𝑖𝑛𝑝𝑢𝑡
 𝑁𝑜𝑢𝑡𝑝𝑢𝑡
+![Page 45, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045.png)
+![Page 45, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_003.png)
+![Page 45, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_004.png)
+![Page 45, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_005.png)
+![Page 45, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_006.png)
+![Page 45, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_007.png)
+![Page 45, Figure 7](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_008.png)
+![Page 45, Figure 8](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_009.png)
+![Page 45, Figure 9](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_010.png)
+![Page 45, Figure 10](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_011.png)
+![Page 45, Figure 11](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_012.png)
+![Page 45, Figure 12](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_013.png)
+![Page 45, Figure 13](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_014.png)
+![Page 45, Figure 14](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_045_img_015.png)
 
 ### Page 46
 Convolutional layers: Stride
@@ -671,6 +801,7 @@ the Stride hyperparameter
 Warning !!!
 Reduction of the image size.
 It depends on kernel size and stride46
+![Page 46, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_046.png)
 
 ### Page 47
 Convolutional layers: zero
@@ -697,6 +828,19 @@ Input image
 Kernel
 Ouptut image
 28 x 28 x 3
+![Page 47, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047.png)
+![Page 47, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_003.png)
+![Page 47, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_004.png)
+![Page 47, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_005.png)
+![Page 47, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_006.png)
+![Page 47, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_007.png)
+![Page 47, Figure 7](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_008.png)
+![Page 47, Figure 8](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_009.png)
+![Page 47, Figure 9](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_010.png)
+![Page 47, Figure 10](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_011.png)
+![Page 47, Figure 11](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_012.png)
+![Page 47, Figure 12](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_013.png)
+![Page 47, Figure 13](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_047_img_014.png)
 
 ### Page 48
 Pooling layers
@@ -720,6 +864,10 @@ Stride=2
 3 5
 7 3
 Avg.
+![Page 48, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_048.png)
+![Page 48, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_048_img_003.png)
+![Page 48, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_048_img_004.png)
+![Page 48, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_048_img_005.png)
 
 ### Page 49
 CNN. Setup
@@ -738,6 +886,7 @@ considered :
 – Drop out layer
 – Classification: Top model
 49
+![Page 49, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_049.png)
 
 ### Page 50
 50
@@ -754,6 +903,7 @@ center=True, scale=True)
 keras.layers.Flatten(data_format=None)
 https://keras.io/layers/core/
 Keras documentation
+![Page 50, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_050.png)
 
 ### Page 51
 Contents
@@ -765,6 +915,7 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 51
+![Page 51, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_051.png)
 
 ### Page 52
 CNN: Feature extraction
@@ -773,11 +924,13 @@ Feature visualization of convolutional net trained on ImageNet (Zeiler, Fergus, 
 • CNN = learning hierarchical representations with increasing levels of abstraction
 • End to end training: joint optimization of features and classiﬁer
 52
+![Page 52, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_052.png)
 
 ### Page 53
 53
 Feature extraction
 http://cs231n.stanford.edu/53
+![Page 53, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_053.png)
 
 ### Page 54
 Low-level features
@@ -792,21 +945,25 @@ level features: semicircles (combination of a
 curve and a straight edge), squares
 (combination of several straight edges), etc.
 54
+![Page 54, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_054.png)
 
 ### Page 55
 High-level features
 55
 55
+![Page 55, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_055.png)
 
 ### Page 56
 High-level features
 56
 56
+![Page 56, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_056.png)
 
 ### Page 57
 High-level features
 57
 57 https://poloclub.github.io/cnn-explainer/
+![Page 57, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_057.png)
 
 ### Page 58
 Contents
@@ -818,6 +975,7 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 58
+![Page 58, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_058.png)
 
 ### Page 59
 CNN for classification
@@ -828,6 +986,8 @@ Vh65QZN9usE6YRJTA.png
 • Training: stochastic gradient descent/ forward-backward propagation
 • Hyperparameters setting: as MLP
 59
+![Page 59, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_059.png)
+![Page 59, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_059_img_004.png)
 
 ### Page 60
 CNN for classification
@@ -841,6 +1001,13 @@ Feature extraction Classification
 • The last fully connected layer is a softmax layer (in the case of more than one output
 neuron) with as many neurons as the number of classes.
 • PROBLEM: Overfitting
+![Page 60, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060.png)
+![Page 60, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060_img_003.png)
+![Page 60, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060_img_004.png)
+![Page 60, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060_img_005.png)
+![Page 60, Figure 5](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060_img_006.png)
+![Page 60, Figure 6](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060_img_007.png)
+![Page 60, Figure 7](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_060_img_008.png)
 
 ### Page 61
 CNN for classification
@@ -860,10 +1027,15 @@ GAP: calculates the average
 output of each feature map
 GMP: calculates the maximum
 output of each feature map
+![Page 61, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_061.png)
+![Page 61, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_061_img_004.png)
+![Page 61, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_061_img_007.png)
 
 ### Page 62
 CNN.  Final Global Architecture
 62
+![Page 62, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_062.png)
+![Page 62, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_062_img_003.png)
 
 ### Page 63
 Contents
@@ -875,6 +1047,7 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 63
+![Page 63, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_063.png)
 
 ### Page 64
 ImageNet
@@ -891,6 +1064,8 @@ parameters while maintaining or
 exceeding the previous year
 results, with a strong focus on
 reducing computational cost.
+![Page 64, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_064.png)
+![Page 64, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_064_img_003.png)
 
 ### Page 65
 LeNet-5
@@ -907,6 +1082,7 @@ Pooling
 Pooling
 Fully
 Connected
+![Page 65, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_065.png)
 
 ### Page 66
 ALexNet
@@ -920,6 +1096,8 @@ o Dropout
 o Data augmentation
 o SGD with momentum
 o Trained for 6 days using 2 Nvidia Geforce GTX 580 GPUs.
+![Page 66, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_066.png)
+![Page 66, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_066_img_003.png)
 
 ### Page 67
 VGG16 y VGG19
@@ -935,6 +1113,8 @@ Simonyan y Zisserman (2014). Very Deep
 Convolutional Networks for Large Scale
 Image recognition
 (https://arxiv.org/abs/1409.1556)
+![Page 67, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_067.png)
+![Page 67, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_067_img_003.png)
 
 ### Page 68
 Inception V3 (GoogleNet)
@@ -946,6 +1126,7 @@ single activation map.
 • Challenge winners in 2014, top-5 error rate of 6.67%!
 • This architecture, 22 convolutional layers, requires less memory than VGG and ResNet. It
 reduces the number of parameters from 60 million (AlexNet) to 4 million.
+![Page 68, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_068.png)
 
 ### Page 69
 Xception
@@ -953,6 +1134,8 @@ Xception
 • Proposed by François Chollet (creator of Keras).  Like Inception but provides a quick way to
 make 2D convolutions (2 1D convolutions).
 "Xception: Deep Learning with Depthwise Separable Convolutions", https://arxiv.org/abs/1610.02357.
+![Page 69, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_069.png)
+![Page 69, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_069_img_003.png)
 
 ### Page 70
 ResNet (Microsoft)
@@ -962,6 +1145,8 @@ architecture based on modules (" networks within networks ").
 • Introduces the concept of " residual connections ". In layer 𝑙+1 the activation
 map of the unmodified and modified 𝑙-layer 𝑙+1 is combined..
 “Deep Residual Learning for Image Recognition": https://arxiv.org/abs/1512.03385
+![Page 70, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_070.png)
+![Page 70, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_070_img_003.png)
 
 ### Page 71
 ResNet
@@ -972,17 +1157,23 @@ ResNet50, which consists of 50 with weights.
 • Many more layers than VGG but needs almost 5 times less memory: fully connected layers are
 replaced by a type of layer called GlobalAveragePooling, which converts 2D activation maps
 to a vector of n classes that is used to calculate the probability of belonging to each class.
+![Page 71, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_071.png)
+![Page 71, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_071_img_003.png)
 
 ### Page 72
 Comparison of sizes
 72
 Source: AN ANALYSIS OF DEEP NEURAL NETWORK MODELS FOR PRACTICAL APPLICATIONS, 2017
+![Page 72, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_072.png)
+![Page 72, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_072_img_003.png)
 
 ### Page 73
 73
 Comparison: accuracy vs number of
 parameters
 Source: AN ANALYSIS OF DEEP NEURAL NETWORK MODELS FOR PRACTICAL APPLICATIONS, 2017
+![Page 73, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_073.png)
+![Page 73, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_073_img_003.png)
 
 ### Page 74
 Transfer learning
@@ -1000,11 +1191,13 @@ o Need to wait a good number of epochs to get values for the optimal weights for
 – Transfer learning
 – Fine-tuning
 74
+![Page 74, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_074.png)
 
 ### Page 75
 Transfer Learning vs Fine-
 Tuning
 75
+![Page 75, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_075.png)
 
 ### Page 76
 Transfer Learning
@@ -1014,27 +1207,32 @@ Transfer Learning
 • etc.
 Extractor de caracterísiticas Clasificado
 r
+![Page 76, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_076.png)
 
 ### Page 77
 Fine-tuning
 77
 Shallow-tuning
+![Page 77, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_077.png)
 
 ### Page 78
 Fine-tuning
 78
 Deep-tuning
+![Page 78, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_078.png)
 
 ### Page 79
 Fine-tuning
 79
 Deep-tuning
+![Page 79, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_079.png)
 
 ### Page 80
 Fine-tuning
 80
 From
 scratch
+![Page 80, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_080.png)
 
 ### Page 81
 Practical Protocol
@@ -1052,6 +1250,7 @@ example). It helps to prevent overfitting.
 o If it is large and similar to the original: as we have more data we
 probably won't incur in over-fitting, so we can do fine-tuning with
 more confidence.
+![Page 81, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_081.png)
 
 ### Page 82
 Practical protocol
@@ -1068,6 +1267,7 @@ training networks, learning rates are usually
 chosen lower than if we do it from scratch,
 since we start from an initialisation of
 weights that is assumed to be good.
+![Page 82, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_082.png)
 
 ### Page 83
 Contents
@@ -1079,6 +1279,7 @@ Contents
 6. Transfer Learning
 7. Practical aspects
 83
+![Page 83, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_083.png)
 
 ### Page 84
 84
@@ -1094,6 +1295,7 @@ facilitate the task.
 establish a validation partition, but its main function is that it implements the functionality to
 create synthetic image samples.
 https://keras.io/api/preprocessing/image/#imagedatagenerator-class
+![Page 84, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_084.png)
 
 ### Page 85
 85
@@ -1103,6 +1305,8 @@ The ImageDataGenerator object includes a series of methods that facilitate the t
 from disk. These methods allow the data to be loaded gradually into memory (batch by batch)
 during the training process.
 https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator
+![Page 85, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_085.png)
+![Page 85, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_085_img_003.png)
 
 ### Page 86
 86
@@ -1112,6 +1316,9 @@ The ImageDataGenerator object includes a series of methods that facilitate the t
 from disk. These methods allow the data to be loaded gradually into memory (batch by batch)
 during the training process.
 https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator
+![Page 86, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_086.png)
+![Page 86, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_086_img_003.png)
+![Page 86, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_086_img_004.png)
 
 ### Page 87
 87
@@ -1128,11 +1335,14 @@ images.
 • The new images take the class of the source image, so the transformations cannot
 be too exaggerated, let alone cause them to resemble another class.
 Data Augmentation
+![Page 87, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_087.png)
 
 ### Page 88
 Early Stopping
 88
 https://keras.io/api/callbacks/early_stopping/
+![Page 88, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_088.png)
+![Page 88, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_088_img_004.png)
 
 ### Page 89
 89
@@ -1150,6 +1360,7 @@ validation_generator = validation_datagen.flow_from_directory(validationDirector
                                                       class_mode='categorical’)
 Source: https://medium.com/towards-data-science/image-augmentation-for-deep-learning-
 using-keras-and-histogram-equalization-9329f6ae5085 )
+![Page 89, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_089.png)
 
 ### Page 90
 Reduce learning rate
@@ -1158,8 +1369,15 @@ https://keras.io/api/callbacks/learning_rate_scheduler/
 Step decay
 Exponential decay
 Cosine Annealing
+![Page 90, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_090.png)
+![Page 90, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_090_img_004.png)
+![Page 90, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_090_img_005.png)
+![Page 90, Figure 4](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_090_img_006.png)
 
 ### Page 91
 Model checkpoint
 91
 https://keras.io/api/callbacks/model_checkpoint/
+![Page 91, Figure 1](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_091.png)
+![Page 91, Figure 2](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_091_img_003.png)
+![Page 91, Figure 3](subjects/Admeav/Teoria/slides/T2_CNN based feature extraction _1_-images/T2_CNN based feature extraction _1__page_091_img_004.png)

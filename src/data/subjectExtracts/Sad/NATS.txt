@@ -3,6 +3,7 @@ Source: subjects/Sad/NATS.pdf
 
 ### Page 1
 NATS
+![Page 1, Figure 1](subjects/Sad/NATS-images/NATS_page_001.png)
 
 ### Page 2
 Seminar Objectives
@@ -11,6 +12,7 @@ Seminar Objectives
 • Use examples of usage
 • Gain practical skills with NATS
 https://docs.nats.io
+![Page 2, Figure 1](subjects/Sad/NATS-images/NATS_page_002.png)
 
 ### Page 3
 Contents
@@ -22,6 +24,7 @@ Contents
 • KV Store
 • Object Store
 • Advanced configurations
+![Page 3, Figure 1](subjects/Sad/NATS-images/NATS_page_003.png)
 
 ### Page 4
 NATS: Setup for seminar
@@ -29,11 +32,13 @@ NATS: Setup for seminar
 • docker run –-name nats -it –p 4222:4222 nats --js
 • Add a “-d” flag if run in the background
 • See: https://github.com/nats-io/natscli/releases
+![Page 4, Figure 1](subjects/Sad/NATS-images/NATS_page_004.png)
 
 ### Page 5
 Ephemeral Messaging
 Core NATS
 01
+![Page 5, Figure 1](subjects/Sad/NATS-images/NATS_page_005.png)
 
 ### Page 6
 Core NATS
@@ -45,15 +50,19 @@ message is published
 • Addressing based on subject (topic)
 • Volatile, but ordered
 • Clustering/Fault tolerance/Scalability techniques
+![Page 6, Figure 1](subjects/Sad/NATS-images/NATS_page_006.png)
 
 ### Page 7
 Several patterns
 • PUB/SUB
 • Load Balancing: Queue Groups
 • Request-Reply
+![Page 7, Figure 1](subjects/Sad/NATS-images/NATS_page_007.png)
 
 ### Page 8
 Basic PUB/SUB
+![Page 8, Figure 1](subjects/Sad/NATS-images/NATS_page_008.png)
+![Page 8, Figure 2](subjects/Sad/NATS-images/NATS_page_008_img_002.png)
 
 ### Page 9
 PUB/SUB: Messages
@@ -65,9 +74,12 @@ PUB/SUB: Messages
 • 1 MB default
 • 64 MB limit
 • 8 MB recommended
+![Page 9, Figure 1](subjects/Sad/NATS-images/NATS_page_009.png)
 
 ### Page 10
 PUB/SUB: subject addressing
+![Page 10, Figure 1](subjects/Sad/NATS-images/NATS_page_010.png)
+![Page 10, Figure 2](subjects/Sad/NATS-images/NATS_page_010_img_002.png)
 
 ### Page 11
 PUB/SUB: Subject names
@@ -79,9 +91,12 @@ PUB/SUB: Subject names
 • $JS
 • $KV
 • …
+![Page 11, Figure 1](subjects/Sad/NATS-images/NATS_page_011.png)
 
 ### Page 12
 Exercise
+![Page 12, Figure 1](subjects/Sad/NATS-images/NATS_page_012.png)
+![Page 12, Figure 2](subjects/Sad/NATS-images/NATS_page_012_img_002.png)
 
 ### Page 13
 Exercise
@@ -93,6 +108,7 @@ Exercise
 • nats pub com.msg.one “This is another  simple message”
 • nats sub com.msg.one
 • nats sub com.msg.one
+![Page 13, Figure 1](subjects/Sad/NATS-images/NATS_page_013.png)
 
 ### Page 14
 Exercise: subject wildcards
@@ -106,9 +122,12 @@ Exercise: subject wildcards
 • Multi-token wildcard (only at the end)
 • nats sub com.msg.>
 • nats pub com.msg.one.two “Do you see me now?”
+![Page 14, Figure 1](subjects/Sad/NATS-images/NATS_page_014.png)
 
 ### Page 15
 Request/Reply
+![Page 15, Figure 1](subjects/Sad/NATS-images/NATS_page_015.png)
+![Page 15, Figure 2](subjects/Sad/NATS-images/NATS_page_015_img_002.png)
 
 ### Page 16
 Request/Reply
@@ -120,6 +139,7 @@ Request/Reply
 • Requests sent on a request subject
 • Replier publishes to dynamic reply subject
 • Reply subject is found in headers
+![Page 16, Figure 1](subjects/Sad/NATS-images/NATS_page_016.png)
 
 ### Page 17
 Request/Reply
@@ -129,6 +149,7 @@ Request/Reply
 • Only one in the group receives each request
 • Can scale up/down
 • Repliers must drain messages to avoid request loss on downscale
+![Page 17, Figure 1](subjects/Sad/NATS-images/NATS_page_017.png)
 
 ### Page 18
 Exercise
@@ -140,6 +161,7 @@ Exercise
 • nats sub ”>”
 • Look at the traffic generated
 • nats request com.request.hello world
+![Page 18, Figure 1](subjects/Sad/NATS-images/NATS_page_018.png)
 
 ### Page 19
 Exercise
@@ -151,6 +173,7 @@ Exercise
 • nats reply ‘hello.*’ –command “echo {{.Request}} {{1}}”
 • Perform another request
 • nats request hello.Don Hello
+![Page 19, Figure 1](subjects/Sad/NATS-images/NATS_page_019.png)
 
 ### Page 20
 Queue Groups
@@ -162,9 +185,12 @@ Queue Groups
 • Load balancing within each group
 • Also applies to repliers
 • Names follow same rules as subject names
+![Page 20, Figure 1](subjects/Sad/NATS-images/NATS_page_020.png)
 
 ### Page 21
 Queue group
+![Page 21, Figure 1](subjects/Sad/NATS-images/NATS_page_021.png)
+![Page 21, Figure 2](subjects/Sad/NATS-images/NATS_page_021_img_002.png)
 
 ### Page 22
 Exercise
@@ -175,6 +201,7 @@ Exercise
 • nats sub –queue notest hello
 • nats pub –count hello “Hi {{.Count}}”
 • nats sub –queue test hello
+![Page 22, Figure 1](subjects/Sad/NATS-images/NATS_page_022.png)
 
 ### Page 23
 Exercise
@@ -185,11 +212,13 @@ Exercise
 • nats reply –queue notest hello –command “echo 0 {{.Request}}”
 • nats request –count hello “Hi {{.Count}}”
 • nats reply –queue test hello –command “echo 2 {{.Request}}”
+![Page 23, Figure 1](subjects/Sad/NATS-images/NATS_page_023.png)
 
 ### Page 24
 Persistence in NATS
 Jetstream
 01
+![Page 24, Figure 1](subjects/Sad/NATS-images/NATS_page_024.png)
 
 ### Page 25
 Overview
@@ -202,6 +231,7 @@ Overview
 • Helps handle failures
 • At client library level (no server changes)
 • At client library level (no server changes)
+![Page 25, Figure 1](subjects/Sad/NATS-images/NATS_page_025.png)
 
 ### Page 26
 Streams
@@ -218,6 +248,7 @@ Streams
 • Within a sliding window
 Details: https://docs.nats.io/nats-concepts/jetstream/streams#configuration
 • Consumes normal NATS Subjects
+![Page 26, Figure 1](subjects/Sad/NATS-images/NATS_page_026.png)
 
 ### Page 27
 Retention Policies
@@ -231,6 +262,7 @@ Retention Policies
 • Work Queue Policy
 • Once acked, the message is deleted
 • Interest Policy
+![Page 27, Figure 1](subjects/Sad/NATS-images/NATS_page_027.png)
 
 ### Page 28
 Consumer
@@ -243,6 +275,7 @@ Consumer
 • Various ack types and policies
 • Dispatch types
 • Persistence
+![Page 28, Figure 1](subjects/Sad/NATS-images/NATS_page_028.png)
 
 ### Page 29
 Dispatch type: Push/Pull
@@ -256,6 +289,7 @@ Dispatch type: Push/Pull
 • Client requests messages from consumer
 • Potentially in batches
 • Also above use case
+![Page 29, Figure 1](subjects/Sad/NATS-images/NATS_page_029.png)
 
 ### Page 30
 Persistence: ephemeral/durable
@@ -270,6 +304,7 @@ Persistence: ephemeral/durable
 • When Durable field is set
 • Or InactiveThreshold is set
 Details: https://docs.nats.io/nats-concepts/jetstream/consumers#configuration
+![Page 30, Figure 1](subjects/Sad/NATS-images/NATS_page_030.png)
 
 ### Page 31
 Example
@@ -277,6 +312,8 @@ nats stream add ORDERS--subjects "ORDERS.*"--ack --max-msgs=-1 --max-bytes=-1 --
 nats consumeradd ORDERSNEW --filter ORDERS.received--ack explicit --pull --deliver all --max-deliver=-1 --sample 100
 nats consumeradd ORDERSDISPATCH--filter ORDERS.processed--ack explicit --pull --deliver all --max-deliver=-1 --sample 100
 nats consumeradd ORDERSMONITOR--filter '' --ack none --target monitor.ORDERS--deliver last --replay instant
+![Page 31, Figure 1](subjects/Sad/NATS-images/NATS_page_031.png)
+![Page 31, Figure 2](subjects/Sad/NATS-images/NATS_page_031_img_002.png)
 
 ### Page 32
 Example
@@ -291,6 +328,7 @@ Example
 • We can see there are two messages in stream
 • Normal subscribers cannot access the stream
 • Only new messages
+![Page 32, Figure 1](subjects/Sad/NATS-images/NATS_page_032.png)
 
 ### Page 33
 Example
@@ -303,6 +341,7 @@ Example
 • Accept the defaults
 • nats consumer next sogreat marvel –count 100
 • No new messages appear
+![Page 33, Figure 1](subjects/Sad/NATS-images/NATS_page_033.png)
 
 ### Page 34
 Example
@@ -314,6 +353,7 @@ Example
 • nats stream rm sogreat
 • nats consumer rm marvel
 • nats consumer add …
+![Page 34, Figure 1](subjects/Sad/NATS-images/NATS_page_034.png)
 
 ### Page 35
 Key Value Store
@@ -326,6 +366,7 @@ Key Value Store
 • delete remove any value associated with a key
 • purge remove all values associated with all keys
 • keys get all the keys with the operations associated
+![Page 35, Figure 1](subjects/Sad/NATS-images/NATS_page_035.png)
 
 ### Page 36
 KV Store: concurrency control
@@ -334,6 +375,7 @@ KV Store: concurrency control
 • update compare and set the value for a key
 • Only if the key does not exist
 • Fails if the revision provided is not the current one for the key
+![Page 36, Figure 1](subjects/Sad/NATS-images/NATS_page_036.png)
 
 ### Page 37
 KV Store: stream operations
@@ -344,6 +386,7 @@ KV Store: stream operations
 • history list of the values and deletes for each key over time
 • By default, history of buckets set to 1.
 • Only the latest value/operation is stored
+![Page 37, Figure 1](subjects/Sad/NATS-images/NATS_page_037.png)
 
 ### Page 38
 Example
@@ -357,6 +400,7 @@ Example
 • Watch a store or key
 • nats kv watch almacen
 • nats kv watch almacen “pala.>”
+![Page 38, Figure 1](subjects/Sad/NATS-images/NATS_page_038.png)
 
 ### Page 39
 Object Store
@@ -371,6 +415,7 @@ Object Store
 • All files in a bucket must fit in a file system
 • Not a distributed storage system
 • watch informs of changes in a bucket
+![Page 39, Figure 1](subjects/Sad/NATS-images/NATS_page_039.png)
 
 ### Page 40
 Example
@@ -382,6 +427,8 @@ Example
 • Retrieving a file
 • nats object get pueblo archivo.zip
 • nats object get –output archie.zip pueblo archivo.zip
+![Page 40, Figure 1](subjects/Sad/NATS-images/NATS_page_040.png)
 
 ### Page 41
 Q & A
+![Page 41, Figure 1](subjects/Sad/NATS-images/NATS_page_041.png)

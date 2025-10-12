@@ -45,6 +45,7 @@ SQL> select * from hr.employees;
 1 Cuando despliegas la máquina en el portal te aparece tanto el nombre como la IP de la máquina virtual como el fichero RDP.
 2 Para ello, usa el comando passwd desde una terminal linux.
 3 Se recomienda no cambiar las contraseñas de los usuarios sys y system.
+![Page 1, Figure 1](subjects/Dbd/Prácticas/Práctica 1/Práctica1_boletin-images/Práctica1_boletin_page_001.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -91,6 +92,7 @@ usuario system que tiene privilegios de administración) para realizar las sigui
 • Consulta la definición del usuario hr: roles y privilegios que tiene asignados.
 • Edita la definición del usuario hr, cambia su contraseña (nueva contraseña: hr_paso) y desbloquea
 la cuenta.
+![Page 2, Figure 1](subjects/Dbd/Prácticas/Práctica 1/Práctica1_boletin-images/Práctica1_boletin_page_002.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -116,3 +118,4 @@ SQL> shutdown immediate
 c) Cierra la herramienta SQL*Plus (EXIT) y desde una terminal del sistema operativo detén la ejecución
 del proceso listener:
 $ lsnrctl stop
+![Page 3, Figure 1](subjects/Dbd/Prácticas/Práctica 1/Práctica1_boletin-images/Práctica1_boletin_page_003.png)

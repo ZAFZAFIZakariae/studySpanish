@@ -3,25 +3,38 @@ Source: subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 202
 
 ### Page 1
 TOGAF y Archimate
+![Page 1, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_001.png)
+![Page 1, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_001_img_004.png)
+![Page 1, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_001_img_005.png)
+![Page 1, Figure 4](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_001_img_006.png)
 
 ### Page 2
 Contenido
 §Arquitectura empresarial§Introducción a TOGAF§Archi (Archimate)
+![Page 2, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_002.png)
 
 ### Page 3
 Enfoque arquitectónico como soporte a los modelos de empresa
 5
+![Page 3, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_003.png)
+![Page 3, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_003_img_006.png)
 
 ### Page 4
 Haciendo la complejidad manejable
 6
 (Image: Hinkemal et al., 2015)
+![Page 4, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_004.png)
+![Page 4, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_004_img_007.png)
+![Page 4, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_004_img_008.png)
 
 ### Page 5
 Haciendo la complejidad manejable
 7
 (Image: BizzDesign)
 (Image: Vernadat (2014)
+![Page 5, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_005.png)
+![Page 5, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_005_img_007.png)
+![Page 5, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_005_img_008.png)
 
 ### Page 6
 Enfoque arquitectónico como soporte a los modelos de empresa§Los desarrollos en el contexto de modelado de empresa dieron lugar a diferentes arquitecturas de referencia§Al tratar de modelar todos los aspectos, surgen normalmente diferentes puntos de vista, diferentes grados de detalle
@@ -29,63 +42,85 @@ Enfoque arquitectónico como soporte a los modelos de empresa§Los desarrollos e
 Image: Open Group
 Image: Zachman International
 Image: Chief Information Officer Council
+![Page 6, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_006.png)
+![Page 6, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_006_img_008.png)
 
 ### Page 7
 Componentes§Una característica o un principio específico de las arquitecturas de empresa y de su marco asociado es la definición de vistas (Bernus et al., 2003; Martin y Robertson, 2002; ISO 15704, 2000).§ La complejidad de una empresa hace que sea difícil, por no decir imposible, su estudio bajo una única perspectiva. Normalmente la AE se definirá en función de las vistas que la componen. §Una vista de arquitectura es una representación de un sistema completo desde la perspectiva de un conjunto de intereses (Martin y Robertson, 2002; ISO 15704, 2000
 13
+![Page 7, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_007.png)
 
 ### Page 8
 VISTAS DE MODELADO
 14
 IEEE 1471 Recommended Practice for Architectural Description of Software-intensive Systems
+![Page 8, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_008.png)
+![Page 8, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_008_img_006.png)
 
 ### Page 9
 Componentes§CIMOSA: oVistas de Organización, Recursos, Información y Función.§ GRAI-GIM: oVistas del Sistema Físico, Decisional, de Información y Funcional.§GERAM: oVistas de Organización, Recursos, Información y Función.§ARIS: oVistas de Función, Datos, Organización y Control.§Zachman: oDatos, Función, Localización, Personas, Tiempo, Motivación.§TOGAF: oArquitectura de Negocio, Arquitectura de Datos, Arquitectura de Aplicación, y Arquitectura Tecnológica.§IAFoBusiness, Information, Information System and Technology Infrastructure
 15
+![Page 9, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_009.png)
 
 ### Page 10
 Componentes§CIMOSA: oVistas de Organización, Recursos, Información y Función.§ GRAI-GIM: oVistas del Sistema Físico, Decisional, de Información y Funcional.§GERAM: oVistas de Organización, Recursos, Información y Función.§ARIS: oVistas de Función, Datos, Organización y Control.§Zachman: oDatos, Función, Localización, Personas, Tiempo, Motivación.§TOGAF: oArquitectura de Negocio, Arquitectura de Datos, Arquitectura de Aplicación, y Arquitectura Tecnológica.§IAFoBusiness,Information, Information System and Technology Infrastructure
 16
+![Page 10, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_010.png)
 
 ### Page 11
 Visualización
 17
 Examples of BizzDesign Architect (BiZZdesign)
+![Page 11, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_011.png)
+![Page 11, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_011_img_006.png)
 
 ### Page 12
 Visualización
 18
 http://www.avolutionsoftware.com/
+![Page 12, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_012.png)
 
 ### Page 13
 Visualización
 19
 Corso (http://www.corso3.com/)
+![Page 13, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_013.png)
+
+### Page 14
+![Page 14, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_014.png)
 
 ### Page 15
 2015 Gartner® Magic Quadrant™ for Enterprise Architecture Tools
+![Page 15, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_015.png)
 
 ### Page 16
 2022 Gartner® Magic Quadrant™ for Enterprise Architecture Tools
 https://www.gartner.com/reviews/market/enterprise-architecture-tools
+![Page 16, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_016.png)
+![Page 16, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_016_img_006.png)
 
 ### Page 17
 The Open Group Architecture Forum have developed successive versions of the TOGAF Standard
+![Page 17, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_017.png)
 
 ### Page 18
 The Open Group Architecture Forum have developed successive versions of the TOGAF Standard
 http://www.togaf.info/togaf-visualmap.html
+![Page 18, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_018.png)
 
 ### Page 19
 The Open Group Architecture Forum have developed successive versions of the TOGAF Standard
 http://www.togaf.info/togaf-visualmap.html
+![Page 19, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_019.png)
 
 ### Page 20
 https://www.opengroup.org/togaf/10thedition
+![Page 20, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_020.png)
 
 ### Page 21
 TOGAF
 TOGAF © es un marco desarrollado por el Open Group para proporcionar los métodos y herramientas que asistan a la aceptación, producción, uso y mantenimiento de una arquitectura de empresa.  Se basa en un proceso iterativo soportado por mejores prácticas y activos reutilizables.
+![Page 21, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_021.png)
 
 ### Page 22
 TOGAF§¿Qué tipos de arquitectura incluye?NEGOCIO
@@ -94,18 +129,28 @@ DATOSestructura lógica y física de los datos
  APLICACIONESservicios, interacciones, y relaciones
 TECNOLÓGICAcapacidades de software y hardware para apoyar el despliegue de servicios de negocio, datos y aplicaciones. Infraestructura de TI, middleware, redes, comunicaciones, procesamiento, normas, etc.
 INFORMACIÓN
+![Page 22, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_022.png)
+![Page 22, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_022_img_006.png)
+![Page 22, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_022_img_007.png)
+![Page 22, Figure 4](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_022_img_008.png)
+![Page 22, Figure 5](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_022_img_009.png)
+![Page 22, Figure 6](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_022_img_010.png)
 
 ### Page 23
 TOGAF§¿Qué tipos de arquitectura incluye?NEGOCIO
 Ejemplo de relación entre arquitecturas de negocio y aplicaciónModelado con Archi Tool
+![Page 23, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_023.png)
 
 ### Page 24
 TOGAF Parte 1. Introducción
 31
+![Page 24, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_024.png)
+![Page 24, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_024_img_006.png)
 
 ### Page 25
 TOGAF Parte 1. Introducción
 32
+![Page 25, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_025.png)
 
 ### Page 26
 TOGAF Parte 1 Introducción
@@ -119,70 +164,105 @@ Architecture Content Framework
 PART IV
 Enterprise Continuum and Tools
 PART VCómoCon quéSe guardaRoles y Responsabilidades
+![Page 26, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_026.png)
+![Page 26, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_026_img_006.png)
+![Page 26, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_026_img_007.png)
+![Page 26, Figure 4](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_026_img_008.png)
 
 ### Page 27
 TOGAF Parte 2 ADM
 TOGAF Parte 2  ADM
+![Page 27, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_027.png)
 
 ### Page 28
 TOGAF Parte II ADM§Fase PreliminaroEsta fase está fuera del círculo del ADM .oSe define lo que se necesita, el equipo de trabajo. •¿Qué capacidades tengo? Cuál es el scope que tengo?•Necesidades del sector, del negocio, qué áreas serán más estables o más dinámicas.oSe define el concepto de empresa, no de proyecto. oSe define quién toma la iniciativa, quién es el jefe y el comité de arquitectura.
+![Page 28, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_028.png)
+![Page 28, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_028_img_007.png)
 
 ### Page 29
 TOGAF Parte II ADM
 No llegamos a ese nivel, pero conocer que para cada fase se identifican entradas, salidas, objetivos y pasos a desarrollar
+![Page 29, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_029.png)
 
 ### Page 30
 TOGAF Parte II ADM§Fase A: Visión de ArquitecturaoSe inicia con una solicitud del sponsor. •El cliente del trabajo de ADM que solicita una solución.oSe identifica el scope del desarrollo para esta problemática. •Se define la visión de la arquitectura para este proyectooSe crea el primer contrato, plan de trabajo de la arquitectura (statement of architecture work).oSe utiliza la técnica de análisis de escenarios• descrita en el apartado de guías y técnicas.
+![Page 30, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_030.png)
+![Page 30, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_030_img_007.png)
 
 ### Page 31
 TOGAF Parte II ADM
+![Page 31, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_031.png)
+![Page 31, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_031_img_009.png)
 
 ### Page 32
 TOGAF Parte II ADM§Fase B: Arquitectura de Negocioo¿Qué arquitectura de negocio tenemos?o¿Qué queremos? o¿Qué GAP identificamos?oSe trata de definir cómo el negocio obtiene sus objetivos
+![Page 32, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_032.png)
+![Page 32, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_032_img_008.png)
 
 ### Page 33
 TOGAF Parte II ADM§Fase B: Arquitectura de Negocio§GAP Analysis
+![Page 33, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_033.png)
+![Page 33, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_033_img_008.png)
 
 ### Page 34
 TOGAF Parte II ADM§Fase C: Arquitectura de Sistemas de Información Datos§¿Qué arquitectura de datos tenemos? ¿Qué queremos? ¿Qué GAP identificamos?
+![Page 34, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_034.png)
+![Page 34, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_034_img_007.png)
 
 ### Page 35
 TOGAF Parte II ADM§Fase D: Arquitectura Tecnológica§Igual que en las fases anteriores ¿Qué arquitectura tecnológica tenemos? ¿Qué queremos? ¿GAP?
+![Page 35, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_035.png)
 
 ### Page 36
 TOGAF Parte II ADM§Fase E: Oportunidades y Soluciones§En este punto ya tenemos los baselines y los target y vemos opciones de capacitacióno¿Total o por pasos? ¿Compramos o desarrollamos?§Damos en esta fase las especificaciones de capacidadoTomamos todos los roadmapsoNo se dan fechas, sino secuencias de incrementos de capacidad del negocio.o¿Tengo los procesos? ¿Tengo las personas? planificación en base a capacidades.
+![Page 36, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_036.png)
 
 ### Page 37
 TOGAF Parte II ADM§Fase E: Oportunidades y Soluciones
+![Page 37, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_037.png)
 
 ### Page 38
 TOGAF Parte II ADM§Fase F: Plan de Migración§Se refina la planificación de la implementaciónocoste/beneficioode riesgo§Hay que tener en cuenta:o¿Cómo se coordina este plan con otros que tengamos en la empresa?oTrasladar el valor que vamos a conseguir con esta implantación.•Valor = Capacidad – Coste - Riesgo
+![Page 38, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_038.png)
 
 ### Page 39
 TOGAF Parte II ADM§Fase F: Plan de Migración§Se refina la planificación de la implementaciónocoste/beneficioode riesgo§Hay que tener en cuenta:o¿Cómo se coordina este plan con otros que tengamos en la empresa?oTrasladar el valor que vamos a conseguir con esta implantación.•Valor = Capacidad – Coste - Riesgo
+![Page 39, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_039.png)
+![Page 39, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_039_img_008.png)
 
 ### Page 40
 TOGAF Parte II ADM§Fase G: Gobierno§Supervisa lo que se está construyendo.§Herramientao contrato de arquitectura, puede haber varios proyectos.§Objetivos:oCumplir con la arquitectura TargetoLlevar a cabo el gobierno para que la solución se ponga en marchaoEste contrato es el que más peso tiene§La implementación se lleva a cabo en paralelo a esta fase
+![Page 40, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_040.png)
 
 ### Page 41
 TOGAF Parte II ADM§Fase H: Gestión del Cambio§El arquitecto debe saber que la arquitectura debe responder a los cambiosoHay que hacerla flexible a nuevas peticioneso¿Qué impacto tiene? Los cambios pueden necesitar rearquitecturar§Los cambios que se den en las fases A --- D deberían ser cambios del proyecto de arquitectura§Los cambios que se den en H son de un cambio mayor o nuevas necesidades
+![Page 41, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_041.png)
 
 ### Page 42
 TOGAF Parte II ADM§Requerimientos§Para mantener una disciplinaoSe trabaja a la vez que el resto de las otras fasesoSurgen requisitos que deberán ser satisfechos por el resto de fasesoEs más una administración de requisitos§Se recomienda que exista un repositorio de requisitosoHerramientas de mercado para gestionar requisitosoEscenarios
+![Page 42, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_042.png)
+![Page 42, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_042_img_007.png)
 
 ### Page 43
 TOGAF Parte III Guías y Técnicas
+![Page 43, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_043.png)
 
 ### Page 44
 Alcance empresarial
 Alcance local
 Enfoque de planificación estratégicaEnfoque de implementación
 Tipos de arquitectos
+![Page 44, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_044.png)
+![Page 44, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_044_img_006.png)
+![Page 44, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_044_img_007.png)
 
 ### Page 45
 Alcance empresarial
 Alcance local
 Enfoque de planificación estratégicaEnfoque de implementación
+![Page 45, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_045.png)
+![Page 45, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_045_img_007.png)
+![Page 45, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_045_img_008.png)
 
 ### Page 46
 TOGAF Parte 1 Introducción
@@ -196,13 +276,18 @@ Architecture Content Framework
 PART IV
 Enterprise Continuum and Tools
 PART VCómoCon quéSe guardaRoles y Responsabilidades
+![Page 46, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_046.png)
+![Page 46, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_046_img_009.png)
 
 ### Page 47
 TOGAF Parte IV Marco de contenido
 §Describe los Building Blocks disponibles.
+![Page 47, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_047.png)
+![Page 47, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_047_img_006.png)
 
 ### Page 48
 TOGAF Parte IV Marco de contenido§Describe los Building Blocks disponibles y   su relación.
+![Page 48, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_048.png)
 
 ### Page 49
 TOGAF Parte 1 Introducción
@@ -216,12 +301,17 @@ Architecture Content Framework
 PART IV
 Enterprise Continuum and Tools
 PART VCómoCon quéSe guardaRoles y Responsabilidades
+![Page 49, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_049.png)
 
 ### Page 50
 TOGAF Parte V Continuo y Repositorio
+![Page 50, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_050.png)
+![Page 50, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_050_img_006.png)
+![Page 50, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_050_img_007.png)
 
 ### Page 51
 TOGAF Parte V Continuo y Repositorio§El trabajo de arquitectura pasa por etapas desde un problema hasta una solución, desde algo más conceptual a algo más concretooEl Enterprise continuum. Trata de dar forma a este procesooEl Architecture Particioning (lo que puedo trocear): indica, qué detalle, a lo largo del tiempo y en qué ámbitooEl repositorio: las piezas que ha construido o vienen de otros marcos oLas tools: hacen falta herramientas
+![Page 51, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_051.png)
 
 ### Page 52
 TOGAF Parte 1 Introducción
@@ -235,41 +325,59 @@ Architecture Content Framework
 PART IV
 Enterprise Continuum and Tools
 PART VCómoCon quéSe guardaRoles y Responsabilidades
+![Page 52, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_052.png)
 
 ### Page 53
 TOGAF Parte VI Marco de capacidad§Es necesario establecer estructuras, procesos, roles, responsabilidades y habilidades de organización apropiadas.§Parte VI: Architecture Capability Framework proporciona un conjunto de materiales de referencia sobre cómo establecer dicha función de arquitectura.
+![Page 53, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_053.png)
 
 ### Page 54
 TOGAF Parte VI Marco de capacidad
+![Page 54, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_054.png)
 
 ### Page 55
 Lenguaje de modelado§Para el modelado de TOGAF, una opción es
 La especificación ArchiMate®, un estándar de The Open Group, es un lenguaje de modelado abierto e independiente para la arquitectura empresarial que cuenta con el respaldo de diferentes proveedores de herramientas y firmas de consultoría.El lenguaje ArchiMate permite a los arquitectos empresariales describir, analizar y visualizar las relaciones entre los dominios de la arquitectura de forma inequívoca.
+![Page 55, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_055.png)
+![Page 55, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_055_img_006.png)
 
 ### Page 56
 Lenguaje de modelado
+![Page 56, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_056.png)
 
 ### Page 57
 Lenguaje de modelado
 https://www.opengroup.org/archimate-forum/archimate-overview
+![Page 57, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_057.png)
 
 ### Page 58
 Lenguaje de modelado§Descripción§https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+![Page 58, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_058.png)
 
 ### Page 59
 Lenguaje de modelado§Tres aspectos fundamentales a modelar son:-El negocio-Las aplicaciones-Las tecnologías
+![Page 59, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_059.png)
 
 ### Page 60
 Lenguaje de modelado
 §Los elementos del leguaje Archimate para su modelado incluyen:       Comportamiento                                                       y Estructura
+![Page 60, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_060.png)
+![Page 60, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_060_img_006.png)
+![Page 60, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_060_img_007.png)
 
 ### Page 61
 Lenguaje de modelado
 §Los elementos de estructura (“nombre”): oActiva: •Externos (interfaces) y •Internoso Pasiva§Los elementos de comportamiento (“verbo”):oInterno, oExterno (servicios) y oEventos§Inspirado en el lenguaje natural, donde una oración tiene un sujeto (estructura activa), un verbo (comportamiento) y un objeto (estructura pasiva).
+![Page 61, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_061.png)
 
 ### Page 62
 Práctica
 §Los elementos de estructura (“nombre”): oActiva: •Externos (interfaces) y •Internoso Pasiva§Los elementos de comportamiento (“verbo”):oInterno, oExterno (servicios) y oEventos§Inspirado en el lenguaje natural, donde una oración tiene un sujeto (estructura activa), un verbo (comportamiento) y un objeto (estructura pasiva).
+![Page 62, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_062.png)
 
 ### Page 63
 §En esta práctica se realiza una introducción al lenguaje de modelado Archimate que será utilizado en futuras sesiones.§Utilizaremos la aplicación §Podéis descargar la aplicación en : https://www.archimatetool.com
+![Page 63, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_063.png)
+
+### Page 64
+![Page 64, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/03 TOGAF y Archi 2023-images/03 TOGAF y Archi 2023_page_064.png)

@@ -6,6 +6,9 @@ Práctica 3
 Recuperación de bases de datos
 en Oracle
 1
+![Page 1, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_001_img_002.png)
+![Page 1, Figure 3](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_001_img_003.png)
 
 ### Page 2
 2
@@ -18,6 +21,7 @@ recuperación de la base de datos en Oracle.
 en Oracle.
 Objetivos:
 2
+![Page 2, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_002.png)
 
 ### Page 3
 3
@@ -29,6 +33,7 @@ Práctica 3. Estrategia de actualización en Oracle
 Algoritmo
 DESHACER/REHACER
 3
+![Page 3, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_003.png)
 
 ### Page 4
 4
@@ -63,6 +68,7 @@ En la transparencia se indica el destino final de estos dos valores del dato act
 (valor_antes y valor_después). En las transparencias siguientes se presentará con más detalle el
 uso de estos dos repositorios.
 4
+![Page 4, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_004.png)
 
 ### Page 5
 5
@@ -101,6 +107,34 @@ Los bloques transferidos a memoria principal serán devueltos (grabados) al disc
 tiempo determinados por la estrategia de actualización de la BD y los parámetros de
 configuración del servidor.
 5
+![Page 5, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005.png)
+![Page 5, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_001.png)
+![Page 5, Figure 3](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_002.png)
+![Page 5, Figure 4](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_003.png)
+![Page 5, Figure 5](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_004.png)
+![Page 5, Figure 6](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_005.png)
+![Page 5, Figure 7](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_006.png)
+![Page 5, Figure 8](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_007.png)
+![Page 5, Figure 9](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_008.png)
+![Page 5, Figure 10](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_009.png)
+![Page 5, Figure 11](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_010.png)
+![Page 5, Figure 12](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_011.png)
+![Page 5, Figure 13](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_012.png)
+![Page 5, Figure 14](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_013.png)
+![Page 5, Figure 15](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_014.png)
+![Page 5, Figure 16](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_015.png)
+![Page 5, Figure 17](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_016.png)
+![Page 5, Figure 18](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_017.png)
+![Page 5, Figure 19](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_018.png)
+![Page 5, Figure 20](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_019.png)
+![Page 5, Figure 21](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_020.png)
+![Page 5, Figure 22](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_021.png)
+![Page 5, Figure 23](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_022.png)
+![Page 5, Figure 24](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_023.png)
+![Page 5, Figure 25](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_024.png)
+![Page 5, Figure 26](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_025.png)
+![Page 5, Figure 27](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_028.png)
+![Page 5, Figure 28](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_005_img_029.png)
 
 ### Page 6
 6
@@ -149,6 +183,7 @@ El contenido del buffer de diario será grabado en el fichero de diario en disco
 política que asegura tener en disco toda la información necesaria para la recuperación de la base
 de datos en caso de fallo. (Algoritmo de gestión del fichero de diario).
 6
+![Page 6, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_006.png)
 
 ### Page 7
 7
@@ -193,6 +228,7 @@ Con el uso del espacio de deshacer se pretende tener más accesible la informaci
 para deshacer transacciones, ya que esta tarea se realiza con mucha más frecuencia (usuario,
 SGBD) que la tarea de rehacer (fallo del sistema).
 7
+![Page 7, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_007.png)
 
 ### Page 8
 8
@@ -256,6 +292,7 @@ En la transparencia se ilustra con un ejemplo la situación en que puede quedar 
 de datos (en disco) después de un fallo del sistema con pérdida de memoria principal,
 en el supuesto de la estrategia de actualización planteada.
 8
+![Page 8, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_008.png)
 
 ### Page 9
 9
@@ -276,6 +313,7 @@ Deberán deshacerse las actualizaciones de las transacción T2 y rehacerse las a
 la transacción T1 que es la única confirmada después del último punto de control. Para deshacer
 T2, primero reconstruirá el espacio de deshacer usando el diario.
 9
+![Page 9, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_009.png)
 
 ### Page 10
 10
@@ -304,6 +342,7 @@ fichero de diario se encuentran los cambios realizados en el espacio de deshacer
 necesarios para deshacer las actualizaciones (valor_antes) de las transacciones
 interrumpidas que ya hayan sido grabadas en disco.
 10
+![Page 10, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_010.png)
 
 ### Page 11
 11
@@ -317,6 +356,7 @@ todos los cambios producidos por transacciones interrumpidas por el fallo
 del sistema.(DESHACER)
 Práctica 3. Estrategia de recuperación en Oracle
 11
+![Page 11, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_011.png)
 
 ### Page 12
 12
@@ -358,6 +398,7 @@ transacciones interrumpidas no registrados todavía en disco no interesan.
 Al aplicar el procedimiento DESHACER:
 • Deshacemos los cambios de las transacciones interrumpidas.
 12
+![Page 12, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_012.png)
 
 ### Page 13
 13
@@ -371,6 +412,27 @@ Buffer de datos:
 Como ya estudia en la práctica 1, el buffer de datos almacena temporalmente bloques de datos
 y bloques del espacio de deshacer.
 13
+![Page 13, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013.png)
+![Page 13, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_001.png)
+![Page 13, Figure 3](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_002.png)
+![Page 13, Figure 4](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_003.png)
+![Page 13, Figure 5](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_004.png)
+![Page 13, Figure 6](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_005.png)
+![Page 13, Figure 7](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_006.png)
+![Page 13, Figure 8](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_007.png)
+![Page 13, Figure 9](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_008.png)
+![Page 13, Figure 10](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_009.png)
+![Page 13, Figure 11](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_010.png)
+![Page 13, Figure 12](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_011.png)
+![Page 13, Figure 13](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_012.png)
+![Page 13, Figure 14](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_013.png)
+![Page 13, Figure 15](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_014.png)
+![Page 13, Figure 16](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_015.png)
+![Page 13, Figure 17](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_016.png)
+![Page 13, Figure 18](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_017.png)
+![Page 13, Figure 19](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_018.png)
+![Page 13, Figure 20](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_019.png)
+![Page 13, Figure 21](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_013_img_020.png)
 
 ### Page 14
 14
@@ -405,6 +467,34 @@ contenido del buffer de diario y los bloques del buffer de datos (sucios).
 • En la configuración del servidor se puede establecer una periodicidad para transferir bloques
 (sucios) del buffer de datos a disco.
 14
+![Page 14, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014.png)
+![Page 14, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_002.png)
+![Page 14, Figure 3](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_003.png)
+![Page 14, Figure 4](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_004.png)
+![Page 14, Figure 5](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_005.png)
+![Page 14, Figure 6](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_006.png)
+![Page 14, Figure 7](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_007.png)
+![Page 14, Figure 8](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_008.png)
+![Page 14, Figure 9](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_009.png)
+![Page 14, Figure 10](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_010.png)
+![Page 14, Figure 11](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_011.png)
+![Page 14, Figure 12](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_012.png)
+![Page 14, Figure 13](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_013.png)
+![Page 14, Figure 14](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_014.png)
+![Page 14, Figure 15](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_015.png)
+![Page 14, Figure 16](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_016.png)
+![Page 14, Figure 17](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_017.png)
+![Page 14, Figure 18](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_018.png)
+![Page 14, Figure 19](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_019.png)
+![Page 14, Figure 20](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_020.png)
+![Page 14, Figure 21](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_021.png)
+![Page 14, Figure 22](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_022.png)
+![Page 14, Figure 23](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_023.png)
+![Page 14, Figure 24](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_024.png)
+![Page 14, Figure 25](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_025.png)
+![Page 14, Figure 26](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_026.png)
+![Page 14, Figure 27](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_027.png)
+![Page 14, Figure 28](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_014_img_028.png)
 
 ### Page 15
  Almacena los cambios realizados por las transacciones sobre bloques
@@ -418,6 +508,29 @@ Como ya se estudia en la práctica 1, el buffer de diario almacena temporalmente
 fichero de diario donde se anotan, entre otra información, las actualizaciones (valor_después)
 realizadas sobre bloques de datos y bloques de deshacer.
 15
+![Page 15, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015.png)
+![Page 15, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_001.png)
+![Page 15, Figure 3](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_002.png)
+![Page 15, Figure 4](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_003.png)
+![Page 15, Figure 5](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_004.png)
+![Page 15, Figure 6](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_005.png)
+![Page 15, Figure 7](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_006.png)
+![Page 15, Figure 8](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_007.png)
+![Page 15, Figure 9](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_008.png)
+![Page 15, Figure 10](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_009.png)
+![Page 15, Figure 11](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_010.png)
+![Page 15, Figure 12](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_011.png)
+![Page 15, Figure 13](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_012.png)
+![Page 15, Figure 14](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_013.png)
+![Page 15, Figure 15](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_014.png)
+![Page 15, Figure 16](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_015.png)
+![Page 15, Figure 17](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_016.png)
+![Page 15, Figure 18](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_017.png)
+![Page 15, Figure 19](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_020.png)
+![Page 15, Figure 20](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_021.png)
+![Page 15, Figure 21](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_022.png)
+![Page 15, Figure 22](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_023.png)
+![Page 15, Figure 23](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_015_img_024.png)
 
 ### Page 16
 16
@@ -453,6 +566,7 @@ escritura en el diario).
 gestión del diario (escritura anticipada en el diario).
 • Con cierta periodicidad previamente establecida (configuración).
 16
+![Page 16, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_016.png)
 
 ### Page 17
 17
@@ -474,6 +588,7 @@ Por razones de seguridad el servidor Oracle trabaja con varios grupos de diario.
 Cada grupo de diario contiene un conjunto de ficheros de diario similares (miembros).
 Por seguridad los miembros de un grupo de diario se suelen almacenar en discos distintos.
 17
+![Page 17, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_017.png)
 
 ### Page 18
 18
@@ -503,6 +618,9 @@ Un grupo puede estar en varios estados:
 • Inactivo: sus entradas no son necesarias para recuperarse ante un fallo de sistema (por
 ejemplo porque se ha hecho un checkpoint).
 18
+![Page 18, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_018.png)
+![Page 18, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_018_img_001.png)
+![Page 18, Figure 3](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_018_img_004.png)
 
 ### Page 19
 19
@@ -526,6 +644,8 @@ ARCH
 Ficheros de
 diario archivados
 19
+![Page 19, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_019.png)
+![Page 19, Figure 2](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_019_img_001.png)
 
 ### Page 20
 20
@@ -540,3 +660,4 @@ En la instalación del laboratorio los tres miembros de cada grupo del diario es
 disco (incluso en el mismo directorio). Esto no debería ser así para que la instalación  fuera
 robusta.
 20
+![Page 20, Figure 1](subjects/Dbd/Prácticas/Práctica 3/practica3_2019-1-images/practica3_2019-1_page_020.png)

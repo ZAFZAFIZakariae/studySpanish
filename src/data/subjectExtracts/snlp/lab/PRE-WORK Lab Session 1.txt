@@ -30,6 +30,7 @@ o Example: 5_lopez_2.wav    (digit 5, surname Lopez, 2nd attempt)
 5. Audio editing:
 o Trim silence from the beginning and end of each recording
 o Ensure only the spoken digit remains in the audio file
+![Page 1, Figure 1](subjects/snlp/lab/PRE-WORK Lab Session 1-images/PRE-WORK Lab Session 1_page_001.png)
 
 ### Page 2
 Steps:
@@ -52,3 +53,4 @@ Submission: Upload all your audio files before the next lab session in a reposit
 announced.
 If you have any questions or issues with the recording process, please contact your
 professor for assistance.
+![Page 2, Figure 1](subjects/snlp/lab/PRE-WORK Lab Session 1-images/PRE-WORK Lab Session 1_page_002.png)

@@ -52,6 +52,10 @@ con la comprobación de todas las restricciones en modo diferido?
    UPDATE empleado SET número=8 WHERE nombre=’Jorge’;
    UPDATE empleado SET nombre=’Luis’ WHERE número=7;
    UPDATE empleado SET jefe=3 WHERE jefe=5;    COMMIT;>
+![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2_-images/Cuestiones _T2__page_001.png)
+![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2_-images/Cuestiones _T2__page_001_img_001.png)
+![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2_-images/Cuestiones _T2__page_001_img_002.png)
+![Page 1, Figure 4](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2_-images/Cuestiones _T2__page_001_img_003.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -105,6 +109,7 @@ en que los bloques actualizados por la transacción son transferidos a disco.
 c. No, es contradictorio con el concepto de transacción confirmada.
 d. No, porque el SGBD transfiere los bloques actualizados por la transacción inmediatamente después de
 confirmarla definitivamente.
+![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2_-images/Cuestiones _T2__page_002.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -126,3 +131,4 @@ inmediato, ¿se puede ver afectada alguna de las propiedades ACID del procesamie
 Razona la respuesta.
 14. ¿Cuál es el modo de comprobación de las restricciones correcto desde el punto de vista académico del
 procesamiento de restricciones? ¿Por qué?
+![Page 3, Figure 1](subjects/Dbd/Teoria/Tema 2/Cuestiones _T2_-images/Cuestiones _T2__page_003.png)

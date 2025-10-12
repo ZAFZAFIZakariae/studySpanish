@@ -32,6 +32,7 @@ imbalance.ipynb
 
 After obtaining the results, try to improve it using a different architecture of neurons or
 changing the hyperparameters.
+![Page 1, Figure 1](subjects/snlp/lab/Lab Session 3-images/Lab Session 3_page_001.png)
 
 ### Page 2
 3. Train tokenizers and transformers
@@ -41,3 +42,4 @@ https://medium.com/@ankiit/word2vec-vs-bert-d04ab3ade4c9
 
 b) Train a transformer  (optional)
 https://huggingface.co/blog/how-to-train
+![Page 2, Figure 1](subjects/snlp/lab/Lab Session 3-images/Lab Session 3_page_002.png)

@@ -59,6 +59,7 @@ INSERT INTO Jugador VALUES (1,'Juan',23,'VCF');
 INSERT INTO Jugador VALUES (12,'Mateo',NULL,'VCF');
 INSERT INTO Equipo VALUES ('VCF','Valencia',99000000,1);
 COMMIT;
+![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P-REC_solución-images/2023-DBD-2P-REC_solución_page_001.png)
 
 ### Page 2
 2. a) 0,3 puntos b) 0,4 puntos
@@ -115,6 +116,8 @@ con MT = t7
 x0 t1 t1
 x1 t7 t4
 x2 t10 t10
+![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P-REC_solución-images/2023-DBD-2P-REC_solución_page_002.png)
+![Page 2, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P-REC_solución-images/2023-DBD-2P-REC_solución_page_002_img_001.png)
 
 ### Page 3
 4. a) 0,2 puntos b) 0,3 puntos c) 0,3 puntos
@@ -137,3 +140,6 @@ Grafo de espera: grafo dirigido G=(N,A), que consiste en un conjunto de nodos N 
 bloqueado por la transacción Tj (uno de los dos bloqueos es exclusivo). Cuando Tj libera el elemento
 X se borra el arco.
 En el ejemplo anterior se puede ver el ciclo que detecta el bloqueo mortal:
+![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P-REC_solución-images/2023-DBD-2P-REC_solución_page_003.png)
+![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P-REC_solución-images/2023-DBD-2P-REC_solución_page_003_img_001.png)
+![Page 3, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-2P-REC_solución-images/2023-DBD-2P-REC_solución_page_003_img_002.png)

@@ -4,6 +4,7 @@ Source: subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction.pdf
 ### Page 1
 Advanced methods of artificial vision
 Chapter 1: Hand crafted feature extraction
+![Page 1, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_001.png)
 
 ### Page 2
 Index
@@ -14,6 +15,7 @@ Index
 5.SIFT
 6.Gabor Filters
 2
+![Page 2, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_002.png)
 
 ### Page 3
 Index
@@ -24,6 +26,7 @@ Index
 5.SIFT
 6.Gabor Filters
 3
+![Page 3, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_003.png)
 
 ### Page 4
 What is a feature?
@@ -39,6 +42,7 @@ or shape on which it is calculated is affected by a moderate level of noise).
 • Generally, not a single feature is associat ed with the object of interest but several or
 many of them grouped together in what is known as a feature vector.
 4
+![Page 4, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_004.png)
 
 ### Page 5
 5
@@ -56,6 +60,8 @@ Feature extraction methodology
 – Gabbor Filters
 – SIFT, SURF
 –… .
+![Page 5, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_005.png)
+![Page 5, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_005_img_002.png)
 
 ### Page 6
 Statistical descriptors
@@ -68,6 +74,8 @@ Statistical descriptors
 6
 6
 Mean                Variance Skewne ss Kurtosis               Entropy
+![Page 6, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_006.png)
+![Page 6, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_006_img_002.png)
 
 ### Page 7
 Co-occurrence matrix
@@ -83,6 +91,7 @@ occurrence matrix is defined to analyse textures.
 values 𝑖 and 𝑗.
 7
 https://scikit-image.org/docs/stable/user_guide/index.html
+![Page 7, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_007.png)
 
 ### Page 8
 Co-occurrence matrix
@@ -101,6 +110,14 @@ Homogeneity: 0.8534
 6
 7
 8
+![Page 8, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008.png)
+![Page 8, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_002.png)
+![Page 8, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_003.png)
+![Page 8, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_004.png)
+![Page 8, Figure 5](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_005.png)
+![Page 8, Figure 6](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_006.png)
+![Page 8, Figure 7](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_007.png)
+![Page 8, Figure 8](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_008_img_008.png)
 
 ### Page 9
 Index
@@ -111,6 +128,7 @@ Index
 5.SIFT
 6.Gabor Filters
 9
+![Page 9, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_009.png)
 
 ### Page 10
 Local Binary Patterns(LBP)
@@ -118,6 +136,9 @@ Local Binary Patterns(LBP)
 Ojala T, Pietikäinen M & Mäenpää T (2002) Multiresolution gray-scale and rotation invariant texture
 classification with Local Binary Patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence
 24(7):971-987.
+![Page 10, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_010.png)
+![Page 10, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_010_img_002.png)
+![Page 10, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_010_img_003.png)
 
 ### Page 11
 Local Binary Patterns(LBP)
@@ -125,11 +146,15 @@ Local Binary Patterns(LBP)
 𝑃ൌ 8 y  R ൌ 1
 𝑃 P is the number of neighbours and  R is the neighbourhood radius.
 𝑃ൌ 16 y  R ൌ 2 𝑃ൌ 8 y  R ൌ 2
+![Page 11, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_011.png)
+![Page 11, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_011_img_003.png)
 
 ### Page 12
 Local Binary Patterns(LBP)
 12
 Histogram of 2௉ values
+![Page 12, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_012.png)
+![Page 12, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_012_img_002.png)
 
 ### Page 13
 Local Binary Patterns(LBP)
@@ -144,6 +169,7 @@ Uniform LBP
 really discriminating ones.
 • How? By analysing the uniformity (U) of the patterns :
 number of transitions from 0 to 1 and 1 to 0.
+![Page 13, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_013.png)
 
 ### Page 14
 Local Binary Patterns(LBP)
@@ -155,16 +181,23 @@ code.
 indistinguishable).
 • LBP: 256 patterns, LBP Uniform: (58 + 1) patterns, (9+1)
 rotationally invariant . In general (P+2)
+![Page 14, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_014.png)
+![Page 14, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_014_img_003.png)
 
 ### Page 15
 Local Binary Patterns(LBP)
 15
 Uniform rotationally invariant LBP: LBPriu2
+![Page 15, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_015.png)
+![Page 15, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_015_img_002.png)
+![Page 15, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_015_img_004.png)
 
 ### Page 16
 Local Binary Patterns(LBP)
 16
 http://scikit-image.org/docs/dev/auto_examples/plot_local_binary_pattern.html
+![Page 16, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_016.png)
+![Page 16, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_016_img_003.png)
 
 ### Page 17
 Local Binary Patterns(LBP)
@@ -173,10 +206,22 @@ LBP LBPri LBPriu2
 LBP LBPri
 LBPriu2
 P=8 R=1
+![Page 17, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017.png)
+![Page 17, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017_img_002.png)
+![Page 17, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017_img_004.png)
+![Page 17, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017_img_006.png)
+![Page 17, Figure 5](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017_img_007.png)
+![Page 17, Figure 6](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017_img_008.png)
+![Page 17, Figure 7](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_017_img_009.png)
 
 ### Page 18
 Local Binary Patterns(LBP)
 18
+![Page 18, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_018.png)
+![Page 18, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_018_img_002.png)
+![Page 18, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_018_img_004.png)
+![Page 18, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_018_img_005.png)
+![Page 18, Figure 5](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_018_img_007.png)
 
 ### Page 19
 Local Binary Patterns(LBP)
@@ -187,6 +232,16 @@ Cáncer
 grado 3
 Cáncer
 grado 5
+![Page 19, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019.png)
+![Page 19, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_003.png)
+![Page 19, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_004.png)
+![Page 19, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_005.png)
+![Page 19, Figure 5](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_008.png)
+![Page 19, Figure 6](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_009.png)
+![Page 19, Figure 7](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_010.png)
+![Page 19, Figure 8](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_013.png)
+![Page 19, Figure 9](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_014.png)
+![Page 19, Figure 10](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_019_img_015.png)
 
 ### Page 20
 Index
@@ -197,6 +252,7 @@ Index
 5.SIFT
 6.Gabor Filters
 20
+![Page 20, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_020.png)
 
 ### Page 21
 Histograms of Oriented
@@ -210,6 +266,9 @@ gradient orientation in localised portions of an image.
 – Block descriptor
 – Block normalisation
 21
+![Page 21, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_021.png)
+![Page 21, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_021_img_003.png)
+![Page 21, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_021_img_004.png)
 
 ### Page 22
 22
@@ -236,6 +295,9 @@ Kernel
 3
 Imagen de salida
 22
+![Page 22, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_022.png)
+![Page 22, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_022_img_002.png)
+![Page 22, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_022_img_003.png)
 
 ### Page 23
 23
@@ -250,6 +312,9 @@ Gradient Computation
 𝐺௫ 𝐺௬
 𝑂𝑟𝑖𝑒𝑛𝑡𝑎𝑡𝑖𝑜𝑛 ൌtanିଵ 𝐺௬
 𝐺௫ 23
+![Page 23, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_023.png)
+![Page 23, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_023_img_003.png)
+![Page 23, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_023_img_004.png)
 
 ### Page 24
 Histograms of Oriented
@@ -259,6 +324,11 @@ Gradients (HOG)
 • Global descriptor combines histograms of all cells.
 24
 orientation
+![Page 24, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_024.png)
+![Page 24, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_024_img_002.png)
+![Page 24, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_024_img_003.png)
+![Page 24, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_024_img_004.png)
+![Page 24, Figure 5](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_024_img_005.png)
 
 ### Page 25
 Histograms of Oriented
@@ -269,6 +339,9 @@ Gradients (HOG)
 25
 orientation
 orientation
+![Page 25, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_025.png)
+![Page 25, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_025_img_003.png)
+![Page 25, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_025_img_004.png)
 
 ### Page 26
 Histograms of Oriented
@@ -283,6 +356,10 @@ to the centre of each interval.
 26
 orientation
 orientation
+![Page 26, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_026.png)
+![Page 26, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_026_img_004.png)
+![Page 26, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_026_img_005.png)
+![Page 26, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_026_img_006.png)
 
 ### Page 27
 Histograms of Oriented
@@ -295,6 +372,8 @@ Assuming that for the histogram calculation the orientation is divided into 9 in
 considering the sign), what would be the contribution of this pixel to each of the intervals of the
 histogram?
 27
+![Page 27, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_027.png)
+![Page 27, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_027_img_002.png)
 
 ### Page 28
 Histograms of Oriented
@@ -308,6 +387,7 @@ considering the sign), what would be the contribution of this pixel to each of t
 histogram?
 28
 00 000007525
+![Page 28, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_028.png)
 
 ### Page 29
 Histograms of Oriented
@@ -319,6 +399,7 @@ Orientation histogram calculation: spatial integration
 𝑖
 𝑗
 1  2  3 4  5  6  7  8  9
+![Page 29, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_029.png)
 
 ### Page 30
 Histograms of Oriented
@@ -332,6 +413,10 @@ Orientation histogram calculation: spatial integration
 • Assign each pixel to the four nearest cells with a weight proportional to the distance of the pixel from the centre
 of each cell.
 1  2  3 4  5  6  7  8  9
+![Page 30, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_030.png)
+![Page 30, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_030_img_003.png)
+![Page 30, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_030_img_004.png)
+![Page 30, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_030_img_005.png)
 
 ### Page 31
 Histograms of Oriented
@@ -341,6 +426,7 @@ Given an image and the division into cells as shown and assuming that the orient
 into 9 intervals without considering the sign (0º-180º), in which histograms (𝑖,𝑗) of the final
 representation and in which intervals 𝑘 and with which weight will the pixel (𝑥=12,𝑦=18) with
 orientation 𝜃ൌ 60º contribute?
+![Page 31, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_031.png)
 
 ### Page 32
 Histograms of Oriented
@@ -350,6 +436,8 @@ Given an image and the division into cells as shown and assuming that the orient
 into 9 intervals without considering the sign (0º-180º), in which histograms (𝑖,𝑗) of the final
 representation and in which intervals 𝑘 and with which weight will the pixel (𝑥=12,𝑦=18) with
 orientation 𝜃ൌ 60º contribute?
+![Page 32, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_032.png)
+![Page 32, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_032_img_002.png)
 
 ### Page 33
 Histograms of Oriented
@@ -370,6 +458,8 @@ Block normalisation
 ଶ ൅𝑥ଶ
 ଶ ൅⋯൅𝑥 ே
 ଶ ൅𝜀
+![Page 33, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_033.png)
+![Page 33, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_033_img_003.png)
 
 ### Page 34
 Histograms of Oriented
@@ -380,6 +470,14 @@ Final descriptor
 • For each block, normalised histogram of cells.
 • Final descriptor: concatenation of all block histograms
 𝐻𝑂𝐺 ൌ ሺ𝑥ଵ, 𝑥ଶ… 𝑥ே)
+![Page 34, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034.png)
+![Page 34, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_002.png)
+![Page 34, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_004.png)
+![Page 34, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_005.png)
+![Page 34, Figure 5](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_006.png)
+![Page 34, Figure 6](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_007.png)
+![Page 34, Figure 7](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_008.png)
+![Page 34, Figure 8](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_034_img_009.png)
 
 ### Page 35
 Histograms of Oriented
@@ -388,6 +486,8 @@ Gradients (HOG)
 Final descriptor
 • Each cell contributes to the description of several blocks.
 • In each block with a different normalization.
+![Page 35, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_035.png)
+![Page 35, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_035_img_005.png)
 
 ### Page 36
 Index
@@ -398,6 +498,7 @@ Index
 5.SIFT
 6.Gabor Filters
 36
+![Page 36, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_036.png)
 
 ### Page 37
 37
@@ -409,6 +510,7 @@ Descriptor:
 Content invariant
 representation
 (HOG, SIFT, etc.)
+![Page 37, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_037.png)
 
 ### Page 38
 38
@@ -475,6 +577,7 @@ General case RRC 
 For each pixel is calculated:
 and         high: corner
 and         small: flat area
+![Page 38, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_038.png)
 
 ### Page 39
 39
@@ -491,6 +594,7 @@ Harris’ detector
 of the matrix C.
 21 λλ 
  21 λλ 
+![Page 39, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_039.png)
 
 ### Page 40
 40
@@ -499,6 +603,8 @@ Original images
 Keypoints (corners)
 detected with Harris’
 detector
+![Page 40, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_040.png)
+![Page 40, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_040_img_003.png)
 
 ### Page 41
 41
@@ -533,12 +639,14 @@ NN
 ss
 ss
 R
+![Page 41, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_041.png)
 
 ### Page 42
 42
 Matching of features
 Need for a robust algorithm
 Search of matchings: Putative matchings
+![Page 42, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_042.png)
 
 ### Page 43
 43
@@ -553,27 +661,33 @@ below a distance t (consensusset).
 model with the highest support.
 4. Points with a distance less than t are
 inliers.Reestimate the model with all inliers.
+![Page 43, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_043.png)
+![Page 43, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_043_img_002.png)
 
 ### Page 44
 44
 Example RANSAC
 Initial matches
 Robust estimation
+![Page 44, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_044.png)
 
 ### Page 45
 45
 RANSAC estimation: Panoramic image construction
 Robust estimation
+![Page 45, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_045.png)
 
 ### Page 46
 46
 Robust estimation
 RANSAC estimation: Panoramic image construction
+![Page 46, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_046.png)
 
 ### Page 47
 47
 Robust estimation
 RANSAC estimation: Panoramic image construction
+![Page 47, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_047.png)
 
 ### Page 48
 48
@@ -590,6 +704,7 @@ interest.
 4. Keypoint descriptor: Use local gradients at the selected scale.
 D. Lowe, “Distinctive Image Features from Scale-Invariant  Keypoints”, International Journal of
 Computer Vision, 60(2):91-110, 2004.
+![Page 48, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_048.png)
 
 ### Page 49
 49
@@ -599,6 +714,9 @@ k1σ0
 𝐷 𝑥, 𝑦, 𝜎ൌ 𝐿 𝑥, 𝑦, 𝑘𝜎 െ𝐿 𝑥, 𝑦, 𝜎
 𝐿 𝑥, 𝑦, 𝜎ൌ 𝐺 𝑥, 𝑦, 𝜎∗ 𝐼 𝑥, 𝑦,
 𝑘ௌ ൌ 2ௌ
+![Page 49, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_049.png)
+![Page 49, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_049_img_002.png)
+![Page 49, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_049_img_005.png)
 
 ### Page 50
 50
@@ -611,6 +729,10 @@ thresholding
 Weak keypoints
 • keypoints with low contrast (<0.03).
 • Bad edge
+![Page 50, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_050.png)
+![Page 50, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_050_img_002.png)
+![Page 50, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_050_img_003.png)
+![Page 50, Figure 4](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_050_img_004.png)
 
 ### Page 51
 51
@@ -628,6 +750,8 @@ x ya L x y L x y L x yL x y
      
 𝐿 𝑥, 𝑦, 𝜎ൌ 𝐺 𝑥, 𝑦, 𝜎∗ 𝐼 𝑥, 𝑦,
 0 2 
+![Page 51, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_051.png)
+![Page 51, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_051_img_002.png)
 
 ### Page 52
 52
@@ -639,9 +763,12 @@ Orientation assignment
 (8 bins)
 16 histograms x 8 orientations
 = 128 features
+![Page 52, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_052.png)
+![Page 52, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_052_img_004.png)
 
 ### Page 53
 SIFT Detector
+![Page 53, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_053.png)
 
 ### Page 54
 SIFT: Matching of features
@@ -659,6 +786,7 @@ ii ffffSSD
 2121 )(),(
 f1
  f2
+![Page 54, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_054.png)
 
 ### Page 55
 SIFT: Matching of features
@@ -666,6 +794,7 @@ Problems with ambiguities
 I1 I2
 f1
  f2
+![Page 55, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_055.png)
 
 ### Page 56
 Index
@@ -676,6 +805,7 @@ Index
 5.SIFT
 6.Gabor Filters
 56
+![Page 56, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_056.png)
 
 ### Page 57
 Gabor filters
@@ -687,3 +817,6 @@ visual system.
 Source: Deep Learning: Foundations and
 Concepts. Christopher M. Bishop and Hugh
 Bishop
+![Page 57, Figure 1](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_057.png)
+![Page 57, Figure 2](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_057_img_002.png)
+![Page 57, Figure 3](subjects/Admeav/Teoria/slides/T1_Hand crafted feature extraction-images/T1_Hand crafted feature extraction_page_057_img_003.png)

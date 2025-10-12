@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "python3 scripts/run_content_pipeline.py",
     "dev": "vite",
     "build": "tsc && vite build",
     "prepreview": "npm run build",

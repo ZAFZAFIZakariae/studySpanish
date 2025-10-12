@@ -6,6 +6,7 @@ CHAPTER 5
 Natural Language Processing:
 Transformers  &
 Large Language Models
+![Page 1, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_001.png)
 
 ### Page 2
 Summary
@@ -24,6 +25,7 @@ Summary
 • BART
 • T5
 4. Large Language Models (LLMs)
+![Page 2, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_002.png)
 
 ### Page 3
 Historical evolution to Transformers & LLM
@@ -41,6 +43,7 @@ helps models focus on the relevant parts of the text.
 • Context: The arrival of Transformers: Explain that Transformers, based on the attention
 mechanism, revolutionized NLP by allowing parallel processing and capturing long-
 distance dependencies.
+![Page 3, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_003.png)
 
 ### Page 4
 Limitations of Pre-Transformer Models (RNNs, LSTMs)
@@ -52,6 +55,7 @@ way for the Transformer architecture.
 2. Sequential Processing
 3. Difficulty Capturing Long-Range Dependencies
 4. Contextual Understanding Limitations
+![Page 4, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_004.png)
 
 ### Page 5
 Vanishing and Exploding Gradients
@@ -69,6 +73,7 @@ sentence, making it difficult to predict a word like "purred" or "slept.“
 • The information about the cat might have "vanished" during backpropagation.
 • Conversely, in some cases, a minor change in the early part of the sequence could
 disproportionately affect the later predictions, a sign of exploding gradients.
+![Page 5, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_005.png)
 
 ### Page 6
 Sequential Processing
@@ -83,6 +88,7 @@ page at once.
 page.
 • This sequential nature becomes a major bottleneck when dealing with long documents or
 large datasets.
+![Page 6, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_006.png)
 
 ### Page 7
 Difficulty Capturing Long-Range Dependencies
@@ -98,6 +104,7 @@ published their groundbreaking results.“
 information over a long distance.
 • While LSTMs might perform better than basic RNNs, they can still struggle with these long-
 range dependencies, especially in very long sequences.
+![Page 7, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_007.png)
 
 ### Page 8
 Contextual Understanding Limitations
@@ -115,6 +122,7 @@ Example:
 • While LSTMs can use the preceding words to disambiguate to some extent, they miss out on the
 information provided by the words following "bank.".
 • There is not bidirectionality in RNN/LSTM  (Transformers have bidirectionality)
+![Page 8, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_008.png)
 
 ### Page 9
 Contextual Understanding Limitations
@@ -127,9 +135,14 @@ Contextual Understanding Limitations
 • Polysemy cross-confussion German/English
 • A Gymnasium is a German school
 • I exercise in a Gymnasium
+![Page 9, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_009.png)
+
+### Page 10
+![Page 10, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_010.png)
 
 ### Page 11
 Introduction: Attention Is All You Need
+![Page 11, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_011.png)
 
 ### Page 12
 Introduction
@@ -146,6 +159,7 @@ parallel processing, accelerating training times.
 relationships between words that are far apart in a sequence.
 • Versatility: Beyond NLP , Transformers have been successfully applied in computer
 vision, music generation, and more.
+![Page 12, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_012.png)
 
 ### Page 13
 • The basic architecture of a
@@ -158,6 +172,7 @@ series of identical layers that
 process information
 sequentially.
 Architecture of Transformers
+![Page 13, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_013.png)
 
 ### Page 14
 Architecture of Transformers
@@ -170,15 +185,23 @@ vectors that capture the meaning of each word.
 information about the position of each word in the sequence.
 • This is achieved through Positional Encoding, which incorporates positional
 information into the embedding vectors.
+![Page 14, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_014.png)
+
+### Page 15
+![Page 15, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_015.png)
+![Page 15, Figure 2](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_015_img_001.png)
 
 ### Page 16
 Example of embeddings in BERT
 • The input representation to the BERT model is the sum of token embeddings,
 segmentation embeddings & position embeddings & follows a masking strategy
 for the model to predict the correct word in the context.
+![Page 16, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_016.png)
 
 ### Page 17
 Comp.
+![Page 17, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_017.png)
+![Page 17, Figure 2](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_017_img_001.png)
 
 ### Page 18
 Architecture of Transformers
@@ -190,6 +213,7 @@ words in the sequence.
 to each position.
 3. Layer Normalization and Residual Connections: Improve training
 stability.
+![Page 18, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_018.png)
 
 ### Page 19
 Architecture of Transformers
@@ -202,6 +226,7 @@ positions.
 focus on relevant parts of the input sequence.
 3. Feed-Forward Network
 4. Layer Normalization and Residual Connections
+![Page 19, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_019.png)
 
 ### Page 20
 Attention Mechanism
@@ -220,6 +245,7 @@ scaled.
 final output.
 Encoder-Decoder Attention: Allows the Decoder to focus on specific parts of the input
 sequence while generating the output sequence.
+![Page 20, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_020.png)
 
 ### Page 21
 Multi-Head Attention
@@ -235,6 +261,7 @@ Functioning
 independently.
 3. Concatenation and Projection: The outputs of all heads are concatenated and
 projected back to the original dimension.
+![Page 21, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_021.png)
 
 ### Page 22
 Training and Inference of Transformers
@@ -247,6 +274,7 @@ accumulation.
 2. Loss Calculation: Cross-entropy loss compares the model’s
 predictions with the actual target sequences.
 3. Backpropagation: Adjusts the model’s weights to minimize the loss.
+![Page 22, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_022.png)
 
 ### Page 23
 Training and Inference of Transformers
@@ -258,6 +286,7 @@ generates one word at a time.
 2. Reuse of Previous Outputs: Each new generated word is appended
 to the Decoder’s input for generating the next word.
 3. Termination: Stops when an end-of-sequence token is generated.
+![Page 23, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_023.png)
 
 ### Page 24
 Why Do Transformers Work So Well?
@@ -274,6 +303,7 @@ words that are far apart in the sequence, which is challenging for traditional R
 Flexibility and Scalability
 The modular architecture of Encoders and Decoders allows scaling the model by adding more layers
 to improve performance without excessively complicating the internal structure.
+![Page 24, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_024.png)
 
 ### Page 25
 Applications of Transformers
@@ -286,6 +316,7 @@ Transformers are highly versatile and are used in a wide range of applications, 
 • Audio: Adaptations of Transformers for sounds recognition and generation.
 • Speech: Speech recognition and generation.
 • Music and Art Generation: Creating artistic works based on learned patterns.
+![Page 25, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_025.png)
 
 ### Page 26
 Tutorial on Internet
@@ -305,6 +336,7 @@ representations
 words in a sentence
 • https://towardsdatascience.com/transformers-explained-visually-not-just-how-but-why-they-work-so-well-d840bd61a9d3
 • Other: https://jalammar.github.io/illustrated-transformer/
+![Page 26, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_026.png)
 
 ### Page 27
 Transformer→Videos
@@ -317,6 +349,7 @@ Transformer→Videos
 • Spanish (light)
 • https://www.youtube.com/watch?v=aL-EmKuB078&t=439s
 • https://www.youtube.com/watch?v=xi94v_jl26U&t=190s
+![Page 27, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_027.png)
 
 ### Page 28
 Transformer-based
@@ -325,6 +358,10 @@ Language Models Architectures
 •GPT
 •BART
 •T5
+![Page 28, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_028.png)
+![Page 28, Figure 2](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_028_img_002.png)
+![Page 28, Figure 3](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_028_img_004.png)
+![Page 28, Figure 4](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_028_img_005.png)
 
 ### Page 29
 Architecture diferences
@@ -335,6 +372,9 @@ decoder-only, or encoder-decoder
 • training objectives, designed to either
 understand, generate, or transform text in
 various natural language processing tasks.
+![Page 29, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_029.png)
+![Page 29, Figure 2](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_029_img_001.png)
+![Page 29, Figure 3](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_029_img_002.png)
 
 ### Page 30
 Sort description
@@ -348,6 +388,7 @@ and generation.
 • T5: A transformer encoder-decoder model that converts all NLP tasks into a
 text-to-text format, treating every task as converting one text string into
 another.
+![Page 30, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_030.png)
 
 ### Page 31
 BERT (Bidirectional Encoder Representations
@@ -357,6 +398,7 @@ from Transformers):
 • Reads text in both directions (bidirectional)
 • Specialized in understanding context and text meaning
 • Useful for: classification, sentiment analysis, question answering
+![Page 31, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_031.png)
 
 ### Page 32
 GPT (Generative Pre-trained Transformer)
@@ -365,6 +407,7 @@ GPT (Generative Pre-trained Transformer)
 • Reads text from left to right (unidirectional)
 • Specialized in generating text
 • Useful for: text completion, translation, creative writing
+![Page 32, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_032.png)
 
 ### Page 33
 BART (Bidirectional and Auto-Regressive
@@ -374,6 +417,7 @@ Transformers)
 • Functions as a denoising autoencoder
 • Versatile: can both understand and generate text
 • Useful for: summarization, translation, text completion
+![Page 33, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_033.png)
 
 ### Page 34
 T5 (Text-to-Text Transfer Transformer)
@@ -382,6 +426,7 @@ T5 (Text-to-Text Transfer Transformer)
 • Converts all tasks into a "text-to-text" format
 • Unified approach for multiple tasks
 • Useful for: any natural language processing task
+![Page 34, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_034.png)
 
 ### Page 35
 Main differences
@@ -398,33 +443,42 @@ Main differences
 • GPT: Autoregressive
 • BART: Denoising
 • T5: Span corruption
+![Page 35, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_035.png)
 
 ### Page 36
 Example Task in each model
 • Task: "The cat [MASK] on the table"
+![Page 36, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_036.png)
+![Page 36, Figure 2](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_036_img_001.png)
+![Page 36, Figure 3](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_036_img_002.png)
 
 ### Page 37
 LINKS
+![Page 37, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_037.png)
 
 ### Page 38
 BERT –TUTORIAL & IMPLEMENTATION
 • https://www.kaggle.com/code/harshjain123/bert-for-everyone-
 tutorial-implementation
+![Page 38, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_038.png)
 
 ### Page 39
 BERT - Transformers
 • https://jalammar.github.io/illustrated-transformer/
+![Page 39, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_039.png)
 
 ### Page 40
 BERT –Noteboot Sentence Embedings
 • https://colab.research.google.com/github/dlmacedo/starter-
 academic/blob/master/content/courses/deeplearning/notebooks/Sia
 meseBERT_SemanticSearch.ipynb#scrollTo=5IO_j2Ofv5pq
+![Page 40, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_040.png)
 
 ### Page 41
 BERT –Using for the first time
 • https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-
 time/
+![Page 41, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_041.png)
 
 ### Page 42
 BERT –Sentence Similarity
@@ -435,6 +489,7 @@ advanced that “Word similarity”
 • Example
 • https://medium.com/@ahmedmellit/text-similarity-implementation-
 using-bert-embedding-in-python-1efdb5194e65
+![Page 42, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_042.png)
 
 ### Page 43
 BERT –Sentence Similarity
@@ -457,9 +512,11 @@ print(similarities)
 # tensor([[1.0000, 0.6660, 0.1046],
 #         [0.6660, 1.0000, 0.1411],
 #         [0.1046, 0.1411, 1.0000]])
+![Page 43, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_043.png)
 
 ### Page 44
 LARGUE LANGUAGE MODELS
+![Page 44, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_044.png)
 
 ### Page 45
 Large Language Models (LLM)
@@ -473,6 +530,7 @@ Large Language Models (LLM)
 8. Challenges and Limitations
 9. Deployment and Integration
 10. Future Directions and Research Areas
+![Page 45, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_045.png)
 
 ### Page 46
 1. Introduction to Large Language Models (LLMs)
@@ -492,6 +550,7 @@ Evolution and Impact
 • The rapid advancement of LLMs has transformed natural language processing, moving from simple pattern
 recognition to sophisticated language understanding. This evolution has significant implications for
 automation, education, and how humans interact with technology.
+![Page 46, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_046.png)
 
 ### Page 47
 2. Architecture and Key Components
@@ -500,6 +559,7 @@ automation, education, and how humans interact with technology.
 • Training data requirements
 • Model compression techniques
 • Mixture of experts
+![Page 47, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_047.png)
 
 ### Page 48
 Scaling strategies
@@ -515,6 +575,7 @@ Scaling strategies
 • Computational costs
 • Memory requirements
 • Training stability
+![Page 48, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_048.png)
 
 ### Page 49
 Parameter counts and model sizes
@@ -527,6 +588,7 @@ Parameter counts and model sizes
 • Inference speed
 • Model capabilities
 • Hardware requirements
+![Page 49, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_049.png)
 
 ### Page 50
 Training data requirements
@@ -539,6 +601,7 @@ Training data requirements
 • Small models: 100GB-1TB
 • Large models: 1TB-5TB+
 • High-quality filtered data
+![Page 50, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_050.png)
 
 ### Page 51
 Model compression techniques
@@ -553,6 +616,7 @@ converting a high-quality video to a smaller file size that still looks good.
 • Reduced size
 • Faster inference
 • Lower memory usage
+![Page 51, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_051.png)
 
 ### Page 52
 Mixture of experts (MoE)  (i)
@@ -562,6 +626,7 @@ Mixture of experts (MoE)  (i)
 • Has multiple "expert" networks
 • Each expert specializes in different tasks
 • A "router" directs questions to right expert
+![Page 52, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_052.png)
 
 ### Page 53
 Mixture of experts (MoE)  (ii)
@@ -583,6 +648,7 @@ Mixture of experts (MoE)  (ii)
 • Some experts might be overused
 • Complex to manage all parts
 • Needs good balance of work
+![Page 53, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_053.png)
 
 ### Page 54
 Mixture of experts (MoE) (iii)
@@ -590,6 +656,7 @@ Mixture of experts (MoE) (iii)
 • https://www.tensorops.ai/post/what-is-mixture-of-experts-llm
 • Video
 • https://www.youtube.com/watch?v=wkVNe1qimDc
+![Page 54, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_054.png)
 
 ### Page 55
 3. Training Methodologies (i)
@@ -609,6 +676,7 @@ Instruction tuning
 prompts. This process helps models better understand and execute user commands, improving
 their ability to perform tasks as requested. The training data consists of instruction-response pairs
 that teach the model to generate appropriate outputs based on given instructions.
+![Page 55, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_055.png)
 
 ### Page 56
 3. Training Methodologies (ii)
@@ -624,6 +692,7 @@ ensuring they operate within specific ethical and behavioral boundaries.
 This methodology involves embedding rules and principles during training
 to create more reliable and ethically-aligned models. The goal is to develop
 AI systems that are inherently safe and aligned with human values.
+![Page 56, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_056.png)
 
 ### Page 57
 4. Major LLM Models and Their Characteristic
@@ -640,6 +709,7 @@ AI systems that are inherently safe and aligned with human values.
 • Microsoft: Phi-3 Medium
 • DeepSeek Coder V2
 • https://sebastian-petrus.medium.com/top-10-open-weights-llms-in-2024-you-h-b74395065bf5
+![Page 57, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_057.png)
 
 ### Page 58
 Advantages of open-weights LLM
@@ -651,6 +721,7 @@ architectures promotes trust and enables better debugging.
 collective efforts to enhance performance and address limitations.
 • Cost-effectiveness: Organizations can deploy and scale these models
 without the ongoing costs associated with proprietary API usage.
+![Page 58, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_058.png)
 
 ### Page 59
 LLM Characteristics
@@ -669,6 +740,7 @@ training and inference, varying significantly by model size.
 • Cost efficiency: The relationship between model performance and operational resources
 required. Includes training and inference costs, storage, and maintenance, crucial for
 determining commercial viability and model selection.
+![Page 59, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_059.png)
 
 ### Page 60
 5. Practical Applications
@@ -677,6 +749,7 @@ determining commercial viability and model selection.
 • Translation and multilingual capabilities
 • Question answering
 • Reasoning tasks
+![Page 60, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_060.png)
 
 ### Page 61
 6. Emergent Abilities
@@ -700,6 +773,7 @@ a single conversation.
 The ability to apply knowledge and skills learned from one task to different but related tasks. This
 demonstrates the model's capacity to understand underlying patterns and principles, rather than just
 memorizing specific solutions.
+![Page 61, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_061.png)
 
 ### Page 62
 7. Evaluation and Benchmarking
@@ -715,6 +789,7 @@ Performance metrics
 • Quantitative measurements including accuracy, precision, recall, F1 scores, and task-specific
 metrics like BLEU for translation or ROUGE for summarization. These metrics provide objective
 ways to compare models and track improvements in specific capabilities.
+![Page 62, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_062.png)
 
 ### Page 63
 MMLU (Massive Multitask Language Understanding)
@@ -732,6 +807,10 @@ subjects, including:
 • MMLU is considered one of the most challenging and comprehensive
 benchmarks for assessing language models' general knowledge and problem-
 solving abilities
+![Page 63, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_063.png)
+
+### Page 64
+![Page 64, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_064.png)
 
 ### Page 65
 8. Challenges, Limitations & Details
@@ -756,6 +835,7 @@ confidentiality.
 Alignment
 • Alignment in LLMs is the process of making AI models behave in ways that are helpful, safe, and consistent with human values and
 intentions, typically achieved through techniques like human feedback and careful training.
+![Page 65, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_065.png)
 
 ### Page 66
 Language BIAS
@@ -765,6 +845,7 @@ Language BIAS
 sets dominated by English-language information.
 • It happens that sometimes the answer is better or more accurate in
 English.
+![Page 66, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_066.png)
 
 ### Page 67
 Language BIAS example
@@ -778,11 +859,13 @@ villes principales par lesquels je dois passer.
 • I want to drive from Saigon to Islamabad crossing through the least number of
 countries. Tell me the route indicating only the countries and major cities I
 must pass through.
+![Page 67, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_067.png)
 
 ### Page 68
 Ideology BIAS
 • Large Language Models Reflect the Ideology of their Creators
 • https://arxiv.org/pdf/2410.18417
+![Page 68, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_068.png)
 
 ### Page 69
 Alignment
@@ -796,6 +879,7 @@ Alignment
 • Follow human instructions accurately
 • Respect “ethical boundaries”  (Human Rights)
 • Maintain safety constraints
+![Page 69, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_069.png)
 
 ### Page 70
 Alignment
@@ -805,6 +889,7 @@ Alignment
 • Reward modeling
 • Fine-tuning with human preferences
 • Safety constraints and filters
+![Page 70, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_070.png)
 
 ### Page 71
 Token Limit
@@ -812,6 +897,7 @@ Token Limit
 • Claude 3.5 Sonnet:  4096 tokens
 • GPT 4o:  64,000 tokens
 • Llama 3.2 1B supports a context window of up to 128,000 tokens.
+![Page 71, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_071.png)
 
 ### Page 72
 Temperature(LLM)
@@ -825,6 +911,7 @@ controls the randomness or creativity in the model's outputs.
 • More random and diverse in responses
 • More creative and exploratory
 • Better for creative tasks like brainstorming or storytelling
+![Page 72, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_072.png)
 
 ### Page 73
 Prompt injection
@@ -837,6 +924,7 @@ Here are the key aspects:
 instructions
 • Attempts to override the model's base behavior or security measures
 • Can bypass content filters and safety mechanisms
+![Page 73, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_073.png)
 
 ### Page 74
 Type of Prompt Injection
@@ -850,11 +938,13 @@ Type of Prompt Injection
 3.Delimiter Attack
 • Exploiting system markers or special characters
 • Attempting to break out of intended conversation boundaries
+![Page 74, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_074.png)
 
 ### Page 75
 Overfitting vs Previous knowledge
 • Riddle
 • Simplify (a-x)(b-x)(c-x)…(z-x)
+![Page 75, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_075.png)
 
 ### Page 76
 Overfitting (with famous Riddels)
@@ -867,6 +957,7 @@ sacks, and wives,How many were there going to St. Ives?
 wife had seven sacks,Each sack had seven cats,Each cat had seven
 kits:Kits, cats, sacks, and wives,How many were there going to St. Ives?
 • Answer again 1, and It’s wrong. It fails because overfitting
+![Page 76, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_076.png)
 
 ### Page 77
 9. Deployment and Integration
@@ -890,6 +981,7 @@ Cost considerations
 • Analysis and management of expenses related to model usage, including API calls, compute resources, and
 maintenance. This includes implementing cost-control measures, monitoring usage patterns, and optimizing
 query efficiency to maintain budget constrain
+![Page 77, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_077.png)
 
 ### Page 78
 10. Future Directions and Research Areas (i)
@@ -910,6 +1002,7 @@ query efficiency to maintain budget constrain
 • Mobile deployment
 • Edge computing
 • Affordable AI
+![Page 78, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_078.png)
 
 ### Page 79
 10. Future Directions and Research Areas (ii)
@@ -935,6 +1028,10 @@ query efficiency to maintain budget constrain
 • Long-term memory
 • Common sense
 • Generalization
+![Page 79, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_079.png)
 
 ### Page 80
 LLMs
+![Page 80, Figure 1](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_080.png)
+![Page 80, Figure 2](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_080_img_001.png)
+![Page 80, Figure 3](subjects/snlp/slides/Chapter 5 LLM-images/Chapter 5 LLM_page_080_img_002.png)
