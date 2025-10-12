@@ -30,6 +30,11 @@ type ImageSelection = {
   caption: string;
 };
 
+type EditorState = {
+  text: string;
+  imageOrder: string[];
+};
+
 type SaveState = 'idle' | 'saving' | 'success' | 'error';
 
 type SaveStatus = {
@@ -80,6 +85,36 @@ const isPdfResource = (resource: ResourceLink): boolean => {
 
 const getResourceKey = (resource: ResourceLink): string => resource.filePath ?? resource.href;
 
+const normaliseSlashes = (value: string): string => value.replace(/\\/g, '/');
+
+const findSubjectRelativePath = (value: string): string => {
+  const normalised = normaliseSlashes(value.trim());
+  const lowered = normalised.toLowerCase();
+  const marker = 'subjects/';
+  const index = lowered.lastIndexOf(marker);
+  if (index === -1) {
+    return normalised.replace(/^\//, '');
+  }
+  return normalised.slice(index + marker.length);
+};
+
+const resolvePathMetadata = (filePath: string) => {
+  const subjectRelativePath = findSubjectRelativePath(filePath);
+  const segments = subjectRelativePath.split('/').filter((segment) => segment.length > 0);
+  const fileName = segments.pop() ?? '';
+  const baseName = fileName.replace(/\.[^.]+$/, '') || fileName;
+  const directory = segments.join('/');
+  const assetBaseSegments = ['subject-assets', ...segments, baseName];
+  const assetBasePath = assetBaseSegments.filter((segment) => segment.length > 0).join('/');
+  const sourceLinePath = subjectRelativePath ? `subjects/${subjectRelativePath}` : normaliseSlashes(filePath);
+  const outputRelativePath = `src/data/subjectExtracts/subjects/${
+    directory ? `${directory}/` : ''
+  }${baseName}.txt`;
+  return { subjectRelativePath, baseName, directory, assetBasePath, sourceLinePath, outputRelativePath };
+};
+
+const getEditorElementId = (key: string): string => `extract-editor-${key.replace(/[^a-zA-Z0-9_-]/g, '_')}`;
+
 const SubjectPdfBrowserPage: React.FC = () => {
   const subjectsWithPdfs = useMemo<SubjectWithPdfResources[]>(
     () =>
@@ -100,6 +135,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
   >({});
   const [saveStatuses, setSaveStatuses] = useState<Record<string, SaveStatus>>({});
   const [toast, setToast] = useState<ToastState | null>(null);
+  const [editorStates, setEditorStates] = useState<Record<string, EditorState>>({});
 
   useEffect(() => {
     if (!toast) {
@@ -163,6 +199,10 @@ const SubjectPdfBrowserPage: React.FC = () => {
           ...prev,
           [key]: { text, images },
         }));
+        setEditorStates((prev) => ({
+          ...prev,
+          [key]: { text, imageOrder: images.map((image) => image.path) },
+        }));
         setImageSelections((prev) => {
           const currentSelections = prev[key] ?? {};
           const nextSelections: Record<string, ImageSelection> = {};
@@ -185,6 +225,14 @@ const SubjectPdfBrowserPage: React.FC = () => {
           },
         }));
         setResults((prev) => {
+          if (!(key in prev)) {
+            return prev;
+          }
+          const next = { ...prev };
+          delete next[key];
+          return next;
+        });
+        setEditorStates((prev) => {
           if (!(key in prev)) {
             return prev;
           }
@@ -227,32 +275,16 @@ const SubjectPdfBrowserPage: React.FC = () => {
         return;
       }
 
-      const normaliseSlashes = (value: string) => value.replace(/\\/g, '/');
-      const findSubjectRelativePath = (value: string) => {
-        const normalised = normaliseSlashes(value.trim());
-        const lowered = normalised.toLowerCase();
-        const marker = 'subjects/';
-        const index = lowered.lastIndexOf(marker);
-        if (index === -1) {
-          return normalised.replace(/^\//, '');
-        }
-        return normalised.slice(index + marker.length);
-      };
-
-      const subjectRelativePath = findSubjectRelativePath(filePath);
-      const segments = subjectRelativePath.split('/').filter((segment) => segment.length > 0);
-      const fileName = segments.pop() ?? '';
-      const baseName = fileName.replace(/\.[^.]+$/, '') || fileName;
-      const directory = segments.join('/');
-      const assetBaseSegments = ['subject-assets', ...segments, baseName];
-      const assetBasePath = assetBaseSegments.filter((segment) => segment.length > 0).join('/');
-      const sourceLinePath = subjectRelativePath ? `subjects/${subjectRelativePath}` : normaliseSlashes(filePath);
-      const outputRelativePath = `src/data/subjectExtracts/subjects/${
-        directory ? `${directory}/` : ''
-      }${baseName}.txt`;
+      const editorState = editorStates[key];
+      const { assetBasePath, sourceLinePath, outputRelativePath } = resolvePathMetadata(filePath);
 
       const selections = imageSelections[key] ?? {};
-      const selectedImages = result.images.filter((image) => selections[image.path]?.selected);
+      const orderedImages = (editorState?.imageOrder?.length
+        ? editorState.imageOrder
+        : result.images.map((image) => image.path))
+        .map((imageKey) => result.images.find((image) => image.path === imageKey))
+        .filter((image): image is ExtractedImage => Boolean(image));
+      const selectedImages = orderedImages.filter((image) => selections[image.path]?.selected);
 
       const imageEntries = selectedImages.map((image) => {
         const selection = selections[image.path];
@@ -263,7 +295,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
         return { image, caption, targetPath };
       });
 
-      const textContent = result.text.trim();
+      const textContent = (editorState?.text ?? result.text).trim();
       const imageMarkdownLines = imageEntries.map(
         ({ caption, targetPath }) => `![${caption}](/${targetPath.replace(/^\/+/, '')})`
       );
@@ -329,7 +361,91 @@ const SubjectPdfBrowserPage: React.FC = () => {
         setToast({ tone: 'error', message });
       }
     },
-    [imageSelections, results]
+    [editorStates, imageSelections, results]
+  );
+
+  const handleReorderImage = useCallback(
+    (resourceKey: string, imageKey: string, direction: 'up' | 'down') => {
+      setEditorStates((prev) => {
+        const current = prev[resourceKey];
+        if (!current) {
+          return prev;
+        }
+        const order = [...current.imageOrder];
+        const currentIndex = order.indexOf(imageKey);
+        if (currentIndex === -1) {
+          return prev;
+        }
+        const targetIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
+        if (targetIndex < 0 || targetIndex >= order.length) {
+          return prev;
+        }
+        [order[currentIndex], order[targetIndex]] = [order[targetIndex], order[currentIndex]];
+        return {
+          ...prev,
+          [resourceKey]: { ...current, imageOrder: order },
+        };
+      });
+    },
+    []
+  );
+
+  const insertSnippet = useCallback((resourceKey: string, snippet: string) => {
+    const textareaId = getEditorElementId(resourceKey);
+    let selectionStart: number | null = null;
+    let selectionEnd: number | null = null;
+    if (typeof window !== 'undefined') {
+      const textarea = document.getElementById(textareaId) as HTMLTextAreaElement | null;
+      if (textarea) {
+        selectionStart = textarea.selectionStart;
+        selectionEnd = textarea.selectionEnd;
+      }
+    }
+
+    let nextCursor = 0;
+
+    setEditorStates((prev) => {
+      const current = prev[resourceKey];
+      if (!current) {
+        return prev;
+      }
+      const start = selectionStart ?? current.text.length;
+      const end = selectionEnd ?? start;
+      const nextText = current.text.slice(0, start) + snippet + current.text.slice(end);
+      nextCursor = start + snippet.length;
+      return {
+        ...prev,
+        [resourceKey]: { ...current, text: nextText },
+      };
+    });
+
+    if (typeof window !== 'undefined') {
+      window.setTimeout(() => {
+        const textarea = document.getElementById(textareaId) as HTMLTextAreaElement | null;
+        if (textarea) {
+          textarea.focus();
+          textarea.setSelectionRange(nextCursor, nextCursor);
+        }
+      }, 0);
+    }
+  }, []);
+
+  const handleInsertPageBreak = useCallback(
+    (resourceKey: string) => {
+      insertSnippet(resourceKey, '\n\n---\n\n');
+    },
+    [insertSnippet]
+  );
+
+  const handleInsertHeading = useCallback(
+    (resourceKey: string) => {
+      const heading = typeof window !== 'undefined' ? window.prompt('Heading text') : '';
+      if (!heading) {
+        return;
+      }
+      insertSnippet(resourceKey, `\n\n## ${heading.trim()}\n\n`);
+    },
+    [insertSnippet]
   );
 
   if (subjectsWithPdfs.length === 0) {
@@ -398,6 +514,17 @@ const SubjectPdfBrowserPage: React.FC = () => {
             const saveStatus = saveStatuses[key]?.state ?? 'idle';
             const saveMessage = saveStatuses[key]?.message;
             const isSaving = saveStatus === 'saving';
+            const editorState = editorStates[key];
+            const orderedImages = result
+              ? (editorState?.imageOrder?.length
+                  ? editorState.imageOrder
+                  : result.images.map((image) => image.path))
+                  .map((imageKey) => result.images.find((image) => image.path === imageKey))
+                  .filter((image): image is ExtractedImage => Boolean(image))
+              : [];
+            const pathMetadata = resource.filePath
+              ? resolvePathMetadata(resource.filePath ?? resource.extract?.source ?? '')
+              : null;
 
             return (
               <article key={key} className={styles.resourceCard}>
@@ -443,20 +570,52 @@ const SubjectPdfBrowserPage: React.FC = () => {
                     <section className={styles.textPreview}>
                       <header className={styles.previewHeader}>
                         <h3 className={styles.previewTitle}>Extracted text</h3>
+                        <div className={styles.editorActions}>
+                          <button
+                            type="button"
+                            className={styles.editorActionButton}
+                            onClick={() => handleInsertHeading(key)}
+                          >
+                            Add heading
+                          </button>
+                          <button
+                            type="button"
+                            className={styles.editorActionButton}
+                            onClick={() => handleInsertPageBreak(key)}
+                          >
+                            Insert page break
+                          </button>
+                        </div>
                       </header>
-                      <div className={styles.previewContent}>
-                        {result.text ? result.text : 'No text content extracted.'}
-                      </div>
+                      <textarea
+                        id={getEditorElementId(key)}
+                        className={styles.editorTextarea}
+                        value={editorState?.text ?? result.text}
+                        onChange={(event) => {
+                          const { value } = event.target;
+                          setEditorStates((prev) => ({
+                            ...prev,
+                            [key]: {
+                              ...(prev[key] ?? {
+                                text: result.text,
+                                imageOrder: result.images.map((image) => image.path),
+                              }),
+                              text: value,
+                            },
+                          }));
+                        }}
+                        placeholder="No text content extracted."
+                      />
                     </section>
                     <section className={styles.imagePreview}>
                       <header className={styles.previewHeader}>
                         <h3 className={styles.previewTitle}>Extracted images</h3>
                       </header>
-                      {result.images.length === 0 ? (
+                      {orderedImages.length === 0 ? (
                         <p className={styles.emptyImages}>No images extracted.</p>
                       ) : (
                         <ul className={styles.imageList}>
-                          {result.images.map((image) => {
+                          {orderedImages.map((image, index) => {
                             const imageKey = image.path;
                             const selection = selections[imageKey] ?? { selected: false, caption: '' };
                             return (
@@ -505,11 +664,76 @@ const SubjectPdfBrowserPage: React.FC = () => {
                                     }));
                                   }}
                                 />
+                                <div className={styles.reorderButtons}>
+                                  <button
+                                    type="button"
+                                    className={styles.reorderButton}
+                                    onClick={() => handleReorderImage(key, imageKey, 'up')}
+                                    disabled={index === 0}
+                                    aria-label="Move image up"
+                                  >
+                                    ↑
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className={styles.reorderButton}
+                                    onClick={() => handleReorderImage(key, imageKey, 'down')}
+                                    disabled={index === orderedImages.length - 1}
+                                    aria-label="Move image down"
+                                  >
+                                    ↓
+                                  </button>
+                                </div>
                               </li>
                             );
                           })}
                         </ul>
                       )}
+                    </section>
+                    <section className={styles.markdownPreview}>
+                      <header className={styles.previewHeader}>
+                        <h3 className={styles.previewTitle}>Markdown preview</h3>
+                      </header>
+                      <pre className={styles.markdownContent}>
+                        {(() => {
+                          const selectionsForKey = imageSelections[key] ?? {};
+                          const selectedImages = orderedImages.filter(
+                            (image) => selectionsForKey[image.path]?.selected
+                          );
+                          const markdownSections: string[] = [];
+                          const textContent = (editorState?.text ?? result.text).trim();
+                          if (textContent) {
+                            markdownSections.push(textContent);
+                          }
+                          if (selectedImages.length > 0) {
+                            const imageMarkdownLines = selectedImages.map((image) => {
+                              const selection = selectionsForKey[image.path];
+                              const caption = selection?.caption?.trim() || `Figure from page ${image.page}`;
+                              const fileSegments = normaliseSlashes(image.path).split('/');
+                              const fileSegment = fileSegments[fileSegments.length - 1];
+                              const targetPath = pathMetadata
+                                ? `${pathMetadata.assetBasePath}/${fileSegment}`.replace(/\/+/g, '/')
+                                : normaliseSlashes(image.path);
+                              return `![${caption}](/${targetPath.replace(/^\/+/, '')})`;
+                            });
+                            markdownSections.push(imageMarkdownLines.join('\n'));
+                          }
+                          const markdownBody = markdownSections.join('\n\n');
+                          const headerLines = ['# Extracted content'];
+                          if (pathMetadata) {
+                            headerLines.push(`Source: ${pathMetadata.sourceLinePath}`);
+                          } else {
+                            const fallbackSource =
+                              resource.filePath ?? resource.extract?.source ?? resource.href ?? resource.label;
+                            if (fallbackSource) {
+                              headerLines.push(`Source: ${fallbackSource}`);
+                            }
+                          }
+                          return headerLines
+                            .concat(markdownBody ? ['', markdownBody] : [])
+                            .join('\n');
+                        })()}
+                      </pre>
                     </section>
                   </div>
                 )}
