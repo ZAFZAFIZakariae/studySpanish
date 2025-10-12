@@ -13,6 +13,7 @@ import json
 import re
 import sys
 import zipfile
+from collections import defaultdict
 from dataclasses import dataclass
 from io import StringIO
 from pathlib import Path
@@ -45,19 +46,69 @@ def _normalise_whitespace(text: str) -> str:
     return cleaned.strip()
 
 
+def _collect_page_image_references(pdf_path: Path) -> dict[int, list[str]]:
+    """Return ordered image references for each page of ``pdf_path``."""
+
+    images_dir = pdf_path.with_name(f"{pdf_path.stem}-images")
+    if not images_dir.exists():
+        return {}
+
+    pattern = re.compile(
+        rf"^{re.escape(pdf_path.stem)}_page_(?P<page>\d{{3}})(?:_img_(?P<img>\d{{3}}))?\.png$",
+        re.IGNORECASE,
+    )
+    grouped: dict[int, list[tuple[tuple[int, int], Path]]] = defaultdict(list)
+
+    for image_path in sorted(images_dir.iterdir()):
+        if not image_path.is_file() or image_path.suffix.lower() != ".png":
+            continue
+        match = pattern.match(image_path.name)
+        if not match:
+            continue
+        page_number = int(match.group("page"))
+        image_index = match.group("img")
+        order_key = (0, 0) if image_index is None else (1, int(image_index))
+        grouped[page_number].append((order_key, image_path))
+
+    references: dict[int, list[str]] = {}
+    for page_number, entries in grouped.items():
+        ordered_paths = [path for _, path in sorted(entries, key=lambda item: item[0])]
+        references[page_number] = []
+        for image_path in ordered_paths:
+            try:
+                relative_path = image_path.relative_to(ROOT)
+            except ValueError:
+                relative_path = image_path
+            references[page_number].append(relative_path.as_posix())
+
+    return references
+
+
 def extract_pdf(path: Path) -> ExtractionResult:
     reader = PdfReader(path)
+    page_images = _collect_page_image_references(path)
     pieces: list[str] = []
+
     for index, page in enumerate(reader.pages, start=1):
-        text = page.extract_text() or ""
-        text = text.strip()
+        text = (page.extract_text() or "").strip()
+        images = page_images.get(index, [])
+        if not text and not images:
+            continue
+
+        page_lines = [f"### Page {index}"]
         if text:
-            pieces.append(f"### Page {index}\n{text}")
+            page_lines.append(text)
+        for figure_index, image_path in enumerate(images, start=1):
+            page_lines.append(f"![Page {index}, Figure {figure_index}]({image_path})")
+
+        pieces.append("\n".join(page_lines))
+
     if not pieces:
         return ExtractionResult(
             "[No text content extracted]",
             ["PDF parser returned no text; file may be scanned images."],
         )
+
     return ExtractionResult("\n\n".join(pieces), [])
 
 
