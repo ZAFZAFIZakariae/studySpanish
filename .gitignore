@@ -4,3 +4,4 @@ dist
 .env
 coverage
 npm-debug.log*
+subjects/tmp-extracted-images/
