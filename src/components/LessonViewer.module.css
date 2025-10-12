@@ -219,6 +219,14 @@
   line-height: 1.6;
 }
 
+.markdownImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto;
+  border-radius: 12px;
+}
+
 .content :global(table) {
   border-collapse: collapse;
   width: 100%;
