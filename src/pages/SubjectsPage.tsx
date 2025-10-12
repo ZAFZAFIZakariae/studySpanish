@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { subjectCatalog, computeCatalogInsights } from '../data/subjectCatalog';
 import { CourseItem, ResourceLink } from '../types/subject';
@@ -8,6 +8,7 @@ import styles from './SubjectsPage.module.css';
 import { LessonFigure } from '../components/lessonFigures';
 import InlineMarkdown from '../components/InlineMarkdown';
 import NotebookPreview from '../components/notebooks/NotebookPreview';
+import PdfPageViewer from '../components/PdfPageViewer';
 
 type OrderedListStyle = 'decimal' | 'upper-roman' | 'lower-roman' | 'upper-alpha' | 'lower-alpha';
 
@@ -46,6 +47,113 @@ type ResourceTreeNode =
   | { kind: 'resource'; label: string; key: string; resource: ResourceLink };
 
 const resourceTreeCollator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
+
+type PdfPageLocation = {
+  href: string;
+  label: string;
+  pageNumber: number;
+};
+
+type PdfResourceIndex = {
+  href: string;
+  label: string;
+  pages: Array<{ pageNumber: number; normalizedText: string }>;
+};
+
+const normalizeSearchText = (value: string): string =>
+  value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[^a-z0-9\s]/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+const toPlainText = (value: string): string =>
+  value
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/_([^_]+)_/g, '$1')
+    .replace(/~([^~]+)~/g, '$1')
+    .replace(/\[(.+?)]\(.+?\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const createHeadingCandidates = (heading: string): string[] => {
+  const plain = toPlainText(heading);
+  if (!plain) {
+    return [];
+  }
+
+  const variants = new Set<string>();
+  const normalized = normalizeSearchText(plain);
+  if (normalized.length > 2) {
+    variants.add(normalized);
+  }
+
+  const withoutParentheses = plain.replace(/\([^)]*\)/g, ' ');
+  const normalizedWithoutParentheses = normalizeSearchText(withoutParentheses);
+  if (normalizedWithoutParentheses.length > 2) {
+    variants.add(normalizedWithoutParentheses);
+  }
+
+  plain.split(/[·:]/).forEach((fragment) => {
+    const candidate = normalizeSearchText(fragment);
+    if (candidate.length > 2) {
+      variants.add(candidate);
+    }
+  });
+
+  return Array.from(variants);
+};
+
+const buildPdfResourceIndex = (resource: ResourceLink): PdfResourceIndex | null => {
+  if (!resource.extract?.text) {
+    return null;
+  }
+
+  const lines = resource.extract.text.split('\n');
+  const pages: PdfResourceIndex['pages'] = [];
+  let currentPage: number | null = null;
+  let buffer: string[] = [];
+
+  const flushPage = () => {
+    if (currentPage === null) {
+      return;
+    }
+    const rawText = buffer.join(' ').trim();
+    if (!rawText) {
+      buffer = [];
+      return;
+    }
+    pages.push({ pageNumber: currentPage, normalizedText: normalizeSearchText(rawText) });
+    buffer = [];
+  };
+
+  lines.forEach((line) => {
+    const match = line.match(/^###\s+Page\s+(\d+)/i);
+    if (match) {
+      flushPage();
+      currentPage = Number.parseInt(match[1] ?? '', 10);
+      buffer = [];
+      return;
+    }
+    buffer.push(line);
+  });
+
+  flushPage();
+
+  if (pages.length === 0) {
+    return null;
+  }
+
+  return {
+    href: resource.href,
+    label: resource.label,
+    pages,
+  };
+};
 
 const splitResourceLabel = (label: string): string[] =>
   label
@@ -319,6 +427,61 @@ const SubjectsPage: React.FC = () => {
     const placeholder = !english && activeItem.language !== 'en';
     return { original, english, showEnglish, placeholder };
   }, [activeItem]);
+  const [pdfPreview, setPdfPreview] = useState<PdfPageLocation | null>(null);
+
+  const pdfResourceIndexes = useMemo(() => {
+    if (!activeItem?.resources) {
+      return [] as PdfResourceIndex[];
+    }
+
+    return activeItem.resources
+      .filter((resource) => resource.type === 'pdf')
+      .map((resource) => buildPdfResourceIndex(resource))
+      .filter((index): index is PdfResourceIndex => Boolean(index));
+  }, [activeItem?.resources]);
+
+  const headingToPdfCache = useMemo(() => new Map<string, PdfPageLocation | null>(), [pdfResourceIndexes]);
+
+  const resolveHeadingToPdf = useCallback(
+    (heading: string): PdfPageLocation | null => {
+      if (pdfResourceIndexes.length === 0) {
+        return null;
+      }
+
+      if (headingToPdfCache.has(heading)) {
+        return headingToPdfCache.get(heading) ?? null;
+      }
+
+      const candidates = createHeadingCandidates(heading);
+      if (candidates.length === 0) {
+        headingToPdfCache.set(heading, null);
+        return null;
+      }
+
+      for (const candidate of candidates) {
+        for (const resource of pdfResourceIndexes) {
+          const match = resource.pages.find((page) => page.normalizedText.includes(candidate));
+          if (match) {
+            const location: PdfPageLocation = {
+              href: resource.href,
+              label: resource.label,
+              pageNumber: match.pageNumber,
+            };
+            headingToPdfCache.set(heading, location);
+            return location;
+          }
+        }
+      }
+
+      headingToPdfCache.set(heading, null);
+      return null;
+    },
+    [headingToPdfCache, pdfResourceIndexes]
+  );
+
+  const handlePdfRequest = useCallback((location: PdfPageLocation) => {
+    setPdfPreview(location);
+  }, []);
 
   type ContentBlock =
     | { type: 'paragraph'; text: string }
@@ -536,7 +699,14 @@ const SubjectsPage: React.FC = () => {
     return blocks;
   };
 
-  const renderContentBlocks = (text: string, variant: 'english' | 'original') => {
+  const renderContentBlocks = (
+    text: string,
+    variant: 'english' | 'original',
+    options?: {
+      resolvePdf?: (heading: string) => PdfPageLocation | null;
+      onRequestPdf?: (location: PdfPageLocation) => void;
+    }
+  ) => {
     const blocks = createContentBlocks(text);
 
     return (
@@ -560,10 +730,22 @@ const SubjectsPage: React.FC = () => {
                 : block.level === 2
                 ? styles.contentHeadingLevel2
                 : styles.contentHeadingLevel3;
+            const pdfLocation = options?.resolvePdf ? options.resolvePdf(block.text) : null;
             return (
-              <HeadingTag key={index} className={`${styles.contentHeading} ${headingClass}`}>
-                <InlineMarkdown text={block.text} />
-              </HeadingTag>
+              <div key={index} className={styles.contentHeadingGroup}>
+                <HeadingTag className={`${styles.contentHeading} ${headingClass}`}>
+                  <InlineMarkdown text={block.text} />
+                </HeadingTag>
+                {pdfLocation ? (
+                  <button
+                    type="button"
+                    className={styles.contentHeadingPdfButton}
+                    onClick={() => options?.onRequestPdf?.(pdfLocation)}
+                  >
+                    View PDF page {pdfLocation.pageNumber}
+                  </button>
+                ) : null}
+              </div>
             );
           }
 
@@ -747,10 +929,16 @@ const SubjectsPage: React.FC = () => {
           (item.language === 'es' && englishContent ? (
             <details className={styles.contentOriginalDetails}>
               <summary>Ver contenido original en español</summary>
-              {renderContentBlocks(item.content.original, 'original')}
+              {renderContentBlocks(item.content.original, 'original', {
+                resolvePdf: resolveHeadingToPdf,
+                onRequestPdf: handlePdfRequest,
+              })}
             </details>
           ) : (
-            renderContentBlocks(item.content.original, 'original')
+            renderContentBlocks(item.content.original, 'original', {
+              resolvePdf: resolveHeadingToPdf,
+              onRequestPdf: handlePdfRequest,
+            })
           ))}
       </section>
     );
@@ -786,11 +974,12 @@ const SubjectsPage: React.FC = () => {
   }, [activeCourse, activeCourseId]);
 
   return (
-    <div className={styles.page} aria-labelledby="subjects-heading">
-      <header className={styles.header}>
-        <h1 id="subjects-heading" className={styles.title}>
-          Subjects
-        </h1>
+    <>
+      <div className={styles.page} aria-labelledby="subjects-heading">
+        <header className={styles.header}>
+          <h1 id="subjects-heading" className={styles.title}>
+            Subjects
+          </h1>
         <p className={styles.intro}>
           Navigate subjects like a study tree: pick a course, choose a lesson or lab, then dive into summaries, cheat sheets, and original PDFs.
         </p>
@@ -1078,7 +1267,16 @@ const SubjectsPage: React.FC = () => {
           )}
         </section>
       </div>
-    </div>
+      </div>
+      {pdfPreview ? (
+        <PdfPageViewer
+          file={pdfPreview.href}
+          pageNumber={pdfPreview.pageNumber}
+          title={pdfPreview.label}
+          onClose={() => setPdfPreview(null)}
+        />
+      ) : null}
+    </>
   );
 };
 
