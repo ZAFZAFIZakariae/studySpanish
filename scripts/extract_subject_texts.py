@@ -9,15 +9,17 @@ previews or search across the raw course materials.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
 import zipfile
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from io import StringIO
 from pathlib import Path
-from typing import Callable
+import shutil
+from typing import Callable, Sequence
 
 from docx import Document  # type: ignore
 from openpyxl import load_workbook  # type: ignore
@@ -34,6 +36,16 @@ OUTPUT_DIR = ROOT / "src" / "data" / "subjectExtracts"
 class ExtractionResult:
     text: str
     notes: list[str]
+
+
+@dataclass
+class ImageMetadata:
+    path: str
+    page: int
+    index: int
+    width: int | None
+    height: int | None
+    color_space: str | None
 
 
 def _normalise_whitespace(text: str) -> str:
@@ -84,14 +96,74 @@ def _collect_page_image_references(pdf_path: Path) -> dict[int, list[str]]:
     return references
 
 
-def extract_pdf(path: Path) -> ExtractionResult:
+def _initialise_image_output_dir(base_dir: Path, pdf_path: Path) -> Path:
+    target_dir = base_dir / pdf_path.stem
+    if target_dir.exists():
+        shutil.rmtree(target_dir)
+    target_dir.mkdir(parents=True, exist_ok=True)
+    return target_dir
+
+
+def _store_page_images(page, page_number: int, target_dir: Path) -> tuple[list[str], list[ImageMetadata]]:
+    references: list[str] = []
+    metadata: list[ImageMetadata] = []
+    try:
+        images_iterable = list(getattr(page, "images", []))
+    except Exception:  # pragma: no cover - defensive fallback
+        images_iterable = []
+
+    for image_index, image in enumerate(images_iterable, start=1):
+        extension = getattr(image, "ext", None) or getattr(image, "extension", None) or "png"
+        extension = extension.lstrip(".") or "png"
+        filename = f"page_{page_number:03d}_img_{image_index:03d}.{extension}"
+        output_path = target_dir / filename
+        try:
+            with output_path.open("wb") as handle:
+                handle.write(image.data)
+        except Exception:  # pragma: no cover - avoid breaking extraction on failure
+            continue
+
+        try:
+            relative_path = output_path.relative_to(ROOT)
+        except ValueError:  # pragma: no cover - unexpected outside repo
+            relative_path = output_path
+
+        references.append(relative_path.as_posix())
+        metadata.append(
+            ImageMetadata(
+                path=relative_path.as_posix(),
+                page=page_number,
+                index=image_index,
+                width=getattr(image, "width", None),
+                height=getattr(image, "height", None),
+                color_space=getattr(image, "color_space", None),
+            )
+        )
+
+    return references, metadata
+
+
+def _extract_pdf_with_optional_images(
+    path: Path, *, image_output_dir: Path | None = None
+) -> tuple[ExtractionResult, list[ImageMetadata]]:
     reader = PdfReader(path)
-    page_images = _collect_page_image_references(path)
     pieces: list[str] = []
+    metadata: list[ImageMetadata] = []
+
+    if image_output_dir is None:
+        page_images = _collect_page_image_references(path)
+        target_dir: Path | None = None
+    else:
+        target_dir = _initialise_image_output_dir(image_output_dir, path)
+        page_images = {}
 
     for index, page in enumerate(reader.pages, start=1):
         text = (page.extract_text() or "").strip()
-        images = page_images.get(index, [])
+        if target_dir is not None:
+            images, page_metadata = _store_page_images(page, index, target_dir)
+            metadata.extend(page_metadata)
+        else:
+            images = page_images.get(index, [])
         if not text and not images:
             continue
 
@@ -104,12 +176,20 @@ def extract_pdf(path: Path) -> ExtractionResult:
         pieces.append("\n".join(page_lines))
 
     if not pieces:
-        return ExtractionResult(
-            "[No text content extracted]",
-            ["PDF parser returned no text; file may be scanned images."],
+        return (
+            ExtractionResult(
+                "[No text content extracted]",
+                ["PDF parser returned no text; file may be scanned images."],
+            ),
+            metadata,
         )
 
-    return ExtractionResult("\n\n".join(pieces), [])
+    return ExtractionResult("\n\n".join(pieces), []), metadata
+
+
+def extract_pdf(path: Path, *, image_output_dir: Path | None = None) -> ExtractionResult:
+    result, _ = _extract_pdf_with_optional_images(path, image_output_dir=image_output_dir)
+    return result
 
 
 def extract_ipynb(path: Path) -> ExtractionResult:
@@ -276,7 +356,7 @@ def build_header(relative_path: Path, notes: list[str]) -> str:
     return "\n".join(header_lines) + "\n\n"
 
 
-def main() -> int:
+def _run_bulk_extraction() -> int:
     if not SUBJECTS_DIR.exists():
         print("Subjects directory not found.", file=sys.stderr)
         return 1
@@ -297,6 +377,43 @@ def main() -> int:
 
     print(f"Extracted {written} files into {OUTPUT_DIR.relative_to(ROOT)}")
     return 0
+
+
+def _extract_single_pdf(pdf_path: Path, images_dir: Path) -> int:
+    extraction, metadata = _extract_pdf_with_optional_images(
+        pdf_path, image_output_dir=images_dir
+    )
+    payload = {
+        "text": extraction.text,
+        "images": [asdict(entry) for entry in metadata],
+    }
+    print(json.dumps(payload, ensure_ascii=False))
+    return 0
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Extract study subject assets")
+    parser.add_argument(
+        "--single-pdf",
+        type=Path,
+        help="Extract a single PDF file and output JSON",
+    )
+    parser.add_argument(
+        "--images-dir",
+        type=Path,
+        help="Directory where extracted PDF images will be stored",
+    )
+    args = parser.parse_args(argv)
+
+    if args.single_pdf is not None:
+        pdf_path: Path = args.single_pdf
+        if not pdf_path.exists():
+            print(f"PDF not found: {pdf_path}", file=sys.stderr)
+            return 2
+        images_dir = args.images_dir or (SUBJECTS_DIR / "tmp-extracted-images")
+        return _extract_single_pdf(pdf_path, images_dir)
+
+    return _run_bulk_extraction()
 
 
 if __name__ == "__main__":
