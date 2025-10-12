@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { subjectCatalog } from '../data/subjectCatalog';
 import { subjectResourceLibrary } from '../data/subjectResources';
 import type { ResourceLink } from '../types/subject';
@@ -30,6 +30,13 @@ type ImageSelection = {
   caption: string;
 };
 
+type SaveState = 'idle' | 'saving' | 'success' | 'error';
+
+type SaveStatus = {
+  state: SaveState;
+  message?: string;
+};
+
 type SubjectWithPdfResources = {
   id: string;
   name: string;
@@ -41,6 +48,20 @@ const statusClassName: Record<ExtractionState, string> = {
   loading: styles.statusLoading,
   success: styles.statusSuccess,
   error: styles.statusError,
+};
+
+const saveStatusClassName: Record<SaveState, string> = {
+  idle: styles.statusIdle,
+  saving: styles.statusLoading,
+  success: styles.statusSuccess,
+  error: styles.statusError,
+};
+
+type ToastTone = 'success' | 'error';
+
+type ToastState = {
+  tone: ToastTone;
+  message: string;
 };
 
 const isPdfResource = (resource: ResourceLink): boolean => {
@@ -77,6 +98,20 @@ const SubjectPdfBrowserPage: React.FC = () => {
   const [imageSelections, setImageSelections] = useState<
     Record<string, Record<string, ImageSelection>>
   >({});
+  const [saveStatuses, setSaveStatuses] = useState<Record<string, SaveStatus>>({});
+  const [toast, setToast] = useState<ToastState | null>(null);
+
+  useEffect(() => {
+    if (!toast) {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      setToast(null);
+    }, 5000);
+
+    return () => window.clearTimeout(timeout);
+  }, [toast]);
 
   const activeSubject = useMemo(
     () => subjectsWithPdfs.find((subject) => subject.id === activeSubjectId) ?? subjectsWithPdfs[0] ?? null,
@@ -162,6 +197,141 @@ const SubjectPdfBrowserPage: React.FC = () => {
     []
   );
 
+  const handleSaveExtract = useCallback(
+    async (resource: ResourceLink) => {
+      const key = getResourceKey(resource);
+      const result = results[key];
+      const filePath = resource.filePath ?? resource.extract?.source ?? '';
+
+      if (!filePath) {
+        setSaveStatuses((prev) => ({
+          ...prev,
+          [key]: {
+            state: 'error',
+            message: 'Unable to determine the PDF path for saving.',
+          },
+        }));
+        setToast({ tone: 'error', message: 'Unable to determine the PDF path for saving.' });
+        return;
+      }
+
+      if (!result) {
+        setSaveStatuses((prev) => ({
+          ...prev,
+          [key]: {
+            state: 'error',
+            message: 'Run an extraction before saving.',
+          },
+        }));
+        setToast({ tone: 'error', message: 'Run an extraction before saving.' });
+        return;
+      }
+
+      const normaliseSlashes = (value: string) => value.replace(/\\/g, '/');
+      const findSubjectRelativePath = (value: string) => {
+        const normalised = normaliseSlashes(value.trim());
+        const lowered = normalised.toLowerCase();
+        const marker = 'subjects/';
+        const index = lowered.lastIndexOf(marker);
+        if (index === -1) {
+          return normalised.replace(/^\//, '');
+        }
+        return normalised.slice(index + marker.length);
+      };
+
+      const subjectRelativePath = findSubjectRelativePath(filePath);
+      const segments = subjectRelativePath.split('/').filter((segment) => segment.length > 0);
+      const fileName = segments.pop() ?? '';
+      const baseName = fileName.replace(/\.[^.]+$/, '') || fileName;
+      const directory = segments.join('/');
+      const assetBaseSegments = ['subject-assets', ...segments, baseName];
+      const assetBasePath = assetBaseSegments.filter((segment) => segment.length > 0).join('/');
+      const sourceLinePath = subjectRelativePath ? `subjects/${subjectRelativePath}` : normaliseSlashes(filePath);
+      const outputRelativePath = `src/data/subjectExtracts/subjects/${
+        directory ? `${directory}/` : ''
+      }${baseName}.txt`;
+
+      const selections = imageSelections[key] ?? {};
+      const selectedImages = result.images.filter((image) => selections[image.path]?.selected);
+
+      const imageEntries = selectedImages.map((image) => {
+        const selection = selections[image.path];
+        const caption = selection?.caption?.trim() || `Figure from page ${image.page}`;
+        const fileSegments = normaliseSlashes(image.path).split('/');
+        const fileSegment = fileSegments[fileSegments.length - 1];
+        const targetPath = `${assetBasePath}/${fileSegment}`.replace(/\/+/g, '/');
+        return { image, caption, targetPath };
+      });
+
+      const textContent = result.text.trim();
+      const imageMarkdownLines = imageEntries.map(
+        ({ caption, targetPath }) => `![${caption}](/${targetPath.replace(/^\/+/, '')})`
+      );
+      const markdownSections: string[] = [];
+      if (textContent) {
+        markdownSections.push(textContent);
+      }
+      if (imageMarkdownLines.length > 0) {
+        markdownSections.push(imageMarkdownLines.join('\n'));
+      }
+
+      const markdownBody = markdownSections.join('\n\n');
+      const finalMarkdown = [`# Extracted content`, `Source: ${sourceLinePath}`]
+        .concat(markdownBody ? ['', markdownBody] : [])
+        .join('\n')
+        .concat('\n');
+
+      setSaveStatuses((prev) => ({
+        ...prev,
+        [key]: { state: 'saving', message: 'Saving extract…' },
+      }));
+
+      try {
+        const response = await fetch('/api/save-extract', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            filePath,
+            markdown: finalMarkdown,
+            assets: imageEntries.map(({ image, targetPath }) => ({
+              originalPath: image.path,
+              targetPath,
+            })),
+          }),
+        });
+
+        if (!response.ok) {
+          const details = await response.text();
+          throw new Error(details || 'Failed to save extract');
+        }
+
+        setSaveStatuses((prev) => ({
+          ...prev,
+          [key]: {
+            state: 'success',
+            message: `Saved extract to ${outputRelativePath}`,
+          },
+        }));
+        setToast({
+          tone: 'success',
+          message: `Saved extract to ${outputRelativePath}`,
+        });
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : 'Unexpected error while saving extract.';
+        setSaveStatuses((prev) => ({
+          ...prev,
+          [key]: {
+            state: 'error',
+            message,
+          },
+        }));
+        setToast({ tone: 'error', message });
+      }
+    },
+    [imageSelections, results]
+  );
+
   if (subjectsWithPdfs.length === 0) {
     return (
       <div className={styles.page}>
@@ -178,6 +348,16 @@ const SubjectPdfBrowserPage: React.FC = () => {
 
   return (
     <div className={styles.page}>
+      {toast && (
+        <div
+          className={`${styles.toast} ${
+            toast.tone === 'success' ? styles.toastSuccess : styles.toastError
+          }`}
+          role="status"
+        >
+          {toast.message}
+        </div>
+      )}
       <header className={styles.header}>
         <h1 className={styles.title}>Subject PDF browser</h1>
         <p className={styles.lead}>
@@ -215,6 +395,9 @@ const SubjectPdfBrowserPage: React.FC = () => {
             const isLoading = status === 'loading';
             const result = results[key];
             const selections = imageSelections[key] ?? {};
+            const saveStatus = saveStatuses[key]?.state ?? 'idle';
+            const saveMessage = saveStatuses[key]?.message;
+            const isSaving = saveStatus === 'saving';
 
             return (
               <article key={key} className={styles.resourceCard}>
@@ -236,9 +419,24 @@ const SubjectPdfBrowserPage: React.FC = () => {
                   >
                     {isLoading ? 'Running extraction…' : 'Run Extraction'}
                   </button>
+                  {resource.filePath && (
+                    <button
+                      type="button"
+                      className={styles.saveButton}
+                      onClick={() => handleSaveExtract(resource)}
+                      disabled={!result || isSaving}
+                    >
+                      {isSaving ? 'Saving…' : 'Save Extract'}
+                    </button>
+                  )}
                   <span className={`${styles.status} ${statusClassName[status]}`}>
                     {message ?? (status === 'idle' ? 'Ready to extract.' : '')}
                   </span>
+                  {result && (saveStatus !== 'idle' || (saveMessage && saveMessage.length > 0)) && (
+                    <span className={`${styles.status} ${saveStatusClassName[saveStatus]}`}>
+                      {saveMessage ?? ''}
+                    </span>
+                  )}
                 </div>
                 {result && (
                   <div className={styles.previewLayout}>

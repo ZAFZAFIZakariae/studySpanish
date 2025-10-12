@@ -5,3 +5,4 @@ dist
 coverage
 npm-debug.log*
 subjects/tmp-extracted-images/
+public/subject-assets/
