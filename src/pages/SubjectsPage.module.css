@@ -351,6 +351,13 @@
   margin: 0;
 }
 
+.contentHeadingGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
 .contentHeading {
   margin: 0;
   font-weight: 700;
@@ -371,6 +378,25 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--ui-text-secondary, #475569);
+}
+
+.contentHeadingPdfButton {
+  border: none;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.contentHeadingPdfButton:hover,
+.contentHeadingPdfButton:focus-visible {
+  background: rgba(37, 99, 235, 0.2);
+  color: #1e40af;
+  outline: none;
 }
 
 .contentListBlock {

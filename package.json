@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "dexie": "^3.2.4",
+    "pdfjs-dist": "^5.4.296",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
+    "react-pdf": "^10.2.0",
     "react-router-dom": "^6.22.3",
     "remark-parse": "^10.0.2",
     "unified": "^10.1.2",
