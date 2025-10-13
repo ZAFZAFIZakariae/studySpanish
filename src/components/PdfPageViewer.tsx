@@ -8,7 +8,15 @@ type PdfPageViewerProps = {
   onClose: () => void;
 };
 
-type ReactPdfModule = typeof import('react-pdf');
+type ReactPdfModule = {
+  Document: React.ComponentType<Record<string, unknown>>;
+  Page: React.ComponentType<Record<string, unknown>>;
+  pdfjs: {
+    GlobalWorkerOptions: {
+      workerSrc: unknown;
+    };
+  };
+};
 
 let reactPdfModulePromise: Promise<ReactPdfModule> | null = null;
 
@@ -20,10 +28,10 @@ const loadReactPdfModule = async (): Promise<ReactPdfModule> => {
       if (workerSrc) {
         module.pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
       }
-      return module;
-    });
+      return module as unknown as ReactPdfModule;
+    }) as Promise<ReactPdfModule>;
   }
-  return reactPdfModulePromise;
+  return reactPdfModulePromise!;
 };
 
 const LazyDocument = React.lazy(() => loadReactPdfModule().then((module) => ({ default: module.Document })));
