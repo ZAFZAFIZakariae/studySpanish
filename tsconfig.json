@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["node"]
+    "types": ["node", "express", "react-pdf"]
   },
   "include": ["src"],
   "exclude": [
