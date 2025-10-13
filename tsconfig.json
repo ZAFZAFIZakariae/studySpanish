@@ -17,7 +17,7 @@
       "@/*": ["src/*"],
       "react-pdf": ["src/types/react-pdf"]
     },
-    "types": ["node", "express"]
+    "types": ["node", "vite/client"]
   },
   "include": ["src"],
   "exclude": [
