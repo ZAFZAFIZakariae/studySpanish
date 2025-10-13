@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["node", "express"]
+    "types": ["node"]
   },
   "include": ["src"],
   "exclude": [
