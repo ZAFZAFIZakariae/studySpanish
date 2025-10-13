@@ -121,7 +121,9 @@ const PdfPageViewer: React.FC<PdfPageViewerProps> = ({ file, pageNumber, title, 
                   width={containerWidth}
                   renderAnnotationLayer={false}
                   renderTextLayer
-                  onRenderError={(error) => setLoadError(error?.message ?? 'Unknown error')}
+                  onRenderError={(error: Error | undefined) =>
+                    setLoadError(error?.message ?? 'Unknown error')
+                  }
                 />
               </LazyDocument>
             )}
