@@ -14,9 +14,10 @@
     "noEmit": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "react-pdf": ["src/types/react-pdf"]
     },
-    "types": ["node"]
+    "types": ["node", "express"]
   },
   "include": ["src"],
   "exclude": [
