@@ -23,3 +23,9 @@ declare module 'react-pdf/dist/index.js' {
   export const Page: ReactPdfModule['Page'];
   export const pdfjs: ReactPdfModule['pdfjs'];
 }
+
+declare module 'react-pdf/dist/esm/entry.vite' {
+  export const Document: ReactPdfModule['Document'];
+  export const Page: ReactPdfModule['Page'];
+  export const pdfjs: ReactPdfModule['pdfjs'];
+}
