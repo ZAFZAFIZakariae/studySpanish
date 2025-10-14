@@ -6,8 +6,8 @@
     "predev": "python3 scripts/run_content_pipeline.py",
     "dev": "vite",
     "build": "tsc --project tsconfig.build.json && vite build",
-    "prepreview": "npm run build",
-    "preview": "vite preview",
+    "preview": "npm run serve",
+    "serve": "node scripts/simple-serve.js",
     "test": "jest",
     "check:assets": "node scripts/check-assets.mjs",
     "check:figures": "node scripts/check-figures.mjs"
