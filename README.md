@@ -32,6 +32,15 @@ A clean, coach-style workspace for organising B1–C1 Spanish practice. The app 
    npm run test    # Run the Jest test suite
    ```
 
+### Working offline
+
+`npm run preview` invokes the `prepreview` script, which in turn runs `npm run build` to type-check and bundle the project before
+starting Vite's preview server. The build relies on React, React Router, Dexie, and the other dependencies declared in
+`package.json`. If the environment does not already have those packages available (for example, network access is blocked and
+`npm install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module 'react'" or
+"JSX element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or vendored locally
+before running the preview command in an offline setting.
+
 ## Verification checklist
 
 To confirm the app is healthy, run the test suite followed by a production build:
