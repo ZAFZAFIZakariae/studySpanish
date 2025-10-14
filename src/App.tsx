@@ -1,48 +1,16 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/Home';
-import DashboardPage from './pages/DashboardPage';
-import LessonPage from './pages/LessonPage';
-import FlashcardsPage from './pages/FlashcardsPage';
-import ContentManagerPage from './pages/ContentManagerPage';
-import { useHighContrast } from './hooks/useHighContrast';
-import AppShell from './components/layout/AppShell';
-import SubjectsPage from './pages/SubjectsPage';
-import SpanishPage from './pages/SpanishPage';
-import ParametersPage from './pages/ParametersPage';
-import SubjectPdfBrowserPage from './pages/SubjectPdfBrowserPage';
-
-const App: React.FC = () => {
-  const { enabled, toggle } = useHighContrast();
-
-  return (
-    <BrowserRouter>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-      <AppShell highContrastEnabled={enabled} onToggleHighContrast={toggle}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/spanish" element={<SpanishPage />} />
-          <Route path="/subjects" element={<SubjectsPage />} />
-          <Route path="/subject-pdfs" element={<SubjectPdfBrowserPage />} />
-          <Route path="/parameters" element={<ParametersPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/flashcards" element={<FlashcardsPage />} />
-          <Route path="/content-manager" element={<ContentManagerPage />} />
-          <Route path="/lessons/:slug" element={<LessonPage />} />
-          <Route
-            path="*"
-            element={
-              <p role="alert" className="ui-alert ui-alert--danger">
-                Page not found. Use the navigation links above to continue learning.
-              </p>
-            }
-          />
-        </Routes>
-      </AppShell>
-    </BrowserRouter>
-  );
-};
+const App = () => (
+  <main className="app-placeholder">
+    <h1>Study Compass</h1>
+    <p>
+      The interactive React interface has been replaced by a lightweight static preview. Run
+      <code>npm run preview</code> and open <code>preview.html</code> to explore the available subject
+      extracts directly.
+    </p>
+    <p>
+      The original React components remain in the repository history if you ever need to reference
+      them again.
+    </p>
+  </main>
+);
 
 export default App;
