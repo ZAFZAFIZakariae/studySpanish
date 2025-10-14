@@ -8,21 +8,16 @@ type PdfPageViewerProps = {
   onClose: () => void;
 };
 
-type ReactPdfModule = {
-  Document: React.ComponentType<Record<string, unknown>>;
-  Page: React.ComponentType<Record<string, unknown>>;
-  pdfjs: {
-    GlobalWorkerOptions: {
-      workerSrc: unknown;
-    };
-  };
-};
+type ReactPdfModule = Pick<
+  typeof import('react-pdf'),
+  'Document' | 'Page' | 'pdfjs'
+>;
 
 let reactPdfModulePromise: Promise<ReactPdfModule> | null = null;
 
 const loadReactPdfModule = async (): Promise<ReactPdfModule> => {
   if (!reactPdfModulePromise) {
-    reactPdfModulePromise = import('react-pdf').then(async (module) => {
+    reactPdfModulePromise = import('react-pdf/dist/index.js').then(async (module) => {
       const workerModule = await import('pdfjs-dist/build/pdf.worker.min.mjs?url');
       const workerSrc = typeof workerModule === 'string' ? workerModule : workerModule.default;
       if (workerSrc) {
