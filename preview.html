@@ -3,161 +3,473 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Subject Extract Preview</title>
+    <meta name="theme-color" content="#0f172a" />
+    <title>Study Compass Preview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#edf5ff',
+                100: '#dbeafe',
+                200: '#bfdcfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+              },
+            },
+            fontFamily: {
+              display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+              body: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" />
     <style>
       :root {
-        color-scheme: light dark;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        background-color: #f5f5f5;
+        color-scheme: light;
+        --sidebar-width: 18rem;
+        --gradient-start: #f8fafc;
+        --gradient-end: #eef2ff;
       }
 
       body {
         margin: 0;
-        padding: 1.5rem;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.9));
         min-height: 100vh;
+        background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 55%),
+          linear-gradient(180deg, var(--gradient-start), var(--gradient-end));
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       }
 
-      h1 {
-        margin-top: 0;
-        font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
       }
 
-      main {
-        display: grid;
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(148, 163, 184, 0.5);
+        border-radius: 9999px;
+      }
+
+      .sidebar-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.65rem 0.85rem;
+        border-radius: 0.9rem;
+        font-weight: 500;
+        color: rgb(226 232 240);
+        text-decoration: none;
+        transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
+      }
+
+      .sidebar-link:hover,
+      .sidebar-link:focus-visible {
+        background-color: rgba(148, 163, 184, 0.18);
+        color: #fff;
+        outline: none;
+        transform: translateX(2px);
+      }
+
+      .sidebar-link[data-active='true'] {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0.05));
+        color: #fff;
+      }
+
+      .resource-card {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 1.5rem;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        box-shadow: 0 16px 30px rgba(15, 23, 42, 0.05);
+        transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         gap: 1.5rem;
-        grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-        align-items: start;
-      }
-
-      @media (max-width: 960px) {
-        main {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .panel {
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 12px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
         padding: 1.5rem;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        backdrop-filter: blur(5px);
       }
 
-      .panel h2 {
-        margin-top: 0;
+      .resource-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 45px rgba(15, 23, 42, 0.12);
+        border-color: rgba(59, 130, 246, 0.4);
+      }
+
+      .resource-card:focus-visible {
+        outline: 2px solid rgba(59, 130, 246, 0.65);
+        outline-offset: 4px;
+      }
+
+      .resource-card:focus-within {
+        border-color: rgba(59, 130, 246, 0.55);
+        box-shadow: 0 22px 44px rgba(37, 99, 235, 0.16);
+      }
+
+      .resource-card[data-active='true'] {
+        border-color: rgba(59, 130, 246, 0.75);
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.18);
+      }
+
+      .resource-card .card-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .resource-card .card-title {
+        font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
         font-size: 1.1rem;
-        letter-spacing: 0.02em;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 0;
       }
 
-      .status {
+      .resource-card .card-description {
+        margin: 0.35rem 0 0;
+        color: #64748b;
         font-size: 0.9rem;
-        color: #555;
-        margin-top: 0.5rem;
-        line-height: 1.4;
+        line-height: 1.5;
       }
 
-      select,
-      button {
-        width: 100%;
-        padding: 0.6rem 0.75rem;
-        font-size: 1rem;
-        border-radius: 0.6rem;
-        border: 1px solid rgba(0, 0, 0, 0.15);
-        background-color: rgba(255, 255, 255, 0.85);
+      .resource-card .card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .resource-card .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #94a3b8;
+      }
+
+      .resource-card .card-meta {
+        max-width: 70%;
+        word-break: break-word;
+      }
+
+      .card-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        width: 3rem;
+        height: 3rem;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(37, 99, 235, 0.35));
+        color: #1d4ed8;
+      }
+
+      .card-action {
+        border: none;
+        border-radius: 9999px;
+        padding: 0.6rem 1.1rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #fff;
+        transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
         cursor: pointer;
       }
 
-      button:hover,
-      select:hover {
-        border-color: rgba(59, 130, 246, 0.6);
+      .card-action:hover,
+      .card-action:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+        outline: none;
       }
 
-      #content article {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #1a1a1a;
-        white-space: pre-wrap;
+      .card-action:disabled {
+        cursor: not-allowed;
+        filter: grayscale(0.3);
+        opacity: 0.65;
+        box-shadow: none;
       }
 
-      .notes {
-        padding-left: 1.25rem;
+      .detail-panel {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 1.75rem;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+        transition: opacity 220ms ease, transform 220ms ease;
+        opacity: 0;
+        transform: translateY(18px);
+        pointer-events: none;
       }
 
-      .notes li {
-        margin-bottom: 0.25rem;
+      .detail-panel[data-ready='true'] {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
 
-      .metadata dt {
-        font-weight: 600;
-        margin-top: 0.75rem;
+      .detail-panel[data-loading='true'] {
+        opacity: 0.65;
       }
 
-      .metadata dd {
-        margin: 0.25rem 0 0.5rem 0;
-        color: #333;
+      .detail-panel button:disabled {
+        cursor: not-allowed;
       }
 
-      .markdown-body {
-        font-size: 1rem;
-        line-height: 1.65;
-        color: #1f1f1f;
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
       }
 
-      .markdown-body pre,
-      .markdown-body code {
-        background-color: rgba(15, 23, 42, 0.05);
+      .prose :where(code):not(:where([class~='not-prose'] *)) {
+        background: rgba(15, 23, 42, 0.06);
+        color: inherit;
         padding: 0.15rem 0.35rem;
-        border-radius: 0.3rem;
-        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        border-radius: 0.45rem;
+        font-size: 0.95em;
       }
 
-      .markdown-body pre {
-        overflow-x: auto;
-        padding: 0.75rem;
+      .prose :where(pre):not(:where([class~='not-prose'] *)) {
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.12));
+        border-radius: 1rem;
+        padding: 1.1rem 1.25rem;
+        border: 1px solid rgba(148, 163, 184, 0.25);
       }
 
-      .hidden {
-        display: none;
+      .prose :where(img):not(:where([class~='not-prose'] *)) {
+        border-radius: 1rem;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+      }
+
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 1.5rem;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        backdrop-filter: blur(18px);
       }
     </style>
   </head>
-  <body>
-    <header>
-      <h1>Subject Extract Preview</h1>
-      <p class="status" id="status">Loading subject extracts…</p>
-    </header>
-    <main>
-      <section class="panel">
-        <h2>Available extracts</h2>
-        <label for="extractSelect" class="hidden">Choose an extract</label>
-        <select id="extractSelect" aria-label="Choose an extract"></select>
-        <button id="openSource" type="button" disabled>Open original asset</button>
-      </section>
-      <section class="panel" id="content">
-        <h2 id="contentTitle">Extract details</h2>
-        <dl class="metadata">
-          <dt>Source asset</dt>
-          <dd id="source">—</dd>
-          <dt class="notes-heading hidden">Extraction notes</dt>
-          <dd>
-            <ul class="notes" id="notes"></ul>
-          </dd>
-        </dl>
-        <article id="rendered" class="markdown-body"></article>
-      </section>
-    </main>
+  <body class="text-slate-900">
+    <div
+      id="sidebarBackdrop"
+      class="fixed inset-0 z-30 bg-slate-900/40 opacity-0 transition-opacity duration-300 pointer-events-none lg:hidden"
+    ></div>
+    <aside
+      id="sidebar"
+      class="fixed inset-y-0 left-0 z-40 flex w-[--sidebar-width] transform flex-col border-r border-white/10 bg-slate-900/95 px-4 pb-6 pt-8 shadow-2xl backdrop-blur-lg transition-transform duration-300 ease-out -translate-x-full lg:static lg:translate-x-0"
+      aria-label="Primary"
+    >
+      <div class="flex items-center gap-3 px-2">
+        <div class="grid h-12 w-12 place-items-center rounded-2xl bg-primary-500/20 text-xl font-semibold text-primary-200">
+          SC
+        </div>
+        <div>
+          <p class="font-display text-lg font-semibold text-white">Study Compass</p>
+          <p class="text-sm text-slate-300/80">Spanish revision toolkit</p>
+        </div>
+      </div>
+      <nav class="mt-8 flex flex-1 flex-col gap-1" aria-label="Sections">
+        <a class="sidebar-link" href="#" data-active="false">
+          <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4H9v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+          </svg>
+          Dashboard
+        </a>
+        <a class="sidebar-link" href="#" data-active="true" aria-current="page">
+          <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+          Subjects
+        </a>
+        <a class="sidebar-link" href="#" data-active="false">
+          <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16M9 7V5a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2" />
+            <circle cx="7" cy="17" r="2" />
+            <circle cx="17" cy="17" r="2" />
+          </svg>
+          Exams
+        </a>
+        <a class="sidebar-link" href="#" data-active="false">
+          <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5.5a2 2 0 0 1 2-2h8.5L20 8v10.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 3.5V8h4" />
+          </svg>
+          Notebooks
+        </a>
+        <a class="sidebar-link" href="#" data-active="false">
+          <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 3.4 15a1.65 1.65 0 0 0-1.51-1H2a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 3.4 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 7 3.4V3.3a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 12 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 18.6 8a1.65 1.65 0 0 0 1.51 1H20a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 2z" />
+          </svg>
+          Settings
+        </a>
+      </nav>
+      <div class="mt-auto rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-slate-300/70">
+        <p class="font-semibold text-slate-200">Need the full app?</p>
+        <p class="mt-1 leading-relaxed">
+          Run <span class="font-mono text-[0.75rem] text-primary-200">npm run preview</span> to explore subjects locally with live data.
+        </p>
+      </div>
+    </aside>
+    <div class="flex min-h-screen w-full flex-col bg-transparent lg:pl-[--sidebar-width]">
+      <header
+        class="sticky top-0 z-20 border-b border-white/40 bg-white/65 px-4 py-4 backdrop-blur-xl transition-shadow sm:px-6 lg:px-10"
+      >
+        <div class="flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <button
+              id="sidebarToggle"
+              type="button"
+              class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm transition hover:border-primary-200 hover:text-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500 lg:hidden"
+              aria-expanded="false"
+              aria-controls="sidebar"
+              aria-label="Toggle navigation"
+            >
+              <svg aria-hidden="true" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            </button>
+            <div>
+              <p class="font-display text-lg font-semibold text-slate-900">Subjects &amp; resources</p>
+              <p class="text-sm text-slate-500">Curated study extracts at your fingertips</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="relative hidden w-full max-w-sm items-center sm:flex">
+              <svg
+                aria-hidden="true"
+                class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m20 20-3-3" />
+              </svg>
+              <label class="sr-only" for="searchInput">Search subjects</label>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Search grammar, topics, skills…"
+                class="w-full rounded-2xl border border-slate-200 bg-white/90 py-2.5 pl-12 pr-4 text-sm text-slate-700 shadow-sm transition placeholder:text-slate-400 focus:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-200"
+              />
+            </div>
+            <button
+              id="profileButton"
+              type="button"
+              class="relative grid h-12 w-12 place-items-center rounded-2xl border border-white/60 bg-gradient-to-br from-white/80 via-white/40 to-white/10 text-sm font-semibold text-slate-600 shadow-sm transition hover:border-primary-200 hover:text-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500"
+              aria-label="Open profile"
+            >
+              <span class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-500/5"></span>
+              <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between gap-4 sm:hidden">
+          <div class="relative flex w-full items-center">
+            <svg
+              aria-hidden="true"
+              class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="m20 20-3-3" />
+            </svg>
+            <label class="sr-only" for="searchInputMobile">Search subjects</label>
+            <input
+              id="searchInputMobile"
+              type="search"
+              placeholder="Search grammar, topics, skills…"
+              class="w-full rounded-2xl border border-slate-200 bg-white/90 py-2.5 pl-12 pr-4 text-sm text-slate-700 shadow-sm transition placeholder:text-slate-400 focus:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-200"
+              aria-describedby="resultsCount"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 px-4 pb-10 pt-8 sm:px-6 lg:px-10">
+        <div class="glass-panel border border-white/60 px-6 py-5 shadow-lg">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p id="status" class="text-sm font-medium text-slate-600">Loading subject extracts…</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <span class="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1 text-primary-700 shadow-sm" id="resultsCount">
+                —
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)]">
+          <section aria-labelledby="subjectsHeading" class="space-y-6">
+            <div class="flex items-center justify-between">
+              <h1 id="subjectsHeading" class="font-display text-2xl font-semibold text-slate-900">Browse extracts</h1>
+            </div>
+            <div id="cardGrid" class="grid gap-6 sm:grid-cols-2 2xl:grid-cols-3" role="list"></div>
+            <p id="noResults" class="hidden rounded-2xl border border-dashed border-slate-300/70 bg-white/70 p-6 text-sm text-slate-500">
+              No subjects match your search. Try a different keyword.
+            </p>
+          </section>
+          <section aria-labelledby="detailsHeading" class="detail-panel p-8" id="detailsPanel" data-ready="false" data-loading="false">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h2 id="contentTitle" class="font-display text-xl font-semibold text-slate-900">Select a subject</h2>
+                <p id="detailSubtitle" class="mt-1 text-sm text-slate-500">
+                  Choose a card from the grid to load its study extract.
+                </p>
+              </div>
+              <button
+                id="openSource"
+                type="button"
+                class="card-action text-sm"
+                disabled
+                aria-disabled="true"
+              >
+                Open original
+                <svg aria-hidden="true" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7M21 3l-9 9M5 5v14h14" />
+                </svg>
+              </button>
+            </div>
+            <dl class="mt-6 space-y-4 text-sm text-slate-600">
+              <div>
+                <dt class="font-semibold uppercase tracking-wide text-slate-400">Source asset</dt>
+                <dd id="source" class="mt-1 break-words text-slate-700">—</dd>
+              </div>
+            </dl>
+            <div id="notesSection" class="mt-5 hidden">
+              <h3 id="notesHeading" class="text-sm font-semibold uppercase tracking-wide text-slate-400">Extraction notes</h3>
+              <ul id="notes" class="mt-2 space-y-2 list-disc pl-5 text-sm text-slate-600"></ul>
+            </div>
+            <article id="rendered" class="prose prose-slate mt-8 max-w-none"></article>
+          </section>
+        </div>
+      </main>
+    </div>
 
     <script type="module">
-      const select = document.getElementById('extractSelect');
-      const status = document.getElementById('status');
-      const sourceEl = document.getElementById('source');
-      const notesEl = document.getElementById('notes');
-      const notesHeading = document.querySelector('.notes-heading');
-      const rendered = document.getElementById('rendered');
-      const openSourceButton = document.getElementById('openSource');
-
       const headerRegex = /^# Extracted content\r?\nSource: (?<source>subjects\/[\s\S]+?)\r?\n(?:Notes:\r?\n(?<notes>(?:- .+\r?\n)+))?/;
 
       const encodePath = (path) =>
@@ -165,6 +477,25 @@
           .split('/')
           .map((segment) => encodeURIComponent(segment))
           .join('/');
+
+      const searchInput = document.getElementById('searchInput');
+      const searchInputMobile = document.getElementById('searchInputMobile');
+      const status = document.getElementById('status');
+      const cardGrid = document.getElementById('cardGrid');
+      const noResults = document.getElementById('noResults');
+      const resultsCount = document.getElementById('resultsCount');
+      const detailPanel = document.getElementById('detailsPanel');
+      const detailTitle = document.getElementById('contentTitle');
+      const detailSubtitle = document.getElementById('detailSubtitle');
+      const sourceEl = document.getElementById('source');
+      const notesEl = document.getElementById('notes');
+      const notesSection = document.getElementById('notesSection');
+      const notesHeading = document.getElementById('notesHeading');
+      const rendered = document.getElementById('rendered');
+      const openSourceButton = document.getElementById('openSource');
+      const sidebar = document.getElementById('sidebar');
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 
       const fetchManifest = async () => {
         const response = await fetch('/subject-extracts.json', { cache: 'no-store' });
@@ -214,6 +545,7 @@
 
         if (extract.notes.length > 0) {
           notesHeading?.classList.remove('hidden');
+          notesSection?.classList.remove('hidden');
           notesEl.innerHTML = '';
           for (const note of extract.notes) {
             const li = document.createElement('li');
@@ -221,7 +553,7 @@
             notesEl.appendChild(li);
           }
         } else {
-          notesHeading?.classList.add('hidden');
+          notesSection?.classList.add('hidden');
           notesEl.innerHTML = '';
         }
 
@@ -244,15 +576,264 @@
       const updateSourceButton = (extract) => {
         if (extract?.source) {
           openSourceButton.disabled = false;
+          openSourceButton.setAttribute('aria-disabled', 'false');
           openSourceButton.onclick = () => {
             const url = encodePath(`/${extract.source}`);
             window.open(url, '_blank', 'noopener');
           };
         } else {
           openSourceButton.disabled = true;
+          openSourceButton.setAttribute('aria-disabled', 'true');
           openSourceButton.onclick = null;
         }
       };
+
+      const cardRegistry = new Map();
+      let allFiles = [];
+      let activePath = '';
+
+      const formatCount = (count) => `${count} ${count === 1 ? 'resource' : 'resources'}`;
+
+      const toTitleCase = (value) => value.replace(/[-_]/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+      const deriveDescription = (file) => {
+        if (file.description) return file.description;
+        if (!file.path) return 'Preview extracted study material.';
+        const parts = file.path.split('/').filter(Boolean);
+        if (parts.length >= 2) {
+          const focus = parts.slice(-2, -1)[0];
+          return `Resource from ${toTitleCase(focus)}.`;
+        }
+        return 'Preview extracted study material.';
+      };
+
+      const createCard = (file) => {
+        const card = document.createElement('article');
+        card.className = 'resource-card';
+        card.dataset.active = 'false';
+        card.dataset.path = file.path;
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `Open ${file.label}`);
+
+        const header = document.createElement('div');
+        header.className = 'card-content';
+
+        const icon = document.createElement('div');
+        icon.className = 'card-icon';
+        icon.innerHTML = `
+          <svg aria-hidden="true" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v14H4z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M8 13h4" />
+          </svg>`;
+
+        const titleWrap = document.createElement('div');
+        titleWrap.className = 'card-text';
+
+        const title = document.createElement('h3');
+        title.className = 'card-title';
+        title.textContent = file.label;
+
+        const description = document.createElement('p');
+        description.className = 'card-description';
+        description.textContent = file.description;
+
+        titleWrap.append(title, description);
+        header.append(icon, titleWrap);
+
+        const footer = document.createElement('div');
+        footer.className = 'card-footer';
+
+        const meta = document.createElement('p');
+        meta.className = 'card-meta';
+        meta.textContent = file.path ? file.path.replace(/^subjects\//, '') : '—';
+
+        const action = document.createElement('button');
+        action.type = 'button';
+        action.className = 'card-action';
+        action.textContent = 'View extract';
+        const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        arrow.setAttribute('aria-hidden', 'true');
+        arrow.setAttribute('width', '16');
+        arrow.setAttribute('height', '16');
+        arrow.setAttribute('fill', 'none');
+        arrow.setAttribute('stroke', 'currentColor');
+        arrow.setAttribute('stroke-width', '1.6');
+        arrow.setAttribute('viewBox', '0 0 24 24');
+        const arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        arrowPath.setAttribute('stroke-linecap', 'round');
+        arrowPath.setAttribute('stroke-linejoin', 'round');
+        arrowPath.setAttribute('d', 'M5 12h14M13 6l6 6-6 6');
+        arrow.appendChild(arrowPath);
+        action.appendChild(arrow);
+
+        footer.append(meta, action);
+        card.append(header, footer);
+
+        const selectCard = () => handleCardSelection(file);
+        card.addEventListener('click', selectCard);
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            selectCard();
+          }
+        });
+        action.addEventListener('click', (event) => {
+          event.stopPropagation();
+          selectCard();
+        });
+
+        return card;
+      };
+
+      const updateResultsView = (items) => {
+        resultsCount.textContent = items.length ? formatCount(items.length) : 'No matches';
+        if (items.length === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      };
+
+      const setActiveCard = (path) => {
+        activePath = path;
+        cardRegistry.forEach((card, cardPath) => {
+          card.dataset.active = cardPath === path ? 'true' : 'false';
+          if (cardPath === path) {
+            card.setAttribute('aria-current', 'true');
+          } else {
+            card.removeAttribute('aria-current');
+          }
+        });
+      };
+
+      const renderCardGrid = (items) => {
+        cardGrid.innerHTML = '';
+        cardRegistry.clear();
+        for (const file of items) {
+          const card = createCard(file);
+          cardRegistry.set(file.path, card);
+          cardGrid.appendChild(card);
+        }
+        setActiveCard(activePath);
+        updateResultsView(items);
+      };
+
+      const handleCardSelection = async (file) => {
+        if (!file?.path) return;
+        if (file.path === activePath && detailPanel.dataset.loading === 'false') {
+          return;
+        }
+
+        setActiveCard(file.path);
+        detailTitle.textContent = file.label;
+        detailSubtitle.textContent = file.description;
+        detailPanel.dataset.ready = 'false';
+        detailPanel.dataset.loading = 'true';
+        status.textContent = `Loading ${file.label}…`;
+        rendered.innerHTML = '';
+        openSourceButton.disabled = true;
+        openSourceButton.setAttribute('aria-disabled', 'true');
+        openSourceButton.onclick = null;
+
+        try {
+          const raw = await fetchExtract(file.path);
+          const extract = parseExtract(raw);
+          await renderExtract(extract);
+          updateSourceButton(extract);
+          status.textContent = `Showing ${file.label}`;
+          detailPanel.dataset.ready = 'true';
+        } catch (error) {
+          console.error(error);
+          status.textContent = `Unable to load ${file.path}`;
+          sourceEl.textContent = 'Unavailable';
+          rendered.textContent = '';
+          detailPanel.dataset.ready = 'false';
+        } finally {
+          detailPanel.dataset.loading = 'false';
+        }
+      };
+
+      const applyFilter = () => {
+        const query = (searchInput?.value || '').trim().toLowerCase() || (searchInputMobile?.value || '').trim().toLowerCase();
+        const items = query
+          ? allFiles.filter((file) => {
+              const haystacks = [file.label, file.description, file.path].filter(Boolean);
+              return haystacks.some((text) => text.toLowerCase().includes(query));
+            })
+          : allFiles;
+        renderCardGrid(items);
+        if (items.length === 0) {
+          status.textContent = `No matches for “${query}”.`;
+        } else if (query) {
+          status.textContent = `Showing ${formatCount(items.length)} for “${query}”.`;
+        } else {
+          status.textContent = 'Browse available study extracts.';
+        }
+      };
+
+      const syncSearchInputs = (event) => {
+        const value = event.target.value;
+        if (event.target === searchInput && searchInputMobile) {
+          searchInputMobile.value = value;
+        } else if (event.target === searchInputMobile && searchInput) {
+          searchInput.value = value;
+        }
+        applyFilter();
+      };
+
+      const syncSidebarWithViewport = () => {
+        if (window.innerWidth >= 1024) {
+          sidebar.classList.remove('-translate-x-full');
+          sidebarBackdrop.classList.add('pointer-events-none');
+          sidebarBackdrop.classList.add('opacity-0');
+          sidebarToggle?.setAttribute('aria-expanded', 'true');
+          sidebar.removeAttribute('aria-hidden');
+        } else {
+          sidebar.classList.add('-translate-x-full');
+          sidebarBackdrop.classList.add('pointer-events-none');
+          sidebarBackdrop.classList.add('opacity-0');
+          sidebarToggle?.setAttribute('aria-expanded', 'false');
+          sidebar.setAttribute('aria-hidden', 'true');
+        }
+      };
+
+      const setSidebarOpen = (open) => {
+        if (window.innerWidth >= 1024) return;
+        if (open) {
+          sidebar.classList.remove('-translate-x-full');
+          sidebarBackdrop.classList.remove('pointer-events-none');
+          sidebarBackdrop.classList.remove('opacity-0');
+          sidebarToggle?.setAttribute('aria-expanded', 'true');
+          sidebar.removeAttribute('aria-hidden');
+        } else {
+          sidebar.classList.add('-translate-x-full');
+          sidebarBackdrop.classList.add('pointer-events-none');
+          sidebarBackdrop.classList.add('opacity-0');
+          sidebarToggle?.setAttribute('aria-expanded', 'false');
+          sidebar.setAttribute('aria-hidden', 'true');
+        }
+      };
+
+      sidebarToggle?.addEventListener('click', () => {
+        const isOpen = !sidebar.classList.contains('-translate-x-full');
+        setSidebarOpen(!isOpen);
+      });
+
+      sidebarBackdrop?.addEventListener('click', () => setSidebarOpen(false));
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && window.innerWidth < 1024 && !sidebar.classList.contains('-translate-x-full')) {
+          setSidebarOpen(false);
+          sidebarToggle?.focus();
+        }
+      });
+
+      window.addEventListener('resize', syncSidebarWithViewport);
+      syncSidebarWithViewport();
+
+      searchInput?.addEventListener('input', syncSearchInputs);
+      searchInputMobile?.addEventListener('input', syncSearchInputs);
 
       const initialise = async () => {
         try {
@@ -261,41 +842,28 @@
 
           if (files.length === 0) {
             status.textContent = 'No subject extracts were found.';
+            updateResultsView([]);
             return;
           }
 
-          for (const file of files) {
-            const option = document.createElement('option');
-            option.value = file.path;
-            option.textContent = file.label;
-            select.appendChild(option);
+          allFiles = files.map((file) => ({
+            ...file,
+            label: file.label || file.path?.split('/').pop() || 'Untitled resource',
+            description: deriveDescription(file),
+          }));
+
+          renderCardGrid(allFiles);
+          status.textContent = 'Browse available study extracts.';
+
+          // Automatically load the first extract
+          const first = allFiles[0];
+          if (first) {
+            handleCardSelection(first);
           }
-
-          select.addEventListener('change', async () => {
-            const path = select.value;
-            if (!path) return;
-            status.textContent = `Loading ${path}…`;
-            rendered.textContent = '';
-            openSourceButton.disabled = true;
-            openSourceButton.onclick = null;
-            try {
-              const raw = await fetchExtract(path);
-              const extract = parseExtract(raw);
-              await renderExtract(extract);
-              updateSourceButton(extract);
-              status.textContent = `Showing ${path}`;
-            } catch (error) {
-              console.error(error);
-              status.textContent = `Unable to load ${path}`;
-            }
-          });
-
-          // Auto-load the first extract
-          select.value = files[0].path;
-          select.dispatchEvent(new Event('change'));
         } catch (error) {
           console.error(error);
           status.textContent = 'Failed to load subject extract list. Run `npm run preview` and try again.';
+          updateResultsView([]);
         }
       };
 
