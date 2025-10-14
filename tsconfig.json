@@ -15,7 +15,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "react-pdf": ["src/types/react-pdf"]
+      "react-pdf/dist/index.js": ["src/types/react-pdf-entry"]
     },
     "types": ["node", "vite/client", "express"]
   },
