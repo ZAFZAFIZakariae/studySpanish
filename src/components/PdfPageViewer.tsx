@@ -22,7 +22,7 @@ let reactPdfModulePromise: Promise<ReactPdfModule> | null = null;
 
 const loadReactPdfModule = async (): Promise<ReactPdfModule> => {
   if (!reactPdfModulePromise) {
-    reactPdfModulePromise = import('react-pdf/dist/index.js').then(async (module) => {
+    reactPdfModulePromise = import('react-pdf').then(async (module) => {
       const workerModule = await import('pdfjs-dist/build/pdf.worker.min.mjs?url');
       const workerSrc = typeof workerModule === 'string' ? workerModule : workerModule.default;
       if (workerSrc) {
