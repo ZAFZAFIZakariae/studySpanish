@@ -4,6 +4,7 @@ import path from 'path';
 
 const alias: Record<string, string> = {
   '@': path.resolve(__dirname, 'src'),
+  'react-pdf': path.resolve(__dirname, 'node_modules/react-pdf/dist/index.js'),
 };
 
 export default defineConfig({

@@ -8,15 +8,10 @@ type PdfPageViewerProps = {
   onClose: () => void;
 };
 
-type ReactPdfModule = {
-  Document: React.ComponentType<Record<string, unknown>>;
-  Page: React.ComponentType<Record<string, unknown>>;
-  pdfjs: {
-    GlobalWorkerOptions: {
-      workerSrc: unknown;
-    };
-  };
-};
+type ReactPdfModule = Pick<
+  typeof import('react-pdf'),
+  'Document' | 'Page' | 'pdfjs'
+>;
 
 let reactPdfModulePromise: Promise<ReactPdfModule> | null = null;
 
