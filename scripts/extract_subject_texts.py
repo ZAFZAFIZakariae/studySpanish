@@ -10,6 +10,8 @@ previews or search across the raw course materials.
 from __future__ import annotations
 
 import argparse
+import base64
+import binascii
 import json
 import subprocess
 import textwrap
@@ -103,7 +105,11 @@ def _ensure_pypdf_available() -> bool:
     )
 
     try:
-        subprocess.check_call(install_cmd)
+        subprocess.check_call(
+            install_cmd,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.STDOUT,
+        )
     except Exception as error:  # pragma: no cover - network/tools may be unavailable
         PYPDF_IMPORT_ERROR = RuntimeError(
             "Automatic installation of pypdf failed; install it manually to enable PDF extraction."
@@ -241,13 +247,77 @@ def _initialise_image_output_dir(base_dir: Path, pdf_path: Path) -> Path:
     return target_dir
 
 
-def _store_page_images(page, page_number: int, target_dir: Path) -> tuple[list[str], list[ImageMetadata]]:
+def _copy_fallback_page_images(
+    pdf_path: Path, page_number: int, target_dir: Path
+) -> tuple[list[str], list[ImageMetadata]]:
+    fallback_dir = pdf_path.parent / f"{pdf_path.stem}-images"
+    if not fallback_dir.exists():
+        return [], []
+
+    pattern = re.compile(
+        rf"^page_{page_number:03d}_img_(?P<index>\d{{3}})\.(?P<ext>png|jpe?g|gif)(?P<encoding>\.base64|\.b64)?$",
+        re.IGNORECASE,
+    )
+    references: list[str] = []
+    metadata: list[ImageMetadata] = []
+
+    for source in sorted(fallback_dir.iterdir()):
+        if not source.is_file():
+            continue
+
+        match = pattern.match(source.name)
+        if not match:
+            continue
+
+        image_index = int(match.group("index"))
+        extension = match.group("ext")
+        encoded_suffix = match.group("encoding") or ""
+        destination = target_dir / f"page_{page_number:03d}_img_{image_index:03d}.{extension}"
+        destination.parent.mkdir(parents=True, exist_ok=True)
+
+        try:
+            if encoded_suffix:
+                raw_data = source.read_text(encoding="utf-8").strip()
+                binary = base64.b64decode(raw_data, validate=True)
+                with destination.open("wb") as handle:
+                    handle.write(binary)
+            else:
+                shutil.copy2(source, destination)
+        except (OSError, binascii.Error, ValueError):
+            continue
+
+        try:
+            relative_path = destination.relative_to(ROOT)
+        except ValueError:  # pragma: no cover - unexpected outside repo
+            relative_path = destination
+
+        references.append(relative_path.as_posix())
+        metadata.append(
+            ImageMetadata(
+                path=relative_path.as_posix(),
+                page=page_number,
+                index=image_index,
+                width=None,
+                height=None,
+                color_space=None,
+            )
+        )
+
+    return references, metadata
+
+
+def _store_page_images(
+    page, page_number: int, target_dir: Path, pdf_path: Path
+) -> tuple[list[str], list[ImageMetadata]]:
     references: list[str] = []
     metadata: list[ImageMetadata] = []
     try:
         images_iterable = list(getattr(page, "images", []))
     except Exception:  # pragma: no cover - defensive fallback
         images_iterable = []
+
+    if not images_iterable:
+        return _copy_fallback_page_images(pdf_path, page_number, target_dir)
 
     for image_index, image in enumerate(images_iterable, start=1):
         extension = getattr(image, "ext", None) or getattr(image, "extension", None) or "png"
@@ -321,7 +391,7 @@ def _extract_pdf_with_optional_images(
     for index, page in enumerate(reader.pages, start=1):
         text = (page.extract_text() or "").strip()
         if target_dir is not None:
-            images, page_metadata = _store_page_images(page, index, target_dir)
+            images, page_metadata = _store_page_images(page, index, target_dir, path)
             metadata.extend(page_metadata)
         else:
             images = page_images.get(index, [])
