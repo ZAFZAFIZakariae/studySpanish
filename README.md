@@ -1,83 +1,43 @@
-# Study Spanish Coach
+# Study Spanish Coach (Static Edition)
 
-A clean, coach-style workspace for organising B1–C1 Spanish practice. The app keeps lessons, analytics, and flashcards in a single place so you can plan focused sessions and keep your speaking skills sharp—even offline.
+A self-contained Spanish study workspace that mirrors the modern LMS aesthetic. The static build ships with a sidebar-driven layout, responsive cards, and an offline lesson viewer so you can review every extract without installing Node.js or running a bundler.
 
 ## Features
 
-- **Overview dashboard** – scan headline stats, lesson groups, and trending tags on the home screen.
-- **Progress analytics** – review mastery, timing, weak tags, and the next five recommended exercises.
-- **Flashcard trainer** – flip with the spacebar and grade your recall with J/K or the arrow keys.
-- **Content manager** – validate JSON bundles, preview diffs, and cache new lessons for offline use.
+- **Dashboard shell** – fixed sidebar navigation, global search bar, and responsive cards inspired by OpenAI/Google design systems.
+- **Lesson explorer** – browse subjects, filter by tags, and highlight recent material.
+- **Markdown renderer** – click a lesson to convert the bundled `.txt` extract into rich Markdown (images are referenced directly from the repository).
+- **Offline manifest** – `lesson-data.js` ships with the full subject/lesson catalogue so the app can run without network access.
 
-## Run the app locally
+## Launching the static app
 
-1. Install dependencies (Node.js 18+ recommended):
+The project is now pure HTML/CSS/vanilla JS. You can load it either directly from the filesystem or through any static file server.
 
-   ```bash
-   npm install
-   ```
+### Option 1 – Open the file directly
 
-2. Start the development server:
+1. Locate `index.html` at the repository root.
+2. Double-click the file (or run `open index.html` on macOS / `xdg-open index.html` on Linux).
+3. Your browser will render the dashboard immediately—no build step required.
 
-   ```bash
-   npm run dev
-   ```
-
-   Vite prints a local URL (typically <http://localhost:5173>) that you can open in the browser.
-
-3. Optional scripts:
-
-   ```bash
-   npm run build        # Type-check and build the production bundle
-   npm run test         # Run the Jest test suite
-   npm run preview      # Serve preview.html without a build step (no npm deps required)
-   npm run preview:vite # Serve the Vite production build (requires dependencies)
-   ```
-
-### Working offline
-
-`npm run preview` now launches a lightweight static server (`scripts/simple-serve.js`) that renders `preview.html`. The page is a
-high-fidelity mock built only with CDN-hosted assets, so it works even when `node_modules` is missing. Use this command whenever
-you need a quick visual smoke test but cannot download npm packages.
-
-To run the full Vite preview (`npm run preview:vite`), the environment still needs access to React, React Router, Dexie, and the
-other dependencies declared in `package.json`. If the packages are unavailable (for example, the environment blocks network
-access and `npm install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module
-'react'" or "JSX element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or
-vendored locally before running the Vite preview in an offline setting.
-
-When developing offline with the production bundle, run the helper script before building:
+### Option 2 – Serve with Python (recommended for local testing)
 
 ```bash
-scripts/install_offline_deps.sh
+cd studySpanish
+python3 -m http.server 8000
 ```
 
-The script installs React, React Router, Dexie, Zod, and the Markdown toolchain from pre-downloaded npm tarballs. It first looks for packages inside `.npm-offline-cache/` (configurable via `LOCAL_CACHE_DIR`). If the cache is empty, it extracts `offline-deps.tar.gz` (override with `BUNDLED_TARBALL`) and installs from the bundled tarballs. Populate either location with the required package archives to complete the build without internet access.
+Then open <http://localhost:8000/index.html> in your browser. Serving through `http.server` ensures that relative image paths resolve correctly and mimics a production deployment more closely than the direct file method.
 
-### CDN fallback preview
+### Alternative static servers
 
-If package installation is blocked entirely, open [`public/cdn-fallback.html`](public/cdn-fallback.html) directly in the browser. The page loads the prebuilt production bundle from the configured CDN (React, ReactDOM, and React Router are sourced from esm.sh) and renders a handful of lesson extracts fetched from the repository. Override the query parameters (`bundle`, `bundleBase`, `extractBase`, `paths`) to point at a different CDN host or set of extracts when necessary. This provides a quick visual smoke test without running `npm install` or Vite locally.
+Any static server works if you prefer different tooling (for example, `ruby -run -ehttpd . -p8000`, `php -S localhost:8000`, or `npx serve .`). None of these require a build pipeline—the repository already contains the production-ready assets.
 
-## Verification checklist
+## Repository structure
 
-To confirm the app is healthy, run the test suite followed by a production build:
-
-```bash
-npm test
-npm run build
-```
-
-Both commands should complete without errors. The build step prints a summary of emitted assets; large bundles are flagged with a warning but do not indicate a failure.
-
-## Importing content
-
-Use the **Content manager** page to upload JSON bundles that follow the `SeedBundle` schema (`lessons`, `exercises`, and `flashcards` arrays). The UI validates the structure, previews new/updated records, and updates the offline cache after a successful import.
-
-## Project structure
-
-- `src/components/layout/AppShell.tsx` – shared layout and navigation shell.
-- `src/pages/` – top-level routes for the dashboard, flashcards, content manager, and lessons.
-- `src/components/` – reusable building blocks such as the dashboard, lesson viewer, and exercise engine.
-- `src/lib/` – analytics, spaced-repetition, schemas, and grading utilities.
+- `index.html` – entry point that wires the layout and loads the stylesheet/script.
+- `styles.css` – handcrafted responsive design system.
+- `app.js` – vanilla JavaScript that powers navigation, filtering, and Markdown rendering.
+- `lesson-data.js` – offline manifest of every lesson and associated metadata.
+- `subjects/` – original text and media assets referenced by the viewer.
 
 Happy studying! 🇪🇸

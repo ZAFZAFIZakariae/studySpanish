@@ -2,12 +2,154 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <title>Study Compass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study Compass — Spanish Mastery Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary">
+        <div class="sidebar__header">
+          <div class="sidebar__logo">📘</div>
+          <div class="sidebar__title">
+            <span>Study</span>
+            <strong>Compass</strong>
+          </div>
+        </div>
+        <nav class="sidebar__nav">
+          <a class="nav-item nav-item--active" href="#" data-section="dashboard">
+            <span class="nav-item__icon">🏠</span>
+            <span class="nav-item__label">Dashboard</span>
+          </a>
+          <a class="nav-item" href="#" data-section="subjects">
+            <span class="nav-item__icon">📚</span>
+            <span class="nav-item__label">Subjects</span>
+          </a>
+          <a class="nav-item" href="#" data-section="flashcards">
+            <span class="nav-item__icon">🧠</span>
+            <span class="nav-item__label">Flashcards</span>
+          </a>
+          <a class="nav-item" href="#" data-section="planner">
+            <span class="nav-item__icon">🗓️</span>
+            <span class="nav-item__label">Planner</span>
+          </a>
+          <a class="nav-item" href="#" data-section="settings">
+            <span class="nav-item__icon">⚙️</span>
+            <span class="nav-item__label">Settings</span>
+          </a>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="focus-card">
+            <p class="focus-card__eyebrow">Today's focus</p>
+            <p class="focus-card__title">Repasar verbos irregulares</p>
+            <button class="focus-card__cta" type="button">Start session</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="topbar">
+          <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="search">
+            <input
+              id="global-search"
+              type="search"
+              placeholder="Search lessons, notes, resources..."
+              autocomplete="off"
+            />
+            <span class="search__icon">🔍</span>
+          </div>
+          <div class="topbar__actions">
+            <button class="pill-button" type="button">New Plan</button>
+            <div class="profile" aria-label="Profile menu" role="button" tabindex="0">
+              <span class="profile__initials" aria-hidden="true">LC</span>
+              <span class="profile__status"></span>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <section class="insights" aria-label="Study metrics">
+            <article class="card insight">
+              <div class="insight__icon insight__icon--accent">⏱️</div>
+              <div>
+                <p class="insight__label">Active streak</p>
+                <p class="insight__value" id="streak-value">12 days</p>
+              </div>
+            </article>
+            <article class="card insight">
+              <div class="insight__icon insight__icon--blue">📄</div>
+              <div>
+                <p class="insight__label">Lessons unlocked</p>
+                <p class="insight__value" id="lesson-count">0</p>
+              </div>
+            </article>
+            <article class="card insight">
+              <div class="insight__icon insight__icon--purple">📝</div>
+              <div>
+                <p class="insight__label">Notes reviewed</p>
+                <p class="insight__value" id="notes-count">0</p>
+              </div>
+            </article>
+            <article class="card insight">
+              <div class="insight__icon insight__icon--teal">⭐</div>
+              <div>
+                <p class="insight__label">Focus rating</p>
+                <p class="insight__value">9.4 / 10</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card lesson-browser" aria-label="Lesson browser">
+              <header class="card__header">
+                <div>
+                  <h2>Lesson explorer</h2>
+                  <p>Browse extracted study materials, summaries, and PDFs.</p>
+                </div>
+                <div class="filters">
+                  <div class="filter-group" id="subject-filter"></div>
+                  <select id="sort-select" aria-label="Sort lessons">
+                    <option value="title">Sort by title</option>
+                    <option value="subject">Sort by subject</option>
+                    <option value="notes">Sort by notes</option>
+                  </select>
+                </div>
+              </header>
+              <div class="lesson-list" id="lesson-list" role="list"></div>
+            </article>
+
+            <article class="card lesson-viewer" aria-live="polite">
+              <header class="card__header lesson-viewer__header">
+                <div>
+                  <p class="eyebrow" id="lesson-subject">Select a lesson</p>
+                  <h2 id="lesson-title">Your study content appears here</h2>
+                </div>
+                <div class="lesson-meta" id="lesson-meta"></div>
+              </header>
+              <div class="lesson-content" id="lesson-content">
+                <p class="empty-state">
+                  Pick a lesson from the left to render its Markdown and assets instantly. The viewer
+                  adapts to headings, lists, callouts, and embedded imagery.
+                </p>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="lesson-data.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
