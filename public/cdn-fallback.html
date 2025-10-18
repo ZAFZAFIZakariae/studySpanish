@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-bundle-base="https://cdn.jsdelivr.net/gh/studyspanish-app/prebuilt@latest/"
+  data-extract-base="https://raw.githubusercontent.com/studyspanish-app/studySpanish-prebuilt/main/"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study Spanish Coach · CDN Fallback</title>
+    <meta
+      name="description"
+      content="Preview the Study Spanish Coach bundle straight from the CDN when local dependencies are unavailable."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 1rem;
+      }
+
+      main {
+        width: min(960px, 100%);
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.5rem;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+        letter-spacing: -0.02em;
+      }
+
+      header p {
+        margin: 0.75rem 0 0;
+        color: #475569;
+        max-width: 60ch;
+        line-height: 1.6;
+      }
+
+      section {
+        display: grid;
+        gap: 1rem;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        letter-spacing: -0.01em;
+      }
+
+      p {
+        margin: 0;
+        color: #475569;
+        line-height: 1.7;
+      }
+
+      .status {
+        font-size: 0.95rem;
+        color: #1d4ed8;
+      }
+
+      ul.extracts {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .extract-card {
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        border-radius: 1.25rem;
+        padding: 1.25rem 1.5rem;
+        background: rgba(241, 245, 249, 0.6);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      }
+
+      .extract-card h3 {
+        margin: 0 0 0.75rem;
+        font-size: 1.05rem;
+        color: #0f172a;
+      }
+
+      .extract-card pre {
+        margin: 0;
+        font-family: "Source Code Pro", "Fira Code", ui-monospace, SFMono-Regular, SFMono-Regular, Menlo, Monaco, Consolas,
+          'Liberation Mono', 'Courier New', monospace;
+        font-size: 0.85rem;
+        white-space: pre-wrap;
+        word-break: break-word;
+        max-height: 12rem;
+        overflow: auto;
+        background: rgba(226, 232, 240, 0.45);
+        padding: 0.75rem 0.85rem;
+        border-radius: 0.9rem;
+        color: #1e293b;
+      }
+
+      .extract-card a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-top: 0.9rem;
+        font-weight: 600;
+        color: #1d4ed8;
+        text-decoration: none;
+      }
+
+      .extract-card a:hover,
+      .extract-card a:focus-visible {
+        text-decoration: underline;
+      }
+
+      .notes {
+        margin: 0.75rem 0 0;
+        padding-left: 1.25rem;
+        color: #475569;
+        font-size: 0.9rem;
+      }
+
+      .notes li + li {
+        margin-top: 0.35rem;
+      }
+
+      .app-shell {
+        border: 2px dashed rgba(148, 163, 184, 0.6);
+        border-radius: 1.25rem;
+        padding: 2rem 1.5rem;
+        min-height: 320px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: #1e3a8a;
+        background: rgba(226, 232, 240, 0.35);
+      }
+
+      .app-shell.error {
+        border-color: rgba(220, 38, 38, 0.6);
+        color: #b91c1c;
+        background: rgba(254, 226, 226, 0.55);
+      }
+
+      footer {
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+
+      @media (min-width: 880px) {
+        main {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-areas:
+            'header header'
+            'extracts preview'
+            'footer footer';
+        }
+
+        header {
+          grid-area: header;
+        }
+
+        #extract-preview {
+          grid-area: extracts;
+        }
+
+        #app-preview {
+          grid-area: preview;
+        }
+
+        footer {
+          grid-area: footer;
+        }
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+          "react-dom": "https://esm.sh/react-dom@18.2.0",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+          "react-router-dom": "https://esm.sh/react-router-dom@6.22.3"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>CDN fallback preview</h1>
+        <p>
+          Use this static page when the Node.js toolchain cannot be installed. It pulls the production bundle straight from the
+          configured CDN and shows a few extracted lesson notes for a quick smoke test.
+        </p>
+      </header>
+
+      <section id="extract-preview" aria-live="polite">
+        <h2>Lesson extracts</h2>
+        <p class="status" data-extract-status>Loading lesson extracts…</p>
+        <ul class="extracts" id="extract-list"></ul>
+      </section>
+
+      <section id="app-preview">
+        <h2>App preview</h2>
+        <div id="app-root" class="app-shell">Loading application bundle…</div>
+      </section>
+
+      <footer>
+        Tip: Override the bundle or extract sources with <code>?bundle=</code>, <code>?manifest=</code>,
+        <code>?extractBase=</code>, or <code>?paths=</code> query parameters when pointing to a different CDN.
+      </footer>
+    </main>
+
+    <script type="module">
+      const DEFAULT_SAMPLE_PATHS = [
+        'src/data/subjectExtracts/Sad/Session_1_Introduction_Deck_Bullets_Notes.txt',
+        'src/data/subjectExtracts/Sad/Session_3_Cloud_Service_Models_Bullets_Notes.txt',
+        'src/data/subjectExtracts/Ggo/project/Presentación.txt'
+      ];
+
+      const normaliseBase = (value) => (value.endsWith('/') ? value : `${value}/`);
+
+      const { dataset } = document.documentElement;
+      const params = new URLSearchParams(window.location.search);
+      const bundleBase = params.get('bundleBase') ?? dataset.bundleBase ?? '';
+      const extractBase = normaliseBase(params.get('extractBase') ?? dataset.extractBase ?? bundleBase ?? '');
+      const bundleUrlFromQuery = params.get('bundle');
+      const manifestUrl = params.get('manifest') ?? (extractBase ? `${extractBase}subject-extracts.json` : '');
+
+      const bundleUrl = bundleUrlFromQuery ?? (bundleBase ? `${normaliseBase(bundleBase)}assets/index.js` : '');
+
+      const extractPaths = (() => {
+        const override = params.get('paths');
+        if (override) {
+          return override
+            .split(',')
+            .map((item) => item.trim())
+            .filter(Boolean);
+        }
+        if (dataset.extractPaths) {
+          return dataset.extractPaths.split(',').map((item) => item.trim()).filter(Boolean);
+        }
+        return DEFAULT_SAMPLE_PATHS;
+      })();
+
+      const encodePath = (path) =>
+        path
+          .split('/')
+          .map((segment) => encodeURIComponent(segment))
+          .join('/');
+
+      const headerRegex = /^# Extracted content\nSource: (?<source>[^\n]+)(?:\nNotes:\n(?<notes>(?:- .+\n)+))?/;
+
+      const parseExtract = (rawText) => {
+        const normalised = rawText.replace(/\r\n/g, '\n');
+        const match = normalised.match(headerRegex);
+        const notes = match?.groups?.notes
+          ? match.groups.notes
+              .split('\n')
+              .map((line) => line.replace(/^-\s*/, '').trim())
+              .filter(Boolean)
+          : [];
+        const trimmed = match ? normalised.slice(match[0].length).trim() : normalised.trim();
+        const snippet = trimmed
+          .split(/\n{2,}/)
+          .map((block) => block.replace(/\s+/g, ' ').trim())
+          .find(Boolean);
+        return {
+          source: match?.groups?.source?.trim() ?? 'Unknown source',
+          notes,
+          body: trimmed,
+          snippet: snippet ? (snippet.length > 280 ? `${snippet.slice(0, 277)}…` : snippet) : '',
+        };
+      };
+
+      const statusEl = document.querySelector('[data-extract-status]');
+      const listEl = document.getElementById('extract-list');
+      const appRoot = document.getElementById('app-root');
+
+      const updateStatus = (message, isError = false) => {
+        if (!statusEl) return;
+        statusEl.textContent = message;
+        statusEl.style.color = isError ? '#b91c1c' : '#1d4ed8';
+      };
+
+      const renderExtracts = (items) => {
+        if (!listEl) return;
+        listEl.innerHTML = '';
+        for (const item of items) {
+          const li = document.createElement('li');
+          li.className = 'extract-card';
+
+          const heading = document.createElement('h3');
+          heading.textContent = item.source;
+          li.appendChild(heading);
+
+          const pre = document.createElement('pre');
+          pre.textContent = item.snippet || item.body.slice(0, 400);
+          li.appendChild(pre);
+
+          if (item.notes.length > 0) {
+            const noteList = document.createElement('ul');
+            noteList.className = 'notes';
+            for (const note of item.notes) {
+              const noteItem = document.createElement('li');
+              noteItem.textContent = note;
+              noteList.appendChild(noteItem);
+            }
+            li.appendChild(noteList);
+          }
+
+          if (item.url) {
+            const link = document.createElement('a');
+            link.href = item.url;
+            link.target = '_blank';
+            link.rel = 'noreferrer noopener';
+            link.textContent = 'Open raw extract';
+            li.appendChild(link);
+          }
+
+          listEl.appendChild(li);
+        }
+      };
+
+      const fetchExtract = async (path) => {
+        if (!extractBase) {
+          throw new Error('No extract base URL configured.');
+        }
+        const encodedPath = encodePath(path.replace(/^\//, ''));
+        const url = `${extractBase}${encodedPath}`;
+        const response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error(`Unable to load ${path} (${response.status})`);
+        }
+        const raw = await response.text();
+        return { ...parseExtract(raw), url };
+      };
+
+      const loadExtracts = async () => {
+        try {
+          if (!Array.isArray(extractPaths) || extractPaths.length === 0) {
+            updateStatus('No extract paths configured.', true);
+            return;
+          }
+          const results = [];
+          for (const path of extractPaths) {
+            try {
+              const extract = await fetchExtract(path);
+              results.push(extract);
+            } catch (error) {
+              console.warn('Failed to load extract', path, error);
+            }
+          }
+          if (results.length === 0) {
+            updateStatus('No extracts could be loaded. Adjust the ?paths= or ?extractBase= parameters.', true);
+            return;
+          }
+          renderExtracts(results);
+          updateStatus(`Loaded ${results.length} extract${results.length === 1 ? '' : 's'} from the CDN.`);
+        } catch (error) {
+          console.error('Unable to load lesson extracts', error);
+          updateStatus('Unable to load lesson extracts from the CDN.', true);
+        }
+      };
+
+      const loadBundle = async () => {
+        if (!bundleUrl) {
+          appRoot?.classList.add('error');
+          if (appRoot) {
+            appRoot.textContent = 'Bundle URL missing. Provide ?bundle= or set data-bundle-base on <html>.';
+          }
+          return;
+        }
+        try {
+          window.__STUDY_SPANISH_CDN_CONFIG__ = {
+            bundleUrl,
+            extractBase,
+            manifestUrl,
+            extractPaths,
+          };
+          await import(bundleUrl);
+        } catch (error) {
+          console.error('Failed to load prebuilt bundle', error);
+          if (appRoot) {
+            appRoot.classList.add('error');
+            appRoot.textContent = 'Failed to load the prebuilt bundle. Verify the CDN URL and CORS policy.';
+          }
+        }
+      };
+
+      loadExtracts();
+      loadBundle();
+    </script>
+  </body>
+</html>
