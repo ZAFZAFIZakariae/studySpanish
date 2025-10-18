@@ -49,6 +49,10 @@ scripts/install_offline_deps.sh
 
 The script installs React, React Router, Dexie, Zod, and the Markdown toolchain from pre-downloaded npm tarballs. It first looks for packages inside `.npm-offline-cache/` (configurable via `LOCAL_CACHE_DIR`). If the cache is empty, it extracts `offline-deps.tar.gz` (override with `BUNDLED_TARBALL`) and installs from the bundled tarballs. Populate either location with the required package archives to complete the build without internet access.
 
+### CDN fallback preview
+
+If package installation is blocked entirely, open [`public/cdn-fallback.html`](public/cdn-fallback.html) directly in the browser. The page loads the prebuilt production bundle from the configured CDN (React, ReactDOM, and React Router are sourced from esm.sh) and renders a handful of lesson extracts fetched from the repository. Override the query parameters (`bundle`, `bundleBase`, `extractBase`, `paths`) to point at a different CDN host or set of extracts when necessary. This provides a quick visual smoke test without running `npm install` or Vite locally.
+
 ## Verification checklist
 
 To confirm the app is healthy, run the test suite followed by a production build:
