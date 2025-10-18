@@ -666,10 +666,25 @@ def main(argv: Sequence[str] | None = None) -> int:
         type=Path,
         help="Directory where extracted PDF images will be stored",
     )
+    parser.add_argument(
+        "target",
+        nargs="?",
+        type=Path,
+        help=(
+            "Backwards compatible alias for --single-pdf. "
+            "Supplying a path positional argument is equivalent to using "
+            "--single-pdf."
+        ),
+    )
     args = parser.parse_args(argv)
 
-    if args.single_pdf is not None:
-        pdf_path: Path = args.single_pdf
+    if args.single_pdf is not None and args.target is not None:
+        parser.error("Specify either --single-pdf or a positional path, not both.")
+
+    pdf_target = args.single_pdf or args.target
+
+    if pdf_target is not None:
+        pdf_path: Path = pdf_target
         if not pdf_path.exists():
             print(f"PDF not found: {pdf_path}", file=sys.stderr)
             return 2
