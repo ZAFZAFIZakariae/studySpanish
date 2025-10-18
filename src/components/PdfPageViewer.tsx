@@ -8,10 +8,7 @@ type PdfPageViewerProps = {
   onClose: () => void;
 };
 
-type ReactPdfModule = Pick<
-  typeof import('react-pdf'),
-  'Document' | 'Page' | 'pdfjs'
->;
+type ReactPdfModule = typeof import('react-pdf');
 
 let reactPdfModulePromise: Promise<ReactPdfModule> | null = null;
 
@@ -23,10 +20,10 @@ const loadReactPdfModule = async (): Promise<ReactPdfModule> => {
       if (workerSrc) {
         module.pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
       }
-      return module as unknown as ReactPdfModule;
-    }) as Promise<ReactPdfModule>;
+      return module;
+    });
   }
-  return reactPdfModulePromise!;
+  return reactPdfModulePromise;
 };
 
 const LazyDocument = React.lazy(() => loadReactPdfModule().then((module) => ({ default: module.Document })));
@@ -124,9 +121,7 @@ const PdfPageViewer: React.FC<PdfPageViewerProps> = ({ file, pageNumber, title, 
                   width={containerWidth}
                   renderAnnotationLayer={false}
                   renderTextLayer
-                  onRenderError={(error: Error | undefined) =>
-                    setLoadError(error?.message ?? 'Unknown error')
-                  }
+                  onRenderError={(error) => setLoadError(error?.message ?? 'Unknown error')}
                 />
               </LazyDocument>
             )}
