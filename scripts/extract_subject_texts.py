@@ -10,6 +10,7 @@ previews or search across the raw course materials.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import base64
 import binascii
 import json
@@ -67,6 +68,23 @@ ROOT = Path(__file__).resolve().parents[1]
 SUBJECTS_DIR = ROOT / "subjects"
 OUTPUT_DIR = ROOT / "src" / "data" / "subjectExtracts"
 PUBLIC_ASSETS_DIR = ROOT / "public" / "subject-assets"
+
+
+_NOISY_PDF_IMAGE_WARNING = re.compile(
+    r"^Ignoring wrong pointing object \d+ \d+ \(offset \d+\)$"
+)
+
+
+def _relay_extractor_output(stdout_text: str, stderr_text: str) -> None:
+    """Send extractor diagnostics to stderr while omitting noisy warnings."""
+
+    for stream_text in (stdout_text, stderr_text):
+        if not stream_text:
+            continue
+        for line in stream_text.splitlines():
+            if _NOISY_PDF_IMAGE_WARNING.match(line.strip()):
+                continue
+            print(line, file=sys.stderr)
 
 
 @dataclass
@@ -198,10 +216,19 @@ def _extract_images_to_public_assets(
         shutil.rmtree(target_dir)
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    try:
-        raw_metadata = extract_pdf_images(pdf_path, target_dir)
-    except Exception:  # pragma: no cover - extraction robustness
-        return {}, []
+    stdout_buffer = StringIO()
+    stderr_buffer = StringIO()
+
+    with contextlib.redirect_stdout(stdout_buffer), contextlib.redirect_stderr(
+        stderr_buffer
+    ):
+        try:
+            raw_metadata = extract_pdf_images(pdf_path, target_dir)
+        except Exception:  # pragma: no cover - extraction robustness
+            _relay_extractor_output(stdout_buffer.getvalue(), stderr_buffer.getvalue())
+            return {}, []
+
+    _relay_extractor_output(stdout_buffer.getvalue(), stderr_buffer.getvalue())
 
     page_references: dict[int, list[str]] = defaultdict(list)
     metadata: list[ImageMetadata] = []
