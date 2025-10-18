@@ -31,6 +31,7 @@ import xlrd  # type: ignore
 ROOT = Path(__file__).resolve().parents[1]
 SUBJECTS_DIR = ROOT / "subjects"
 OUTPUT_DIR = ROOT / "src" / "data" / "subjectExtracts"
+PUBLIC_ASSETS_DIR = ROOT / "public" / "subject-assets"
 
 
 @dataclass
@@ -97,6 +98,69 @@ def _collect_page_image_references(pdf_path: Path) -> dict[int, list[str]]:
     return references
 
 
+def _resolve_public_asset_dir(pdf_path: Path) -> Path:
+    try:
+        relative = pdf_path.relative_to(SUBJECTS_DIR)
+        target = relative.with_suffix("")
+    except ValueError:  # pragma: no cover - fallback for unexpected locations
+        target = Path(pdf_path.stem)
+    return PUBLIC_ASSETS_DIR / target
+
+
+def _extract_images_to_public_assets(
+    pdf_path: Path,
+) -> tuple[dict[int, list[str]], list[ImageMetadata]]:
+    try:
+        from pdf_image_extractor import extract_images as extract_pdf_images
+    except (ImportError, SystemExit):  # pragma: no cover - dependency guard
+        return {}, []
+
+    target_dir = _resolve_public_asset_dir(pdf_path)
+    if target_dir.exists():
+        shutil.rmtree(target_dir)
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    try:
+        raw_metadata = extract_pdf_images(pdf_path, target_dir)
+    except Exception:  # pragma: no cover - extraction robustness
+        return {}, []
+
+    page_references: dict[int, list[str]] = defaultdict(list)
+    metadata: list[ImageMetadata] = []
+    page_counters: dict[int, int] = defaultdict(int)
+
+    for page_number, filename in sorted(raw_metadata, key=lambda item: (item[0], item[1])):
+        image_path = target_dir / filename
+        try:
+            relative_path = image_path.relative_to(ROOT).as_posix()
+        except ValueError:  # pragma: no cover - unexpected outside repo
+            relative_path = image_path.as_posix()
+
+        page_counters[page_number] += 1
+        page_references[page_number].append(relative_path)
+        metadata.append(
+            ImageMetadata(
+                path=relative_path,
+                page=page_number,
+                index=page_counters[page_number],
+                width=None,
+                height=None,
+                color_space=None,
+            )
+        )
+
+    return page_references, metadata
+
+
+def _format_markdown_image_path(path: str) -> str:
+    normalised = path.replace("\\", "/")
+    if normalised.startswith("public/"):
+        return f"../../{normalised}"
+    if normalised.startswith("./"):
+        return normalised[2:]
+    return normalised
+
+
 def _initialise_image_output_dir(base_dir: Path, pdf_path: Path) -> Path:
     target_dir = base_dir / pdf_path.stem
     if target_dir.exists():
@@ -152,7 +216,8 @@ def _extract_pdf_with_optional_images(
     metadata: list[ImageMetadata] = []
 
     if image_output_dir is None:
-        page_images = _collect_page_image_references(path)
+        page_images, collected_metadata = _extract_images_to_public_assets(path)
+        metadata.extend(collected_metadata)
         target_dir: Path | None = None
     else:
         target_dir = _initialise_image_output_dir(image_output_dir, path)
@@ -172,7 +237,9 @@ def _extract_pdf_with_optional_images(
         if text:
             page_lines.append(text)
         for figure_index, image_path in enumerate(images, start=1):
-            page_lines.append(f"![Page {index}, Figure {figure_index}]({image_path})")
+            page_lines.append(
+                f"![Page {index}, Figure {figure_index}]({_format_markdown_image_path(image_path)})"
+            )
 
         pieces.append("\n".join(page_lines))
 
