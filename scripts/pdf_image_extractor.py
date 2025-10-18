@@ -1,182 +1,141 @@
-"""Utility functions for extracting images from PDF documents.
+"""Utilities for extracting images from PDF files.
 
-This module provides a CLI interface to extract embedded images and page-level
-snapshots from PDF files. Extracted assets are stored beside the PDF inside a
-folder named ``<PDF name>-images`` preserving the source directory structure.
-
-The implementation relies on the :mod:`fitz` module (PyMuPDF). Install it with
-``pip install PyMuPDF`` if it is not already available in your environment.
+This module uses PyMuPDF (fitz) to iterate through the pages of a PDF and
+export embedded images to a subject-specific directory.  It also provides a
+simple command-line interface so that the script can be executed directly via
+``python pdf_image_extractor.py <pdf-file-path>``.
 """
+
 from __future__ import annotations
 
 import argparse
-import logging
+import json
 from pathlib import Path
-from typing import Iterable, Optional, Set, Tuple
+from typing import Iterable, List, Optional, Tuple
 
 try:
-    import fitz  # type: ignore
+    import fitz  # PyMuPDF
 except ImportError as exc:  # pragma: no cover - import guard
     raise SystemExit(
-        "PyMuPDF (fitz) is required for image extraction. Install it with 'pip install PyMuPDF'."
+        "PyMuPDF (fitz) is required for pdf_image_extractor. Install it via 'pip install pymupdf'."
     ) from exc
 
-LOGGER = logging.getLogger(__name__)
+
+Metadata = Tuple[int, str]
 
 
-def _derive_output_dir(pdf_path: Path) -> Path:
-    """Return the default directory for storing extracted images.
+def _resolve_output_dir(pdf_path: Path) -> Path:
+    """Return the directory where extracted images should be saved.
 
-    The directory is created adjacent to the PDF file and suffixed with
-    ``-images`` to avoid name collisions.
+    The preferred location is ``subjects/<subject>/<pdf-name>-images/`` when the
+    PDF lives under a ``subjects/<subject>`` directory.  If the file resides
+    elsewhere, the images are stored alongside the PDF in a sibling directory
+    named ``<pdf-name>-images``.
     """
 
-    return pdf_path.with_name(f"{pdf_path.stem}-images")
+    parts = pdf_path.resolve().parts
+    try:
+        subjects_index = parts.index("subjects")
+    except ValueError:
+        return pdf_path.parent / f"{pdf_path.stem}-images"
+
+    if subjects_index + 1 >= len(parts):
+        return pdf_path.parent / f"{pdf_path.stem}-images"
+
+    subject_dir = Path(*parts[: subjects_index + 2])
+    return subject_dir / f"{pdf_path.stem}-images"
 
 
-def _save_pixmap(pixmap: "fitz.Pixmap", destination: Path) -> None:
-    """Persist a :class:`fitz.Pixmap` to disk as a PNG file."""
-
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    pixmap.save(destination, output="png")
+def _ensure_output_dir(output_dir: Path) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
 
 
-def extract_images_from_pdf(
-    pdf_path: Path,
-    output_dir: Optional[Path] = None,
-    include_page_snapshots: bool = True,
-    deduplicate_images: bool = True,
-) -> Tuple[int, int]:
-    """Extract embedded images and optionally page snapshots from ``pdf_path``.
+def _extract_images_from_page(
+    document: "fitz.Document", page_index: int, output_dir: Path, pdf_stem: str
+) -> Iterable[Metadata]:
+    page = document[page_index]
+    images = page.get_images(full=True)
+    if not images:
+        return []
 
-    Parameters
-    ----------
-    pdf_path:
-        Path to the PDF file.
-    output_dir:
-        Target directory. If omitted, the folder ``<pdf stem>-images`` is used
-        next to the PDF file.
-    include_page_snapshots:
-        When ``True`` (default), each page is rasterized and saved as a PNG to
-        provide a faithful representation of complex layouts or vector figures.
-    deduplicate_images:
-        Skip saving duplicate embedded images referenced multiple times across
-        pages (enabled by default).
+    metadata: List[Metadata] = []
+    seen_xrefs = set()
+    image_counter = 1
 
-    Returns
-    -------
-    Tuple[int, int]
-        Counts of ``(embedded_images_saved, page_snapshots_saved)``.
+    for image_info in images:
+        xref = image_info[0]
+        if xref in seen_xrefs:
+            continue
+        seen_xrefs.add(xref)
+
+        extracted = document.extract_image(xref)
+        image_bytes = extracted["image"]
+        extension = extracted.get("ext", "png")
+        filename = f"{pdf_stem}_p{page_index + 1:03d}_img{image_counter}.{extension}"
+        image_counter += 1
+
+        output_path = output_dir / filename
+        with output_path.open("wb") as image_file:
+            image_file.write(image_bytes)
+
+        metadata.append((page_index + 1, filename))
+
+    return metadata
+
+
+def extract_images(pdf_file: Path, output_dir: Optional[Path] = None) -> List[Metadata]:
+    """Extract images from ``pdf_file`` and return metadata.
+
+    Metadata tuples contain the 1-based page number and the saved filename
+    relative to the output directory.
     """
 
-    pdf_path = pdf_path.expanduser().resolve()
-    if not pdf_path.exists():
-        raise FileNotFoundError(f"PDF not found: {pdf_path}")
+    if not pdf_file.exists():
+        raise FileNotFoundError(f"PDF file not found: {pdf_file}")
 
-    destination_root = (output_dir or _derive_output_dir(pdf_path)).resolve()
-    destination_root.mkdir(parents=True, exist_ok=True)
+    if output_dir is None:
+        output_dir = _resolve_output_dir(pdf_file)
 
-    doc = fitz.open(pdf_path)
+    _ensure_output_dir(output_dir)
 
-    seen_images: Set[int] = set()
-    embedded_count = 0
-    page_snapshot_count = 0
-
-    for page_index in range(len(doc)):
-        page = doc.load_page(page_index)
-        page_label = f"page_{page_index + 1:03d}"
-
-        if include_page_snapshots:
-            pixmap = page.get_pixmap(dpi=200)
-            page_snapshot_path = destination_root / f"{pdf_path.stem}_{page_label}.png"
-            _save_pixmap(pixmap, page_snapshot_path)
-            LOGGER.debug("Saved page snapshot: %s", page_snapshot_path)
-            page_snapshot_count += 1
-
-        for img_index, img_info in enumerate(page.get_images(full=True), start=1):
-            xref = img_info[0]
-            if deduplicate_images and xref in seen_images:
-                LOGGER.debug("Skipping duplicate image with xref %s", xref)
-                continue
-
-            try:
-                base_image = doc.extract_image(xref)
-            except ValueError:  # pragma: no cover - defensive programming
-                LOGGER.warning("Unable to extract image with xref %s on page %s", xref, page_index)
-                continue
-
-            seen_images.add(xref)
-            image_bytes = base_image["image"]
-            ext = base_image.get("ext", "png")
-            image_name = (
-                f"{pdf_path.stem}_{page_label}_img_{img_index:03d}.{ext}"
+    document = fitz.open(pdf_file)
+    metadata: List[Metadata] = []
+    try:
+        for page_index in range(document.page_count):
+            metadata.extend(
+                _extract_images_from_page(document, page_index, output_dir, pdf_file.stem)
             )
-            image_path = destination_root / image_name
-            image_path.write_bytes(image_bytes)
-            LOGGER.debug("Saved embedded image: %s", image_path)
-            embedded_count += 1
+    finally:
+        document.close()
 
-    doc.close()
-    return embedded_count, page_snapshot_count
+    return metadata
 
 
-def build_arg_parser() -> argparse.ArgumentParser:
-    """Create an argument parser for the CLI interface."""
-
-    parser = argparse.ArgumentParser(description="Extract images from PDF files")
+def _cli(argv: Iterable[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Extract images from a PDF file.")
+    parser.add_argument("pdf_file", type=Path, help="Path to the PDF file to process.")
     parser.add_argument(
-        "pdf",
-        type=Path,
-        help="Path to the PDF file to process",
-    )
-    parser.add_argument(
-        "-o",
         "--output",
         type=Path,
         default=None,
-        help="Optional directory to store extracted images",
+        help="Optional explicit output directory. Defaults to subjects/<subject>/<pdf-name>-images/ when available.",
     )
-    parser.add_argument(
-        "--no-page-snapshots",
-        action="store_true",
-        help="Disable saving full-page PNG snapshots.",
-    )
-    parser.add_argument(
-        "--no-deduplicate",
-        action="store_true",
-        help="Store duplicate embedded images even when reused across pages.",
-    )
-    parser.add_argument(
-        "--verbose",
-        action="store_true",
-        help="Enable debug logging output.",
-    )
-    return parser
+    args = parser.parse_args(argv)
+
+    metadata = extract_images(args.pdf_file, args.output)
+    output_dir = args.output or _resolve_output_dir(args.pdf_file)
+
+    result = {
+        "pdf": str(args.pdf_file),
+        "output_dir": str(output_dir),
+        "images": [
+            {"page": page, "filename": filename}
+            for page, filename in metadata
+        ],
+    }
+    print(json.dumps(result, indent=2))
+    return 0
 
 
-def main(args: Optional[Iterable[str]] = None) -> Tuple[int, int]:
-    """CLI entry point for extracting images from a PDF file."""
-
-    parser = build_arg_parser()
-    parsed = parser.parse_args(args=args)
-
-    logging.basicConfig(level=logging.DEBUG if parsed.verbose else logging.INFO)
-
-    embedded, snapshots = extract_images_from_pdf(
-        parsed.pdf,
-        output_dir=parsed.output,
-        include_page_snapshots=not parsed.no_page_snapshots,
-        deduplicate_images=not parsed.no_deduplicate,
-    )
-
-    LOGGER.info(
-        "Extraction complete: %s embedded images, %s page snapshots saved.",
-        embedded,
-        snapshots,
-    )
-
-    return embedded, snapshots
-
-
-if __name__ == "__main__":  # pragma: no cover - CLI usage
-    main()
+if __name__ == "__main__":  # pragma: no cover - CLI entry point
+    raise SystemExit(_cli())
