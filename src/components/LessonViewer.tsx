@@ -1,10 +1,11 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from '@/lib/remarkGfm';
 import { lessonSummaryText, lessonTextIndexBySubject } from '@/data/lessonContents/text';
 import { subjectCatalog } from '@/data/subjectCatalog';
 import { LessonFigure } from './lessonFigures';
+import PdfModal from './PdfModal';
 import styles from './LessonViewer.module.css';
 
 type LessonViewerProps = {
@@ -189,6 +190,43 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
 
   const subjectId = useMemo(() => (lessonId ? lessonId.split('-')[0] : 'general'), [lessonId]);
 
+  const pdfSourcePath = useMemo(() => {
+    const match = markdown.match(/\bSource:\s*(subjects\/[\s\S]+?)\s*(?:\n|$)/i);
+    return match?.[1]?.trim() ?? undefined;
+  }, [markdown]);
+
+  const resolvedPdfSource = useMemo(
+    () => (pdfSourcePath ? resolveSubjectAssetPath(pdfSourcePath) : undefined),
+    [pdfSourcePath]
+  );
+
+  const pdfModalTitle = useMemo(() => {
+    if (!pdfSourcePath) {
+      return undefined;
+    }
+    const fileName = pdfSourcePath.split('/').pop();
+    return fileName ? `Original PDF page · ${fileName}` : 'Original PDF page';
+  }, [pdfSourcePath]);
+
+  const [pdfModalState, setPdfModalState] = useState<{ open: boolean; pageNumber: number }>(() => ({
+    open: false,
+    pageNumber: 1,
+  }));
+
+  const openPdfModal = useCallback(
+    (pageNumber: number) => {
+      if (!resolvedPdfSource || !Number.isInteger(pageNumber) || pageNumber < 1) {
+        return;
+      }
+      setPdfModalState({ open: true, pageNumber });
+    },
+    [resolvedPdfSource]
+  );
+
+  const closePdfModal = useCallback(() => {
+    setPdfModalState((prev) => ({ ...prev, open: false }));
+  }, []);
+
   const subjectLessons = useMemo(() => {
     if (!lessonId) {
       return [] as Array<{
@@ -330,8 +368,8 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
   const headingUsage = useMemo(() => new Map<string, number>(), [markdown]);
 
   const headingComponents = useMemo(() => {
-    const getHeadingId = (node: any) => {
-      const rawText = String(
+    const extractHeadingText = (node: any) =>
+      String(
         (node.children ?? [])
           .map((child: any) => {
             if (typeof child.value === 'string') return child.value;
@@ -342,16 +380,20 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
           })
           .join('')
       );
-      const base = slugify(rawText);
+
+    const getHeadingId = (node: any, rawText?: string) => {
+      const text = rawText ?? extractHeadingText(node);
+      const base = slugify(text);
       const assigned = slugAssignments.get(base) ?? [base];
       const count = headingUsage.get(base) ?? 0;
       headingUsage.set(base, count + 1);
       return assigned[Math.min(count, assigned.length - 1)] ?? base;
     };
 
-    const createHeadingRenderer = (level: 1 | 2 | 3) =>
+    const createHeadingRenderer = (level: 1 | 2) =>
       ({ node, children, ...props }: any) => {
-        const id = getHeadingId(node);
+        const rawText = extractHeadingText(node);
+        const id = getHeadingId(node, rawText);
         return React.createElement(
           `h${level}`,
           { ...props, id, className: styles[`heading${level}` as const] },
@@ -359,10 +401,43 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
         );
       };
 
+    const renderHeadingThree = ({ node, children, ...props }: any) => {
+      const rawText = extractHeadingText(node);
+      const id = getHeadingId(node, rawText);
+      const pageMatch = rawText.match(/^Page\s+(\d+)/i);
+      const parsedPage = pageMatch ? Number.parseInt(pageMatch[1], 10) : NaN;
+      const hasValidPage = Number.isInteger(parsedPage) && parsedPage > 0;
+
+      return (
+        <h3 {...props} id={id} className={styles.heading3}>
+          <span>{children}</span>
+          {resolvedPdfSource && hasValidPage ? (
+            <button
+              type="button"
+              onClick={() => openPdfModal(parsedPage)}
+              style={{
+                marginLeft: '0.75rem',
+                fontSize: '0.75rem',
+                padding: '0.35rem 0.75rem',
+                borderRadius: '9999px',
+                border: '1px solid rgba(148, 163, 184, 0.4)',
+                background: 'rgba(148, 163, 184, 0.15)',
+                color: 'inherit',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              View original page
+            </button>
+          ) : null}
+        </h3>
+      );
+    };
+
     return {
       h1: createHeadingRenderer(1),
       h2: createHeadingRenderer(2),
-      h3: createHeadingRenderer(3),
+      h3: renderHeadingThree,
       img: ({ src, alt, ...rest }: React.ImgHTMLAttributes<HTMLImageElement>) => {
         const altText = typeof alt === 'string' && alt.trim() ? alt : FALLBACK_IMAGE_ALT;
 
@@ -412,7 +487,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
         );
       },
     };
-  }, [headingUsage, slugAssignments]);
+  }, [headingUsage, openPdfModal, resolvedPdfSource, slugAssignments]);
 
   const currentSubjectLessons = subjectLessons.map((lesson) => {
     const isExpanded = expandedLessons.has(lesson.id);
@@ -549,6 +624,15 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
           {markdown}
         </ReactMarkdown>
       </div>
+      {resolvedPdfSource ? (
+        <PdfModal
+          isOpen={pdfModalState.open}
+          pageNumber={pdfModalState.pageNumber}
+          source={resolvedPdfSource}
+          onClose={closePdfModal}
+          title={pdfModalTitle}
+        />
+      ) : null}
     </div>
   );
 };
