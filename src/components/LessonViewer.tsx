@@ -97,10 +97,67 @@ const createSnippet = (text: string, query: string) => {
 };
 
 const SUBJECT_ASSET_PREFIX = '/subject-assets/';
-const SUBJECTS_BASE_URL = new URL('subjects/', 'https://lesson-viewer.local/');
+const FALLBACK_IMAGE_ALT = 'Figure from PDF';
+const responsiveMarkdownImageStyles: React.CSSProperties = {
+  display: 'block',
+  width: '100%',
+  maxWidth: '100%',
+  height: 'auto',
+  maxHeight: 'min(60vh, 520px)',
+  objectFit: 'contain',
+};
 
 const isExternalAsset = (value: string) =>
   /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(value) || value.startsWith('data:') || value.startsWith('blob:');
+
+export const resolveSubjectAssetPath = (rawSrc: string): string => {
+  const trimmed = rawSrc.trim();
+  if (!trimmed) {
+    return '';
+  }
+
+  if (/^\/subject-assets\//i.test(trimmed)) {
+    return trimmed.replace(/^\/subject-assets\//i, SUBJECT_ASSET_PREFIX);
+  }
+
+  if (isExternalAsset(trimmed)) {
+    return trimmed;
+  }
+
+  const normalized = trimmed.replace(/\\/g, '/');
+  const suffixIndex = normalized.search(/[?#]/);
+  const pathPart = suffixIndex === -1 ? normalized : normalized.slice(0, suffixIndex);
+  const suffix = suffixIndex === -1 ? '' : normalized.slice(suffixIndex);
+
+  const rawSegments = pathPart.split('/');
+  const segments: string[] = [];
+
+  for (const segment of rawSegments) {
+    if (!segment || segment === '.') {
+      continue;
+    }
+    if (segment === '..') {
+      if (segments.length > 0) {
+        segments.pop();
+      }
+      continue;
+    }
+    segments.push(segment);
+  }
+
+  if (segments[0]?.toLowerCase() === 'subjects') {
+    segments.shift();
+  }
+
+  if (segments[0]?.toLowerCase() === 'subject-assets') {
+    segments.shift();
+  }
+
+  const sanitizedPath = segments.join('/');
+  const prefix = SUBJECT_ASSET_PREFIX.endsWith('/') ? SUBJECT_ASSET_PREFIX : `${SUBJECT_ASSET_PREFIX}/`;
+
+  return sanitizedPath ? `${prefix}${sanitizedPath}${suffix}` : `${prefix}${suffix}`;
+};
 
 const resolveLessonImageSource = (rawSrc: string): string => {
   const trimmed = rawSrc.trim();
@@ -108,7 +165,11 @@ const resolveLessonImageSource = (rawSrc: string): string => {
     return '';
   }
 
-  if (trimmed.startsWith('figure:') || trimmed.startsWith('/subject-assets/')) {
+  if (trimmed.startsWith('figure:')) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith('/subject-assets/')) {
     return trimmed;
   }
 
@@ -116,36 +177,7 @@ const resolveLessonImageSource = (rawSrc: string): string => {
     return trimmed;
   }
 
-  let normalized = trimmed.replace(/\\/g, '/');
-  if (normalized.startsWith('/')) {
-    if (/^\/subjects\//i.test(normalized)) {
-      normalized = normalized.replace(/^\/subjects\//i, '');
-    } else {
-      return normalized;
-    }
-  } else {
-    normalized = normalized.replace(/^\.\/+/, '').replace(/^subjects\//i, '');
-  }
-
-  try {
-    const resolved = new URL(normalized, SUBJECTS_BASE_URL);
-    let pathname = resolved.pathname.replace(/^\/+/, '');
-    if (/^subjects\//i.test(pathname)) {
-      pathname = pathname.replace(/^subjects\//i, '');
-    }
-
-    if (!pathname) {
-      return trimmed;
-    }
-
-    return `${SUBJECT_ASSET_PREFIX}${pathname}${resolved.search}${resolved.hash}`;
-  } catch (error) {
-    const fallback = normalized.replace(/^\/+/, '');
-    if (!fallback) {
-      return trimmed;
-    }
-    return `${SUBJECT_ASSET_PREFIX}${fallback}`;
-  }
+  return resolveSubjectAssetPath(trimmed);
 };
 
 const topAnchorId = 'lesson-viewer-top';
@@ -332,12 +364,14 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
       h2: createHeadingRenderer(2),
       h3: createHeadingRenderer(3),
       img: ({ src, alt, ...rest }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+        const altText = typeof alt === 'string' && alt.trim() ? alt : FALLBACK_IMAGE_ALT;
+
         if (typeof src === 'string' && src.startsWith('figure:')) {
           const figureId = src.replace(/^figure:/, '');
           return (
             <LessonFigure
               figureId={figureId}
-              alt={alt ?? ''}
+              alt={altText}
               className={styles.figure}
               mediaClassName={styles.figureMedia}
               captionClassName={styles.figureCaption}
@@ -346,22 +380,36 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
           );
         }
 
+        const { className, style: inlineStyle, ...imageProps } = rest;
+        const mergedClassName = [styles.markdownImage, className].filter(Boolean).join(' ');
+        const mergedStyle = inlineStyle
+          ? { ...responsiveMarkdownImageStyles, ...inlineStyle }
+          : responsiveMarkdownImageStyles;
+
         if (typeof src === 'string') {
           const resolvedSrc = resolveLessonImageSource(src);
-          const { className, ...imageProps } = rest;
-          const mergedClassName = [styles.markdownImage, className].filter(Boolean).join(' ');
           return (
             <img
               src={resolvedSrc}
-              alt={alt ?? ''}
+              alt={altText}
               className={mergedClassName}
               loading="lazy"
+              style={mergedStyle}
               {...imageProps}
             />
           );
         }
 
-        return <img src={typeof src === 'string' ? src : ''} alt={alt ?? ''} {...rest} />;
+        return (
+          <img
+            src={typeof src === 'string' ? src : ''}
+            alt={altText}
+            className={mergedClassName}
+            loading="lazy"
+            style={mergedStyle}
+            {...imageProps}
+          />
+        );
       },
     };
   }, [headingUsage, slugAssignments]);
