@@ -22,11 +22,42 @@ from pathlib import Path
 import shutil
 from typing import Callable, Sequence
 
-from docx import Document  # type: ignore
-from openpyxl import load_workbook  # type: ignore
-from pptx import Presentation  # type: ignore
-from pypdf import PdfReader
-import xlrd  # type: ignore
+try:  # pragma: no cover - optional dependency may be missing in CI environments
+    from docx import Document  # type: ignore
+except ImportError as docx_import_error:  # pragma: no cover - fallback when dependency absent
+    Document = None  # type: ignore[assignment]
+    DOCX_IMPORT_ERROR = docx_import_error
+else:
+    DOCX_IMPORT_ERROR = None
+try:  # pragma: no cover - optional dependency may be missing in CI environments
+    from openpyxl import load_workbook  # type: ignore
+except ImportError as openpyxl_import_error:  # pragma: no cover - fallback when dependency absent
+    load_workbook = None  # type: ignore[assignment]
+    OPENPYXL_IMPORT_ERROR = openpyxl_import_error
+else:
+    OPENPYXL_IMPORT_ERROR = None
+
+try:  # pragma: no cover - optional dependency may be missing in CI environments
+    from pptx import Presentation  # type: ignore
+except ImportError as pptx_import_error:  # pragma: no cover - fallback when dependency absent
+    Presentation = None  # type: ignore[assignment]
+    PPTX_IMPORT_ERROR = pptx_import_error
+else:
+    PPTX_IMPORT_ERROR = None
+try:  # pragma: no cover - optional dependency may be missing in CI environments
+    from pypdf import PdfReader
+except ImportError as pypdf_import_error:  # pragma: no cover - fallback when dependency absent
+    PdfReader = None  # type: ignore[assignment]
+    PYPDF_IMPORT_ERROR = pypdf_import_error
+else:
+    PYPDF_IMPORT_ERROR = None
+try:  # pragma: no cover - optional dependency may be missing in CI environments
+    import xlrd  # type: ignore
+except ImportError as xlrd_import_error:  # pragma: no cover - fallback when dependency absent
+    xlrd = None  # type: ignore[assignment]
+    XLRD_IMPORT_ERROR = xlrd_import_error
+else:
+    XLRD_IMPORT_ERROR = None
 
 ROOT = Path(__file__).resolve().parents[1]
 SUBJECTS_DIR = ROOT / "subjects"
@@ -211,6 +242,17 @@ def _store_page_images(page, page_number: int, target_dir: Path) -> tuple[list[s
 def _extract_pdf_with_optional_images(
     path: Path, *, image_output_dir: Path | None = None
 ) -> tuple[ExtractionResult, list[ImageMetadata]]:
+    if PdfReader is None:
+        notes = [
+            "pypdf is not installed; PDF content was not extracted.",
+        ]
+        if PYPDF_IMPORT_ERROR is not None:
+            notes.append(f"Import error: {PYPDF_IMPORT_ERROR}")
+        return (
+            ExtractionResult("[PDF extraction requires pypdf to be installed]", notes),
+            [],
+        )
+
     reader = PdfReader(path)
     pieces: list[str] = []
     metadata: list[ImageMetadata] = []
@@ -287,6 +329,14 @@ def extract_url(path: Path) -> ExtractionResult:
 
 
 def extract_presentation(path: Path) -> ExtractionResult:
+    if Presentation is None:
+        notes = [
+            "python-pptx is not installed; PPTX/PPSX content was not extracted.",
+        ]
+        if PPTX_IMPORT_ERROR is not None:
+            notes.append(f"Import error: {PPTX_IMPORT_ERROR}")
+        return ExtractionResult("[Presentation extraction requires python-pptx to be installed]", notes)
+
     presentation = Presentation(path)
     pieces: list[str] = []
     for slide_number, slide in enumerate(presentation.slides, start=1):
@@ -312,6 +362,14 @@ def extract_presentation(path: Path) -> ExtractionResult:
 
 
 def extract_excel_xlsx(path: Path) -> ExtractionResult:
+    if load_workbook is None:
+        notes = [
+            "openpyxl is not installed; XLSX content was not extracted.",
+        ]
+        if OPENPYXL_IMPORT_ERROR is not None:
+            notes.append(f"Import error: {OPENPYXL_IMPORT_ERROR}")
+        return ExtractionResult("[XLSX extraction requires openpyxl to be installed]", notes)
+
     workbook = load_workbook(path, data_only=True, read_only=True)
     buffer = StringIO()
     for sheet in workbook.worksheets:
@@ -329,6 +387,14 @@ def extract_excel_xlsx(path: Path) -> ExtractionResult:
 
 
 def extract_excel_xls(path: Path) -> ExtractionResult:
+    if xlrd is None:
+        notes = [
+            "xlrd is not installed; XLS content was not extracted.",
+        ]
+        if XLRD_IMPORT_ERROR is not None:
+            notes.append(f"Import error: {XLRD_IMPORT_ERROR}")
+        return ExtractionResult("[XLS extraction requires xlrd to be installed]", notes)
+
     workbook = xlrd.open_workbook(path)
     buffer = StringIO()
     for sheet in workbook.sheets():
@@ -347,6 +413,14 @@ def extract_excel_xls(path: Path) -> ExtractionResult:
 
 
 def extract_docx(path: Path) -> ExtractionResult:
+    if Document is None:
+        notes = [
+            "python-docx is not installed; DOCX content was not extracted.",
+        ]
+        if DOCX_IMPORT_ERROR is not None:
+            notes.append(f"Import error: {DOCX_IMPORT_ERROR}")
+        return ExtractionResult("[DOCX extraction requires python-docx to be installed]", notes)
+
     document = Document(path)
     parts = [para.text for para in document.paragraphs if para.text.strip()]
     for table in document.tables:
