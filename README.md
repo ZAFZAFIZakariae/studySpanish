@@ -41,6 +41,14 @@ starting Vite's preview server. The build relies on React, React Router, Dexie, 
 "JSX element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or vendored locally
 before running the preview command in an offline setting.
 
+When developing offline, run the helper script before building:
+
+```bash
+scripts/install_offline_deps.sh
+```
+
+The script installs React, React Router, Dexie, Zod, and the Markdown toolchain from pre-downloaded npm tarballs. It first looks for packages inside `.npm-offline-cache/` (configurable via `LOCAL_CACHE_DIR`). If the cache is empty, it extracts `offline-deps.tar.gz` (override with `BUNDLED_TARBALL`) and installs from the bundled tarballs. Populate either location with the required package archives to complete the build without internet access.
+
 ## Verification checklist
 
 To confirm the app is healthy, run the test suite followed by a production build:
