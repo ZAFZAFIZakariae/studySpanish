@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './InlineMarkdown.module.css';
+import { resolveSubjectAssetPath } from './LessonViewer';
 import { loadKatex } from '@/utils/loadKatex';
 
 const superscriptMap: Record<string, string> = {
@@ -248,6 +249,17 @@ const renderMath = (expression: string, key: number, displayMode = false) => (
   <MathExpression key={`md-math-${key}`} expression={expression} displayMode={displayMode} />
 );
 
+const FALLBACK_IMAGE_ALT = 'Figure from PDF';
+
+const responsiveImageStyles: React.CSSProperties = {
+  display: 'block',
+  width: '100%',
+  height: 'auto',
+  maxHeight: 'min(60vh, 520px)',
+  objectFit: 'contain',
+  margin: '0.75rem 0',
+};
+
 const renderTokens = (text: string): React.ReactNode[] => {
   const pattern = new RegExp(
     [
@@ -261,6 +273,7 @@ const renderTokens = (text: string): React.ReactNode[] => {
       '`[^`]+?`',
       '\\$\\$[\\s\\S]+?\\$\\$',
       '\\$[^$]+?\\$',
+      '!\\[[^\\]]*?\\]\\([^\\s)]+?\\)',
       '\\[[^\\]]+?\\]\\([^\\s)]+?\\)',
     ].join('|'),
     'g'
@@ -315,16 +328,32 @@ const renderTokens = (text: string): React.ReactNode[] => {
         nodes.push(rendered);
       }
     } else {
-      const linkMatch = token.match(/^\[([^\]]+)]\(([^)]+)\)$/);
-      if (linkMatch) {
-        const [, label, href] = linkMatch;
+      const imageMatch = token.match(/^!\[([^\]]*)]\(([^)]+)\)$/);
+      if (imageMatch) {
+        const [, rawAlt = '', rawSrc] = imageMatch;
+        const resolvedSrc = resolveSubjectAssetPath(rawSrc);
+        const altText = rawAlt.trim() ? rawAlt : FALLBACK_IMAGE_ALT;
         nodes.push(
-          <a key={`md-link-${key}`} href={href} target="_blank" rel="noopener noreferrer">
-            {label}
-          </a>
+          <img
+            key={`md-img-${key}`}
+            src={resolvedSrc || rawSrc}
+            alt={altText}
+            loading="lazy"
+            style={responsiveImageStyles}
+          />
         );
       } else {
-        nodes.push(token);
+        const linkMatch = token.match(/^\[([^\]]+)]\(([^)]+)\)$/);
+        if (linkMatch) {
+          const [, label, href] = linkMatch;
+          nodes.push(
+            <a key={`md-link-${key}`} href={href} target="_blank" rel="noopener noreferrer">
+              {label}
+            </a>
+          );
+        } else {
+          nodes.push(token);
+        }
       }
     }
 
