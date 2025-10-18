@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import textwrap
 import re
 import sys
@@ -51,6 +52,7 @@ except ImportError as pypdf_import_error:  # pragma: no cover - fallback when de
     PYPDF_IMPORT_ERROR = pypdf_import_error
 else:
     PYPDF_IMPORT_ERROR = None
+PYPDF_AUTOINSTALL_ATTEMPTED = False
 try:  # pragma: no cover - optional dependency may be missing in CI environments
     import xlrd  # type: ignore
 except ImportError as xlrd_import_error:  # pragma: no cover - fallback when dependency absent
@@ -79,6 +81,45 @@ class ImageMetadata:
     width: int | None
     height: int | None
     color_space: str | None
+
+
+def _ensure_pypdf_available() -> bool:
+    """Attempt to make the ``pypdf`` dependency available on demand."""
+
+    global PdfReader, PYPDF_IMPORT_ERROR, PYPDF_AUTOINSTALL_ATTEMPTED  # type: ignore[assignment]
+
+    if PdfReader is not None:
+        return True
+
+    if PYPDF_AUTOINSTALL_ATTEMPTED:
+        return False
+
+    PYPDF_AUTOINSTALL_ATTEMPTED = True
+
+    install_cmd = [sys.executable, "-m", "pip", "install", "pypdf"]
+    print(
+        "[extract-subject-texts] Attempting to automatically install optional dependency 'pypdf'.",
+        file=sys.stderr,
+    )
+
+    try:
+        subprocess.check_call(install_cmd)
+    except Exception as error:  # pragma: no cover - network/tools may be unavailable
+        PYPDF_IMPORT_ERROR = RuntimeError(
+            "Automatic installation of pypdf failed; install it manually to enable PDF extraction."
+            f" (command: {' '.join(install_cmd)}; error: {error})"
+        )
+        return False
+
+    try:  # pragma: no cover - depends on external installation step
+        from pypdf import PdfReader as imported_reader  # type: ignore
+    except Exception as import_error:  # pragma: no cover - defensive fallback
+        PYPDF_IMPORT_ERROR = import_error
+        return False
+
+    PdfReader = imported_reader  # type: ignore[assignment]
+    PYPDF_IMPORT_ERROR = None
+    return True
 
 
 def _normalise_whitespace(text: str) -> str:
@@ -242,7 +283,7 @@ def _store_page_images(page, page_number: int, target_dir: Path) -> tuple[list[s
 def _extract_pdf_with_optional_images(
     path: Path, *, image_output_dir: Path | None = None
 ) -> tuple[ExtractionResult, list[ImageMetadata]]:
-    if PdfReader is None:
+    if PdfReader is None and not _ensure_pypdf_available():
         notes = [
             "pypdf is not installed; PDF content was not extracted.",
         ]
@@ -250,6 +291,18 @@ def _extract_pdf_with_optional_images(
             notes.append(f"Import error: {PYPDF_IMPORT_ERROR}")
         return (
             ExtractionResult("[PDF extraction requires pypdf to be installed]", notes),
+            [],
+        )
+
+    if PdfReader is None:  # pragma: no cover - defensive guard
+        return (
+            ExtractionResult(
+                "[PDF extraction requires pypdf to be installed]",
+                [
+                    "pypdf dependency could not be initialised despite auto-install attempt.",
+                    f"Import error: {PYPDF_IMPORT_ERROR}",
+                ],
+            ),
             [],
         )
 
