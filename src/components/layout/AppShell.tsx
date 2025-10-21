@@ -38,6 +38,12 @@ const navigation: NavigationItem[] = [
     icon: '📚',
   },
   {
+    to: '/spanish',
+    label: 'Spanish',
+    description: 'General Spanish resources',
+    icon: '🇪🇸',
+  },
+  {
     to: '/subject-pdfs',
     label: 'Subject PDFs',
     description: 'Browse resources and trigger extraction',
