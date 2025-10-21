@@ -64,6 +64,12 @@
   padding-left: 24px;
 }
 
+.categoryLabel {
+  font-weight: bold;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
 .treeSubject {
   width: 100%;
   text-align: left;

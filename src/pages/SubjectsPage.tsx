@@ -42,6 +42,69 @@ const resourceTypeIcon: Record<NonNullable<ResourceLink['type']>, string> = {
   worksheet: '📝',
 };
 
+type CourseItemWithResource = CourseItem & { resource?: ResourceLink };
+
+const normalizeLabelForSolutionMatch = (label: string): string =>
+  label
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase();
+
+const isSolutionLabel = (label: string): boolean => {
+  const normalized = normalizeLabelForSolutionMatch(label);
+  return normalized.includes('solution') || normalized.includes('sol');
+};
+
+const isAnswerItem = (item: CourseItem): boolean => {
+  const singleResource = (item as CourseItemWithResource).resource;
+  if (singleResource?.label && isSolutionLabel(singleResource.label)) {
+    return true;
+  }
+
+  return (item.resources ?? []).some((resource) => isSolutionLabel(resource.label));
+};
+
+const categorizeCourseItems = (items: CourseItem[]): Array<{ label: string; items: CourseItem[] }> => {
+  const lessons: CourseItem[] = [];
+  const complementaryNotes: CourseItem[] = [];
+  const practicals: CourseItem[] = [];
+  const exams: CourseItem[] = [];
+  const answers: CourseItem[] = [];
+
+  items.forEach((item) => {
+    if (isAnswerItem(item)) {
+      answers.push(item);
+      return;
+    }
+
+    switch (item.kind) {
+      case 'lesson':
+        lessons.push(item);
+        break;
+      case 'reading':
+        complementaryNotes.push(item);
+        break;
+      case 'lab':
+        practicals.push(item);
+        break;
+      case 'assignment':
+      case 'project':
+        exams.push(item);
+        break;
+      default:
+        break;
+    }
+  });
+
+  return [
+    { label: 'Lessons', items: lessons },
+    { label: 'Complementary Notes', items: complementaryNotes },
+    { label: 'Practicals', items: practicals },
+    { label: 'Exams', items: exams },
+    { label: 'Answers', items: answers },
+  ];
+};
+
 type ResourceTreeNode =
   | { kind: 'group'; label: string; key: string; children: ResourceTreeNode[] }
   | { kind: 'resource'; label: string; key: string; resource: ResourceLink };
@@ -1030,25 +1093,36 @@ const SubjectsPage: React.FC = () => {
                             </button>
                             {isActiveCourse && (
                               <ul className={styles.treeItemList}>
-                                {course.items.map((item) => {
-                                  const isActiveItem = activeItemId === item.id;
+                                {categorizeCourseItems(course.items).map((category) => {
+                                  if (category.items.length === 0) {
+                                    return null;
+                                  }
+
                                   return (
-                                    <li key={item.id}>
-                                      <button
-                                        type="button"
-                                        className={`${styles.treeItem} ${isActiveItem ? styles.treeItemActive : ''}`}
-                                        onClick={() => {
-                                          setActiveCourseId(course.id);
-                                          setActiveItemId(item.id);
-                                        }}
-                                      >
-                                        <span className={styles.treeItemIcon} aria-hidden="true">
-                                          {itemKindIcon[item.kind]}
-                                        </span>
-                                        <span className={styles.treeItemLabel}>{item.title}</span>
-                                        <span className={styles.treeItemKind}>{item.kind}</span>
-                                      </button>
-                                    </li>
+                                    <React.Fragment key={category.label}>
+                                      <li className={styles.categoryLabel}>{category.label}</li>
+                                      {category.items.map((item) => {
+                                        const isActiveItem = activeItemId === item.id;
+                                        return (
+                                          <li key={item.id}>
+                                            <button
+                                              type="button"
+                                              className={`${styles.treeItem} ${isActiveItem ? styles.treeItemActive : ''}`}
+                                              onClick={() => {
+                                                setActiveCourseId(course.id);
+                                                setActiveItemId(item.id);
+                                              }}
+                                            >
+                                              <span className={styles.treeItemIcon} aria-hidden="true">
+                                                {itemKindIcon[item.kind]}
+                                              </span>
+                                              <span className={styles.treeItemLabel}>{item.title}</span>
+                                              <span className={styles.treeItemKind}>{item.kind}</span>
+                                            </button>
+                                          </li>
+                                        );
+                                      })}
+                                    </React.Fragment>
                                   );
                                 })}
                               </ul>
