@@ -1,0 +1,14 @@
+{
+  "featured": [
+    {
+      "title": "Everyday Vocabulary Deck",
+      "description": "Printable flashcards grouped by themes such as food, travel, and school.",
+      "type": "download"
+    },
+    {
+      "title": "Pronunciation Mini Lessons",
+      "description": "Short audio explainers focusing on vowels, consonant clusters, and stress patterns.",
+      "type": "audio"
+    }
+  ]
+}
