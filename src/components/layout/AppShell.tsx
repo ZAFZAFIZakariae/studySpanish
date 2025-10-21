@@ -32,6 +32,12 @@ const navigation: NavigationItem[] = [
     icon: '⚙️',
   },
   {
+    to: '/subjects',
+    label: 'Subjects',
+    description: 'Browse study subjects',
+    icon: '📚',
+  },
+  {
     to: '/subject-pdfs',
     label: 'Subject PDFs',
     description: 'Browse resources and trigger extraction',
