@@ -123,6 +123,10 @@ const server = http.createServer((req, res) => {
   const requestUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   let pathname = decodeURIComponent(requestUrl.pathname);
 
+  if (pathname.startsWith('/assets/')) {
+    pathname = `/dist${pathname}`;
+  }
+
   if (pathname === '/subject-extracts.json') {
     manifestHandler(res);
     return;
