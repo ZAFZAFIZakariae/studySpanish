@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/Home';
 import DashboardPage from './pages/DashboardPage';
 import LessonPage from './pages/LessonPage';
@@ -15,13 +15,32 @@ import SubjectPdfBrowserPage from './pages/SubjectPdfBrowserPage';
 const App: React.FC = () => {
   const { enabled, toggle } = useHighContrast();
 
+  const basename = React.useMemo(() => {
+    if (typeof window === 'undefined') {
+      return import.meta.env.BASE_URL ?? '/';
+    }
+
+    const { pathname } = window.location;
+
+    if (pathname.startsWith('/dist/')) {
+      return '/dist';
+    }
+
+    if (pathname === '/dist') {
+      return '/dist';
+    }
+
+    return import.meta.env.BASE_URL ?? '/';
+  }, []);
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
       <AppShell highContrastEnabled={enabled} onToggleHighContrast={toggle}>
         <Routes>
+          <Route path="index.html" element={<Navigate to="/" replace />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/spanish" element={<SpanishPage />} />
           <Route path="/subjects" element={<SubjectsPage />} />
