@@ -232,6 +232,37 @@ const isPlaceholderSummary = (text?: string) => {
   return translationPlaceholderPatterns.some((pattern) => pattern.test(text));
 };
 
+const fetchEnglishSummary = async (text: string): Promise<string | null> => {
+  const trimmed = text.trim();
+  if (!trimmed) {
+    return null;
+  }
+
+  try {
+    const response = await fetch('/api/gemini/summaries', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ text: trimmed }),
+    });
+
+    if (!response.ok) {
+      console.warn('Failed to fetch Gemini English summary', response.status, response.statusText);
+      return null;
+    }
+
+    const payload = (await response.json()) as { summary?: string | null };
+    const summary = payload.summary?.trim();
+
+    // TODO: Cache the summary in IndexedDB (Dexie) or persist it on the item so we only fetch once.
+    return summary && summary.length > 0 ? summary : null;
+  } catch (error) {
+    console.error('Gemini English summary request failed', error);
+    return null;
+  }
+};
+
 const romanMap: Record<string, number> = {
   I: 1,
   V: 5,
@@ -421,18 +452,23 @@ const SubjectsPage: React.FC = () => {
   }, [activeItem]);
   const summaryInfo = useMemo(() => {
     if (!activeItem) {
-      return { original: '', english: undefined as string | undefined, showEnglish: false, placeholder: true };
+      return {
+        original: '',
+        english: undefined as string | undefined,
+        showEnglish: false,
+        placeholder: true,
+      };
     }
+
     const original = activeItem.summary.original?.trim() ?? '';
     const englishRaw = activeItem.summary.english?.trim();
+    const englishFromItem = !isPlaceholderSummary(englishRaw) ? englishRaw : undefined;
     const translationFallback = activeItem.translation?.summary?.trim();
-    const english = !isPlaceholderSummary(englishRaw)
-      ? englishRaw
-      : !isPlaceholderSummary(translationFallback)
-      ? translationFallback
-      : undefined;
+    const englishFallback = !isPlaceholderSummary(translationFallback) ? translationFallback : undefined;
+    const english = englishFromItem ?? englishFallback;
     const showEnglish = Boolean(english && english !== original);
-    const placeholder = !english && activeItem.language !== 'en';
+    const placeholder = !englishFromItem;
+
     return { original, english, showEnglish, placeholder };
   }, [activeItem]);
   const [pdfPreview, setPdfPreview] = useState<PdfPageLocation | null>(null);
@@ -1167,17 +1203,18 @@ const SubjectsPage: React.FC = () => {
                       <span>{summaryInfo.original}</span>
                     </p>
                   )}
-                  {summaryInfo.showEnglish && summaryInfo.english ? (
+                  {summaryInfo.showEnglish && summaryInfo.english && (
                     <p className={styles.summaryEnglish} lang="en">
                       <span className={styles.summaryChip} aria-hidden="true">EN</span>
                       <span>{summaryInfo.english}</span>
                     </p>
-                  ) : summaryInfo.placeholder ? (
+                  )}
+                  {summaryInfo.placeholder && (
                     <p className={styles.summaryPlaceholder}>
                       <span className={styles.summaryChip} aria-hidden="true">EN</span>
                       <span>English recap coming soon.</span>
                     </p>
-                  ) : null}
+                  )}
                 </div>
               </section>
 
