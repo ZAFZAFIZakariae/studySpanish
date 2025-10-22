@@ -81,6 +81,16 @@ Both commands should complete without errors. The build step prints a summary of
 
 Use the **Content manager** page to upload JSON bundles that follow the `SeedBundle` schema (`lessons`, `exercises`, and `flashcards` arrays). The UI validates the structure, previews new/updated records, and updates the offline cache after a successful import.
 
+### Updating subject extracts
+
+Subject text extracts now refresh automatically whenever you start the dev server, run the test suite, or build the app. The helper script `scripts/ensure-subject-extracts.mjs` scans `subjects/` for new, removed, or modified PDFs before `npm run dev`, `npm test`, and `npm run build`; when it spots a change, it invokes `python scripts/extract_subject_texts.py` to regenerate the derived files.
+
+You can still trigger the refresh manually with `npm run ensure:subject-extracts` (or by running the Python extractor directly) if you need to update the extracts outside of the usual npm workflows. After the script finishes:
+
+1. Confirm the new `.txt` files appear in `src/data/subjectExtracts/` alongside the existing extracts.
+2. Open each generated file and ensure it begins with the header `Source: ...` that records the original location.
+3. Verify the barrel file `src/data/subjectExtracts/index.ts` automatically imports the new entries (it is rebuilt by the extractor).
+
 ## Project structure
 
 - `src/components/layout/AppShell.tsx` – shared layout and navigation shell.

@@ -8,3 +8,4 @@ subjects/tmp-extracted-images/
 subjects/**/*-images/
 src/data/subjectExtracts/**/*-images/
 public/subject-assets/
+.cache/
