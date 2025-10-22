@@ -88,10 +88,10 @@ describe('SubjectsPage', () => {
     const initialDetail = await screen.findByRole('article');
     expect(within(initialDetail).getByText(focusedSubject.name)).toBeInTheDocument();
 
-    await user.click(screen.getByRole('link', { name: /general spanish resources/i }));
+    await user.click(screen.getByRole('link', { name: /^spanish$/i }));
     await screen.findByRole('heading', { name: /spanish resources/i });
 
-    await user.click(screen.getByRole('link', { name: /browse study subjects/i }));
+    await user.click(screen.getByRole('link', { name: /^subjects$/i }));
 
     const detail = await screen.findByRole('article');
     expect(within(detail).getByText(firstSubject.name)).toBeInTheDocument();

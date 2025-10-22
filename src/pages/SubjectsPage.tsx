@@ -1013,6 +1013,66 @@ const SubjectsPage: React.FC = () => {
                     <ul className={styles.treeCourseList}>
                       {subject.courses.map((course) => {
                         const isActiveCourse = activeCourseId === course.id;
+                        const groups: Array<{ label: string; items: CourseItem[] }> = [
+                          { label: 'Lessons', items: [] },
+                          { label: 'Complementary Notes', items: [] },
+                          { label: 'Practicals', items: [] },
+                          { label: 'Exams', items: [] },
+                          { label: 'Answers', items: [] },
+                        ];
+
+                        course.items.forEach((item) => {
+                          const hasSolutionResource = item.resources?.some((resource) => {
+                            const normalizedLabel = resource.label.toLowerCase();
+                            return normalizedLabel.includes('solution') || normalizedLabel.includes('sol');
+                          });
+
+                          if (hasSolutionResource) {
+                            groups[4].items.push(item);
+                            return;
+                          }
+
+                          switch (item.kind) {
+                            case 'lesson':
+                              groups[0].items.push(item);
+                              break;
+                            case 'reading':
+                              groups[1].items.push(item);
+                              break;
+                            case 'lab':
+                              groups[2].items.push(item);
+                              break;
+                            case 'assignment':
+                            case 'project':
+                              groups[3].items.push(item);
+                              break;
+                            default:
+                              break;
+                          }
+                        });
+
+                        const renderCourseItem = (item: CourseItem) => {
+                          const isActiveItem = activeItemId === item.id;
+                          return (
+                            <li key={item.id}>
+                              <button
+                                type="button"
+                                className={`${styles.treeItem} ${isActiveItem ? styles.treeItemActive : ''}`}
+                                onClick={() => {
+                                  setActiveCourseId(course.id);
+                                  setActiveItemId(item.id);
+                                }}
+                              >
+                                <span className={styles.treeItemIcon} aria-hidden="true">
+                                  {itemKindIcon[item.kind]}
+                                </span>
+                                <span className={styles.treeItemLabel}>{item.title}</span>
+                                <span className={styles.treeItemKind}>{item.kind}</span>
+                              </button>
+                            </li>
+                          );
+                        };
+
                         return (
                           <li key={course.id}>
                             <button
@@ -1030,27 +1090,14 @@ const SubjectsPage: React.FC = () => {
                             </button>
                             {isActiveCourse && (
                               <ul className={styles.treeItemList}>
-                                {course.items.map((item) => {
-                                  const isActiveItem = activeItemId === item.id;
-                                  return (
-                                    <li key={item.id}>
-                                      <button
-                                        type="button"
-                                        className={`${styles.treeItem} ${isActiveItem ? styles.treeItemActive : ''}`}
-                                        onClick={() => {
-                                          setActiveCourseId(course.id);
-                                          setActiveItemId(item.id);
-                                        }}
-                                      >
-                                        <span className={styles.treeItemIcon} aria-hidden="true">
-                                          {itemKindIcon[item.kind]}
-                                        </span>
-                                        <span className={styles.treeItemLabel}>{item.title}</span>
-                                        <span className={styles.treeItemKind}>{item.kind}</span>
-                                      </button>
-                                    </li>
-                                  );
-                                })}
+                                {groups.map((group) =>
+                                  group.items.length > 0 ? (
+                                    <React.Fragment key={group.label}>
+                                      <li className={styles.categoryLabel}>{group.label}</li>
+                                      {group.items.map((item) => renderCourseItem(item))}
+                                    </React.Fragment>
+                                  ) : null
+                                )}
                               </ul>
                             )}
                           </li>
