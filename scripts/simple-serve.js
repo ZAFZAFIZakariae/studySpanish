@@ -1,13 +1,23 @@
 #!/usr/bin/env node
 const http = require('http');
 const fs = require('fs');
+const fsPromises = require('fs/promises');
 const path = require('path');
+const { spawn } = require('child_process');
 const { URL } = require('url');
 
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 const subjectExtractDir = path.join(rootDir, 'src', 'data', 'subjectExtracts');
+const subjectsDir = path.join(rootDir, 'subjects');
+const extractionImagesDir = path.join(subjectsDir, 'tmp-extracted-images');
+const extractsOutputDir = path.join(rootDir, 'src', 'data', 'subjectExtracts');
+const publicDir = path.join(rootDir, 'public');
+const publicAssetsDir = path.join(publicDir, 'subject-assets');
 const DEFAULT_PORT = 5173;
+const PYTHON_BIN = process.env.PYTHON_PATH || process.env.PYTHON || 'python3';
+
+const { mkdir, writeFile, copyFile } = fsPromises;
 
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
@@ -33,6 +43,257 @@ const safeJoin = (base, targetPath) => {
     return null;
   }
   return target;
+};
+
+const readRequestBody = (req, limit = 10 * 1024 * 1024) =>
+  new Promise((resolve, reject) => {
+    let body = '';
+    let received = 0;
+
+    req.on('data', (chunk) => {
+      received += chunk.length;
+      if (received > limit) {
+        reject(new Error('Request body too large'));
+        req.destroy();
+        return;
+      }
+      body += chunk.toString('utf8');
+    });
+
+    req.on('end', () => resolve(body));
+    req.on('error', (error) => reject(error));
+  });
+
+const sendJson = (res, statusCode, payload) => {
+  if (res.headersSent) {
+    res.end();
+    return;
+  }
+
+  const body = JSON.stringify(payload);
+  res.writeHead(statusCode, {
+    'Content-Type': mimeTypes['.json'],
+    'Content-Length': Buffer.byteLength(body),
+  });
+  res.end(body);
+};
+
+const resolveScriptPath = () => path.join(rootDir, 'scripts', 'extract_subject_texts.py');
+const resolveImagesDir = () => path.join(subjectsDir, 'tmp-extracted-images');
+
+const extractPdf = async (filePath) => {
+  if (!filePath) {
+    throw new Error('A file path must be provided for PDF extraction');
+  }
+
+  const scriptPath = resolveScriptPath();
+  const imagesDir = resolveImagesDir();
+  const absoluteFilePath = path.isAbsolute(filePath) ? filePath : path.resolve(rootDir, filePath);
+  const relativeToSubjects = path.relative(subjectsDir, absoluteFilePath);
+
+  if (relativeToSubjects.startsWith('..') || path.isAbsolute(relativeToSubjects)) {
+    throw new Error('The provided file path must point to a PDF inside the subjects directory.');
+  }
+
+  return await new Promise((resolve, reject) => {
+    const extractor = spawn(
+      PYTHON_BIN,
+      [scriptPath, '--single-pdf', absoluteFilePath, '--images-dir', imagesDir],
+      { stdio: ['ignore', 'pipe', 'pipe'], env: process.env }
+    );
+
+    let stdout = '';
+    let stderr = '';
+
+    extractor.stdout.setEncoding('utf8');
+    extractor.stdout.on('data', (chunk) => {
+      stdout += chunk;
+    });
+
+    extractor.stderr.setEncoding('utf8');
+    extractor.stderr.on('data', (chunk) => {
+      stderr += chunk;
+    });
+
+    extractor.on('error', (error) => {
+      const wrapped = new Error(`Failed to start extraction script: ${error.message}`);
+      wrapped.cause = error;
+      reject(wrapped);
+    });
+
+    extractor.on('close', (code) => {
+      if (code !== 0) {
+        const details = stderr.trim();
+        const message = details ? ` ${details}` : '';
+        reject(new Error(`PDF extraction failed with exit code ${code}.${message}`));
+        return;
+      }
+
+      try {
+        const parsed = JSON.parse(stdout);
+        const text = typeof parsed.text === 'string' ? parsed.text : '';
+        const images = Array.isArray(parsed.images) ? parsed.images : [];
+        resolve({ text, images });
+      } catch (error) {
+        const wrapped = new Error(
+          error instanceof Error ? `Failed to parse extractor output: ${error.message}` : 'Failed to parse extractor output'
+        );
+        wrapped.cause = error instanceof Error ? error : undefined;
+        if (stderr.trim()) {
+          wrapped.details = stderr.trim();
+        }
+        reject(wrapped);
+      }
+    });
+  });
+};
+
+const handleApiExtract = async (req, res, method) => {
+  if (method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  let payload;
+  try {
+    const rawBody = await readRequestBody(req);
+    payload = rawBody ? JSON.parse(rawBody) : {};
+  } catch (error) {
+    console.warn('[simple-serve] Failed to parse /api/extract payload:', error);
+    sendJson(res, 400, { error: 'Invalid JSON payload' });
+    return;
+  }
+
+  const filePath = typeof payload?.filePath === 'string' ? payload.filePath.trim() : '';
+
+  if (!filePath) {
+    sendJson(res, 400, { error: 'A filePath string must be provided' });
+    return;
+  }
+
+  try {
+    const result = await extractPdf(filePath);
+    sendJson(res, 200, result);
+  } catch (error) {
+    console.error('[simple-serve] Failed to extract PDF', error);
+    sendJson(res, 500, { error: 'Failed to extract PDF content' });
+  }
+};
+
+const handleApiSaveExtract = async (req, res, method) => {
+  if (method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  let payload;
+  try {
+    const rawBody = await readRequestBody(req);
+    payload = rawBody ? JSON.parse(rawBody) : {};
+  } catch (error) {
+    console.warn('[simple-serve] Failed to parse /api/save-extract payload:', error);
+    sendJson(res, 400, { error: 'Invalid JSON payload' });
+    return;
+  }
+
+  const filePath = typeof payload?.filePath === 'string' ? payload.filePath.trim() : '';
+  const markdown = typeof payload?.markdown === 'string' ? payload.markdown : '';
+  const assetsInput = Array.isArray(payload?.assets) ? payload.assets : [];
+
+  if (!filePath) {
+    sendJson(res, 400, { error: 'A filePath string must be provided' });
+    return;
+  }
+
+  if (!markdown) {
+    sendJson(res, 400, { error: 'A markdown string must be provided' });
+    return;
+  }
+
+  const absoluteSourcePath = path.isAbsolute(filePath) ? filePath : path.resolve(rootDir, filePath);
+  const relativeSubjectPath = path.relative(subjectsDir, absoluteSourcePath);
+
+  if (relativeSubjectPath.startsWith('..') || path.isAbsolute(relativeSubjectPath)) {
+    sendJson(res, 400, {
+      error: 'The provided filePath must point to a file inside the subjects directory.',
+    });
+    return;
+  }
+
+  const relativeDirectory = path.dirname(relativeSubjectPath);
+  const baseName = path.basename(relativeSubjectPath, path.extname(relativeSubjectPath));
+  const outputDirectory = path.resolve(
+    extractsOutputDir,
+    path.join('subjects', relativeDirectory === '.' ? '' : relativeDirectory)
+  );
+  const outputPath = path.resolve(outputDirectory, `${baseName}.txt`);
+
+  try {
+    await mkdir(outputDirectory, { recursive: true });
+    const content = markdown.endsWith('\n') ? markdown : `${markdown}\n`;
+    await writeFile(outputPath, content, { encoding: 'utf8', flag: 'w' });
+  } catch (error) {
+    console.error('[simple-serve] Failed to write extract', error);
+    sendJson(res, 500, { error: 'Failed to write extract file' });
+    return;
+  }
+
+  const assetsToCopy = [];
+  for (const entry of assetsInput) {
+    if (
+      entry &&
+      typeof entry.originalPath === 'string' &&
+      typeof entry.targetPath === 'string'
+    ) {
+      const originalPath = entry.originalPath.trim();
+      const targetPath = entry.targetPath.trim();
+      if (originalPath && targetPath) {
+        assetsToCopy.push({ originalPath, targetPath });
+      }
+    }
+  }
+
+  try {
+    for (const asset of assetsToCopy) {
+      const sourcePath = path.isAbsolute(asset.originalPath)
+        ? asset.originalPath
+        : path.resolve(rootDir, asset.originalPath);
+      const relativeTempPath = path.relative(extractionImagesDir, sourcePath);
+
+      if (relativeTempPath.startsWith('..') || path.isAbsolute(relativeTempPath)) {
+        throw new Error('Asset path must originate from the temporary extraction directory.');
+      }
+
+      const normalisedTarget = asset.targetPath.replace(/\\+/g, '/').replace(/^\/+/, '');
+
+      if (!normalisedTarget.startsWith('subject-assets/')) {
+        throw new Error('Asset target path must be within the public/subject-assets directory.');
+      }
+
+      const destinationPath = path.resolve(publicDir, normalisedTarget);
+      const relativeDestination = path.relative(publicAssetsDir, destinationPath);
+
+      if (relativeDestination.startsWith('..') || path.isAbsolute(relativeDestination)) {
+        throw new Error('Asset target path must be contained within public/subject-assets.');
+      }
+
+      await mkdir(path.dirname(destinationPath), { recursive: true });
+      await copyFile(sourcePath, destinationPath);
+    }
+  } catch (error) {
+    console.error('[simple-serve] Failed to copy extracted images', error);
+    sendJson(res, 500, { error: 'Failed to copy extracted images' });
+    return;
+  }
+
+  sendJson(res, 200, {
+    ok: true,
+    outputPath: path.relative(rootDir, outputPath).split(path.sep).join('/'),
+  });
 };
 
 const parseOptions = () => {
@@ -266,15 +527,39 @@ const server = http.createServer((req, res) => {
   }
 
   const method = req.method || 'GET';
+  const requestUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const pathname = decodeURIComponent(requestUrl.pathname);
+
+  if (pathname === '/api/extract') {
+    handleApiExtract(req, res, method).catch((error) => {
+      console.error('[simple-serve] Unexpected error handling /api/extract', error);
+      if (!res.headersSent) {
+        sendJson(res, 500, { error: 'Internal Server Error' });
+      } else {
+        res.end();
+      }
+    });
+    return;
+  }
+
+  if (pathname === '/api/save-extract') {
+    handleApiSaveExtract(req, res, method).catch((error) => {
+      console.error('[simple-serve] Unexpected error handling /api/save-extract', error);
+      if (!res.headersSent) {
+        sendJson(res, 500, { error: 'Internal Server Error' });
+      } else {
+        res.end();
+      }
+    });
+    return;
+  }
+
   if (!['GET', 'HEAD'].includes(method)) {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET, HEAD');
     res.end('Method Not Allowed');
     return;
   }
-
-  const requestUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-  const pathname = decodeURIComponent(requestUrl.pathname);
 
   if (pathname === '/subject-extracts.json') {
     manifestHandler(res);
