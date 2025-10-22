@@ -1,50 +1,46 @@
 # Introduction · Database Design and Management (Diseño y Gestión de Bases de Datos)
 
-## General information (Información general)
-- **Degree (Grado):** Computer Engineering, Information Systems specialization (Ingeniería Informática – Sistemas de Información).
-- **Type (Carácter):** Mandatory course—4.5 theory credits + 1.5 lab credits.
-- **Faculty (Profesorado):** Laura Mota, Pedro Valderas, and Abel Gómez.
+## Purpose / Propósito
+- Present the course scope, its relationship with prior subjects, and the pillars of advanced administration and design. / Presentar el alcance de la asignatura, su relación con cursos previos y los pilares de administración y diseño avanzado.
+- Communicate key logistics: subject type, credits, teaching staff, and theory-lab structure. / Comunicar la logística principal: tipo de materia, créditos, profesorado y estructura teoría-laboratorio.
 
-## Course purpose (Propósito de la asignatura)
-- Deepen skills in administering and operating relational DBMSs (SGBD relacionales).
-- Design advanced solutions that integrate logical and physical aspects.
-- Reinforce knowledge from “Databases and Information Systems” (Bases de Datos y Sistemas de Información).
+## Objectives / Objetivos
+- Deepen knowledge of managing and operating relational database management systems. / Profundizar en la gestión y operación de sistemas gestores de bases de datos relacionales.
+- Integrate logical and physical design decisions into real-world cases. / Integrar decisiones de diseño lógico y físico en casos reales.
+- Reinforce prior knowledge from "Databases and Information Systems." / Reforzar conocimientos previos de "Bases de Datos y Sistemas de Información".
 
-## Specific objectives (Objetivos específicos)
-- **Management and administration (Gestión y administración):**
-  - Analyze DBMS components, functions, and architectures.
-  - Master independence, integrity, and security strategies (independencia, integridad y seguridad).
-  - Plan implementation, optimization, and monitoring tasks.
-- **Advanced design (Diseño avanzado):**
-  - Evaluate physical design factors and denormalization choices.
-  - Program server-side logic—PL/SQL, triggers, packages (lógica en el servidor).
-  - Apply methodologies to real case studies.
+## Activities / Actividades
+### General Information (Información general)
+- **Degree / Grado:** Computer Engineering – Information Systems track. / Ingeniería Informática – Mención en Sistemas de Información.
+- **Course type / Carácter:** Mandatory (4.5 theory credits + 1.5 lab credits). / Obligatoria (4.5 créditos teoría + 1.5 laboratorio).
+- **Faculty / Profesorado:** Laura Mota, Pedro Valderas, and Abel Gómez. / Laura Mota, Pedro Valderas y Abel Gómez.
 
-![Course competency map (Mapa de competencias de la asignatura)](figure:dbd-presentacion/competencias)
-Caption: How management, design, and hands-on abilities connect throughout the semester.
+### Theory Syllabus (Programa de teoría)
+1. Database Management Systems. / Sistemas de Gestión de Bases de Datos.
+2. Transaction processing and integrity. / Procesamiento de transacciones e integridad.
+3. Failure recovery. / Recuperación ante fallos.
+4. Concurrency control. / Control de concurrencia.
+5. Internal database implementation. / Implementación interna de bases de datos.
+6. Query optimization. / Optimización de consultas.
+7. Database security. / Seguridad en bases de datos.
+8. Physical design. / Diseño físico.
+9. Server-side programming. / Programación en el servidor.
 
-## Theory syllabus (Programa de teoría)
-1. Database management systems (Sistemas de Gestión de Bases de Datos).
-2. Transaction processing and integrity (Procesamiento de transacciones e integridad).
-3. Failure recovery (Recuperación ante fallos).
-4. Concurrency control (Control de la concurrencia).
-5. Internal database implementation.
-6. Query optimization (Optimización de consultas).
-7. Database security (Seguridad en bases de datos).
-8. Physical design (Diseño físico).
-9. Server-side programming (Programación en el servidor).
+### Lab Syllabus (Programa de prácticas)
+- **P1:** Introduction to the Oracle environment. / Introducción al entorno Oracle.
+- **P2:** Transaction processing and integrity. / Procesamiento de transacciones e integridad.
+- **P3:** Failure recovery. / Recuperación ante fallos.
+- **P4:** Concurrency in Oracle. / Concurrencia en Oracle.
+- **P5:** Physical implementation (two sessions). / Implementación física (dos sesiones).
+- **P6:** Query optimization. / Optimización de consultas.
+- **P7:** Security. / Seguridad.
+- **P8:** Server-side programming (two sessions). / Programación en el servidor (dos sesiones).
 
-## Lab syllabus (Programa de prácticas)
-- **P1:** Introduction to the Oracle environment (Introducción al entorno Oracle).
-- **P2:** Transaction processing and integrity.
-- **P3:** Failure recovery.
-- **P4:** Concurrency in Oracle (Concurrencia en Oracle).
-- **P5:** Physical implementation—two sessions (Implementación física).
-- **P6:** Query optimization.
-- **P7:** Security (Seguridad).
-- **P8:** Server-side programming—two sessions (Programación en el servidor).
+### Competency Map (Mapa de competencias)
+- ![Course competency map / Mapa de competencias de la asignatura](figure:dbd-presentacion/competencias)
+  Caption: Connection among management, design, and practical skills throughout the semester. / Conexión entre gestión, diseño y habilidades prácticas durante el semestre.
 
-## Assessment overview (Evaluación orientativa)
-- Lab participation and deliverables tied to each practice (participación en laboratorio).
-- Written tests covering specific theory blocks.
-- Integrative project or case study emphasizing administration and design.
+## Assessment / Evaluación
+- Lab participation and deliverables aligned with each practice. / Participación y entregables de laboratorio alineados con cada práctica.
+- Written exams covering specific theory blocks. / Pruebas escritas que cubren los bloques teóricos específicos.
+- Integrative project or case focused on administration and physical design. / Proyecto o caso integrador centrado en administración y diseño físico.

@@ -1,18 +1,22 @@
-# Notebook focus
-- Practice Local Binary Patterns (**Patrones Binarios Locales**) on controlled datasets before moving to real-world textures.
-- Compare standard, rotation-invariant, and uniform LBP variants with quantitative charts.
+# LBP Notebook · Local Texture Patterns (Patrones locales de textura)
 
-## Workflow outline
-1. Load the sample images and apply grayscale plus optional Gaussian smoothing to reduce noise.
-2. Compute LBP features with varying `P` (points) and `R` (radius) values; document the configuration in both English and Spanish.
-3. Build normalised histograms, explaining how bins relate to texture micro-patterns (**micro-patrones**).
-4. Train a lightweight classifier (k-NN or SVM) and log accuracy to validate the descriptor choice.
+## Purpose / Propósito
+- Practice **Local Binary Patterns** on controlled datasets before moving on to real textures. / Practicar **Local Binary Patterns (Patrones Binarios Locales)** en conjuntos controlados antes de abordar texturas reales.
+- Compare standard, rotation-invariant, and uniform variants through quantitative charts. / Comparar variantes estándar, invariantes a rotación y uniformes mediante gráficas cuantitativas.
 
-## Analysis questions
-- How does increasing the radius affect rotational robustness? Reference the Spanish descriptor names when comparing results.
-- Which variant yields the most stable histogram across lighting changes?
+## Objectives / Objetivos
+- Explore how parameters `P` (points) and `R` (radius) affect descriptor robustness. / Explorar el impacto de los parámetros `P` (puntos) y `R` (radio) en la robustez del descriptor.
+- Generate normalized histograms that explain the relationship between bins and micro texture patterns. / Generar histogramas normalizados que expliquen la relación entre bins y micro-patrones de textura.
+- Validate the descriptor by training a lightweight classifier. / Validar la utilidad del descriptor entrenando un clasificador ligero.
 
-## Submission items
-- Notebook executed end-to-end with markdown commentary summarising findings.
-- Table comparing metrics (accuracy, F1-score) for each LBP variant with bilingual column headers.
-- Short retrospective noting open issues to address in the SIFT session.
+## Activities / Actividades
+1. Load the sample images, convert them to grayscale, and optionally apply Gaussian smoothing to reduce noise. / Cargar las imágenes de muestra, convertirlas a escala de grises y aplicar un suavizado gaussiano opcional para reducir ruido.
+2. Compute LBP features while varying `P` and `R`, documenting each configuration in Spanish and English. / Calcular características LBP variando `P` y `R`, documentando cada configuración en español e inglés.
+3. Build normalized histograms describing which micro-patterns each grouping represents. / Construir histogramas normalizados describiendo qué micro-patrones representa cada agrupación.
+4. Train a lightweight classifier (k-NN or SVM) and record accuracy and F1-score for every variant. / Entrenar un clasificador ligero (k-NN o SVM) y registrar accuracy y F1-score para cada variante.
+5. Analyze how increasing the radius affects rotational invariance and which variant keeps histograms stable under lighting changes. / Analizar cómo el aumento del radio afecta la invariancia rotacional y qué variante mantiene histogramas estables ante cambios de iluminación.
+
+## Assessment / Evaluación
+- Submit the complete notebook with Markdown commentary summarizing findings. / Entregar el notebook completo con comentarios en Markdown que resuman los hallazgos.
+- Include a table with comparative metrics (accuracy, F1-score) featuring bilingual headers. / Incluir una tabla con métricas comparativas (accuracy, F1-score) y encabezados bilingües.
+- Add a short retrospective covering pending issues for the SIFT session. / Añadir una mini retrospectiva con los problemas pendientes para la sesión de SIFT.

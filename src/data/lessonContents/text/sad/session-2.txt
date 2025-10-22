@@ -1,48 +1,57 @@
-# Session 2 · Microservices: definition and trade-offs (Microservicios: definición y compromisos)
+# Session 2 · Microservices Definition and Trade-offs (Microservicios: definición y compromisos)
 
-## Objectives (Objetivos)
-- Understand what a microservice (microservicio) is and how it differs from a monolith or traditional SOA.
-- Identify benefits, costs, and common anti-patterns (anti-patrones).
-- Review communication, data, and platform patterns required to run microservices effectively.
+## Purpose / Propósito
+- Clarify what a microservice is and how it differs from monoliths or traditional SOA. / Precisar qué es un microservicio y cómo se diferencia de monolitos o SOA tradicional.
+- Assess the benefits, costs, and patterns needed to operate them effectively. / Evaluar beneficios, costes y patrones necesarios para operarlos con eficacia.
 
-## Fundamentals (Fundamentos)
-- A **microservice (microservicio)** is a small, independently deployable unit aligned with a bounded context (contexto acotado).
-- Builds on **DDD (Domain-Driven Design / Diseño guiado por el dominio)** principles to define clear boundaries and stable contracts.
-- Autonomy means avoiding shared databases and minimizing dependencies on common libraries.
+## Objectives / Objetivos
+- Align microservices with bounded contexts following DDD principles. / Alinear microservicios con bounded contexts siguiendo principios DDD.
+- Design synchronous and asynchronous communications balancing consistency and coupling. / Diseñar comunicaciones sincrónicas y asincrónicas equilibrando consistencia y acoplamiento.
+- Establish strategies for data management, observability, security, and migration. / Establecer estrategias de gestión de datos, observabilidad, seguridad y migración.
+- Identify common anti-patterns and when to avoid this architecture. / Identificar anti-patrones frecuentes y cuándo evitar esta arquitectura.
 
-![Essential elements of a microservice (Elementos esenciales de un microservicio)](figure:sad-session-2/elementos)
-Caption: Domain, owning team, API contract, and operating platform work together.
+## Activities / Actividades
+### Fundamentals (Fundamentos)
+- Microservice: small independently deployable unit aligned with a **bounded context**. / Microservicio: unidad pequeña desplegable de forma independiente alineada con un **bounded context**.
+- Based on **Domain-Driven Design** to define clear boundaries and stable contracts. / Basado en **Domain-Driven Design (Diseño guiado por el dominio)** para definir límites claros y contratos estables.
+- Autonomy: avoid shared databases and minimize dependencies on common libraries. / Autonomía: evitar bases de datos compartidas y minimizar dependencias de librerías comunes.
+- ![Essential elements of a microservice / Elementos esenciales de un microservicio](figure:sad-session-2/elementos)
+  Caption: Domain, owning team, API contract, and operating platform. / Dominio, equipo propietario, contrato API y plataforma operativa.
 
-## Organizational alignment (Alineación organizativa)
-- Teams organize around business domains (dominios de negocio).
-- Independent deployment cadence with dedicated pipelines and immutable artifacts.
-- Manage **cognitive load (carga cognitiva):** service size must match team capacity.
+### Organisational Alignment (Alineación organizativa)
+- Business-domain-oriented teams with dedicated pipelines and immutable artifacts. / Equipos orientados a dominios de negocio con pipelines dedicados e artefactos inmutables.
+- Manage **cognitive load**: service size should match the team's capacity. / Gestión de la **carga cognitiva**: el tamaño del servicio debe ajustarse a la capacidad del equipo.
 
-## Service-to-service communication (Comunicación entre servicios)
-- **Synchronous (Sincrónica):** REST and gRPC simplify request/response models but add latency and failure cascades.
-- **Asynchronous (Asincrónica):** queues, events, and streams decouple producers and consumers over time; they demand idempotency and ordering policies (políticas de orden).
-- In practice both styles are combined based on consistency needs and coupling tolerance.
+### Communication Patterns (Patrones de comunicación)
+- **Synchronous (REST/gRPC):** simple but adds latency and potential failure cascades. / **Sincrónica (REST/gRPC):** sencilla pero añade latencia y posibles cascadas de fallos.
+- **Asynchronous (queues, events, streams):** decouples in time; requires idempotency and ordering policies. / **Asincrónica (colas, eventos, streams):** desacopla en el tiempo; requiere idempotencia y políticas de orden.
+- Combine styles based on consistency needs and coupling tolerance. / Combinar estilos según necesidades de consistencia y tolerancia al acoplamiento.
 
-## Data management and consistency (Gestión de datos y consistencia)
-- Each service owns its storage and exposes data through APIs or events.
-- **Eventual consistency (Consistencia eventual)** is accepted; patterns such as **CQRS** and **sagas** coordinate distributed flows.
-- Global 2PC transactions are replaced by compensating actions and message-driven coordination.
+### Data and Consistency (Datos y consistencia)
+- Each service owns its storage and exposes data through APIs or events. / Cada servicio es dueño de su almacenamiento; expone datos vía APIs o eventos.
+- **Eventual consistency** is accepted; patterns like **CQRS** and **sagas** coordinate flows. / Se acepta **consistencia eventual**; patrones como **CQRS** y **sagas** coordinan flujos.
+- Avoid global 2PC; favor compensating actions and message-driven coordination. / Evitar 2PC global; preferir acciones compensatorias y coordinación impulsada por mensajes.
 
-## Platform and observability (Plataforma y observabilidad)
-- Common components: API gateway/management, service discovery, configuration, and secrets.
-- Observability relies on logs, metrics, and traces with correlated identifiers.
-- Service-level CI/CD, canary or blue/green deployments, and automated rollbacks.
+### Platform and Observability (Plataforma y observabilidad)
+- Common components: API gateway/management, discovery, configuration, and secrets. / Componentes comunes: API gateway/management, descubrimiento, configuración y secretos.
+- Observability via correlated logs, metrics, and traces. / Observabilidad con logs, métricas y trazas correlacionadas.
+- Deployment practices: per-service CI/CD, canary, blue/green, and automated rollbacks. / Prácticas de despliegue: CI/CD por servicio, canary, blue/green y rollbacks automatizados.
 
-## Security (Seguridad)
-- Zero-trust posture: authenticate and authorize every request, use mTLS, manage secrets carefully.
-- Service meshes can offload network policies, telemetry, and retries at the price of extra complexity.
+### Security (Seguridad)
+- Zero-trust posture: authenticate and authorize every request, use mTLS, and manage secrets. / Postura zero-trust: autenticar y autorizar cada petición, usar mTLS y gestionar secretos.
+- A service mesh can offload network policies, telemetry, and retries at the cost of added complexity. / Service mesh puede descargar políticas de red, telemetría y reintentos a costa de complejidad.
 
-## Costs and anti-patterns (Costes y anti-patrones)
-- Higher operational effort, network latency, and reliance on specialized skills.
-- Frequent anti-patterns: nanoservices, shared databases, centralizing logic in gateways.
-- Avoid adoption when the domain is small, boundaries are unstable, or the platform lacks maturity.
+### Costs and Anti-patterns (Costes y anti-patrones)
+- Higher operational effort, network latency, and need for specialized skills. / Esfuerzo operativo mayor, latencia de red, necesidad de habilidades especializadas.
+- Common anti-patterns: nanoservices, shared databases, logic centralized in the gateway. / Anti-patrones comunes: nanoservicios, bases compartidas, lógica centralizada en el gateway.
+- Avoid adoption if the domain is small, boundaries are unstable, or the platform is immature. / Evitar adopción si el dominio es pequeño, los límites son inestables o la plataforma es inmadura.
 
-## Migration strategies (Estrategias de migración)
-- **Strangler pattern (Patrón strangler):** wrap the monolith and route new or refactored capabilities to services.
-- **Domain extraction (Extracción por dominios):** identify seams, prioritize painful areas, and settle contracts before cutting over.
-- Lessons learned: invest early in observability and keep boundaries aligned with business outcomes.
+### Migration Strategies (Estrategias de migración)
+- **Strangler pattern:** wrap the monolith and route new/refactored capabilities to services. / **Strangler pattern:** envolver el monolito y redirigir capacidades nuevas/refactorizadas a servicios.
+- **Domain extraction:** identify seams, prioritize problematic areas, and lock contracts before cutting over. / **Extracción por dominios:** identificar seams, priorizar áreas problemáticas y fijar contratos antes del corte.
+- Lessons: invest early in observability and keep boundaries aligned with business outcomes. / Lecciones: invertir temprano en observabilidad y mantener límites alineados con resultados de negocio.
+
+## Assessment / Evaluación
+- Complete a table comparing communication patterns and their trade-offs. / Completar una tabla que compare patrones de comunicación y sus compromisos.
+- Evaluate a case by identifying anti-patterns and proposing mitigations. / Evaluar un caso identificando anti-patrones y proponer mitigaciones.
+- Design a migration roadmap indicating initial domains, shared platform, and success metrics. / Diseñar un roadmap de migración que indique dominios iniciales, plataforma compartida y métricas de éxito.

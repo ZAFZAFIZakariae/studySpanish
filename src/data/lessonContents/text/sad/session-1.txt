@@ -1,59 +1,54 @@
-# Session 1 · From monoliths to distributed systems (De monolitos a sistemas distribuidos)
+# Session 1 · From Monoliths to Distributed Systems (De monolitos a sistemas distribuidos)
 
-## Objectives (Objetivos)
-- Recognize the strengths and limits of monolithic applications (aplicaciones monolíticas).
-- Spot the signals that push teams toward distributed architectures (arquitecturas distribuidas).
-- Introduce the key properties of distributed systems (sistemas distribuidos).
+## Purpose / Propósito
+- Analyze when monoliths remain valid and when to evolve toward distributed architectures. / Analizar cuándo los monolitos siguen siendo válidos y cuándo evolucionar hacia arquitecturas distribuidas.
+- Introduce distributed-system properties and costs to justify architectural decisions. / Introducir propiedades y costes de los sistemas distribuidos para fundamentar decisiones arquitectónicas.
 
-## Monoliths in context (Monolitos en contexto)
-- Single application bundling the UI, business logic, and data access (interfaz, lógica de negocio y acceso a datos).
-- “All-or-nothing” deployment; simple pipelines with one artifact.
-- Early advantages: speed, operational simplicity, fast onboarding.
-- Growth risks: fuzzy boundaries, slow builds, frequent regressions.
+## Objectives / Objetivos
+- Recognize strengths and limits of monolithic applications. / Reconocer fortalezas y límites de las aplicaciones monolíticas.
+- Identify signals that push migration toward distributed services. / Identificar señales que impulsan la migración hacia servicios distribuidos.
+- Describe key characteristics of distributed systems and their associated costs. / Describir características clave de los sistemas distribuidos y los costes asociados.
+- Sketch a migration path based on modularization and shared platforms. / Esbozar una ruta de migración basada en modularización y plataformas compartidas.
 
-## Modular monoliths (Monolitos modulares)
-- Separate internal responsibilities through clearly defined modules.
-- Keep a single deployment while easing future extractions.
-- Stress signals: integration conflicts, coordination bottlenecks, operational risk.
+## Activities / Actividades
+### Monolith Context (Contexto del monolito)
+- A single deployment bundles UI, business logic, and data access. / Un único despliegue que agrupa interfaz, lógica de negocio y acceso a datos.
+- Early advantages: speed, operational simplicity, fast onboarding. / Ventajas tempranas: rapidez, simplicidad operativa, onboarding veloz.
+- Growth risks: blurry boundaries, slow builds, frequent regressions. / Riesgos al crecer: límites difusos, builds lentos, regresiones frecuentes.
+- Modular monoliths separate internal responsibilities and ease future extractions. / Monolitos modulares: separan responsabilidades internas y facilitan extracciones futuras.
+- Valid use cases: small teams, limited-scope products, internal tools, temporary prototypes. / Casos en los que siguen siendo válidos: equipos pequeños, productos de alcance limitado, herramientas internas, prototipos temporales.
 
-## When do they still fit? (¿Cuándo siguen siendo válidos?)
-- Small teams, limited-scope products, or low-criticality workloads.
-- Internal tools and temporary prototypes.
+### Drivers for Distribution (Impulsores de la distribución)
+- Need to scale specific domains and enable independent releases. / Necesidad de escalar dominios específicos y habilitar releases independientes.
+- Reduce blast radius and deployment windows. / Reducción del radio de fallo y de las ventanas de despliegue.
+- ![Transition from monolith to services / Transición de monolito a servicios](figure:sad-session-1/transicion)
+  Caption: Evolution toward decoupled domains with dedicated services. / Evolución hacia dominios desacoplados con servicios dedicados.
 
-## Motivations to distribute (Motivaciones para distribuir)
-- The need to scale specific domains (escalar dominios específicos).
-- Requirements for independent releases (releases independientes).
-- Reduce the blast radius of failures and shorten deployment windows.
+### Distributed Systems Fundamentals (Fundamentos de sistemas distribuidos)
+- Definition: a set of connected machines offering a unified view to the user. / Definición: conjunto de equipos conectados que ofrece una vista unificada al usuario.
+- Key properties / Propiedades clave:
+  - **Concurrency and parallelism (Concurrencia y paralelismo).** / **Concurrency and parallelism (Concurrencia y paralelismo).**
+  - **Fault tolerance (Tolerancia a fallos).** / **Fault tolerance (Tolerancia a fallos).**
+  - **Scalability (Escalabilidad).** / **Scalability (Escalabilidad).**
+  - **Transparency (Transparencia).** / **Transparency (Transparencia).**
+- Distribution costs / Costes de la distribución:
+  - Network latency and serialization overhead. / Latencia de red y sobrecarga de serialización.
+  - Eventual consistency and replica conflicts. / Consistencia eventual y conflictos entre réplicas.
+  - Expanded security surface (authentication, authorization, secrets). / Superficie de seguridad ampliada (autenticación, autorización, secretos).
+  - Operational complexity: observability, mature CI/CD, automation. / Complejidad operativa: observabilidad, CI/CD maduro, automatización.
 
-![Transition from monolith to services (Transición de monolito a servicios)](figure:sad-session-1/transicion)
-Caption: How a monolith evolves into decoupled domains with dedicated services.
+### Migration Route (Ruta de migración)
+1. Modularize the monolith and identify seams. / Modularizar el monolito y detectar “seams”.
+2. Extract autonomous domains, prioritizing the most problematic ones. / Extraer dominios autónomos priorizando los más problemáticos.
+3. Establish a shared platform: gateway, service discovery, observability. / Establecer plataforma compartida: gateway, descubrimiento de servicios, observabilidad.
+4. Strengthen operational discipline: testing, automation, monitoring. / Fortalecer la disciplina operativa: pruebas, automatización, monitorización.
 
-## Distributed systems defined (Sistemas distribuidos: definición)
-- A set of connected computers that offer a unified view to the user.
-- Key properties:
-  - **Concurrency and parallelism (Concurrencia y paralelismo)** to raise throughput.
-  - **Fault tolerance (Tolerancia a fallos)** via replication and controlled degradation.
-  - **Scalability (Escalabilidad)** both vertical and horizontal.
-  - **Transparency (Transparencia):** distribution is invisible to the user.
+### Conclusions (Conclusiones)
+- Monoliths deliver initial value but require vigilance when fatigue signals appear. / Los monolitos aportan valor inicial pero requieren vigilancia ante señales de fatiga.
+- Distributed systems provide agility and scale at the expense of technical and organizational complexity. / Los sistemas distribuidos ofrecen agilidad y escala a cambio de complejidad técnica y organizativa.
+- Architectural decisions are economic bets: costs are accepted to unlock specific benefits. / Las decisiones arquitectónicas son apuestas económicas: se asumen costes para desbloquear beneficios concretos.
 
-## Distribution costs (Costes de la distribución)
-- Network latency and serialization overhead—the “network tax.”
-- Eventual consistency and conflicts between replicas (consistencia eventual y conflictos).
-- Expanded security surface: authentication, authorization, secret management.
-- Operational complexity: observability, mature CI/CD, automation.
-
-## Migration drivers (Impulsores de la migración)
-- Selectively scale domains such as payments or orders.
-- Enable independent deployments aligned with teams and business boundaries.
-- Improve resilience by decoupling responsibilities.
-
-## Migration route (Ruta de migración)
-1. Modularize the monolith and spot seams (modularizar y detectar “seams”).
-2. Extract autonomous domains, prioritizing the most troublesome ones.
-3. Establish a shared platform: gateway, service discovery, observability.
-4. Strengthen operational discipline—tests, automation, monitoring.
-
-## Conclusions (Conclusiones)
-- Monoliths deliver initial value but need oversight when fatigue signals appear.
-- Distributed systems unlock agility and scale yet introduce technical and organizational challenges.
-- Architectural decisions are economic bets: we accept costs to unlock specific benefits.
+## Assessment / Evaluación
+- Build a comparative table (monolith vs. distributed system) highlighting benefits and costs. / Elaborar una tabla comparativa monolito vs. sistema distribuido destacando beneficios y costes.
+- Design a summarized migration plan for a case study, identifying milestones and risks. / Diseñar un plan de migración resumido para un caso de estudio, identificando hitos y riesgos.
+- Answer short questions about distributed-system properties and mitigation approaches. / Responder a preguntas cortas sobre propiedades de los sistemas distribuidos y cómo mitigarlas.

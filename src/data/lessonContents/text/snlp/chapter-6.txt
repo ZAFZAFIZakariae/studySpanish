@@ -1,53 +1,63 @@
-# Capítulo 6 · Procesamiento y reconocimiento del habla
+# Chapter 6 · Speech Processing and Recognition (Procesamiento y reconocimiento del habla)
 
-## Objetivos
-- Repasar la evolución histórica del reconocimiento de voz.
-- Conocer arquitecturas actuales para sistemas ASR.
-- Analizar retos prácticos y tendencias futuras.
+## Purpose / Propósito
+- Recorrer la evolución del reconocimiento de voz y el impacto del deep learning en sistemas ASR modernos.
+- Identificar arquitecturas, desafíos y tendencias emergentes en aplicaciones de voz.
 
-## Historia breve
+## Objectives / Objetivos
+- Revisar hitos históricos desde sistemas HMM hasta arquitecturas end-to-end.
+- Comprender cómo CNN, RNN, Transformers y conformers se aplican en ASR.
+- Analizar retos prácticos (ruido, latencia, datos) y tendencias (multilingüe, on-device, multimodal).
+- Evaluar consideraciones éticas y de despliegue para soluciones de voz.
+
+## Activities / Actividades
+### Historical Overview (Historia breve)
 - **Años 50–90:** desde Audrey (Bell Labs) hasta sistemas HMM con modelos de lenguaje estadísticos.
-- **2000s:** combinación GMM-HMM para mejorar modelado acústico.
-- **2010s en adelante:** redes profundas (CNN, RNN, LSTM, GRU) y mecanismos de atención revolucionan el campo.
+- **2000s:** combinación GMM-HMM mejora el modelado acústico.
+- **2010s+**: redes profundas (CNN, RNN, LSTM, GRU) y atención transforman el campo.
+- ![Evolución de los sistemas de voz](figure:snlp-chapter-6/evolucion)
+  Caption: De modelos estadísticos discretos a arquitecturas end-to-end basadas en atención.
 
-![Evolución de los sistemas de voz](figure:snlp-chapter-6/evolucion)
-Caption: De modelos estadísticos discretos a arquitecturas end-to-end basadas en atención.
+### Deep Learning Impact (Impacto del deep learning)
+- Automatiza extracción de características y reduce tasas de error.
+- Maneja ruido, acentos, prosodia y habla conversacional.
+- Habilita modelos end-to-end que mapean audio a texto directamente.
 
-## Impacto del deep learning
-- Automatiza extracción de características, captura dependencias de largo alcance y reduce tasas de error.
-- Maneja mejor ruido, acentos, prosodia y habla conversacional.
-- Habilita modelos end-to-end que mapean audio a texto sin etapas intermedias complejas.
-
-## Aplicaciones actuales
-- Asistentes virtuales, domótica y automoción.
+### Current Applications (Aplicaciones actuales)
+- Asistentes virtuales, domótica, automoción.
 - Soluciones empresariales: atención al cliente, transcripción de reuniones, biometría vocal.
 - Salud: dictado clínico, monitorización remota, apoyo diagnóstico.
 
-## Tendencias de la industria
+### Industry Trends (Tendencias)
 - Procesamiento on-device para privacidad y latencia.
 - Modelos multilingües y traducción simultánea.
-- Personalización y adaptación continua al usuario.
+- Personalización y adaptación continua.
 - Integración multimodal con visión, AR/VR y sensores adicionales.
 
-## Desafíos clave
-- Variabilidad de la señal: ruido, micrófonos, acentos, velocidad.
-- Ingeniería de modelos: gestionar longitud variable, requisitos de tiempo real, consumo de memoria.
-- Entrenamiento: necesidad de grandes corpus balanceados, manejo de disfluencias.
-- Adaptación: generalizar a nuevos dominios y hablantes, transfer learning eficaz.
+### Key Challenges (Desafíos clave)
+- Variabilidad de la señal (ruido, micrófonos, acentos, velocidad).
+- Ingeniería de modelos: longitud variable, requisitos tiempo real, memoria.
+- Entrenamiento: corpus grandes y balanceados, manejo de disfluencias.
+- Adaptación: generalizar a nuevos dominios y hablantes mediante transfer learning.
 
-## Arquitecturas ASR
-- **RNN/LSTM/GRU:** procesan secuencias, pero limitadas por gradientes.
+### ASR Architectures (Arquitecturas ASR)
+- **RNN/LSTM/GRU:** procesan secuencias con limitaciones de gradiente.
 - **CNN:** capturan patrones locales en espectrogramas.
-- **Modelos híbridos:** combinan CNN para feature extraction y RNN/attention para secuencias.
-- **Transformers y conformers:** atención + convoluciones para contextos largos y precisión acústica.
+- **Modelos híbridos:** CNN para extracción + RNN/attention para secuencias.
+- **Transformers y conformers:** atención + convoluciones para contexto largo y precisión acústica.
 
-## Sistemas end-to-end modernos
-- CTC (Connectionist Temporal Classification) para alinear audio-texto sin etiquetas frame a frame.
-- Modelos encoder-decoder con atención y variantes transducer.
+### End-to-End Systems (Sistemas end-to-end)
+- **CTC (Connectionist Temporal Classification):** alinea audio-texto sin etiquetas frame a frame.
+- **Encoder-decoder con atención y transducer:** integran alineación y generación.
 - Integración con modelos de lenguaje externos para mejorar precisión.
 
-## Consideraciones prácticas
-- Pipeline de datos: limpieza, segmentación, normalización y augmentations (ruido, reverberación).
-- Métricas: Word Error Rate (WER), Character Error Rate (CER), latencia, memoria.
+### Practical Considerations (Consideraciones prácticas)
+- Pipeline de datos: limpieza, segmentación, normalización, augmentations (ruido, reverberación).
+- Métricas: WER, CER, latencia, memoria.
 - Despliegue: optimización en dispositivos móviles, cuantización, streaming.
-- Futuro: modelos auto-supervisados, aprendizaje continuo y responsabilidad ética en uso de voz.
+- Futuro: modelos auto-supervisados, aprendizaje continuo, responsabilidad ética en el uso de voz.
+
+## Assessment / Evaluación
+- Crear una línea temporal destacando hitos de ASR y tecnología asociada.
+- Analizar un dataset de voz identificando retos de limpieza y propuestas de augmentations.
+- Presentar un plan de despliegue on-device indicando métricas a monitorizar y consideraciones éticas.

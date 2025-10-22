@@ -1,52 +1,56 @@
-# Topic 1 · Introduction to IT Governance (Gobierno de TI)
+# Topic 1 · Introduction to IT Governance (Introducción al gobierno de TI)
 
-## Objectives (Objetivos)
-- Understand the concept of governance (gobierno) and how organizations apply it.
-- Distinguish between corporate governance (gobierno corporativo) and IT governance (gobierno de TI).
-- Identify the key actors (actores clave) and their responsibilities.
-- Recognize reference frameworks (marcos de referencia) that support IT governance roll-outs.
+## Purpose / Propósito
+- Explain how corporate governance extends to the strategic use of technology. / Explicar cómo el gobierno corporativo se extiende al uso estratégico de la tecnología.
+- Establish the bilingual vocabulary that will be used throughout the course. / Establecer el vocabulario bilingüe que se utilizará durante el curso.
 
-## Overview (Panorama general)
-- **Governance (gobierno)** sets expectations, defines accountability, and oversees performance (OECD, Allen, Mueller).
-- **Corporate governance (gobierno corporativo)** connects owners, the board, and executive management to maximize value and manage risk.
-- The **CIO (director de TI)** must take part in those forums to align IT with the business strategy.
+## Objectives / Objetivos
+- Differentiate corporate governance from IT governance. / Diferenciar gobierno corporativo y gobierno de TI.
+- Identify key actors and their responsibilities. / Identificar actores clave y sus responsabilidades.
+- Recognize reference frameworks that support IT governance implementation. / Reconocer marcos de referencia que soportan la implantación del gobierno de TI.
+- Analyze the components that ensure alignment, value, and risk control. / Analizar los componentes que aseguran alineación, valor y control de riesgos.
 
-![Layers of corporate governance (Capas del gobierno corporativo)](figure:ggo-tema-1/niveles)
-Caption: Shareholders, the board, and the executive team coordinate decision-making and oversight.
+## Activities / Actividades
+### Governance Overview (Panorama del gobierno)
+- **Governance (gobierno):** sets expectations, responsibilities, and monitors performance (OECD, Allen, Mueller references). / **Governance (gobierno):** define expectativas, responsabilidades y supervisa desempeño (referencias OECD, Allen, Mueller).
+- **Corporate governance (gobierno corporativo):** links owners, board, and executive management to maximize value and manage risks. / **Corporate governance (gobierno corporativo):** conecta propietarios, consejo y dirección ejecutiva para maximizar valor y gestionar riesgos.
+- Participation of the **CIO (chief information officer / director de TI)** in governance forums to align IT with strategy. / Participación del **CIO (director de TI)** en foros de gobierno para alinear TI con la estrategia.
+- ![Layers of corporate governance / Capas del gobierno corporativo](figure:ggo-tema-1/niveles)
+  Caption: Shareholders, board, and executive team coordinate decisions and oversight. / Accionistas, consejo y equipo ejecutivo coordinan decisiones y supervisión.
 
-## IT Governance (Gobierno de TI)
-- Extends corporate governance principles to the use of technology.
-- Goal: ensure IT investments generate value (valor) and that technology risks (riesgos tecnológicos) are controlled.
-- Key questions from the IT Governance Institute (ITGI):
-  - Is IT aligned with the business (negocio)?
-  - Are promised benefits (beneficios) being delivered?
-  - Are IT risks (riesgos TI) being managed?
-  - Are resources and performance (recursos y rendimiento) optimized?
+### IT Governance (Gobierno de TI)
+- Extends governance principles to the use of technology. / Extiende principios de gobierno al uso de tecnología.
+- Objective: ensure IT investments create value and technology risks remain controlled. / Objetivo: asegurar que las inversiones en TI generan valor y que los riesgos tecnológicos están controlados.
+- Key questions from the IT Governance Institute / Preguntas clave del IT Governance Institute:
+  - Is IT aligned with the business? / ¿Está TI alineada con el negocio?
+  - Are promised benefits being delivered? / ¿Se entregan los beneficios prometidos?
+  - Are IT risks being managed? / ¿Se gestionan los riesgos de TI?
+  - Are resources and performance optimized? / ¿Se optimizan recursos y rendimiento?
 
-## Core components (Componentes principales)
-- **Strategic alignment (Alineación estratégica):** IT supports business objectives.
-- **Value delivery (Entrega de valor):** benefits are measured and the portfolio is prioritized.
-- **Resource management (Gestión de recursos):** talent, infrastructure, and services are stewarded.
-- **Risk management (Gestión de riesgos):** continuity, security, and compliance stay under control.
-- **Performance measurement (Medición del desempeño):** dashboards and indicators track outcomes.
+### Core Components (Componentes principales)
+- **Strategic alignment (Alineación estratégica).** / **Strategic alignment (Alineación estratégica).**
+- **Value delivery (Entrega de valor).** / **Value delivery (Entrega de valor).**
+- **Resource management (Gestión de recursos).** / **Resource management (Gestión de recursos).**
+- **Risk management (Gestión de riesgos).** / **Risk management (Gestión de riesgos).**
+- **Performance measurement (Medición del desempeño).** / **Performance measurement (Medición del desempeño).**
+- ![Relationship between business and IT / Relación entre negocio y TI](figure:ggo-tema-1/alineacion)
+  Caption: IT governance connects corporate strategy with processes, technology, and people. / El gobierno de TI conecta estrategia corporativa con procesos, tecnología y personas.
 
-![Relationship between business and IT (Relación entre negocio y TI)](figure:ggo-tema-1/alineacion)
-Caption: IT governance connects corporate strategy with processes, technology, and people.
+### Frameworks and Roles (Marcos y roles)
+- Frameworks: **COBIT**, **ITIL**, **ISO/IEC 38500**, **ISO/IEC 27001**, **ISO/IEC 20000**. / Marcos: **COBIT**, **ITIL**, **ISO/IEC 38500**, **ISO/IEC 27001**, **ISO/IEC 20000**.
+- Roles and responsibilities / Roles y responsabilidades:
+  - Board and senior management: policies, investments, risk oversight. / Consejo y alta dirección: políticas, inversiones, supervisión de riesgos.
+  - CIO / IT leadership: translate business objectives and report metrics. / CIO / dirección de TI: traducir objetivos de negocio y reportar métricas.
+  - Business units: prioritize needs and co-create solutions. / Unidades de negocio: priorizar necesidades y co-crear soluciones.
+  - Audit and internal control: assess compliance and maturity. / Auditoría y control interno: evaluar cumplimiento y madurez.
 
-## Frameworks and standards (Marcos y estándares)
-- **COBIT**: controls and audits IT processes (plan, build, run, monitor).
-- **ITIL**: best practices for IT service management (gestión de servicios TI).
-- **ISO/IEC 38500**: principles for directors and boards on responsible IT use.
-- **ISO/IEC 27001, 20000**: security and service management baselines.
+### Benefits (Beneficios del gobierno eficaz)
+- Stronger business–IT alignment. / Alineación negocio–TI más sólida.
+- Transparency in investments and costs. / Transparencia en inversiones y costos.
+- Reduction of operational and regulatory risks. / Reducción de riesgos operativos y regulatorios.
+- Greater satisfaction among users and internal customers. / Mayor satisfacción de usuarios y clientes internos.
 
-## Roles and responsibilities (Roles y responsabilidades)
-- Board and senior leadership (consejo y alta dirección): set policy, approve investments, and oversee risk.
-- CIO / IT leadership (CIO / dirección de TI): translate business objectives into technology initiatives and report metrics.
-- Business units (unidades de negocio): prioritize needs and co-create solutions.
-- Audit and internal control (auditoría y control interno): evaluate compliance and maturity.
-
-## Benefits of effective governance (Beneficios de un gobierno eficaz)
-- Stronger business–IT alignment (alineación negocio-TI).
-- Transparency in investments and costs (inversiones y costos).
-- Reduced operational and regulatory risk (riesgos operacionales y regulatorios).
-- Higher satisfaction from users and internal customers (usuarios y clientes internos).
+## Assessment / Evaluación
+- Build a concept map linking IT governance components to the stakeholders responsible. / Elaborar un mapa conceptual que relacione los componentes del gobierno de TI con los stakeholders responsables.
+- Complete a quiz on reference frameworks and their application domains. / Resolver un cuestionario sobre marcos de referencia y sus ámbitos de aplicación.
+- Write a short use case describing how the CIO answers one ITGI question. / Redactar un breve caso de uso describiendo cómo el CIO responde a una de las preguntas del ITGI.

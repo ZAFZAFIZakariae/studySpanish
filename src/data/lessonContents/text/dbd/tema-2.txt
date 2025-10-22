@@ -1,75 +1,63 @@
-# Topic 2 · Transaction processing and integrity (Procesamiento de transacciones e integridad)
+# Topic 2 · Transaction Processing and Integrity (Procesamiento de transacciones e integridad)
 
-## Learning objectives (Objetivos de aprendizaje)
-- Define what a transaction (transacción) is and how its state evolves.
-- Review the ACID properties that a DBMS (SGBD) must guarantee.
-- Describe how SQL expresses and validates transactions.
-- Understand strategies for verifying integrity constraints (restricciones de integridad).
+## Purpose / Propósito
+- Explain how a DBMS manages transactions from their initial state to final persistence. / Explicar cómo un SGBD gestiona transacciones desde su estado inicial hasta la persistencia final.
+- Review ACID properties, SQL support, and strategies to guarantee integrity constraints. / Revisar las propiedades ACID, el soporte SQL y las estrategias para asegurar restricciones de integridad.
 
-## Concept map (Mapa conceptual)
-- Transaction concepts and core SQL operations.
-- Transaction-processing states and properties.
-- Delimiting transactions in SQL and controlling commits (control de confirmaciones).
-- Types of integrity constraints and how to enforce them.
+## Objectives / Objetivos
+- Define what a transaction is and describe its states. / Definir qué es una transacción y describir sus estados.
+- Relate SQL operations to commits, rollbacks, and checkpoints. / Relacionar operaciones SQL con commits, rollbacks y puntos de control.
+- Identify mechanisms supporting atomicity, consistency, isolation, and durability. / Identificar mecanismos que respaldan atomicidad, consistencia, aislamiento y durabilidad.
+- Classify integrity constraints and the strategies used to check them. / Clasificar restricciones de integridad y las estrategias para comprobarlas.
 
-![Transaction lifecycle (Ciclo de vida de una transacción)](figure:dbd-tema-2/estados)
-Caption: Main transaction states and transitions triggered by commits, rollbacks, and failures.
+## Activities / Actividades
+### Concept Review (Repaso de conceptos)
+- **Transaction / Transacción:** group of read/write operations acting as an atomic unit. / **Transacción:** grupo de operaciones de lectura/escritura que actúan como unidad atómica.
+- Typical states: active, partially committed, committed, failed, aborted. / Estados típicos: activa, parcialmente confirmada, confirmada, fallida, abortada.
+- Relevant SQL operations: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `COMMIT`, `ROLLBACK`, and `SAVEPOINT`. / Operaciones SQL relevantes: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `COMMIT`, `ROLLBACK` y `SAVEPOINT`.
+- ![Transaction lifecycle / Ciclo de vida de una transacción](figure:dbd-tema-2/estados)
+  Caption: Transitions triggered by commits, aborts, and failures. / Transiciones provocadas por confirmaciones, abortos y fallos.
 
-## 1. Transaction concept (Concepto de transacción)
-- A **transaction (transacción)** groups read/write operations that must execute as one atomic unit.
-- In SQL, manipulation happens through `SELECT`, `INSERT`, `UPDATE`, and `DELETE` across one or more tables.
-- Example: creating a department and reassigning an employee require coordinated changes to preserve referential integrity (integridad referencial).
+### ACID Properties (Propiedades ACID)
+- **Atomicity / Atomicidad:** all or nothing, supported by logs and UNDO mechanisms. / **Atomicidad:** todo o nada, soportada por logs y mecanismos de UNDO.
+- **Consistency / Consistencia:** moves the database between valid states. / **Consistencia:** mueve la base entre estados válidos.
+- **Isolation / Aislamiento:** prevents observable interference between concurrent transactions. / **Aislamiento:** evita interferencias observables entre transacciones concurrentes.
+- **Durability / Durabilidad:** committed results survive failures. / **Durabilidad:** los resultados confirmados sobreviven a fallos.
+- ![ACID properties and supporting mechanisms / Propiedades ACID y mecanismos de soporte](figure:dbd-tema-2/acid)
+  Caption: DBMS components that guarantee each property. / Componentes del SGBD que garantizan cada propiedad.
 
-## 2. Operations and states (Operaciones y estados)
-- Typical states: **active (activa)**, **partially committed (parcialmente confirmada)**, **committed (confirmada)**, **failed (fallida)**, and **aborted (abortada)**.
-- Transactions end with `COMMIT` (persist results) or `ROLLBACK` (reverse them).
-- Systems must handle aborts caused by logical errors, constraint violations, or system failures.
+### Recovery Architecture (Arquitectura de recuperación)
+- ![DBMS recovery workflow / Flujo de recuperación de un SGBD](figure:dbd-tema-2/recuperacion)
+  Caption: Interactions among the buffer manager, WAL log, checkpoints, and data files. / Interacciones entre buffer manager, log WAL, checkpoints y ficheros de datos.
+- Main roles / Roles principales:
+  - **Buffer manager:** flushes dirty pages to disk and reports errors. / **Buffer manager:** envía páginas sucias a disco y reporta errores.
+  - **Recovery manager:** analyzes the log, generates REDO/UNDO actions, and coordinates rollbacks. / **Recovery manager:** analiza el log, genera acciones REDO/UNDO y coordina rollbacks.
+  - **Write-ahead logging (WAL):** records entries before pages to guarantee durability. / **Write-ahead logging (WAL):** escribe el registro antes de las páginas para garantizar durabilidad.
+  - **Checkpoints:** capture LSNs and dirty-page tables to bound recovery work. / **Checkpoints:** capturan LSN y tablas de páginas sucias para acotar la recuperación.
 
-## 3. ACID properties (Propiedades ACID)
-- **Atomicity (Atomicidad):** all or nothing, backed by logs and undo mechanisms.
-- **Consistency (Consistencia):** each transaction moves the database from one valid state to another.
-- **Isolation (Aislamiento):** concurrent transactions must not interfere in observable ways.
-- **Durability (Durabilidad):** once committed, results survive failures.
+### SQL Transaction Control (Control transaccional en SQL)
+- Implicit start with the first DML statement; ends with `COMMIT` or `ROLLBACK`. / Inicio implícito con la primera instrucción DML; finaliza con `COMMIT` o `ROLLBACK`.
+- Explicit demarcation using `BEGIN/START TRANSACTION`. / Delimitación explícita con `BEGIN/START TRANSACTION`.
+- Use `SAVEPOINT` for partial rollbacks. / Uso de `SAVEPOINT` para deshacer parcialmente.
+- Configure client auto-commit to decide whether each statement is confirmed automatically. / Configuración de auto-commit en clientes para decidir si cada sentencia se confirma automáticamente.
 
-![ACID properties and supporting mechanisms (Propiedades ACID y mecanismos de soporte)](figure:dbd-tema-2/acid)
-Caption: How ACID properties map to DBMS components that enforce them.
+### Integrity Enforcement (Garantía de integridad)
+- Constraint types / Tipos de restricciones:
+  - **Primary key (PK)** and **uniqueness**. / **Clave primaria (CP)** y **unicidad**.
+  - **Foreign keys (FK)** with `ON DELETE/UPDATE` actions (RESTRICT, CASCADE, SET NULL, SET DEFAULT). / **Claves ajenas (CAj)** con acciones `ON DELETE/UPDATE` (RESTRICT, CASCADE, SET NULL, SET DEFAULT).
+  - **Domain and `CHECK` constraints. / Restricciones de dominio y `CHECK`.**
+  - **Triggers** for advanced business rules. / **Triggers** para reglas de negocio avanzadas.
+- Validation strategies / Estrategias de comprobación:
+  - **Immediate:** verify before modifying; needs locks but prevents inconsistent states. / **Inmediata:** verifica antes de modificar; requiere bloqueos pero evita estados inconsistentes.
+  - **Deferred:** allow temporary inconsistency and validate at commit; set as `DEFERRABLE INITIALLY DEFERRED` in SQL. / **Diferida:** permite inconsistencia temporal y valida al confirmar; marcar como `DEFERRABLE INITIALLY DEFERRED` en SQL.
+- Declare constraints in `CREATE TABLE` / `ALTER TABLE` and handle errors via stored procedures. / Declaración en `CREATE TABLE` / `ALTER TABLE` y manejo de errores vía procedimientos almacenados.
 
-### Recovery architecture (Arquitectura de recuperación)
-![DBMS recovery workflow (Flujo de recuperación de un SGBD)](figure:dbd-tema-2/recuperacion)
-Caption: Recovery manager interactions across buffer manager, WAL log, checkpoints, and persistent data files.
+### Good Practices (Buenas prácticas)
+- Design short transactions that lock few rows. / Diseñar transacciones cortas que bloqueen pocas filas.
+- Document deferred constraints and usage conditions. / Documentar restricciones diferibles y condiciones de uso.
+- Monitor logs, checkpoints, and backups to maintain durability. / Monitorizar logs, checkpoints y backups para mantener durabilidad.
 
-- **Buffer manager** pushes dirty pages and reports failures when a page cannot be written.
-- **Recovery manager** inspects the log, generates REDO/UNDO actions, and orchestrates rollbacks.
-- **Write-ahead logging (WAL)** flushes records to disk before data pages to guarantee durability.
-- **Checkpoints** capture the log sequence number (LSN) and dirty page table so restart work is bounded.
-- **Data files** receive forced writes when the recovery manager issues redo or checkpoint flushes.
-
-## 4. Transactions in SQL (Transacciones en SQL)
-- A transaction starts implicitly with the first DML statement and ends with `COMMIT` or `ROLLBACK`.
-- You can delimit it explicitly with `BEGIN TRANSACTION` / `START TRANSACTION`.
-- SQL provides **savepoints (puntos de salvaguarda / SAVEPOINT)** to partially undo operations without aborting the whole transaction.
-- Client auto-commit mode decides whether each statement is committed automatically.
-
-## 5. Integrity constraints (Restricciones de integridad)
-- Main types:
-  - **Primary key (Clave primaria, CP)** and **uniqueness (unicidad)**.
-  - **Foreign keys (Claves ajenas, CAj)** linking tables.
-  - **Domain constraints and checks (Restricciones de dominio, `CHECK`).**
-  - Advanced business rules via triggers (reglas de negocio con triggers).
-- They must hold for single operations and multi-statement transactions alike.
-
-## 6. Validation strategies (Estrategias de comprobación)
-- **Immediate (Previa a la modificación):** validate before writing; prevents inconsistent states but may require locks.
-- **Deferred (Diferida):** allow temporary inconsistency and validate at commit; requires tracking intermediate changes.
-- SQL lets you mark constraints as `DEFERRABLE INITIALLY DEFERRED` to postpone checks until commit time.
-- Foreign-key actions (`ON DELETE/UPDATE`) define behavior—RESTRICT, CASCADE, SET NULL, SET DEFAULT.
-
-## 7. Integrity in SQL (Integridad en SQL)
-- Declare constraints in `CREATE TABLE` or `ALTER TABLE`.
-- Use triggers (`CREATE TRIGGER`) for customized rules.
-- Handle errors via exception management in stored procedures to react to violations.
-
-## 8. Good practices (Buenas prácticas)
-- Design short transactions that lock as few rows as possible.
-- Document clearly which constraints are deferrable (restricciones diferibles) and under what conditions.
-- Monitor transaction logs and schedule maintenance tasks—checkpoints, backups—to guarantee durability.
+## Assessment / Evaluación
+- Solve exercises identifying a transaction's current state for a given scenario. / Resolver ejercicios donde se identifique el estado actual de una transacción dado un escenario.
+- Write SQL queries using `SAVEPOINT` to demonstrate deferred-check strategies. / Escribir consultas SQL que utilicen `SAVEPOINT` y demuestren estrategias de comprobación diferida.
+- Create a mind map linking each ACID property to the recovery components that support it. / Elaborar un mapa mental que vincule cada propiedad ACID con los componentes de recuperación que la soportan.

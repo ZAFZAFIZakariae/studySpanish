@@ -1,43 +1,53 @@
-# Session 0 · Course introduction for Distributed Applications and Services (Servicios y Aplicaciones Distribuidas)
+# Session 0 · Distributed Applications and Services Introduction (Introducción a Servicios y Aplicaciones Distribuidas)
 
-## General information (Información general)
-- **Instructor (Docente):** José M. Bernabéu Aubán (bernabeu@upv.es).
-- **Office hours (Tutorías):** on demand.
-- **Credits (Créditos):** 4.5 theory/seminars + 1.5 lab.
-- **Schedule (Calendario):**
-  - Tuesdays: theory and seminars in the classroom (modalidad mixta · blended format).
-  - Fridays: seminars, labs, and assessments.
-  - Final class session on 16 December.
-  - Final exam on 19 December (remote, via Poliformat).
+## Purpose / Propósito
+- Present the course structure, grading criteria, and weekly logistics. / Presentar la estructura del curso, criterios de evaluación y logística semanal.
+- Connect theory, seminar, and lab blocks with the technologies that will be used. / Conectar los bloques de teoría, seminarios y laboratorio con las tecnologías que se utilizarán.
 
-## Course objectives (Objetivos del curso)
-- Understand the fundamental concepts of distributed systems (sistemas distribuidos).
-- Identify patterns and approaches for designing distributed services (servicios distribuidos).
-- Recognize the main challenges: security (seguridad), coordination (coordinación), resource optimization (optimización de recursos).
-- Build practical skills through guided lab work (laboratorios guiados).
+## Objectives / Objetivos
+- Meet the instructor, credit breakdown, and key course dates. / Conocer al docente, créditos y calendario clave de la asignatura.
+- Identify course components (theory, seminars, lab, assessments). / Identificar los componentes del curso (teoría, seminarios, laboratorio, evaluaciones).
+- Recognize technical requirements and preparation recommendations. / Reconocer requisitos técnicos y recomendaciones de preparación previa.
 
-![Course components (Componentes del curso)](figure:sad-session-0/estructura)
-Caption: How theory, seminars, and labs interlock across the course.
+## Activities / Actividades
+### General Information (Información general)
+- **Instructor / Docente:** José M. Bernabéu Aubán (bernabeu@upv.es).
+- **Office hours / Tutorías:** on demand. / Bajo demanda.
+- **Credits / Créditos:** 4.5 theory/seminars + 1.5 lab. / 4.5 teoría/seminarios + 1.5 laboratorio.
+- **Schedule / Calendario:**
+  - Tuesday: theory and seminars in hybrid format. / Martes: teoría y seminarios en formato mixto.
+  - Friday: seminars, labs, and assessments. / Viernes: seminarios, laboratorios y evaluaciones.
+  - Last class: 16 December. / Última clase: 16 de diciembre.
+  - Final exam: 19 December (remote, Poliformat). / Examen final: 19 de diciembre (remoto, Poliformat).
 
-## Assessment (Evaluación)
-- **Theory exam (Examen teórico):** 25 %.
-- **Lab project (Proyecto de laboratorio):** 25 %.
-- **Seminars / practical exam (Seminarios / examen práctico):** 25 %.
-- **Seminar quizzes (Cuestionarios de seminario):** 25 %.
+### Course Components (Componentes del curso)
+- Course goals / Objetivos del curso:
+  - Understand core distributed systems concepts. / Comprender conceptos fundamentales de sistemas distribuidos.
+  - Identify patterns and design approaches for distributed services. / Identificar patrones y enfoques de diseño de servicios distribuidos.
+  - Recognize key challenges: security, coordination, resource optimization. / Reconocer retos clave: seguridad, coordinación, optimización de recursos.
+  - Develop practical skills through guided labs. / Desarrollar habilidades prácticas mediante laboratorios guiados.
+- ![Course components / Componentes del curso](figure:sad-session-0/estructura)
+  Caption: Relationship between theory, seminars, and lab activities. / Relación entre teoría, seminarios y laboratorio.
 
-## Content roadmap (Programa de contenidos)
-1. Fundamentals of distributed systems (Fundamentos de sistemas distribuidos).
-2. Architectures, coordination, and service contracts (Arquitecturas, coordinación y contratos: SLA, QoS, Cloud).
-3. Security and governance (Seguridad y gobierno).
-4. Deployment and tooling—NATS, Prometheus, STEP, APISIX, Docker.
+### Roadmap and Requirements (Hoja de ruta y requisitos)
+- Content roadmap / Programa de contenidos:
+  1. Distributed systems fundamentals. / Fundamentos de sistemas distribuidos.
+  2. Architectures, coordination, and contracts (SLA, QoS, Cloud). / Arquitecturas, coordinación y contratos (SLA, QoS, Cloud).
+  3. Security and governance. / Seguridad y gobierno.
+  4. Deployment and tooling (NATS, Prometheus, STEP, APISIX, Docker). / Despliegue y herramientas (NATS, Prometheus, STEP, APISIX, Docker).
+- Labs / Laboratorios:
+  - Design a service integrating queues, reverse proxy, authentication, and deployment. / Diseñar un servicio que integre colas, proxy inverso, autenticación y despliegue.
+  - Work in teams of three people. / Trabajo en equipos de tres personas.
+  - Recommended technologies: TypeScript or Go, Docker, Git, VS Code. / Tecnologías recomendadas: TypeScript o Go, Docker, Git, VS Code.
+  - Submit the repository packaged as `.tgz`. / Entrega del repositorio empaquetado en `.tgz`.
+- Requirements and recommendations / Requisitos y recomendaciones:
+  - Prior knowledge of computer science, programming, and operating systems. / Conocimientos previos de informática, programación y sistemas operativos.
+  - Suggested experience: TypeScript/Golang, Git, Linux, collaborative work. / Experiencia sugerida: TypeScript/Golang, Git, Linux, trabajo colaborativo.
+  - Balance between in-person sessions and self-directed work. / Balance entre sesiones presenciales y trabajo autónomo.
 
-## Laboratories (Laboratorios)
-- Design and implement an illustrative service that integrates queues, a reverse proxy, authentication, and deployment.
-- Work in teams of three people (grupos de tres personas).
-- Core technologies: TypeScript or Go, Docker, Git, VS Code.
-- Deliver the full repository as a `.tgz` package.
-
-## Requirements and recommendations (Requisitos y recomendaciones)
-- Previous knowledge of computer science, programming, and operating systems.
-- Suggested experience: TypeScript/Golang, Git, Linux, and collaborative development tooling.
-- Time split between in-class sessions and autonomous work (trabajo autónomo).
+## Assessment / Evaluación
+- **Theory exam / Examen teórico:** 25 %. / **Examen teórico:** 25 %.
+- **Lab project / Proyecto de laboratorio:** 25 %. / **Proyecto de laboratorio:** 25 %.
+- **Seminars / practical exam / Seminarios / examen práctico:** 25 %. / **Seminarios / examen práctico:** 25 %.
+- **Seminar quizzes / Cuestionarios de seminario:** 25 %. / **Cuestionarios de seminario:** 25 %.
+- Continuous monitoring through participation and deliverables. / Seguimiento continuo mediante participación en sesiones y entregables.

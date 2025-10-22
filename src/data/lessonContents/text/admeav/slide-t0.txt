@@ -1,47 +1,43 @@
-# T0 · Advanced Methods of Artificial Vision
+# T0 · Advanced Methods of Artificial Vision (Métodos Avanzados de Visión Artificial)
 
-## Objetivos de la sesión
-- Conocer la estructura del curso y las personas de referencia.
-- Entender cómo se organizarán teoría, prácticas y evaluación.
-- Identificar los recursos tecnológicos y bibliográficos necesarios.
+## Purpose / Propósito
+- Introduce the course structure, logistical resources, and hybrid working methodology. / Presentar la estructura del curso, los recursos logísticos y la metodología de trabajo híbrida.
+- Connect theoretical blocks with the practical sessions and key assessments scheduled for the semester. / Conectar los bloques teóricos con las prácticas y evaluaciones clave del semestre.
 
-## Equipo docente y logística
-- **Profesora responsable:** Rocío del Amor (madeam2@upv.es).
-- **Aula:** 4P – 1.2 con dinámica híbrida entre masterclass y notebook colaborativo.
-- Se trabajará con **Google Colab**; a partir de la próxima sesión es imprescindible traer portátil con acceso a la plataforma.
+## Objectives / Objetivos
+- Get to know the teaching team and available communication channels. / Conocer al equipo docente y los canales de comunicación.
+- Understand how theory, lab sessions, and the assessment system are organized. / Entender la organización de teoría, prácticas y sistema de evaluación.
+- Identify the technological and bibliographic resources required from the very first week. / Identificar los recursos tecnológicos y bibliográficos necesarios desde la primera semana.
 
-## Plan docente
-- **Bloques teóricos:**
-  1. Extracción de características manuales.
-  2. Extracción basada en CNN.
-  3. Transformadores para visión.
-  4. Modelos grandes Visión-Lenguaje.
-  5. Metodologías avanzadas de aprendizaje.
-  6. Autoencoders.
-  7. Segmentación.
-  8. Detección y seguimiento.
-  9. Redes generativas adversarias.
-- **Prácticas asociadas:** P1–P5 cubren desde descriptores manuales hasta GANs.
-- **Evaluaciones clave:**
-  - Examen parcial (T1–T5): 5 de noviembre de 2025.
-  - Examen final (T6–T9): 21 de enero de 2025.
-  - Presentación del proyecto: 15 de enero de 2025.
+## Activities / Actividades
+### Logistics and Teaching Team (Logística y profesorado)
+- **Lead instructor / Profesora responsable:** Rocío del Amor (madeam2@upv.es).
+- **Classroom / Aula:** 4P – 1.2 with a hybrid format combining masterclass segments and collaborative notebooks. / 4P – 1.2 con dinámica híbrida entre masterclass y notebook colaborativo.
+- Work with **Google Colab**; from the next session onward you must bring a laptop with access to the platform. / Trabajo con **Google Colab**; a partir de la próxima sesión es imprescindible traer portátil con acceso a la plataforma.
 
-![Cronograma de teoría, prácticas y evaluaciones](figure:admeav/t0-roadmap)
-Caption: Resumen visual de los hitos del semestre y relación entre temas, prácticas y exámenes.
+### Course Roadmap (Plan docente)
+- **Theory blocks / Bloques teóricos:** manual feature extraction, CNNs, transformers, vision-language models, advanced learning, autoencoders, segmentation, detection/tracking, and GANs. / Extracción de características manuales, CNN, transformadores, modelos visión-lenguaje, aprendizaje avanzado, autoencoders, segmentación, detección/seguimiento y GANs.
+- **Associated practicals (P1–P5) / Prácticas asociadas (P1–P5):** range from manual descriptors to generative adversarial networks. / Abarcan descriptores manuales hasta generative adversarial networks.
+- **Key evaluations / Evaluaciones clave:**
+  - Midterm exam (T1–T5): 5 November 2025. / Examen parcial (T1–T5): 5 de noviembre de 2025.
+  - Final exam (T6–T9): 21 January 2025. / Examen final (T6–T9): 21 de enero de 2025.
+  - Project presentation: 15 January 2025. / Presentación del proyecto: 15 de enero de 2025.
+- ![Cronograma de teoría, prácticas y evaluaciones](figure:admeav/t0-roadmap)
+  Caption: Visual summary of semester milestones and the relationship between topics, labs, and exams. / Resumen visual de los hitos del semestre y relación entre temas, prácticas y exámenes.
 
-## Metodología de las clases teóricas
-- Cada sesión magistral se acompaña de un **notebook interactivo** para experimentar con código.
-- Se alternarán **explicaciones guiadas** (15–20 minutos) con bloques prácticos en Colab.
-- Se fomentará el trabajo colaborativo y la discusión guiada.
+### Teaching Methodology (Metodología docente)
+- Every lecture is paired with an **interactive notebook** to experiment with code. / Cada sesión magistral se acompaña de un **notebook interactivo** para experimentar con código.
+- Alternate **guided explanations** (15–20 minutes) with practical blocks in Colab. / Alternancia de **explicaciones guiadas** (15–20 minutos) con bloques prácticos en Colab.
+- Emphasis on collaborative work and guided discussion. / Énfasis en trabajo colaborativo y discusión guiada.
 
-## Sistema de evaluación
-- **Laboratorio (20 %)**: participación y entregables desarrollados durante las sesiones prácticas.
-- **Pruebas escritas (40 %)**: dos exámenes que combinan teoría y resolución de problemas.
-- **Proyecto final (40 %)**: evaluación del código (20 %) y defensa oral (20 %). Se permite recuperar el proyecto tras feedback.
-- La **nota final** será el máximo entre la evaluación ordinaria y la recuperación.
+### Resources (Recursos)
+- Recommended bibliography / Bibliografía recomendada:
+  - Goodfellow, Bengio & Courville — *Deep Learning*.
+  - Chollet — *Deep Learning with Python*.
+  - Bishop — *Deep Learning: Foundations and Concepts*.
 
-## Bibliografía recomendada
-- Goodfellow, Bengio & Courville — *Deep Learning*.
-- Chollet — *Deep Learning with Python*.
-- Bishop — *Deep Learning: Foundations and Concepts*.
+## Assessment / Evaluación
+- **Laboratory (20 %) / Laboratorio (20 %)**: participation and deliverables produced during the lab sessions. / Participación y entregables desarrollados durante las sesiones prácticas.
+- **Written exams (40 %) / Pruebas escritas (40 %)**: two assessments combining theory and problem solving. / Dos exámenes que combinan teoría y resolución de problemas.
+- **Final project (40 %) / Proyecto final (40 %)**: evaluates code (20 %) and oral defense (20 %) with a resubmission option after feedback. / Evaluación del código (20 %) y defensa oral (20 %), con opción de recuperación tras feedback.
+- The final grade will be the maximum between the ordinary evaluation and the resit opportunity. / La nota final será el máximo entre la evaluación ordinaria y la recuperación.
