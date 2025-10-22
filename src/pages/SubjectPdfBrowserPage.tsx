@@ -14,6 +14,7 @@ type ExtractionStatus = {
 type SubjectWithPdfResources = {
   id: string;
   name: string;
+  slug: string;
   pdfResources: ResourceLink[];
 };
 
@@ -46,7 +47,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
       subjectCatalog
         .map((subject) => {
           const pdfResources = (subjectResourceLibrary[subject.id] ?? []).filter(isPdfResource);
-          return { id: subject.id, name: subject.name, pdfResources } satisfies SubjectWithPdfResources;
+          return { id: subject.id, name: subject.name, slug: subject.slug, pdfResources } satisfies SubjectWithPdfResources;
         })
         .filter((entry) => entry.pdfResources.length > 0),
     []
@@ -61,7 +62,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
   );
 
   const handleRunExtraction = useCallback(
-    async (resource: ResourceLink) => {
+    async (resource: ResourceLink, subject: SubjectWithPdfResources | null) => {
       const key = getResourceKey(resource);
       const filePath = resource.filePath ?? resource.extract?.source;
 
@@ -97,6 +98,15 @@ const SubjectPdfBrowserPage: React.FC = () => {
             message: 'Extraction completed successfully.',
           },
         }));
+
+        if (subject && typeof window !== 'undefined') {
+          window.setTimeout(() => {
+            const searchParams = new URLSearchParams();
+            searchParams.set('focus', subject.slug);
+            searchParams.set('refresh', Date.now().toString());
+            window.location.assign(`/subjects?${searchParams.toString()}`);
+          }, 1200);
+        }
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unexpected error while extracting PDF.';
         setStatuses((prev) => ({
@@ -178,7 +188,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
                   <button
                     type="button"
                     className={styles.runButton}
-                    onClick={() => handleRunExtraction(resource)}
+                    onClick={() => handleRunExtraction(resource, activeSubject)}
                     disabled={isLoading}
                   >
                     {isLoading ? 'Running extraction…' : 'Run Extraction'}
