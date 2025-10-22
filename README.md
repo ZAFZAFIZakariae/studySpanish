@@ -28,31 +28,39 @@ A clean, coach-style workspace for organising B1–C1 Spanish practice. The app 
 3. Optional scripts:
 
    ```bash
-   npm run build        # Type-check and build the production bundle
-   npm run test         # Run the Jest test suite
-   npm run preview      # Serve preview.html without a build step (no npm deps required)
-   npm run preview:vite # Serve the Vite production build (requires dependencies)
+   npm run build         # Type-check and build the production bundle into dist/
+   npm run test          # Run the Jest test suite
+   npm run preview       # Serve preview.html without a build step (no npm deps required)
+   npm run preview:vite  # Build + serve the Vite production bundle (requires dependencies)
    ```
 
 ### Working offline
 
-`npm run preview` now launches a lightweight static server (`scripts/simple-serve.js`) that renders `preview.html`. The page is a
-high-fidelity mock built only with CDN-hosted assets, so it works even when `node_modules` is missing. Use this command whenever
-you need a quick visual smoke test but cannot download npm packages.
+`npm run preview` now launches a lightweight static server (`scripts/simple-serve.js`) that renders `preview.html`. The page is a high-fidelity mock built only with CDN-hosted assets, so it works even when `node_modules` is missing. Use this command whenever you need a quick visual smoke test but cannot download npm packages.
 
-To run the full Vite preview (`npm run preview:vite`), the environment still needs access to React, React Router, Dexie, and the
-other dependencies declared in `package.json`. If the packages are unavailable (for example, the environment blocks network
-access and `npm install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module
-'react'" or "JSX element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or
-vendored locally before running the Vite preview in an offline setting.
+To run the full Vite preview (`npm run preview:vite`), the environment still needs access to React, React Router, Dexie, and the other dependencies declared in `package.json`. If the packages are unavailable (for example, the environment blocks network access and `npm install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module 'react'" or "JSX element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or vendored locally before running the Vite preview in an offline setting.
 
-When developing offline with the production bundle, run the helper script before building:
+When developing offline with the production bundle:
 
-```bash
-scripts/install_offline_deps.sh
-```
+1. Populate the offline cache and install packages via the helper script:
 
-The script installs React, React Router, Dexie, Zod, and the Markdown toolchain from pre-downloaded npm tarballs. It first looks for packages inside `.npm-offline-cache/` (configurable via `LOCAL_CACHE_DIR`). If the cache is empty, it extracts `offline-deps.tar.gz` (override with `BUNDLED_TARBALL`) and installs from the bundled tarballs. Populate either location with the required package archives to complete the build without internet access.
+   ```bash
+   scripts/install_offline_deps.sh
+   ```
+
+2. Build the production bundle (this writes to `dist/`):
+
+   ```bash
+   npm run build
+   ```
+
+3. Serve the built app with Vite's preview server (append `-- --host` to expose it on your LAN):
+
+   ```bash
+   npm run preview:vite
+   ```
+
+The helper script installs React, React Router, Dexie, Zod, and the Markdown toolchain from pre-downloaded npm tarballs. It first looks for packages inside `.npm-offline-cache/` (configurable via `LOCAL_CACHE_DIR`). If the cache is empty, it extracts `offline-deps.tar.gz` (override with `BUNDLED_TARBALL`) and installs from the bundled tarballs. Populate either location with the required package archives to complete the build without internet access.
 
 ### CDN fallback preview
 
