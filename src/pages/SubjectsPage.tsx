@@ -383,6 +383,14 @@ const SubjectsPage: React.FC = () => {
   );
   const resources = activeSubject ? subjectResourceLibrary[activeSubject.id] ?? [] : [];
   const itemResources = activeItem?.resources ?? [];
+  const resourcesWithExtract = useMemo(
+    () =>
+      resources.filter((resource) => {
+        const extractText = resource.extract?.text;
+        return Boolean(extractText && extractText.trim().length > 0);
+      }),
+    [resources]
+  );
   const translationDetails = useMemo(() => {
     if (!activeItem?.translation) {
       return null;
@@ -1309,6 +1317,20 @@ const SubjectsPage: React.FC = () => {
                   <h3>Original PDFs & slide decks</h3>
                   {renderResourceLinks(resources)}
                 </section>
+              )}
+
+              {resourcesWithExtract.length > 0 && (
+                <details className={styles.rawContent}>
+                  <summary>Original PDF Extract</summary>
+                  {resourcesWithExtract.map((resource) =>
+                    resource.extract?.text ? (
+                      <section key={resource.href || resource.label}>
+                        <h3>{resource.label}</h3>
+                        <InlineMarkdown text={resource.extract.text} />
+                      </section>
+                    ) : null
+                  )}
+                </details>
               )}
             </article>
           )}

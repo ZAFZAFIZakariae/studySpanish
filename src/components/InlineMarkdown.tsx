@@ -260,6 +260,31 @@ const responsiveImageStyles: React.CSSProperties = {
   margin: '0.75rem 0',
 };
 
+const extractMarkdownDestination = (value: string): string => {
+  let candidate = value.trim();
+  if (!candidate) {
+    return '';
+  }
+
+  if (candidate.startsWith('<') && candidate.endsWith('>')) {
+    candidate = candidate.slice(1, -1).trim();
+  }
+
+  const trailingTitle = candidate.match(/\s+(?:"[^"]*"|'[^']*'|\([^)]*\))$/);
+  if (trailingTitle) {
+    candidate = candidate.slice(0, -trailingTitle[0].length);
+  }
+
+  if (
+    (candidate.startsWith("\"") && candidate.endsWith("\"")) ||
+    (candidate.startsWith("'") && candidate.endsWith("'"))
+  ) {
+    candidate = candidate.slice(1, -1).trim();
+  }
+
+  return candidate.trim();
+};
+
 const renderTokens = (text: string): React.ReactNode[] => {
   const pattern = new RegExp(
     [
@@ -273,8 +298,8 @@ const renderTokens = (text: string): React.ReactNode[] => {
       '`[^`]+?`',
       '\\$\\$[\\s\\S]+?\\$\\$',
       '\\$[^$]+?\\$',
-      '!\\[[^\\]]*?\\]\\([^\\s)]+?\\)',
-      '\\[[^\\]]+?\\]\\([^\\s)]+?\\)',
+      '!\\[[^\\]]*?\\]\\((?:\\\\.|[^\\\\)])*\\)',
+      '\\[[^\\]]+?\\]\\((?:\\\\.|[^\\\\)])*\\)',
     ].join('|'),
     'g'
   );
@@ -328,24 +353,27 @@ const renderTokens = (text: string): React.ReactNode[] => {
         nodes.push(rendered);
       }
     } else {
-      const imageMatch = token.match(/^!\[([^\]]*)]\(([^)]+)\)$/);
+      const imageMatch = token.match(/^!\[([^\]]*)]\(((?:\\.|[^\\)])*)\)$/);
       if (imageMatch) {
-        const [, rawAlt = '', rawSrc] = imageMatch;
-        const resolvedSrc = resolveSubjectAssetPath(rawSrc);
+        const [, rawAlt = '', rawTarget] = imageMatch;
+        const cleanedSrc = extractMarkdownDestination(rawTarget);
+        const resolvedSrc = resolveSubjectAssetPath(cleanedSrc);
+        const finalSrc = resolvedSrc || cleanedSrc || rawTarget;
         const altText = rawAlt.trim() ? rawAlt : FALLBACK_IMAGE_ALT;
         nodes.push(
           <img
             key={`md-img-${key}`}
-            src={resolvedSrc || rawSrc}
+            src={finalSrc}
             alt={altText}
             loading="lazy"
             style={responsiveImageStyles}
           />
         );
       } else {
-        const linkMatch = token.match(/^\[([^\]]+)]\(([^)]+)\)$/);
+        const linkMatch = token.match(/^\[([^\]]+)]\(((?:\\.|[^\\)])*)\)$/);
         if (linkMatch) {
-          const [, label, href] = linkMatch;
+          const [, label, rawTarget] = linkMatch;
+          const href = extractMarkdownDestination(rawTarget) || rawTarget;
           nodes.push(
             <a key={`md-link-${key}`} href={href} target="_blank" rel="noopener noreferrer">
               {label}
