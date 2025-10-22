@@ -9,70 +9,34 @@ A clean, coach-style workspace for organising B1–C1 Spanish practice. The app 
 - **Flashcard trainer** – flip with the spacebar and grade your recall with J/K or the arrow keys.
 - **Content manager** – validate JSON bundles, preview diffs, and cache new lessons for offline use.
 
-## Run the app locally
+## Launch the standalone React app
 
-1. Install dependencies (Node.js 18+ recommended):
+The workspace now ships as a single-page React app under [`standalone/`](standalone/). React, ReactDOM, lesson data, styles, and assets live beside the HTML entry point—no npm commands or Vite dev server required.
 
-   ```bash
-   npm install
-   ```
+### Option 1: Open directly from disk
 
-2. Start the development server:
+1. Locate [`standalone/index.html`](standalone/index.html) in your file browser.
+2. Double-click the file (or use `open standalone/index.html` on macOS / `xdg-open standalone/index.html` on Linux).
+3. The dashboard loads instantly using the bundled data from [`standalone/lesson-data.js`](standalone/lesson-data.js).
 
-   ```bash
-   npm run dev
-   ```
+### Option 2: Serve from a local terminal
 
-   Vite prints a local URL (typically <http://localhost:5173>) that you can open in the browser.
-
-3. Optional scripts:
+1. Start a static web server from the `standalone/` folder:
 
    ```bash
-   npm run build        # Type-check and build the production bundle
-   npm run test         # Run the Jest test suite
-   npm run preview      # Build and serve the production bundle locally
+   cd standalone
+   python3 -m http.server 8000
    ```
 
-### Working offline
+   The command prints `Serving HTTP on :: port 8000`. Leave it running.
 
-`npm run preview` builds the production bundle and serves it with Vite’s preview server. The command requires the dependencies
-declared in `package.json`. If the packages are unavailable (for example, the environment blocks network access and `npm
-install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module 'react'" or "JSX
-element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or vendored locally before
-running the preview in an offline setting.
+2. Visit <http://localhost:8000> in your browser to use the app.
+3. Stop the server with `Ctrl+C` when you are finished.
 
-When developing offline with the production bundle, run the helper script before building:
+### Updating lessons
 
-```bash
-scripts/install_offline_deps.sh
-```
-
-The script installs React, React Router, Dexie, Zod, and the Markdown toolchain from pre-downloaded npm tarballs. It first looks for packages inside `.npm-offline-cache/` (configurable via `LOCAL_CACHE_DIR`). If the cache is empty, it extracts `offline-deps.tar.gz` (override with `BUNDLED_TARBALL`) and installs from the bundled tarballs. Populate either location with the required package archives to complete the build without internet access.
-
-### CDN fallback preview
-
-If package installation is blocked entirely, open [`public/cdn-fallback.html`](public/cdn-fallback.html) directly in the browser. The page loads the prebuilt production bundle from the configured CDN (React, ReactDOM, and React Router are sourced from esm.sh) and renders a handful of lesson extracts fetched from the repository. Override the query parameters (`bundle`, `bundleBase`, `extractBase`, `paths`) to point at a different CDN host or set of extracts when necessary. This provides a quick visual smoke test without running `npm install` or Vite locally.
-
-## Verification checklist
-
-To confirm the app is healthy, run the test suite followed by a production build:
-
-```bash
-npm test
-npm run build
-```
-
-Both commands should complete without errors. The build step prints a summary of emitted assets; large bundles are flagged with a warning but do not indicate a failure.
-
-## Importing content
-
-Use the **Content manager** page to upload JSON bundles that follow the `SeedBundle` schema (`lessons`, `exercises`, and `flashcards` arrays). The UI validates the structure, previews new/updated records, and updates the offline cache after a successful import.
-
-## Project structure
-
-- `src/components/layout/AppShell.tsx` – shared layout and navigation shell.
-- `src/pages/` – top-level routes for the dashboard, flashcards, content manager, and lessons.
-- `src/components/` – reusable building blocks such as the dashboard, lesson viewer, and exercise engine.
-- `src/lib/` – analytics, spaced-repetition, schemas, and grading utilities.
+- Edit [`standalone/lesson-data.js`](standalone/lesson-data.js) to tweak titles, notes, or markdown content.
+- Drop new figures and PDFs inside [`standalone/subjects/`](standalone/subjects/) and reference them from the lesson data.
+- Refresh the browser tab to see your changes instantly.
 
 Happy studying! 🇪🇸
