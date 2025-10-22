@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { PdfDocument, PdfPage, loadReactPdfModule } from '../utils/reactPdf';
 import styles from './PdfPageViewer.module.css';
 
 type PdfPageViewerProps = {
@@ -7,27 +8,6 @@ type PdfPageViewerProps = {
   title?: string;
   onClose: () => void;
 };
-
-type ReactPdfModule = typeof import('react-pdf');
-
-let reactPdfModulePromise: Promise<ReactPdfModule> | null = null;
-
-const loadReactPdfModule = async (): Promise<ReactPdfModule> => {
-  if (!reactPdfModulePromise) {
-    reactPdfModulePromise = import('react-pdf').then(async (module) => {
-      const workerModule = await import('pdfjs-dist/build/pdf.worker.min.mjs?url');
-      const workerSrc = typeof workerModule === 'string' ? workerModule : workerModule.default;
-      if (workerSrc) {
-        module.pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
-      }
-      return module;
-    });
-  }
-  return reactPdfModulePromise;
-};
-
-const LazyDocument = React.lazy(() => loadReactPdfModule().then((module) => ({ default: module.Document })));
-const LazyPage = React.lazy(() => loadReactPdfModule().then((module) => ({ default: module.Page })));
 
 const normalizeDialogLabel = (title: string | undefined, pageNumber: number) => {
   if (title && title.trim()) {
@@ -44,6 +24,22 @@ const PdfPageViewer: React.FC<PdfPageViewerProps> = ({ file, pageNumber, title, 
 
   useEffect(() => {
     closeButtonRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+    loadReactPdfModule().catch((error: unknown) => {
+      console.error('[PdfPageViewer] Failed to load react-pdf', error);
+      if (isMounted) {
+        const message =
+          error instanceof Error && error.message ? error.message : 'Unable to initialise the PDF renderer.';
+        setLoadError(message);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   useEffect(() => {
@@ -115,15 +111,15 @@ const PdfPageViewer: React.FC<PdfPageViewerProps> = ({ file, pageNumber, title, 
                 Failed to load the PDF. {loadError}
               </div>
             ) : (
-              <LazyDocument file={file} loading="">
-                <LazyPage
+              <PdfDocument file={file} loading="">
+                <PdfPage
                   pageNumber={pageNumber}
                   width={containerWidth}
                   renderAnnotationLayer={false}
                   renderTextLayer
                   onRenderError={(error: Error) => setLoadError(error.message || 'Unknown error')}
                 />
-              </LazyDocument>
+              </PdfDocument>
             )}
           </Suspense>
         </div>
