@@ -6,7 +6,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "node scripts/simple-serve.js",
+    "preview": "npm run build && node scripts/simple-serve.js --mode=dist",
     "preview:vite": "npm run build && vite preview",
     "// preview note": "Preview assumes node_modules is already installed via scripts/install_offline_deps.sh.",
     "test": "jest",
