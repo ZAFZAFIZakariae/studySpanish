@@ -1,18 +1,22 @@
-# Notebook goals
-- Explore Grey Level Co-occurrence Matrix (**matriz de co-ocurrencia de niveles de gris**) behaviour on texture samples.
-- Show how window size and distance parameters influence contrast, dissimilarity, energy, and homogeneity.
+# GLCM Notebook · Texture Metrics (Métricas de textura)
 
-## Step-by-step guide
-1. Load the texture atlas images and convert them to grayscale if required.
-2. Generate GLCMs with multiple `distances` and `angles`, mirroring the values listed in the Spanish slide deck.
-3. Compute summary statistics using `skimage.feature.graycoprops` and record them in a bilingual table (English header with Spanish term in parentheses).
-4. Plot heatmaps to visualise dominant relationships and annotate observations directly on the figures.
+## Purpose / Propósito
+- Investigate how the **Grey Level Co-occurrence Matrix** behaves across texture samples. / Investigar el comportamiento de la **Grey Level Co-occurrence Matrix (matriz de co-ocurrencia de niveles de gris)** en muestras de textura.
+- Show how window size and distance parameters influence contrast, dissimilarity, energy, and homogeneity. / Mostrar cómo los parámetros de ventana y distancia afectan contraste, disimilitud, energía y homogeneidad.
 
-## Reflection prompts
-- Which parameter combination best separates wood versus fabric textures? Justify referencing the Spanish metric name (**homogeneidad**, **contraste**, etc.).
-- Identify any preprocessing steps that stabilise the metrics when lighting changes.
+## Objectives / Objetivos
+- Configure different `distances` and `angles` values following the presentation guide in Spanish. / Configurar distintos valores de `distances` y `angles` siguiendo la guía de la presentación en español.
+- Compute statistics with `skimage.feature.graycoprops` and log them in a bilingual table. / Calcular estadísticas con `skimage.feature.graycoprops` y registrarlas en una tabla bilingüe.
+- Interpret heatmap visualizations to detect dominant relationships across textures. / Interpretar visualizaciones térmicas para detectar relaciones dominantes entre texturas.
 
-## Deliverables
-- Executed notebook with commentary cells explaining each metric.
-- PNG exports of the comparison charts inserted into the report template.
-- Two bullet conclusions about how GLCM features feed downstream classifiers.
+## Activities / Actividades
+1. Load the images from the texture atlas and convert them to grayscale when needed. / Cargar las imágenes del atlas de texturas y convertirlas a escala de grises cuando sea necesario.
+2. Generate GLCMs with multiple distance–angle combinations while documenting each configuration. / Generar GLCM con múltiples combinaciones de distancia y ángulo, documentando cada configuración.
+3. Compute summary metrics and note observations in a table with bilingual headers. / Calcular métricas resumen y anotar observaciones en una tabla con encabezados bilingües.
+4. Plot heatmaps of the matrices and annotate insights directly on the figures. / Representar mapas de calor de las matrices y añadir notas directamente sobre las figuras.
+5. Answer the reflection prompts: which parameters best separate wood from fabrics? Which preprocessing stabilizes metrics against lighting changes? / Responder a las preguntas de reflexión: ¿qué parámetros separan mejor madera vs. telas? ¿Qué preprocesado estabiliza las métricas ante cambios de iluminación?
+
+## Assessment / Evaluación
+- Submit the executed notebook with commentary cells explaining each metric. / Entregar el notebook ejecutado con celdas de comentarios que expliquen cada métrica.
+- Export comparative plots to PNG and insert them into the report template. / Exportar las comparativas en PNG e insertarlas en la plantilla de informe.
+- Include two conclusions about how GLCM features feed subsequent classifiers. / Incluir dos conclusiones sobre cómo las características GLCM alimentan clasificadores posteriores.

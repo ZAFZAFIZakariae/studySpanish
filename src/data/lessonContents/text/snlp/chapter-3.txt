@@ -1,38 +1,50 @@
-# Capítulo 3 · Desarrollo de modelos DNN con Keras
+# Chapter 3 · Building DNN Models with Keras (Desarrollo de modelos DNN con Keras)
 
-## ¿Qué es Keras?
-- API de alto nivel para construir redes neuronales sobre TensorFlow.
-- Enfocada en la experimentación rápida con una interfaz modular y extensible.
-- Incluye implementaciones de capas, funciones de activación, pérdidas y optimizadores.
+## Purpose / Propósito
+- Introducir el flujo de trabajo de Keras para prototipar redes neuronales profundas con rapidez.
+- Mostrar configuraciones clave de modelos, entrenamiento y evaluación reproducible.
 
-## Flujo básico de trabajo
-1. Importar `tensorflow.keras` y crear un modelo secuencial.
+## Objectives / Objetivos
+- Comprender la API de alto nivel de Keras sobre TensorFlow.
+- Construir un MLP secuencial con capas densas, activaciones y regularización.
+- Configurar pérdidas, optimizadores, métricas y callbacks adecuados.
+- Evaluar e inferir resultados interpretables mediante métricas y visualizaciones.
+
+## Activities / Actividades
+### Keras Overview (Visión general)
+- API modular que incluye capas, activaciones, pérdidas y optimizadores listos para usar.
+- Diseñada para experimentación rápida manteniendo extensibilidad.
+- ![Pipeline en Keras](figure:snlp-chapter-3/keras-pipeline)
+  Caption: Pasos desde la definición hasta la inferencia.
+
+### Basic Workflow (Flujo básico)
+1. Importar `tensorflow.keras` y crear un modelo `Sequential` o funcional.
 2. Definir capas densas, convolucionales o recurrentes con sus activaciones.
-3. Configurar el optimizador, función de pérdida y métricas mediante `compile`.
-4. Entrenar con `fit`, monitorizando métricas y validación.
-5. Evaluar e inferir con `evaluate`/`predict` y analizar resultados.
+3. Configurar optimizador, función de pérdida y métricas mediante `compile`.
+4. Entrenar con `fit`, monitorizando métricas de entrenamiento y validación.
+5. Evaluar con `evaluate` e inferir con `predict` analizando resultados.
 
-![Pipeline en Keras](figure:snlp-chapter-3/keras-pipeline)
-Caption: Pasos principales desde la definición del modelo hasta la evaluación e inferencia.
+### Building an MLP (Construcción de un MLP)
+- Declarar `input_shape` en la primera capa y número de clases en la salida.
+- Activaciones comunes: ReLU en ocultas, Softmax para multiclase, Sigmoid para binaria.
+- Integrar dropout, batch normalization y otras utilidades para controlar overfitting.
 
-## Construcción de un MLP
-- `Sequential` permite apilar capas densas (`Dense`).
-- La primera capa debe declarar `input_shape`; la última coincide con el número de clases.
-- Activaciones frecuentes: ReLU en capas ocultas, Softmax para clasificación multiclase, Sigmoid para binaria.
-- Se pueden combinar capas densas con dropout, batch norm y otras utilidades.
+### Training Configuration (Configuración de entrenamiento)
+- Optimizador típico: `Adam` con tasa de aprendizaje ajustable.
+- Pérdidas: `categorical_crossentropy` (one-hot) o `sparse_categorical_crossentropy` (enteros).
+- Ajustar tamaño de lote, épocas y `callbacks` como `EarlyStopping` o `ModelCheckpoint`.
 
-## Configuración del entrenamiento
-- Optimización típica: `Adam` con tasa de aprendizaje ajustable.
-- Pérdida `categorical_crossentropy` para etiquetas one-hot; `sparse_categorical_crossentropy` para enteros.
-- Parámetros clave: tamaño de lote, número de épocas, `callbacks` (EarlyStopping, ModelCheckpoint).
+### Evaluation and Inference (Evaluación e inferencia)
+- Usar `model.predict` para probabilidades/logits y convertir a clases con `argmax`.
+- Construir matrices de confusión con `sklearn.metrics` y visualizarlas con `seaborn.heatmap`.
+- Analizar `history.history` para revisar curvas de aprendizaje.
 
-## Evaluación e inferencia
-- Tras entrenar, usar `model.predict` para obtener probabilidades o logits.
-- Convertir salidas a clases con `argmax` y construir matrices de confusión (`sklearn.metrics`).
-- Visualizar resultados con `seaborn.heatmap` para detectar confusiones sistemáticas.
+### Good Practices (Buenas prácticas)
+- Normalizar entradas y dividir en train/val/test.
+- Controlar overfitting con regularización, dropout y early stopping.
+- Documentar arquitectura, parámetros y resultados para reproducibilidad.
 
-## Buenas prácticas
-- Normalizar entradas y dividir correctamente en train/val/test.
-- Controlar el overfitting con regularización, dropout y early stopping.
-- Guardar el historial de entrenamiento (`history.history`) para analizar curvas de aprendizaje.
-- Documentar arquitectura y parámetros para reproducibilidad.
+## Assessment / Evaluación
+- Implementar un MLP en Keras y reportar accuracy/val_loss por época.
+- Entregar una matriz de confusión comentada que identifique clases problemáticas.
+- Escribir una nota técnica que describa los callbacks y estrategias de regularización aplicadas.

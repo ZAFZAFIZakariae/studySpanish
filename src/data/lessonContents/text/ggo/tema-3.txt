@@ -1,44 +1,52 @@
 # Topic 3 · Business and IS/IT Alignment (Alineación entre negocio y SI/TI)
 
-## Objectives (Objetivos)
-- Understand why business and IT must share a strategic vision (visión estratégica).
-- Analyze the Strategic Alignment Model (Modelo de Alineamiento Estratégico) from Henderson and Venkatraman.
-- Review tools for building coherent strategies in both domains.
+## Purpose / Propósito
+- Show why business and IT must share a strategic vision and coordinated processes. / Demostrar por qué negocio y TI deben compartir visión estratégica y procesos coordinados.
+- Apply the Strategic Alignment Model to synchronize strategies, infrastructures, and processes. / Aplicar el Modelo de Alineamiento Estratégico para sincronizar estrategias, infraestructuras y procesos.
 
-## Key concepts (Conceptos clave)
-- Organizations develop **business strategy (estrategia de negocio)** and **information systems/IT strategy (estrategia de SI/TI)** at the same time, and each materializes through organizational and technological infrastructures.
-- Alignment aims to ensure changes in one dimension are reflected in the other in a coordinated way.
-- The absence of IT strategic planning (planificación estratégica de TI) raises risk and limits the value delivered.
+## Objectives / Objetivos
+- Explain the alignment dimensions proposed by Henderson and Venkatraman. / Explicar las dimensiones de alineación propuestas por Henderson y Venkatraman.
+- Use strategic analysis tools (SWOT, PESTEL, Porter) across both domains. / Utilizar herramientas de análisis estratégico (DAFO, PESTEL, Porter) en ambos dominios.
+- Design strategic management processes that keep business and IS/IT coherent. / Diseñar procesos de dirección estratégica que aseguren coherencia entre negocio y SI/TI.
+- Identify good practices to maintain alignment across the project portfolio. / Identificar buenas prácticas para mantener la alineación en el portafolio de proyectos.
 
-![Dimensions of alignment (Dimensiones de la alineación)](figure:ggo-tema-3/dimensiones)
-Caption: The link between strategies, infrastructures, and processes for business and IT.
+## Activities / Actividades
+### Key Concepts (Conceptos clave)
+- Business strategy and IS/IT strategy evolve in parallel and materialize through organizational and technological infrastructures. / Estrategia de negocio y estrategia de SI/TI se desarrollan en paralelo y se materializan en infraestructuras organizativas y tecnológicas.
+- Aligning means reflecting changes from one domain into the other in a coordinated way; lacking IT strategic planning increases risk. / Alinear implica reflejar cambios de un dominio en el otro de forma coordinada; la ausencia de planificación estratégica de TI eleva riesgos.
+- ![Dimensions of alignment / Dimensiones de la alineación](figure:ggo-tema-3/dimensiones)
+  Caption: Connection between business and IT strategies, infrastructures, and processes. / Conexión entre estrategias, infraestructuras y procesos de negocio y TI.
 
-## Strategic Alignment Model (Modelo de Alineamiento Estratégico, SAM)
-- Proposes four perspectives:
-  1. **Strategy execution (Ejecución estratégica):** business strategy guides how IT is organized.
-  2. **Technology transformation (Transformación tecnológica):** IT strategy drives new business capabilities.
-  3. **Competitive potential (Potencial competitivo):** IT enables differentiated advantages.
-  4. **Service level (Nivel de servicio):** the IT infrastructure supports internal processes.
-- Distinguishes two axes: **strategic fit (ajuste estratégico)**—external vs. internal—and **functional integration (integración funcional)**—business vs. IT.
+### Strategic Alignment Model (Modelo de Alineamiento Estratégico)
+- Four perspectives / Cuatro perspectivas:
+  1. **Strategy execution (Ejecución estratégica).**
+  2. **Technology transformation (Transformación tecnológica).**
+  3. **Competitive potential (Potencial competitivo).**
+  4. **Service level (Nivel de servicio).**
+- Two axes / Dos ejes: **strategic fit (ajuste estratégico)** external vs. internal and **functional integration (integración funcional)** business vs. IT. / Dos ejes: **strategic fit (ajuste estratégico)** externo vs. interno y **functional integration (integración funcional)** negocio vs. TI.
+- ![SAM perspectives / Perspectivas del SAM](figure:ggo-tema-3/sam)
+  Caption: How the four views connect strategy, infrastructure, and processes. / Cómo las cuatro vistas conectan estrategia, infraestructura y procesos.
 
-![SAM perspectives (Perspectivas del SAM)](figure:ggo-tema-3/sam)
-Caption: The four SAM views connect strategy, infrastructure, and processes.
+### Strategy Definition Tools (Herramientas estratégicas)
+- **SWOT / DAFO:** strengths, weaknesses, opportunities, threats. / **SWOT / DAFO:** fortalezas, debilidades, oportunidades, amenazas.
+- **PESTEL:** political, economic, social, technological, environmental, legal factors. / **PESTEL:** factores político, económico, social, tecnológico, ambiental, legal.
+- **Porter’s five forces:** competitors, customers, suppliers, new entrants, substitutes. / **Porter’s five forces:** competidores, clientes, proveedores, nuevos entrantes, sustitutos.
+- Apply each tool to both business and IS/IT to maintain coherence. / Aplicar cada herramienta tanto a negocio como a SI/TI para mantener coherencia.
 
-## Tools for defining strategy (Herramientas para definir estrategia)
-- **SWOT analysis (Análisis DAFO):** identifies strengths, weaknesses, opportunities, and threats.
-- **PESTEL analysis (Análisis PESTEL):** reviews political, economic, social, technological, environmental, and legal factors.
-- **Porter’s five forces (Cinco fuerzas de Porter):** evaluates competitors, customers, suppliers, new entrants, and substitutes.
-- Apply these tools to both business and IS/IT to maintain coherence.
+### Strategic Management Process (Proceso de dirección estratégica)
+1. Analyze environment and stakeholders to identify opportunities and risks. / Analizar entorno y stakeholders para detectar oportunidades y riesgos.
+2. Assess internal resources to recognize strengths and weaknesses. / Evaluar recursos internos para reconocer fortalezas y debilidades.
+3. Define market-oriented mission and vision. / Definir misión y visión orientadas al mercado.
+4. Formulate and implement coordinated strategies. / Formular e implementar estrategias coordinadas.
+5. Evaluate results and adjust continuously. / Evaluar resultados y ajustar continuamente.
 
-## Strategic management process (Proceso de dirección estratégica)
-1. Analyze the environment and stakeholders (entorno y stakeholders) to detect opportunities and risks.
-2. Assess internal resources (recursos internos) to recognize strengths and weaknesses.
-3. Define market-oriented mission and vision (misión y visión orientadas al mercado).
-4. Formulate and implement strategies (formular e implementar estrategias).
-5. Evaluate results and adjust as needed (evaluar resultados y ajustar).
+### Alignment Good Practices (Buenas prácticas)
+- Include IT leaders when defining corporate objectives. / Incluir responsables de TI al definir objetivos corporativos.
+- Translate business priorities into technology roadmaps. / Traducir prioridades de negocio en hojas de ruta tecnológicas.
+- Review the project portfolio to ensure strategic contribution. / Revisar el portafolio de proyectos para asegurar contribución estratégica.
+- Establish shared indicators between business and IT. / Establecer indicadores compartidos entre negocio y TI.
 
-## Alignment good practices (Buenas prácticas de alineación)
-- Include IT leaders (responsables de TI) when defining corporate objectives.
-- Translate business priorities into technology roadmaps (hojas de ruta tecnológicas).
-- Review the project portfolio regularly to guarantee strategic contribution.
-- Establish shared indicators between business and IT (indicadores compartidos entre negocio y TI).
+## Assessment / Evaluación
+- Complete an exercise classifying an initiative under each SAM perspective. / Completar un ejercicio donde se clasifique una iniciativa según cada perspectiva del SAM.
+- Build a combined SWOT/PESTEL matrix for a real case and identify implications for IT. / Elaborar una matriz DAFO/PESTEL combinada para un caso real e identificar implicaciones para TI.
+- Propose a shared KPI set and justify how it sustains alignment. / Proponer un conjunto de KPIs compartidos y justificar cómo sostienen la alineación.

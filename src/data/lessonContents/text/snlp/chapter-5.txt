@@ -1,44 +1,59 @@
-# Capítulo 5 · Transformers y modelos de lenguaje
+# Chapter 5 · Transformers and Language Models (Transformers y modelos de lenguaje)
 
-## Contexto histórico
-- Modelos basados en conteo (Bag-of-Words, TF-IDF) ignoran orden y contexto.
-- Embeddings estáticos (Word2Vec, GloVe) capturan semántica pero no desambiguación contextual.
-- RNN/LSTM procesan secuencias pero sufren gradientes vanishing/exploding y dificultad con dependencias largas.
+## Purpose / Propósito
+- Explicar la transición de modelos secuenciales clásicos a arquitecturas basadas en atención.
+- Analizar componentes clave de Transformers y la evolución hacia modelos de lenguaje grandes.
 
-## Limitaciones de RNN/LSTM
-- Procesamiento estrictamente secuencial que impide paralelización.
-- Memoria limitada para relaciones lejanas.
-- Uso de embeddings estáticos y contexto unidireccional.
+## Objectives / Objetivos
+- Identificar limitaciones de Bag-of-Words, embeddings estáticos y RNN/LSTM.
+- Describir la arquitectura Transformer y su mecanismo de atención multi-cabeza.
+- Diferenciar variantes como BERT, GPT y BART/T5.
+- Evaluar implicaciones éticas y operativas de los LLM.
 
-![Evolución hacia Transformers](figure:snlp-chapter-5/evolucion)
-Caption: De modelos secuenciales con memoria limitada a arquitecturas basadas en atención.
+## Activities / Actividades
+### Historical Context (Contexto histórico)
+- Modelos basados en conteo ignoran orden y contexto.
+- Embeddings estáticos capturan semántica pero no desambiguación contextual.
+- RNN/LSTM procesan secuencias pero sufren gradientes vanishing/exploding y dependencias largas.
+- ![Evolución hacia Transformers](figure:snlp-chapter-5/evolucion)
+  Caption: De modelos secuenciales con memoria limitada a arquitecturas basadas en atención.
 
-## Nacimiento del Transformer
-- Artículo “Attention is All You Need” introduce una arquitectura basada exclusivamente en atención.
-- Permite procesar secuencias en paralelo, capturar dependencias largas y usar codificaciones posicionales.
-- Componentes clave: multi-head self-attention, capas feed-forward, normalización y residual connections.
+### Limitations of RNN/LSTM (Limitaciones)
+- Procesamiento estrictamente secuencial que dificulta paralelización.
+- Memoria limitada para relaciones distantes.
+- Uso de contexto unidireccional y embeddings estáticos.
 
-## Atención y multi-head
-- La atención calcula pesos que determinan qué tokens son relevantes entre sí.
-- Múltiples cabezas exploran diferentes subespacios de representación.
-- `Scaled Dot-Product Attention` es el núcleo de las operaciones.
+### Birth of the Transformer (Nacimiento del Transformer)
+- “Attention is All You Need” introduce arquitectura basada solo en atención.
+- Permite paralelismo, captura dependencias largas y usa codificaciones posicionales.
+- Componentes: multi-head self-attention, capas feed-forward, normalización, conexiones residuales.
 
-## Arquitecturas basadas en Transformer
-- **BERT:** encoder bidireccional preentrenado con Masked LM; excelente en comprensión.
-- **GPT:** decoder autoregresivo enfocado en generación; variantes GPT-2/3/4 escalan parámetros.
-- **BART/T5:** combinan encoder-decoder para tareas de secuencia a secuencia; entrenamiento con objetivos de reconstrucción.
+### Attention Mechanics (Mecánica de la atención)
+- La atención calcula pesos que miden relevancia entre tokens.
+- Varias cabezas exploran diferentes subespacios.
+- Núcleo: **Scaled Dot-Product Attention**.
 
-## Modelos de lenguaje grandes (LLM)
-- Escalan parámetros (billones), datos y compute; aprenden capacidades emergentes.
-- Se afinan con *instruction tuning* y *RLHF* para alinearse con necesidades humanas.
-- Aplicaciones: asistentes conversacionales, generación de código, análisis semántico avanzado.
+### Transformer Family (Familia Transformer)
+- **BERT:** encoder bidireccional preentrenado con Masked LM; fuerte en comprensión.
+- **GPT:** decoder autoregresivo para generación; escalado en GPT-2/3/4.
+- **BART/T5:** encoder-decoder para tareas de secuencia a secuencia con objetivos de reconstrucción.
 
-## ¿Por qué funcionan tan bien?
-- Paralelismo masivo permite entrenar con grandes corpus.
+### Large Language Models (Modelos de lenguaje grandes)
+- Escalan parámetros, datos y compute; emergen capacidades nuevas.
+- Afinamiento con *instruction tuning* y *RLHF* para alineación humana.
+- Aplicaciones: asistentes conversacionales, generación de código, análisis semántico.
+
+### Why They Work (¿Por qué funcionan?)
+- Paralelismo masivo para entrenar con grandes corpus.
 - Atención captura contexto global sin perder detalles locales.
-- Preentrenamiento + fine-tuning/adaptación rápida permiten reutilizar conocimiento.
+- Preentrenamiento + fine-tuning permiten reutilizar conocimiento rápidamente.
 
-## Consideraciones éticas y operativas
+### Ethics and Operations (Ética y operación)
 - Riesgos: sesgos, alucinaciones, consumo energético, privacidad.
 - Necesidad de monitorizar respuestas, aplicar filtros y documentar limitaciones.
 - Evaluar métricas de seguridad, factualidad y responsabilidad social.
+
+## Assessment / Evaluación
+- Elaborar una comparación entre RNN, Transformers y LLM resaltando ventajas y limitaciones.
+- Resolver ejercicios sobre cómo funciona el self-attention (cálculo de pesos, shapes de matrices).
+- Redactar un análisis corto sobre riesgos éticos en el despliegue de un asistente conversacional.

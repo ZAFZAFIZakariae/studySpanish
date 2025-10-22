@@ -1,38 +1,42 @@
-# Capítulo 4 · Representaciones de texto y embeddings
+# Chapter 4 · Text Representations and Embeddings (Representaciones de texto y embeddings)
 
-## Objetivos
-- Conocer la evolución desde representaciones discretas hasta embeddings continuos.
-- Revisar técnicas clásicas (One-Hot, Bag-of-Words, TF-IDF) y sus limitaciones.
-- Comprender modelos distribuidos como Word2Vec, GloVe y fastText.
+## Purpose / Propósito
+- Mostrar la evolución desde representaciones discretas hasta embeddings distribuidos y contextualizados.
+- Analizar ventajas, limitaciones y herramientas para trabajar con vectores semánticos.
 
-## Representaciones discretas
-- **One-Hot encoding:** vectores binarios, fáciles de implementar pero muy dispersos y sin noción de similitud.
-- **Bag-of-Words:** cuenta ocurrencias de palabras; ignora orden y contexto.
-- **TF-IDF:** pondera frecuencia local y relevancia global para resaltar términos distintivos.
+## Objectives / Objetivos
+- Revisar técnicas clásicas (One-Hot, Bag-of-Words, TF-IDF) y sus carencias.
+- Comprender Word2Vec, GloVe y fastText como ejemplos de embeddings densos.
+- Explorar propiedades semánticas y aplicaciones prácticas.
+- Introducir la transición hacia modelos contextualizados.
 
-## Limitaciones
-- Alta dimensionalidad, matrices dispersas y ausencia de relaciones semánticas.
-- No generalizan a palabras fuera de vocabulario ni capturan polisemia.
+## Activities / Actividades
+### Discrete Representations (Representaciones discretas)
+- **One-Hot encoding:** vectores binarios dispersos sin noción de similitud.
+- **Bag-of-Words:** cuenta ocurrencias, ignora orden y contexto.
+- **TF-IDF:** pondera frecuencia local y relevancia global destacando términos distintivos.
+- Limitaciones: alta dimensionalidad, matrices dispersas, sin semántica ni manejo de OOV/polisemia.
+- ![Transición de representaciones](figure:snlp-chapter-4/representaciones)
+  Caption: De vectores dispersos a embeddings densos con similitud semántica.
 
-![Transición de representaciones](figure:snlp-chapter-4/representaciones)
-Caption: De vectores dispersos a embeddings densos que preservan similitudes semánticas.
-
-## Embeddings distribuidos
-- **Word2Vec:** aprende vectores densos prediciendo contexto (Skip-gram) o palabra central (CBOW); preserva relaciones lineales.
-- **GloVe:** factoriza coocurrencias globales para capturar semántica y analogías.
+### Distributed Embeddings (Embeddings distribuidos)
+- **Word2Vec:** Skip-gram/CBOW predicen contexto o palabra central, preservando relaciones lineales.
+- **GloVe:** factoriza coocurrencias globales para capturar analogías.
 - **fastText:** incorpora subpalabras para generalizar a palabras raras o morfológicamente complejas.
+- Propiedades: vectores densos (50–300), similitud coseno, regularidades semánticas/sintácticas.
+- Aplicaciones: inicialización de modelos profundos o características directas.
 
-## Propiedades
-- Vectores densos de baja dimensión (50–300) que permiten medir similitud coseno.
-- Capturan regularidades semánticas y sintácticas (ej. rey − hombre + mujer ≈ reina).
-- Sirven como inicialización para modelos más profundos o como características directas.
+### Practical Examples (Ejemplos prácticos)
+- Uso de `gensim`, `fasttext`, `spacy` para entrenar/cargar embeddings preentrenados.
+- Visualización con PCA/t-SNE para explorar relaciones.
+- Casos: clasificación de texto, recuperación de información, chatbots, generación.
 
-## Ejemplos prácticos
-- Uso de bibliotecas (`gensim`, `fasttext`, `spacy`) para entrenar o cargar embeddings preentrenados.
-- Visualización con PCA/t-SNE para explorar relaciones entre palabras.
-- Aplicaciones: clasificación de texto, recuperación de información, chatbots, generación.
-
-## Hacia modelos contextualizados
+### Towards Contextual Models (Hacia modelos contextualizados)
 - Limitaciones de embeddings estáticos frente a polisemia.
-- Introducción a modelos contextualizados (ELMo, BERT) que adaptan vectores según el contexto.
-- Anticipa el estudio de Transformers y modelos de lenguaje masivos.
+- Introducción a ELMo, BERT y otros modelos que ajustan vectores según contexto.
+- Preparación para estudiar Transformers y modelos de lenguaje masivos.
+
+## Assessment / Evaluación
+- Comparar resultados de un clasificador utilizando Bag-of-Words vs. Word2Vec preentrenado.
+- Generar una visualización t-SNE con embeddings y comentar agrupaciones observadas.
+- Escribir un breve análisis sobre cómo un modelo contextualizado mejoraría un caso concreto.

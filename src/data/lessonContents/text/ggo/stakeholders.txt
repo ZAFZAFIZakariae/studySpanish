@@ -1,20 +1,29 @@
-# Stakeholder template briefing
-- Open **“Análisis de stakeholders 2024”** and duplicate the sheet so you can preserve the Spanish labels while drafting English notes.
-- Start with a one-sentence summary of the business initiative, referencing the strategic driver (**impulsor estratégico**) from Topic 3.
+# Stakeholder Analysis Template (Plantilla de análisis de stakeholders)
 
-## Quadrant setup (configuración de cuadrantes)
-- Use the matrix axes Power (**poder**) and Interest (**interés**) to classify each stakeholder; document the rationale in English and repeat the key Spanish term used in the PDF.
-- If a stakeholder shifts quadrant, log the trigger event (**evento detonante**) in English followed by the Spanish phrase.
+## Purpose / Propósito
+- Document roles, power, and interest of stakeholders using the “Stakeholder Analysis 2024” template. / Documentar roles, poder e interés de los stakeholders usando la plantilla “Análisis de stakeholders 2024”.
+- Keep messages and actions bilingual to ease coordination with international teams. / Mantener mensajes y acciones bilingües para facilitar la coordinación con equipos internacionales.
 
-## Messaging cues (mensajes clave)
-- For every quadrant, capture a bilingual communication goal, e.g. “Keep satisfied (**mantener satisfecho**) by sharing KPI dashboards monthly.”
-- Note the preferred channel (**canal preferido**) in English with the Spanish label from the template in parentheses.
+## Objectives / Objetivos
+- Classify each actor on the Power–Interest matrix with a justified position. / Clasificar a cada actor en la matriz Poder–Interés justificando su posición.
+- Define key messages and preferred channels tailored to each quadrant. / Definir mensajes clave y canales preferidos adecuados a cada cuadrante.
+- Plan engagement actions with clear deadlines and an associated risk log. / Planificar acciones de involucramiento con plazos claros y un registro de riesgos asociado.
 
-## Engagement actions (acciones de involucramiento)
-- Translate the recommended action verbs into English while keeping the Spanish verbs for authenticity, such as “Co-create (**cocrear**) a release roadmap.”
-- Add deadlines or cadences (frecuencias) in ISO format so they integrate with the planner view.
+## Activities / Actividades
+### Quadrant Setup (Configuración de cuadrantes)
+- Duplicate the sheet keeping Spanish labels while adding notes in English. / Duplicar la hoja manteniendo las etiquetas en español mientras se añaden notas en inglés.
+- Classify by **Power (poder)** and **Interest (interés)**; document the justification in English while repeating the Spanish term from the PDF. / Clasificar según **Power (poder)** e **Interest (interés)**; documentar la justificación en inglés repitiendo el término español del PDF.
+- Record quadrant changes and their **triggering event / evento detonante** in bilingual form. / Registrar cambios de cuadrante y su **evento detonante** en formato bilingüe.
 
-## Artefacts to submit
-- Completed stakeholder matrix exported to PDF with bilingual notes.
-- Short risk log listing stakeholders with low support (**apoyo bajo**) and your mitigation plan in English.
-- Meeting agenda draft that names each attendee in Spanish and clarifies their English role title.
+### Messaging Cues (Mensajes clave)
+- For each quadrant, note the communication objective in both languages (e.g., “Keep satisfied (**mantener satisfecho**)…”). / Para cada cuadrante, anotar el objetivo comunicativo en dos idiomas (p.ej., “Keep satisfied (**mantener satisfecho**)…”).
+- Indicate the **preferred channel** in English with the Spanish label in parentheses. / Indicar el **canal preferido** en inglés con la etiqueta española entre paréntesis.
+
+### Engagement Actions (Acciones de involucramiento)
+- Translate the recommended verbs while keeping the Spanish original: “Co-create (**cocrear**)…”. / Traducir los verbos recomendados manteniendo el original español: “Co-create (**cocrear**)…”.
+- Add deadlines or cadences in ISO format so they integrate with the planner view. / Añadir fechas límite o cadencias en formato ISO para integrarse con la vista del planificador.
+
+## Assessment / Evaluación
+- Submit the exported PDF matrix with bilingual notes. / Entregar la matriz exportada a PDF con notas bilingües.
+- Include a risk log listing stakeholders with **low support / apoyo bajo** and the mitigation in English. / Incluir un registro de riesgos que liste stakeholders con **apoyo bajo** y la mitigación en inglés.
+- Attach a meeting agenda showing each attendee in Spanish with their role in English. / Adjuntar una agenda de reunión donde cada asistente aparece en español con su rol en inglés.

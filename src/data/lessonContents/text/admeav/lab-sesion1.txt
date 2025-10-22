@@ -1,20 +1,32 @@
-# Lab scope
-- Launch the notebook **Sesion1_FeatureExtraction_student.ipynb** and run the setup cells to install `scikit-image`, `opencv-python`, and plotting helpers.
-- Document every preprocessing choice in a Markdown cell so you can compare pipelines during the retrospective.
+# Lab Session 1 · Feature Extraction (Extracción de características)
 
-## Part A · Edge and texture baselines
-- Load the starter dataset and compute Sobel and Canny edges, noting how kernel sizes affect noise sensitivity.
-- Extract Grey Level Co-occurrence Matrix (GLCM) features with `skimage.feature.graycomatrix`; log contrast, energy, and homogeneity values.
+## Purpose / Propósito
+- Introduce classical edge, texture, and descriptor pipelines that will ground the rest of the course. / Introducir pipelines clásicos de bordes, texturas y descriptores que servirán de base para el resto del curso.
+- Rigorously document preprocessing decisions and how they influence subsequent classifiers. / Documentar de forma rigurosa las decisiones de preprocesado y sus efectos en los clasificadores posteriores.
 
-## Part B · Key descriptors (descriptores clave)
-- Implement Histogram of Oriented Gradients (HOG) and Local Binary Patterns (LBP) blocks; capture both the Spanish term (**Patrones Binarios Locales**) and the English explanation.
-- Compare descriptor dimensionality and runtime in a small table inside the notebook.
+## Objectives / Objetivos
+- Run the **Sesion1_FeatureExtraction_student.ipynb** notebook to get comfortable with the environment. / Ejecutar el cuaderno **Sesion1_FeatureExtraction_student.ipynb** para familiarizarse con el entorno.
+- Compare key metrics for GLCM, HOG, LBP, and edge detectors to understand their sensitivity to noise and computational cost. / Comparar métricas clave de GLCM, HOG, LBP y detectores de bordes para entender su sensibilidad al ruido y al coste computacional.
+- Train a simple SVM classifier and reflect on overfitting risks and upcoming hyperparameter tuning steps. / Entrenar un clasificador SVM sencillo y reflexionar sobre riesgos de sobreajuste y próximos pasos de ajuste de hiperparámetros.
 
-## Part C · Classification drill
-- Train a simple SVM classifier using the extracted features and record accuracy, precision, and recall.
-- Discuss overfitting risks and list hyperparameters that require tuning in the follow-up lab.
+## Activities / Actividades
+### Setup / Preparación
+- Launch the notebook and run the setup cells to install `scikit-image`, `opencv-python`, and visualization utilities. / Lanzar el notebook y ejecutar las celdas de instalación para disponer de `scikit-image`, `opencv-python` y utilidades de visualización.
+- Document each preprocessing decision in a Markdown cell to enable fair pipeline comparisons. / Registrar en una celda Markdown cada decisión de preprocesado para habilitar la comparación entre pipelines.
 
-## Submission checklist
-- Export the executed notebook with all outputs visible.
-- Attach a short reflection (5 sentences) highlighting which descriptor balances performance and compute cost.
-- Upload any custom helper scripts referenced in the notebook.
+### Part A · Edge and Texture Baselines (Bases de bordes y texturas)
+- Load the initial dataset and compute edges with Sobel and Canny, varying kernel sizes to study noise sensitivity. / Cargar el conjunto de datos inicial y calcular bordes con Sobel y Canny, variando tamaños de kernel para estudiar la sensibilidad al ruido.
+- Extract features from the **Grey Level Co-occurrence Matrix (GLCM)** while logging contrast, energy, and homogeneity. / Extraer características de la **Grey Level Co-occurrence Matrix (GLCM)** anotando contraste, energía y homogeneidad.
+
+### Part B · Key Descriptors (Descriptores clave)
+- Implement **Histogram of Oriented Gradients (HOG)** and **Local Binary Patterns (LBP)** blocks, capturing terminology in both languages. / Implementar bloques de **Histogram of Oriented Gradients (HOG)** y **Local Binary Patterns (LBP)**, incluyendo la terminología en español.
+- Compare dimensionality and execution time in a table within the notebook. / Comparar dimensionalidad y tiempos de ejecución en una tabla dentro del notebook.
+
+### Part C · Classification Drill (Clasificación)
+- Train an SVM classifier with the computed features and log accuracy, precision, and recall. / Entrenar un clasificador SVM con las características calculadas y registrar accuracy, precisión y recall.
+- Discuss overfitting risks and identify hyperparameters that will need tuning in the next lab. / Discutir riesgos de sobreajuste e identificar hiperparámetros que requerirán ajuste en el siguiente laboratorio.
+
+## Assessment / Evaluación
+- Export the executed notebook with all outputs visible. / Exportar el notebook ejecutado con todas las salidas visibles.
+- Attach a short reflection (5 sentences) explaining which descriptor balances performance and computational cost best. / Adjuntar una reflexión breve (5 frases) justificando qué descriptor equilibra mejor rendimiento y coste computacional.
+- Upload any custom helper scripts used during the practice. / Subir cualquier script auxiliar personalizado utilizado durante la práctica.

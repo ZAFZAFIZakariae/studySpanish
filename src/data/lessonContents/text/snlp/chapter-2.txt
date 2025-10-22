@@ -1,35 +1,45 @@
-# Capítulo 2 · Extracción de características en audio
+# Chapter 2 · Audio Feature Extraction (Extracción de características en audio)
 
-## Definición
-- Transformar señales de audio crudas en representaciones compactas y significativas.
-- Reduce dimensionalidad, elimina ruido y resalta información relevante para tareas de ML/DL.
+## Purpose / Propósito
+- Transformar señales de audio crudas en representaciones compactas que resalten información relevante.
+- Explicar motivaciones y herramientas para construir pipelines robustos en tareas de ML/DL.
 
-## Familias de características
-- **Espectrogramas:** distribución tiempo-frecuencia obtenida mediante STFT; revelan evolución de energía.
-- **MFCC (Mel-Frequency Cepstral Coefficients):** resumen el espectro en escala perceptual; estándar en habla.
-- **Chroma:** capturan clases de tono (12 semitonos) útiles en análisis musical.
-- **Zero-Crossing Rate:** mide percussividad o ruido al contar cambios de signo.
+## Objectives / Objetivos
+- Describir familias de características comunes (espectrogramas, MFCC, chroma, etc.).
+- Comprender por qué la escala Mel y la reducción de dimensionalidad mejoran el rendimiento.
+- Introducir buenas prácticas de normalización y augmentations.
+
+## Activities / Actividades
+### Feature Families (Familias de características)
+- **Spectrograms (Espectrogramas):** distribución tiempo-frecuencia vía STFT.
+- **MFCC:** resumen del espectro en escala perceptual; estándar en habla.
+- **Chroma:** clases de tono (12 semitonos) útiles en análisis musical.
+- **Zero-Crossing Rate:** mide percussividad o ruido contando cambios de signo.
 - **Pitch y formantes:** reflejan frecuencia fundamental y resonancias vocales.
+- ![Pipeline de extracción de características](figure:snlp-chapter-2/pipeline)
+  Caption: Desde señal PCM hasta vectores de características aptos para modelos de aprendizaje.
 
-![Pipeline de extracción de características](figure:snlp-chapter-2/pipeline)
-Caption: Desde señal PCM hasta vectores de características aptos para modelos de aprendizaje.
+### Motivations (Motivaciones)
+- Reducir dimensionalidad y facilitar entrenamiento/almacenamiento.
+- Enfocar modelos en patrones discriminativos.
+- Incrementar robustez al atenuar componentes irrelevantes.
+- Incorporar conocimiento del dominio (voz, timbre, ritmo).
 
-## Motivaciones
-- **Reducción de dimensionalidad:** hace viable el entrenamiento y almacenamiento.
-- **Mejora del rendimiento:** facilita que los modelos se centren en patrones discriminativos.
-- **Robustez:** atenúa componentes irrelevantes y mejora la relación señal/ruido.
-- **Conocimiento del dominio:** ciertas características capturan propiedades humanas (voz, timbre, ritmo).
+### Tooling with Librosa (Herramientas)
+- Librería Python para análisis de audio: espectrogramas, escalas Mel, MFCC, cromas, visualizaciones.
+- Integración con NumPy/SciPy y ejemplos documentados.
 
-## Herramientas: Librosa
-- Librería Python orientada al análisis de audio: cálculo de espectrogramas, Mel, MFCC, cromas, visualizaciones.
-- Integración con NumPy/SciPy y ejemplos de uso listos en la documentación.
+### From Spectrogram to Mel Scale (Del espectrograma a Mel)
+- El espectrograma lineal detalla excesivamente altas frecuencias poco perceptibles.
+- La **escala Mel** agrupa frecuencias según sensibilidad humana, reduciendo parámetros y ruido.
+- Mel-spectrogramas favorecen modelos generalizables alineados con la percepción auditiva.
 
-## Del espectrograma a la escala Mel
-- El espectrograma lineal refleja demasiados detalles en altas frecuencias poco perceptibles.
-- La **escala Mel** agrupa frecuencias según la sensibilidad humana, reduciendo parámetros y ruido.
-- Los Mel-spectrogramas alimentan modelos más generalizables al alinearse con la percepción auditiva.
-
-## Consideraciones prácticas
+### Practical Considerations (Consideraciones prácticas)
 - Seleccionar ventana, hop length y número de filtros Mel según la tarea.
 - Normalizar y estandarizar características para evitar sesgos por energía absoluta.
-- Complementar con augmentations (time stretching, pitch shifting) para robustez.
+- Aplicar augmentations (time stretching, pitch shifting) para mayor robustez.
+
+## Assessment / Evaluación
+- Calcular distintas características en Librosa y comparar visualizaciones en un cuaderno práctico.
+- Responder preguntas cortas sobre cuándo elegir MFCC vs. chroma o ZCR.
+- Diseñar un experimento que muestre el impacto de augmentations sobre la precisión de un modelo.

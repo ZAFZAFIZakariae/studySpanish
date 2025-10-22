@@ -1,128 +1,80 @@
-# T1 · Hand-Crafted Feature Extraction
+# T1 · Hand-Crafted Feature Extraction (Extracción manual de características)
 
-## Objetivos de la lección
-- Diferenciar descriptores globales y locales para representar imágenes.
-- Repasar métricas estadísticas clásicas para caracterizar texturas.
-- Comprender el funcionamiento de LBP, HOG, SIFT y filtros de Gabor.
-- Identificar fortalezas y limitaciones de las características diseñadas manualmente.
+## Purpose / Propósito
+- Introduce the classical descriptors that support computer vision pipelines before deep models. / Introducir los descriptores clásicos que sustentan pipelines de visión por computador antes de modelos profundos.
+- Show how representation choices impact discrimination, robustness, and complexity. / Mostrar cómo las decisiones de representación influyen en discriminación, robustez y complejidad.
 
-## Esquema de contenidos
-- Introducción y fundamentos de los descriptores.
-- Estadísticos de primer y segundo orden.
-- Local Binary Patterns (LBP) y sus variantes invariantes.
-- Histogram of Oriented Gradients (HOG).
-- Descriptores basados en puntos clave: SIFT.
-- Bancos de filtros y respuestas en frecuencia (Gabor).
+## Objectives / Objetivos
+- Differentiate between global, local, and keypoint-based descriptors. / Diferenciar descriptores globales, locales y basados en puntos clave.
+- Review first- and second-order statistics used to characterize textures. / Revisar estadísticas de primer y segundo orden para caracterizar texturas.
+- Understand how LBP, HOG, SIFT, Gabor filters, and corner detectors work. / Comprender el funcionamiento de LBP, HOG, SIFT, filtros de Gabor y detectores de esquinas.
+- Evaluate the strengths and limitations of hand-crafted features. / Evaluar ventajas y limitaciones de las características diseñadas manualmente.
 
-![Panorama de descriptores clásicos](figure:admeav/t1-taxonomy)
-Caption: Relación entre descriptores globales, locales y basados en puntos clave utilizados en visión clásica.
+## Activities / Actividades
+### Session Flow (Flujo de la sesión)
+- General presentation of descriptors and foundational review. / Presentación general de descriptores y repaso de fundamentos.
+- Analysis of classical statistics (first and second order) and their interpretation. / Análisis de estadísticos clásicos (primer y segundo orden) y su interpretación.
+- Deep dive into LBP, HOG, SIFT, Gabor filter banks, and the Harris corner detector. / Profundización en LBP, HOG, SIFT, bancos de Gabor y detector de esquinas de Harris.
+- Discussion of end-to-end pipelines: detection → description → aggregation. / Discusión sobre pipelines completos: detección → descripción → agregación.
 
-## ¿Qué es una característica?
-- Valor numérico que captura un aspecto relevante (color, textura, forma) de una imagen completa o de una región.
-- Debe ser **discriminativa** (valores cercanos para ejemplos similares) y **robusta** frente a ruido o cambios moderados.
-- Normalmente se combinan en **vectores de características** para describir objetos o escenas.
+### Concept Notes (Notas conceptuales)
+#### What is a Feature? (¿Qué es una característica?)
+- Numerical value that captures color, texture, or shape of an image or region. / Valor numérico que captura color, textura o forma de una imagen o región.
+- Must be **discriminative** and **robust** against noise and moderate changes. / Debe ser **discriminativa** y **robusta** frente a ruido y cambios moderados.
+- Combined into **feature vectors** to describe objects or scenes. / Se combinan en **vectores de características** para describir objetos o escenas.
 
-## Metodología de extracción
-- **Descriptores globales**: se calculan sobre la imagen completa (histogramas de color, momentos geométricos).
-- **Descriptores locales**: se aplican sobre regiones o puntos clave.
-  - División en parches regulares.
-  - Detección de landmarks (Harris, DoG) y posterior descripción.
-- Pipeline típico: detección → descripción → agregación (bag-of-words, concatenación).
+#### Extraction Methodology (Metodología de extracción)
+- **Global descriptors / Descriptores globales:** color histograms and geometric moments. / **Descriptores globales:** histogramas de color, momentos geométricos.
+- **Local descriptors / Descriptores locales:** regular patches or landmarks (Harris, DoG) followed by description. / **Descriptores locales:** parches regulares o landmarks (Harris, DoG) seguidos de descripción.
+- Typical pipeline: detection → description → aggregation (bag-of-words, concatenation). / Pipeline típico: detección → descripción → agregación (bag-of-words, concatenación).
 
-## Estadísticos clásicos
-- **Primer orden** (histograma): media, varianza, asimetría, curtosis, entropía.
-- **Segundo orden** (matriz de co-ocurrencias): captura dependencia espacial entre intensidades.
-  - La matriz de co-ocurrencias se denota como P(i, j; d) y cuenta los pares de píxeles separados por un desplazamiento vectorial d = d(i, j) con niveles de gris i y j.
-- **Órdenes superiores**: modelados complejos (momento centralizado, cumulantes).
+#### Classical Statistics (Estadísticos clásicos)
+- **First order / Primer orden:** mean, variance, skewness, kurtosis, entropy. / **Primer orden:** media, varianza, asimetría, curtosis, entropía.
+- **Second order / Segundo orden:** co-occurrence matrices P(i, j; d) counting pixel pairs separated by vector d. / **Segundo orden:** matrices de co-ocurrencias P(i, j; d) que cuentan pares separados por un vector d.
+- **Higher orders / Órdenes superiores:** models built on cumulants or centralized moments. / **Órdenes superiores:** modelos basados en cumulantes o momentos centralizados.
 
-## Local Binary Patterns
-- Comparan cada píxel con sus vecinos: valores mayores reciben 1, menores 0; el patrón binario describe la textura.
-- Se parametriza con **P vecinos** y **radio R**. Se generan histogramas de patrones para caracterizar una región.
-  - Ejemplos habituales: P = 8, R = 1; P = 16, R = 2; P = 8, R = 2.
-  - La operación ROR(x, t) realiza t rotaciones del patrón x para obtener el código mínimo; con P = 8 hay 256 patrones y 36 clases invariantes a rotación.
-- Variantes:
-  - **LBPri**: agrupa patrones equivalentes bajo rotaciones.
-  - **LBPriu2**: se queda con patrones uniformes (máximo dos transiciones) para reducir dimensionalidad.
-- Útiles para texturas finas y robustos a cambios de iluminación suaves.
+### Descriptor Highlights (Destacados de descriptores)
+#### Local Binary Patterns (Patrones Binarios Locales)
+- Compare each pixel with its neighbors, assigning 1/0 to form pattern histograms. / Comparan cada píxel con sus vecinos asignando 1/0 y generan histogramas de patrones.
+- Common parameters: P = 8, R = 1; P = 16, R = 2; P = 8, R = 2. / Parámetros comunes: P = 8, R = 1; P = 16, R = 2; P = 8, R = 2.
+- Rotations using ROR(x, t) reduce 256 patterns to 36 invariant classes. / Rotaciones mediante ROR(x, t) reducen 256 patrones a 36 clases invariantes.
+- Variants: **LBPri** (rotation invariant) and **LBPriu2** (uniform patterns with at most two transitions). / Variantes: **LBPri** (invariante a rotación) y **LBPriu2** (patrones uniformes de máximo dos transiciones).
 
-## Histogram of Oriented Gradients
-- Divide la imagen en celdas, calcula gradientes y acumula orientaciones ponderadas por magnitud.
-- Normaliza bloques contiguos para ganar invariancia a iluminación y contraste.
-- Popular en detección de peatones y objetos rígidos gracias a su sensibilidad a bordes.
+#### Histogram of Oriented Gradients (Histogramas de gradientes orientados)
+1. Compute gradients with Sobel filters. / Calcular gradientes con filtros Sobel.
+2. Group orientations into per-cell histograms and distribute contributions via angular interpolation. / Agrupar orientaciones en histogramas por celda y distribuir contribuciones por interpolación angular.
+3. Integrate spatially using bilinear interpolation. / Integrar espacialmente aplicando interpolación bilineal.
+4. Normalize blocks (L2) and concatenate to obtain the global descriptor. / Normalizar bloques (L2) y concatenar para obtener el descriptor global.
+- Example of the initial convolution: central pixel ≈ 3 after applying horizontal Sobel to the 8×8 patch. / Ejemplo de convolución inicial: píxel central ≈ 3 tras aplicar Sobel horizontal al parche 8×8.
+- Advantages: highly sensitive to edges, popular for pedestrian and rigid object detection. / Ventajas: alta sensibilidad a bordes, popular en detección de peatones y objetos rígidos.
 
-### Flujo general del descriptor
-1. Cálculo de gradientes.
-2. Agrupación de las orientaciones en histogramas por celda.
-3. Construcción de vectores por bloque concatenando celdas adyacentes.
-4. Normalización de cada bloque antes de formar el descriptor global.
+#### Scale-Invariant Feature Transform (SIFT)
+- Detects keypoints via Difference of Gaussians and locates sub-pixel extrema. / Detecta puntos clave mediante diferencias de gaussianas; localiza extremos subpíxel.
+- Assigns a dominant orientation and integrates local histograms (classic 128 dimensions). / Asigna orientación dominante e integra histogramas locales (128 dimensiones clásicas).
+- Key formulas / Fórmulas clave:
+  - D(x, y, σ) = L(x, y, kσ) - L(x, y, σ)
+  - L(x, y, σ) = G(x, y, σ) * I(x, y)
+  - m(x, y) = √((L(x + 1, y) - L(x - 1, y))² + (L(x, y + 1) - L(x, y - 1))²)
+  - θ(x, y) = atan2(L(x, y + 1) - L(x, y - 1), L(x + 1, y) - L(x - 1, y))
+- Matching via SSD distance and robust filtering (e.g., RANSAC). / Emparejamiento con distancia SSD y filtrado robusto (p.ej., RANSAC).
 
-### Ejemplo de convolución inicial
-- Píxel de entrada 8×8 tomado del ejemplo de las diapositivas:
-  - Filas: [74 66 62 59 63 71 75 72], [72 65 61 58 62 70 75 72], [71 68 63 59 63 69 73 69], [70 67 62 59 62 69 73 69], [70 64 59 57 61 70 74 72], [68 66 64 63 65 68 69 68], [70 69 67 66 67 69 69 67], [69 68 66 64 65 67 66 63].
-- Kernel Sobel horizontal:
-  - Filas: [-1 0 1], [-2 0 2], [-1 0 1].
-- Convolución discreta: y[m, n] = Σₖ Σₗ x[k, l] · h[m - k, n - l]; en el ejemplo el píxel central vale aproximadamente 3.
+#### Gabor Filters (Filtros de Gabor)
+- Sinusoids modulated by Gaussians that respond to specific frequencies and orientations. / Senoides moduladas por gaussianas que responden a frecuencias y orientaciones específicas.
+- Useful in facial recognition, texture analysis, and biometrics. / Útiles en reconocimiento facial, análisis de texturas y biometría.
 
-### Cálculo de gradientes
-- Filtro Sobel horizontal Gₓ:
-  - Filas: [-1 0 1], [-2 0 2], [-1 0 1].
-- Filtro Sobel vertical Gᵧ:
-  - Filas: [-1 -2 -1], [0 0 0], [1 2 1].
-- Magnitud: |G| = √(Gₓ² + Gᵧ²).
-- Orientación: θ = atan2(Gᵧ, Gₓ).
+#### Harris Corner Detector (Detector de esquinas de Harris)
+- Structure matrix: C(x) = Σ_{(u,v)∈Nₓ} \begin{bmatrix} Iₓ² & Iₓ I_y \\ Iₓ I_y & I_y² \end{bmatrix}. / Matriz de estructura: C(x) = Σ_{(u,v)∈Nₓ} \begin{bmatrix} Iₓ² & Iₓ I_y \\ Iₓ I_y & I_y² \end{bmatrix}
+- Interpretation / Interpretación:
+  - Large λ₁ and λ₂ ⇒ corner. / λ₁ y λ₂ grandes ⇒ esquina.
+  - Large λ₁, small λ₂ ⇒ edge. / λ₁ grande, λ₂ pequeño ⇒ borde.
+  - Both small ⇒ flat region. / Ambos pequeños ⇒ región plana.
+- Factorization: C(x) = R⁻¹ diag(λ₁, λ₂) R. / Factorización: C(x) = R⁻¹ diag(λ₁, λ₂) R.
 
-### Interpolación angular
-- Problemas: gradientes casi iguales pueden caer en bins distintos y pequeñas variaciones de orientación alteran el histograma.
-- Solución: repartir cada gradiente entre los dos intervalos más cercanos en proporción a la distancia del ángulo al centro del bin.
-- Ejemplo de las diapositivas: para g(x, y) = 100 y θ(x, y) = 45° con 9 bins en [0°, 180°) sin signo, la contribución se reparte como [0, 25, 75, 0, 0, 0, 0, 0, 0].
+### Visual Resources (Recursos visuales)
+- ![Classic descriptor overview / Panorama de descriptores clásicos](figure:admeav/t1-taxonomy)
+  Caption: Relationship between global, local, and keypoint-based descriptors. / Relación entre descriptores globales, locales y basados en puntos clave.
 
-### Integración espacial
-- Problema: píxeles próximos pueden caer en celdas diferentes y pequeñas variaciones de forma alteran los histogramas.
-- Solución: cada píxel se distribuye entre las cuatro celdas más cercanas ponderando por la distancia al centro de cada celda (interpolación bilineal).
-
-### Normalización por bloques y descriptor final
-- Agrupar b × b celdas para formar un vector de bloque v = (x₁, x₂, …, xₙ).
-- Normalización L2: v' = v / √(x₁² + x₂² + … + xₙ² + ε²).
-- El descriptor HOG final se obtiene concatenando todos los vectores normalizados: HOG = (x₁, x₂, …, x_N).
-
-## SIFT
-- Detecta puntos clave mediante diferencias de gaussianas en escala y localiza extremos subpíxel.
-- Asigna orientación dominante para lograr invariancia a rotación.
-- Describe cada punto con histogramas de gradiente locales (128 dimensiones clásicas).
-- Estable para correspondencias entre imágenes con cambios de escala, rotación y moderados cambios de iluminación.
-
-### Detección de extremos DoG
-- Pirámide de escalas basada en una σ₀ inicial y factores k por octava.
-- Diferencia de Gaussianas: D(x, y, σ) = L(x, y, kσ) - L(x, y, σ).
-- Suavizado previo: L(x, y, σ) = G(x, y, σ) * I(x, y).
-
-### Asignación de orientación y descriptor
-- Magnitud del gradiente alrededor del punto clave:
-  - m(x, y) = √((L(x + 1, y) - L(x - 1, y))² + (L(x, y + 1) - L(x, y - 1))²).
-- Orientación local:
-  - θ(x, y) = atan2(L(x, y + 1) - L(x, y - 1), L(x + 1, y) - L(x - 1, y)).
-- Las contribuciones al histograma se ponderan con una gaussiana de desviación σ = 1.5·s para suavizar.
-
-### Emparejamiento de descriptores
-- Distancia euclídea al cuadrado (SSD) entre descriptores: SSD(f₁, f₂) = Σᵢ (f₁,ᵢ - f₂,ᵢ)².
-
-## Filtros de Gabor
-- Simulan receptores de la corteza visual: senos modulados por gaussianas.
-- Responden a frecuencias y orientaciones específicas; bancos multiescala capturan texturas.
-- Útiles en reconocimiento facial, análisis de texturas y biometría.
-
-## Ventajas y limitaciones
-- **Ventajas**: interpretables, requerimientos de datos moderados, buen rendimiento en dominios controlados.
-- **Limitaciones**: sensibilidad a transformaciones complejas, dificultad para generalizar sin ingeniería manual, dimensionalidad alta al combinar múltiples descriptores.
-
-## Detector de esquinas de Harris
-- Matriz de estructura para cada píxel: C(x) = Σ_{(u,v) ∈ Nₓ} [Ix(u,v)² Ix(u,v) Iy(u,v); Ix(u,v) Iy(u,v) Iy(u,v)²].
-- Interpretación mediante autovalores:
-  - λ₁ y λ₂ grandes ⇒ esquina.
-  - λ₁ grande y λ₂ pequeña (o viceversa) ⇒ borde.
-  - Ambos pequeños ⇒ región plana.
-- Factorización: C(x) = R⁻¹ diag(λ₁, λ₂) R, donde R alinea los ejes con los autovectores.
-
-## Emparejamiento de características
-- Correlación normalizada entre ventanas centradas en x₁ y x₂: R(x₁, x₂) = Σ_{(u,v) ∈ N} s₁(u,v) s₂(u,v) / (√(Σ_{(u,v) ∈ N} s₁(u,v)²) · √(Σ_{(u,v) ∈ N} s₂(u,v)²)).
-- Se buscan emparejamientos putativos y posteriormente se aplica un método robusto (p.ej., RANSAC) para filtrar outliers.
+## Assessment / Evaluación
+- Complete a short quiz on descriptor types and statistics after the session. / Resolver un quiz breve sobre tipos de descriptores y estadísticos tras la sesión.
+- Prepare a comparative summary (half a page) explaining which descriptor you would apply to a specific problem. / Preparar un resumen comparativo (media página) explicando qué descriptor aplicarías a un problema concreto.
+- Practice detection and description exercises in the lab to consolidate concepts. / Practicar con ejercicios de detección y descripción en el laboratorio para consolidar conceptos.

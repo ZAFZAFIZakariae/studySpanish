@@ -1,18 +1,22 @@
-# Notebook objectives
-- Implement the Scale-Invariant Feature Transform (**Transformada de Características Invariantes a la Escala**) pipeline step by step.
-- Evaluate matching quality on image pairs with viewpoint and illumination changes.
+# SIFT Notebook · Scale-Invariant Features (Características invariantes a la escala)
 
-## Guided steps
-1. Import OpenCV and load the provided sample pair; convert to grayscale.
-2. Detect keypoints with `cv2.SIFT_create()` and annotate the visualisation, keeping the Spanish name **puntos clave** alongside the English caption.
-3. Compute descriptors, then use a Brute-Force matcher with ratio test; explain each threshold in English while echoing the Spanish term **coeficiente de Lowe**.
-4. Estimate a homography to align the images and discuss failure cases when matches are sparse.
+## Purpose / Propósito
+- Implement the **Scale-Invariant Feature Transform** pipeline step by step. / Implementar paso a paso el pipeline de **Scale-Invariant Feature Transform (Transformada de Características Invariantes a la Escala)**.
+- Evaluate match quality across image pairs with viewpoint and lighting changes. / Evaluar la calidad de emparejamiento en pares de imágenes con cambios de punto de vista e iluminación.
 
-## Reflection prompts
-- Which preprocessing steps improved keypoint stability? Mention Spanish vocabulary for blur (**desenfoque**) or histogram equalisation (**ecualización de histograma**).
-- How many good matches are required for a reliable transformation in your dataset?
+## Objectives / Objetivos
+- Detect and visualize keypoints while highlighting terminology in both languages. / Detectar y visualizar puntos clave resaltando terminología en español e inglés.
+- Compute SIFT descriptors and apply matching strategies validated with the ratio test. / Calcular descriptores SIFT y aplicar estrategias de emparejamiento con validación por ratio test.
+- Analyze the resulting homographies and document failure cases using bilingual vocabulary. / Analizar homografías resultantes y documentar casos de fallo con vocabulario bilingüe.
 
-## Deliverables
-- Notebook with executed cells and saved figures demonstrating matches before and after filtering.
-- Brief analysis (5-7 sentences) comparing SIFT to the descriptors from Session 1.
-- Optional: CSV export listing keypoint coordinates for downstream experiments.
+## Activities / Actividades
+1. Import OpenCV, load the provided image pair, and convert it to grayscale. / Importar OpenCV, cargar el par de imágenes proporcionado y convertirlo a escala de grises.
+2. Detect keypoints with `cv2.SIFT_create()` and annotate the visualization using the term **keypoints / puntos clave**. / Detectar puntos clave con `cv2.SIFT_create()`, anotando la visualización con el término **puntos clave / keypoints**.
+3. Compute descriptors and run a brute-force matcher with the ratio test, explaining **Lowe's ratio** in both languages. / Calcular descriptores y ejecutar un emparejador brute-force con ratio test, explicando el **coeficiente de Lowe** en ambos idiomas.
+4. Estimate a homography to align the images and discuss situations where matches are scarce or unreliable. / Estimar una homografía para alinear las imágenes y discutir situaciones en las que los emparejamientos son escasos o poco fiables.
+5. Reflect on which preprocessing steps (e.g., **blurring**, **histogram equalization**) improve stability and how many good matches are needed for a robust transformation. / Reflexionar sobre qué preprocesados (p. ej., **desenfoque**, **ecualización de histograma**) mejoran la estabilidad y cuántos buenos matches se necesitan para una transformación robusta.
+
+## Assessment / Evaluación
+- Submit the executed notebook with figures showing matches before and after filtering. / Entregar el notebook ejecutado con figuras que muestren los emparejamientos antes y después del filtrado.
+- Include a short analysis (5–7 sentences) comparing SIFT with the descriptors from Session 1. / Incluir un análisis breve (5–7 frases) comparando SIFT con los descriptores de la Sesión 1.
+- Optional: attach a CSV with keypoint coordinates for later experiments. / Opcional: adjuntar un CSV con coordenadas de puntos clave para experimentos posteriores.

@@ -1,24 +1,32 @@
-# Practical worksheet overview
-- Download the official template **“Calcular la importancia del sistema de información – Método Bedell”** and keep the column labels in Spanish while annotating English hints next to each criterion.
-- Clarify the problem statement in English, then restate the business objective (**objetivo de negocio**) in Spanish to mirror the slide deck phrasing.
+# Bedell Method Worksheet (Hoja de trabajo del método Bedell)
 
-## Step 1 · Define evaluation axes (ejes de evaluación)
-- Confirm that the three axes — *Business Impact (Impacto en el negocio)*, *Organisational Impact (Impacto en la organización)*, and *IS/IT Impact (Impacto en los SI/TI)* — align with the stakeholders you will interview.
-- Use a short English note to explain how each axis links to the corporate strategy, keeping the Spanish header untouched.
+## Purpose / Propósito
+- Guide completion of the official “Calculate the importance of the information system – Bedell Method” template. / Guiar la cumplimentación de la plantilla oficial “Calcular la importancia del sistema de información – Método Bedell”.
+- Maintain bilingual traceability between impact criteria and the executive narrative. / Mantener trazabilidad bilingüe entre criterios de impacto y la narrativa ejecutiva.
 
-## Step 2 · Score impact (valorar impacto)
-- For each requirement, choose a score from 0 to 5 and justify it with a bilingual sentence, e.g. “High regulatory exposure (**alta exposición regulatoria**) justifies a 5 because the system automates reporting.”
-- Check that the numeric justification reflects the template’s guidelines on intensity (**intensidad**) and pervasiveness (**alcance**).
+## Objectives / Objetivos
+- Align the three evaluation axes with corporate strategy and key stakeholders. / Alinear los tres ejes de evaluación con la estrategia corporativa y los interlocutores clave.
+- Justify every impact score with quantitative and qualitative evidence. / Justificar cada puntuación de impacto con evidencias cuantitativas y cualitativas.
+- Produce an executive summary that links the results to business–IT alignment. / Elaborar un resumen ejecutivo que conecte los resultados con la alineación negocio–TI.
 
-## Step 3 · Capture reason (motivo)
-- In the *Reason (Motivo)* column, write a concise explanation in English followed by the Spanish keyword that appears in the PDF, such as “Improves cycle time (**mejora el tiempo de ciclo**)”.
-- Highlight assumptions about budget or technology constraints so they can be validated during the steering committee review (**comité de dirección**).
+## Activities / Actividades
+### Step 1 · Define Evaluation Axes (Definir ejes de evaluación)
+- Verify the three axes: **Business Impact (Impacto en el negocio)**, **Organisational Impact (Impacto en la organización)**, and **IS/IT Impact (Impacto en los SI/TI)**. / Verificar los tres ejes: **Business Impact (Impacto en el negocio)**, **Organisational Impact (Impacto en la organización)** y **IS/IT Impact (Impacto en los SI/TI)**.
+- Add an English note explaining how each axis supports the strategy while keeping the Spanish heading. / Añadir una nota en inglés que explique cómo cada eje respalda la estrategia, manteniendo el encabezado en español.
 
-## Step 4 · Summarise totals (resumen de totales)
-- Sum the impact scores for each axis and verify that the totals match the Bedell matrix (**matriz Bedell**).
-- Provide an English executive summary that quotes the Spanish axis names to maintain traceability when sharing the worksheet.
+### Step 2 · Score Impact (Valorar impacto)
+- Assign scores from 0 to 5 per requirement and justify them with bilingual phrases (e.g., “High regulatory exposure (**alta exposición regulatoria**) justifies a 5…”). / Asignar puntuaciones de 0 a 5 por requisito y justificar con frases bilingües (p.ej., “High regulatory exposure (**alta exposición regulatoria**) justifies a 5…”).
+- Ensure each justification reflects intensity (**intensidad**) and reach (**alcance**) per the template guide. / Comprobar que la justificación refleja intensidad (**intensidad**) y alcance (**alcance**) según la guía de la plantilla.
 
-## Deliverable checklist
-- Completed spreadsheet with bilingual justifications per row.
-- One-paragraph recommendation explaining how the highest score supports alignment (**alineación negocio–TI**).
-- List of open questions for stakeholders who need follow-up, naming each role in Spanish with an English descriptor in parentheses.
+### Step 3 · Capture Reason (Registrar motivo)
+- In the *Reason (Motivo)* column, write concise explanations in English followed by the Spanish keyword from the PDF. / En la columna *Reason (Motivo)*, redactar explicaciones concisas en inglés seguidas de la palabra clave española del PDF.
+- Highlight budget or technology assumptions so they can be validated in the **steering committee / comité de dirección**. / Destacar supuestos de presupuesto o tecnología para validarlos en el **comité de dirección**.
+
+### Step 4 · Summarise Totals (Resumir totales)
+- Sum the impacts per axis and verify they match the **Bedell matrix**. / Sumar los impactos por eje y validar que coinciden con la **matriz Bedell**.
+- Draft an executive summary in English citing the Spanish axis names to preserve traceability. / Elaborar un resumen ejecutivo en inglés citando los nombres españoles de los ejes para mantener trazabilidad.
+
+## Assessment / Evaluación
+- Submit the completed spreadsheet with bilingual justifications in every row. / Entregar la hoja de cálculo completa con justificaciones bilingües en cada fila.
+- Write a paragraph recommending the system priority and how it supports **business–IT alignment**. / Escribir un párrafo recomendando la prioridad del sistema y cómo respalda la **alineación negocio–TI**.
+- List open questions for stakeholders, naming each role in Spanish followed by the English description in parentheses. / Listar preguntas abiertas para stakeholders, nombrando cada rol en español seguido de la descripción en inglés entre paréntesis.
