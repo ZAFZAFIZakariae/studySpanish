@@ -11,21 +11,30 @@ const assetModules: GlobResult = (() => {
 
 const lessonFigureAssets = new Map<string, string>();
 
-const normalizeKey = (key: string) =>
-  key
-    .replace(/^\.\.\//, '')
-    .replace(/^subjects\//, '')
+const normalizeKey = (key: string) => {
+  const normalizedPath = key
     .replace(/\\/g, '/')
+    .replace(/^\.\//, '')
+    .replace(/^(\.\.\/)+/, '')
+    .replace(/^subjects\//, '')
     .replace(/\.[^.]+$/, '')
     .replace(/_/g, '-')
+    .replace(/\/+/g, '/')
     .toLowerCase();
+
+  return normalizedPath;
+};
 
 for (const [path, url] of Object.entries(assetModules)) {
   lessonFigureAssets.set(normalizeKey(path), url as string);
 }
 
-export const resolveFigureAsset = (figureId: string): string | undefined => {
-  const normalizedId = figureId.replace(/_/g, '-').toLowerCase();
+export const resolveFigureAsset = (identifier: string): string | undefined => {
+  if (!identifier) {
+    return undefined;
+  }
+
+  const normalizedId = normalizeKey(identifier);
   if (!normalizedId) {
     return undefined;
   }
