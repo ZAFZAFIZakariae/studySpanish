@@ -252,6 +252,51 @@
   color: var(--ui-text-secondary, #475569);
 }
 
+.detailTabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  align-self: flex-start;
+}
+
+.detailTabButton {
+  border: none;
+  background: transparent;
+  color: var(--ui-text-secondary, #475569);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.detailTabButton:hover,
+.detailTabButton:focus-visible {
+  color: var(--ui-text-primary, #1f2937);
+}
+
+.detailTabButton:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.detailTabButtonActive {
+  background: #ffffff;
+  color: var(--ui-text-primary, #1f2937);
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+}
+
+.detailTabPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
 .compactToggle {
   margin-top: 8px;
   display: inline-flex;
