@@ -471,6 +471,28 @@ const SubjectsPage: React.FC = () => {
 
     return { original, english, showEnglish, placeholder };
   }, [activeItem]);
+  const [activeTab, setActiveTab] = useState<'summary' | 'content' | 'original'>('summary');
+  const contentInfo = useMemo(() => {
+    if (!activeItem?.content) {
+      return {
+        english: undefined as string | undefined,
+        original: undefined as string | undefined,
+        isOriginalDistinct: false,
+      };
+    }
+
+    const originalRaw = activeItem.content.original?.trim();
+    const original = originalRaw && originalRaw.length > 0 ? originalRaw : undefined;
+    const englishRaw = activeItem.content.english?.trim();
+    const englishFromItem = englishRaw && englishRaw.length > 0 ? englishRaw : undefined;
+    const englishFallback = activeItem.language === 'en' ? original : undefined;
+    const english = englishFromItem ?? englishFallback;
+    const isOriginalDistinct = Boolean(
+      original && (activeItem.language === 'es' || !english || english !== original)
+    );
+
+    return { english, original, isOriginalDistinct };
+  }, [activeItem]);
   const [pdfPreview, setPdfPreview] = useState<PdfPageLocation | null>(null);
 
   const pdfResourceIndexes = useMemo(() => {
@@ -955,38 +977,93 @@ const SubjectsPage: React.FC = () => {
 
   const renderResourceLinks = (links: ResourceLink[]) => renderResourceNodes(buildResourceTree(links));
 
-  const renderContentSection = (item: CourseItem | null) => {
-    if (!item?.content) {
+  const renderSummary = () => {
+    if (!activeItem) {
       return null;
     }
 
-    const englishContent = item.content.english ?? (item.language === 'en' ? item.content.original : undefined);
-    const showOriginalContent =
-      !!item.content.original &&
-      (item.language === 'es' || !englishContent || englishContent !== item.content.original);
+    return (
+      <section className={styles.summaryBlock} aria-label="Lesson summary">
+        <h3>Summary</h3>
+        <div className={styles.summaryStack}>
+          {summaryInfo.original && (
+            <p className={styles.summaryOriginal} lang={activeItem.language}>
+              <span className={styles.summaryChip} aria-hidden="true">
+                {(activeItem.language ?? 'es').toUpperCase()}
+              </span>
+              <span>{summaryInfo.original}</span>
+            </p>
+          )}
+          {summaryInfo.showEnglish && summaryInfo.english && (
+            <p className={styles.summaryEnglish} lang="en">
+              <span className={styles.summaryChip} aria-hidden="true">EN</span>
+              <span>{summaryInfo.english}</span>
+            </p>
+          )}
+          {summaryInfo.placeholder && (
+            <p className={styles.summaryPlaceholder}>
+              <span className={styles.summaryChip} aria-hidden="true">EN</span>
+              <span>English recap coming soon.</span>
+            </p>
+          )}
+        </div>
+      </section>
+    );
+  };
+
+  const renderContent = () => {
+    if (!activeItem) {
+      return null;
+    }
+
+    if (!contentInfo.english) {
+      return (
+        <section className={styles.contentBlock} aria-label="Lesson content">
+          <h3>Content</h3>
+          <p className={styles.meta}>English content coming soon. Check the Original tab for source material.</p>
+        </section>
+      );
+    }
 
     return (
       <section className={styles.contentBlock} aria-label="Lesson content">
         <h3>Content</h3>
-        {englishContent && renderContentBlocks(englishContent, 'english')}
-        {showOriginalContent &&
-          (item.language === 'es' && englishContent ? (
-            <details className={styles.contentOriginalDetails}>
-              <summary>Ver contenido original en español</summary>
-              {renderContentBlocks(item.content.original, 'original', {
-                resolvePdf: resolveHeadingToPdf,
-                onRequestPdf: handlePdfRequest,
-              })}
-            </details>
-          ) : (
-            renderContentBlocks(item.content.original, 'original', {
-              resolvePdf: resolveHeadingToPdf,
-              onRequestPdf: handlePdfRequest,
-            })
-          ))}
+        {renderContentBlocks(contentInfo.english, 'english')}
       </section>
     );
   };
+
+  const renderRaw = () => {
+    if (!activeItem) {
+      return null;
+    }
+
+    if (!contentInfo.original) {
+      return (
+        <section className={styles.contentBlock} aria-label="Original content">
+          <h3>Original</h3>
+          <p className={styles.meta}>Original content not available.</p>
+        </section>
+      );
+    }
+
+    return (
+      <section className={styles.contentBlock} aria-label="Original content">
+        <h3>Original</h3>
+        {!contentInfo.isOriginalDistinct && contentInfo.english && (
+          <p className={styles.meta}>Original content matches the English version.</p>
+        )}
+        {renderContentBlocks(contentInfo.original, 'original', {
+          resolvePdf: resolveHeadingToPdf,
+          onRequestPdf: handlePdfRequest,
+        })}
+      </section>
+    );
+  };
+
+  useEffect(() => {
+    setActiveTab('summary');
+  }, [activeItemId]);
 
   useEffect(() => {
     if (!activeSubject) {
@@ -1192,33 +1269,28 @@ const SubjectsPage: React.FC = () => {
                 </div>
               </header>
 
-              <section className={styles.summaryBlock} aria-label="Lesson summary">
-                <h3>Summary</h3>
-                <div className={styles.summaryStack}>
-                  {summaryInfo.original && (
-                    <p className={styles.summaryOriginal} lang={activeItem.language}>
-                      <span className={styles.summaryChip} aria-hidden="true">
-                        {(activeItem.language ?? 'es').toUpperCase()}
-                      </span>
-                      <span>{summaryInfo.original}</span>
-                    </p>
-                  )}
-                  {summaryInfo.showEnglish && summaryInfo.english && (
-                    <p className={styles.summaryEnglish} lang="en">
-                      <span className={styles.summaryChip} aria-hidden="true">EN</span>
-                      <span>{summaryInfo.english}</span>
-                    </p>
-                  )}
-                  {summaryInfo.placeholder && (
-                    <p className={styles.summaryPlaceholder}>
-                      <span className={styles.summaryChip} aria-hidden="true">EN</span>
-                      <span>English recap coming soon.</span>
-                    </p>
-                  )}
-                </div>
-              </section>
+              <div className={styles.detailTabs} role="tablist" aria-label="Lesson views">
+                {(['summary', 'content', 'original'] as const).map((tab) => (
+                  <button
+                    key={tab}
+                    type="button"
+                    role="tab"
+                    className={`${styles.detailTabButton} ${
+                      activeTab === tab ? styles.detailTabButtonActive : ''
+                    }`}
+                    aria-selected={activeTab === tab}
+                    onClick={() => setActiveTab(tab)}
+                  >
+                    {tab === 'summary' ? 'Summary' : tab === 'content' ? 'Content' : 'Original'}
+                  </button>
+                ))}
+              </div>
 
-              {renderContentSection(activeItem)}
+              <div className={styles.detailTabPanel}>
+                {activeTab === 'summary' && renderSummary()}
+                {activeTab === 'content' && renderContent()}
+                {activeTab === 'original' && renderRaw()}
+              </div>
 
               {activeItem.notebook && (
                 <NotebookPreview
