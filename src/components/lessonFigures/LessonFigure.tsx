@@ -2,8 +2,14 @@ import React from 'react';
 import { lessonFigureRegistry } from '.';
 import { resolveFigureAsset } from './assetMap';
 
+const isDirectAssetUrl = (value: string) =>
+  value.startsWith('data:') ||
+  value.startsWith('blob:') ||
+  /^(?:[a-z][a-z0-9+\-.]*:)?\/\//i.test(value);
+
 interface LessonFigureProps {
   figureId?: string;
+  src?: string;
   alt: string;
   caption?: React.ReactNode;
   className?: string;
@@ -14,6 +20,7 @@ interface LessonFigureProps {
 
 const LessonFigure: React.FC<LessonFigureProps> = ({
   figureId,
+  src,
   alt,
   caption,
   className,
@@ -22,7 +29,13 @@ const LessonFigure: React.FC<LessonFigureProps> = ({
   fallbackClassName,
 }) => {
   const renderer = figureId ? lessonFigureRegistry[figureId] : undefined;
-  const assetUrl = figureId ? resolveFigureAsset(figureId) : undefined;
+  const resolvedAssetFromId = figureId ? resolveFigureAsset(figureId) : undefined;
+  const resolvedAssetFromSource = src ? resolveFigureAsset(src) : undefined;
+
+  const assetUrl =
+    resolvedAssetFromId ??
+    resolvedAssetFromSource ??
+    (src && isDirectAssetUrl(src) ? src : undefined);
 
   let content: React.ReactNode = null;
 
