@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { subjectCatalog } from '../data/subjectCatalog';
 import { subjectResourceLibrary } from '../data/subjectResources';
 import type { ResourceLink } from '../types/subject';
@@ -55,6 +56,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
 
   const [activeSubjectId, setActiveSubjectId] = useState<string>(subjectsWithPdfs[0]?.id ?? '');
   const [statuses, setStatuses] = useState<Record<string, ExtractionStatus>>({});
+  const navigate = useNavigate();
 
   const activeSubject = useMemo(
     () => subjectsWithPdfs.find((subject) => subject.id === activeSubjectId) ?? subjectsWithPdfs[0] ?? null,
@@ -99,13 +101,19 @@ const SubjectPdfBrowserPage: React.FC = () => {
           },
         }));
 
-        if (subject && typeof window !== 'undefined') {
-          window.setTimeout(() => {
+        if (subject) {
+          const runNavigation = () => {
             const searchParams = new URLSearchParams();
             searchParams.set('focus', subject.slug);
             searchParams.set('refresh', Date.now().toString());
-            window.location.assign(`/subjects?${searchParams.toString()}`);
-          }, 1200);
+            navigate(`/subjects?${searchParams.toString()}`);
+          };
+
+          if (typeof window !== 'undefined') {
+            window.setTimeout(runNavigation, 1200);
+          } else {
+            runNavigation();
+          }
         }
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unexpected error while extracting PDF.';
@@ -118,7 +126,7 @@ const SubjectPdfBrowserPage: React.FC = () => {
         }));
       }
     },
-    []
+    [navigate]
   );
 
   if (subjectsWithPdfs.length === 0) {
