@@ -37,6 +37,18 @@ const renderApp = () => {
   );
 };
 
+const registerServiceWorker = async () => {
+  if (import.meta.env.DEV) return;
+  if (typeof window === 'undefined') return;
+  if (!('serviceWorker' in window.navigator)) return;
+
+  try {
+    await window.navigator.serviceWorker.register('/service-worker.js');
+  } catch (error: unknown) {
+    console.error('Service worker registration failed', error);
+  }
+};
+
 const bootstrap = async () => {
   setPlaceholderMessage('Loading your study workspace…');
   try {
@@ -46,6 +58,7 @@ const bootstrap = async () => {
     setPlaceholderMessage('Preparing your study workspace…');
   }
   renderApp();
+  void registerServiceWorker();
 };
 
 void bootstrap();
