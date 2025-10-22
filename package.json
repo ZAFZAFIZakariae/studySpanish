@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "npm run build && vite preview",
+    "preview": "node scripts/simple-serve.js",
+    "preview:vite": "npm run build && vite preview",
+    "// preview note": "Preview assumes node_modules is already installed via scripts/install_offline_deps.sh.",
     "test": "jest",
     "check:assets": "node scripts/check-assets.mjs",
     "check:figures": "node scripts/check-figures.mjs"
