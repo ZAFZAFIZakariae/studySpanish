@@ -49,12 +49,6 @@ const navigation: NavigationItem[] = [
     description: 'Browse resources and trigger extraction',
     icon: '📄',
   },
-  {
-    to: '/subject-extracts',
-    label: 'Extracts',
-    description: 'Preview extracted subject text',
-    icon: '🧾',
-  },
 ];
 
 export const AppShell: React.FC<AppShellProps> = ({

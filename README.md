@@ -30,16 +30,21 @@ A clean, coach-style workspace for organising B1–C1 Spanish practice. The app 
    ```bash
    npm run build        # Type-check and build the production bundle
    npm run test         # Run the Jest test suite
-   npm run preview      # Build and serve the production bundle locally
+   npm run preview      # Serve preview.html without a build step (no npm deps required)
+   npm run preview:vite # Serve the Vite production build (requires dependencies)
    ```
 
 ### Working offline
 
-`npm run preview` builds the production bundle and serves it with Vite’s preview server. The command requires the dependencies
-declared in `package.json`. If the packages are unavailable (for example, the environment blocks network access and `npm
-install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module 'react'" or "JSX
-element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or vendored locally before
-running the preview in an offline setting.
+`npm run preview` now launches a lightweight static server (`scripts/simple-serve.js`) that renders `preview.html`. The page is a
+high-fidelity mock built only with CDN-hosted assets, so it works even when `node_modules` is missing. Use this command whenever
+you need a quick visual smoke test but cannot download npm packages.
+
+To run the full Vite preview (`npm run preview:vite`), the environment still needs access to React, React Router, Dexie, and the
+other dependencies declared in `package.json`. If the packages are unavailable (for example, the environment blocks network
+access and `npm install` cannot download them), the TypeScript compiler reports hundreds of errors such as "Cannot find module
+'react'" or "JSX element implicitly has type 'any'" and the command exits early. Ensure the dependencies are installed or
+vendored locally before running the Vite preview in an offline setting.
 
 When developing offline with the production bundle, run the helper script before building:
 
