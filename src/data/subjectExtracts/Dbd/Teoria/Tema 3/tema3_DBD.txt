@@ -1,6 +1,0 @@
-# Extracted content
-Source: subjects/Dbd/Teoria/Tema 3/tema3_DBD.ppsx
-Notes:
-- Extraction error for tema3_DBD.ppsx: file '/workspace/studySpanish/subjects/Dbd/Teoria/Tema 3/tema3_DBD.ppsx' is not a PowerPoint file, content type is 'application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml'
-
-[Failed to extract content: file '/workspace/studySpanish/subjects/Dbd/Teoria/Tema 3/tema3_DBD.ppsx' is not a PowerPoint file, content type is 'application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml']
