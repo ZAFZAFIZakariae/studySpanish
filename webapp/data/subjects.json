@@ -1,0 +1,453 @@
+{
+  "subjects": [
+    {
+      "id": "mathematics",
+      "title": "Mathematics",
+      "shortDescription": "Algebra, calculus, and problem solving essentials.",
+      "description": "Strengthen your foundation in algebraic manipulation, functions, and data interpretation.",
+      "categories": {
+        "lessons": {
+          "summary": "Core lessons cover linear algebra, calculus, and applied problem solving techniques.",
+          "content": [
+            {
+              "title": "Linear Algebra Refresh",
+              "points": [
+                "Vector spaces, bases, and transformations",
+                "Eigenvalues and eigenvectors in context",
+                "Matrix factorisation techniques"
+              ]
+            },
+            {
+              "title": "Calculus Toolkit",
+              "points": [
+                "Limits and continuity checks",
+                "Differentiation shortcuts for exams",
+                "Integral strategies and substitution"
+              ]
+            }
+          ],
+          "raw": [
+            "Linear algebra empowers you to model dimensional changes efficiently. Review basis changes and diagonalisation for stability analysis. {{image:0}}",
+            "Calculus recap: start with limits, progress to derivative interpretations, and round off with integration heuristics."
+          ],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=80",
+              "alt": "Student solving linear algebra equations on paper",
+              "caption": "Concept mapping worksheet for eigen decomposition"
+            }
+          ]
+        },
+        "complementaryNotes": {
+          "summary": "Quick reference sheets summarising theorems and notation.",
+          "content": [
+            {
+              "title": "Algebraic Identities",
+              "points": [
+                "Binomial expansions up to the fourth power",
+                "Completing the square templates",
+                "Inequality manipulation reminders"
+              ]
+            }
+          ],
+          "raw": [
+            "Keep this page handy for last-minute checks. ![Algebra formula sheet](https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80)"
+          ]
+        },
+        "practicals": {
+          "summary": "Problem sets emphasising modelling and interpretation.",
+          "content": [
+            {
+              "title": "Case Studies",
+              "points": [
+                "Optimising logistics with linear programming",
+                "Population modelling using differential equations"
+              ]
+            }
+          ],
+          "raw": [
+            "Attempt modelling exercises weekly. Translate scenarios into equations, solve, and validate units."
+          ]
+        },
+        "exams": {
+          "summary": "Past papers curated by difficulty and topic weighting.",
+          "content": [
+            {
+              "title": "Mock Paper Highlights",
+              "points": [
+                "Section A: Algebraic manipulations",
+                "Section B: Calculus applications",
+                "Section C: Statistics and interpretation"
+              ]
+            }
+          ],
+          "raw": [
+            "Work through the 2023 paper under timed conditions. Analyse answer patterns after each attempt."
+          ]
+        },
+        "answers": {
+          "summary": "Fully worked solutions with commentary for each mock paper.",
+          "content": [
+            {
+              "title": "Worked Example",
+              "points": [
+                "Derivation of optimal solution",
+                "Common pitfalls and error analysis"
+              ]
+            }
+          ],
+          "raw": [
+            "Solutions emphasise reasoning over rote memorisation. Trace each justification carefully."
+          ]
+        }
+      }
+    },
+    {
+      "id": "physics",
+      "title": "Physics",
+      "shortDescription": "Mechanics, waves, and electricity in bite-sized modules.",
+      "description": "Connect conceptual understanding with experimental evidence across classical mechanics and electromagnetism.",
+      "categories": {
+        "lessons": {
+          "summary": "Start with kinematics, then link forces to energy conservation before revising circuits.",
+          "content": [
+            {
+              "title": "Kinematics",
+              "points": [
+                "Displacement-time graph interpretation",
+                "Equations of motion shortcuts"
+              ]
+            },
+            {
+              "title": "Energy Systems",
+              "points": [
+                "Work-energy theorem",
+                "Power calculations in mixed unit systems"
+              ]
+            }
+          ],
+          "raw": [
+            "Sketch motion graphs to infer acceleration trends. Connect slopes and areas to physical meaning.",
+            "Remember that conservative forces store energy; use energy bar charts to explain transformations."
+          ]
+        },
+        "complementaryNotes": {
+          "summary": "Equations and constants for quick substitution.",
+          "content": [
+            {
+              "title": "Reference Values",
+              "points": [
+                "Acceleration due to gravity, standard atmospheric pressure",
+                "Permittivity and permeability constants"
+              ]
+            }
+          ],
+          "raw": [
+            "A concise data booklet listing symbols and SI units."
+          ]
+        },
+        "practicals": {
+          "summary": "Laboratory routines that reinforce theoretical discussions.",
+          "content": [
+            {
+              "title": "Pendulum Investigation",
+              "points": [
+                "Measure period variations with length",
+                "Plot T^2 vs L to derive g"
+              ]
+            }
+          ],
+          "raw": [
+            "Document uncertainties clearly and use gradient analysis to report gravitational field strength."
+          ]
+        },
+        "exams": {
+          "summary": "Structured practice across multiple choice and long-form problems.",
+          "content": [
+            {
+              "title": "Exam Strategy",
+              "points": [
+                "Scan paper for familiar contexts first",
+                "Allocate marks per minute to pace responses"
+              ]
+            }
+          ],
+          "raw": [
+            "Alternate between quantitative and qualitative questions to maintain focus."
+          ]
+        },
+        "answers": {
+          "summary": "Annotated solutions emphasising vector reasoning and diagrams.",
+          "content": [
+            {
+              "title": "Sample Solution",
+              "points": [
+                "Free body diagram construction",
+                "Step-by-step circuit analysis"
+              ]
+            }
+          ],
+          "raw": [
+            "Include reasoning sentences alongside calculations to secure method marks."
+          ]
+        }
+      }
+    },
+    {
+      "id": "history",
+      "title": "History",
+      "shortDescription": "Timelines, themes, and source evaluation practice.",
+      "description": "Trace major developments in global history while refining argumentative essays.",
+      "categories": {
+        "lessons": {
+          "summary": "Thematic lessons interleave political events with cultural shifts.",
+          "content": [
+            {
+              "title": "Industrial Revolution",
+              "points": [
+                "Urbanisation trends and labour responses",
+                "Technological catalysts"
+              ]
+            }
+          ],
+          "raw": [
+            "Build timelines that connect inventions to social change."
+          ]
+        },
+        "complementaryNotes": {
+          "summary": "Quick revision cards for historiographical schools of thought.",
+          "content": [
+            {
+              "title": "Key Voices",
+              "points": [
+                "Marxist interpretations",
+                "Revisionist critiques"
+              ]
+            }
+          ],
+          "raw": [
+            "Summaries of differing perspectives allow balanced essays."
+          ]
+        },
+        "practicals": {
+          "summary": "Source evaluation drills and thesis planning templates.",
+          "content": [
+            {
+              "title": "Source Analysis",
+              "points": [
+                "Origin, purpose, content, and value",
+                "Corroborating with secondary sources"
+              ]
+            }
+          ],
+          "raw": [
+            "Annotate documents highlighting bias indicators before crafting arguments."
+          ]
+        },
+        "exams": {
+          "summary": "Essay prompts with scaffolds for introductions and conclusions.",
+          "content": [
+            {
+              "title": "Practice Prompts",
+              "points": [
+                "Evaluate causes vs consequences",
+                "Compare regional experiences"
+              ]
+            }
+          ],
+          "raw": [
+            "Plan essays with bullet outlines, then expand with evidence."
+          ]
+        },
+        "answers": {
+          "summary": "Exemplar essays annotated with examiner feedback.",
+          "content": [
+            {
+              "title": "Sample Essay",
+              "points": [
+                "Clear thesis statement",
+                "Integrated historiography"
+              ]
+            }
+          ],
+          "raw": [
+            "Focus on analysis rather than narration to score highly."
+          ]
+        }
+      }
+    },
+    {
+      "id": "literature",
+      "title": "Literature",
+      "shortDescription": "Close reading, thematic webs, and comparative critiques.",
+      "description": "Elevate commentary skills with text pairings, figurative language studies, and exam-style critiques.",
+      "categories": {
+        "lessons": {
+          "summary": "Work through prose, poetry, and drama units with annotation strategies.",
+          "content": [
+            {
+              "title": "Poetry Toolkit",
+              "points": [
+                "Sound devices and tone shifts",
+                "Imagery clusters and symbolism"
+              ]
+            }
+          ],
+          "raw": [
+            "Annotate using colour codes for diction, imagery, and structure."
+          ]
+        },
+        "complementaryNotes": {
+          "summary": "Author biographies and context snapshots.",
+          "content": [
+            {
+              "title": "Author Focus",
+              "points": [
+                "Historical backdrop",
+                "Stylistic trademarks"
+              ]
+            }
+          ],
+          "raw": [
+            "Context enriches commentary depth."
+          ]
+        },
+        "practicals": {
+          "summary": "Writing drills emphasising thesis clarity and textual evidence.",
+          "content": [
+            {
+              "title": "Paragraph Practice",
+              "points": [
+                "PEEL structure refresh",
+                "Embedding quotations naturally"
+              ]
+            }
+          ],
+          "raw": [
+            "Draft under timed settings to mirror exam pressure."
+          ]
+        },
+        "exams": {
+          "summary": "Comparative questions with planning grids.",
+          "content": [
+            {
+              "title": "Exam Planner",
+              "points": [
+                "Identify pivot scenes",
+                "Track motifs across texts"
+              ]
+            }
+          ],
+          "raw": [
+            "Use dual-column notes to map similarities and contrasts."
+          ]
+        },
+        "answers": {
+          "summary": "Model commentaries with annotations on tone and structure.",
+          "content": [
+            {
+              "title": "Model Commentary",
+              "points": [
+                "Layered tone analysis",
+                "Critical vocabulary suggestions"
+              ]
+            }
+          ],
+          "raw": [
+            "Notice how transitions between paragraphs maintain argumentative flow."
+          ]
+        }
+      }
+    },
+    {
+      "id": "biology",
+      "title": "Biology",
+      "shortDescription": "Cellular processes, ecology, and applied biotechnology.",
+      "description": "Understand living systems through diagrams, experiments, and review prompts.",
+      "categories": {
+        "lessons": {
+          "summary": "From cell structure to genetics and ecosystems in interconnected sequences.",
+          "content": [
+            {
+              "title": "Cell Functions",
+              "points": [
+                "Organelle roles",
+                "Membrane transport comparisons"
+              ]
+            }
+          ],
+          "raw": [
+            "Label diagrams to reinforce spatial understanding. {{image:0}}"
+          ],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+              "alt": "Microscope slide of plant cells",
+              "caption": "Plant cell cross section under magnification"
+            }
+          ]
+        },
+        "complementaryNotes": {
+          "summary": "Flashcards summarising pathways and cycles.",
+          "content": [
+            {
+              "title": "Photosynthesis vs Respiration",
+              "points": [
+                "Inputs and outputs",
+                "Energy yield comparisons"
+              ]
+            }
+          ],
+          "raw": [
+            "Contrast diagrams side by side to retain pathway flow."
+          ]
+        },
+        "practicals": {
+          "summary": "Hands-on activities for enzyme and ecological studies.",
+          "content": [
+            {
+              "title": "Enzyme Rate Lab",
+              "points": [
+                "Temperature and pH variables",
+                "Recording reaction speeds"
+              ]
+            }
+          ],
+          "raw": [
+            "Design fair tests with control variables documented explicitly."
+          ]
+        },
+        "exams": {
+          "summary": "Structured question banks focusing on data interpretation.",
+          "content": [
+            {
+              "title": "Interpretation Practice",
+              "points": [
+                "Graph trend analysis",
+                "Command words decoding"
+              ]
+            }
+          ],
+          "raw": [
+            "Underline key terms in every prompt before drafting responses."
+          ]
+        },
+        "answers": {
+          "summary": "Mark schemes simplified into annotated exemplars.",
+          "content": [
+            {
+              "title": "Sample Response",
+              "points": [
+                "Highlighting scoring phrases",
+                "Structuring extended responses"
+              ]
+            }
+          ],
+          "raw": [
+            "Use examiner comments to refine future answers."
+          ]
+        }
+      }
+    }
+  ]
+}
