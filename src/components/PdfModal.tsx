@@ -1,32 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-
-let workerReady = false;
-let workerPromise: Promise<void> | null = null;
-
-const ensurePdfWorker = async () => {
-  if (workerReady) {
-    return;
-  }
-
-  if (!workerPromise) {
-    workerPromise = import('pdfjs-dist/build/pdf.worker.min.mjs?url')
-      .then((module) => {
-        const workerSrc = typeof module === 'string' ? module : module?.default;
-        if (!workerSrc) {
-          throw new Error('Failed to resolve PDF.js worker source.');
-        }
-        pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
-        workerReady = true;
-      })
-      .catch((error) => {
-        workerPromise = null;
-        throw error;
-      });
-  }
-
-  await workerPromise;
-};
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { PdfDocument, PdfPage, hasLoadedReactPdfModule, loadReactPdfModule } from '../utils/reactPdf';
 
 type PdfModalProps = {
   isOpen: boolean;
@@ -106,7 +79,7 @@ const pdfContainerStyle: React.CSSProperties = {
 export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, source, pageNumber, onClose, title }) => {
   const [workerError, setWorkerError] = useState<string | null>(null);
   const [documentError, setDocumentError] = useState<string | null>(null);
-  const [isWorkerLoaded, setIsWorkerLoaded] = useState<boolean>(() => workerReady);
+  const [isWorkerLoaded, setIsWorkerLoaded] = useState<boolean>(() => hasLoadedReactPdfModule());
   const [pageWidth, setPageWidth] = useState<number>(() => {
     if (typeof window === 'undefined') {
       return 720;
@@ -115,19 +88,26 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, source, pageNumber, 
   });
 
   useEffect(() => {
-    if (!isOpen || isWorkerLoaded || workerError) {
+    if (!isOpen) {
       return;
     }
 
     let cancelled = false;
-    ensurePdfWorker()
+
+    if (!hasLoadedReactPdfModule()) {
+      setIsWorkerLoaded(false);
+    }
+
+    setWorkerError(null);
+
+    loadReactPdfModule()
       .then(() => {
         if (!cancelled) {
           setIsWorkerLoaded(true);
         }
       })
       .catch((error) => {
-        console.error('[PdfModal] Failed to load PDF worker', error);
+        console.error('[PdfModal] Failed to load react-pdf', error);
         if (!cancelled) {
           setWorkerError('Unable to initialise the PDF renderer.');
         }
@@ -136,7 +116,7 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, source, pageNumber, 
     return () => {
       cancelled = true;
     };
-  }, [isOpen, isWorkerLoaded, workerError]);
+  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen || typeof window === 'undefined') {
@@ -207,27 +187,29 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, source, pageNumber, 
           ) : !isWorkerLoaded ? (
             <p style={statusStyle}>Preparing the PDF viewer…</p>
           ) : (
-            <div style={pdfContainerStyle}>
-              <Document
-                file={source}
-                loading={<p style={statusStyle}>Loading original PDF…</p>}
-                onLoadError={(error: Error) => {
-                  console.error('[PdfModal] Failed to load PDF document', error);
-                  setDocumentError('Unable to load the original PDF.');
-                }}
-                onLoadSuccess={() => {
-                  setDocumentError(null);
-                }}
-              >
-                <Page
-                  pageNumber={pageNumber}
-                  width={pageWidth}
-                  loading={<p style={statusStyle}>Rendering page…</p>}
-                  renderAnnotationLayer={false}
-                  renderTextLayer={false}
-                />
-              </Document>
-            </div>
+            <Suspense fallback={<p style={statusStyle}>Loading original PDF…</p>}>
+              <div style={pdfContainerStyle}>
+                <PdfDocument
+                  file={source}
+                  loading={<p style={statusStyle}>Loading original PDF…</p>}
+                  onLoadError={(error: Error) => {
+                    console.error('[PdfModal] Failed to load PDF document', error);
+                    setDocumentError('Unable to load the original PDF.');
+                  }}
+                  onLoadSuccess={() => {
+                    setDocumentError(null);
+                  }}
+                >
+                  <PdfPage
+                    pageNumber={pageNumber}
+                    width={pageWidth}
+                    loading={<p style={statusStyle}>Rendering page…</p>}
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                  />
+                </PdfDocument>
+              </div>
+            </Suspense>
           )}
           {documentError ? <p style={statusStyle}>{documentError}</p> : null}
         </div>
