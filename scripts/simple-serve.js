@@ -5,6 +5,7 @@ const path = require('path');
 const { URL } = require('url');
 
 const rootDir = path.resolve(__dirname, '..');
+const distDir = path.join(rootDir, 'dist');
 const subjectExtractDir = path.join(rootDir, 'src', 'data', 'subjectExtracts');
 const DEFAULT_PORT = 5173;
 
@@ -27,17 +28,94 @@ const mimeTypes = {
 };
 
 const safeJoin = (base, targetPath) => {
-  const target = path.normalize(path.join(base, targetPath));
+  const target = path.resolve(base, targetPath);
   if (!target.startsWith(base)) {
     return null;
   }
   return target;
 };
 
+const parseOptions = () => {
+  const options = { port: undefined, mode: 'auto' };
+  const args = process.argv.slice(2);
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+
+    if (arg === '--port' || arg === '-p') {
+      const value = Number(args[index + 1]);
+      if (Number.isFinite(value) && value > 0) {
+        options.port = value;
+        index += 1;
+        continue;
+      }
+    }
+
+    if (arg.startsWith('--mode=')) {
+      options.mode = arg.split('=')[1] ?? options.mode;
+      continue;
+    }
+
+    if (arg === '--mode') {
+      const value = args[index + 1];
+      if (value) {
+        options.mode = value;
+        index += 1;
+      }
+      continue;
+    }
+
+    if (arg === '--dist' || arg === '--use-dist') {
+      options.mode = 'dist';
+      continue;
+    }
+
+    if (arg === '--preview') {
+      options.mode = 'preview';
+      continue;
+    }
+
+    const numeric = Number(arg);
+    if (Number.isFinite(numeric) && numeric > 0) {
+      options.port = numeric;
+    }
+  }
+
+  return options;
+};
+
+const options = parseOptions();
+const portFromArgs = options.port;
+const requestedMode = String(options.mode || 'auto').toLowerCase();
+
+const distIndexPath = path.join(distDir, 'index.html');
+const hasDistBundle = fs.existsSync(distIndexPath);
+
+let useDist = requestedMode === 'dist' || (requestedMode === 'auto' && hasDistBundle);
+if (requestedMode === 'preview') {
+  useDist = false;
+}
+
+if (requestedMode === 'dist' && !hasDistBundle) {
+  console.warn('[simple-serve] dist/index.html not found; falling back to preview.html.');
+  console.warn('[simple-serve] Run "npm run build" before launching the preview to serve the compiled application.');
+}
+
+const defaultDocumentPath = useDist && hasDistBundle ? distIndexPath : path.join(rootDir, 'preview.html');
+
+const basePriority = useDist && hasDistBundle ? [distDir, rootDir] : [rootDir, distDir];
+
 const listSubjectExtracts = () => {
   const files = [];
+
   const visit = (dir) => {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    let entries = [];
+    try {
+      entries = fs.readdirSync(dir, { withFileTypes: true });
+    } catch (error) {
+      return;
+    }
+
     for (const entry of entries) {
       const entryPath = path.join(dir, entry.name);
       if (entry.isDirectory()) {
@@ -79,14 +157,22 @@ const manifestHandler = (res) => {
 const serveFile = (res, filePath, method) => {
   fs.stat(filePath, (statError, stats) => {
     if (statError || !stats.isFile()) {
-      res.statusCode = 404;
-      res.end('Not Found');
+      res.statusCode = statError && statError.code === 'ENOENT' ? 404 : 403;
+      res.end(statError && statError.code === 'ENOENT' ? 'Not Found' : 'Forbidden');
       return;
     }
 
-    const ext = path.extname(filePath);
+    const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || 'application/octet-stream';
-    res.writeHead(200, { 'Content-Type': contentType });
+    const headers = { 'Content-Type': contentType };
+
+    const isImmutableAsset =
+      filePath.includes(`${path.sep}assets${path.sep}`) && /\.[0-9a-f]{8,}\./i.test(path.basename(filePath));
+    if (isImmutableAsset) {
+      headers['Cache-Control'] = 'public, max-age=31536000, immutable';
+    }
+
+    res.writeHead(200, headers);
 
     if (method === 'HEAD') {
       res.end();
@@ -102,6 +188,73 @@ const serveFile = (res, filePath, method) => {
       res.end('Internal Server Error');
     });
     stream.pipe(res);
+  });
+};
+
+const createCandidatePaths = (pathname) => {
+  const trimmed = pathname.replace(/^[/\\]+/, '');
+  const candidates = new Set();
+
+  for (const base of basePriority) {
+    if (!base) continue;
+
+    const direct = safeJoin(base, trimmed);
+    if (direct) {
+      candidates.add(direct);
+    }
+
+    if (trimmed) {
+      if (base === rootDir) {
+        const legacy = safeJoin(base, path.join('dist', trimmed));
+        if (legacy) {
+          candidates.add(legacy);
+        }
+      }
+
+      if (base === distDir && trimmed.startsWith('dist/')) {
+        const withoutPrefix = safeJoin(base, trimmed.replace(/^dist\//, ''));
+        if (withoutPrefix) {
+          candidates.add(withoutPrefix);
+        }
+      }
+    }
+  }
+
+  return Array.from(candidates);
+};
+
+const tryCandidates = (res, candidates, method) => {
+  if (candidates.length === 0) {
+    res.statusCode = 404;
+    res.end('Not Found');
+    return;
+  }
+
+  const [current, ...rest] = candidates;
+  fs.stat(current, (statError, stats) => {
+    if (statError) {
+      tryCandidates(res, rest, method);
+      return;
+    }
+
+    if (stats.isDirectory()) {
+      const indexPath = path.join(current, 'index.html');
+      fs.stat(indexPath, (indexError, indexStats) => {
+        if (!indexError && indexStats.isFile()) {
+          serveFile(res, indexPath, method);
+        } else {
+          tryCandidates(res, rest, method);
+        }
+      });
+      return;
+    }
+
+    if (stats.isFile()) {
+      serveFile(res, current, method);
+      return;
+    }
+
+    tryCandidates(res, rest, method);
   });
 };
 
@@ -121,11 +274,7 @@ const server = http.createServer((req, res) => {
   }
 
   const requestUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-  let pathname = decodeURIComponent(requestUrl.pathname);
-
-  if (pathname.startsWith('/assets/')) {
-    pathname = `/dist${pathname}`;
-  }
+  const pathname = decodeURIComponent(requestUrl.pathname);
 
   if (pathname === '/subject-extracts.json') {
     manifestHandler(res);
@@ -133,60 +282,27 @@ const server = http.createServer((req, res) => {
   }
 
   if (pathname === '/' || pathname === '') {
-    pathname = '/preview.html';
-  }
-
-  const filePath = safeJoin(rootDir, pathname);
-  if (!filePath) {
-    res.statusCode = 403;
-    res.end('Forbidden');
+    serveFile(res, defaultDocumentPath, method);
     return;
   }
 
-  fs.stat(filePath, (statError, stats) => {
-    if (!statError && stats.isDirectory()) {
-      const indexPath = path.join(filePath, 'index.html');
-      fs.stat(indexPath, (indexError) => {
-        if (!indexError) {
-          serveFile(res, indexPath, method);
-        } else {
-          res.statusCode = 403;
-          res.end('Directory access is forbidden');
-        }
-      });
-      return;
-    }
-
-    serveFile(res, filePath, method);
-  });
+  const candidates = createCandidatePaths(pathname);
+  tryCandidates(res, candidates, method);
 });
 
-const parsePort = () => {
-  const args = process.argv.slice(2);
-  for (let index = 0; index < args.length; index += 1) {
-    const arg = args[index];
-    if (arg === '--port' || arg === '-p') {
-      const value = Number(args[index + 1]);
-      if (Number.isFinite(value) && value > 0) {
-        return value;
-      }
-      continue;
-    }
-
-    const numeric = Number(arg);
-    if (Number.isFinite(numeric) && numeric > 0) {
-      return numeric;
-    }
-  }
-  return undefined;
-};
-
-const portFromArgs = parsePort();
 const envPort = Number(process.env.PORT);
 const port = portFromArgs || (Number.isFinite(envPort) && envPort > 0 ? envPort : DEFAULT_PORT);
 
 server.listen(port, () => {
   console.log(`Preview server running at http://localhost:${port}`);
-  console.log('Serving static files from', rootDir);
-  console.log('Navigate to / to open preview.html');
+  if (useDist && hasDistBundle) {
+    console.log('[simple-serve] Serving compiled interface from dist/index.html');
+  } else {
+    console.log('[simple-serve] Serving static preview shell from preview.html');
+    if (!hasDistBundle) {
+      console.log('[simple-serve] Build output not found. Run "npm run build" to generate dist/ for the full application.');
+    }
+  }
+  console.log('[simple-serve] Static roots:', basePriority.join(', '));
+  console.log('[simple-serve] Use "--mode=preview" to force the marketing shell or "--mode=dist" to require the compiled app.');
 });

@@ -1,8 +1,7 @@
 .appShell {
+  --shell-sidebar-width: clamp(260px, 28vw, 320px);
   position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   color: var(--ui-text-primary);
 }
 
@@ -10,287 +9,293 @@
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: -1;
-  background: var(--ui-bg);
+  z-index: -2;
+  background: radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.18), transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(244, 114, 182, 0.15), transparent 60%),
+    linear-gradient(160deg, rgba(248, 250, 252, 0.95), rgba(226, 232, 240, 0.85));
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.sidebarOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.sidebarOverlay:focus-visible {
+  outline: none;
+}
+
+.appShell[data-sidebar-open='true'] .sidebarOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 30;
+  inset: 0 auto 0 0;
+  width: min(var(--shell-sidebar-width), 88vw);
+  padding: 32px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(26px);
+  border-right: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.55);
+  transform: translateX(-110%);
+  transition: transform 0.28s ease;
+}
+
+.appShell[data-sidebar-open='true'] .sidebar {
+  transform: translateX(0);
+}
+
+.sidebarHeader {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px 24px;
-  padding: 18px clamp(18px, 6vw, 48px);
-  background: #ffffff;
-  border-bottom: 1px solid var(--ui-border, #e2e8f0);
-}
-
-body.high-contrast .header {
-  background: rgba(15, 23, 42, 0.9);
+  justify-content: space-between;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   text-decoration: none;
   color: inherit;
-  flex: 0 0 auto;
 }
 
 .brandMark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 18px;
-  background: rgba(226, 232, 240, 0.8);
-  color: #0f172a;
+  width: 52px;
+  height: 52px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(96, 165, 250, 0.15));
+  color: #e0f2fe;
   font-family: var(--ui-font-display);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-}
-
-body.high-contrast .brandMark {
-  color: #020617;
-  background: linear-gradient(145deg, #facc15, #f97316);
 }
 
 .brandText {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .brandName {
   font-family: var(--ui-font-display);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  letter-spacing: -0.01em;
+  color: #f8fafc;
 }
 
 .brandTagline {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--ui-text-secondary);
+  color: rgba(226, 232, 240, 0.7);
 }
 
 .nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex: 1 1 auto;
-  min-width: 240px;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .navLink {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: var(--ui-radius-pill);
-  border: 1px solid transparent;
-  background: transparent;
-  color: inherit;
+  gap: 12px;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.9rem;
+  color: rgba(226, 232, 240, 0.85);
+  text-decoration: none;
   font-weight: 600;
   letter-spacing: -0.01em;
-  text-decoration: none;
-  transition: background 0.18s ease, border-color 0.18s ease;
-}
-
-body.high-contrast .navLink {
-  background: rgba(15, 23, 42, 0.6);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .navLink:hover,
 .navLink:focus-visible {
-  border-color: rgba(59, 130, 246, 0.4);
-  background: rgba(148, 163, 184, 0.16);
+  background-color: rgba(148, 163, 184, 0.2);
+  color: #fff;
+  transform: translateX(2px);
 }
 
 .navLinkActive {
-  background: rgba(37, 99, 235, 0.12);
-  border-color: rgba(37, 99, 235, 0.45);
-}
-
-body.high-contrast .navLinkActive {
-  background: linear-gradient(135deg, rgba(248, 113, 113, 0.25), rgba(250, 204, 21, 0.3));
-  border-color: rgba(250, 204, 21, 0.6);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.32), rgba(59, 130, 246, 0.18));
+  color: #fff;
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.25);
 }
 
 .navIcon {
-  font-size: 1.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: rgba(30, 64, 175, 0.18);
+  color: rgba(191, 219, 254, 0.95);
 }
 
-.headerActions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex: 0 0 auto;
-}
-
-.actionButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  border-radius: var(--ui-radius-pill);
-  border: 1px solid var(--ui-border);
-  background: #f8fafc;
-  color: inherit;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.18s ease, border-color 0.18s ease;
-}
-
-body.high-contrast .actionButton {
-  background: rgba(15, 23, 42, 0.7);
-}
-
-.actionButton:hover,
-.actionButton:focus-visible {
-  border-color: rgba(59, 130, 246, 0.4);
-}
-
-.actionButtonActive {
-  background: rgba(226, 232, 240, 0.8);
-}
-
-.actionIcon {
-  font-size: 1.1rem;
-}
-
-.actionLabel {
-  font-size: 0.9rem;
-}
-
-.commandBar {
-  width: min(1120px, calc(100% - 32px));
-  margin: 32px auto 0;
-  padding: 20px 24px;
-  border-radius: 16px;
-  border: 1px solid var(--ui-border, #e2e8f0);
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-body.high-contrast .commandBar {
-  border-color: rgba(250, 204, 21, 0.45);
-  background: rgba(15, 23, 42, 0.6);
-}
-
-.commandHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.commandTitle {
-  margin: 0;
+.sidebarFooter {
+  margin-top: auto;
+  padding: 20px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  color: rgba(226, 232, 240, 0.82);
   font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  line-height: 1.6;
+}
+
+.sidebarFooterTitle {
+  margin: 0 0 6px;
+  font-family: var(--ui-font-display);
+  font-size: 0.9rem;
   font-weight: 700;
+  color: #fff;
 }
 
-.commandSubtitle {
+.sidebarFooterCopy {
   margin: 0;
-  font-size: 1rem;
-  color: var(--ui-text-secondary);
 }
 
-.commandList {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.mainColumn {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
 }
 
-.commandCard {
+.topBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 18px;
-  border-radius: var(--ui-radius-lg);
-  border: 1px solid var(--ui-border, #e2e8f0);
-  background: #ffffff;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.18s ease, border-color 0.18s ease;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px clamp(18px, 6vw, 48px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.commandCard:hover,
-.commandCard:focus-visible {
-  border-color: rgba(59, 130, 246, 0.4);
-  background: rgba(248, 250, 252, 0.9);
+.topBarLeading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.commandCardDisabled {
-  opacity: 0.75;
-  cursor: default;
-}
-
-.commandIcon {
+.menuButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ui-text-primary);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.commandText {
+.menuButton:hover,
+.menuButton:focus-visible {
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+.topMeta {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.commandLabel {
+.topEyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ui-text-secondary);
+  font-weight: 700;
+}
+
+.topTitle {
+  margin: 0;
+  font-family: var(--ui-font-display);
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
-.commandHint {
+.topSubtitle {
+  margin: 0;
   font-size: 0.9rem;
   color: var(--ui-text-secondary);
 }
 
-.commandMeta {
+.topActions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  margin-left: auto;
+  align-items: center;
+  gap: 12px;
 }
 
-.commandBadge {
+.contrastButton {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-width: 32px;
-  padding: 4px 10px;
+  gap: 10px;
+  padding: 0.6rem 1.3rem;
   border-radius: var(--ui-radius-pill);
-  background: rgba(37, 99, 235, 0.15);
-  font-size: 0.75rem;
-  font-weight: 700;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.92);
+  color: var(--ui-text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.commandArrow {
-  font-size: 1.1rem;
+.contrastButton:hover,
+.contrastButton:focus-visible {
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 12px 28px -18px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+.contrastButtonActive {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(59, 130, 246, 0.05));
+}
+
+.contrastButtonIcon {
+  font-size: 1.2rem;
+}
+
+.contrastButtonLabel {
+  font-size: 0.95rem;
 }
 
 .main {
   flex: 1 1 auto;
   width: 100%;
-  padding: 48px 0 64px;
+  padding: 48px clamp(18px, 6vw, 60px) 64px;
 }
 
 .mainFocused {
@@ -308,7 +313,7 @@ body.high-contrast .commandBar {
 
 .footer {
   margin-top: auto;
-  padding: 32px clamp(18px, 6vw, 48px) 48px;
+  padding: 28px clamp(18px, 6vw, 48px) 48px;
   text-align: center;
   color: var(--ui-text-secondary);
   font-size: 0.95rem;
@@ -319,38 +324,123 @@ body.high-contrast .commandBar {
   text-decoration: underline;
 }
 
-.appShell[data-focus-mode='on'] .commandBar {
+.appShell[data-focus-mode='on'] .sidebar,
+.appShell[data-focus-mode='on'] .topBar,
+.appShell[data-focus-mode='on'] .footer {
   display: none;
 }
 
-@media (max-width: 960px) {
-  .nav {
-    justify-content: flex-start;
-    overflow-x: auto;
+.appShell[data-focus-mode='on'] .main {
+  padding-top: 32px;
+}
+
+body.high-contrast .sidebar {
+  background: rgba(2, 6, 23, 0.92);
+  border-color: rgba(250, 204, 21, 0.35);
+  box-shadow: 0 28px 60px rgba(2, 6, 23, 0.8);
+}
+
+body.high-contrast .brandMark {
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #0f172a;
+}
+
+body.high-contrast .navIcon {
+  background: rgba(250, 204, 21, 0.2);
+  color: #fef3c7;
+}
+
+body.high-contrast .navLinkActive {
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.35), rgba(250, 204, 21, 0.28));
+  box-shadow: none;
+}
+
+body.high-contrast .sidebarFooter {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(248, 250, 252, 0.18);
+}
+
+body.high-contrast .topBar {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(226, 232, 240, 0.22);
+  box-shadow: none;
+}
+
+body.high-contrast .menuButton {
+  background: rgba(15, 23, 42, 0.65);
+  color: #f8fafc;
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+body.high-contrast .topEyebrow {
+  color: rgba(148, 163, 184, 0.75);
+}
+
+body.high-contrast .topSubtitle {
+  color: rgba(203, 213, 225, 0.85);
+}
+
+body.high-contrast .contrastButton {
+  background: rgba(15, 23, 42, 0.68);
+  color: #f8fafc;
+  border-color: rgba(250, 204, 21, 0.35);
+}
+
+body.high-contrast .contrastButtonActive {
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.25), rgba(248, 113, 113, 0.2));
+}
+
+@media (min-width: 1024px) {
+  .appShell {
+    display: grid;
+    grid-template-columns: var(--shell-sidebar-width) minmax(0, 1fr);
   }
 
-  .commandBar {
-    padding: 20px;
+  .sidebar {
+    position: sticky;
+    top: 0;
+    transform: none;
+    height: 100vh;
   }
 
-  .commandList {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  .sidebarOverlay,
+  .menuButton {
+    display: none;
+  }
+
+  .mainColumn {
+    min-height: 100vh;
   }
 }
 
 @media (max-width: 720px) {
-  .header {
-    justify-content: center;
-    text-align: center;
+  .topBar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .brand {
-    justify-content: center;
+  .topActions {
+    width: 100%;
+    justify-content: flex-start;
   }
 
-  .headerActions {
+  .main {
+    padding-inline: clamp(18px, 8vw, 28px);
+  }
+
+  .mainInner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contrastButton {
     width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
+  }
+
+  .topSubtitle {
+    font-size: 0.85rem;
   }
 }
