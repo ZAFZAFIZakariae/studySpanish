@@ -37,6 +37,55 @@ const mimeTypes = {
   '.webmanifest': 'application/manifest+json; charset=utf-8',
 };
 
+const createUnicodeVariants = (value) => {
+  if (typeof value !== 'string') {
+    return [value];
+  }
+
+  const variants = [value];
+  for (const form of ['NFC', 'NFD', 'NFKC', 'NFKD']) {
+    try {
+      const normalised = value.normalize(form);
+      if (!variants.includes(normalised)) {
+        variants.push(normalised);
+      }
+    } catch (error) {
+      // ignore
+    }
+  }
+
+  return variants;
+};
+
+const statWithUnicodeVariants = (filePath, callback) => {
+  const variants = createUnicodeVariants(filePath);
+
+  const tryVariant = (index) => {
+    if (index >= variants.length) {
+      const notFound = new Error(`ENOENT: ${filePath}`);
+      notFound.code = 'ENOENT';
+      callback(notFound, null);
+      return;
+    }
+
+    const candidate = variants[index];
+    fs.stat(candidate, (error, stats) => {
+      if (error) {
+        if (error.code === 'ENOENT') {
+          tryVariant(index + 1);
+          return;
+        }
+        callback(error, null);
+        return;
+      }
+
+      callback(null, { path: candidate, stats });
+    });
+  };
+
+  tryVariant(0);
+};
+
 const safeJoin = (base, targetPath) => {
   const target = path.resolve(base, targetPath);
   if (!target.startsWith(base)) {
@@ -415,20 +464,15 @@ const manifestHandler = (res) => {
   res.end(body);
 };
 
-const serveFile = (res, filePath, method) => {
-  fs.stat(filePath, (statError, stats) => {
-    if (statError || !stats.isFile()) {
-      res.statusCode = statError && statError.code === 'ENOENT' ? 404 : 403;
-      res.end(statError && statError.code === 'ENOENT' ? 'Not Found' : 'Forbidden');
-      return;
-    }
-
-    const ext = path.extname(filePath).toLowerCase();
+const serveFile = (res, filePath, method, stats) => {
+  const handleFile = (resolvedPath, resolvedStats) => {
+    const ext = path.extname(resolvedPath).toLowerCase();
     const contentType = mimeTypes[ext] || 'application/octet-stream';
     const headers = { 'Content-Type': contentType };
 
     const isImmutableAsset =
-      filePath.includes(`${path.sep}assets${path.sep}`) && /\.[0-9a-f]{8,}\./i.test(path.basename(filePath));
+      resolvedPath.includes(`${path.sep}assets${path.sep}`) &&
+      /\.[0-9a-f]{8,}\./i.test(path.basename(resolvedPath));
     if (isImmutableAsset) {
       headers['Cache-Control'] = 'public, max-age=31536000, immutable';
     }
@@ -440,7 +484,7 @@ const serveFile = (res, filePath, method) => {
       return;
     }
 
-    const stream = fs.createReadStream(filePath);
+    const stream = fs.createReadStream(resolvedPath);
     stream.on('error', (error) => {
       console.error('[simple-serve] Failed to read file:', error);
       if (!res.headersSent) {
@@ -449,6 +493,22 @@ const serveFile = (res, filePath, method) => {
       res.end('Internal Server Error');
     });
     stream.pipe(res);
+  };
+
+  if (stats) {
+    handleFile(filePath, stats);
+    return;
+  }
+
+  statWithUnicodeVariants(filePath, (statError, result) => {
+    if (statError || !result?.stats?.isFile()) {
+      const statusCode = statError && statError.code === 'ENOENT' ? 404 : 403;
+      res.statusCode = statusCode;
+      res.end(statusCode === 404 ? 'Not Found' : 'Forbidden');
+      return;
+    }
+
+    handleFile(result.path, result.stats);
   });
 };
 
@@ -492,17 +552,29 @@ const tryCandidates = (res, candidates, method) => {
   }
 
   const [current, ...rest] = candidates;
-  fs.stat(current, (statError, stats) => {
+  statWithUnicodeVariants(current, (statError, result) => {
     if (statError) {
-      tryCandidates(res, rest, method);
+      if (statError.code === 'ENOENT') {
+        tryCandidates(res, rest, method);
+        return;
+      }
+      console.error('[simple-serve] Failed to stat path:', current, statError);
+      res.statusCode = 500;
+      res.end('Internal Server Error');
       return;
     }
 
+    const { path: resolvedPath, stats } = result;
+
     if (stats.isDirectory()) {
-      const indexPath = path.join(current, 'index.html');
-      fs.stat(indexPath, (indexError, indexStats) => {
-        if (!indexError && indexStats.isFile()) {
-          serveFile(res, indexPath, method);
+      const indexPath = path.join(resolvedPath, 'index.html');
+      statWithUnicodeVariants(indexPath, (indexError, indexResult) => {
+        if (!indexError && indexResult?.stats?.isFile()) {
+          serveFile(res, indexResult.path, method, indexResult.stats);
+        } else if (indexError && indexError.code !== 'ENOENT') {
+          console.error('[simple-serve] Failed to stat index path:', indexPath, indexError);
+          res.statusCode = 500;
+          res.end('Internal Server Error');
         } else {
           tryCandidates(res, rest, method);
         }
@@ -511,7 +583,7 @@ const tryCandidates = (res, candidates, method) => {
     }
 
     if (stats.isFile()) {
-      serveFile(res, current, method);
+      serveFile(res, resolvedPath, method, stats);
       return;
     }
 
