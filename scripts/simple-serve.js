@@ -541,6 +541,21 @@ const createCandidatePaths = (pathname) => {
     }
   }
 
+  if (trimmed) {
+    const fromPublic = safeJoin(publicDir, trimmed);
+    if (fromPublic) {
+      candidates.add(fromPublic);
+    }
+
+    if (trimmed.startsWith('subject-assets/')) {
+      const relativeSubjectAssetPath = trimmed.replace(/^subject-assets\//, '');
+      const subjectAssetTarget = safeJoin(publicAssetsDir, relativeSubjectAssetPath);
+      if (subjectAssetTarget) {
+        candidates.add(subjectAssetTarget);
+      }
+    }
+  }
+
   return Array.from(candidates);
 };
 
