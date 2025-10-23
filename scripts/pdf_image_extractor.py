@@ -23,6 +23,45 @@ except ImportError as exc:  # pragma: no cover - import guard
     ) from exc
 
 
+def _disable_mupdf_diagnostics() -> None:
+    """Attempt to silence noisy MuPDF diagnostics printed to stderr."""
+
+    tools = getattr(fitz, "TOOLS", None)
+    if tools is None:
+        return
+
+    try:
+        # Newer versions of PyMuPDF expose ``mupdf_display_errors`` which can
+        # completely silence diagnostic output.  Older versions may lack this
+        # API, so guard the call defensively.
+        disable_errors = getattr(tools, "mupdf_display_errors", None)
+        if callable(disable_errors):
+            disable_errors(False)
+
+        # ``mupdf_log_level`` was introduced in PyMuPDF 1.21.0.  When
+        # available, bumping the log level to ``50`` (critical only) ensures
+        # low-severity warnings are not emitted even if error display remains
+        # enabled.
+        set_log_level = getattr(tools, "mupdf_log_level", None)
+        if callable(set_log_level):
+            try:
+                # ``fitz.CS_WARN`` was renamed to ``fitz.ERROR`` in later
+                # releases; fall back to the numeric literal to avoid
+                # attribute errors across versions.
+                CRITICAL_LEVEL = getattr(fitz, "ERROR", None) or getattr(fitz, "CS_WARN", None) or 50
+            except Exception:  # pragma: no cover - extremely defensive
+                CRITICAL_LEVEL = 50
+            set_log_level(CRITICAL_LEVEL)
+    except Exception:  # pragma: no cover - diagnostics should never break extraction
+        # If anything goes wrong we silently ignore it so the extractor can
+        # continue operating; the worst case is that MuPDF warnings remain
+        # visible, which mirrors the previous behaviour.
+        return
+
+
+_disable_mupdf_diagnostics()
+
+
 Metadata = Tuple[int, str]
 
 

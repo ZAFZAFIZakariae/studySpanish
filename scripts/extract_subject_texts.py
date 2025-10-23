@@ -18,13 +18,14 @@ import subprocess
 import textwrap
 import re
 import sys
+import tempfile
 import zipfile
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from io import StringIO
 from pathlib import Path
 import shutil
-from typing import Any, Callable, Sequence
+from typing import Any, Callable, Iterator, Sequence
 
 try:  # pragma: no cover - optional dependency may be missing in CI environments
     from docx import Document  # type: ignore
@@ -72,7 +73,8 @@ PUBLIC_ASSETS_DIR = ROOT / "public" / "subject-assets"
 
 
 _NOISY_PDF_IMAGE_WARNING = re.compile(
-    r"^Ignoring wrong pointing object \d+ \d+ \(offset \d+\)$"
+    r"^(?:warning:\s*)?Ignoring wrong pointing object \d+ \d+ \(offset \d+\)$",
+    re.IGNORECASE,
 )
 
 
@@ -86,6 +88,96 @@ def _relay_extractor_output(stdout_text: str, stderr_text: str) -> None:
             if _NOISY_PDF_IMAGE_WARNING.match(line.strip()):
                 continue
             print(line, file=sys.stderr)
+
+
+@contextlib.contextmanager
+def _capture_pypdf_warnings() -> Iterator[list[str]]:
+    """Temporarily capture PyPDF warnings for post-processing."""
+
+    captured: list[str] = []
+
+    if PdfReader is None:
+        yield captured
+        return
+
+    try:
+        import pypdf._reader as pypdf_reader  # type: ignore
+        import pypdf._utils as pypdf_utils  # type: ignore
+    except Exception:
+        yield captured
+        return
+
+    original_logger_warning = pypdf_utils.logger_warning
+    original_reader_warning = getattr(pypdf_reader, "logger_warning", None)
+
+    def capture(message: str, source: str) -> None:
+        captured.append(message)
+        if _NOISY_PDF_IMAGE_WARNING.match(message.strip()):
+            return
+        original_logger_warning(message, source)
+
+    pypdf_utils.logger_warning = capture
+    if original_reader_warning is not None:
+        pypdf_reader.logger_warning = capture  # type: ignore[attr-defined]
+    try:
+        yield captured
+    finally:
+        pypdf_utils.logger_warning = original_logger_warning
+        if original_reader_warning is not None:
+            pypdf_reader.logger_warning = original_reader_warning  # type: ignore[attr-defined]
+
+
+def _repair_pdf_with_pymupdf(pdf_path: Path) -> tuple[Path, Callable[[], None]] | None:
+    """Return a cleaned temporary copy of ``pdf_path`` when possible."""
+
+    if not _ensure_pymupdf_available():
+        return None
+
+    try:
+        import fitz  # type: ignore
+    except ImportError:
+        return None
+
+    temp_dir = Path(tempfile.mkdtemp(prefix="pdf-repair-"))
+
+    try:
+        document = fitz.open(pdf_path)
+    except Exception:
+        shutil.rmtree(temp_dir, ignore_errors=True)
+        return None
+
+    repaired_path = temp_dir / pdf_path.name
+
+    try:
+        document.save(
+            repaired_path.as_posix(),
+            clean=True,
+            garbage=4,
+            deflate=True,
+        )
+    except Exception:
+        document.close()
+        shutil.rmtree(temp_dir, ignore_errors=True)
+        return None
+
+    document.close()
+
+    def cleanup() -> None:
+        shutil.rmtree(temp_dir, ignore_errors=True)
+
+    return repaired_path, cleanup
+
+
+def _create_pypdf_reader(pdf_path: Path) -> tuple[Any, list[str]]:
+    """Instantiate ``PdfReader`` while capturing diagnostic warnings."""
+
+    if PdfReader is None:
+        raise RuntimeError("PdfReader dependency is not available")
+
+    with _capture_pypdf_warnings() as captured_warnings:
+        reader = PdfReader(pdf_path)
+
+    return reader, list(captured_warnings)
 
 
 def _log(message: str) -> None:
@@ -531,48 +623,82 @@ def _extract_pdf_with_optional_images(
             [],
         )
 
-    reader = PdfReader(path)
-    pieces: list[str] = []
-    metadata: list[ImageMetadata] = []
+    reader: Any | None = None
+    cleanup_reader: Callable[[], None] | None = None
 
-    if image_output_dir is None:
-        page_images, collected_metadata = _extract_images_to_public_assets(path, pdf_reader=reader)
-        metadata.extend(collected_metadata)
-        target_dir: Path | None = None
-    else:
-        target_dir = _initialise_image_output_dir(image_output_dir, path)
-        page_images = {}
+    try:
+        reader, captured_warnings = _create_pypdf_reader(path)
+        needs_repair = any("wrong pointing object" in warning.lower() for warning in captured_warnings)
 
-    for index, page in enumerate(reader.pages, start=1):
-        text = (page.extract_text() or "").strip()
-        if target_dir is not None:
-            images, page_metadata = _store_page_images(page, index, target_dir, path)
-            metadata.extend(page_metadata)
+        if needs_repair:
+            repair_result = _repair_pdf_with_pymupdf(path)
+            if repair_result is not None:
+                _log(
+                    f"Detected broken cross-reference entries in {path}; rebuilt a clean copy before extraction."
+                )
+                closer = getattr(reader, "close", None)
+                if callable(closer):
+                    with contextlib.suppress(Exception):
+                        closer()
+                repaired_path, cleanup_reader = repair_result
+                reader, captured_warnings = _create_pypdf_reader(repaired_path)
+                if any("wrong pointing object" in warning.lower() for warning in captured_warnings):
+                    _log(
+                        f"PyPDF still reported cross-reference issues for {path} after repair; proceeding with cleaned copy."
+                    )
+            else:
+                _log(
+                    f"Detected broken cross-reference entries in {path} but could not repair them automatically."
+                )
+
+        pieces: list[str] = []
+        metadata: list[ImageMetadata] = []
+
+        if image_output_dir is None:
+            page_images, collected_metadata = _extract_images_to_public_assets(path, pdf_reader=reader)
+            metadata.extend(collected_metadata)
+            target_dir: Path | None = None
         else:
-            images = page_images.get(index, [])
-        if not text and not images:
-            continue
+            target_dir = _initialise_image_output_dir(image_output_dir, path)
+            page_images = {}
 
-        page_lines = [f"### Page {index}"]
-        if text:
-            page_lines.append(text)
-        for figure_index, image_path in enumerate(images, start=1):
-            page_lines.append(
-                f"![Page {index}, Figure {figure_index}]({_format_markdown_image_path(image_path)})"
+        for index, page in enumerate(reader.pages, start=1):
+            text = (page.extract_text() or "").strip()
+            if target_dir is not None:
+                images, page_metadata = _store_page_images(page, index, target_dir, path)
+                metadata.extend(page_metadata)
+            else:
+                images = page_images.get(index, [])
+            if not text and not images:
+                continue
+
+            page_lines = [f"### Page {index}"]
+            if text:
+                page_lines.append(text)
+            for figure_index, image_path in enumerate(images, start=1):
+                page_lines.append(
+                    f"![Page {index}, Figure {figure_index}]({_format_markdown_image_path(image_path)})"
+                )
+
+            pieces.append("\n".join(page_lines))
+
+        if not pieces:
+            return (
+                ExtractionResult(
+                    "[No text content extracted]",
+                    ["PDF parser returned no text; file may be scanned images."],
+                ),
+                metadata,
             )
 
-        pieces.append("\n".join(page_lines))
-
-    if not pieces:
-        return (
-            ExtractionResult(
-                "[No text content extracted]",
-                ["PDF parser returned no text; file may be scanned images."],
-            ),
-            metadata,
-        )
-
-    return ExtractionResult("\n\n".join(pieces), []), metadata
+        return ExtractionResult("\n\n".join(pieces), []), metadata
+    finally:
+        closer = getattr(reader, "close", None)
+        if callable(closer):
+            with contextlib.suppress(Exception):
+                closer()
+        if cleanup_reader is not None:
+            cleanup_reader()
 
 
 def extract_pdf(path: Path, *, image_output_dir: Path | None = None) -> ExtractionResult:
