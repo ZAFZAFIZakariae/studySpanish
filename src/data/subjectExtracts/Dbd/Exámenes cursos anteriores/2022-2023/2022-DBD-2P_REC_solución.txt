@@ -35,7 +35,7 @@ t9  w2(x) BE Implícito  BE(T2) BE(T2) Desbloqueado
 t10  c2 (Desbloqueo)  Desbloqueado Desbloqueado Desbloqueado
 
 El plan es aceptado por el protocolo B2F Implícito
-![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_001.png)
 
 ### Page 2
 c) (0,15 puntos) Pon un ejemplo de un plan con tres transacciones en el que, con el protocolo B2F explícito, se daría
@@ -76,7 +76,7 @@ t23
 
 Para resolver el bloqueo mortal el sistema abortará alguna de las transacciones implicadas (en este caso T1 o T2) y luego
 volvería a lanzarla.
-![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_002.png)
 
 ### Page 3
 2. (0,25 puntos)
@@ -106,8 +106,7 @@ La operación r1(X) de T1 se aborta ya que MT(T1) < MT_E(X) (t0 < t3). T1 debe r
 sistema.
 En t6 el protocolo ha detectado que T1 está intentando leer un dato modificado por una transacción que en el plan en
 serie equivalente cronológico es más joven que ella.
-![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_003.png)
-![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_003_img_001.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_003_img_001.png)
 
 ### Page 4
 3. (0,25 puntos)
@@ -138,7 +137,7 @@ c) Hay varias posibilidades:
 x0 t5 t2
 x1 t5 t5
 x2 t8 t8
-![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_004.png)
 
 ### Page 5
 Cada una de las 20 cuestiones siguientes vale 0,1 puntos. Cada cuestión mal contestada resta 1/3 de una respuesta
@@ -173,7 +172,7 @@ a) 200.000 si A es clave y 2.000 si A no es clave y cada valor de A se repite 10
 b) 200.000 si A es clave y 20.000 si A no es clave y cada valor de A se repite 10 veces.
 c) 20.000 si A es clave y 20.000 si A no es clave y cada valor de A se repite 10 veces.
 d) 20.000 si A es clave y 2.000 si A no es clave y cada valor de A se repite 10 veces.
-![Page 5, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_005.png)
 
 ### Page 6
 6) ¿Qué afirmación sobre el fichero disperso es FALSA?
@@ -208,7 +207,7 @@ a) Un registro es la unidad de transferencia de datos entre memoria principal y 
 b) Un registro es la unidad de direccionamiento de datos.
 c) Desde un punto de vista lógico, un fichero es una secuencia de registros.
 d) Un bloque se puede almacenar en dos discos distintos.
-![Page 6, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_006.png)
 
 ### Page 7
 11) ¿Cuál será la mejor implementación de una tabla cuya clave primaria está formada por todas sus columnas y cuya
@@ -242,7 +241,7 @@ a) La búsqueda lineal se puede aplicar siempre sea cual sea la condición de la
 b) La búsqueda binaria se puede aplicar siempre sea cual sea la condición de la selección.
 c) La búsqueda con direccionamiento calculado sólo se puede aplicar a condiciones de igualdad.
 d) La búsqueda con índice sólo se puede aplicar a condiciones de igualdad y de rango.
-![Page 7, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_007.png)
 
 ### Page 8
 16) ¿Sea R una tabla con 1.000 tuplas y sea la operación del álgebra relacional: A=7 R, ¿cuál de las siguientes afirmaciones
@@ -273,4 +272,4 @@ b) Es útil definir índices sobre las claves ajenas.
 c) Es útil definir índices sobre atributos que pueden ser nulos y que se usan en condiciones de desigualdad.
 d)  En general, una organización desordenada es adecuada para cualquier tabla si no se conoce ni el tamaño que va a
 tener ni las consultas que se van a realizar sobre ella.
-![Page 8, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución-images/2022-DBD-2P_REC_solución_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-2P_REC_solución/2022-DBD-2P_REC_solución_page_008.png)

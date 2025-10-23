@@ -48,7 +48,7 @@ Contesta a las siguientes preguntas:
 anula las transacciones activas (interrumpidas) en el momento del cierre, por lo tanto, al volver a arrancar el servidor,  el sistema
 debe ejecutar el proceso de recuperación de la base de datos. Este modo de cierre simula una terminación anormal debida a un fallo
 del sistema con pérdida de memoria principal.
-![Page 1, Figure 1](subjects/Dbd/Prácticas/Práctica 3/Práctica3_boletin-images/Práctica3_boletin_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 3/Práctica3_boletin/Práctica3_boletin_page_001.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -94,7 +94,7 @@ c) Vuelve a la sesión de Cosmos:
 i) Realizar varias transacción sobre la tabla Recupera (alguna confirmando y alguna anulando) y
 observa después de cada operación individual el contenido de diario con la consulta (ejecutada en
 la sesión de sys):
-![Page 2, Figure 1](subjects/Dbd/Prácticas/Práctica 3/Práctica3_boletin-images/Práctica3_boletin_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 3/Práctica3_boletin/Práctica3_boletin_page_002.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -109,4 +109,4 @@ ii) Deshabilita  el comportamiento del servidor sobre la información de diario 
 ALTER DATABASE DROP SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
 ALTER DATABASE DROP SUPPLEMENTAL LOG DATA;
 e) Vuelve a la sesión de Cosmos y borra la tabla Recupera.
-![Page 3, Figure 1](subjects/Dbd/Prácticas/Práctica 3/Práctica3_boletin-images/Práctica3_boletin_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 3/Práctica3_boletin/Práctica3_boletin_page_003.png)

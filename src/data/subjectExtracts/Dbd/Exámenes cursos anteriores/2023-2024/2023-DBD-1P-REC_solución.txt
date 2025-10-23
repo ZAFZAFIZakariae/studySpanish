@@ -44,7 +44,7 @@ Coste total:  2 + (10000/50)/10 = 22
 tiene 500 filas con un factor de bloque de 10,  indica, para cada uno de los supuestos que aparecen la
 siguiente tabla qué tipo de índice será I (primario, secundario o de agrupación), si será disperso o denso
 y cuántas entradas tendrá el índice en cada caso.
-![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_001.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -111,7 +111,7 @@ Y sea la siguiente consulta en algebra relacional:
 A,D(A>BT  A,B,D B=E C=true(R×S))
 
 a) (0,2 puntos) Construye el árbol de consulta asociado.
-![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_002.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -123,21 +123,18 @@ expresión de álgebra relacional equivalente al último árbol generado en la p
 A,D A>BT  A,D ( C=true R  B=E S)
 c) (0,4 puntos) Optimiza el árbol de consulta obtenido, indicando cada una de las reglas utilizadas y
 dibujando el árbol resultante de la aplicación de cada una. Usa el algoritmo que se te proporciona.
-![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_003.png)
-![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_003_img_001.png)
-![Page 3, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_003_img_002.png)
-![Page 3, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_003_img_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_003_img_001.png)
+![Page 3, Figure 2](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_003_img_002.png)
+![Page 3, Figure 3](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_003_img_003.png)
 
 ### Page 4
 Departamento de Sistemas Informáticos y Computación
           4
-![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_004.png)
-![Page 4, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_004_img_001.png)
-![Page 4, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_004_img_002.png)
-![Page 4, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_004_img_003.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_004_img_001.png)
+![Page 4, Figure 2](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_004_img_002.png)
+![Page 4, Figure 3](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_004_img_003.png)
 
 ### Page 5
 Departamento de Sistemas Informáticos y Computación
           5
-![Page 5, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_005.png)
-![Page 5, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución-images/2023-DBD-1P-REC_solución_page_005_img_001.png)
+![Page 5, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2023-2024/2023-DBD-1P-REC_solución/2023-DBD-1P-REC_solución_page_005_img_001.png)

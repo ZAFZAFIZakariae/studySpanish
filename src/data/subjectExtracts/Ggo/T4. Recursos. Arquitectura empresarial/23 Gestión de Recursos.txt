@@ -3,72 +3,144 @@ Source: subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recu
 
 ### Page 1
 Gestión de recursos de TIAndrés Boza
-![Page 1, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_001.png)
-![Page 1, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_001_img_004.png)
-![Page 1, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_001_img_005.png)
-![Page 1, Figure 4](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_001_img_006.png)
+![Page 1, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_001_img_001.jpeg)
+![Page 1, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_001_img_002.jpeg)
+![Page 1, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_001_img_003.jpeg)
+![Page 1, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_001_img_004.png)
+![Page 1, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_001_img_005.png)
+![Page 1, Figure 6](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_001_img_006.png)
 
 ### Page 2
 Introducción§Para el marco COBIT, un recursoes cualquier activode la empresa que puede ayudar a la organización a conseguir sus objetivos
-![Page 2, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_002.png)
-![Page 2, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_002_img_007.png)
+![Page 2, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_001.jpeg)
+![Page 2, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_002.jpeg)
+![Page 2, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_003.jpeg)
+![Page 2, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_004.png)
+![Page 2, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_005.png)
+![Page 2, Figure 6](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_006.jpeg)
+![Page 2, Figure 7](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_002_img_007.png)
 
 ### Page 3
 Introducción§Así, uno de los elementos en el Gobierno de SI/TI es la Gestión de Recursos de SI/TIpara ayudar a la organización a conseguir sus objetivos
-![Page 3, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_001.jpeg)
+![Page 3, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_002.jpeg)
+![Page 3, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_003.jpeg)
+![Page 3, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_004.png)
+![Page 3, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_005.png)
+![Page 3, Figure 6](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_006.jpeg)
+![Page 3, Figure 7](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_003_img_007.png)
 
 ### Page 4
 Recursos SI/TI§Según las áreas de enfoque de gobierno de TI ITGI (2007) la administración de recursos se refiere a la inversión óptima ya la adecuada administraciónde los recursos críticos de TI tales como: aplicaciones, información, infraestructura y datos.
-![Page 4, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_001.jpeg)
+![Page 4, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_002.jpeg)
+![Page 4, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_003.jpeg)
+![Page 4, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_004.png)
+![Page 4, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_005.png)
+![Page 4, Figure 6](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_006.jpeg)
+![Page 4, Figure 7](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_004_img_007.png)
 
 ### Page 5
 Recursos SI/TI§En el marco de gobierno COBIT se identifican 4 recursos de TI:oAplicacionesoInformaciónoInfraestructuraoPersonas
-![Page 5, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_005_img_001.jpeg)
+![Page 5, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_005_img_002.jpeg)
+![Page 5, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_005_img_003.jpeg)
+![Page 5, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_005_img_004.png)
+![Page 5, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_005_img_005.png)
 
 ### Page 6
 Recursos SI/TI§En el marco de gobierno COBIT se identifican 4 recursos de TI:oLas aplicaciones, que incluyen tanto sistemas de usuarios automatizados como procedimientos manuales que procesan información.oLa información, es decir los datosen todas sus formas, de entrada, procesados y generados por los sistemas de información, en cualquier forma en que sean utilizados por el negocio.
-![Page 6, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_006_img_001.jpeg)
+![Page 6, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_006_img_002.jpeg)
+![Page 6, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_006_img_003.jpeg)
+![Page 6, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_006_img_004.png)
+![Page 6, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_006_img_005.png)
 
 ### Page 7
 Recursos SI/TI§En el marco de gobierno COBIT se identifican 4 recursos de TI:oLas aplicaciones, que incluyen tanto sistemas de usuarios automatizados como procedimientos manuales que procesan información.oLa información, es decir los datosen todas sus formas, de entrada, procesados y generados por los sistemas de información, en cualquier forma en que sean utilizados por el negocio.oActividad:¿Podemos tener un conjunto de datos que sean utilizados por varias aplicaciones?
-![Page 7, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_007_img_001.jpeg)
+![Page 7, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_007_img_002.jpeg)
+![Page 7, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_007_img_003.jpeg)
+![Page 7, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_007_img_004.png)
+![Page 7, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_007_img_005.png)
 
 ### Page 8
 Recursos SI/TI§En el marco de gobierno COBIT se identifican 4 recursos de TI:oLa infraestructura, esto es la tecnología y las instalaciones (hardware, sistemas operativos, sistemas de administración de base de datos, redes, multimedia, etc., así como el sitio donde se encuentran y el ambiente que los soporta) que permiten el procesamiento de las aplicaciones.oLas personas, el equipo humano requerido para planear, organizar, adquirir, implementar, entregar, soportar, monitorear y evaluar los sistemas y los servicios de información. Las personas pueden ser internas, por outsourcing o contratadas, de acuerdo a como se requieran.
-![Page 8, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_008_img_001.jpeg)
+![Page 8, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_008_img_002.jpeg)
+![Page 8, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_008_img_003.jpeg)
+![Page 8, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_008_img_004.png)
+![Page 8, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_008_img_005.png)
 
 ### Page 9
 Recursos SI/TI§En el marco de gobierno COBIT se identifican 4 recursos de TI:oAplicacionesoInformaciónoInfraestructuraoPersonas
-![Page 9, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_009_img_001.jpeg)
+![Page 9, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_009_img_002.jpeg)
+![Page 9, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_009_img_003.jpeg)
+![Page 9, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_009_img_004.png)
+![Page 9, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_009_img_005.png)
 
 ### Page 10
 Recursos SI/TI§Los recursos pueden ser recursos propios o recursos externalizados.oAplicacionesoInformaciónoInfraestructuraoPersonas
-![Page 10, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_010.png)
+![Page 10, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_010_img_001.jpeg)
+![Page 10, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_010_img_002.jpeg)
+![Page 10, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_010_img_003.jpeg)
+![Page 10, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_010_img_004.png)
+![Page 10, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_010_img_005.png)
 
 ### Page 11
 Externalización recursos SI/TI§En los recursos externalizados ola relación cliente-proveedor debe ser más profunda,omás personalizadayobasada en el logro de niveles de servicio formalizados en acuerdosconcretosoCon el tiempo y según su grado de acercamiento a las competencias básicas del negocio, pasarán a convertirse en socios estratégicos
-![Page 11, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_011.png)
+![Page 11, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_011_img_001.jpeg)
+![Page 11, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_011_img_002.jpeg)
+![Page 11, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_011_img_003.jpeg)
+![Page 11, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_011_img_004.png)
+![Page 11, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_011_img_005.png)
 
 ### Page 12
 Externalización recursos SI/TI§Beneficios:oMayoreficienciasi se trata de un especialistaoLos directivosse centranen competencias esencialesoLiberarrecursospara actividades más estratégicasoMayor flexibilidady adaptacióna cambiosoReducciónde costesfijosoReducciónde costespor aplicación de economías de escalaoNueva estructura de costes al pasar de costes fijos a variablesoReducción de riesgos al compartirlos con el proveedor
-![Page 12, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_012_img_001.jpeg)
+![Page 12, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_012_img_002.jpeg)
+![Page 12, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_012_img_003.jpeg)
+![Page 12, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_012_img_004.png)
+![Page 12, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_012_img_005.png)
 
 ### Page 13
 Externalización recursos SI/TI§Inconvenientes:oPerdida de control. Se deja de realizar la actividad de forma interna y se pierde la fuente de aprendizajeoPosibles dependenciasdel proveedor y aumentos de coste por cautividadoVariaciones en la calidad del bien o servicio dado al cliente finaloProblemaspor la reestructuración de personal (interno) al perdersus funciones
-![Page 13, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_013.png)
+![Page 13, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_013_img_001.jpeg)
+![Page 13, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_013_img_002.jpeg)
+![Page 13, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_013_img_003.jpeg)
+![Page 13, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_013_img_004.png)
+![Page 13, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_013_img_005.png)
 
 ### Page 14
 Normas y Modelos§ISO 37500 Directrices para la contratación externa§Esta norma facilita la descripción de guías y procesos que permitenla monitorización y gestión continua de acuerdos de externalizaciónpara sostener la entrega de valor entre cliente y proveedor
-![Page 14, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_014.png)
+![Page 14, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_014_img_001.jpeg)
+![Page 14, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_014_img_002.jpeg)
+![Page 14, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_014_img_003.jpeg)
+![Page 14, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_014_img_004.png)
+![Page 14, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_014_img_005.png)
 
 ### Page 15
 Normas y Modelos§ISO 37500 Directrices para la contratación externaoFase 1. Análisis estratégico de la externalización. •Se evalúanoportunidadesde externalización,  y se establece la estrategia para cumplir los objetivos de la organizaciónoFase 2. Inicio y selección. •Se especificanlos requisitospara los servicios que se propone externalizar, se seleccionan a proveedores adecuados y se establecen los acuerdos de externalización. Los proveedores proporcionan una solución de externalización basada en los requisitos.
-![Page 15, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_015.png)
+![Page 15, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_015_img_001.jpeg)
+![Page 15, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_015_img_002.jpeg)
+![Page 15, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_015_img_003.jpeg)
+![Page 15, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_015_img_004.png)
+![Page 15, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_015_img_005.png)
 
 ### Page 16
 Normas y Modelos§ISO 37500 Directrices para la contratación externaoFase 3. Transición. •El proveedor establece las capacidades de entrega en su entorno, se realiza el proceso de entrega, y se prueban los procesos para asegurar su calidadoFase 4. Entrega de valor. •Se asegura que tanto el clientecomo el proveedormantienen el valor del acuerdo. El cliente monitoriza el aprovisionamientode servicios por parte del proveedor.
-![Page 16, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_016.png)
+![Page 16, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_016_img_001.jpeg)
+![Page 16, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_016_img_002.jpeg)
+![Page 16, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_016_img_003.jpeg)
+![Page 16, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_016_img_004.png)
+![Page 16, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_016_img_005.png)
 
 ### Page 17
 Gestión de recursos de TIAndrés Boza
-![Page 17, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos-images/23 Gestión de Recursos_page_017.png)
+![Page 17, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_017_img_001.jpeg)
+![Page 17, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_017_img_002.jpeg)
+![Page 17, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_017_img_003.jpeg)
+![Page 17, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_017_img_004.png)
+![Page 17, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_017_img_005.png)
+![Page 17, Figure 6](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/23 Gestión de Recursos/23 Gestión de Recursos_page_017_img_006.png)

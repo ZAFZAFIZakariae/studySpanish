@@ -51,10 +51,9 @@ P= r2(y), r1(x), r1(y), r3(z), y:= x+2y, w1(y), r2(x), y:=x+y, r3(y), z1:=z+y,
   c1, w2(y), r2(z), z:=z-y, w2(z), c2, r3(z), z:=z+z1, w3(z), c3
 Comprueba qué protocolos de los vistos en clase (B2F, OMT y MV) permitirían dicho plan. Indica cual será
 el valor de los elementos de datos X, Y y Z al terminar el plan, suponiendo que sus valores iniciales son 1,
-![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_-images/Cuestiones _T4__page_001.png)
-![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_-images/Cuestiones _T4__page_001_img_001.png)
-![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_-images/Cuestiones _T4__page_001_img_002.png)
-![Page 1, Figure 4](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_-images/Cuestiones _T4__page_001_img_003.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 4/Cuestiones _T4_/Cuestiones _T4__page_001_img_001.png)
+![Page 1, Figure 2](../../public/subject-assets/Dbd/Teoria/Tema 4/Cuestiones _T4_/Cuestiones _T4__page_001_img_002.png)
+![Page 1, Figure 3](../../public/subject-assets/Dbd/Teoria/Tema 4/Cuestiones _T4_/Cuestiones _T4__page_001_img_003.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -100,5 +99,4 @@ P= r1(x), r3(y), w1(x), r2(x), r1(y), w3(y), c1, w2(x), r3(x), c2, c3
 Comprueba si los protocolos B2F explícito e implícito , OMT y multiversión  admiten el plan P. Indica las
 operaciones que se realizan en cada uno de los instantes. Si el protocolo lo admite, ¿cuál es el plan en serie
 equivalente por conflictos?
-![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_-images/Cuestiones _T4__page_002.png)
-![Page 2, Figure 2](subjects/Dbd/Teoria/Tema 4/Cuestiones _T4_-images/Cuestiones _T4__page_002_img_001.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 4/Cuestiones _T4_/Cuestiones _T4__page_002_img_001.png)

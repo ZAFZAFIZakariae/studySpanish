@@ -4,28 +4,32 @@ Source: subjects/Admeav/Teoria/slides/T0_Presentation.pdf
 ### Page 1
 Advanced methods of artificial vision
 Presentation
-![Page 1, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_001_img_001.jpeg)
+![Page 1, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_001_img_002.jpeg)
+![Page 1, Figure 3](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_001_img_003.jpeg)
 
 ### Page 2
 Faculty
 • Aula 4P - 1.2
 – Rocío del Amor, madeam2.upv.es
 2
-![Page 2, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_002.png)
-![Page 2, Figure 2](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_002_img_002.png)
-![Page 2, Figure 3](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_002_img_003.png)
+![Page 2, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_002_img_001.jpeg)
+![Page 2, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_002_img_002.png)
+![Page 2, Figure 3](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_002_img_003.png)
 
 ### Page 3
 Syllabus
 3
-![Page 3, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_003.png)
-![Page 3, Figure 2](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_003_img_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_003_img_001.jpeg)
+![Page 3, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_003_img_002.png)
+![Page 3, Figure 3](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_003_img_003.png)
 
 ### Page 4
 Computer vision
 4
-![Page 4, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_004.png)
-![Page 4, Figure 2](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_004_img_003.png)
+![Page 4, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_004_img_001.jpeg)
+![Page 4, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_004_img_002.png)
+![Page 4, Figure 3](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_004_img_003.png)
 
 ### Page 5
 Syllabus
@@ -41,7 +45,8 @@ T6. Autoencoders
 T7. Segmentation (P3)
 T8. Object detection and tracking (P4)
 T9. Generative adversarial networks (P5)
-![Page 5, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_005_img_001.jpeg)
+![Page 5, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_005_img_002.png)
 
 ### Page 6
 Syllabus
@@ -82,52 +87,53 @@ Exam (T1-T5)
 Exam (T6-T9)
 15/01/2025
 Project presentation
-![Page 6, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006.png)
-![Page 6, Figure 2](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_003.png)
-![Page 6, Figure 3](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_004.png)
-![Page 6, Figure 4](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_005.png)
-![Page 6, Figure 5](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_006.png)
-![Page 6, Figure 6](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_007.png)
-![Page 6, Figure 7](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_008.png)
-![Page 6, Figure 8](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_009.png)
-![Page 6, Figure 9](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_010.png)
-![Page 6, Figure 10](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_011.png)
-![Page 6, Figure 11](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_012.png)
-![Page 6, Figure 12](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_013.png)
-![Page 6, Figure 13](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_014.png)
-![Page 6, Figure 14](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_015.png)
-![Page 6, Figure 15](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_016.png)
-![Page 6, Figure 16](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_017.png)
-![Page 6, Figure 17](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_018.png)
-![Page 6, Figure 18](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_019.png)
-![Page 6, Figure 19](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_020.png)
-![Page 6, Figure 20](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_021.png)
-![Page 6, Figure 21](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_022.png)
-![Page 6, Figure 22](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_023.png)
-![Page 6, Figure 23](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_024.png)
-![Page 6, Figure 24](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_025.png)
-![Page 6, Figure 25](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_026.png)
-![Page 6, Figure 26](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_027.png)
-![Page 6, Figure 27](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_028.png)
-![Page 6, Figure 28](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_029.png)
-![Page 6, Figure 29](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_030.png)
-![Page 6, Figure 30](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_031.png)
-![Page 6, Figure 31](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_032.png)
-![Page 6, Figure 32](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_033.png)
-![Page 6, Figure 33](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_034.png)
-![Page 6, Figure 34](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_035.png)
-![Page 6, Figure 35](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_036.png)
-![Page 6, Figure 36](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_037.png)
-![Page 6, Figure 37](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_038.png)
-![Page 6, Figure 38](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_039.png)
-![Page 6, Figure 39](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_040.png)
-![Page 6, Figure 40](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_041.png)
-![Page 6, Figure 41](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_042.png)
-![Page 6, Figure 42](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_043.png)
-![Page 6, Figure 43](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_044.png)
-![Page 6, Figure 44](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_045.png)
-![Page 6, Figure 45](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_046.png)
-![Page 6, Figure 46](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_006_img_047.png)
+![Page 6, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_001.jpeg)
+![Page 6, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_002.png)
+![Page 6, Figure 3](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_003.png)
+![Page 6, Figure 4](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_004.png)
+![Page 6, Figure 5](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_005.png)
+![Page 6, Figure 6](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_006.png)
+![Page 6, Figure 7](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_007.png)
+![Page 6, Figure 8](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_008.png)
+![Page 6, Figure 9](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_009.png)
+![Page 6, Figure 10](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_010.png)
+![Page 6, Figure 11](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_011.png)
+![Page 6, Figure 12](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_012.png)
+![Page 6, Figure 13](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_013.png)
+![Page 6, Figure 14](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_014.png)
+![Page 6, Figure 15](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_015.png)
+![Page 6, Figure 16](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_016.png)
+![Page 6, Figure 17](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_017.png)
+![Page 6, Figure 18](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_018.png)
+![Page 6, Figure 19](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_019.png)
+![Page 6, Figure 20](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_020.png)
+![Page 6, Figure 21](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_021.png)
+![Page 6, Figure 22](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_022.png)
+![Page 6, Figure 23](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_023.png)
+![Page 6, Figure 24](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_024.png)
+![Page 6, Figure 25](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_025.png)
+![Page 6, Figure 26](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_026.png)
+![Page 6, Figure 27](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_027.png)
+![Page 6, Figure 28](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_028.png)
+![Page 6, Figure 29](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_029.png)
+![Page 6, Figure 30](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_030.png)
+![Page 6, Figure 31](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_031.png)
+![Page 6, Figure 32](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_032.png)
+![Page 6, Figure 33](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_033.png)
+![Page 6, Figure 34](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_034.png)
+![Page 6, Figure 35](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_035.png)
+![Page 6, Figure 36](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_036.png)
+![Page 6, Figure 37](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_037.png)
+![Page 6, Figure 38](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_038.png)
+![Page 6, Figure 39](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_039.png)
+![Page 6, Figure 40](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_040.png)
+![Page 6, Figure 41](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_041.png)
+![Page 6, Figure 42](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_042.png)
+![Page 6, Figure 43](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_043.png)
+![Page 6, Figure 44](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_044.png)
+![Page 6, Figure 45](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_045.png)
+![Page 6, Figure 46](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_046.png)
+![Page 6, Figure 47](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_006_img_047.png)
 
 ### Page 7
 Theoretical class structure
@@ -146,14 +152,17 @@ Theory class
 Masterclass
 (*.PPT)
 7
-![Page 7, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007.png)
-![Page 7, Figure 2](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_003.png)
-![Page 7, Figure 3](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_004.png)
-![Page 7, Figure 4](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_006.png)
-![Page 7, Figure 5](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_007.png)
-![Page 7, Figure 6](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_009.png)
-![Page 7, Figure 7](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_010.png)
-![Page 7, Figure 8](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_007_img_011.png)
+![Page 7, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_001.jpeg)
+![Page 7, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_002.png)
+![Page 7, Figure 3](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_003.png)
+![Page 7, Figure 4](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_004.png)
+![Page 7, Figure 5](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_005.jpeg)
+![Page 7, Figure 6](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_006.png)
+![Page 7, Figure 7](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_007.png)
+![Page 7, Figure 8](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_008.jpeg)
+![Page 7, Figure 9](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_009.png)
+![Page 7, Figure 10](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_010.png)
+![Page 7, Figure 11](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_007_img_011.png)
 
 ### Page 8
 Assesment
@@ -169,7 +178,8 @@ an oral presentation of the same (20%) will be evaluated. The work may be
 recovered by improving it as necessary in order to pass the evaluation.
 The final mark of the course, for all students, will be the maximum between the
 ordinary evaluation and the recovery.
-![Page 8, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_008_img_001.jpeg)
+![Page 8, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_008_img_002.png)
 
 ### Page 9
 References
@@ -177,4 +187,5 @@ References
 • Deep learning with Python (Chollet, François)
 • Deep Learning: Foundations and Concepts (Bishop)
 9
-![Page 9, Figure 1](subjects/Admeav/Teoria/slides/T0_Presentation-images/T0_Presentation_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_009_img_001.jpeg)
+![Page 9, Figure 2](../../public/subject-assets/Admeav/Teoria/slides/T0_Presentation/T0_Presentation_page_009_img_002.png)

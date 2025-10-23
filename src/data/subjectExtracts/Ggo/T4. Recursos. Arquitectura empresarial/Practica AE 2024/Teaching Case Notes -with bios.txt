@@ -80,7 +80,7 @@ in a layered model. The current EA cannot deliver XYZ ACO
 services, due in part to the disparate systems utilized by
 separate contracts, manage ment, and accounting involved in
 the XYZ ACO enterprise systems.
-![Page 1, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_001.png)
 
 ### Page 2
 Model Portfolio for Enterprise Viewpoint
@@ -259,7 +259,7 @@ Static XYZ
 ACO
 Tabular MS
 Word
-![Page 2, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_002.png)
 
 ### Page 3
 TC Paper
@@ -461,7 +461,7 @@ BPMN BPMN
 Process
 diagram
 Visio
-![Page 3, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_003.png)
 
 ### Page 4
 Service
@@ -685,7 +685,7 @@ TOGAF  UML
 Use case
 Visio
 Model Portfolio for Enterprise Security Viewpoint
-![Page 4, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_004.png)
 
 ### Page 5
 Composite
@@ -921,7 +921,7 @@ Visio
 
 
 Table 1. Populated Architecture Framework
-![Page 5, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_005.png)
 
 ### Page 6
 OVERARCHING ENTERPRISE VIEWPOINT
@@ -979,7 +979,7 @@ know basis. All viewpoints must consider implications of information security.
 Information security safeguard must be implemented to restrict access to level of granted authorizations,
 such as “view only”, or “never see”. XYZ ACO requires a policy on managing during of protection for
 pre-decisional information and other works-in-progress.
-![Page 6, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_006.png)
 
 ### Page 7
 Shareability Information is shared in XYZ ACO business environment (also Data and Security viewpoints).
@@ -1037,7 +1037,7 @@ qualification policy and procedures to govern this review and de-classification.
 based on a need-to-know policy can ensure regular reviews of information. Adequate and secure access
 to information requires that security requirements are implemented at the data level (not the application
 level), and must be designed into data elements from the beginning; it should not and cannot be added
-![Page 7, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_007.png)
 
 ### Page 8
 later. Data security safeguards may be for “view only”, or “never see”. Sensitivity labeling for access to
@@ -1100,7 +1100,7 @@ Statement Applications must be structured to accommodate the perspectives of all
 Rationale Applications take into account different communities’ needs
 Implications Design must be carefully planned and developed and prototyped to verify and validate the functionality.
 Consistency   Application design is consistent
-![Page 8, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_008.png)
 
 ### Page 9
 Statement Applications should be consistent for all stakeholders as far as naming standards and terminology and
@@ -1163,7 +1163,7 @@ customers.
 Table 2. Principles and Concerns governing the XYZ ACO
 Group Team Project
 Table 3. Business Strategy
-![Page 9, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_009.png)
 
 ### Page 10
 2.2 Information Viewpoint Models
@@ -1205,13 +1205,15 @@ according to their authorizations.
 Figure 1. XYZ ACO Value Chains
 Figure2. Conceptual XYZ ACO As-Is EA
 Figure 3. Hierarchy of Information Needs in XYZ ACO
-![Page 10, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_010.png)
+![Page 10, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_010_img_001.jpeg)
+![Page 10, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_010_img_002.jpeg)
+![Page 10, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_010_img_003.jpeg)
 
 ### Page 11
 Figure 4. Structure of XYZ ACO Core Information Requirements
 Figure 5. Proposed Information Flow of Main Businesses in XYZ ACO
-![Page 11, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_011.png)
-![Page 11, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_011_img_002.png)
+![Page 11, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_011_img_001.jpeg)
+![Page 11, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_011_img_002.png)
 
 ### Page 12
 2.3 Business Systems Viewpoint Models
@@ -1291,7 +1293,7 @@ ability, accessibility and security principles.
 Table 4. Business Information Entities for Release
 1
 Figure 6. Patient Appointment Scheduling
-![Page 12, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_012_img_001.jpeg)
 
 ### Page 13
 Data Entity
@@ -1329,7 +1331,7 @@ Report R  R R CRUD R R
 
 Figure 7. Service Performance Management
 Table 5. Partial CRUD Matrix
-![Page 13, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_013.png)
+![Page 13, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_013_img_001.jpeg)
 
 ### Page 14
 Access
@@ -1407,7 +1409,7 @@ System. This system includes the Service Performance
 Reporting System. The application architecture to realize the
 functionality of Release 1 addresses Service Performance
 Figure 8. Conceptual Data Model of XYZ ACO
-![Page 14, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_014.png)
+![Page 14, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_014.png)
 
 ### Page 15
 Management in terms of the concerns pertinent to assessing
@@ -1510,8 +1512,9 @@ Performance Reporting System
 Figure 10. Use Case Diagram for Patient
 Appointment Manager System
 Figure 11. Composite Enterprise Security Diagram
-![Page 15, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_015.png)
-![Page 15, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_015_img_003.png)
+![Page 15, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_015_img_001.jpeg)
+![Page 15, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_015_img_002.jpeg)
+![Page 15, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_015_img_003.png)
 
 ### Page 16
 Information Security Management.  Figure 13 presents
@@ -1600,9 +1603,12 @@ improvement. He has several
 Figure 12. High Level Security Model of XYZ ACO
 Figure 13. Organization Levels of
 Information Security Management
-![Page 16, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_016.png)
-![Page 16, Figure 2](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_016_img_001.png)
-![Page 16, Figure 3](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_016_img_002.png)
+![Page 16, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_016_img_001.png)
+![Page 16, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_016_img_002.png)
+![Page 16, Figure 3](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_016_img_003.jpeg)
+![Page 16, Figure 4](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_016_img_004.jpeg)
+![Page 16, Figure 5](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_016_img_005.jpeg)
+![Page 16, Figure 6](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_016_img_006.jpeg)
 
 ### Page 17
 publications in academic journals and conference
@@ -1644,4 +1650,5 @@ capability model and roadmap development. He holds a M.Sc.
 in Management of Information Systems and B .Sc. in
 Computer Science and Math ematics from the University of
 the West Indies, Jamaica.
-![Page 17, Figure 1](subjects/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios-images/Teaching Case Notes -with bios_page_017.png)
+![Page 17, Figure 1](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_017_img_001.jpeg)
+![Page 17, Figure 2](../../public/subject-assets/Ggo/T4. Recursos. Arquitectura empresarial/Practica AE 2024/Teaching Case Notes -with bios/Teaching Case Notes -with bios_page_017_img_002.jpeg)

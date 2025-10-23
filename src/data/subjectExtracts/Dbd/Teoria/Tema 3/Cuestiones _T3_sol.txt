@@ -45,11 +45,10 @@ Diario:
 B: 15       D: 20
 2.d.
 B: 18       D: 20
-![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_001.png)
-![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_001_img_001.png)
-![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_001_img_002.png)
-![Page 1, Figure 4](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_001_img_003.png)
-![Page 1, Figure 5](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_001_img_004.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_sol/Cuestiones _T3_sol_page_001_img_001.png)
+![Page 1, Figure 2](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_sol/Cuestiones _T3_sol_page_001_img_002.png)
+![Page 1, Figure 3](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_sol/Cuestiones _T3_sol_page_001_img_003.png)
+![Page 1, Figure 4](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_sol/Cuestiones _T3_sol_page_001_img_004.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -97,7 +96,7 @@ bloque, será grabado en el fichero de diario en disco. Se ejecuta en un instant
 5.b.
 El principio de “Forzar la escritura en el diario” asegura que después del fallo se podrá rehacer T1.
 El principio de “Escritura anticipada en el diario” asegura que después del fallo se podrá deshacer T2.
-![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_sol/Cuestiones _T3_sol_page_002.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -149,4 +148,4 @@ t7 Fallo Rehacer Deshacer Nada Deshacer Rehacer Nada Nada Nada
  Inmediata-No Forzar Inmediata-Forzar Diferida-No Forzar Diferida-Forzar
 Tiempo Búfer Disco Búfer Disco Búfer Disco Búfer Disco
 t8  8  8  8  8
-![Page 3, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_sol-images/Cuestiones _T3_sol_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_sol/Cuestiones _T3_sol_page_003.png)

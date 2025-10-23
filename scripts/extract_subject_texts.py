@@ -56,6 +56,7 @@ except ImportError as pypdf_import_error:  # pragma: no cover - fallback when de
 else:
     PYPDF_IMPORT_ERROR = None
 PYPDF_AUTOINSTALL_ATTEMPTED = False
+PYMUPDF_AUTOINSTALL_ATTEMPTED = False
 try:  # pragma: no cover - optional dependency may be missing in CI environments
     import xlrd  # type: ignore
 except ImportError as xlrd_import_error:  # pragma: no cover - fallback when dependency absent
@@ -85,6 +86,10 @@ def _relay_extractor_output(stdout_text: str, stderr_text: str) -> None:
             if _NOISY_PDF_IMAGE_WARNING.match(line.strip()):
                 continue
             print(line, file=sys.stderr)
+
+
+def _log(message: str) -> None:
+    print(f"[extract-subject-texts] {message}", file=sys.stderr)
 
 
 @dataclass
@@ -144,6 +149,68 @@ def _ensure_pypdf_available() -> bool:
     PdfReader = imported_reader  # type: ignore[assignment]
     PYPDF_IMPORT_ERROR = None
     return True
+
+
+def _ensure_pymupdf_available() -> bool:
+    """Attempt to make the ``pymupdf`` dependency available on demand."""
+
+    global PYMUPDF_AUTOINSTALL_ATTEMPTED  # type: ignore[assignment]
+
+    try:
+        import fitz  # type: ignore  # noqa: F401
+    except ImportError:
+        if PYMUPDF_AUTOINSTALL_ATTEMPTED:
+            return False
+        PYMUPDF_AUTOINSTALL_ATTEMPTED = True
+        install_cmd = [sys.executable, "-m", "pip", "install", "pymupdf"]
+        _log("Attempting to automatically install optional dependency 'pymupdf'.")
+        try:
+            subprocess.check_call(
+                install_cmd,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.STDOUT,
+            )
+        except Exception as error:  # pragma: no cover - network/tools may be unavailable
+            _log(
+                "Automatic installation of pymupdf failed; install it manually to enable PDF image extraction "
+                f"(command: {' '.join(install_cmd)}; error: {error})"
+            )
+            return False
+
+        try:  # pragma: no cover - depends on external installation step
+            import fitz  # type: ignore  # noqa: F401
+        except Exception as import_error:  # pragma: no cover - defensive fallback
+            _log(
+                "pymupdf installation completed but importing 'fitz' still failed; "
+                f"image extraction will fall back to PyPDF (error: {import_error})."
+            )
+            return False
+
+    return True
+
+
+def _load_pdf_image_extractor() -> Callable[[Path, Path], list[tuple[int, str]]] | None:
+    """Return the pdf_image_extractor callable when available."""
+
+    try:
+        from pdf_image_extractor import extract_images as extract_pdf_images
+    except (ImportError, SystemExit) as error:  # pragma: no cover - dependency guard
+        if _ensure_pymupdf_available():
+            try:
+                from pdf_image_extractor import extract_images as extract_pdf_images
+            except Exception as retry_error:  # pragma: no cover - defensive guard
+                _log(
+                    "Unable to import pdf_image_extractor even after installing pymupdf; "
+                    f"falling back to PyPDF (error: {retry_error})."
+                )
+                return None
+        else:
+            _log(
+                "pdf_image_extractor dependency unavailable; falling back to PyPDF for image extraction "
+                f"(reason: {error})."
+            )
+            return None
+    return extract_pdf_images
 
 
 def _normalise_whitespace(text: str) -> str:
@@ -257,9 +324,8 @@ def _extract_images_to_public_assets(
         shutil.rmtree(target_dir)
     target_dir.parent.mkdir(parents=True, exist_ok=True)
 
-    try:
-        from pdf_image_extractor import extract_images as extract_pdf_images
-    except (ImportError, SystemExit):  # pragma: no cover - dependency guard
+    extract_pdf_images = _load_pdf_image_extractor()
+    if extract_pdf_images is None:
         page_refs, metadata = _extract_images_with_pypdf(pdf_path, target_dir, pdf_reader)
         if page_refs:
             return page_refs, metadata

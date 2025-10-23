@@ -32,11 +32,10 @@ a. ¿Qué algoritmo de recuperación se aplicará? Aplícalo al ejemplo.
 b. ¿Qué valores de los elementos de datos lee cada transacción en sus operaciones de lectura?
 c. ¿Cuál es el valor de los elementos de datos antes de que se inicie T3?
 d. ¿Cuál es el valor de los elementos de datos después de la recuperación de la base de datos?
-![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_001.png)
-![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_001_img_001.png)
-![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_001_img_002.png)
-![Page 1, Figure 4](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_001_img_003.png)
-![Page 1, Figure 5](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_001_img_004.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_001_img_001.png)
+![Page 1, Figure 2](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_001_img_002.png)
+![Page 1, Figure 3](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_001_img_003.png)
+![Page 1, Figure 4](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_001_img_004.png)
 
 ### Page 2
 Departamento de Sistemas Informáticos y Computación
@@ -81,8 +80,7 @@ Inmediata-Forzar
 Diferida-No Forzar
 Diferida-Forzar
 5. Observa el siguiente ejemplo:
-![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_002.png)
-![Page 2, Figure 2](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_002_img_001.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_002_img_001.png)
 
 ### Page 3
 Departamento de Sistemas Informáticos y Computación
@@ -118,8 +116,7 @@ t3 c1
 t4 r2(X)
 t5 X←7
 t6 w2(X)
-![Page 3, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_003.png)
-![Page 3, Figure 2](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_003_img_001.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_003_img_001.png)
 
 ### Page 4
 Departamento de Sistemas Informáticos y Computación
@@ -134,4 +131,4 @@ estrategias. En caso de que haya más de un valor posible indícalos todos.
  Inmediata-No Forzar Inmediata-Forzar Diferida-No Forzar Diferida-Forzar
 Tiempo Búfer Disco Búfer Disco Búfer Disco Búfer Disco
 t8
-![Page 4, Figure 1](subjects/Dbd/Teoria/Tema 3/Cuestiones _T3_-images/Cuestiones _T3__page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 3/Cuestiones _T3_/Cuestiones _T3__page_004.png)
