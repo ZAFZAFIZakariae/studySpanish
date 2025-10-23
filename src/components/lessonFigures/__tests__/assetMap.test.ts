@@ -6,6 +6,8 @@ jest.mock('../assetModules', () => ({
     '../../subjects/Sad/Session_1_Introduction_Deck_Bullets_Notes-images/Session_1_Introduction_Deck_Bullets_Notes_page_001.png':
       '/assets/sad/page-001.png',
     '../subjects/Ggo/Tema/Figura 02.JPG': '/assets/ggo/figure-02.jpg',
+    '../../../public/subject-assets/Admeav/Teoria/slides/T2_CNN based feature extraction _1_/T2_page_001_img1.png':
+      '/assets/admeav/page-001.png',
   },
 }));
 
@@ -34,6 +36,26 @@ describe('resolveFigureAsset', () => {
 
   it('normalizes underscores and extensions when matching', () => {
     expect(resolveFigureAsset('Ggo/Tema/Figura 02')).toBe('/assets/ggo/figure-02.jpg');
+  });
+
+  it('matches assets generated into the public subject-assets directory', () => {
+    expect(
+      resolveFigureAsset(
+        '../../public/subject-assets/Admeav/Teoria/slides/T2_CNN based feature extraction _1_/T2_page_001_img1.png',
+      ),
+    ).toBe('/assets/admeav/page-001.png');
+
+    expect(
+      resolveFigureAsset(
+        'public/subject-assets/Admeav/Teoria/slides/T2_CNN based feature extraction _1_/T2_page_001_img1.png',
+      ),
+    ).toBe('/assets/admeav/page-001.png');
+
+    expect(
+      resolveFigureAsset(
+        'subject-assets/Admeav/Teoria/slides/T2_CNN based feature extraction _1_/T2_page_001_img1.png',
+      ),
+    ).toBe('/assets/admeav/page-001.png');
   });
 
   it('returns undefined when there is no matching asset', () => {

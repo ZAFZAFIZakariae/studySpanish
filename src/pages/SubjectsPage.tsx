@@ -843,6 +843,7 @@ const SubjectsPage: React.FC = () => {
               <LessonFigure
                 key={index}
                 figureId={block.figureId}
+                src={block.src}
                 alt={block.alt}
                 caption={block.caption ? <InlineMarkdown text={block.caption} /> : undefined}
                 className={styles.contentFigure}

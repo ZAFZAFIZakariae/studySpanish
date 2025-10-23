@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from '@/lib/remarkGfm';
 import { lessonSummaryText, lessonTextIndexBySubject } from '@/data/lessonContents/text';
 import { subjectCatalog } from '@/data/subjectCatalog';
+import { resolveLessonImageSource, resolveSubjectAssetPath } from '@/lib/subjectAssets';
 import { LessonFigure } from './lessonFigures';
 import PdfModal from './PdfModal';
 import styles from './LessonViewer.module.css';
@@ -97,7 +98,6 @@ const createSnippet = (text: string, query: string) => {
   return `${prefix}${normalized.slice(start, end).trim()}${suffix}`;
 };
 
-const SUBJECT_ASSET_PREFIX = '/subject-assets/';
 const FALLBACK_IMAGE_ALT = 'Figure from PDF';
 const responsiveMarkdownImageStyles: React.CSSProperties = {
   display: 'block',
@@ -106,79 +106,6 @@ const responsiveMarkdownImageStyles: React.CSSProperties = {
   height: 'auto',
   maxHeight: 'min(60vh, 520px)',
   objectFit: 'contain',
-};
-
-const isExternalAsset = (value: string) =>
-  /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(value) || value.startsWith('data:') || value.startsWith('blob:');
-
-export const resolveSubjectAssetPath = (rawSrc: string): string => {
-  const trimmed = rawSrc.trim();
-  if (!trimmed) {
-    return '';
-  }
-
-  if (/^\/subject-assets\//i.test(trimmed)) {
-    return trimmed.replace(/^\/subject-assets\//i, SUBJECT_ASSET_PREFIX);
-  }
-
-  if (isExternalAsset(trimmed)) {
-    return trimmed;
-  }
-
-  const normalized = trimmed.replace(/\\/g, '/');
-  const suffixIndex = normalized.search(/[?#]/);
-  const pathPart = suffixIndex === -1 ? normalized : normalized.slice(0, suffixIndex);
-  const suffix = suffixIndex === -1 ? '' : normalized.slice(suffixIndex);
-
-  const rawSegments = pathPart.split('/');
-  const segments: string[] = [];
-
-  for (const segment of rawSegments) {
-    if (!segment || segment === '.') {
-      continue;
-    }
-    if (segment === '..') {
-      if (segments.length > 0) {
-        segments.pop();
-      }
-      continue;
-    }
-    segments.push(segment);
-  }
-
-  if (segments[0]?.toLowerCase() === 'subjects') {
-    segments.shift();
-  }
-
-  if (segments[0]?.toLowerCase() === 'subject-assets') {
-    segments.shift();
-  }
-
-  const sanitizedPath = segments.join('/');
-  const prefix = SUBJECT_ASSET_PREFIX.endsWith('/') ? SUBJECT_ASSET_PREFIX : `${SUBJECT_ASSET_PREFIX}/`;
-
-  return sanitizedPath ? `${prefix}${sanitizedPath}${suffix}` : `${prefix}${suffix}`;
-};
-
-const resolveLessonImageSource = (rawSrc: string): string => {
-  const trimmed = rawSrc.trim();
-  if (!trimmed) {
-    return '';
-  }
-
-  if (trimmed.startsWith('figure:')) {
-    return trimmed;
-  }
-
-  if (trimmed.startsWith('/subject-assets/')) {
-    return trimmed;
-  }
-
-  if (isExternalAsset(trimmed)) {
-    return trimmed;
-  }
-
-  return resolveSubjectAssetPath(trimmed);
 };
 
 const topAnchorId = 'lesson-viewer-top';

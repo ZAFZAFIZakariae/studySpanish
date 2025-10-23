@@ -1,4 +1,5 @@
 import React from 'react';
+import { resolveSubjectAssetPath } from '@/lib/subjectAssets';
 import { lessonFigureRegistry } from '.';
 import { resolveFigureAsset } from './assetMap';
 
@@ -32,10 +33,13 @@ const LessonFigure: React.FC<LessonFigureProps> = ({
   const resolvedAssetFromId = figureId ? resolveFigureAsset(figureId) : undefined;
   const resolvedAssetFromSource = src ? resolveFigureAsset(src) : undefined;
 
+  const fallbackSubjectAsset = src ? resolveSubjectAssetPath(src) : '';
+
   const assetUrl =
     resolvedAssetFromId ??
     resolvedAssetFromSource ??
-    (src && isDirectAssetUrl(src) ? src : undefined);
+    (src && isDirectAssetUrl(src) ? src : undefined) ??
+    (fallbackSubjectAsset || undefined);
 
   let content: React.ReactNode = null;
 
