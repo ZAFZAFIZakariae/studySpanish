@@ -15,6 +15,7 @@ const cacheDir = path.join(repoRoot, '.cache');
 const manifestPath = path.join(cacheDir, 'subject-extracts-manifest.json');
 const pythonScript = path.join(repoRoot, 'scripts', 'extract_subject_texts.py');
 const watchedExtension = '.pdf';
+const subjectAssetsDir = path.join(repoRoot, 'public', 'subject-assets');
 
 function log(message) {
   process.stdout.write(`[ensure-subject-extracts] ${message}\n`);
@@ -90,6 +91,43 @@ function computeExtractPath(relativePdfPath) {
   return path.join(extractsDir, `${withoutExtension}.txt`);
 }
 
+function computeAssetDir(relativePdfPath) {
+  const withoutExtension = relativePdfPath.slice(0, -path.extname(relativePdfPath).length);
+  return path.join(subjectAssetsDir, withoutExtension);
+}
+
+function directoryHasFiles(dir) {
+  const stack = [dir];
+
+  while (stack.length > 0) {
+    const current = stack.pop();
+    if (!current) {
+      continue;
+    }
+
+    let entries;
+    try {
+      entries = fsSync.readdirSync(current, { withFileTypes: true });
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        continue;
+      }
+      throw error;
+    }
+
+    for (const entry of entries) {
+      if (entry.isFile()) {
+        return true;
+      }
+      if (entry.isDirectory()) {
+        stack.push(path.join(current, entry.name));
+      }
+    }
+  }
+
+  return false;
+}
+
 function detectChanges(manifest, pdfFiles) {
   if (!manifest) {
     if (pdfFiles.length === 0) {
@@ -108,6 +146,13 @@ function detectChanges(manifest, pdfFiles) {
     const extractPath = computeExtractPath(file.relativePath);
     if (!fsSync.existsSync(extractPath)) {
       return { needsUpdate: true, reason: `Missing extract for ${file.relativePath}.` };
+    }
+    const extractContent = fsSync.readFileSync(extractPath, 'utf8');
+    if (extractContent.includes('/subject-assets/')) {
+      const assetDir = computeAssetDir(file.relativePath);
+      if (!directoryHasFiles(assetDir)) {
+        return { needsUpdate: true, reason: `Missing subject assets for ${file.relativePath}.` };
+      }
     }
     seen.add(file.relativePath);
     if (!entry) {

@@ -3,62 +3,108 @@ Source: subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación.
 
 ### Page 1
 Alineación de negocio y SI/TILlanos CuencaAndrés Boza
-![Page 1, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_001.png)
-![Page 1, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_001_img_001.png)
-![Page 1, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_001_img_002.png)
-![Page 1, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_001_img_003.png)
+![Page 1, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_001_img_001.png)
+![Page 1, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_001_img_002.png)
+![Page 1, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_001_img_003.png)
+![Page 1, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_001_img_004.jpeg)
+![Page 1, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_001_img_005.jpeg)
+![Page 1, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_001_img_006.jpeg)
 
 ### Page 2
 Introducción§La estrategia del negocio se va concretando creándose así una infraestructura del negocio Estrategiade negocio
 Infraestructurade negocio
-![Page 2, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_002_img_001.png)
+![Page 2, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_002_img_002.png)
+![Page 2, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_002_img_003.jpeg)
+![Page 2, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_002_img_004.jpeg)
+![Page 2, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_002_img_005.jpeg)
 
 ### Page 3
 Introducción§La estrategia de SI/TI igualmente se concreta creándose una infraestructura de SI/TIEstrategiade negocioEstrategia de SI/TI
 Infraestructurade SI/TIInfraestructurade negocio
-![Page 3, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_003_img_001.png)
+![Page 3, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_003_img_002.png)
+![Page 3, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_003_img_003.jpeg)
+![Page 3, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_003_img_004.jpeg)
+![Page 3, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_003_img_005.jpeg)
 
 ### Page 4
 Introducción§Surge la necesidad de alinear el negocio con SI/TI
 Estrategiade negocioEstrategia de SI/TI
 Infraestructurade SI/TIInfraestructurade negocio
-![Page 4, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_004_img_001.png)
+![Page 4, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_004_img_002.png)
+![Page 4, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_004_img_003.jpeg)
+![Page 4, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_004_img_004.jpeg)
+![Page 4, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_004_img_005.jpeg)
 
 ### Page 5
 Alineación entre negocio y SI/TIEl riesgode incorporar los sistemas y tecnología de informaciónen las organizaciones se ha incrementado, debido principalmente, a que la planificación estratégica de esta no existe. La influencia de SI/TIes determinanteya que puede dar un valor añadido a servicios, productos y competencia, cambiando la manera en como se llevan a cabo los negocios
 Es importante por tanto:-Determinar la estrategia de SI/TI, y-Que esté de acuerdo con la estrategia de negocio
-![Page 5, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_005_img_001.png)
+![Page 5, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_005_img_002.png)
+![Page 5, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_005_img_003.jpeg)
+![Page 5, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_005_img_004.jpeg)
+![Page 5, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_005_img_005.jpeg)
 
 ### Page 6
 Alineación entre negocio y SI/TIEl problema de poner de acuerdo la estrategia de SI/TI con la estrategia de negocio, se aborda desde dos perspectivas:
 DescripciónPlanificación estratégica de SI/TIHace referencia a cómo incorporar la TI en las organizaciones.
 AlineaciónGrado en el cual la estrategia de SI/TI soporta y es soportadapor la estrategia de negocio, mediante un proceso dinámico, en el cual los cambios en alguno de los elementos del proceso implican cambios en algún otro componente
-![Page 6, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_006_img_001.png)
+![Page 6, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_006_img_002.png)
+![Page 6, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_006_img_003.jpeg)
+![Page 6, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_006_img_004.jpeg)
+![Page 6, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_006_img_005.jpeg)
 
 ### Page 7
 Modelo de alineamiento estratégico§El Modelo de alineamiento estratégico (SAM-StrategicAlignmentModel)  de Henderson y Venkatramandescribe las relaciones entre la estrategia de la organización y la de SI/TI. §Distingue 4 perspectivas:oEjecución estratégicaoTransformación tecnológicaoPotencial competitivooNivel de servicio
-![Page 7, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_007_img_001.png)
+![Page 7, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_007_img_002.png)
+![Page 7, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_007_img_003.jpeg)
+![Page 7, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_007_img_004.jpeg)
+![Page 7, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_007_img_005.jpeg)
 
 ### Page 8
 Nota: Similar a la planificación estratégica de SI/TI
 Modelo de alineamiento estratégico
-![Page 8, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_008.png)
-![Page 8, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_008_img_002.png)
+![Page 8, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_001.png)
+![Page 8, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_002.png)
+![Page 8, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_003.png)
+![Page 8, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_004.jpeg)
+![Page 8, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_005.jpeg)
+![Page 8, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_006.jpeg)
+![Page 8, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_008_img_007.jpeg)
 
 ### Page 9
 Modelo de alineamiento estratégico
-![Page 9, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_009.png)
-![Page 9, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_009_img_003.png)
+![Page 9, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_001.jpeg)
+![Page 9, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_002.png)
+![Page 9, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_003.png)
+![Page 9, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_004.png)
+![Page 9, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_005.jpeg)
+![Page 9, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_006.jpeg)
+![Page 9, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_009_img_007.jpeg)
 
 ### Page 10
 Modelo de alineamiento estratégico
-![Page 10, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_010.png)
-![Page 10, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_010_img_007.png)
+![Page 10, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_001.png)
+![Page 10, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_002.png)
+![Page 10, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_003.jpeg)
+![Page 10, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_004.jpeg)
+![Page 10, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_005.jpeg)
+![Page 10, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_006.jpeg)
+![Page 10, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_010_img_007.png)
 
 ### Page 11
 Modelo de alineamiento estratégico
-![Page 11, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_011.png)
-![Page 11, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_011_img_002.png)
+![Page 11, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_001.png)
+![Page 11, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_002.png)
+![Page 11, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_003.png)
+![Page 11, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_004.jpeg)
+![Page 11, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_005.jpeg)
+![Page 11, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_006.jpeg)
+![Page 11, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_011_img_007.jpeg)
 
 ### Page 12
 Alcancede negocio
@@ -76,20 +122,33 @@ Integración funcionalTecnología de informaciónNegocio
 ExternoInterno
 (Henderson y  Venkatraman., 1993)
 Modelo de alineamiento estratégico
-![Page 12, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_012_img_001.png)
+![Page 12, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_012_img_002.png)
+![Page 12, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_012_img_003.jpeg)
+![Page 12, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_012_img_004.jpeg)
+![Page 12, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_012_img_005.jpeg)
+![Page 12, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_012_img_006.jpeg)
 
 ### Page 13
 Herramientas definición estrategia§Las organizaciones utilizan múltiples herramientas para la definición de su estratégica de negocio.
 oAnálisis DAFOoAnálisis PESTELoFuerzas de Portero…
 Estrategiade negocio
-![Page 13, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_013.png)
+![Page 13, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_013_img_001.png)
+![Page 13, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_013_img_002.png)
+![Page 13, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_013_img_003.jpeg)
+![Page 13, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_013_img_004.jpeg)
+![Page 13, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_013_img_005.jpeg)
 
 ### Page 14
 Herramientas definición estrategia§Las organizaciones utilizan múltiples herramientas para la definición de su estratégica de negocio.
 oAnálisis DAFOoAnálisis PESTELoFuerzas de Portero… »Pueden ser utilizadas para la estrategia de SI/TI
 Estrategiade negocio
 Estrategia de SI/TI
-![Page 14, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_014.png)
+![Page 14, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_014_img_001.png)
+![Page 14, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_014_img_002.png)
+![Page 14, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_014_img_003.jpeg)
+![Page 14, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_014_img_004.jpeg)
+![Page 14, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_014_img_005.jpeg)
 
 ### Page 15
 Proceso dirección estratégica
@@ -97,13 +156,21 @@ Identificar amenazas y oportunidadesAnalizar el entorno
 Analizar los recursos internosIdentificar fortalezas y debilidades
 Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
 Stakeholders
-![Page 15, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_015.png)
+![Page 15, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_015_img_001.png)
+![Page 15, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_015_img_002.png)
+![Page 15, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_015_img_003.jpeg)
+![Page 15, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_015_img_004.jpeg)
+![Page 15, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_015_img_005.jpeg)
 
 ### Page 16
 Misión y Visión
 §Misión:oLa declaración de misión trata creencias fundamentales e identifica mercados objetivos y productos fundamentales.oEs la razón de la existencia de la empresa.§Visión:oDefine los objetivosa medio y largo plazo (de 3 a 10 años). Debe orientarse al mercado.
 Establecer misión, objetivos
-![Page 16, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_016.png)
+![Page 16, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_016_img_001.png)
+![Page 16, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_016_img_002.png)
+![Page 16, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_016_img_003.jpeg)
+![Page 16, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_016_img_004.jpeg)
+![Page 16, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_016_img_005.jpeg)
 
 ### Page 17
 Proceso dirección estratégica
@@ -111,18 +178,32 @@ Identificar Amenazas y OportunidadesAnalizar el entorno
 Analizar los recursos internosIdentificar Fortalezas y Debilidades
 Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
 Stakeholders
-![Page 17, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_017.png)
+![Page 17, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_017_img_001.png)
+![Page 17, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_017_img_002.png)
+![Page 17, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_017_img_003.jpeg)
+![Page 17, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_017_img_004.jpeg)
+![Page 17, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_017_img_005.jpeg)
 
 ### Page 18
 Análisis DAFO
 Identificar Amenazas y OportunidadesAnalizar el entorno
 Analizar los recursos internosIdentificar Fortalezas y Debilidades
 Análisis DAFO
-![Page 18, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_018.png)
+![Page 18, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_018_img_001.png)
+![Page 18, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_018_img_002.png)
+![Page 18, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_018_img_003.jpeg)
+![Page 18, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_018_img_004.jpeg)
+![Page 18, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_018_img_005.jpeg)
+![Page 18, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_018_img_006.jpeg)
 
 ### Page 19
 Análisis DAFO§Análisis DAFO (SWOT -Strengths, Weaknesses, Opportunities, Threats)
-![Page 19, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_019.png)
+![Page 19, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_019_img_001.png)
+![Page 19, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_019_img_002.png)
+![Page 19, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_019_img_003.jpeg)
+![Page 19, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_019_img_004.jpeg)
+![Page 19, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_019_img_005.jpeg)
+![Page 19, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_019_img_006.jpeg)
 
 ### Page 20
 Proceso dirección estratégica
@@ -131,17 +212,30 @@ Analizar los recursos internosIdentificar fortalezas y debilidades
 Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
 Stakeholders
 Análisis 5 fuerzas de Porter
-![Page 20, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_020.png)
+![Page 20, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_020_img_001.png)
+![Page 20, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_020_img_002.png)
+![Page 20, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_020_img_003.jpeg)
+![Page 20, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_020_img_004.jpeg)
+![Page 20, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_020_img_005.jpeg)
 
 ### Page 21
 5 Fuerzas de PorterAnálisis 5 fuerzas de Porter
-![Page 21, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_021.png)
+![Page 21, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_021_img_001.png)
+![Page 21, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_021_img_002.png)
+![Page 21, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_021_img_003.jpeg)
+![Page 21, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_021_img_004.jpeg)
+![Page 21, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_021_img_005.jpeg)
+![Page 21, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_021_img_006.jpeg)
 
 ### Page 22
 5 Fuerzas de Porter
 §Las fuerzas competitivas según M.Porter:1. El poder negociador de los proveedores2. El poder negociador de los clientes3. La entrada de nuevas empresas4. La aparición de productos sustitutivos5. El posicionamiento de los competidores
 Análisis 5 fuerzas de Porter
-![Page 22, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_022.png)
+![Page 22, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_022_img_001.png)
+![Page 22, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_022_img_002.png)
+![Page 22, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_022_img_003.jpeg)
+![Page 22, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_022_img_004.jpeg)
+![Page 22, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_022_img_005.jpeg)
 
 ### Page 23
 Proceso dirección estratégica
@@ -150,12 +244,25 @@ Analizar los recursos internosIdentificar fortalezas y debilidades
 Establecer misión, objetivosFormular EstrategiaImplementar EstrategiaEvaluar y controlar los resultados
 Stakeholders
 Análisis 5 fuerzas de Porter
-![Page 23, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_023.png)
+![Page 23, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_023_img_001.png)
+![Page 23, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_023_img_002.png)
+![Page 23, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_023_img_003.jpeg)
+![Page 23, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_023_img_004.jpeg)
+![Page 23, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_023_img_005.jpeg)
 
 ### Page 24
 Recordad que laalineación entre negocio y SI/TIPermite:-Determinar la estrategia de SI/TI, y-Que esté de acuerdo con la estrategia de negocio
-![Page 24, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_024.png)
+![Page 24, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_024_img_001.png)
+![Page 24, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_024_img_002.png)
+![Page 24, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_024_img_003.jpeg)
+![Page 24, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_024_img_004.jpeg)
+![Page 24, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_024_img_005.jpeg)
 
 ### Page 25
 Alineación de negocio y SI/TILlanos CuencaAndrés Boza
-![Page 25, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación-images/22 Alineación_page_025.png)
+![Page 25, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_025_img_001.png)
+![Page 25, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_025_img_002.png)
+![Page 25, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_025_img_003.png)
+![Page 25, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_025_img_004.jpeg)
+![Page 25, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_025_img_005.jpeg)
+![Page 25, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/22 Alineación/22 Alineación_page_025_img_006.jpeg)

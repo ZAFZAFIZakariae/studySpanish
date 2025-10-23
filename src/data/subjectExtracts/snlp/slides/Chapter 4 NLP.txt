@@ -5,7 +5,7 @@ Source: subjects/snlp/slides/Chapter 4 NLP.pdf
 CHAPTER 4
 Natural Language Processing
 Word Embeddings
-![Page 1, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_001.png)
 
 ### Page 2
 Summary
@@ -16,7 +16,7 @@ Summary
 5. GloVe
 6. fastText
 7. Examples in Python
-![Page 2, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_002.png)
 
 ### Page 3
 Definition of NLP
@@ -28,7 +28,7 @@ make sense of the human languages in a manner that is valuable.
 from human languages.
 • It sits at the intersection of computer science, artificial intelligence,
 and computational linguistics
-![Page 3, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_003.png)
 
 ### Page 4
 Applications
@@ -40,10 +40,10 @@ Applications
 • Chat Bots
 • Generative language
 • …
-![Page 4, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_004.png)
 
 ### Page 5
-![Page 5, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_005_img_001.jpeg)
 
 ### Page 6
 The problem of Text Representation
@@ -57,7 +57,7 @@ many orders of magnitude.
 we make computers process our language?
 • How does Alexa, Google Home & many other smart assistants understand &
 reply to our speech?
-![Page 6, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_006.png)
 
 ### Page 7
 Text Representation
@@ -70,7 +70,7 @@ learning model/algorithm.
 • Text representations can be broadly classified into two sections:
 • Discrete text representations
 • Distributed/Continuous text representations
-![Page 7, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_007.png)
 
 ### Page 8
 Discrete text representation
@@ -82,7 +82,7 @@ corpus or corpora.
 • Bag-of-words representation (BOW)
 • Basic BOW — CountVectorizer
 • Advanced BOW — TF-IDF
-![Page 8, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_008.png)
 
 ### Page 9
 One-Hot encoding
@@ -93,7 +93,7 @@ represented as below:
 I → [1 0 0 0], love → [0 1 0 0], my → [0 0 1 0], dog → [0 0 0 1]
 • The entire sentence is then represented as:
 sentence = [ [1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1] ]
-![Page 9, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_009.png)
 
 ### Page 10
 One-Hot encoding
@@ -103,7 +103,7 @@ categories, then a single bit is enough to represent it
 • As you may have grasped, the length of an array of word depends on
 the vocabulary size. This is not scalable for a very large corpus which
 could contain up to 100,000 unique words or even more.
-![Page 10, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_010.png)
+![Page 10, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_010.png)
 
 ### Page 11
 Implementation
@@ -128,7 +128,7 @@ OUTPUT
 [0. 1. 0. 0.]
 [0. 0. 0. 1.]
 [1. 0. 0. 0.]]
-![Page 11, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_011.png)
+![Page 11, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_011.png)
 
 ### Page 12
 One-Hot encoding
@@ -142,7 +142,7 @@ measure relationship between different words
 presence/absence of a word in a sentence
 • High dimensional sparse matrix representation can be memory &
 computationally expensive
-![Page 12, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_012.png)
 
 ### Page 13
 Bag-of-words representation
@@ -153,7 +153,7 @@ word.
 text representation
 • The intuition behind BOW representation is that document having
 similar words are similar irrespective of the word positioning
-![Page 13, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_013.png)
+![Page 13, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_013.png)
 
 ### Page 14
 Basic BOW — CountVectorizer
@@ -176,7 +176,7 @@ print(vector.shape) # Output: (1, 5)
 print(vector.toarray())
 OUTPUT
 [[1 1 1 2 1]]
-![Page 14, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_014.png)
+![Page 14, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_014.png)
 
 ### Page 15
 Basic BOW — CountVectorizer
@@ -191,7 +191,7 @@ grasp the meaning of a word from this representation
 information about the sentence fails when it comes to stop words like “is, the,
 an, I” & when the corpus is context-specific. For example, in a corpus about
 covid-19, the word coronavirus may not add a lot of value
-![Page 15, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_015.png)
+![Page 15, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_015.png)
 
 ### Page 16
 Advanced BOW (TF-IDF)
@@ -203,14 +203,13 @@ need to normalize the “weights” of the words accordingly
 • IDF(w) is the inverse of document frequency is the log between total number of
 documents N divided by the number of documents containing the word ‘w’
 •
-![Page 16, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_016.png)
-![Page 16, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_016_img_002.png)
+![Page 16, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_016_img_001.jpeg)
+![Page 16, Figure 2](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_016_img_002.png)
 
 ### Page 17
 BOW vs TF-IDF
 BOW
-![Page 17, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_017.png)
-![Page 17, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_017_img_001.png)
+![Page 17, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_017_img_001.png)
 
 ### Page 18
 Advanced BOW (TF-IDF)
@@ -222,7 +221,7 @@ IDF score.
 • The resultant output weights for the words from the process is low
 for very highly frequent words (like stop-words) & very low frequency
 words (noise terms)
-![Page 18, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_018.png)
+![Page 18, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_018.png)
 
 ### Page 19
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -249,7 +248,7 @@ Advanced BOW (TF-IDF)
 'process': 1.916290731874155, 'so': 1.916290731874155,
 'technique': 1.916290731874155, 'this': 1.916290731874155,
 'tutorial': 1.916290731874155}
-![Page 19, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_019.png)
+![Page 19, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_019.png)
 
 ### Page 20
 Advanced BOW
@@ -264,7 +263,7 @@ parameters like lowercase, strip_accent, stop_words etc.) are max_df,
 min_df, norm, ngram_range & sublinear_tf.
 • The impact of these parameters on outputs weights is beyond scope of this
 article & will be covered separately.
-![Page 20, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_020.png)
+![Page 20, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_020.png)
 
 ### Page 21
 Advanced BOW
@@ -278,7 +277,7 @@ Disadvantages of TF-IDF representation:
 • TF-IDF is highly corpus dependent. A matrix representation generated out of
 cricket data cannot be used for football or volleyball. Therefore, there is a
 need to have high quality training data
-![Page 21, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_021.png)
+![Page 21, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_021.png)
 
 ### Page 22
 Conclussion of Discrete Representations
@@ -295,7 +294,7 @@ words are independent of each other
 • They do not capture the context or semantics of the word. It does not
 consider spooky & scary as similar but as two independent terms with no
 commonality between them
-![Page 22, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_022.png)
+![Page 22, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_022.png)
 
 ### Page 23
 Applications of Discrete Representations
@@ -309,7 +308,7 @@ complicated use cases like:
 • However, for more complex applications are not enought
 • Next, we will discuss distributed or a continuous text representation
 of text & how it is better (or worse) than discrete representations.
-![Page 23, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_023.png)
+![Page 23, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_023.png)
 
 ### Page 24
 Distributed Text Representation
@@ -325,7 +324,7 @@ considered unique & independent of each others.
 • Word2Vec
 • GloVe
 • BERT
-![Page 24, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_024.png)
+![Page 24, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_024.png)
 
 ### Page 25
 Co-Occurrence Matrix
@@ -338,7 +337,7 @@ phrase.
 corpus.
 • Let's look at an example using CountVectorizer used beforehand
 convert it into continuous representation.
-![Page 25, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_025.png)
+![Page 25, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_025.png)
 
 ### Page 26
 Co-Occurrence Matrix
@@ -389,7 +388,7 @@ product_x              5          2          1
 product_y              2          2          0
 recommend              1          0          1
 OUTPUT
-![Page 26, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_026.png)
+![Page 26, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_026.png)
 
 ### Page 27
 Co-Occurrence Matrix
@@ -399,7 +398,7 @@ in the co-occurrence matrix
 filter for the column & analyse that product_x is being compared with
 product_y & there are more positive adjectives associated to it than
 negative ones.
-![Page 27, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_027.png)
+![Page 27, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_027.png)
 
 ### Page 28
 Co-Occurrence Matrix
@@ -416,10 +415,10 @@ its not storage efficient & calculations are inefficient to run on top
 example, if you look at the product_x column, there is a row with name beats. It is
 uncertain what is the context on beats in this scenario simply by looking at the
 matrix
-![Page 28, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_028.png)
+![Page 28, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_028.png)
 
 ### Page 29
-![Page 29, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_029.png)
+![Page 29, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_029_img_001.jpeg)
 
 ### Page 30
 Word2Vec
@@ -430,7 +429,7 @@ count based technique like co-occurrence matrix.
 • Word embeddings are vector representation of a word.
 • Each word in the vocabulary is represented by a fixed vector size
 while capturing its semantic & syntactic relation with other words
-![Page 30, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_030.png)
+![Page 30, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_030.png)
 
 ### Page 31
 Word2Vec
@@ -444,7 +443,7 @@ vectors in a way that:
 • The quality of the representations was measured by how well it
 represents word similarity in the vector space using various distance
 metrics.
-![Page 31, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_031.png)
+![Page 31, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_031.png)
 
 ### Page 32
 Word2Vec   (example vector dim.= 4)
@@ -454,15 +453,15 @@ similar scores for “femininity”.
 “king”- “man” = “queen”)
 • Vectors “king” and “prince” have the same characteristics, except for age, telling us how they
 might possibly be semantically related to each other.
-![Page 32, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_032.png)
+![Page 32, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_032_img_001.jpeg)
 
 ### Page 33
 Word2vec
-![Page 33, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_033.png)
+![Page 33, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_033_img_001.jpeg)
 
 ### Page 34
 Word2Vec
-![Page 34, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_034.png)
+![Page 34, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_034_img_001.jpeg)
 
 ### Page 35
 Word2Vec  - Word similarity
@@ -473,8 +472,7 @@ to find how similar they are
 • If not normalised: We can compute the cosine similarity between the vectors
 using the below formula
 • cosine distance = 1 – cosine similarity
-![Page 35, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_035.png)
-![Page 35, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_035_img_001.png)
+![Page 35, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_035_img_001.png)
 
 ### Page 36
 Word2Vec  - Model Architecture (i)
@@ -493,8 +491,7 @@ we want. That is, if we want all
 our words to be vectors of
 length 300, then the hidden
 layer will contain 300 neurons.
-![Page 36, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_036.png)
-![Page 36, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_036_img_001.png)
+![Page 36, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_036_img_001.png)
 
 ### Page 37
 Word2Vec  - Model Architecture (ii)
@@ -513,7 +510,7 @@ considering the example
 above) “weighing” their
 different characteristics (an
 analogy we used earlier).
-![Page 37, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_037.png)
+![Page 37, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_037_img_001.png)
 
 ### Page 38
 Word2Vec  - Model Architecture (iii)
@@ -528,8 +525,7 @@ having a set of n weights
 example above) “weighing”
 their different characteristics
 (an analogy we used earlier).
-![Page 38, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_038.png)
-![Page 38, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_038_img_001.png)
+![Page 38, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_038_img_001.png)
 
 ### Page 39
 Word2vec –Two Techniques
@@ -537,7 +533,7 @@ Word2vec –Two Techniques
 of word (embedings).
 1. Continuous Bag of Words (CBOW)
 2. Skipgram
-![Page 39, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_039.png)
+![Page 39, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_039.png)
 
 ### Page 40
 Word2vec  - CBOW
@@ -549,7 +545,7 @@ word.
 • CBOW thus smoothes over the distribution of the information as it treats the
 entire context as one observation. CBOW is a faster algorithm than skipgrams and
 works well with frequent words.
-![Page 40, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_040.png)
+![Page 40, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_040.png)
 
 ### Page 41
 Word2vec - CBOW
@@ -562,7 +558,7 @@ to predict the target word "mat" based on the context words "The",
 "cat", "sat", and "on".
 • CBOW is computationally efficient and tends to work well with
 frequent words.
-![Page 41, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_041.png)
+![Page 41, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_041.png)
 
 ### Page 42
 Word2vec - Skipgram
@@ -574,7 +570,7 @@ give us “The”, “was”, “chocolate”, “flavoured” for the given ins
 • The statistical interpretation of this is that we treat each context-
 target pair as a new observation. Skipgrams work well with small
 datasets and can better represent less frequent words.
-![Page 42, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_042.png)
+![Page 42, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_042.png)
 
 ### Page 43
 Word2vec - Skipgram
@@ -587,22 +583,20 @@ words and tends to perform better with smaller datasets or rare
 words.
 • Using the same example as before, Skip-gram would predict "The",
 "cat", "sat", and "on" based on the target word "mat".
-![Page 43, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_043.png)
+![Page 43, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_043.png)
 
 ### Page 44
 Word2vec –Comparison CBOW vs Skipgram
-![Page 44, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_044.png)
-![Page 44, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_044_img_001.png)
+![Page 44, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_044_img_001.png)
 
 ### Page 45
 CBOW vs Skipgram
 • https://kavita-ganesan.com/comparison-between-cbow-skipgram-
 subword/
-![Page 45, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_045.png)
+![Page 45, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_045.png)
 
 ### Page 46
-![Page 46, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_046.png)
-![Page 46, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_046_img_001.png)
+![Page 46, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_046_img_001.png)
 
 ### Page 47
 What is Gensim?
@@ -612,7 +606,7 @@ wise) and painlessly (human-wise) as possible.
 • Gensim is designed to process raw, unstructured digital texts (“plain
 text”) using unsupervised machine learning algorithms.
 • https://radimrehurek.com/gensim/intro.html
-![Page 47, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_047.png)
+![Page 47, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_047.png)
 
 ### Page 48
 Word2vec  in  GenSim
@@ -628,15 +622,14 @@ which allow to load models and manipulate.
 • https://www.machinelearningplus.com/nlp/gensim-tutorial/
 • Tutorial
 • https://www.geeksforgeeks.org/nlp-gensim-tutorial-complete-guide-for-beginners/
-![Page 48, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_048.png)
+![Page 48, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_048.png)
 
 ### Page 49
 GenSim Tutorials in general
 • https://radimrehurek.com/gensim/auto_exa
 mples/index.html
-![Page 49, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_049.png)
-![Page 49, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_049_img_001.png)
-![Page 49, Figure 3](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_049_img_002.png)
+![Page 49, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_049_img_001.png)
+![Page 49, Figure 2](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_049_img_002.png)
 
 ### Page 50
 Word2vec –Loading pre-trained models
@@ -647,7 +640,7 @@ Gensim-data repository.
 available to us.
 • This also includes models like GloVe and fastext other than word2vec.
 • We can also download a model from our HD
-![Page 50, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_050.png)
+![Page 50, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_050.png)
 
 ### Page 51
 Word2vec - GenSim
@@ -659,7 +652,7 @@ import gensim.downloader as api
 print(api.info()['models'].keys())        #list avail. models
 model_twi = api.load("glove-twitter-25")  #load model
 model_twi = api.load("word2vec-google-news-300")  #load larger model
-![Page 51, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_051.png)
+![Page 51, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_051.png)
 
 ### Page 52
 Word2vec - GenSim
@@ -669,7 +662,7 @@ Instead of handmade
 cosine_similarity = numpy.dot(model['spain'],
 model['france'])/(numpy.linalg.norm(model['spain'])*
 numpy.linalg.norm(model['france']))
-![Page 52, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_052.png)
+![Page 52, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_052.png)
 
 ### Page 53
 Word2vec - GenSim
@@ -684,12 +677,12 @@ for index, word in enumerate(model.index_to_key):
     if index == 10:
         break
     print(f"word #{index}/{len(model.index_to_key)} is {word}")
-![Page 53, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_053.png)
+![Page 53, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_053.png)
 
 ### Page 54
 Word2vec –Saving models
 • We can save our existing models and load them again.
-![Page 54, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_054.png)
+![Page 54, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_054_img_001.jpeg)
 
 ### Page 55
 Word2vec - Visualization
@@ -706,7 +699,7 @@ directions (principal components) capturing the largest variation in the data ca
 be easily identified.
 • The idea is to use PCA to reduce the dimensionality and represent the word
 through their vectors on a 2-dimensional o 3-dim plane.
-![Page 55, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_055.png)
+![Page 55, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_055.png)
 
 ### Page 56
 Word2vec - Visualization
@@ -716,13 +709,13 @@ Word2vec - Visualization
 • Sentiment Analisys
 • https://github.com/malinowakrew/text_classifier_sentiment/blob/m
 aster/text_classifier.ipynb
-![Page 56, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_056.png)
+![Page 56, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_056.png)
 
 ### Page 57
 Word2vec –Example code
 • https://colab.research.google.com/drive/1YkSrvfWR_EBFFrhV5E15Z6
 k5es4Kluom?usp=sharing
-![Page 57, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_057.png)
+![Page 57, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_057.png)
 
 ### Page 58
 Word2Vec Materials
@@ -731,7 +724,7 @@ Word2Vec Materials
 61e64e38a6a1
 • Gensim Word2Vec Tutorial: An End-to-End Example
 • https://kavita-ganesan.com/gensim-word2vec-tutorial-starter-code/
-![Page 58, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_058.png)
+![Page 58, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_058.png)
 
 ### Page 59
 Word2Vec
@@ -751,7 +744,7 @@ word relies only on its neighbours & can prove suboptimal
 word2vec in a new language, you have to start from scratch
 4. Requires a comparatively larger corpus for the network to converge (especially if
 using skip-gram)
-![Page 59, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_059.png)
+![Page 59, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_059.png)
 
 ### Page 60
 Word2Vec –Cons & Solutions
@@ -761,7 +754,7 @@ Word2Vec –Cons & Solutions
 ➢solved by FastText
 3. Lacks broad context awareness
 ➢solved by LSTM, BERT, GPT
-![Page 60, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_060.png)
+![Page 60, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_060.png)
 
 ### Page 61
 Word2Vec - Laboratory Class
@@ -776,7 +769,7 @@ an/nlp/blob/main/word_embedding_classification.ipynb
 • Classifying Movie Plots by Genre
 • https://github.com/RaRe-Technologies/movie-plots-by-
 genre/tree/master/ipynb_with_output
-![Page 61, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_061.png)
+![Page 61, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_061.png)
 
 ### Page 62
 Word2Vec - Laboratory Class using Gensim
@@ -786,10 +779,10 @@ Word2Vec - Laboratory Class using Gensim
 • https://github.com/codebasics/nlp-
 tutorials/blob/main/16_word_vectors_gensim_text_classification/ge
 nsim_w2v_google.ipynb
-![Page 62, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_062.png)
+![Page 62, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_062.png)
 
 ### Page 63
-![Page 63, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_063.png)
+![Page 63, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_063_img_001.jpeg)
 
 ### Page 64
 GloVe
@@ -804,7 +797,7 @@ by trying to learn both local & global statistics of a word to represent it.
 • prediction-based technique (Word2Vec)
 • … and hence is also referred to as a hybrid technique for continuous word
 representation
-![Page 64, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_064.png)
+![Page 64, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_064.png)
 
 ### Page 65
 GloVe - Mathematical Foundation
@@ -819,7 +812,7 @@ times word j appears in the context of word i
 2.Objective:
 1. Capture the ratio of co-occurrence probabilities between words to reflect semantic
 relationships.
-![Page 65, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_065.png)
+![Page 65, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_065.png)
 
 ### Page 66
 GloVe - Co-occurrence Matrix
@@ -832,14 +825,13 @@ Word1 0 2 3 0
 Word2 2 0 1 4
 Word3 3 1 0 5
 Word4 0 4 5 0
-![Page 66, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_066.png)
+![Page 66, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_066.png)
 
 ### Page 67
 The GloVe
 Loss
 Function
-![Page 67, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_067.png)
-![Page 67, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_067_img_001.png)
+![Page 67, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_067_img_001.png)
 
 ### Page 68
 Training GloVe
@@ -853,7 +845,7 @@ appropriate importance to frequent and infrequent pairs.
 adjust word vectors until the model converges.
 • Result: Word embeddings that effectively capture word meanings and
 relationships
-![Page 68, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_068.png)
+![Page 68, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_068.png)
 
 ### Page 69
 Hyperparameters in GloVe
@@ -872,7 +864,7 @@ Hyperparameters in GloVe
 • Weighting Function Parameters:
 • Adjusts how co-occurrence frequencies influence training.
 • Balances the contribution of frequent and rare pairs.
-![Page 69, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_069.png)
+![Page 69, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_069.png)
 
 ### Page 70
 Advantages of GloVe over Word2Vec
@@ -886,7 +878,7 @@ corpus efficiently
 Word2Vec's iterative neural network approach
 • Improved performance: Often shows better performance on word
 analogy tasks.
-![Page 70, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_070.png)
+![Page 70, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_070.png)
 
 ### Page 71
 GloVe – Advantages & Disadvantages
@@ -901,12 +893,11 @@ Disadvantages
 more in GloVe compared to word2vec
 • Similar to word2vec, it does not solve the problem of polysemous words since
 words & vectors have a one-to-one relationship
-![Page 71, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_071.png)
+![Page 71, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_071.png)
 
 ### Page 72
 GloVe vs. Word2Vec: A Comparison Table
-![Page 72, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_072.png)
-![Page 72, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_072_img_001.png)
+![Page 72, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_072_img_001.png)
 
 ### Page 73
 Glove – Example 1
@@ -950,7 +941,7 @@ array([-0.56174 ,  0.69419 ,  0.16733 ,  0.055867, -0.26266 , -0.6303  ,
 # twitter_glove.similarity("modi", "India")
 KeyError: "word 'India' not in vocabulary"
 OUTPUT
-![Page 73, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_073.png)
+![Page 73, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_073.png)
 
 ### Page 74
 Glove Twiiter 25
@@ -960,7 +951,7 @@ uncased.
 • https://nlp.stanford.edu/projects/glove/
 • https://nlp.stanford.edu/pubs/glove.pdf
 • https://huggingface.co/Gensim/glove-twitter-25
-![Page 74, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_074.png)
+![Page 74, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_074.png)
 
 ### Page 75
 Glove – Example 2
@@ -998,7 +989,7 @@ classifier.fit(X_train, y_train)
 predictions = classifier.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f"Accuracy: {accuracy * 100:.2f}%")
-![Page 75, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_075.png)
+![Page 75, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_075.png)
 
 ### Page 76
 Glove - Example 2
@@ -1010,11 +1001,10 @@ its word vectors.
 • Classification: A Support Vector Machine (SVM) is trained on these
 vectors to classify sentences.
 • Evaluation: The model's accuracy is tested on unseen data.
-![Page 76, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_076.png)
+![Page 76, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_076.png)
 
 ### Page 77
-![Page 77, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_077.png)
-![Page 77, Figure 2](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_077_img_001.png)
+![Page 77, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_077_img_001.png)
 
 ### Page 78
 What is fastText?
@@ -1023,7 +1013,7 @@ to learn text representations and text classifiers.
 • It works on standard, generic hardware. Models can later be reduced
 in size to even fit on mobile devices.
 • https://fasttext.cc/
-![Page 78, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_078.png)
+![Page 78, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_078.png)
 
 ### Page 79
 fastText resources
@@ -1035,7 +1025,7 @@ fastText resources
 • https://fasttext.cc/docs/en/crawl-vectors.html
 • Language identification
 • https://fasttext.cc/docs/en/language-identification.html
-![Page 79, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_079.png)
+![Page 79, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_079.png)
 
 ### Page 80
 FastTextvs Word2Vec
@@ -1049,7 +1039,7 @@ FastTextvs Word2Vec
 • FastText: Slower training, larger memory requirements due to subword storage
 • Word2Vec: Better for languages with simple morphology (like English)
 • FastText: Better for languages with complex morphology (Finnish, Turkish, German)
-![Page 80, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_080.png)
+![Page 80, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_080.png)
 
 ### Page 81
 fastTextusage example
@@ -1059,12 +1049,12 @@ https://www.youtube.com/watch?v=Br-Ozg9D4mc
 • https://github.com/codebasics/nlp-
 tutorials/blob/main/16_word_vectors_gensim_text_classification/gensim_w2v_g
 oogle.ipynb
-![Page 81, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_081.png)
+![Page 81, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_081.png)
 
 ### Page 82
 ADDITIONAL
 LINKS
-![Page 82, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_082.png)
+![Page 82, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_082.png)
 
 ### Page 83
 Projects & Basic Applications
@@ -1076,7 +1066,7 @@ Processing/blob/master/NLP-Wine-Reviews/Wine%20reviews.ipynb
 • Sentiment Analysis with LSTM
 • https://medium.com/@skillcate/sentiment-classification-using-neural-
 networks-a-complete-guide-1798aaf357cd
-![Page 83, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_083.png)
+![Page 83, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_083.png)
 
 ### Page 84
 NLP - Projects
@@ -1089,15 +1079,15 @@ Transformers/Sentiment%20Analysis%20with%20BERT.ipynb
 • News Classification using GenSim
 • https://www.youtube.com/watch?v=ZrgVlfNduj8&list=PLeo1K3hjS3uuvuAXhYjV2l
 MEShq2UYSwX
-![Page 84, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_084.png)
+![Page 84, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_084.png)
 
 ### Page 85
 NLP –Tutorial Example Code
 • https://github.com/codebasics/nlp-
 tutorials/tree/main/9_bag_of_words
-![Page 85, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_085.png)
+![Page 85, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_085.png)
 
 ### Page 86
 NLP Course HuggingFace
 • https://huggingface.co/learn/nlp-course/chapter1/1
-![Page 86, Figure 1](subjects/snlp/slides/Chapter 4 NLP-images/Chapter 4 NLP_page_086.png)
+![Page 86, Figure 1](../../public/subject-assets/snlp/slides/Chapter 4 NLP/Chapter 4 NLP_page_086.png)

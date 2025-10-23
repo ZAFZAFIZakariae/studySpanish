@@ -41,7 +41,7 @@ c. Su violación durante la ejecución de una transacción puede suponer que no 
 la propiedad de atomicidad.
 d. Supone que la propiedad representada por la restricción de integridad puede no estar
 cumpliéndose cuando la transacción alcanza el commit.
-![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_001.png)
 
 ### Page 2
 1er Parcial de Diseño y Gestión de Bases de Datos (03/11/2022)
@@ -83,7 +83,7 @@ b. Transferir a disco todos los bloques actualizados por transacciones confirmad
 después del último punto de control.
 c. Anotar el punto de control en el búfer de diario y forzar la escritura del diario.
 d. Informar al usuario.
-![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_002.png)
 
 ### Page 3
 1er Parcial de Diseño y Gestión de Bases de Datos (03/11/2022)
@@ -126,11 +126,10 @@ tn+1
 Confirmación
 t1
 tn
-![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_003.png)
-![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_003_img_001.png)
-![Page 3, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_003_img_002.png)
-![Page 3, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_003_img_003.png)
-![Page 3, Figure 5](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_003_img_004.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_003_img_001.png)
+![Page 3, Figure 2](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_003_img_002.png)
+![Page 3, Figure 3](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_003_img_003.png)
+![Page 3, Figure 4](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_003_img_004.png)
 
 ### Page 4
 1er Parcial de Diseño y Gestión de Bases de Datos (03/11/2022)
@@ -174,8 +173,7 @@ T1 Reparaciones Luis Carrer 32, 46470
 T2 Taller Perfecto Calle B, 46190
 T3 Taller Olé Azagador de Lliria, s/n, 46560
 T4 Taller Pepa Benimaclet 16, 46020
-![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_004.png)
-![Page 4, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_004_img_001.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_004_img_001.png)
 
 ### Page 5
 1er Parcial de Diseño y Gestión de Bases de Datos (03/11/2022)
@@ -244,19 +242,18 @@ fecha: {1..1}: date
 precio: {1..1}: real
 {0 ..*}
  {0 ..*}
-![Page 5, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005.png)
-![Page 5, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_001.png)
-![Page 5, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_002.png)
-![Page 5, Figure 4](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_003.png)
-![Page 5, Figure 5](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_004.png)
-![Page 5, Figure 6](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_005.png)
-![Page 5, Figure 7](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_006.png)
-![Page 5, Figure 8](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_007.png)
-![Page 5, Figure 9](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_008.png)
-![Page 5, Figure 10](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_009.png)
-![Page 5, Figure 11](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_010.png)
-![Page 5, Figure 12](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_011.png)
-![Page 5, Figure 13](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_005_img_012.png)
+![Page 5, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_001.png)
+![Page 5, Figure 2](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_002.png)
+![Page 5, Figure 3](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_003.png)
+![Page 5, Figure 4](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_004.png)
+![Page 5, Figure 5](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_005.png)
+![Page 5, Figure 6](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_006.png)
+![Page 5, Figure 7](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_007.png)
+![Page 5, Figure 8](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_008.png)
+![Page 5, Figure 9](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_009.png)
+![Page 5, Figure 10](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_010.png)
+![Page 5, Figure 11](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_011.png)
+![Page 5, Figure 12](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_005_img_012.png)
 
 ### Page 6
 1er Parcial de Diseño y Gestión de Bases de Datos (03/11/2022)
@@ -302,4 +299,4 @@ RI2. Todo cod_asg de Asignatura debe aparecer en la tabla Matriculado.
 
 Nota: El ejemplo que se m uestra aquí está extraído de las transpare ncias del Tema 7. Hay
 muchos otros ejemplos válidos posibles.
-![Page 6, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución-images/2022-DBD-1P_solución_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_solución/2022-DBD-1P_solución_page_006.png)

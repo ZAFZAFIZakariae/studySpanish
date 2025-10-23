@@ -4,7 +4,7 @@ Source: subjects/snlp/slides/Chapter 2.pdf
 ### Page 1
 CHAPTER 2
 Features Extraction
-![Page 1, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_001.png)
 
 ### Page 2
 What is Feature Extraction in audio signals ?
@@ -16,7 +16,7 @@ Purpose:
 It involves selecting and computing features that capture the essential
 characteristics of the sound or speech signal, reducing the complexity of the
 data while preserving important information.
-![Page 2, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_002.png)
 
 ### Page 3
 Common Features
@@ -32,7 +32,7 @@ The rate at which the signal changes sign, indicating the noisiness or percussiv
 signal.
 Pitch and Formants:
 Fundamental frequency and resonant frequencies in speech analysis.
-![Page 3, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_003.png)
 
 ### Page 4
 Why is Feature Extraction Necessary?  (i)
@@ -47,7 +47,7 @@ the task.
 Noise Reduction:
 It helps to filter out irrelevant or redundant information, enhancing the
 signal-to-noise ratio, which is crucial for tasks like speech recognition.
-![Page 4, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_004.png)
 
 ### Page 5
 Why is Feature Extraction Necessary?  (ii)
@@ -63,11 +63,11 @@ Domain-Specific Insights:
 In speech processing, certain features like MFCCs are known to be effective
 in capturing the properties of human speech, aiding in tasks like speaker
 recognition and emotion detection.
-![Page 5, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_005.png)
 
 ### Page 6
 LIBROSA Library
-![Page 6, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_006.png)
 
 ### Page 7
 LIBROSA Library
@@ -77,7 +77,7 @@ LIBROSA Library
 • It also has functions for plotting spectrograms
 • Example of use:
 • https://librosa.org/doc/main/auto_examples/plot_display.html
-![Page 7, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_007.png)
 
 ### Page 8
 Spectrogram
@@ -91,8 +91,7 @@ time-frequency representation.
 • The amplitude of each frequency component is
 typically displayed as a color intensity or grayscale
 value.
-![Page 8, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_008.png)
-![Page 8, Figure 2](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_008_img_001.png)
+![Page 8, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_008_img_001.png)
 
 ### Page 9
 Spectrogram
@@ -105,12 +104,11 @@ musical notes, speech phonemes) that occur at specific times.
 • It separates the time-domain and frequency-domain aspects of the signal,
 providing a clearer understanding of how different frequencies contribute to the
 overall signal over time.
-![Page 9, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_009.png)
 
 ### Page 10
 Spectrogram
-![Page 10, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_010.png)
-![Page 10, Figure 2](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_010_img_001.png)
+![Page 10, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_010_img_001.png)
 
 ### Page 11
 Problem with RAW spectrogram in AI
@@ -123,11 +121,11 @@ which can negatively impact the performance of machine learning models.
 • A Raw spectrogram includes almost the same samples that a PCM signal, so the
 number of input parameters to a NN is not reduced.
 • We are looking for a Dimensionality Reduction as an input of the NN.
-![Page 11, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_011.png)
+![Page 11, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_011.png)
 
 ### Page 12
 MEL Scale
-![Page 12, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_012_img_001.jpeg)
 
 ### Page 13
 MEL Scale advantages
@@ -144,11 +142,11 @@ robustness in machine learning models.
 • Align more closely with human auditory perception.
 • Reduce dimensionality and computational complexity.
 • Capture perceptually relevant features while discarding less useful high-frequency details.
-![Page 13, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_013.png)
+![Page 13, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_013.png)
 
 ### Page 14
 MEL Spectrogram
-![Page 14, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_014.png)
+![Page 14, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_014_img_001.jpeg)
 
 ### Page 15
 MEL Spectrogram in Librosa
@@ -158,7 +156,7 @@ sa.filters.mel
 • How to call the function
 • mel_spec = librosa.feature.melspectrogram(y=audio,
 sr=sr, n_mels=NMELS)
-![Page 15, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_015.png)
+![Page 15, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_015.png)
 
 ### Page 16
 MEL Cepstrum (MFCC)
@@ -174,7 +172,7 @@ transformations.
 • The DCT decorrelates the features and compresses the information into a set of coefficients.
 • MFCCs are generally more robust to variations in recording conditions and background noise compared to MEL.
 • Very use full in speech recognition, but also used for general audio purposes
-![Page 16, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_016.png)
+![Page 16, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_016.png)
 
 ### Page 17
 MEL Cepstrum (MFCC)
@@ -183,14 +181,15 @@ MEL Cepstrum (MFCC)
 • How to call the function
 • mfcc = librosa.feature.mfcc(y=signal,
 sr=sample_rate, n_mfcc=num_mfcc, n_fft=n_fft)
-![Page 17, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_017.png)
+![Page 17, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_017.png)
 
 ### Page 18
 Espectrograma MFCC
 MEL
 MFCC
 First 13 param.
-![Page 18, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_018.png)
+![Page 18, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_018_img_001.jpeg)
+![Page 18, Figure 2](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_018_img_002.jpeg)
 
 ### Page 19
 Other features
@@ -214,7 +213,7 @@ percentage of the total spectral energy, e.g. 85%, lies
 bins representing the 12 distinct semitones (or chroma) of the musical octave.
 https://www.kaggle.com/code/andradaolteanu/
 work-w-audio-data-visualise-classify-recommend
-![Page 19, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_019.png)
+![Page 19, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_019.png)
 
 ### Page 20
 Applications of feature extraction in Audio
@@ -232,4 +231,4 @@ analysis.
 in industrial settings.
 8. Audio Synthesis: Using extracted features to synthesize new audio content, like
 generating music or voice.
-![Page 20, Figure 1](subjects/snlp/slides/Chapter 2-images/Chapter 2_page_020.png)
+![Page 20, Figure 1](../../public/subject-assets/snlp/slides/Chapter 2/Chapter 2_page_020.png)

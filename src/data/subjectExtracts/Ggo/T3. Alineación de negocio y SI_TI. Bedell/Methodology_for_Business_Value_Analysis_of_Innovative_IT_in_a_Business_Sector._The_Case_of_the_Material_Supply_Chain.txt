@@ -124,8 +124,7 @@ innovation programme.
 
 2025 IEEE International Conference on Engineering, Technology, and Innovation (ICE/ITMC) | 979-8-3315-8534-1/25/$31.00 ©2025 IEEE | DOI: 10.1109/ICE/ITMC65658.2025.11106645
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 1, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_001.png)
-![Page 1, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_001_img_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_001_img_001.png)
 
 ### Page 2
 Fig. 2.  Business Value for Stakeholders about an Innovative  IT Solution.
@@ -201,9 +200,9 @@ the challenges they confront in using or receiving the product
 or service in question [19], [20].
 
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 2, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_002.png)
-![Page 2, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_002_img_001.png)
-![Page 2, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_002_img_003.png)
+![Page 2, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_002_img_001.png)
+![Page 2, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_002_img_002.jpeg)
+![Page 2, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_002_img_003.png)
 
 ### Page 3
 Value Drivers for adoption of new IT innovation inc lude
@@ -331,7 +330,7 @@ Finally, reference frameworks such as COBIT, ISO
 38500, IIRA, or RAMI 4.0 do not provide a clear
 methodology that specifically guides the interaction between
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 3, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_003.png)
 
 ### Page 4
 IT solution developers and the sector in which these solutions
@@ -450,7 +449,7 @@ adaptation derived from the IIRA architecture frame work,
 specifically from the business viewpoint section, w hich
 distinguishes technological factors from business f actors.
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 4, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_004.png)
 
 ### Page 5
 Based on this approach, the main difficulties that may arise
@@ -575,7 +574,7 @@ analysis takes place in later stages such as protot yping, it
 serves to validate the actual business impact of the innovation
 and identify potential adjustments needed.
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 5, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_005.png)
 
 ### Page 6
 The second phase consists of conducting the busines s
@@ -688,7 +687,7 @@ from stakeholders, it is essential to prepare and s tructure
 both the materials and the mechanism for data colle ction.
 This preparation involves:
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 6, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_006_img_001.jpeg)
 
 ### Page 7
 • Developing relevant information about the
@@ -809,7 +808,7 @@ innovation officers from four research centers, two
 development companies of the innovative solution an d four
 pilot companies in the material sector). Their role is important
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 7, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_007.png)
 
 ### Page 8
 in establishing the foundation upon which developer s will
@@ -935,7 +934,7 @@ innovation (interest/benefits for the business, dif ficulties for
 its implementation, and alignment with the business ) from a
 sectoral point of view.
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 8, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_008.png)
 
 ### Page 9
 Furthermore, the methodology and the business value
@@ -1070,7 +1069,7 @@ Leveraging ISO/IEC 38500:2008 and COBIT to Achieve
 Business–IT Alignment,” EDPACS , vol. 44, no. 2, pp. 1–
 18, Aug. 2011, doi: 10.1080/07366981.2011.599278.
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 9, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_009.png)
 
 ### Page 10
 [26] P. Adolphs and E. Ulrich, “Reference Architect ure Model
@@ -1088,4 +1087,4 @@ https://dimat-project.eu/.
 
 
 Authorized licensed use limited to: UNIVERSIDAD POLITECNICA DE VALENCIA. Downloaded on September 30,2025 at 14:33:49 UTC from IEEE Xplore.  Restrictions apply.
-![Page 10, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain-images/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_010.png)
+![Page 10, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain/Methodology_for_Business_Value_Analysis_of_Innovative_IT_in_a_Business_Sector._The_Case_of_the_Material_Supply_Chain_page_010.png)

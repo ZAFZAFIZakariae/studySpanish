@@ -25,9 +25,8 @@ Importance of Information Systems: The Method of Bedell Revisited," University o
 Groningen, Netherlands . Sprouts: Working Papers on Information Systems, 8(37).
 http://sprouts.aisnet.org/8-37
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 1, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_001.png)
-![Page 1, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_001_img_001.png)
-![Page 1, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_001_img_002.png)
+![Page 1, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_001_img_001.png)
+![Page 1, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_001_img_002.png)
 
 ### Page 2
 Calculating the importance of information
@@ -47,10 +46,9 @@ The Netherlands
 CITER WP/010/PSEBPP
 June 2008
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 2, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002.png)
-![Page 2, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002_img_001.png)
-![Page 2, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002_img_002.png)
-![Page 2, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002_img_003.png)
+![Page 2, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002_img_001.png)
+![Page 2, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002_img_002.png)
+![Page 2, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_002_img_003.png)
 
 ### Page 3
 CITER mission
@@ -161,9 +159,9 @@ e.j.stokking@rug.nl
 
 
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 3, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_003.png)
-![Page 3, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_003_img_001.png)
-![Page 3, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_003_img_002.png)
+![Page 3, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_003_img_001.png)
+![Page 3, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_003_img_002.png)
+![Page 3, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_003_img_003.png)
 
 ### Page 4
 1
@@ -206,9 +204,8 @@ method even further, an exemplary case is included in Section 4. Finally, in
 Section 5, the conclusions are discussed. The origi nal method as well as some of
 the work of Van Reeken is accounted for in Appendix A.
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 4, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_004.png)
-![Page 4, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_004_img_001.png)
-![Page 4, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_004_img_002.png)
+![Page 4, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_004_img_001.png)
+![Page 4, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_004_img_002.png)
 
 ### Page 5
 2
@@ -236,31 +233,30 @@ Figure 1: The three questions of Bedell
 
 Figure 2: An effectiveness/importance portfolio for a production process
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 5, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005.png)
-![Page 5, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_001.png)
-![Page 5, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_002.png)
-![Page 5, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_003.png)
-![Page 5, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_004.png)
-![Page 5, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_005.png)
-![Page 5, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_006.png)
-![Page 5, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_007.png)
-![Page 5, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_008.png)
-![Page 5, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_009.png)
-![Page 5, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_010.png)
-![Page 5, Figure 12](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_011.png)
-![Page 5, Figure 13](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_012.png)
-![Page 5, Figure 14](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_013.png)
-![Page 5, Figure 15](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_014.png)
-![Page 5, Figure 16](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_015.png)
-![Page 5, Figure 17](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_016.png)
-![Page 5, Figure 18](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_017.png)
-![Page 5, Figure 19](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_018.png)
-![Page 5, Figure 20](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_019.png)
-![Page 5, Figure 21](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_020.png)
-![Page 5, Figure 22](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_021.png)
-![Page 5, Figure 23](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_022.png)
-![Page 5, Figure 24](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_023.png)
-![Page 5, Figure 25](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_024.png)
+![Page 5, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_001.png)
+![Page 5, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_002.png)
+![Page 5, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_003.png)
+![Page 5, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_004.png)
+![Page 5, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_005.png)
+![Page 5, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_006.png)
+![Page 5, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_007.png)
+![Page 5, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_008.png)
+![Page 5, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_009.png)
+![Page 5, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_010.png)
+![Page 5, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_011.png)
+![Page 5, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_012.png)
+![Page 5, Figure 13](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_013.png)
+![Page 5, Figure 14](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_014.png)
+![Page 5, Figure 15](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_015.png)
+![Page 5, Figure 16](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_016.png)
+![Page 5, Figure 17](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_017.png)
+![Page 5, Figure 18](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_018.png)
+![Page 5, Figure 19](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_019.png)
+![Page 5, Figure 20](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_020.png)
+![Page 5, Figure 21](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_021.png)
+![Page 5, Figure 22](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_022.png)
+![Page 5, Figure 23](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_023.png)
+![Page 5, Figure 24](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_005_img_024.png)
 
 ### Page 6
 3
@@ -296,17 +292,16 @@ receive most attention.
 
 Figure 3: The key concepts (based on Bedell, 1985)
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 6, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006.png)
-![Page 6, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_001.png)
-![Page 6, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_002.png)
-![Page 6, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_003.png)
-![Page 6, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_004.png)
-![Page 6, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_005.png)
-![Page 6, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_006.png)
-![Page 6, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_007.png)
-![Page 6, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_008.png)
-![Page 6, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_009.png)
-![Page 6, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_010.png)
+![Page 6, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_001.png)
+![Page 6, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_002.png)
+![Page 6, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_003.png)
+![Page 6, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_004.png)
+![Page 6, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_005.png)
+![Page 6, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_006.png)
+![Page 6, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_007.png)
+![Page 6, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_008.png)
+![Page 6, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_009.png)
+![Page 6, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_006_img_010.png)
 
 ### Page 7
 4
@@ -333,25 +328,24 @@ Figure 4: Organizational-level portfolio
 
 Figure 5: Business process–level portfolio
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 7, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007.png)
-![Page 7, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_001.png)
-![Page 7, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_002.png)
-![Page 7, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_003.png)
-![Page 7, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_004.png)
-![Page 7, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_005.png)
-![Page 7, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_006.png)
-![Page 7, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_007.png)
-![Page 7, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_008.png)
-![Page 7, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_009.png)
-![Page 7, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_010.png)
-![Page 7, Figure 12](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_011.png)
-![Page 7, Figure 13](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_012.png)
-![Page 7, Figure 14](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_013.png)
-![Page 7, Figure 15](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_014.png)
-![Page 7, Figure 16](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_015.png)
-![Page 7, Figure 17](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_016.png)
-![Page 7, Figure 18](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_017.png)
-![Page 7, Figure 19](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_018.png)
+![Page 7, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_001.png)
+![Page 7, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_002.png)
+![Page 7, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_003.png)
+![Page 7, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_004.png)
+![Page 7, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_005.png)
+![Page 7, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_006.png)
+![Page 7, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_007.png)
+![Page 7, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_008.png)
+![Page 7, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_009.png)
+![Page 7, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_010.png)
+![Page 7, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_011.png)
+![Page 7, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_012.png)
+![Page 7, Figure 13](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_013.png)
+![Page 7, Figure 14](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_014.png)
+![Page 7, Figure 15](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_015.png)
+![Page 7, Figure 16](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_016.png)
+![Page 7, Figure 17](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_017.png)
+![Page 7, Figure 18](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_007_img_018.png)
 
 ### Page 8
 5
@@ -387,22 +381,21 @@ importance of business processes to the organizatio n. A comparable diagram is
 
 Figure 6: Activity-level portfolio
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 8, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008.png)
-![Page 8, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_001.png)
-![Page 8, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_002.png)
-![Page 8, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_003.png)
-![Page 8, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_004.png)
-![Page 8, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_005.png)
-![Page 8, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_006.png)
-![Page 8, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_007.png)
-![Page 8, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_008.png)
-![Page 8, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_009.png)
-![Page 8, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_010.png)
-![Page 8, Figure 12](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_011.png)
-![Page 8, Figure 13](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_012.png)
-![Page 8, Figure 14](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_013.png)
-![Page 8, Figure 15](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_014.png)
-![Page 8, Figure 16](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_015.png)
+![Page 8, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_001.png)
+![Page 8, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_002.png)
+![Page 8, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_003.png)
+![Page 8, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_004.png)
+![Page 8, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_005.png)
+![Page 8, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_006.png)
+![Page 8, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_007.png)
+![Page 8, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_008.png)
+![Page 8, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_009.png)
+![Page 8, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_010.png)
+![Page 8, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_011.png)
+![Page 8, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_012.png)
+![Page 8, Figure 13](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_013.png)
+![Page 8, Figure 14](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_014.png)
+![Page 8, Figure 15](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_008_img_015.png)
 
 ### Page 9
 6
@@ -423,30 +416,29 @@ activity to the business process it supports (IAB) (Equation 1).
 
 Figure 7: Determining strategic importance scores (based on Bedell, 1985)
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 9, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009.png)
-![Page 9, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_001.png)
-![Page 9, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_002.png)
-![Page 9, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_003.png)
-![Page 9, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_004.png)
-![Page 9, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_005.png)
-![Page 9, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_006.png)
-![Page 9, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_007.png)
-![Page 9, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_008.png)
-![Page 9, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_009.png)
-![Page 9, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_010.png)
-![Page 9, Figure 12](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_011.png)
-![Page 9, Figure 13](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_012.png)
-![Page 9, Figure 14](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_013.png)
-![Page 9, Figure 15](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_014.png)
-![Page 9, Figure 16](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_015.png)
-![Page 9, Figure 17](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_016.png)
-![Page 9, Figure 18](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_017.png)
-![Page 9, Figure 19](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_018.png)
-![Page 9, Figure 20](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_019.png)
-![Page 9, Figure 21](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_020.png)
-![Page 9, Figure 22](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_021.png)
-![Page 9, Figure 23](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_022.png)
-![Page 9, Figure 24](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_023.png)
+![Page 9, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_001.png)
+![Page 9, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_002.png)
+![Page 9, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_003.png)
+![Page 9, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_004.png)
+![Page 9, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_005.png)
+![Page 9, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_006.png)
+![Page 9, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_007.png)
+![Page 9, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_008.png)
+![Page 9, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_009.png)
+![Page 9, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_010.png)
+![Page 9, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_011.png)
+![Page 9, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_012.png)
+![Page 9, Figure 13](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_013.png)
+![Page 9, Figure 14](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_014.png)
+![Page 9, Figure 15](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_015.png)
+![Page 9, Figure 16](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_016.png)
+![Page 9, Figure 17](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_017.png)
+![Page 9, Figure 18](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_018.png)
+![Page 9, Figure 19](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_019.png)
+![Page 9, Figure 20](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_020.png)
+![Page 9, Figure 21](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_021.png)
+![Page 9, Figure 22](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_022.png)
+![Page 9, Figure 23](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_009_img_023.png)
 
 ### Page 10
 7
@@ -489,9 +481,8 @@ organization (Importance Information System Organization, IIO, Equation 7).
 /uni2211(/g1832/g1832 )
 /uni2211(/g1835/g1828/g1841 ) Equation 7
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 10, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_010.png)
-![Page 10, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_010_img_001.png)
-![Page 10, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_010_img_002.png)
+![Page 10, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_010_img_001.png)
+![Page 10, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_010_img_002.png)
 
 ### Page 11
 8
@@ -527,15 +518,20 @@ example uses the steps as identified by Van Reeken (1992) and concerns an
 
 Figure 8: All aspects of the method
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 11, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011.png)
-![Page 11, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_001.png)
-![Page 11, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_002.png)
-![Page 11, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_003.png)
-![Page 11, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_005.png)
-![Page 11, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_006.png)
-![Page 11, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_011.png)
-![Page 11, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_012.png)
-![Page 11, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_014.png)
+![Page 11, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_001.png)
+![Page 11, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_002.png)
+![Page 11, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_003.png)
+![Page 11, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_004.png)
+![Page 11, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_005.png)
+![Page 11, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_006.png)
+![Page 11, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_007.png)
+![Page 11, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_008.png)
+![Page 11, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_009.png)
+![Page 11, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_010.png)
+![Page 11, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_011.png)
+![Page 11, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_012.png)
+![Page 11, Figure 13](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_013.png)
+![Page 11, Figure 14](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_011_img_014.png)
 
 ### Page 12
 imaginary banking organisation
@@ -630,9 +626,8 @@ listed in
 in obtaining its
 The judgements are made based on
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 12, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_012.png)
-![Page 12, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_012_img_001.png)
-![Page 12, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_012_img_002.png)
+![Page 12, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_012_img_001.png)
+![Page 12, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_012_img_002.png)
 
 ### Page 13
 10
@@ -686,9 +681,8 @@ calculate the system’s effectiveness to the business process (ESB, Table 4).
 1 The absence of computerized information does not h ave to results in an ESA score of zero by
 default; manual operations might be just as adequate in serving an activity.
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 13, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_013.png)
-![Page 13, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_013_img_001.png)
-![Page 13, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_013_img_002.png)
+![Page 13, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_013_img_001.png)
+![Page 13, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_013_img_002.png)
 
 ### Page 14
 11
@@ -742,9 +736,8 @@ complexity by determining the importance of the inf ormation systems to the
 business processes (the IIB scores) by taking the m aximum of the IAB-scores for
 each business process (Table 7).
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 14, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_014.png)
-![Page 14, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_014_img_001.png)
-![Page 14, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_014_img_002.png)
+![Page 14, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_014_img_001.png)
+![Page 14, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_014_img_002.png)
 
 ### Page 15
 12
@@ -785,14 +778,13 @@ create an additional overall effectiveness of 5,3 (9,6-4,3).
 
 Figure 10: IBG’s organizational portfolio
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 15, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015.png)
-![Page 15, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_001.png)
-![Page 15, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_002.png)
-![Page 15, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_003.png)
-![Page 15, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_004.png)
-![Page 15, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_005.png)
-![Page 15, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_006.png)
-![Page 15, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_007.png)
+![Page 15, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_001.png)
+![Page 15, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_002.png)
+![Page 15, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_003.png)
+![Page 15, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_004.png)
+![Page 15, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_005.png)
+![Page 15, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_006.png)
+![Page 15, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_015_img_007.png)
 
 ### Page 16
 13
@@ -826,19 +818,18 @@ to be perfectly suitable for their purpose.
 
 Figure 11: Business process portfolio
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 16, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016.png)
-![Page 16, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_001.png)
-![Page 16, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_002.png)
-![Page 16, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_003.png)
-![Page 16, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_004.png)
-![Page 16, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_005.png)
-![Page 16, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_006.png)
-![Page 16, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_007.png)
-![Page 16, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_008.png)
-![Page 16, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_009.png)
-![Page 16, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_010.png)
-![Page 16, Figure 12](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_011.png)
-![Page 16, Figure 13](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_012.png)
+![Page 16, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_001.png)
+![Page 16, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_002.png)
+![Page 16, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_003.png)
+![Page 16, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_004.png)
+![Page 16, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_005.png)
+![Page 16, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_006.png)
+![Page 16, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_007.png)
+![Page 16, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_008.png)
+![Page 16, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_009.png)
+![Page 16, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_010.png)
+![Page 16, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_011.png)
+![Page 16, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_016_img_012.png)
 
 ### Page 17
 14
@@ -872,20 +863,19 @@ IBG to the wanted level of importance.
 
 Figure 12: Research and development portfolio
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 17, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017.png)
-![Page 17, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_001.png)
-![Page 17, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_002.png)
-![Page 17, Figure 4](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_003.png)
-![Page 17, Figure 5](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_004.png)
-![Page 17, Figure 6](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_005.png)
-![Page 17, Figure 7](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_006.png)
-![Page 17, Figure 8](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_007.png)
-![Page 17, Figure 9](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_008.png)
-![Page 17, Figure 10](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_009.png)
-![Page 17, Figure 11](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_010.png)
-![Page 17, Figure 12](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_011.png)
-![Page 17, Figure 13](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_012.png)
-![Page 17, Figure 14](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_013.png)
+![Page 17, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_001.png)
+![Page 17, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_002.png)
+![Page 17, Figure 3](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_003.png)
+![Page 17, Figure 4](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_004.png)
+![Page 17, Figure 5](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_005.png)
+![Page 17, Figure 6](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_006.png)
+![Page 17, Figure 7](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_007.png)
+![Page 17, Figure 8](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_008.png)
+![Page 17, Figure 9](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_009.png)
+![Page 17, Figure 10](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_010.png)
+![Page 17, Figure 11](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_011.png)
+![Page 17, Figure 12](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_012.png)
+![Page 17, Figure 13](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_017_img_013.png)
 
 ### Page 18
 15
@@ -940,9 +930,8 @@ Retail Banking Bankshops 30 0 5 150 120 1,25
 Services  IT  2 5 10  10  75  0,13
 
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 18, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_018.png)
-![Page 18, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_018_img_001.png)
-![Page 18, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_018_img_002.png)
+![Page 18, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_018_img_001.png)
+![Page 18, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_018_img_002.png)
 
 ### Page 19
 16
@@ -995,9 +984,8 @@ effectiveness
 Importance
 System One particular information system
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 19, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_019.png)
-![Page 19, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_019_img_001.png)
-![Page 19, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_019_img_002.png)
+![Page 19, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_019_img_001.png)
+![Page 19, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_019_img_002.png)
 
 ### Page 20
 17
@@ -1067,9 +1055,8 @@ factor
 achieving most of the activity’s strategic objects but the
 systems can, or already do, provide critical operat ional
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 20, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_020.png)
-![Page 20, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_020_img_001.png)
-![Page 20, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_020_img_002.png)
+![Page 20, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_020_img_001.png)
+![Page 20, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_020_img_002.png)
 
 ### Page 21
 18
@@ -1108,9 +1095,8 @@ FF  =IAO*IIA   Determines the importance of computing in an activi ty to
 the organization as a whole.
 
                              Sprouts - http://sprouts.aisnet.org/8-37
-![Page 21, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_021.png)
-![Page 21, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_021_img_001.png)
-![Page 21, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_021_img_002.png)
+![Page 21, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_021_img_001.png)
+![Page 21, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_021_img_002.png)
 
 ### Page 22
 Working Papers on Information Systems | ISSN 1535-6078
@@ -1204,6 +1190,5 @@ University of Amsterdam
 Roetersstraat 11, Room E 2.74
 1018 WB Amsterdam, Netherlands
 Email: admin@sprouts.aisnet.org
-![Page 22, Figure 1](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_022.png)
-![Page 22, Figure 2](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_022_img_001.png)
-![Page 22, Figure 3](subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP-images/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_022_img_002.png)
+![Page 22, Figure 1](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_022_img_001.png)
+![Page 22, Figure 2](../../public/subject-assets/Ggo/T3. Alineación de negocio y SI_TI. Bedell/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP/CiterWP10-SchuurmanBerghoutPowell+Portafolio+IMP_page_022_img_002.png)

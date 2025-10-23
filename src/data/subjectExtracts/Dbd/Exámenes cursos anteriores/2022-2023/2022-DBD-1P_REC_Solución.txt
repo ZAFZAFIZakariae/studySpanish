@@ -39,13 +39,12 @@ los diagramas?
 
 Diagrama 1: con una única versión
 Diagrama 2: con muchas
-![Page 1, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_001.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_001.png)
 
 ### Page 2
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (01/02/2023)
-![Page 2, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_002.png)
-![Page 2, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_002_img_001.png)
-![Page 2, Figure 3](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_002_img_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_002_img_001.png)
+![Page 2, Figure 2](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_002_img_002.png)
 
 ### Page 3
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (01/02/2023)
@@ -75,8 +74,7 @@ C.Aj: {nombre_app} App
 Precios(precio: float, rango: string)
 CP:{precio}
 RI3. Todo valor de precio de Precios, debe aparecer en precio de  Versiones
-![Page 3, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_003.png)
-![Page 3, Figure 2](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_003_img_001.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_003_img_001.png)
 
 ### Page 4
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (01/02/2023)
@@ -118,7 +116,7 @@ a. Está confirmada por el usuario y por tanto los cambios que haya realizado so
 b. Puede ser anulada posteriormente por el mismo usuario que la está ejecutando.
 c. Sólo puede ser anulada por SGBD.
 d. Está confirmada por el SGBD a la espera de validar las restricciones de integridad.
-![Page 4, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_004.png)
 
 ### Page 5
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (01/02/2023)
@@ -156,7 +154,7 @@ a. Si la estrategia de actualización es Inmediata-No Forzar hay que deshacer T4
 b. Si la estrategia de actualización es Inmediata-Forzar hay que deshacer T4, T3 y T1 y rehacer T2
 c. Si la estrategia de actualización es Diferida-Forzar hay que rehacer T2
 d. Si la estrategia de actualización es Diferida-No Forzar hay que deshacer T3 y T1 y rehacer T2
-![Page 5, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_005.png)
+![Page 5, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_005.png)
 
 ### Page 6
 Recuperación 1er Parcial de Diseño y Gestión de Bases de Datos (01/02/2023)
@@ -205,4 +203,4 @@ c. El principio de F orzar la Escritura del Diario asegura que, en caso de produ
 confirmación (SGBD), la transacción podrá rehacerse.
 d. El principio de Escritura Anticipada en el Diario asegura que, en caso de producirse un fallo des pués de la
 confirmación (SGBD), la transacción podrá deshacerse.
-![Page 6, Figure 1](subjects/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución-images/2022-DBD-1P_REC_Solución_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Dbd/Exámenes cursos anteriores/2022-2023/2022-DBD-1P_REC_Solución/2022-DBD-1P_REC_Solución_page_006.png)

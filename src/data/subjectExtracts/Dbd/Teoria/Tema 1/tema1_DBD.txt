@@ -9,9 +9,11 @@ Sistemas de Gestión de Bases de
 Datos
 Profesores: Laura Mota y Pedro Valderas
 1
-![Page 1, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_001.png)
-![Page 1, Figure 2](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_001_img_002.png)
-![Page 1, Figure 3](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_001_img_003.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_001_img_001.jpeg)
+![Page 1, Figure 2](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_001_img_002.png)
+![Page 1, Figure 3](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_001_img_003.png)
+![Page 1, Figure 4](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_001_img_004.jpeg)
+![Page 1, Figure 5](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_001_img_005.jpeg)
 
 ### Page 2
 2
@@ -25,7 +27,7 @@ de bases de datos.
 Objetivos:
 Sistemas de gestión de bases de datos.
 2
-![Page 2, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_002.png)
 
 ### Page 3
 3
@@ -36,7 +38,7 @@ Sistemas de gestión de bases de datos.
 5 Objetivos de un SGBD
 Sistemas de gestión de bases de datos.
 3
-![Page 3, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_003.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_003.png)
 
 ### Page 4
 4
@@ -59,7 +61,7 @@ familias se diferencian entre sí principalmente en la forma de organizar los da
 datos, es decir en el tipo de estructuras de datos utilizadas. Así, por ejemplo, en los sistemas de
 gestión de bases de datos relacionales los datos se organizan en tablas (o relaciones).
 4
-![Page 4, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_004.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_004.png)
 
 ### Page 5
 5
@@ -76,8 +78,7 @@ En el estado actual de desarrollo de la informática, se puede afirmar que el n�
 de información de cualquier organización es una (o varias) bases de datos, y que, por lo tanto,
 los sistemas de información actuales están soportados por tecnología de bases de datos.
 5
-![Page 5, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_005.png)
-![Page 5, Figure 2](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_005_img_001.png)
+![Page 5, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_005_img_001.png)
 
 ### Page 6
 6
@@ -109,7 +110,7 @@ información reúne (integra) toda la información de la organización, la base 
 puede ser muy compleja, por lo que la posibilidad de ofrecer “vistas parciales” de la misma a
 distintos colectivos de usuarios puede simplificar y facilitar su uso.
 6
-![Page 6, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_006.png)
+![Page 6, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_006.png)
 
 ### Page 7
 7
@@ -149,7 +150,7 @@ accedida por numerosos usuarios. Poder controlar quiénes son los usuarios autor
 tareas para las que están autorizados es también un objetivo importante de la tecnología de
 bases de datos.
 7
-![Page 7, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_007.png)
 
 ### Page 8
 8
@@ -162,7 +163,7 @@ En los sistemas de gestión de bases de datos, la característica de la “abstr
 (independencia de datos) se asegura definiendo la base de datos a distintos niveles de
 abstracción: esquemas de la base de datos.
 8
-![Page 8, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_008.png)
+![Page 8, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_008.png)
 
 ### Page 9
 9
@@ -180,7 +181,7 @@ esquema lógico se realiza en el esquema físico (obligatorio).
 Las posibles vistas parciales de la base de datos definidas para distintos colectivos de usuarios se
 definen es los esquemas externos, como “subconjuntos” del esquema lógico (opcional).
 9
-![Page 9, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_009.png)
+![Page 9, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_009.png)
 
 ### Page 10
 10
@@ -235,7 +236,7 @@ para uso del SGBD. (Independencia de datos)
 • La herramienta‐cliente para el diseño de consultas (SQL) a la base de datos: herramienta
 SQLDeveloper de Oracle.
 10
-![Page 10, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_010.png)
+![Page 10, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_010.png)
 
 ### Page 11
 1111
@@ -284,7 +285,7 @@ de datos. (Independencia de datos)
 • Control de la seguridad: control de los usuarios autorizados, y de los permisos concedidos
 para realizar operaciones sobre la base de datos, …
 11
-![Page 11, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_011.png)
+![Page 11, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_011.png)
 
 ### Page 12
 12
@@ -295,7 +296,7 @@ para realizar operaciones sobre la base de datos, …
 5 Objetivos de un SGBD.
 Sistemas de Gestión de bases de Datos.
 12
-![Page 12, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_012.png)
 
 ### Page 13
 13
@@ -315,7 +316,7 @@ la base de datos, y un lenguaje para manipular dichas estructuras.
 Los fabricantes de sistemas de gestión de bases de datos utilizan la propuesta de un modelo para
 construir sus productos.
 13
-![Page 13, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_013.png)
+![Page 13, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_013.png)
 
 ### Page 14
 14
@@ -338,7 +339,7 @@ En la familia relacional, los sistemas de gestión de bases de datos se basan en
 relacional de datos. En este modelo los datos se organizan en tablas (relaciones) y existen
 lenguajes algebraicos (Álgebra Relacional) o lógicos (SQL) para manipular estas estructuras.
 14
-![Page 14, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_014.png)
+![Page 14, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_014.png)
 
 ### Page 15
 15
@@ -361,7 +362,7 @@ Manipulation Language).
 Además, el SGBD debe tener componentes para realizar las tareas de administración: copias de
 seguridad, definición de usuarios, …
 15
-![Page 15, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_015.png)
+![Page 15, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_015.png)
 
 ### Page 16
 16
@@ -385,7 +386,7 @@ trabaja en modo paralelo, como se ilustra en el dibujo.
 Todos los SGBD actuales son multiusuario (ejecución concurrente) y muchos de ellos contemplan
 el paralelismo (ejecución paralela).
 16
-![Page 16, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_016.png)
+![Page 16, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_016.png)
 
 ### Page 17
 17
@@ -395,7 +396,7 @@ el paralelismo (ejecución paralela).
 4 Arquitecturas básicas de SGBD.
 Sistemas de Gestión de bases de Datos.
 17
-![Page 17, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_017.png)
+![Page 17, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_017.png)
 
 ### Page 18
 18
@@ -416,7 +417,7 @@ Por este motivo, para entender bien el funcionamiento de un SGBD es importante r
 jerarquía de almacenamiento de datos en un computador (memoria principal y memoria
 secundaria) y las técnicas de gestión asociadas (transferencia de datos).
 18
-![Page 18, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_018.png)
+![Page 18, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_018.png)
 
 ### Page 19
 19
@@ -436,7 +437,7 @@ Las diferencias entre ambos tipos de almacenamiento van a determinar el funciona
 SGBD ya que la base de datos va a estar almacenada en memoria secundaria (disco), pero sólo
 en memoria principal se podrán consultar y actualizar los datos.
 19
-![Page 19, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_019.png)
+![Page 19, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_019.png)
 
 ### Page 20
 20
@@ -454,7 +455,7 @@ Usualmente, cada relación de una base de datos relacional se guarda en disco en
 Cada tupla de la relación se guarda en un registro del fichero. Estos conceptos se estudian en
 profundidad en el Tema 5.
 20
-![Page 20, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_020.png)
+![Page 20, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_020.png)
 
 ### Page 21
 21
@@ -477,7 +478,7 @@ paquete de discos
 cilindro
 Disco:
 21
-![Page 21, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_021.png)
+![Page 21, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_021.png)
 
 ### Page 22
 22
@@ -495,7 +496,7 @@ De todas las característica de un disco (dispositivo de almacenamiento secundar
 destacar el concepto de bloque como unidad de direccionamiento en el disco y como unidad de
 transferencia entre los dos niveles de la jerarquía de almacenamiento: primario y secundario.
 22
-![Page 22, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_022.png)
+![Page 22, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_022.png)
 
 ### Page 23
 23
@@ -532,7 +533,7 @@ de transferencia de datos entre memoria secundaria y memoria principal.
 Según el concepto de bloque, esta transferencia de datos se hará siempre en unidades del
 tamaño de un bloque.
 23
-![Page 23, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_023.png)
+![Page 23, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_023.png)
 
 ### Page 24
 24
@@ -586,7 +587,7 @@ SELECT (SQL), que como es sabido puede seleccionar datos de una o varias filas d
 tablas de la base de datos. Para satisfacer esta consulta se deberán recuperar los registros que
 contienen esas filas.
 24
-![Page 24, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_024.png)
+![Page 24, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_024.png)
 
 ### Page 25
 25
@@ -610,8 +611,8 @@ DSIC (vista Profesor‐DSIC). El SGBD debe traducir esta consulta en una consult
 esquema lógico (tabla Profesor). Posteriormente esta consulta debe ser traducida en una (o
 varias) operaciones de petición de bloques de datos.
 25
-![Page 25, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_025.png)
-![Page 25, Figure 2](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_025_img_001.png)
+![Page 25, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_025_img_001.png)
+![Page 25, Figure 2](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_025_img_002.jpeg)
 
 ### Page 26
 26
@@ -662,7 +663,7 @@ Si el SGBD es un sistema relacional (por ejemplo Oracle), la actualización cons
 instrucción INSERT, DELETE o UPDATE (SQL), que, como es sabido, puede actualizar datos de una
 o varias filas de una tabla de la base de datos.
 26
-![Page 26, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_026.png)
+![Page 26, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_026.png)
 
 ### Page 27
 27
@@ -683,7 +684,7 @@ Una actualización puede no ser registrada en la BD en disco (paso 5)
 hasta tiempo después de que se ejecutó la operación de actualización
 (paso 4).
 27
-![Page 27, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_027.png)
+![Page 27, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_027.png)
 
 ### Page 28
 28
@@ -694,7 +695,7 @@ hasta tiempo después de que se ejecutó la operación de actualización
 5 Objetivos de un SGBD.
 Sistemas de Gestión de bases de Datos.
 28
-![Page 28, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_028.png)
+![Page 28, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_028.png)
 
 ### Page 29
 29
@@ -714,7 +715,7 @@ Controlador
 de memoria
 Pantalla Pantalla Pantalla
 29
-![Page 29, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_029.png)
+![Page 29, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_029.png)
 
 ### Page 30
 30
@@ -727,7 +728,7 @@ programas de las aplicaciones, procesamiento de la interfaz, …)
 la realiza el servidor central.
 Arquitectura centralizada:
 30
-![Page 30, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_030.png)
+![Page 30, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_030.png)
 
 ### Page 31
 31
@@ -745,7 +746,7 @@ de…
 Esquema lógico
 Cliente Cliente Cliente
 31
-![Page 31, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_031.png)
+![Page 31, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_031.png)
 
 ### Page 32
 32
@@ -762,7 +763,7 @@ Cliente 2
 Cliente n
 (sitio n)
 32
-![Page 32, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_032.png)
+![Page 32, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_032.png)
 
 ### Page 33
 33
@@ -775,7 +776,7 @@ ejecución de programas de aplicación.
  Las máquinas cliente proporcionan al usuario las interfaces
 necesarias para utilizar los servidores (software cliente).
 33
-![Page 33, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_033.png)
+![Page 33, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_033.png)
 
 ### Page 34
 34
@@ -804,7 +805,7 @@ Cliente n
 (sitio n)
 Esquema lógico
 34
-![Page 34, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_034.png)
+![Page 34, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_034.png)
 
 ### Page 35
 35
@@ -817,7 +818,7 @@ BD
 SGBD
 Oracle
 35
-![Page 35, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_035.png)
+![Page 35, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_035.png)
 
 ### Page 36
 36
@@ -828,7 +829,7 @@ Oracle
 5 Objetivos de un SGBD.
 Sistemas de Gestión de bases de Datos.
 36
-![Page 36, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_036.png)
+![Page 36, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_036.png)
 
 ### Page 37
 37
@@ -841,7 +842,7 @@ integridad: Tema 2.
  Recuperación de la base de datos: Tema 3.
  Control de la concurrencia en bases de datos: Tema 4.
 37
-![Page 37, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_037.png)
+![Page 37, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_037.png)
 
 ### Page 38
 38
@@ -852,4 +853,4 @@ Sistemas de Gestión de bases de Datos.
  Diseño físico de una base de datos relacionales: Tema 8.
  Optimización de consultas en bases de datos: Tema 6.
 38
-![Page 38, Figure 1](subjects/Dbd/Teoria/Tema 1/tema1_DBD-images/tema1_DBD_page_038.png)
+![Page 38, Figure 1](../../public/subject-assets/Dbd/Teoria/Tema 1/tema1_DBD/tema1_DBD_page_038.png)

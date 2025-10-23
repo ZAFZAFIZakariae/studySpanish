@@ -7,9 +7,10 @@ El SGBD Oracle
 Introducción al servidor Oracle y
 sus herramientas
 1
-![Page 1, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_001.png)
-![Page 1, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_001_img_002.png)
-![Page 1, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_001_img_003.png)
+![Page 1, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_001_img_001.jpeg)
+![Page 1, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_001_img_002.png)
+![Page 1, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_001_img_003.png)
+![Page 1, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_001_img_004.jpeg)
 
 ### Page 2
 2
@@ -23,7 +24,7 @@ modos de conexión.
  Conocer la forma de arrancar y apagar el servidor Oracle.
 Objetivos:
 2
-![Page 2, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_002.png)
+![Page 2, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_002_img_001.jpeg)
 
 ### Page 3
 3
@@ -50,37 +51,38 @@ servidor, sin embargo, esto no es común. Habitualmente en un ordenador que va a
 función de servidor de bases de datos, se pone en marcha un servidor Oracle con los recursos
 suficientes para poder dar servicio al conjunto de usuarios que así lo requieran.
 3
-![Page 3, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003.png)
-![Page 3, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_001.png)
-![Page 3, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_002.png)
-![Page 3, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_003.png)
-![Page 3, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_004.png)
-![Page 3, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_005.png)
-![Page 3, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_006.png)
-![Page 3, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_007.png)
-![Page 3, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_008.png)
-![Page 3, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_009.png)
-![Page 3, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_010.png)
-![Page 3, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_011.png)
-![Page 3, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_012.png)
-![Page 3, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_013.png)
-![Page 3, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_014.png)
-![Page 3, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_015.png)
-![Page 3, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_016.png)
-![Page 3, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_017.png)
-![Page 3, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_018.png)
-![Page 3, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_019.png)
-![Page 3, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_020.png)
-![Page 3, Figure 22](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_021.png)
-![Page 3, Figure 23](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_022.png)
-![Page 3, Figure 24](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_023.png)
-![Page 3, Figure 25](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_024.png)
-![Page 3, Figure 26](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_025.png)
-![Page 3, Figure 27](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_026.png)
-![Page 3, Figure 28](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_029.png)
-![Page 3, Figure 29](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_030.png)
-![Page 3, Figure 30](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_031.png)
-![Page 3, Figure 31](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_003_img_032.png)
+![Page 3, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_001.png)
+![Page 3, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_002.png)
+![Page 3, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_003.png)
+![Page 3, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_004.png)
+![Page 3, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_005.png)
+![Page 3, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_006.png)
+![Page 3, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_007.png)
+![Page 3, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_008.png)
+![Page 3, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_009.png)
+![Page 3, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_010.png)
+![Page 3, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_011.png)
+![Page 3, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_012.png)
+![Page 3, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_013.png)
+![Page 3, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_014.png)
+![Page 3, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_015.png)
+![Page 3, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_016.png)
+![Page 3, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_017.png)
+![Page 3, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_018.png)
+![Page 3, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_019.png)
+![Page 3, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_020.png)
+![Page 3, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_021.png)
+![Page 3, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_022.png)
+![Page 3, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_023.png)
+![Page 3, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_024.png)
+![Page 3, Figure 25](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_025.png)
+![Page 3, Figure 26](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_026.png)
+![Page 3, Figure 27](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_027.jpeg)
+![Page 3, Figure 28](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_028.jpeg)
+![Page 3, Figure 29](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_029.png)
+![Page 3, Figure 30](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_030.png)
+![Page 3, Figure 31](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_031.png)
+![Page 3, Figure 32](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_003_img_032.png)
 
 ### Page 4
 4
@@ -111,34 +113,35 @@ a la información almacenada en disco.
 • Procesos de fondo: estos procesos realizan tareas comunes del servidor sin dar un servicio
 específico a las solicitudes de los usuarios.
 4
-![Page 4, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004.png)
-![Page 4, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_001.png)
-![Page 4, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_002.png)
-![Page 4, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_003.png)
-![Page 4, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_004.png)
-![Page 4, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_005.png)
-![Page 4, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_006.png)
-![Page 4, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_007.png)
-![Page 4, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_008.png)
-![Page 4, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_009.png)
-![Page 4, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_010.png)
-![Page 4, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_011.png)
-![Page 4, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_012.png)
-![Page 4, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_013.png)
-![Page 4, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_014.png)
-![Page 4, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_015.png)
-![Page 4, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_016.png)
-![Page 4, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_017.png)
-![Page 4, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_018.png)
-![Page 4, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_019.png)
-![Page 4, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_020.png)
-![Page 4, Figure 22](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_021.png)
-![Page 4, Figure 23](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_022.png)
-![Page 4, Figure 24](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_023.png)
-![Page 4, Figure 25](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_024.png)
-![Page 4, Figure 26](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_025.png)
-![Page 4, Figure 27](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_026.png)
-![Page 4, Figure 28](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_004_img_027.png)
+![Page 4, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_001.png)
+![Page 4, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_002.png)
+![Page 4, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_003.png)
+![Page 4, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_004.png)
+![Page 4, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_005.png)
+![Page 4, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_006.png)
+![Page 4, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_007.png)
+![Page 4, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_008.png)
+![Page 4, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_009.png)
+![Page 4, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_010.png)
+![Page 4, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_011.png)
+![Page 4, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_012.png)
+![Page 4, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_013.png)
+![Page 4, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_014.png)
+![Page 4, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_015.png)
+![Page 4, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_016.png)
+![Page 4, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_017.png)
+![Page 4, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_018.png)
+![Page 4, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_019.png)
+![Page 4, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_020.png)
+![Page 4, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_021.png)
+![Page 4, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_022.png)
+![Page 4, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_023.png)
+![Page 4, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_024.png)
+![Page 4, Figure 25](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_025.png)
+![Page 4, Figure 26](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_026.png)
+![Page 4, Figure 27](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_027.png)
+![Page 4, Figure 28](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_028.jpeg)
+![Page 4, Figure 29](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_004_img_029.jpeg)
 
 ### Page 5
 5
@@ -152,27 +155,28 @@ SGA
 Buffers datos Buffer diario
 Área compartida
 5
-![Page 5, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005.png)
-![Page 5, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_001.png)
-![Page 5, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_002.png)
-![Page 5, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_003.png)
-![Page 5, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_004.png)
-![Page 5, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_005.png)
-![Page 5, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_006.png)
-![Page 5, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_007.png)
-![Page 5, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_008.png)
-![Page 5, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_009.png)
-![Page 5, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_010.png)
-![Page 5, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_011.png)
-![Page 5, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_012.png)
-![Page 5, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_013.png)
-![Page 5, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_014.png)
-![Page 5, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_015.png)
-![Page 5, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_016.png)
-![Page 5, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_017.png)
-![Page 5, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_018.png)
-![Page 5, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_019.png)
-![Page 5, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_005_img_020.png)
+![Page 5, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_001.png)
+![Page 5, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_002.png)
+![Page 5, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_003.png)
+![Page 5, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_004.png)
+![Page 5, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_005.png)
+![Page 5, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_006.png)
+![Page 5, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_007.png)
+![Page 5, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_008.png)
+![Page 5, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_009.png)
+![Page 5, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_010.png)
+![Page 5, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_011.png)
+![Page 5, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_012.png)
+![Page 5, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_013.png)
+![Page 5, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_014.png)
+![Page 5, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_015.png)
+![Page 5, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_016.png)
+![Page 5, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_017.png)
+![Page 5, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_018.png)
+![Page 5, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_019.png)
+![Page 5, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_020.png)
+![Page 5, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_021.jpeg)
+![Page 5, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_005_img_022.jpeg)
 
 ### Page 6
 6
@@ -194,29 +198,31 @@ Cache de
 biblioteca
 El área compartida permite optimizar el funcionamiento del servidor.
 6
-![Page 6, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006.png)
-![Page 6, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_001.png)
-![Page 6, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_002.png)
-![Page 6, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_003.png)
-![Page 6, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_004.png)
-![Page 6, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_005.png)
-![Page 6, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_006.png)
-![Page 6, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_007.png)
-![Page 6, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_008.png)
-![Page 6, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_009.png)
-![Page 6, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_012.png)
-![Page 6, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_013.png)
-![Page 6, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_015.png)
-![Page 6, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_016.png)
-![Page 6, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_017.png)
-![Page 6, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_018.png)
-![Page 6, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_019.png)
-![Page 6, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_020.png)
-![Page 6, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_021.png)
-![Page 6, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_022.png)
-![Page 6, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_023.png)
-![Page 6, Figure 22](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_024.png)
-![Page 6, Figure 23](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_006_img_025.png)
+![Page 6, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_001.png)
+![Page 6, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_002.png)
+![Page 6, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_003.png)
+![Page 6, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_004.png)
+![Page 6, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_005.png)
+![Page 6, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_006.png)
+![Page 6, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_007.png)
+![Page 6, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_008.png)
+![Page 6, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_009.png)
+![Page 6, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_010.jpeg)
+![Page 6, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_011.jpeg)
+![Page 6, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_012.png)
+![Page 6, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_013.png)
+![Page 6, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_014.jpeg)
+![Page 6, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_015.png)
+![Page 6, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_016.png)
+![Page 6, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_017.png)
+![Page 6, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_018.png)
+![Page 6, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_019.png)
+![Page 6, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_020.png)
+![Page 6, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_021.png)
+![Page 6, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_022.png)
+![Page 6, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_023.png)
+![Page 6, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_024.png)
+![Page 6, Figure 25](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_006_img_025.png)
 
 ### Page 7
 7
@@ -230,7 +236,29 @@ SGA
 Buffers datos Buffer diario
 Área compartida
 7
-![Page 7, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_007.png)
+![Page 7, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_001.png)
+![Page 7, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_002.png)
+![Page 7, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_003.png)
+![Page 7, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_004.png)
+![Page 7, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_005.png)
+![Page 7, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_006.png)
+![Page 7, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_007.png)
+![Page 7, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_008.png)
+![Page 7, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_009.png)
+![Page 7, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_010.jpeg)
+![Page 7, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_011.jpeg)
+![Page 7, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_012.jpeg)
+![Page 7, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_013.png)
+![Page 7, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_014.png)
+![Page 7, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_015.png)
+![Page 7, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_016.png)
+![Page 7, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_017.png)
+![Page 7, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_018.png)
+![Page 7, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_019.png)
+![Page 7, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_020.png)
+![Page 7, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_021.png)
+![Page 7, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_022.png)
+![Page 7, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_007_img_023.png)
 
 ### Page 8
 8
@@ -246,9 +274,30 @@ Buffers datos Buffer diario
 Área compartida
 Mucho más pequeño que la zona de buffers de datos, varias decenas de megas.
 8
-![Page 8, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_008.png)
-![Page 8, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_008_img_011.png)
-![Page 8, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_008_img_012.png)
+![Page 8, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_001.png)
+![Page 8, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_002.png)
+![Page 8, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_003.png)
+![Page 8, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_004.png)
+![Page 8, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_005.png)
+![Page 8, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_006.png)
+![Page 8, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_007.png)
+![Page 8, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_008.png)
+![Page 8, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_009.png)
+![Page 8, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_010.jpeg)
+![Page 8, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_011.png)
+![Page 8, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_012.png)
+![Page 8, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_013.jpeg)
+![Page 8, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_014.png)
+![Page 8, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_015.png)
+![Page 8, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_016.png)
+![Page 8, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_017.png)
+![Page 8, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_018.png)
+![Page 8, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_019.png)
+![Page 8, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_020.png)
+![Page 8, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_021.png)
+![Page 8, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_022.png)
+![Page 8, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_023.png)
+![Page 8, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_008_img_024.png)
 
 ### Page 9
 9
@@ -280,15 +329,15 @@ durante el arranque.
 PMON: monitor de procesos que libera los recursos de una transacción cuando ésta falla
 ARC: relacionado con guardar el diario en disco.
 9
-![Page 9, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009.png)
-![Page 9, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_001.png)
-![Page 9, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_002.png)
-![Page 9, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_003.png)
-![Page 9, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_004.png)
-![Page 9, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_005.png)
-![Page 9, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_006.png)
-![Page 9, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_007.png)
-![Page 9, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_009_img_008.png)
+![Page 9, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_001.png)
+![Page 9, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_002.png)
+![Page 9, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_003.png)
+![Page 9, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_004.png)
+![Page 9, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_005.png)
+![Page 9, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_006.png)
+![Page 9, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_007.png)
+![Page 9, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_008.png)
+![Page 9, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_009_img_009.jpeg)
 
 ### Page 10
 10
@@ -315,7 +364,7 @@ diarios archivados.
 Hay que destacar que Oracle usa una terminología propia, no hay que confundir el término base
 de datos de Oracle con el que comúnmente se usa en campo de las bases de datos.
 10
-![Page 10, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_010.png)
+![Page 10, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_010_img_001.jpeg)
 
 ### Page 11
 Base de datos Oracle
@@ -358,7 +407,7 @@ ordenaciones).
 de actualización en las transacciones de usuarios, para realizar la recuperación, si fuese
 necesario.
 11
-![Page 11, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_011.png)
+![Page 11, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_011_img_001.jpeg)
 
 ### Page 12
 12
@@ -396,7 +445,7 @@ fondo, el archivador, va guardando en una ubicación diferente para salvaguardar
 Fichero de parámetros en:
 /opt/oracle/admin/prueba/scripts/initpruebaTemp.ora
 12
-![Page 12, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_012.png)
+![Page 12, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_012_img_001.jpeg)
 
 ### Page 13
 13
@@ -423,41 +472,42 @@ información almacenada en las estructuras físicas de la base de datos Oracle n
 La única forma de acceder a la información almacenada en la base de datos Oracle es
 arrancando la instancia asociada a esa base de datos.
 13
-![Page 13, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013.png)
-![Page 13, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_001.png)
-![Page 13, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_002.png)
-![Page 13, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_003.png)
-![Page 13, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_004.png)
-![Page 13, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_005.png)
-![Page 13, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_006.png)
-![Page 13, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_007.png)
-![Page 13, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_008.png)
-![Page 13, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_009.png)
-![Page 13, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_010.png)
-![Page 13, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_011.png)
-![Page 13, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_012.png)
-![Page 13, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_013.png)
-![Page 13, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_014.png)
-![Page 13, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_015.png)
-![Page 13, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_016.png)
-![Page 13, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_017.png)
-![Page 13, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_018.png)
-![Page 13, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_019.png)
-![Page 13, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_020.png)
-![Page 13, Figure 22](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_021.png)
-![Page 13, Figure 23](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_022.png)
-![Page 13, Figure 24](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_023.png)
-![Page 13, Figure 25](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_024.png)
-![Page 13, Figure 26](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_025.png)
-![Page 13, Figure 27](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_026.png)
-![Page 13, Figure 28](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_027.png)
-![Page 13, Figure 29](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_028.png)
-![Page 13, Figure 30](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_029.png)
-![Page 13, Figure 31](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_030.png)
-![Page 13, Figure 32](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_032.png)
-![Page 13, Figure 33](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_033.png)
-![Page 13, Figure 34](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_034.png)
-![Page 13, Figure 35](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_013_img_035.png)
+![Page 13, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_001.png)
+![Page 13, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_002.png)
+![Page 13, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_003.png)
+![Page 13, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_004.png)
+![Page 13, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_005.png)
+![Page 13, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_006.png)
+![Page 13, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_007.png)
+![Page 13, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_008.png)
+![Page 13, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_009.png)
+![Page 13, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_010.png)
+![Page 13, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_011.png)
+![Page 13, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_012.png)
+![Page 13, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_013.png)
+![Page 13, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_014.png)
+![Page 13, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_015.png)
+![Page 13, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_016.png)
+![Page 13, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_017.png)
+![Page 13, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_018.png)
+![Page 13, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_019.png)
+![Page 13, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_020.png)
+![Page 13, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_021.png)
+![Page 13, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_022.png)
+![Page 13, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_023.png)
+![Page 13, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_024.png)
+![Page 13, Figure 25](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_025.png)
+![Page 13, Figure 26](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_026.png)
+![Page 13, Figure 27](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_027.png)
+![Page 13, Figure 28](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_028.png)
+![Page 13, Figure 29](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_029.png)
+![Page 13, Figure 30](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_030.png)
+![Page 13, Figure 31](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_031.jpeg)
+![Page 13, Figure 32](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_032.png)
+![Page 13, Figure 33](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_033.png)
+![Page 13, Figure 34](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_034.png)
+![Page 13, Figure 35](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_035.png)
+![Page 13, Figure 36](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_013_img_036.jpeg)
 
 ### Page 14
 14
@@ -498,38 +548,38 @@ concreto lo indicaré de esta forma
 Desde la máquina virtual podemos establecer una conexión cliente servidor con el SQL
 developer o bien en una sesión local
 14
-![Page 14, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014.png)
-![Page 14, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_001.png)
-![Page 14, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_002.png)
-![Page 14, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_003.png)
-![Page 14, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_004.png)
-![Page 14, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_005.png)
-![Page 14, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_006.png)
-![Page 14, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_007.png)
-![Page 14, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_008.png)
-![Page 14, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_009.png)
-![Page 14, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_010.png)
-![Page 14, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_011.png)
-![Page 14, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_012.png)
-![Page 14, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_013.png)
-![Page 14, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_014.png)
-![Page 14, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_015.png)
-![Page 14, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_016.png)
-![Page 14, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_017.png)
-![Page 14, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_018.png)
-![Page 14, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_019.png)
-![Page 14, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_020.png)
-![Page 14, Figure 22](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_021.png)
-![Page 14, Figure 23](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_022.png)
-![Page 14, Figure 24](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_023.png)
-![Page 14, Figure 25](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_024.png)
-![Page 14, Figure 26](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_025.png)
-![Page 14, Figure 27](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_026.png)
-![Page 14, Figure 28](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_027.png)
-![Page 14, Figure 29](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_028.png)
-![Page 14, Figure 30](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_029.png)
-![Page 14, Figure 31](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_030.png)
-![Page 14, Figure 32](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_014_img_031.png)
+![Page 14, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_001.png)
+![Page 14, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_002.png)
+![Page 14, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_003.png)
+![Page 14, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_004.png)
+![Page 14, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_005.png)
+![Page 14, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_006.png)
+![Page 14, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_007.png)
+![Page 14, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_008.png)
+![Page 14, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_009.png)
+![Page 14, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_010.png)
+![Page 14, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_011.png)
+![Page 14, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_012.png)
+![Page 14, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_013.png)
+![Page 14, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_014.png)
+![Page 14, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_015.png)
+![Page 14, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_016.png)
+![Page 14, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_017.png)
+![Page 14, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_018.png)
+![Page 14, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_019.png)
+![Page 14, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_020.png)
+![Page 14, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_021.png)
+![Page 14, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_022.png)
+![Page 14, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_023.png)
+![Page 14, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_024.png)
+![Page 14, Figure 25](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_025.png)
+![Page 14, Figure 26](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_026.png)
+![Page 14, Figure 27](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_027.png)
+![Page 14, Figure 28](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_028.png)
+![Page 14, Figure 29](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_029.png)
+![Page 14, Figure 30](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_030.png)
+![Page 14, Figure 31](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_031.png)
+![Page 14, Figure 32](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_014_img_032.jpeg)
 
 ### Page 15
 15
@@ -555,7 +605,7 @@ base de datos provee el nombre de usuario, la contraseña y el SID de la base de
 datos no son correctos se devolverá un mensaje de error.
 Sin este proceso no se puede establecer la conexión al servidor.
 15
-![Page 15, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_015.png)
+![Page 15, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_015_img_001.jpeg)
 
 ### Page 16
 16
@@ -595,40 +645,40 @@ proceso servidor en el ordenador servidor y le deriva la conexión del proceso u
 (3) Mantenimiento de la conexión: a partir de ese momento el proceso usuario y el proceso
 servidor mantienen la conexión.
 16
-![Page 16, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016.png)
-![Page 16, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_001.png)
-![Page 16, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_002.png)
-![Page 16, Figure 4](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_003.png)
-![Page 16, Figure 5](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_004.png)
-![Page 16, Figure 6](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_005.png)
-![Page 16, Figure 7](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_006.png)
-![Page 16, Figure 8](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_007.png)
-![Page 16, Figure 9](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_008.png)
-![Page 16, Figure 10](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_009.png)
-![Page 16, Figure 11](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_010.png)
-![Page 16, Figure 12](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_011.png)
-![Page 16, Figure 13](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_012.png)
-![Page 16, Figure 14](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_013.png)
-![Page 16, Figure 15](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_014.png)
-![Page 16, Figure 16](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_015.png)
-![Page 16, Figure 17](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_016.png)
-![Page 16, Figure 18](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_017.png)
-![Page 16, Figure 19](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_018.png)
-![Page 16, Figure 20](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_019.png)
-![Page 16, Figure 21](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_020.png)
-![Page 16, Figure 22](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_021.png)
-![Page 16, Figure 23](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_022.png)
-![Page 16, Figure 24](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_023.png)
-![Page 16, Figure 25](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_024.png)
-![Page 16, Figure 26](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_025.png)
-![Page 16, Figure 27](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_026.png)
-![Page 16, Figure 28](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_027.png)
-![Page 16, Figure 29](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_028.png)
-![Page 16, Figure 30](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_029.png)
-![Page 16, Figure 31](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_030.png)
-![Page 16, Figure 32](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_031.png)
-![Page 16, Figure 33](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_032.png)
-![Page 16, Figure 34](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_016_img_033.png)
+![Page 16, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_001.png)
+![Page 16, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_002.png)
+![Page 16, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_003.png)
+![Page 16, Figure 4](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_004.png)
+![Page 16, Figure 5](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_005.png)
+![Page 16, Figure 6](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_006.png)
+![Page 16, Figure 7](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_007.png)
+![Page 16, Figure 8](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_008.png)
+![Page 16, Figure 9](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_009.png)
+![Page 16, Figure 10](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_010.png)
+![Page 16, Figure 11](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_011.png)
+![Page 16, Figure 12](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_012.png)
+![Page 16, Figure 13](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_013.png)
+![Page 16, Figure 14](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_014.png)
+![Page 16, Figure 15](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_015.png)
+![Page 16, Figure 16](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_016.png)
+![Page 16, Figure 17](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_017.png)
+![Page 16, Figure 18](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_018.png)
+![Page 16, Figure 19](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_019.png)
+![Page 16, Figure 20](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_020.png)
+![Page 16, Figure 21](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_021.png)
+![Page 16, Figure 22](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_022.png)
+![Page 16, Figure 23](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_023.png)
+![Page 16, Figure 24](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_024.png)
+![Page 16, Figure 25](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_025.png)
+![Page 16, Figure 26](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_026.png)
+![Page 16, Figure 27](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_027.png)
+![Page 16, Figure 28](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_028.png)
+![Page 16, Figure 29](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_029.png)
+![Page 16, Figure 30](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_030.png)
+![Page 16, Figure 31](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_031.png)
+![Page 16, Figure 32](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_032.png)
+![Page 16, Figure 33](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_033.png)
+![Page 16, Figure 34](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_016_img_034.jpeg)
 
 ### Page 17
 17
@@ -646,7 +696,7 @@ ordenación, información de la sesión, …
  Procesa las llamadas generadas por el proceso usuario.
  Devuelve los resultados al proceso usuario.
 17
-![Page 17, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_017.png)
+![Page 17, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_017_img_001.jpeg)
 
 ### Page 18
 18
@@ -669,7 +719,7 @@ almacenamiento secundario, alterar la configuración de algún recurso del servi
 sustancial al servidor (arrancar, parar, realizar copias de seguridad completas de la base de
 datos, restaurar completamente la base de datos, etc.).
 18
-![Page 18, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_018.png)
+![Page 18, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_018_img_001.jpeg)
 
 ### Page 19
 19
@@ -697,7 +747,7 @@ datos, etc.).
 Además de estos dos usuarios, pueden crearse otros muchos dependiendo del software que se
 instale en el ordenador que va a realizar las tareas de servidor.
 19
-![Page 19, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_019.png)
+![Page 19, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_019_img_001.jpeg)
 
 ### Page 20
 SQL*Plus:
@@ -730,7 +780,7 @@ un poco pesada (está desarrollada en Java)
 • Es de instalación autónoma y sirve tanto para realizar conexiones locales como
 remotas.
 20
-![Page 20, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_020.png)
+![Page 20, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_020_img_001.jpeg)
 
 ### Page 21
 21
@@ -764,7 +814,7 @@ instrucción correspondiente.
 el SQL*Plus se intentará establecer una conexión con el usuario sys. Como este usuario
 siempre se ha de conectar en modo SYSDBA, se usa ese modo de conexión.
 21
-![Page 21, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_021.png)
+![Page 21, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_021_img_001.jpeg)
 
 ### Page 22
 22
@@ -780,7 +830,7 @@ SQL> connect sys/oracle as sysdba
 SQL> startup
 Vídeo: 3.- Arrancar y parar el Oracle
 22
-![Page 22, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_022.png)
+![Page 22, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_022_img_001.jpeg)
 
 ### Page 23
 1. Parar el servidor Oracle:
@@ -801,7 +851,7 @@ Modos de parada del servidor:
 • Immediate: se fuerza un punto de control, y se cierran todos los ficheros.
 • Abort: se apaga el servidor sin miramientos.
 23
-![Page 23, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_023.png)
+![Page 23, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_023_img_001.jpeg)
 
 ### Page 24
 24
@@ -828,7 +878,7 @@ arrancar y parar el servidor desde el SQL Developer).
 SQL, SQL*Plus y bloques de programa PL/SQL. Con esta forma de uso se puede realizar
 cualquier operación sobre el servidor, aunque se requiere un conocimiento del lenguaje.
 24
-![Page 24, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_024.png)
+![Page 24, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_024_img_001.jpeg)
 
 ### Page 25
 25
@@ -861,9 +911,9 @@ escuchando el listener.
 • SID (System Identification): es el identificador que distingue a la instancia Oracle que se está
 ejecutando en el ordenador que hace de servidor Oracle.
 25
-![Page 25, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_025.png)
-![Page 25, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_025_img_001.png)
-![Page 25, Figure 3](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_025_img_003.png)
+![Page 25, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_025_img_001.png)
+![Page 25, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_025_img_002.jpeg)
+![Page 25, Figure 3](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_025_img_003.png)
 
 ### Page 26
 26
@@ -875,7 +925,8 @@ puede ir navegando por todos ellos y seleccionar alguno de algún tipo para real
 sobre él. Las acciones que se pueden realizar sobre cada objeto dependen del tipo de objeto que
 tenga.
 26
-![Page 26, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_026.png)
+![Page 26, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_026_img_001.jpeg)
+![Page 26, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_026_img_002.jpeg)
 
 ### Page 27
 27
@@ -900,8 +951,8 @@ conexión de este tipo.
 Lo que se podrá administrar en este modo dependerá de los privilegios del usuario que se
 conecte.
 27
-![Page 27, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_027.png)
-![Page 27, Figure 2](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_027_img_001.png)
+![Page 27, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_027_img_001.png)
+![Page 27, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_027_img_002.jpeg)
 
 ### Page 28
 28
@@ -918,7 +969,8 @@ parámetros de configuración del servidor.
 • Seguridad: aquí se pueden administrar todos los aspectos de seguridad del servidor Oracle,
 usuarios, roles y perfiles.
 28
-![Page 28, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_028.png)
+![Page 28, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_028_img_001.jpeg)
+![Page 28, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_028_img_002.jpeg)
 
 ### Page 29
 29
@@ -936,4 +988,5 @@ En la transparencia se muestran los tres modos de trabajo del SQL Developer:
 • Ventana DBA: modo de administración del sistema.
 • Ventana Hoja de trabajo de SQL: ejecución de instrucciones.
 29
-![Page 29, Figure 1](subjects/Dbd/Prácticas/Práctica 1/practica1_2019-images/practica1_2019_page_029.png)
+![Page 29, Figure 1](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_029_img_001.jpeg)
+![Page 29, Figure 2](../../public/subject-assets/Dbd/Prácticas/Práctica 1/practica1_2019/practica1_2019_page_029_img_002.jpeg)

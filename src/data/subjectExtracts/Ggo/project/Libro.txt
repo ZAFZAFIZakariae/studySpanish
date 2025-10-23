@@ -1,24 +1,7 @@
 # Extracted content
 Source: subjects/Ggo/project/Libro.xlsx
+Notes:
+- openpyxl is not installed; XLSX content was not extracted.
+- Import error: No module named 'openpyxl'
 
-### Sheet: Hoja1
- Ivan Crespo Gadea, Steven Jose Silva Gomez, Zakariae Zafzafi
- Yousra Bouchair
- Procesos de negocio  IBO  Actividades  IAB  ESA  ESB = ESA*IAB Sum(ESB)  Sum (IAB)  EIB = sum(ESB)/sum (IAB)  Sum (ESO) = Sum(ESB)*IBO  Sum (IAO)=     Sum (IAB)*IBO  IIB=Max IAB FF = IBO*IIB IIO = suma(FF)/suma(IBO) EIO= sum(ESO)/suma(IAO)
- Logística y gestión de distribución 10 Control de stock 10 5 50 97 23 4.217391304347826 970 230 10 100 8.941176470588236 5.017441860465116
- Manejo de datos de demanda 7 5 35
- Modelo de IA 6 2 12
- Gestión comercial 10 Integración de calendario de promociones 9 3 27 72 18 4 720 180 9 90
- Recopilación de datos históricos 9 5 45
- 0
- Servicios (TI y recursos humanos) 6 Integración de TI y paneles de control 6 7 42 91 13 7 546 78 7 42
- Capacitación del personal para la adopción 7 7 49
- 0
- Gestión financiera 8 Gestión de riesgos  9 6 54 152 25 6.08 1216 200 9 72
- Control presupuestario 9 7 63
- Análisis de rentabilidad 7 5 35
- 34 3452 688 304
- EIO=sum(ESO)/sum(IA0)= 5.017441860465116
- IIO = sum (FF) / sum (IBO)= 8.941176470588236
- IAB
- ESA
+[XLSX extraction requires openpyxl to be installed]
