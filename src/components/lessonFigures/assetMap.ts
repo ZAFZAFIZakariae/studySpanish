@@ -1,5 +1,6 @@
 type GlobResult = Record<string, string>;
 
+import { resolveSubjectAssetPath } from '@/lib/subjectAssets';
 import figureAssetModules from './assetModules';
 
 const assetModules: GlobResult = (() => {
@@ -16,6 +17,8 @@ const normalizeKey = (key: string) => {
     .replace(/\\/g, '/')
     .replace(/^\.\//, '')
     .replace(/^(\.\.\/)+/, '')
+    .replace(/^public\/subject-assets\//i, '')
+    .replace(/^subject-assets\//i, '')
     .replace(/^subjects\//, '')
     .replace(/\.[^.]+$/, '')
     .replace(/_/g, '-')
@@ -46,6 +49,14 @@ export const resolveFigureAsset = (identifier: string): string | undefined => {
   for (const [key, value] of lessonFigureAssets) {
     if (key.endsWith(normalizedId)) {
       return value;
+    }
+  }
+
+  const normalizedIdentifier = identifier.replace(/\\/g, '/').toLowerCase();
+  if (/subject-assets|subjects/.test(normalizedIdentifier)) {
+    const fallbackSubjectAsset = resolveSubjectAssetPath(identifier);
+    if (fallbackSubjectAsset && fallbackSubjectAsset !== identifier) {
+      return fallbackSubjectAsset;
     }
   }
 

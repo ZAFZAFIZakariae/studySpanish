@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './InlineMarkdown.module.css';
-import { resolveSubjectAssetPath } from './LessonViewer';
+import { resolveSubjectAssetPath } from '@/lib/subjectAssets';
 import { loadKatex } from '@/utils/loadKatex';
 
 const superscriptMap: Record<string, string> = {
