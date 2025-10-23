@@ -24,7 +24,7 @@ from dataclasses import asdict, dataclass
 from io import StringIO
 from pathlib import Path
 import shutil
-from typing import Callable, Sequence
+from typing import Any, Callable, Sequence
 
 try:  # pragma: no cover - optional dependency may be missing in CI environments
     from docx import Document  # type: ignore
@@ -203,17 +203,70 @@ def _resolve_public_asset_dir(pdf_path: Path) -> Path:
     return PUBLIC_ASSETS_DIR / target
 
 
-def _extract_images_to_public_assets(
-    pdf_path: Path,
-) -> tuple[dict[int, list[str]], list[ImageMetadata]]:
-    try:
-        from pdf_image_extractor import extract_images as extract_pdf_images
-    except (ImportError, SystemExit):  # pragma: no cover - dependency guard
-        return {}, []
+def _cleanup_empty_dir(path: Path) -> None:
+    with contextlib.suppress(OSError):
+        if path.exists() and not any(path.iterdir()):
+            path.rmdir()
 
+
+def _extract_images_with_pypdf(
+    pdf_path: Path, target_dir: Path, pdf_reader: Any | None = None
+) -> tuple[dict[int, list[str]], list[ImageMetadata]]:
+    reader = pdf_reader
+    close_reader = False
+
+    if reader is None:
+        if PdfReader is None and not _ensure_pypdf_available():
+            return {}, []
+        try:
+            reader = PdfReader(pdf_path)
+        except Exception:  # pragma: no cover - defensive guard
+            return {}, []
+        close_reader = True
+
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    page_references: dict[int, list[str]] = defaultdict(list)
+    metadata: list[ImageMetadata] = []
+
+    try:
+        for page_index, page in enumerate(reader.pages, start=1):
+            images, page_metadata = _store_page_images(page, page_index, target_dir, pdf_path)
+            if images:
+                page_references[page_index].extend(images)
+            metadata.extend(page_metadata)
+    finally:
+        if close_reader:
+            closer = getattr(reader, "close", None)
+            if callable(closer):
+                with contextlib.suppress(Exception):
+                    closer()
+
+    if not metadata:
+        _cleanup_empty_dir(target_dir)
+
+    return page_references, metadata
+
+
+def _extract_images_to_public_assets(
+    pdf_path: Path, pdf_reader: Any | None = None
+) -> tuple[dict[int, list[str]], list[ImageMetadata]]:
     target_dir = _resolve_public_asset_dir(pdf_path)
     if target_dir.exists():
         shutil.rmtree(target_dir)
+    target_dir.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        from pdf_image_extractor import extract_images as extract_pdf_images
+    except (ImportError, SystemExit):  # pragma: no cover - dependency guard
+        page_refs, metadata = _extract_images_with_pypdf(pdf_path, target_dir, pdf_reader)
+        if page_refs:
+            return page_refs, metadata
+        fallback_refs = _collect_page_image_references(pdf_path)
+        if not metadata:
+            _cleanup_empty_dir(target_dir)
+        return fallback_refs, metadata
+
     target_dir.mkdir(parents=True, exist_ok=True)
 
     stdout_buffer = StringIO()
@@ -226,6 +279,7 @@ def _extract_images_to_public_assets(
             raw_metadata = extract_pdf_images(pdf_path, target_dir)
         except Exception:  # pragma: no cover - extraction robustness
             _relay_extractor_output(stdout_buffer.getvalue(), stderr_buffer.getvalue())
+            _cleanup_empty_dir(target_dir)
             return {}, []
 
     _relay_extractor_output(stdout_buffer.getvalue(), stderr_buffer.getvalue())
@@ -253,6 +307,9 @@ def _extract_images_to_public_assets(
                 color_space=None,
             )
         )
+
+    if not metadata:
+        _cleanup_empty_dir(target_dir)
 
     return page_references, metadata
 
@@ -408,7 +465,7 @@ def _extract_pdf_with_optional_images(
     metadata: list[ImageMetadata] = []
 
     if image_output_dir is None:
-        page_images, collected_metadata = _extract_images_to_public_assets(path)
+        page_images, collected_metadata = _extract_images_to_public_assets(path, pdf_reader=reader)
         metadata.extend(collected_metadata)
         target_dir: Path | None = None
     else:
