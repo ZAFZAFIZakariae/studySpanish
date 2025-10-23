@@ -164,7 +164,8 @@ def _collect_page_image_references(pdf_path: Path) -> dict[int, list[str]]:
         return {}
 
     pattern = re.compile(
-        rf"^{re.escape(pdf_path.stem)}_page_(?P<page>\d{{3}})(?:_img_(?P<img>\d{{3}}))?\.png$",
+        rf"^{re.escape(pdf_path.stem)}_page_(?P<page>\d{{3}})"
+        rf"(?:_?img[_-]?(?P<img>\d{{1,3}}))?\.png$",
         re.IGNORECASE,
     )
     grouped: dict[int, list[tuple[tuple[int, int], Path]]] = defaultdict(list)
@@ -339,7 +340,9 @@ def _copy_fallback_page_images(
         return [], []
 
     pattern = re.compile(
-        rf"^page_{page_number:03d}_img_(?P<index>\d{{3}})\.(?P<ext>png|jpe?g|gif)(?P<encoding>\.base64|\.b64)?$",
+        rf"^(?:{re.escape(pdf_path.stem)}_)?page_{page_number:03d}"
+        rf"(?:_?img[_-]?(?P<index>\d{{1,3}}))?\.(?P<ext>png|jpe?g|gif)"
+        rf"(?P<encoding>\.base64|\.b64)?$",
         re.IGNORECASE,
     )
     references: list[str] = []
@@ -353,8 +356,9 @@ def _copy_fallback_page_images(
         if not match:
             continue
 
-        image_index = int(match.group("index"))
-        extension = match.group("ext")
+        raw_index = match.group("index")
+        image_index = int(raw_index) if raw_index is not None else 1
+        extension = match.group("ext").lower()
         encoded_suffix = match.group("encoding") or ""
         destination = target_dir / f"page_{page_number:03d}_img_{image_index:03d}.{extension}"
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -406,6 +410,7 @@ def _store_page_images(
     for image_index, image in enumerate(images_iterable, start=1):
         extension = getattr(image, "ext", None) or getattr(image, "extension", None) or "png"
         extension = extension.lstrip(".") or "png"
+        extension = extension.lower()
         filename = f"page_{page_number:03d}_img_{image_index:03d}.{extension}"
         output_path = target_dir / filename
         try:
