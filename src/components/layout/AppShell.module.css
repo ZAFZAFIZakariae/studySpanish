@@ -394,17 +394,28 @@ body.high-contrast .contrastButtonActive {
   .appShell {
     display: grid;
     grid-template-columns: var(--shell-sidebar-width) minmax(0, 1fr);
+    transition: grid-template-columns 0.28s ease;
+  }
+
+  .appShell[data-sidebar-open='false'] {
+    grid-template-columns: 0 minmax(0, 1fr);
+  }
+
+  .appShell[data-focus-mode='on'] {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .sidebar {
     position: sticky;
     top: 0;
-    transform: none;
     height: 100vh;
   }
 
-  .sidebarOverlay,
-  .menuButton {
+  .appShell[data-sidebar-open='false'] .sidebar {
+    pointer-events: none;
+  }
+
+  .sidebarOverlay {
     display: none;
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FocusModeContext } from '../../contexts/FocusModeContext';
 import styles from './AppShell.module.css';
@@ -167,6 +167,13 @@ const navIcons = {
   ),
 };
 
+const DESKTOP_BREAKPOINT = '(min-width: 1024px)';
+
+const isDesktopViewport = () =>
+  typeof window !== 'undefined' &&
+  typeof window.matchMedia === 'function' &&
+  window.matchMedia(DESKTOP_BREAKPOINT).matches;
+
 const navigation: NavigationItem[] = [
   {
     to: '/',
@@ -247,12 +254,53 @@ export const AppShell: React.FC<AppShellProps> = ({
   children,
 }) => {
   const [focusMode, setFocusMode] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => isDesktopViewport());
+  const [sidebarOpen, setSidebarOpen] = useState(() => isDesktopViewport());
+  const wasFocusMode = useRef(false);
+  const focusModeRef = useRef(focusMode);
+  const sidebarWasOpenBeforeFocus = useRef(false);
   const location = useLocation();
 
   useEffect(() => {
+    focusModeRef.current = focusMode;
+  }, [focusMode]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+      setIsDesktop(false);
+      setSidebarOpen(false);
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia(DESKTOP_BREAKPOINT);
+
+    const applyMediaState = (matches: boolean) => {
+      setIsDesktop(matches);
+      setSidebarOpen(matches && !focusModeRef.current);
+    };
+
+    applyMediaState(mediaQuery.matches);
+
+    const handleMediaChange = (event: MediaQueryListEvent) => {
+      applyMediaState(event.matches);
+    };
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', handleMediaChange);
+      return () => mediaQuery.removeEventListener('change', handleMediaChange);
+    }
+
+    mediaQuery.addListener(handleMediaChange);
+    return () => mediaQuery.removeListener(handleMediaChange);
+  }, []);
+
+  useEffect(() => {
+    if (isDesktop) {
+      return;
+    }
+
     setSidebarOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, isDesktop]);
 
   useEffect(() => {
     if (!sidebarOpen) return;
@@ -268,10 +316,27 @@ export const AppShell: React.FC<AppShellProps> = ({
   }, [sidebarOpen]);
 
   useEffect(() => {
-    if (focusMode) {
+    if (focusMode && !wasFocusMode.current) {
+      sidebarWasOpenBeforeFocus.current = sidebarOpen;
       setSidebarOpen(false);
     }
-  }, [focusMode]);
+
+    if (
+      !focusMode &&
+      wasFocusMode.current &&
+      isDesktop &&
+      sidebarWasOpenBeforeFocus.current
+    ) {
+      setSidebarOpen(true);
+      sidebarWasOpenBeforeFocus.current = false;
+    }
+
+    if (!focusMode && wasFocusMode.current) {
+      sidebarWasOpenBeforeFocus.current = false;
+    }
+
+    wasFocusMode.current = focusMode;
+  }, [focusMode, isDesktop, sidebarOpen]);
 
   const contextValue = useMemo(
     () => ({
@@ -304,6 +369,12 @@ export const AppShell: React.FC<AppShellProps> = ({
 
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 
+  const handleNavClick = () => {
+    if (!isDesktop) {
+      closeSidebar();
+    }
+  };
+
   const highContrastLabel = highContrastEnabled ? 'High contrast' : 'Standard';
 
   return (
@@ -325,9 +396,14 @@ export const AppShell: React.FC<AppShellProps> = ({
           <span className="sr-only">Close navigation</span>
         </button>
 
-        <aside id="app-sidebar" className={styles.sidebar} aria-label="Primary navigation">
+        <aside
+          id="app-sidebar"
+          className={styles.sidebar}
+          aria-label="Primary navigation"
+          aria-hidden={!sidebarOpen}
+        >
           <div className={styles.sidebarHeader}>
-            <Link to="/" className={styles.brand} onClick={closeSidebar}>
+            <Link to="/" className={styles.brand} onClick={handleNavClick}>
               <span className={styles.brandMark} aria-hidden="true">
                 SC
               </span>
@@ -349,7 +425,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                     .filter(Boolean)
                     .join(' ')
                 }
-                onClick={closeSidebar}
+                onClick={handleNavClick}
                 title={description}
               >
                 {icon ? (
