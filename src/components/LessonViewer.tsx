@@ -6,6 +6,7 @@ import { lessonSummaryText, lessonTextIndexBySubject } from '@/data/lessonConten
 import { subjectCatalog } from '@/data/subjectCatalog';
 import { resolveLessonImageSource, resolveSubjectAssetPath } from '@/lib/subjectAssets';
 import { LessonFigure } from './lessonFigures';
+import { transformMarkdownImageUri } from '@/lib/markdown';
 import PdfModal from './PdfModal';
 import styles from './LessonViewer.module.css';
 
@@ -182,6 +183,8 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
   }, [allLessonsMap, lessonId, markdown, subjectId]);
 
   const subjectName = subjectNameMap.get(subjectId) ?? subjectId.toUpperCase();
+
+  const markdownImageUriTransformer = useCallback((uri: string) => transformMarkdownImageUri(uri), []);
 
   const searchableLessons = useMemo(() => {
     const dataset: Array<{
@@ -547,7 +550,11 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ markdown, lessonId, 
         </section>
       </aside>
       <div className={styles.content} id={topAnchorId}>
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={headingComponents}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={headingComponents}
+          transformImageUri={markdownImageUriTransformer}
+        >
           {markdown}
         </ReactMarkdown>
       </div>
