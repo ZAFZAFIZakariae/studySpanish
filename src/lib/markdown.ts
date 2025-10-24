@@ -5,10 +5,34 @@ const startsWithSafeProtocol = (value: string, colonIndex: number): boolean => {
   return SAFE_PROTOCOLS.some((protocol) => lower === protocol);
 };
 
+const PUBLIC_SUBJECT_ASSET_SEGMENT = 'public/subject-assets/';
+
+const normalizePublicSubjectAssetUri = (value: string): string | null => {
+  const normalized = value.replace(/\\/g, '/');
+  const segmentIndex = normalized.indexOf(PUBLIC_SUBJECT_ASSET_SEGMENT);
+
+  if (segmentIndex === -1) {
+    return null;
+  }
+
+  const precedingChar = segmentIndex > 0 ? normalized.charAt(segmentIndex - 1) : '';
+  if (precedingChar && precedingChar !== '/' && precedingChar !== '.') {
+    return null;
+  }
+
+  const assetPath = normalized.slice(segmentIndex + PUBLIC_SUBJECT_ASSET_SEGMENT.length);
+  return `/subject-assets/${assetPath}`.replace(/\/{2,}/g, '/');
+};
+
 export const transformMarkdownImageUri = (uri: string): string => {
   const trimmed = typeof uri === 'string' ? uri.trim() : '';
   if (!trimmed) {
     return '';
+  }
+
+  const normalizedPublicAssetPath = normalizePublicSubjectAssetUri(trimmed);
+  if (normalizedPublicAssetPath) {
+    return normalizedPublicAssetPath;
   }
 
   const firstChar = trimmed.charAt(0);
