@@ -729,13 +729,40 @@ const SubjectsPage: React.FC = () => {
 
       const normalizedListMatch = line.match(/^(?:•|-|\*)\s+(.*)$/);
       if (normalizedListMatch) {
+        const listContent = normalizedListMatch[1].trim();
+        const imageMatch = listContent.match(/^!\[(.*?)]\((.*?)\)$/);
+        if (imageMatch) {
+          flushParagraph();
+          flushList();
+          flushOrderedList();
+          flushCallout();
+          pendingListHeading = null;
+
+          let caption: string | undefined;
+          const nextLine = lines[i + 1]?.trim();
+          if (nextLine && /^Caption:/i.test(nextLine)) {
+            caption = nextLine.replace(/^Caption:\s*/i, '').trim();
+            i += 1;
+          }
+
+          const source = imageMatch[2].trim();
+          const isInlineFigure = source.startsWith('figure:');
+          blocks.push({
+            type: 'figure',
+            alt: imageMatch[1].trim(),
+            ...(isInlineFigure ? { figureId: source.replace(/^figure:/, '') } : { src: source }),
+            ...(caption ? { caption } : {}),
+          });
+          continue;
+        }
+
         flushParagraph();
         flushOrderedList();
         if (!listBuffer) {
           listBuffer = [];
           listHeading = pendingListHeading ?? undefined;
         }
-        listBuffer.push(normalizedListMatch[1].trim());
+        listBuffer.push(listContent);
         pendingListHeading = null;
         continue;
       }
