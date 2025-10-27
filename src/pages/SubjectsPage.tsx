@@ -9,6 +9,8 @@ import { LessonFigure } from '../components/lessonFigures';
 import InlineMarkdown from '../components/InlineMarkdown';
 import NotebookPreview from '../components/notebooks/NotebookPreview';
 import PdfPageViewer from '../components/PdfPageViewer';
+import SummaryQuiz from '../components/SummaryQuiz';
+import { getLessonQuiz } from '../data/lessonQuizzes';
 
 type OrderedListStyle = 'decimal' | 'upper-roman' | 'lower-roman' | 'upper-alpha' | 'lower-alpha';
 
@@ -493,6 +495,15 @@ const SubjectsPage: React.FC = () => {
 
     return { english, original, isOriginalDistinct };
   }, [activeItem]);
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const activeQuiz = useMemo(
+    () => (activeItem ? getLessonQuiz(activeItem.id) : undefined),
+    [activeItem]
+  );
+  const summaryQuizPanelId = useMemo(
+    () => (activeItem ? `lesson-summary-quiz-${activeItem.id}` : undefined),
+    [activeItem]
+  );
   const [pdfPreview, setPdfPreview] = useState<PdfPageLocation | null>(null);
 
   const pdfResourceIndexes = useMemo(() => {
@@ -1015,11 +1026,22 @@ const SubjectsPage: React.FC = () => {
         <h3>Summary</h3>
         <div className={styles.summaryStack}>
           {summaryInfo.original && (
-            <p className={styles.summaryOriginal} lang={activeItem.language}>
+            <p className={styles.summaryOriginal} lang={activeItem.language ?? 'es'}>
               <span className={styles.summaryChip} aria-hidden="true">
                 {(activeItem.language ?? 'es').toUpperCase()}
               </span>
-              <span>{summaryInfo.original}</span>
+              <span className={styles.summaryText}>{summaryInfo.original}</span>
+              {activeQuiz && summaryQuizPanelId && (
+                <button
+                  type="button"
+                  className={`${styles.summaryTestButton} ui-button ui-button--secondary`}
+                  onClick={() => setIsQuizOpen((prev) => !prev)}
+                  aria-expanded={isQuizOpen}
+                  aria-controls={summaryQuizPanelId}
+                >
+                  Test
+                </button>
+              )}
             </p>
           )}
           {summaryInfo.showEnglish && summaryInfo.english && (
@@ -1035,6 +1057,11 @@ const SubjectsPage: React.FC = () => {
             </p>
           )}
         </div>
+        {isQuizOpen && activeQuiz && summaryQuizPanelId && (
+          <div id={summaryQuizPanelId}>
+            <SummaryQuiz key={activeQuiz.id} quiz={activeQuiz} onClose={() => setIsQuizOpen(false)} />
+          </div>
+        )}
       </section>
     );
   };
@@ -1091,6 +1118,7 @@ const SubjectsPage: React.FC = () => {
 
   useEffect(() => {
     setActiveTab('summary');
+    setIsQuizOpen(false);
   }, [activeItemId]);
 
   useEffect(() => {

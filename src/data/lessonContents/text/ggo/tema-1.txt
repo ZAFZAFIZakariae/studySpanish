@@ -54,3 +54,63 @@
 - Build a concept map linking IT governance components to the stakeholders responsible. / Elaborar un mapa conceptual que relacione los componentes del gobierno de TI con los stakeholders responsables.
 - Complete a quiz on reference frameworks and their application domains. / Resolver un cuestionario sobre marcos de referencia y sus ámbitos de aplicación.
 - Write a short use case describing how the CIO answers one ITGI question. / Redactar un breve caso de uso describiendo cómo el CIO responde a una de las preguntas del ITGI.
+
+---
+
+## Study Guide · Topic 1 (Introducción al Gobierno de TI)
+
+- **Gobierno TI vs. Gobierno Corporativo:** IT governance applies corporate governance principles to technology so initiatives stay aligned with business goals. / El gobierno de TI aplica los principios del gobierno corporativo a la tecnología para asegurar que las iniciativas se mantengan alineadas con los objetivos del negocio.
+- **Funciones del CIO y actores clave:** El CIO traduce los objetivos de negocio en estrategia tecnológica y reporta métricas; la alta dirección aprueba inversiones y políticas, las unidades de negocio priorizan necesidades y la auditoría interna vigila cumplimiento y madurez.
+- **Componentes principales:** Alineación estratégica, entrega de valor, gestión de recursos, gestión de riesgos y medición del desempeño.
+- **Marcos de referencia:** COBIT, ITIL y normas ISO/IEC (38500, 27001, 20000) guían la implantación del gobierno de TI.
+- **Beneficios del gobierno de TI:** Alineación negocio–TI, transparencia en costos e inversiones, reducción de riesgos y mayor satisfacción de usuarios internos.
+- **Herramientas analíticas sugeridas:** Mapear componentes de gobierno con stakeholders y practicar con casos sobre frameworks (por ejemplo, cómo responde el CIO a preguntas del ITGI).
+
+### Autoevaluación interactiva / Practice Questions
+
+#### Multiple Choice / Opción múltiple
+1. ¿Cuál NO es un componente principal del gobierno de TI?
+   - A. Strategic Alignment (Alineación estratégica)
+   - B. Market Analysis (Análisis de mercado)
+   - C. Resource Management (Gestión de recursos)
+   - D. Performance Measurement (Medición del desempeño)
+2. ¿Cuál es el objetivo principal del gobierno de TI?
+   - A. Garantizar proyectos a tiempo sin importar beneficios financieros.
+   - B. Alinear la TI con el negocio y controlar riesgos tecnológicos.
+   - C. Aumentar la cuota de mercado sin supervisión de TI.
+   - D. Aplicar todas las normas ISO posibles.
+3. En un marco de gobierno de TI, ¿quién traduce los objetivos de negocio en estrategia tecnológica?
+   - A. Junta Directiva / Board of Directors
+   - B. CIO / Director de TI
+   - C. CEO / Director General
+   - D. Auditoría Interna
+4. COBIT e ITIL son ejemplos de:
+   - A. Lenguajes de programación
+   - B. Marcos de referencia para el gobierno y gestión de TI
+   - C. Frameworks de marketing
+   - D. Modelos de hardware
+5. ¿Qué beneficio se asocia típicamente a un gobierno eficaz de TI?
+   - A. Reducción de costos de hardware sin control presupuestario
+   - B. Mayor alineación entre TI y objetivos del negocio
+   - C. Eliminación completa de auditorías
+   - D. Desvincular TI de la estrategia empresarial
+
+#### Verdadero/Falso / True or False
+- El CIO participa en foros de gobierno para alinear TI con la estrategia corporativa. (V)
+- Los frameworks COBIT e ITIL ayudan a asegurar que las inversiones en TI generen valor para la organización. (V)
+- La gestión de recursos NO forma parte de los componentes básicos del gobierno de TI. (F)
+
+#### Emparejamiento / Matching
+
+**Componentes del gobierno de TI / IT Governance Components**
+- Alineación estratégica — combinación coherente de estrategia de negocio y TI.
+- Entrega de valor — garantizar beneficios prometidos a usuarios internos.
+- Gestión de recursos — uso óptimo de aplicaciones, datos y personal TI.
+- Gestión de riesgos — identificar y controlar amenazas tecnológicas.
+- Medición del desempeño — evaluar métricas y resultados de TI.
+
+**Roles y responsabilidades / Roles and Responsibilities**
+- Consejo / Alta Dirección — define políticas, aprueba inversiones y supervisa riesgos.
+- CIO / Director de TI — traduce objetivos de negocio, gestiona el portafolio y reporta métricas.
+- Unidades de Negocio — priorizan necesidades, fijan requisitos y co-desarrollan soluciones.
+- Auditoría / Control Interno — evalúa cumplimiento de normas, controla calidad y madurez.

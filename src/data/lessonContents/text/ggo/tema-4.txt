@@ -1,0 +1,63 @@
+# Topic 4 · Recursos y Arquitectura Empresarial / Resources and Enterprise Architecture
+
+## Lesson Outline / Esquema original
+
+### Gestión de recursos
+- Revisión de capacidades y carteras estratégicas.
+- Ejemplos de asignación de recursos soportados por COBIT.
+
+### Arquitectura empresarial
+- Componentes de arquitectura y principios TOGAF.
+- Caso práctico con planos de referencia.
+
+## Study Overview / Resumen de estudio
+- The Bedell method offers a data-driven way to evaluate IT portfolios and justify investments aligned with business priorities. / El método Bedell ofrece una forma basada en datos de evaluar portafolios de TI y justificar inversiones alineadas con las prioridades del negocio.
+- Enterprise resources are grouped into applications, data/information, people, and technology; modelling tools like ArchiMate or MEGA visualise relationships. / Los recursos empresariales se agrupan en aplicaciones, datos/información, personas y tecnología; herramientas como ArchiMate o MEGA visualizan sus relaciones.
+- Outsourcing delivers benefits such as cost reduction and specialised talent but introduces risks like loss of control and dependency; ISO/IEC 37500 guides outsourcing lifecycle management. / La externalización aporta beneficios como reducción de costos y talento especializado, pero introduce riesgos como pérdida de control y dependencia; ISO/IEC 37500 guía la gestión integral del ciclo de outsourcing.
+- Enterprise architecture frameworks (por ejemplo, TOGAF) and languages like ArchiMate connect strategy, processes, information, applications, and technology into a coherent view. / Los marcos de arquitectura empresarial (por ejemplo, TOGAF) y lenguajes como ArchiMate conectan estrategia, procesos, información, aplicaciones y tecnología en una visión coherente.
+
+## Practice Questions / Preguntas de práctica
+### Multiple Choice / Opción múltiple
+1. El método Bedell permite a las organizaciones… (The Bedell method allows organisations to…)
+   - A. Elaborar diagramas de red física.
+   - B. Decidir objetivamente dónde invertir en proyectos TI según valor y riesgo.
+   - C. Calcular el costo de la energía eléctrica.
+   - D. Definir políticas de recursos humanos.
+2. Un ejemplo de recurso en arquitectura empresarial es… (An example of an enterprise architecture resource is…)
+   - A. Publicidad en redes sociales.
+   - B. Una aplicación de software que soporta procesos de negocio.
+   - C. Un cliente potencial.
+   - D. Productos terminados.
+3. Un beneficio típico de externalizar servicios TI es… (A typical benefit of outsourcing IT services is…)
+   - A. Control absoluto sin acuerdos formales.
+   - B. Acceso a talento especializado y reducción de costos operativos.
+   - C. Mantenimiento interno más complejo.
+   - D. Eliminación de la supervisión de calidad.
+4. La ISO/IEC 37500 se aplica a… (ISO/IEC 37500 applies to…)
+   - A. Protocolos de seguridad de redes.
+   - B. La contratación y gestión de servicios externos (outsourcing).
+   - C. Esquemas de base de datos.
+   - D. Metodologías ágiles de desarrollo.
+5. ArchiMate es una herramienta/lenguaje para… (ArchiMate is a tool/language for…)
+   - A. Programación de inteligencia artificial.
+   - B. Modelar arquitecturas de negocio, aplicaciones, datos y tecnología.
+   - C. Gestión de bases de datos relacionales.
+   - D. Diseño gráfico de interfaces.
+
+### True/False / Verdadero o Falso
+- El método Bedell basa las decisiones de inversión TI en criterios intuitivos sin datos objetivos. (F)
+- ISO/IEC 37500 proporciona pautas para gestionar outsourcing de TI. (V)
+- Las herramientas de arquitectura como ArchiMate/MEGA muestran cómo se relacionan procesos, aplicaciones, datos y tecnología. (V)
+
+### Matching / Emparejamiento
+**Tipos de recursos / Resource Types**
+- Aplicaciones — sistemas de software que soportan procesos de negocio.
+- Datos / Información — conjunto de datos y conocimiento gestionado por la organización.
+- Personas — roles, competencias y equipos internos.
+- Tecnología — infraestructura de hardware, redes y plataformas de TI.
+
+**Externalización / Outsourcing Concepts**
+- Externalización — contratar partes de procesos o servicios TI a proveedores externos.
+- Ventaja del outsourcing — reducción de costos y enfoque en competencias clave.
+- Desventaja del outsourcing — pérdida de control directo y dependencia de terceros.
+- ISO/IEC 37500 — estándar internacional para gestionar contratos de outsourcing.

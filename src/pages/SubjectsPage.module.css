@@ -410,6 +410,7 @@
   display: flex;
   align-items: flex-start;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .summaryEnglish {
@@ -420,6 +421,32 @@
 .summaryOriginal {
   color: var(--ui-text-secondary, #475569);
   white-space: pre-line;
+}
+
+.summaryText {
+  flex: 1;
+  min-width: 0;
+}
+
+.summaryTestButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  align-self: flex-start;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .summaryTestButton {
+    margin-left: 0;
+    margin-top: 4px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .summaryPlaceholder {

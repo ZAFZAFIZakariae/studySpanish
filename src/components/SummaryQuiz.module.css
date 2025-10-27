@@ -1,0 +1,149 @@
+.quizPanel {
+  margin-top: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--ui-surface-subtle, #f8fafc);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quizHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quizTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ui-text-primary, #0f172a);
+}
+
+.quizIntro {
+  margin: 0;
+  color: var(--ui-text-secondary, #334155);
+  line-height: 1.6;
+}
+
+.quizProgress {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ui-text-secondary, #334155);
+}
+
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.questionCard {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--ui-surface, #ffffff);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.questionPrompt {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ui-text-primary, #0f172a);
+  line-height: 1.5;
+}
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.optionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+  color: var(--ui-text-primary, #0f172a);
+}
+
+.optionLabel {
+  flex: 1;
+}
+
+.matchingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.matchRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.matchSelect {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: var(--ui-text-primary, #0f172a);
+}
+
+.questionActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.feedback {
+  font-weight: 600;
+  color: var(--ui-text-secondary, #1e293b);
+}
+
+.feedbackCorrect {
+  color: #047857;
+}
+
+.feedbackIncorrect {
+  color: #dc2626;
+}
+
+.errorMessage {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.correctAnswer {
+  margin: 0;
+  color: var(--ui-text-secondary, #334155);
+  font-size: 0.95rem;
+}
+
+.quizFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .quizPanel {
+    padding: 16px;
+  }
+
+  .matchingGrid {
+    grid-template-columns: 1fr;
+  }
+}
