@@ -50,3 +50,60 @@
 - Complete an exercise classifying an initiative under each SAM perspective. / Completar un ejercicio donde se clasifique una iniciativa según cada perspectiva del SAM.
 - Build a combined SWOT/PESTEL matrix for a real case and identify implications for IT. / Elaborar una matriz DAFO/PESTEL combinada para un caso real e identificar implicaciones para TI.
 - Propose a shared KPI set and justify how it sustains alignment. / Proponer un conjunto de KPIs compartidos y justificar cómo sostienen la alineación.
+
+---
+
+## Study Guide · Topic 3 (Alineación Negocio–TI)
+
+- **Concepción de alineamiento:** La estrategia de negocio y la estrategia TI deben evolucionar en paralelo, reflejando los cambios de forma coordinada para evitar desconexiones.
+- **Modelo de Alineamiento Estratégico (SAM):** Henderson & Venkatraman describen cuatro perspectivas (Ejecución estratégica, Transformación tecnológica, Potencial competitivo y Nivel de servicio) y dos ejes (ajuste estratégico externo/interno e integración funcional negocio/TI).
+- **Herramientas estratégicas:** DAFO/SWOT, PESTEL y Cinco Fuerzas de Porter aplicadas tanto al negocio como a TI ayudan a detectar oportunidades y riesgos.
+- **Proceso de gestión estratégica:** Analizar entorno y stakeholders, evaluar recursos internos, definir misión/visión orientadas al mercado, formular/implementar estrategias coordinadas y evaluar resultados para ajustes continuos.
+- **Buenas prácticas de alineación:** Incluir a TI en la definición de objetivos corporativos, traducir prioridades a hojas de ruta tecnológicas, revisar el portafolio y establecer indicadores compartidos negocio–TI.
+
+### Autoevaluación interactiva / Practice Questions
+
+#### Multiple Choice / Opción múltiple
+1. En el Modelo de Alineación Estratégico, la perspectiva “Ejecución Estratégica” corresponde a:
+   - A. TI planificando estrategia independiente
+   - B. La estrategia de negocio dirige las iniciativas de TI
+   - C. La estrategia de TI despliega procesos de negocio
+   - D. Exclusivamente la infraestructura de TI
+2. El eje “integración funcional” del SAM se refiere a la alineación entre:
+   - A. Factores externos e internos de la organización.
+   - B. Negocio y TI (procesos y operaciones).
+   - C. Departamentos financieros y de TI.
+   - D. Proyectos innovadores y proyectos operativos.
+3. El análisis PESTEL evalúa factores:
+   - A. Débiles y fuertes (SWOT).
+   - B. Competencia y mercado.
+   - C. Políticos, Económicos, Sociales, Tecnológicos, Ambientales y Legales.
+   - D. Solo ambientales y legales.
+4. Porter’s Five Forces incluye el análisis de:
+   - A. Estrategias internas de la empresa.
+   - B. Elementos macroeconómicos.
+   - C. Amenaza de productos sustitutos en el mercado.
+   - D. Únicamente competidores y nuevos entrantes.
+5. Una buena práctica para la alineación es:
+   - A. Excluir al equipo de TI de las reuniones estratégicas.
+   - B. Mantener KPIs separados para negocio y TI.
+   - C. Establecer indicadores compartidos entre negocio y TI.
+   - D. Realizar la planificación estratégica solo cada cinco años.
+
+#### Verdadero/Falso / True or False
+- En el SAM, la perspectiva “Nivel de Servicio” se centra en alinear la infraestructura TI con las necesidades actuales del negocio. (V)
+- Las herramientas SWOT y PESTEL deben aplicarse solo al negocio y nunca a la estrategia TI. (F)
+- Traducir las prioridades del negocio en hojas de ruta tecnológicas es una práctica clave de alineación. (V)
+
+#### Emparejamiento / Matching
+
+**Perspectivas SAM**
+- Ejecución estratégica — la estrategia de negocio dirige a TI.
+- Transformación tecnológica — la estrategia de TI impulsa iniciativas de negocio.
+- Potencial competitivo — innovación y nuevos modelos de negocio habilitados por TI.
+- Nivel de servicio — la infraestructura TI actual se ajusta a los procesos de negocio.
+
+**Herramientas de análisis**
+- SWOT (DAFO) — fortalezas, debilidades, oportunidades, amenazas.
+- PESTEL — factores políticos, económicos, sociales, tecnológicos, ambientales y legales.
+- Cinco Fuerzas de Porter — competidores, clientes, proveedores, entrantes, sustitutos.

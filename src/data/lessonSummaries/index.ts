@@ -13,6 +13,7 @@ import { ggoBedellEjercicioSummary } from './ggo-bedell-ejercicio';
 import { ggoTema1Summary } from './ggo-tema-1';
 import { ggoTema2Summary } from './ggo-tema-2';
 import { ggoTema3Summary } from './ggo-tema-3';
+import { ggoTema4Summary } from './ggo-tema-4';
 import { ggoStakeholdersSummary } from './ggo-stakeholders';
 import { sadSession0Summary } from './sad-session-0';
 import { sadSession1Summary } from './sad-session-1';
@@ -33,6 +34,7 @@ const lessons: Record<string, LessonSummaryContent> = {
   'ggo-tema-1': ggoTema1Summary,
   'ggo-tema-2': ggoTema2Summary,
   'ggo-tema-3': ggoTema3Summary,
+  'ggo-tema-4': ggoTema4Summary,
   'ggo-bedell-ejercicio': ggoBedellEjercicioSummary,
   'ggo-stakeholders': ggoStakeholdersSummary,
   'dbd-presentacion': dbdPresentacionSummary,

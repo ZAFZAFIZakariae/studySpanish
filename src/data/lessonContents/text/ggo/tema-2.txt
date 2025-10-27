@@ -56,3 +56,61 @@
 - Complete a table linking ITIL 4 principles to concrete value-delivery actions. / Completar un cuadro que vincule principios de ITIL 4 con acciones concretas de entrega de valor.
 - Analyze a case and explain how Val IT would address each guiding question. / Analizar un caso y responder cómo Val IT abordaría cada pregunta guía.
 - Prepare a communication plan describing metrics, narrative, and target audience. / Preparar un plan de comunicación que describa métricas, narrativa y audiencia objetivo.
+
+---
+
+## Study Guide · Topic 2 (Entrega de Valor en el Gobierno de TI)
+
+- **¿Qué es “valor” en TI?:** El valor surge de los beneficios que clientes y stakeholders perciben de los servicios TI. Según ITGI, una iniciativa exitosa llega a tiempo, dentro del presupuesto y con los beneficios prometidos; en ITIL 4, el valor combina utilidad y satisfacción percibida.
+- **Principios de ITIL 4:** *Focus on value* exige entender cómo los usuarios emplean el servicio y medir su impacto. Esta mentalidad se integra en las operaciones diarias y en la mejora continua, empoderando al personal para detectar oportunidades de valor sostenido.
+- **Marco Val IT:** Divide su cobertura en Gobierno (alinear prácticas de valor en toda la organización y optimizar el portafolio) y Gestión (asegurar que cada inversión genere valor mediante métricas). Las preguntas guía clave son “¿Hacemos lo correcto?” y “¿Estamos obteniendo los beneficios esperados?”.
+- **Proceso de creación de valor:** Avanza desde la demanda estratégica (visión de negocio) hasta la operación y el monitoreo de métricas y SLAs.
+- **Medición y comunicación del valor:** Analizar objetivos, identificar stakeholders, modelar capacidades negocio/TI, definir métricas que vinculen resultados y beneficios, y construir una narrativa con plan de comunicación.
+- **Buenas prácticas:** Priorizar iniciativas según contribución estratégica, mantener portafolio equilibrado (innovación, optimización), revisar beneficios con regularidad y asegurar transparencia en costos y riesgos.
+
+### Autoevaluación interactiva / Practice Questions
+
+#### Multiple Choice / Opción múltiple
+1. Según ITGI, una iniciativa de TI se considera exitosa si:
+   - A. Se completa mucho antes de la fecha límite.
+   - B. Se entrega a tiempo, dentro del presupuesto, y con los beneficios acordados.
+   - C. Su costo total es cero.
+   - D. Mejora la moral del equipo de TI sin importar resultados.
+2. El principio ITIL “Focus on value” significa:
+   - A. Priorizar siempre la rentabilidad financiera sobre la satisfacción del usuario.
+   - B. Entender el uso del servicio y medir el impacto en el valor entregado al cliente.
+   - C. Generar la mayor cantidad posible de proyectos TI.
+   - D. Reducir el tiempo de respuesta sin evaluar beneficios.
+3. En Val IT, el dominio de Gestión se ocupa de:
+   - A. Definir la arquitectura empresarial de TI.
+   - B. Monitorear cada inversión para garantizar que genere los beneficios planeados.
+   - C. Solo auditar la seguridad de la información.
+   - D. El desarrollo de aplicaciones web.
+4. ¿Cuál es un paso clave para medir y comunicar el valor de TI?
+   - A. Externalizar todo el proyecto.
+   - B. Modelar las capacidades de negocio y su relación con TI.
+   - C. Evitar involucrar a los stakeholders.
+   - D. Publicar reportes solo al final del año.
+5. Una buena práctica para gestionar el valor es:
+   - A. Invertir únicamente en proyectos de bajo riesgo.
+   - B. Mantener el portafolio equilibrado (innovación, mejora continua, operaciones).
+   - C. Ignorar el impacto estratégico de los proyectos.
+   - D. Omitir la revisión de beneficios después de la implementación.
+
+#### Verdadero/Falso / True or False
+- Val IT se enfoca solamente en gobierno estratégico y deja de lado la ejecución de procesos operativos. (F)
+- Un portafolio equilibrado de TI debe incluir proyectos de innovación, mejora e mantenimiento. (V)
+- En ITIL 4, el concepto de valor incluye la utilidad y la importancia percibida de los servicios. (V)
+
+#### Emparejamiento / Matching
+
+**Principios ITIL 4**
+- Focus on value — entender el uso del servicio y medir su impacto en el valor.
+- Collaborate and promote visibility — trabajar con el negocio y transparentar el rendimiento.
+- Keep it simple and practical — evitar complejidad innecesaria en procesos.
+
+**Proceso de creación de valor**
+- Strategic Demands (Demandas estratégicas) — visión de negocio y necesidades arquitectónicas.
+- Logical Design (Diseño lógico) — requisitos detallados y arquitectura técnica.
+- Transition (Transición) — preparación para producción, catálogo y soporte.
+- Operation (Operación) — monitoreo de métricas, incidencias y niveles de servicio.
