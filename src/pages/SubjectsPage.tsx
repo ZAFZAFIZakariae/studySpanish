@@ -1016,6 +1016,20 @@ const SubjectsPage: React.FC = () => {
 
   const renderResourceLinks = (links: ResourceLink[]) => renderResourceNodes(buildResourceTree(links));
 
+  const handleQuizButtonClick = () => {
+    if (!activeQuiz || !summaryQuizPanelId) {
+      return;
+    }
+
+    if (activeTab !== 'summary') {
+      setActiveTab('summary');
+      setIsQuizOpen(true);
+      return;
+    }
+
+    setIsQuizOpen((prev) => !prev);
+  };
+
   const renderSummary = () => {
     if (!activeItem) {
       return null;
@@ -1031,17 +1045,6 @@ const SubjectsPage: React.FC = () => {
                 {(activeItem.language ?? 'es').toUpperCase()}
               </span>
               <span className={styles.summaryText}>{summaryInfo.original}</span>
-              {activeQuiz && summaryQuizPanelId && (
-                <button
-                  type="button"
-                  className={`${styles.summaryTestButton} ui-button ui-button--secondary`}
-                  onClick={() => setIsQuizOpen((prev) => !prev)}
-                  aria-expanded={isQuizOpen}
-                  aria-controls={summaryQuizPanelId}
-                >
-                  Test
-                </button>
-              )}
             </p>
           )}
           {summaryInfo.showEnglish && summaryInfo.english && (
@@ -1325,21 +1328,34 @@ const SubjectsPage: React.FC = () => {
                 </div>
               </header>
 
-              <div className={styles.detailTabs} role="tablist" aria-label="Lesson views">
-                {(['summary', 'content', 'original'] as const).map((tab) => (
+              <div className={styles.detailTabsRow}>
+                <div className={styles.detailTabs} role="tablist" aria-label="Lesson views">
+                  {(['summary', 'content', 'original'] as const).map((tab) => (
+                    <button
+                      key={tab}
+                      type="button"
+                      role="tab"
+                      className={`${styles.detailTabButton} ${
+                        activeTab === tab ? styles.detailTabButtonActive : ''
+                      }`}
+                      aria-selected={activeTab === tab}
+                      onClick={() => setActiveTab(tab)}
+                    >
+                      {tab === 'summary' ? 'Summary' : tab === 'content' ? 'Content' : 'Original'}
+                    </button>
+                  ))}
+                </div>
+                {activeQuiz && summaryQuizPanelId && (
                   <button
-                    key={tab}
                     type="button"
-                    role="tab"
-                    className={`${styles.detailTabButton} ${
-                      activeTab === tab ? styles.detailTabButtonActive : ''
-                    }`}
-                    aria-selected={activeTab === tab}
-                    onClick={() => setActiveTab(tab)}
+                    className={`${styles.detailQuizButton} ui-button ui-button--secondary`}
+                    onClick={handleQuizButtonClick}
+                    aria-expanded={activeTab === 'summary' ? isQuizOpen : false}
+                    aria-controls={summaryQuizPanelId}
                   >
-                    {tab === 'summary' ? 'Summary' : tab === 'content' ? 'Content' : 'Original'}
+                    Test
                   </button>
-                ))}
+                )}
               </div>
 
               <div className={styles.detailTabPanel}>

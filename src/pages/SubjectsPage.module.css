@@ -252,6 +252,14 @@
   color: var(--ui-text-secondary, #475569);
 }
 
+.detailTabsRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .detailTabs {
   display: inline-flex;
   align-items: center;
@@ -288,6 +296,30 @@
   background: #ffffff;
   color: var(--ui-text-primary, #1f2937);
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+}
+
+.detailQuizButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .detailTabsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .detailQuizButton {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .detailTabPanel {
@@ -426,27 +458,6 @@
 .summaryText {
   flex: 1;
   min-width: 0;
-}
-
-.summaryTestButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  align-self: flex-start;
-  padding: 4px 12px;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .summaryTestButton {
-    margin-left: 0;
-    margin-top: 4px;
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 .summaryPlaceholder {
