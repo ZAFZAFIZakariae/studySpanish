@@ -1035,10 +1035,19 @@ const SubjectsPage: React.FC = () => {
       return null;
     }
 
+    const shouldShowQuiz = Boolean(isQuizOpen && activeQuiz && summaryQuizPanelId);
+
     return (
-      <section className={styles.summaryBlock} aria-label="Lesson summary">
-        <h3>Summary</h3>
-        <div className={styles.summaryStack}>
+      <section
+        className={styles.summaryBlock}
+        aria-label={shouldShowQuiz ? 'Lesson self-test' : 'Lesson summary'}
+      >
+        <h3>{shouldShowQuiz ? 'Test' : 'Summary'}</h3>
+        <div
+          className={styles.summaryStack}
+          hidden={shouldShowQuiz}
+          aria-hidden={shouldShowQuiz}
+        >
           {summaryInfo.original && (
             <p className={styles.summaryOriginal} lang={activeItem.language ?? 'es'}>
               <span className={styles.summaryChip} aria-hidden="true">
@@ -1060,9 +1069,11 @@ const SubjectsPage: React.FC = () => {
             </p>
           )}
         </div>
-        {isQuizOpen && activeQuiz && summaryQuizPanelId && (
-          <div id={summaryQuizPanelId}>
-            <SummaryQuiz key={activeQuiz.id} quiz={activeQuiz} onClose={() => setIsQuizOpen(false)} />
+        {summaryQuizPanelId && (
+          <div id={summaryQuizPanelId} hidden={!shouldShowQuiz}>
+            {shouldShowQuiz && activeQuiz && (
+              <SummaryQuiz key={activeQuiz.id} quiz={activeQuiz} onClose={() => setIsQuizOpen(false)} />
+            )}
           </div>
         )}
       </section>
