@@ -1340,33 +1340,41 @@ const SubjectsPage: React.FC = () => {
               </header>
 
               <div className={styles.detailTabsRow}>
-                <div className={styles.detailTabs} role="tablist" aria-label="Lesson views">
-                  {(['summary', 'content', 'original'] as const).map((tab) => (
+                <div className={styles.detailTabs}>
+                  <div className={styles.detailTabsList} role="tablist" aria-label="Lesson views">
+                    {(['summary', 'content', 'original'] as const).map((tab) => (
+                      <button
+                        key={tab}
+                        type="button"
+                        role="tab"
+                        className={`${styles.detailTabButton} ${
+                          activeTab === tab ? styles.detailTabButtonActive : ''
+                        }`}
+                        aria-selected={activeTab === tab}
+                        onClick={() => setActiveTab(tab)}
+                      >
+                        {tab === 'summary' ? 'Summary' : tab === 'content' ? 'Content' : 'Original'}
+                      </button>
+                    ))}
+                  </div>
+                  {activeQuiz && summaryQuizPanelId && (
                     <button
-                      key={tab}
                       type="button"
-                      role="tab"
-                      className={`${styles.detailTabButton} ${
-                        activeTab === tab ? styles.detailTabButtonActive : ''
-                      }`}
-                      aria-selected={activeTab === tab}
-                      onClick={() => setActiveTab(tab)}
+                      className={[
+                        styles.detailTabButton,
+                        styles.detailQuizToggle,
+                        activeTab === 'summary' && isQuizOpen ? styles.detailTabButtonActive : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')}
+                      onClick={handleQuizButtonClick}
+                      aria-expanded={activeTab === 'summary' ? isQuizOpen : false}
+                      aria-controls={summaryQuizPanelId}
                     >
-                      {tab === 'summary' ? 'Summary' : tab === 'content' ? 'Content' : 'Original'}
+                      Test
                     </button>
-                  ))}
+                  )}
                 </div>
-                {activeQuiz && summaryQuizPanelId && (
-                  <button
-                    type="button"
-                    className={`${styles.detailQuizButton} ui-button ui-button--secondary`}
-                    onClick={handleQuizButtonClick}
-                    aria-expanded={activeTab === 'summary' ? isQuizOpen : false}
-                    aria-controls={summaryQuizPanelId}
-                  >
-                    Test
-                  </button>
-                )}
               </div>
 
               <div className={styles.detailTabPanel}>
