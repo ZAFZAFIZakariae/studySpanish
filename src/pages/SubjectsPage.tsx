@@ -1043,34 +1043,32 @@ const SubjectsPage: React.FC = () => {
         aria-label={shouldShowQuiz ? 'Lesson self-test' : 'Lesson summary'}
       >
         <h3>{shouldShowQuiz ? 'Test' : 'Summary'}</h3>
-        <div
-          className={styles.summaryStack}
-          hidden={shouldShowQuiz}
-          aria-hidden={shouldShowQuiz}
-        >
-          {summaryInfo.original && (
-            <p className={styles.summaryOriginal} lang={activeItem.language ?? 'es'}>
-              <span className={styles.summaryChip} aria-hidden="true">
-                {(activeItem.language ?? 'es').toUpperCase()}
-              </span>
-              <span className={styles.summaryText}>{summaryInfo.original}</span>
-            </p>
-          )}
-          {summaryInfo.showEnglish && summaryInfo.english && (
-            <p className={styles.summaryEnglish} lang="en">
-              <span className={styles.summaryChip} aria-hidden="true">EN</span>
-              <span>{summaryInfo.english}</span>
-            </p>
-          )}
-          {summaryInfo.placeholder && (
-            <p className={styles.summaryPlaceholder}>
-              <span className={styles.summaryChip} aria-hidden="true">EN</span>
-              <span>English recap coming soon.</span>
-            </p>
-          )}
-        </div>
+        {!shouldShowQuiz && (
+          <div className={styles.summaryStack}>
+            {summaryInfo.original && (
+              <p className={styles.summaryOriginal} lang={activeItem.language ?? 'es'}>
+                <span className={styles.summaryChip} aria-hidden="true">
+                  {(activeItem.language ?? 'es').toUpperCase()}
+                </span>
+                <span className={styles.summaryText}>{summaryInfo.original}</span>
+              </p>
+            )}
+            {summaryInfo.showEnglish && summaryInfo.english && (
+              <p className={styles.summaryEnglish} lang="en">
+                <span className={styles.summaryChip} aria-hidden="true">EN</span>
+                <span>{summaryInfo.english}</span>
+              </p>
+            )}
+            {summaryInfo.placeholder && (
+              <p className={styles.summaryPlaceholder}>
+                <span className={styles.summaryChip} aria-hidden="true">EN</span>
+                <span>English recap coming soon.</span>
+              </p>
+            )}
+          </div>
+        )}
         {summaryQuizPanelId && (
-          <div id={summaryQuizPanelId} hidden={!shouldShowQuiz}>
+          <div id={summaryQuizPanelId} hidden={!shouldShowQuiz} aria-hidden={!shouldShowQuiz}>
             {shouldShowQuiz && activeQuiz && (
               <SummaryQuiz key={activeQuiz.id} quiz={activeQuiz} onClose={() => setIsQuizOpen(false)} />
             )}
