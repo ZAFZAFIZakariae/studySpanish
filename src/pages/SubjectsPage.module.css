@@ -264,10 +264,16 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px;
+  padding: 4px 6px;
   border-radius: 999px;
   background: rgba(148, 163, 184, 0.16);
   align-self: flex-start;
+}
+
+.detailTabsList {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .detailTabButton {
@@ -298,15 +304,16 @@
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
 }
 
-.detailQuizButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  padding: 6px 16px;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  white-space: nowrap;
+.detailQuizToggle {
+  font-weight: 600;
+  color: #1d4ed8;
+  background: rgba(37, 99, 235, 0.18);
+}
+
+.detailQuizToggle:hover,
+.detailQuizToggle:focus-visible {
+  color: #1d4ed8;
+  background: rgba(37, 99, 235, 0.24);
 }
 
 @media (max-width: 640px) {
@@ -315,10 +322,9 @@
     align-items: stretch;
   }
 
-  .detailQuizButton {
-    margin-left: 0;
-    width: 100%;
-    justify-content: center;
+  .detailTabs {
+    align-self: stretch;
+    justify-content: space-between;
   }
 }
 
