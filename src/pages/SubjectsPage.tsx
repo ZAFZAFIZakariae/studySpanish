@@ -11,6 +11,7 @@ import NotebookPreview from '../components/notebooks/NotebookPreview';
 import PdfPageViewer from '../components/PdfPageViewer';
 import SummaryQuiz from '../components/SummaryQuiz';
 import { getLessonQuiz } from '../data/lessonQuizzes';
+import { FallbackResourceExtract, pickFallbackResource } from '../lib/fallbackResource';
 
 type OrderedListStyle = 'decimal' | 'upper-roman' | 'lower-roman' | 'upper-alpha' | 'lower-alpha';
 
@@ -63,12 +64,6 @@ type PdfResourceIndex = {
 };
 
 type ContentSource = 'authored' | 'language-match' | 'resource';
-
-type FallbackResourceExtract = {
-  label: string;
-  href: string;
-  text: string;
-};
 
 type ContentInfo = {
   english?: string;
@@ -126,6 +121,7 @@ const createHeadingCandidates = (heading: string): string[] => {
 
   return Array.from(variants);
 };
+
 
 const buildPdfResourceIndex = (resource: ResourceLink): PdfResourceIndex | null => {
   if (!resource.extract?.text) {
@@ -441,29 +437,10 @@ const SubjectsPage: React.FC = () => {
       }),
     [resources]
   );
-  const fallbackResourceExtract = useMemo<FallbackResourceExtract | null>(() => {
-    const pools: ResourceLink[] = [...itemResources, ...resourcesWithExtract];
-    const seen = new Set<string>();
-
-    for (const resource of pools) {
-      const extractText = resource.extract?.text?.trim();
-      if (!extractText) {
-        continue;
-      }
-      const identifier = (resource.filePath ?? resource.href ?? resource.label).toLowerCase();
-      if (seen.has(identifier)) {
-        continue;
-      }
-      seen.add(identifier);
-      return {
-        label: resource.label,
-        href: resource.href,
-        text: extractText,
-      };
-    }
-
-    return null;
-  }, [itemResources, resourcesWithExtract]);
+  const fallbackResourceExtract = useMemo<FallbackResourceExtract | null>(
+    () => pickFallbackResource(activeItem ?? null, itemResources, resourcesWithExtract),
+    [activeItem, itemResources, resourcesWithExtract]
+  );
   const translationDetails = useMemo(() => {
     if (!activeItem?.translation) {
       return null;
