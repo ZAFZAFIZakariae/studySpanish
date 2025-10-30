@@ -500,6 +500,9 @@
   gap: 8px;
 }
 
+.contentHeadingGroupInteractive {
+}
+
 .contentHeading {
   margin: 0;
   font-weight: 700;
@@ -522,23 +525,39 @@
   color: var(--ui-text-secondary, #475569);
 }
 
-.contentHeadingPdfButton {
-  border: none;
-  background: rgba(37, 99, 235, 0.12);
-  color: #1d4ed8;
-  font-size: 0.85rem;
-  font-weight: 600;
+.contentHeadingInteractive {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.contentHeadingInteractive:hover,
+.contentHeadingInteractive:focus-visible {
+  color: #1e40af;
+}
+
+.contentHeadingInteractive:focus-visible {
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.35);
+  border-radius: 6px;
+}
+
+.contentHeadingPdfMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 4px 10px;
   border-radius: 999px;
-  cursor: pointer;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 600;
   transition: background 0.18s ease, color 0.18s ease;
 }
 
-.contentHeadingPdfButton:hover,
-.contentHeadingPdfButton:focus-visible {
+.contentHeadingGroupInteractive:hover .contentHeadingPdfMeta,
+.contentHeadingGroupInteractive:focus-within .contentHeadingPdfMeta {
   background: rgba(37, 99, 235, 0.2);
   color: #1e40af;
-  outline: none;
 }
 
 .contentListBlock {
