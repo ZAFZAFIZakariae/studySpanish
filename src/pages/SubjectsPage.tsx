@@ -62,6 +62,23 @@ type PdfResourceIndex = {
   pages: Array<{ pageNumber: number; normalizedText: string }>;
 };
 
+type ContentSource = 'authored' | 'language-match' | 'resource';
+
+type FallbackResourceExtract = {
+  label: string;
+  href: string;
+  text: string;
+};
+
+type ContentInfo = {
+  english?: string;
+  original?: string;
+  isOriginalDistinct: boolean;
+  englishSource: ContentSource | null;
+  originalSource: ContentSource | null;
+  fallbackResource: FallbackResourceExtract | null;
+};
+
 const normalizeSearchText = (value: string): string =>
   value
     .normalize('NFD')
@@ -424,6 +441,29 @@ const SubjectsPage: React.FC = () => {
       }),
     [resources]
   );
+  const fallbackResourceExtract = useMemo<FallbackResourceExtract | null>(() => {
+    const pools: ResourceLink[] = [...itemResources, ...resourcesWithExtract];
+    const seen = new Set<string>();
+
+    for (const resource of pools) {
+      const extractText = resource.extract?.text?.trim();
+      if (!extractText) {
+        continue;
+      }
+      const identifier = (resource.filePath ?? resource.href ?? resource.label).toLowerCase();
+      if (seen.has(identifier)) {
+        continue;
+      }
+      seen.add(identifier);
+      return {
+        label: resource.label,
+        href: resource.href,
+        text: extractText,
+      };
+    }
+
+    return null;
+  }, [itemResources, resourcesWithExtract]);
   const translationDetails = useMemo(() => {
     if (!activeItem?.translation) {
       return null;
@@ -474,27 +514,60 @@ const SubjectsPage: React.FC = () => {
     return { original, english, showEnglish, placeholder };
   }, [activeItem]);
   const [activeTab, setActiveTab] = useState<'summary' | 'content' | 'original'>('summary');
-  const contentInfo = useMemo(() => {
-    if (!activeItem?.content) {
+  const contentInfo = useMemo<ContentInfo>(() => {
+    if (!activeItem) {
       return {
         english: undefined as string | undefined,
         original: undefined as string | undefined,
         isOriginalDistinct: false,
+        englishSource: null as ContentSource | null,
+        originalSource: null as ContentSource | null,
+        fallbackResource: null as FallbackResourceExtract | null,
       };
     }
 
-    const originalRaw = activeItem.content.original?.trim();
-    const original = originalRaw && originalRaw.length > 0 ? originalRaw : undefined;
-    const englishRaw = activeItem.content.english?.trim();
+    const originalRaw = activeItem.content?.original?.trim();
+    const originalFromItem = originalRaw && originalRaw.length > 0 ? originalRaw : undefined;
+    const fallbackOriginal = fallbackResourceExtract?.text;
+    const original = originalFromItem ?? fallbackOriginal;
+
+    const englishRaw = activeItem.content?.english?.trim();
     const englishFromItem = englishRaw && englishRaw.length > 0 ? englishRaw : undefined;
-    const englishFallback = activeItem.language === 'en' ? original : undefined;
-    const english = englishFromItem ?? englishFallback;
+    const englishFromLanguage = !englishFromItem && activeItem.language === 'en' ? original : undefined;
+    const englishFromResource = !englishFromItem && !englishFromLanguage ? fallbackResourceExtract?.text : undefined;
+    const english = englishFromItem ?? englishFromLanguage ?? englishFromResource;
+
+    const englishSource: ContentSource | null = englishFromItem
+      ? 'authored'
+      : englishFromLanguage
+      ? 'language-match'
+      : englishFromResource
+      ? 'resource'
+      : null;
+
+    const originalSource: ContentSource | null = originalFromItem
+      ? 'authored'
+      : fallbackOriginal
+      ? 'resource'
+      : null;
+
     const isOriginalDistinct = Boolean(
-      original && (activeItem.language === 'es' || !english || english !== original)
+      original &&
+        (activeItem.language === 'es' ||
+          englishSource === 'resource' ||
+          englishSource === null ||
+          (english && english !== original))
     );
 
-    return { english, original, isOriginalDistinct };
-  }, [activeItem]);
+    return {
+      english,
+      original,
+      isOriginalDistinct,
+      englishSource,
+      originalSource,
+      fallbackResource: fallbackResourceExtract,
+    };
+  }, [activeItem, fallbackResourceExtract]);
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const activeQuiz = useMemo(
     () => (activeItem ? getLessonQuiz(activeItem.id) : undefined),
@@ -835,19 +908,48 @@ const SubjectsPage: React.FC = () => {
                 ? styles.contentHeadingLevel2
                 : styles.contentHeadingLevel3;
             const pdfLocation = options?.resolvePdf ? options.resolvePdf(block.text) : null;
+            const pdfPageNumber = pdfLocation?.pageNumber ?? null;
+            const isInteractive = Boolean(pdfLocation && options?.onRequestPdf && pdfPageNumber !== null);
+            const handleActivate = () => {
+              if (pdfLocation) {
+                options?.onRequestPdf?.(pdfLocation);
+              }
+            };
+            const headingClassNames = [styles.contentHeading, headingClass];
+            if (isInteractive) {
+              headingClassNames.push(styles.contentHeadingInteractive);
+            }
+            const headingLabel = toPlainText(block.text) || block.text;
+            const headingGroupClassNames = [styles.contentHeadingGroup];
+            if (isInteractive) {
+              headingGroupClassNames.push(styles.contentHeadingGroupInteractive);
+            }
+
             return (
-              <div key={index} className={styles.contentHeadingGroup}>
-                <HeadingTag className={`${styles.contentHeading} ${headingClass}`}>
+              <div key={index} className={headingGroupClassNames.join(' ')}>
+                <HeadingTag
+                  className={headingClassNames.join(' ')}
+                  {...(isInteractive
+                    ? {
+                        role: 'link',
+                        tabIndex: 0,
+                        onClick: handleActivate,
+                        onKeyDown: (event: React.KeyboardEvent<HTMLElement>) => {
+                          if (event.key === 'Enter' || event.key === ' ') {
+                            event.preventDefault();
+                            handleActivate();
+                          }
+                        },
+                        'aria-label': `${headingLabel} — open PDF page ${pdfPageNumber}`,
+                      }
+                    : {})}
+                >
                   <InlineMarkdown text={block.text} />
                 </HeadingTag>
-                {pdfLocation ? (
-                  <button
-                    type="button"
-                    className={styles.contentHeadingPdfButton}
-                    onClick={() => options?.onRequestPdf?.(pdfLocation)}
-                  >
-                    View PDF page {pdfLocation.pageNumber}
-                  </button>
+                {isInteractive && pdfPageNumber !== null ? (
+                  <span className={styles.contentHeadingPdfMeta} aria-hidden="true">
+                    PDF page {pdfPageNumber}
+                  </span>
                 ) : null}
               </div>
             );
@@ -877,6 +979,10 @@ const SubjectsPage: React.FC = () => {
           }
 
           if (block.type === 'figure') {
+            const isPicture = Boolean(block.src);
+            if (variant === 'original' && !isPicture) {
+              return null;
+            }
             return (
               <LessonFigure
                 key={index}
@@ -1101,6 +1207,29 @@ const SubjectsPage: React.FC = () => {
     return (
       <section className={styles.contentBlock} aria-label="Lesson content">
         <h3>Content</h3>
+        {contentInfo.englishSource === 'resource' && contentInfo.fallbackResource ? (
+          <p className={styles.meta}>
+            Showing extracted text from{' '}
+            <a href={contentInfo.fallbackResource.href} target="_blank" rel="noopener noreferrer">
+              {contentInfo.fallbackResource.label}
+            </a>
+            .
+          </p>
+        ) : contentInfo.englishSource === 'language-match' ? (
+          <p className={styles.meta}>
+            {contentInfo.originalSource === 'resource' && contentInfo.fallbackResource ? (
+              <>
+                This lesson is authored in English. Showing extracted text from{' '}
+                <a href={contentInfo.fallbackResource.href} target="_blank" rel="noopener noreferrer">
+                  {contentInfo.fallbackResource.label}
+                </a>
+                .
+              </>
+            ) : (
+              'This lesson is authored in English, so you are reading the source text.'
+            )}
+          </p>
+        ) : null}
         {renderContentBlocks(contentInfo.english, 'english')}
       </section>
     );
@@ -1126,6 +1255,15 @@ const SubjectsPage: React.FC = () => {
         {!contentInfo.isOriginalDistinct && contentInfo.english && (
           <p className={styles.meta}>Original content matches the English version.</p>
         )}
+        {contentInfo.originalSource === 'resource' && contentInfo.fallbackResource ? (
+          <p className={styles.meta}>
+            Showing extracted text from{' '}
+            <a href={contentInfo.fallbackResource.href} target="_blank" rel="noopener noreferrer">
+              {contentInfo.fallbackResource.label}
+            </a>
+            .
+          </p>
+        ) : null}
         {renderContentBlocks(contentInfo.original, 'original', {
           resolvePdf: resolveHeadingToPdf,
           onRequestPdf: handlePdfRequest,
