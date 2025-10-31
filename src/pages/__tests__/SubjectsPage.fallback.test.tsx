@@ -84,4 +84,30 @@ describe('pickFallbackResource', () => {
     expect(fallback).not.toBeNull();
     expect(fallback?.label).toBe('Tema 2 resumen (TXT)');
   });
+
+  it('matches numbered lesson titles like “Tema 1” with folder names like “T1”', () => {
+    const temaUnoItem: CourseItem = {
+      ...baseItem,
+      id: 'ggo-tema-1',
+      title: 'Tema 1 · Introducción a Gobierno de TI',
+    };
+
+    const t3Resource = makeResource({
+      label:
+        'T3. Alineación de negocio y SI TI. Bedell › Methodology for Business Value Analysis of Innovative IT in a Business Sector. The Case of the Material Supply Chain (PDF)',
+      href: '#t3-bedell',
+      filePath:
+        'subjects/Ggo/T3. Alineación de negocio y SI_TI. Bedell/Methodology for Business Value Analysis of Innovative IT in a Business Sector. The Case of the Material Supply Chain.pdf',
+    });
+
+    const t1Resource = makeResource({
+      label: 'T1. Intro Gobierno de TI › 23 Introducción a Gobierno de TI (PDF)',
+      href: '#t1-intro',
+      filePath: 'subjects/Ggo/T1. Intro Gobierno de TI/23 Introducción a Gobierno de TI.pdf',
+    });
+
+    const fallback = pickFallbackResource(temaUnoItem, [], [t3Resource, t1Resource]);
+    expect(fallback).not.toBeNull();
+    expect(fallback?.label).toBe('T1. Intro Gobierno de TI › 23 Introducción a Gobierno de TI (PDF)');
+  });
 });

@@ -42,8 +42,27 @@ const buildItemTokenSet = (item: CourseItem | null): Set<string> => {
   }
 
   const tokens = new Set<string>();
-  tokenizeForMatch(item.title).forEach((token) => tokens.add(token));
-  tokenizeForMatch(item.id).forEach((token) => tokens.add(token));
+  const addTokens = (value?: string | null) => {
+    tokenizeForMatch(value).forEach((token) => tokens.add(token));
+
+    if (!value) {
+      return;
+    }
+
+    const normalized = normalizeValue(value);
+    const numberedLessonRegex = /\b(?:tema|unidad|modulo|módulo|capitulo|capítulo|chapter|lesson|leccion|lección|sesion|sesión|session|t|u|m|c|l|s)\s*(\d+)\b/gi;
+    for (const match of normalized.matchAll(numberedLessonRegex)) {
+      const number = match[1];
+      if (!number) {
+        continue;
+      }
+      tokens.add(`t${number}`);
+      tokens.add(`tema${number}`);
+    }
+  };
+
+  addTokens(item.title);
+  addTokens(item.id);
   return tokens;
 };
 
