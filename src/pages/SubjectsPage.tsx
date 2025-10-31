@@ -503,15 +503,19 @@ const SubjectsPage: React.FC = () => {
       };
     }
 
-    const originalRaw = activeItem.content?.original?.trim();
-    const originalFromItem = originalRaw && originalRaw.length > 0 ? originalRaw : undefined;
-    const fallbackOriginal = fallbackResourceExtract?.text;
-    const original = originalFromItem ?? fallbackOriginal;
+    const authoredOriginalRaw = activeItem.content?.original?.trim();
+    const authoredOriginal = authoredOriginalRaw && authoredOriginalRaw.length > 0 ? authoredOriginalRaw : undefined;
+    const fallbackOriginalRaw = fallbackResourceExtract?.text;
+    const fallbackOriginal = fallbackOriginalRaw && fallbackOriginalRaw.trim().length > 0
+      ? fallbackOriginalRaw.trim()
+      : undefined;
+    const original = fallbackOriginal ?? authoredOriginal;
 
     const englishRaw = activeItem.content?.english?.trim();
     const englishFromItem = englishRaw && englishRaw.length > 0 ? englishRaw : undefined;
-    const englishFromLanguage = !englishFromItem && activeItem.language === 'en' ? original : undefined;
-    const englishFromResource = !englishFromItem && !englishFromLanguage ? fallbackResourceExtract?.text : undefined;
+    const englishFromLanguage =
+      !englishFromItem && activeItem.language === 'en' ? authoredOriginal ?? undefined : undefined;
+    const englishFromResource = !englishFromItem && !englishFromLanguage ? fallbackOriginal : undefined;
     const english = englishFromItem ?? englishFromLanguage ?? englishFromResource;
 
     const englishSource: ContentSource | null = englishFromItem
@@ -522,10 +526,10 @@ const SubjectsPage: React.FC = () => {
       ? 'resource'
       : null;
 
-    const originalSource: ContentSource | null = originalFromItem
-      ? 'authored'
-      : fallbackOriginal
+    const originalSource: ContentSource | null = fallbackOriginal
       ? 'resource'
+      : authoredOriginal
+      ? 'authored'
       : null;
 
     const isOriginalDistinct = Boolean(
