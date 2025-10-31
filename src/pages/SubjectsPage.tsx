@@ -509,7 +509,7 @@ const SubjectsPage: React.FC = () => {
     const fallbackOriginal = fallbackOriginalRaw && fallbackOriginalRaw.trim().length > 0
       ? fallbackOriginalRaw.trim()
       : undefined;
-    const original = fallbackOriginal ?? authoredOriginal;
+    const original = authoredOriginal ?? fallbackOriginal;
 
     const englishRaw = activeItem.content?.english?.trim();
     const englishFromItem = englishRaw && englishRaw.length > 0 ? englishRaw : undefined;
@@ -526,10 +526,10 @@ const SubjectsPage: React.FC = () => {
       ? 'resource'
       : null;
 
-    const originalSource: ContentSource | null = fallbackOriginal
-      ? 'resource'
-      : authoredOriginal
+    const originalSource: ContentSource | null = authoredOriginal
       ? 'authored'
+      : fallbackOriginal
+      ? 'resource'
       : null;
 
     const isOriginalDistinct = Boolean(
