@@ -33,6 +33,26 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+const serveNavigation = async (request) => {
+  const cache = await caches.open(STATIC_CACHE);
+  try {
+    const response = await fetch(request, { cache: 'no-store' });
+    if (response.ok) {
+      await cache.put('/index.html', response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match('/index.html');
+    return (
+      cached ??
+      new Response('Offline', {
+        status: 503,
+        headers: { 'Content-Type': 'text/html' },
+      })
+    );
+  }
+};
+
 const cacheFirst = async (request) => {
   const cached = await caches.match(request);
   if (cached) {
@@ -46,7 +66,7 @@ const cacheFirst = async (request) => {
     }
     return response;
   } catch (error) {
-    return cached ?? new Response('Offline', { status: 503 });
+    return new Response('Offline', { status: 503 });
   }
 };
 
